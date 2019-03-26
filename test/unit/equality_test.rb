@@ -29,8 +29,10 @@ class EqualityTest < Test::Unit::TestCase
   Dir.glob(example_json_files).each do |example_json_file|
     example_name = File.basename(example_json_file, '.json')
     example_xml_file = File.join(EXAMPLE_ROOT, 'xml', "#{example_name}.xml")
-    define_method("test_equality_#{example_name}") do
-      run_equality_test(example_json_file, example_xml_file, example_name)
+    if File.exist?(example_xml_file)
+      define_method("test_equality_#{example_name}") do
+        run_equality_test(example_json_file, example_xml_file, example_name)
+      end
     end
   end
 
@@ -90,17 +92,17 @@ class EqualityTest < Test::Unit::TestCase
   def run_equality_test(example_json_file, example_xml_file, example_name)
     input_json = File.read(example_json_file)
     input_xml = File.read(example_xml_file)
-    instance_a = FHIR::Json.from_json(input_json)
-    instance_b = FHIR::Xml.from_xml(input_xml)
+    instance_json = FHIR::Json.from_json(input_json)
+    instance_xml = FHIR::Xml.from_xml(input_xml)
     exclude = ['div']
-    if !instance_a.equals?(instance_b, exclude) || !instance_b.equals?(instance_a, exclude)
-      File.open("#{ERROR_DIR}/#{example_name}_A.json", 'w:UTF-8') { |file| file.write(instance_a.to_json) }
-      File.open("#{ERROR_DIR}/#{example_name}_B.json", 'w:UTF-8') { |file| file.write(instance_b.to_json) }
-      File.open("#{ERROR_DIR}/#{example_name}_A.xml", 'w:UTF-8') { |file| file.write(instance_a.to_xml) }
-      File.open("#{ERROR_DIR}/#{example_name}_B.xml", 'w:UTF-8') { |file| file.write(instance_b.to_xml) }
+    if !instance_json.equals?(instance_xml, exclude) || !instance_xml.equals?(instance_json, exclude)
+      File.open("#{ERROR_DIR}/#{example_name}_json.json", 'w:UTF-8') { |file| file.write(instance_json.to_json) }
+      File.open("#{ERROR_DIR}/#{example_name}_xml.json", 'w:UTF-8') { |file| file.write(instance_xml.to_json) }
+      File.open("#{ERROR_DIR}/#{example_name}_json.xml", 'w:UTF-8') { |file| file.write(instance_json.to_xml) }
+      File.open("#{ERROR_DIR}/#{example_name}_xml.xml", 'w:UTF-8') { |file| file.write(instance_xml.to_xml) }
     end
-    assert instance_a.equals?(instance_b, exclude), 'Instance A should be equal to instance B.'
-    assert instance_b.equals?(instance_a, exclude), 'Instance B should be equal to instance A.'
+    assert instance_json.equals?(instance_xml, exclude), 'Instance JSON should be equal to instance XML.'
+    assert instance_xml.equals?(instance_json, exclude), 'Instance XML should be equal to instance JSON.'
         # check memory
     before = check_memory
     instance_a = nil

@@ -10,7 +10,7 @@ class ProfileValidationTest < Test::Unit::TestCase
   Dir.glob(us_core_ig).each do |definition|
     json = File.read(definition)
     resource = FHIR.from_contents(json)
-    PROFILES[resource.url] = resource
+    PROFILES[resource.url] = resource if resource
   end
 
   # Create a blank folder for the errors
@@ -408,7 +408,7 @@ class ProfileValidationTest < Test::Unit::TestCase
 
     # first 2 value sets are special cases
     element = FHIR::ElementDefinition.new('path' => 'mime', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
-                                          'binding' => { 'valueSetUri' => 'http://hl7.org/fhir/ValueSet/content-type' })
+                                          'binding' => { 'valueSet' => 'http://hl7.org/fhir/ValueSet/mimetypes' })
     sd.errors = []
     sd.send(:check_binding_element, element, 'xml')
     assert_empty(sd.errors)
@@ -420,7 +420,7 @@ class ProfileValidationTest < Test::Unit::TestCase
     assert_equal("mime has invalid mime-type: 'jpeg'", sd.errors[0])
 
     element = FHIR::ElementDefinition.new('path' => 'lang', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
-                                          'binding' => { 'valueSetUri' => 'http://hl7.org/fhir/ValueSet/languages' })
+                                          'binding' => { 'valueSet' => 'http://hl7.org/fhir/ValueSet/languages' })
     sd.errors = []
     sd.send(:check_binding_element, element, 'en')
     assert_empty(sd.errors)
@@ -435,7 +435,7 @@ class ProfileValidationTest < Test::Unit::TestCase
 
     # use a valueset we don't have defined here
     element = FHIR::ElementDefinition.new('path' => 'problem', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
-                                          'binding' => { 'valueSetUri' => 'http://standardhealthrecord.org/shr/problem/vs/ProblemCategoryVS' })
+                                          'binding' => { 'valueSet' => 'http://standardhealthrecord.org/shr/problem/vs/ProblemCategoryVS' })
     sd.errors = []
     sd.warnings = []
     sd.send(:check_binding_element, element, 'disease')
@@ -446,7 +446,7 @@ class ProfileValidationTest < Test::Unit::TestCase
     # regular case, FHIR VS with nothing special about it
     # binding strength required => error if wrong
     element = FHIR::ElementDefinition.new('path' => 'county', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
-                                          'binding' => { 'valueSetUri' => 'http://hl7.org/fhir/ValueSet/fips-county',
+                                          'binding' => { 'valueSet' => 'http://hl7.org/fhir/ValueSet/fips-county',
                                                          'strength' => 'required' })
     sd.errors = []
     sd.warnings = []
@@ -462,7 +462,7 @@ class ProfileValidationTest < Test::Unit::TestCase
 
     # binding strength example => warning if wrong
     element = FHIR::ElementDefinition.new('path' => 'county', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
-                                          'binding' => { 'valueSetUri' => 'http://hl7.org/fhir/ValueSet/fips-county',
+                                          'binding' => { 'valueSet' => 'http://hl7.org/fhir/ValueSet/fips-county',
                                                          'strength' => 'example' })
     sd.errors = []
     sd.warnings = []

@@ -13,7 +13,7 @@ describe FHIR::Definitions do
 
     context 'matching expansions' do
       it 'returns a matching expansion.contains value' do
-        expect(FHIR::Definitions.get_display(uri, code)).to eq 'Echography of kidney'
+        expect(FHIR::Definitions.get_display(uri, code)).to eq 'US kidneys'
       end
     end
 
