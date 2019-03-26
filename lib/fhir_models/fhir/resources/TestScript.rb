@@ -4,12 +4,12 @@ module FHIR
     include FHIR::Json
     include FHIR::Xml
 
-    SEARCH_PARAMS = ['date', 'description', 'identifier', 'jurisdiction', 'name', 'publisher', 'status', 'testscript-capability', 'title', 'url', 'version']
+    SEARCH_PARAMS = ['context', 'context-quantity', 'context-type', 'date', 'description', 'identifier', 'jurisdiction', 'name', 'publisher', 'status', 'testscript-capability', 'title', 'url', 'version']
     METADATA = {
       'id' => {'type'=>'id', 'path'=>'TestScript.id', 'min'=>0, 'max'=>1},
       'meta' => {'type'=>'Meta', 'path'=>'TestScript.meta', 'min'=>0, 'max'=>1},
       'implicitRules' => {'type'=>'uri', 'path'=>'TestScript.implicitRules', 'min'=>0, 'max'=>1},
-      'language' => {'valid_codes'=>{'urn:ietf:bcp:47'=>['ar', 'bn', 'cs', 'da', 'de', 'de-AT', 'de-CH', 'de-DE', 'el', 'en', 'en-AU', 'en-CA', 'en-GB', 'en-IN', 'en-NZ', 'en-SG', 'en-US', 'es', 'es-AR', 'es-ES', 'es-UY', 'fi', 'fr', 'fr-BE', 'fr-CH', 'fr-FR', 'fy', 'fy-NL', 'hi', 'hr', 'it', 'it-CH', 'it-IT', 'ja', 'ko', 'nl', 'nl-BE', 'nl-NL', 'no', 'no-NO', 'pa', 'pt', 'pt-BR', 'ru', 'ru-RU', 'sr', 'sr-SP', 'sv', 'sv-SE', 'te', 'zh', 'zh-CN', 'zh-HK', 'zh-SG', 'zh-TW']}, 'type'=>'code', 'path'=>'TestScript.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/languages'}},
+      'language' => {'type'=>'code', 'path'=>'TestScript.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'preferred', 'valueSet'=>'http://hl7.org/fhir/ValueSet/languages', 'uri'=>nil}},
       'text' => {'type'=>'Narrative', 'path'=>'TestScript.text', 'min'=>0, 'max'=>1},
       'contained' => {'type'=>'Resource', 'path'=>'TestScript.contained', 'min'=>0, 'max'=>Float::INFINITY},
       'extension' => {'type'=>'Extension', 'path'=>'TestScript.extension', 'min'=>0, 'max'=>Float::INFINITY},
@@ -19,14 +19,14 @@ module FHIR
       'version' => {'type'=>'string', 'path'=>'TestScript.version', 'min'=>0, 'max'=>1},
       'name' => {'type'=>'string', 'path'=>'TestScript.name', 'min'=>1, 'max'=>1},
       'title' => {'type'=>'string', 'path'=>'TestScript.title', 'min'=>0, 'max'=>1},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'TestScript.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status'}},
+      'status' => {'type'=>'code', 'path'=>'TestScript.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0', 'uri'=>nil}},
       'experimental' => {'type'=>'boolean', 'path'=>'TestScript.experimental', 'min'=>0, 'max'=>1},
       'date' => {'type'=>'dateTime', 'path'=>'TestScript.date', 'min'=>0, 'max'=>1},
       'publisher' => {'type'=>'string', 'path'=>'TestScript.publisher', 'min'=>0, 'max'=>1},
       'contact' => {'type'=>'ContactDetail', 'path'=>'TestScript.contact', 'min'=>0, 'max'=>Float::INFINITY},
       'description' => {'type'=>'markdown', 'path'=>'TestScript.description', 'min'=>0, 'max'=>1},
       'useContext' => {'type'=>'UsageContext', 'path'=>'TestScript.useContext', 'min'=>0, 'max'=>Float::INFINITY},
-      'jurisdiction' => {'valid_codes'=>{'urn:iso:std:iso:3166'=>['AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AN', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AW', 'AX', 'AZ', 'BA', 'BB', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BL', 'BM', 'BN', 'BO', 'BQ', 'BR', 'BS', 'BT', 'BU', 'BV', 'BW', 'BY', 'BZ', 'CA', 'CC', 'CD', 'CF', 'CG', 'CH', 'CI', 'CK', 'CL', 'CM', 'CN', 'CO', 'CR', 'CS', 'CT', 'CU', 'CV', 'CW', 'CX', 'CY', 'CZ', 'DD', 'DE', 'DJ', 'DK', 'DM', 'DO', 'DY', 'DZ', 'EC', 'EE', 'EG', 'EH', 'ER', 'ES', 'ET', 'FI', 'FJ', 'FK', 'FM', 'FO', 'FQ', 'FR', 'GA', 'GB', 'GD', 'GE', 'GF', 'GG', 'GH', 'GI', 'GL', 'GM', 'GN', 'GP', 'GQ', 'GR', 'GS', 'GT', 'GU', 'GW', 'GY', 'HK', 'HM', 'HN', 'HR', 'HT', 'HU', 'HV', 'ID', 'IE', 'IL', 'IM', 'IN', 'IO', 'IQ', 'IR', 'IS', 'IT', 'JE', 'JM', 'JO', 'JP', 'JT', 'KE', 'KG', 'KH', 'KI', 'KM', 'KN', 'KP', 'KR', 'KW', 'KY', 'KZ', 'LA', 'LB', 'LC', 'LI', 'LK', 'LR', 'LS', 'LT', 'LU', 'LV', 'LY', 'MA', 'MC', 'MD', 'ME', 'MF', 'MG', 'MH', 'MI', 'MK', 'ML', 'MM', 'MN', 'MO', 'MP', 'MQ', 'MR', 'MS', 'MT', 'MU', 'MV', 'MW', 'MX', 'MY', 'MZ', 'NA', 'NC', 'NE', 'NF', 'NG', 'NH', 'NI', 'NL', 'NO', 'NP', 'NQ', 'NR', 'NT', 'NU', 'NZ', 'OM', 'PA', 'PC', 'PE', 'PF', 'PG', 'PH', 'PK', 'PL', 'PM', 'PN', 'PR', 'PS', 'PT', 'PU', 'PW', 'PY', 'PZ', 'QA', 'RE', 'RH', 'RO', 'RS', 'RU', 'RW', 'SA', 'SB', 'SC', 'SD', 'SE', 'SG', 'SH', 'SI', 'SJ', 'SK', 'SL', 'SM', 'SN', 'SO', 'SR', 'SS', 'ST', 'SU', 'SV', 'SX', 'SY', 'SZ', 'TC', 'TD', 'TF', 'TG', 'TH', 'TJ', 'TK', 'TL', 'TM', 'TN', 'TO', 'TP', 'TR', 'TT', 'TV', 'TW', 'TZ', 'UA', 'UG', 'UM', 'US', 'UY', 'UZ', 'VA', 'VC', 'VD', 'VE', 'VG', 'VI', 'VN', 'VU', 'WF', 'WK', 'WS', 'YD', 'YE', 'YT', 'YU', 'ZA', 'ZM', 'ZR', 'ZW'], 'http://unstats.un.org/unsd/methods/m49/m49.htm'=>['001', '002', '014', '017', '015', '018', '011', '019', '419', '029', '013', '005', '021', '142', '143', '030', '034', '035', '145', '150', '151', '154', '039', '155', '009', '053', '054', '057', '061'], 'https://www.usps.com/'=>['AK', 'AL', 'AR', 'AS', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'FM', 'GA', 'GU', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MH', 'MI', 'MN', 'MO', 'MP', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'PR', 'PW', 'RI', 'SC', 'SD', 'TN', 'TX', 'UM', 'UT', 'VA', 'VI', 'VT', 'WA', 'WI', 'WV', 'WY'], nil=>[]}, 'type'=>'CodeableConcept', 'path'=>'TestScript.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/jurisdiction'}},
+      'jurisdiction' => {'type'=>'CodeableConcept', 'path'=>'TestScript.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'valueSet'=>'http://hl7.org/fhir/ValueSet/jurisdiction', 'uri'=>nil}},
       'purpose' => {'type'=>'markdown', 'path'=>'TestScript.purpose', 'min'=>0, 'max'=>1},
       'copyright' => {'type'=>'markdown', 'path'=>'TestScript.copyright', 'min'=>0, 'max'=>1},
       'origin' => {'type'=>'TestScript::Origin', 'path'=>'TestScript.origin', 'min'=>0, 'max'=>Float::INFINITY},
@@ -35,8 +35,6 @@ module FHIR
       'fixture' => {'type'=>'TestScript::Fixture', 'path'=>'TestScript.fixture', 'min'=>0, 'max'=>Float::INFINITY},
       'profile' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'TestScript.profile', 'min'=>0, 'max'=>Float::INFINITY},
       'variable' => {'type'=>'TestScript::Variable', 'path'=>'TestScript.variable', 'min'=>0, 'max'=>Float::INFINITY},
-      'rule' => {'type'=>'TestScript::Rule', 'path'=>'TestScript.rule', 'min'=>0, 'max'=>Float::INFINITY},
-      'ruleset' => {'type'=>'TestScript::Ruleset', 'path'=>'TestScript.ruleset', 'min'=>0, 'max'=>Float::INFINITY},
       'setup' => {'type'=>'TestScript::Setup', 'path'=>'TestScript.setup', 'min'=>0, 'max'=>1},
       'test' => {'type'=>'TestScript::Test', 'path'=>'TestScript.test', 'min'=>0, 'max'=>Float::INFINITY},
       'teardown' => {'type'=>'TestScript::Teardown', 'path'=>'TestScript.teardown', 'min'=>0, 'max'=>1}
@@ -52,7 +50,7 @@ module FHIR
         'extension' => {'type'=>'Extension', 'path'=>'Origin.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Origin.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
         'index' => {'type'=>'integer', 'path'=>'Origin.index', 'min'=>1, 'max'=>1},
-        'profile' => {'valid_codes'=>{'http://hl7.org/fhir/testscript-profile-origin-types'=>['FHIR-Client', 'FHIR-SDC-FormFiller']}, 'type'=>'Coding', 'path'=>'Origin.profile', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/testscript-profile-origin-types'}}
+        'profile' => {'type'=>'Coding', 'path'=>'Origin.profile', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'valueSet'=>'http://hl7.org/fhir/ValueSet/testscript-profile-origin-types', 'uri'=>nil}}
       }
 
       attr_accessor :id                # 0-1 string
@@ -72,7 +70,7 @@ module FHIR
         'extension' => {'type'=>'Extension', 'path'=>'Destination.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Destination.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
         'index' => {'type'=>'integer', 'path'=>'Destination.index', 'min'=>1, 'max'=>1},
-        'profile' => {'valid_codes'=>{'http://hl7.org/fhir/testscript-profile-destination-types'=>['FHIR-Server', 'FHIR-SDC-FormManager', 'FHIR-SDC-FormProcessor', 'FHIR-SDC-FormReceiver']}, 'type'=>'Coding', 'path'=>'Destination.profile', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/testscript-profile-destination-types'}}
+        'profile' => {'type'=>'Coding', 'path'=>'Destination.profile', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'valueSet'=>'http://hl7.org/fhir/ValueSet/testscript-profile-destination-types', 'uri'=>nil}}
       }
 
       attr_accessor :id                # 0-1 string
@@ -124,25 +122,25 @@ module FHIR
           'id' => {'type'=>'string', 'path'=>'Capability.id', 'min'=>0, 'max'=>1},
           'extension' => {'type'=>'Extension', 'path'=>'Capability.extension', 'min'=>0, 'max'=>Float::INFINITY},
           'modifierExtension' => {'type'=>'Extension', 'path'=>'Capability.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-          'required' => {'type'=>'boolean', 'path'=>'Capability.required', 'min'=>0, 'max'=>1},
-          'validated' => {'type'=>'boolean', 'path'=>'Capability.validated', 'min'=>0, 'max'=>1},
+          'required' => {'type'=>'boolean', 'path'=>'Capability.required', 'min'=>1, 'max'=>1},
+          'validated' => {'type'=>'boolean', 'path'=>'Capability.validated', 'min'=>1, 'max'=>1},
           'description' => {'type'=>'string', 'path'=>'Capability.description', 'min'=>0, 'max'=>1},
           'origin' => {'type'=>'integer', 'path'=>'Capability.origin', 'min'=>0, 'max'=>Float::INFINITY},
           'destination' => {'type'=>'integer', 'path'=>'Capability.destination', 'min'=>0, 'max'=>1},
           'link' => {'type'=>'uri', 'path'=>'Capability.link', 'min'=>0, 'max'=>Float::INFINITY},
-          'capabilities' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/CapabilityStatement'], 'type'=>'Reference', 'path'=>'Capability.capabilities', 'min'=>1, 'max'=>1}
+          'capabilities' => {'type'=>'canonical', 'path'=>'Capability.capabilities', 'min'=>1, 'max'=>1}
         }
 
         attr_accessor :id                # 0-1 string
         attr_accessor :extension         # 0-* [ Extension ]
         attr_accessor :modifierExtension # 0-* [ Extension ]
-        attr_accessor :required          # 0-1 boolean
-        attr_accessor :validated         # 0-1 boolean
+        attr_accessor :required          # 1-1 boolean
+        attr_accessor :validated         # 1-1 boolean
         attr_accessor :description       # 0-1 string
         attr_accessor :origin            # 0-* [ integer ]
         attr_accessor :destination       # 0-1 integer
         attr_accessor :link              # 0-* [ uri ]
-        attr_accessor :capabilities      # 1-1 Reference(CapabilityStatement)
+        attr_accessor :capabilities      # 1-1 canonical
       end
 
       attr_accessor :id                # 0-1 string
@@ -161,16 +159,16 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'Fixture.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Fixture.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Fixture.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'autocreate' => {'type'=>'boolean', 'path'=>'Fixture.autocreate', 'min'=>0, 'max'=>1},
-        'autodelete' => {'type'=>'boolean', 'path'=>'Fixture.autodelete', 'min'=>0, 'max'=>1},
+        'autocreate' => {'type'=>'boolean', 'path'=>'Fixture.autocreate', 'min'=>1, 'max'=>1},
+        'autodelete' => {'type'=>'boolean', 'path'=>'Fixture.autodelete', 'min'=>1, 'max'=>1},
         'resource' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'Fixture.resource', 'min'=>0, 'max'=>1}
       }
 
       attr_accessor :id                # 0-1 string
       attr_accessor :extension         # 0-* [ Extension ]
       attr_accessor :modifierExtension # 0-* [ Extension ]
-      attr_accessor :autocreate        # 0-1 boolean
-      attr_accessor :autodelete        # 0-1 boolean
+      attr_accessor :autocreate        # 1-1 boolean
+      attr_accessor :autodelete        # 1-1 boolean
       attr_accessor :resource          # 0-1 Reference(Resource)
     end
 
@@ -204,106 +202,6 @@ module FHIR
       attr_accessor :hint              # 0-1 string
       attr_accessor :path              # 0-1 string
       attr_accessor :sourceId          # 0-1 id
-    end
-
-    class Rule < FHIR::Model
-      include FHIR::Hashable
-      include FHIR::Json
-      include FHIR::Xml
-
-      METADATA = {
-        'id' => {'type'=>'string', 'path'=>'Rule.id', 'min'=>0, 'max'=>1},
-        'extension' => {'type'=>'Extension', 'path'=>'Rule.extension', 'min'=>0, 'max'=>Float::INFINITY},
-        'modifierExtension' => {'type'=>'Extension', 'path'=>'Rule.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'resource' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'Rule.resource', 'min'=>1, 'max'=>1},
-        'param' => {'type'=>'TestScript::Rule::Param', 'path'=>'Rule.param', 'min'=>0, 'max'=>Float::INFINITY}
-      }
-
-      class Param < FHIR::Model
-        include FHIR::Hashable
-        include FHIR::Json
-        include FHIR::Xml
-
-        METADATA = {
-          'id' => {'type'=>'string', 'path'=>'Param.id', 'min'=>0, 'max'=>1},
-          'extension' => {'type'=>'Extension', 'path'=>'Param.extension', 'min'=>0, 'max'=>Float::INFINITY},
-          'modifierExtension' => {'type'=>'Extension', 'path'=>'Param.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-          'name' => {'type'=>'string', 'path'=>'Param.name', 'min'=>1, 'max'=>1},
-          'value' => {'type'=>'string', 'path'=>'Param.value', 'min'=>0, 'max'=>1}
-        }
-
-        attr_accessor :id                # 0-1 string
-        attr_accessor :extension         # 0-* [ Extension ]
-        attr_accessor :modifierExtension # 0-* [ Extension ]
-        attr_accessor :name              # 1-1 string
-        attr_accessor :value             # 0-1 string
-      end
-
-      attr_accessor :id                # 0-1 string
-      attr_accessor :extension         # 0-* [ Extension ]
-      attr_accessor :modifierExtension # 0-* [ Extension ]
-      attr_accessor :resource          # 1-1 Reference(Resource)
-      attr_accessor :param             # 0-* [ TestScript::Rule::Param ]
-    end
-
-    class Ruleset < FHIR::Model
-      include FHIR::Hashable
-      include FHIR::Json
-      include FHIR::Xml
-
-      METADATA = {
-        'id' => {'type'=>'string', 'path'=>'Ruleset.id', 'min'=>0, 'max'=>1},
-        'extension' => {'type'=>'Extension', 'path'=>'Ruleset.extension', 'min'=>0, 'max'=>Float::INFINITY},
-        'modifierExtension' => {'type'=>'Extension', 'path'=>'Ruleset.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'resource' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'Ruleset.resource', 'min'=>1, 'max'=>1},
-        'rule' => {'type'=>'TestScript::Ruleset::Rule', 'path'=>'Ruleset.rule', 'min'=>1, 'max'=>Float::INFINITY}
-      }
-
-      class Rule < FHIR::Model
-        include FHIR::Hashable
-        include FHIR::Json
-        include FHIR::Xml
-
-        METADATA = {
-          'id' => {'type'=>'string', 'path'=>'Rule.id', 'min'=>0, 'max'=>1},
-          'extension' => {'type'=>'Extension', 'path'=>'Rule.extension', 'min'=>0, 'max'=>Float::INFINITY},
-          'modifierExtension' => {'type'=>'Extension', 'path'=>'Rule.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-          'ruleId' => {'type'=>'id', 'path'=>'Rule.ruleId', 'min'=>1, 'max'=>1},
-          'param' => {'type'=>'TestScript::Ruleset::Rule::Param', 'path'=>'Rule.param', 'min'=>0, 'max'=>Float::INFINITY}
-        }
-
-        class Param < FHIR::Model
-          include FHIR::Hashable
-          include FHIR::Json
-          include FHIR::Xml
-
-          METADATA = {
-            'id' => {'type'=>'string', 'path'=>'Param.id', 'min'=>0, 'max'=>1},
-            'extension' => {'type'=>'Extension', 'path'=>'Param.extension', 'min'=>0, 'max'=>Float::INFINITY},
-            'modifierExtension' => {'type'=>'Extension', 'path'=>'Param.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-            'name' => {'type'=>'string', 'path'=>'Param.name', 'min'=>1, 'max'=>1},
-            'value' => {'type'=>'string', 'path'=>'Param.value', 'min'=>0, 'max'=>1}
-          }
-
-          attr_accessor :id                # 0-1 string
-          attr_accessor :extension         # 0-* [ Extension ]
-          attr_accessor :modifierExtension # 0-* [ Extension ]
-          attr_accessor :name              # 1-1 string
-          attr_accessor :value             # 0-1 string
-        end
-
-        attr_accessor :id                # 0-1 string
-        attr_accessor :extension         # 0-* [ Extension ]
-        attr_accessor :modifierExtension # 0-* [ Extension ]
-        attr_accessor :ruleId            # 1-1 id
-        attr_accessor :param             # 0-* [ TestScript::Ruleset::Rule::Param ]
-      end
-
-      attr_accessor :id                # 0-1 string
-      attr_accessor :extension         # 0-* [ Extension ]
-      attr_accessor :modifierExtension # 0-* [ Extension ]
-      attr_accessor :resource          # 1-1 Reference(Resource)
-      attr_accessor :rule              # 1-* [ TestScript::Ruleset::Rule ]
     end
 
     class Setup < FHIR::Model
@@ -340,14 +238,15 @@ module FHIR
             'id' => {'type'=>'string', 'path'=>'Operation.id', 'min'=>0, 'max'=>1},
             'extension' => {'type'=>'Extension', 'path'=>'Operation.extension', 'min'=>0, 'max'=>Float::INFINITY},
             'modifierExtension' => {'type'=>'Extension', 'path'=>'Operation.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-            'type' => {'valid_codes'=>{'http://hl7.org/fhir/testscript-operation-codes'=>['read', 'vread', 'update', 'updateCreate', 'delete', 'deleteCondSingle', 'deleteCondMultiple', 'history', 'create', 'search', 'batch', 'transaction', 'capabilities', 'apply', 'cancel', 'closure', 'compose', 'conforms', 'data-requirements', 'document', 'evaluate', 'evaluate-measure', 'everything', 'expand', 'fail', 'find', 'finish', 'implements', 'lookup', 'match', 'meta', 'meta-add', 'meta-delete', 'populate', 'populatehtml', 'populatelink', 'process-message', 'questionnaire', 'release', 'reserve', 'resume', 'set-input', 'set-output', 'start', 'stats', 'stop', 'subset', 'subsumes', 'suspend', 'transform', 'translate', 'validate', 'validate-code']}, 'type'=>'Coding', 'path'=>'Operation.type', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/testscript-operation-codes'}},
-            'resource' => {'valid_codes'=>{'http://hl7.org/fhir/data-types'=>['Address', 'Age', 'Annotation', 'Attachment', 'BackboneElement', 'CodeableConcept', 'Coding', 'ContactDetail', 'ContactPoint', 'Contributor', 'Count', 'DataRequirement', 'Distance', 'Dosage', 'Duration', 'Element', 'ElementDefinition', 'Extension', 'HumanName', 'Identifier', 'Meta', 'Money', 'Narrative', 'ParameterDefinition', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'RelatedArtifact', 'SampledData', 'Signature', 'SimpleQuantity', 'Timing', 'TriggerDefinition', 'UsageContext', 'base64Binary', 'boolean', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'uuid', 'xhtml'], 'http://hl7.org/fhir/resource-types'=>['Account', 'ActivityDefinition', 'AdverseEvent', 'AllergyIntolerance', 'Appointment', 'AppointmentResponse', 'AuditEvent', 'Basic', 'Binary', 'BodySite', 'Bundle', 'CapabilityStatement', 'CarePlan', 'CareTeam', 'ChargeItem', 'Claim', 'ClaimResponse', 'ClinicalImpression', 'CodeSystem', 'Communication', 'CommunicationRequest', 'CompartmentDefinition', 'Composition', 'ConceptMap', 'Condition', 'Consent', 'Contract', 'Coverage', 'DataElement', 'DetectedIssue', 'Device', 'DeviceComponent', 'DeviceMetric', 'DeviceRequest', 'DeviceUseStatement', 'DiagnosticReport', 'DocumentManifest', 'DocumentReference', 'DomainResource', 'EligibilityRequest', 'EligibilityResponse', 'Encounter', 'Endpoint', 'EnrollmentRequest', 'EnrollmentResponse', 'EpisodeOfCare', 'ExpansionProfile', 'ExplanationOfBenefit', 'FamilyMemberHistory', 'Flag', 'Goal', 'GraphDefinition', 'Group', 'GuidanceResponse', 'HealthcareService', 'ImagingManifest', 'ImagingStudy', 'Immunization', 'ImmunizationRecommendation', 'ImplementationGuide', 'Library', 'Linkage', 'List', 'Location', 'Measure', 'MeasureReport', 'Media', 'Medication', 'MedicationAdministration', 'MedicationDispense', 'MedicationRequest', 'MedicationStatement', 'MessageDefinition', 'MessageHeader', 'NamingSystem', 'NutritionOrder', 'Observation', 'OperationDefinition', 'OperationOutcome', 'Organization', 'Parameters', 'Patient', 'PaymentNotice', 'PaymentReconciliation', 'Person', 'PlanDefinition', 'Practitioner', 'PractitionerRole', 'Procedure', 'ProcedureRequest', 'ProcessRequest', 'ProcessResponse', 'Provenance', 'Questionnaire', 'QuestionnaireResponse', 'ReferralRequest', 'RelatedPerson', 'RequestGroup', 'ResearchStudy', 'ResearchSubject', 'Resource', 'RiskAssessment', 'Schedule', 'SearchParameter', 'Sequence', 'ServiceDefinition', 'Slot', 'Specimen', 'StructureDefinition', 'StructureMap', 'Subscription', 'Substance', 'SupplyDelivery', 'SupplyRequest', 'Task', 'TestReport', 'TestScript', 'ValueSet', 'VisionPrescription']}, 'type'=>'code', 'path'=>'Operation.resource', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/defined-types'}},
+            'type' => {'type'=>'Coding', 'path'=>'Operation.type', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'valueSet'=>'http://hl7.org/fhir/ValueSet/testscript-operation-codes', 'uri'=>nil}},
+            'resource' => {'type'=>'code', 'path'=>'Operation.resource', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/defined-types|4.0.0', 'uri'=>nil}},
             'label' => {'type'=>'string', 'path'=>'Operation.label', 'min'=>0, 'max'=>1},
             'description' => {'type'=>'string', 'path'=>'Operation.description', 'min'=>0, 'max'=>1},
-            'accept' => {'valid_codes'=>{'http://hl7.org/fhir/content-type'=>['xml', 'json', 'ttl', 'none']}, 'type'=>'code', 'path'=>'Operation.accept', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/content-type'}},
-            'contentType' => {'valid_codes'=>{'http://hl7.org/fhir/content-type'=>['xml', 'json', 'ttl', 'none']}, 'type'=>'code', 'path'=>'Operation.contentType', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/content-type'}},
+            'accept' => {'type'=>'code', 'path'=>'Operation.accept', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0', 'uri'=>nil}},
+            'contentType' => {'type'=>'code', 'path'=>'Operation.contentType', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0', 'uri'=>nil}},
             'destination' => {'type'=>'integer', 'path'=>'Operation.destination', 'min'=>0, 'max'=>1},
-            'encodeRequestUrl' => {'type'=>'boolean', 'path'=>'Operation.encodeRequestUrl', 'min'=>0, 'max'=>1},
+            'encodeRequestUrl' => {'type'=>'boolean', 'path'=>'Operation.encodeRequestUrl', 'min'=>1, 'max'=>1},
+            'method' => {'local_name'=>'local_method', 'type'=>'code', 'path'=>'Operation.method', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/http-operations|4.0.0', 'uri'=>nil}},
             'origin' => {'type'=>'integer', 'path'=>'Operation.origin', 'min'=>0, 'max'=>1},
             'params' => {'type'=>'string', 'path'=>'Operation.params', 'min'=>0, 'max'=>1},
             'requestHeader' => {'type'=>'TestScript::Setup::Action::Operation::RequestHeader', 'path'=>'Operation.requestHeader', 'min'=>0, 'max'=>Float::INFINITY},
@@ -388,7 +287,8 @@ module FHIR
           attr_accessor :accept            # 0-1 code
           attr_accessor :contentType       # 0-1 code
           attr_accessor :destination       # 0-1 integer
-          attr_accessor :encodeRequestUrl  # 0-1 boolean
+          attr_accessor :encodeRequestUrl  # 1-1 boolean
+          attr_accessor :local_method      # 0-1 code
           attr_accessor :origin            # 0-1 integer
           attr_accessor :params            # 0-1 string
           attr_accessor :requestHeader     # 0-* [ TestScript::Setup::Action::Operation::RequestHeader ]
@@ -410,129 +310,27 @@ module FHIR
             'modifierExtension' => {'type'=>'Extension', 'path'=>'Assert.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
             'label' => {'type'=>'string', 'path'=>'Assert.label', 'min'=>0, 'max'=>1},
             'description' => {'type'=>'string', 'path'=>'Assert.description', 'min'=>0, 'max'=>1},
-            'direction' => {'valid_codes'=>{'http://hl7.org/fhir/assert-direction-codes'=>['response', 'request']}, 'type'=>'code', 'path'=>'Assert.direction', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/assert-direction-codes'}},
+            'direction' => {'type'=>'code', 'path'=>'Assert.direction', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/assert-direction-codes|4.0.0', 'uri'=>nil}},
             'compareToSourceId' => {'type'=>'string', 'path'=>'Assert.compareToSourceId', 'min'=>0, 'max'=>1},
             'compareToSourceExpression' => {'type'=>'string', 'path'=>'Assert.compareToSourceExpression', 'min'=>0, 'max'=>1},
             'compareToSourcePath' => {'type'=>'string', 'path'=>'Assert.compareToSourcePath', 'min'=>0, 'max'=>1},
-            'contentType' => {'valid_codes'=>{'http://hl7.org/fhir/content-type'=>['xml', 'json', 'ttl', 'none']}, 'type'=>'code', 'path'=>'Assert.contentType', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/content-type'}},
+            'contentType' => {'type'=>'code', 'path'=>'Assert.contentType', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0', 'uri'=>nil}},
             'expression' => {'type'=>'string', 'path'=>'Assert.expression', 'min'=>0, 'max'=>1},
             'headerField' => {'type'=>'string', 'path'=>'Assert.headerField', 'min'=>0, 'max'=>1},
             'minimumId' => {'type'=>'string', 'path'=>'Assert.minimumId', 'min'=>0, 'max'=>1},
             'navigationLinks' => {'type'=>'boolean', 'path'=>'Assert.navigationLinks', 'min'=>0, 'max'=>1},
-            'operator' => {'valid_codes'=>{'http://hl7.org/fhir/assert-operator-codes'=>['equals', 'notEquals', 'in', 'notIn', 'greaterThan', 'lessThan', 'empty', 'notEmpty', 'contains', 'notContains', 'eval']}, 'type'=>'code', 'path'=>'Assert.operator', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/assert-operator-codes'}},
+            'operator' => {'type'=>'code', 'path'=>'Assert.operator', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/assert-operator-codes|4.0.0', 'uri'=>nil}},
             'path' => {'type'=>'string', 'path'=>'Assert.path', 'min'=>0, 'max'=>1},
-            'requestMethod' => {'valid_codes'=>{'http://hl7.org/fhir/http-operations'=>['delete', 'get', 'options', 'patch', 'post', 'put']}, 'type'=>'code', 'path'=>'Assert.requestMethod', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/http-operations'}},
+            'requestMethod' => {'type'=>'code', 'path'=>'Assert.requestMethod', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/http-operations|4.0.0', 'uri'=>nil}},
             'requestURL' => {'type'=>'string', 'path'=>'Assert.requestURL', 'min'=>0, 'max'=>1},
-            'resource' => {'valid_codes'=>{'http://hl7.org/fhir/data-types'=>['Address', 'Age', 'Annotation', 'Attachment', 'BackboneElement', 'CodeableConcept', 'Coding', 'ContactDetail', 'ContactPoint', 'Contributor', 'Count', 'DataRequirement', 'Distance', 'Dosage', 'Duration', 'Element', 'ElementDefinition', 'Extension', 'HumanName', 'Identifier', 'Meta', 'Money', 'Narrative', 'ParameterDefinition', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'RelatedArtifact', 'SampledData', 'Signature', 'SimpleQuantity', 'Timing', 'TriggerDefinition', 'UsageContext', 'base64Binary', 'boolean', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'uuid', 'xhtml'], 'http://hl7.org/fhir/resource-types'=>['Account', 'ActivityDefinition', 'AdverseEvent', 'AllergyIntolerance', 'Appointment', 'AppointmentResponse', 'AuditEvent', 'Basic', 'Binary', 'BodySite', 'Bundle', 'CapabilityStatement', 'CarePlan', 'CareTeam', 'ChargeItem', 'Claim', 'ClaimResponse', 'ClinicalImpression', 'CodeSystem', 'Communication', 'CommunicationRequest', 'CompartmentDefinition', 'Composition', 'ConceptMap', 'Condition', 'Consent', 'Contract', 'Coverage', 'DataElement', 'DetectedIssue', 'Device', 'DeviceComponent', 'DeviceMetric', 'DeviceRequest', 'DeviceUseStatement', 'DiagnosticReport', 'DocumentManifest', 'DocumentReference', 'DomainResource', 'EligibilityRequest', 'EligibilityResponse', 'Encounter', 'Endpoint', 'EnrollmentRequest', 'EnrollmentResponse', 'EpisodeOfCare', 'ExpansionProfile', 'ExplanationOfBenefit', 'FamilyMemberHistory', 'Flag', 'Goal', 'GraphDefinition', 'Group', 'GuidanceResponse', 'HealthcareService', 'ImagingManifest', 'ImagingStudy', 'Immunization', 'ImmunizationRecommendation', 'ImplementationGuide', 'Library', 'Linkage', 'List', 'Location', 'Measure', 'MeasureReport', 'Media', 'Medication', 'MedicationAdministration', 'MedicationDispense', 'MedicationRequest', 'MedicationStatement', 'MessageDefinition', 'MessageHeader', 'NamingSystem', 'NutritionOrder', 'Observation', 'OperationDefinition', 'OperationOutcome', 'Organization', 'Parameters', 'Patient', 'PaymentNotice', 'PaymentReconciliation', 'Person', 'PlanDefinition', 'Practitioner', 'PractitionerRole', 'Procedure', 'ProcedureRequest', 'ProcessRequest', 'ProcessResponse', 'Provenance', 'Questionnaire', 'QuestionnaireResponse', 'ReferralRequest', 'RelatedPerson', 'RequestGroup', 'ResearchStudy', 'ResearchSubject', 'Resource', 'RiskAssessment', 'Schedule', 'SearchParameter', 'Sequence', 'ServiceDefinition', 'Slot', 'Specimen', 'StructureDefinition', 'StructureMap', 'Subscription', 'Substance', 'SupplyDelivery', 'SupplyRequest', 'Task', 'TestReport', 'TestScript', 'ValueSet', 'VisionPrescription']}, 'type'=>'code', 'path'=>'Assert.resource', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/defined-types'}},
-            'response' => {'valid_codes'=>{'http://hl7.org/fhir/assert-response-code-types'=>['okay', 'created', 'noContent', 'notModified', 'bad', 'forbidden', 'notFound', 'methodNotAllowed', 'conflict', 'gone', 'preconditionFailed', 'unprocessable']}, 'type'=>'code', 'path'=>'Assert.response', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/assert-response-code-types'}},
+            'resource' => {'type'=>'code', 'path'=>'Assert.resource', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/defined-types|4.0.0', 'uri'=>nil}},
+            'response' => {'type'=>'code', 'path'=>'Assert.response', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/assert-response-code-types|4.0.0', 'uri'=>nil}},
             'responseCode' => {'type'=>'string', 'path'=>'Assert.responseCode', 'min'=>0, 'max'=>1},
-            'rule' => {'type'=>'TestScript::Setup::Action::Assert::Rule', 'path'=>'Assert.rule', 'min'=>0, 'max'=>1},
-            'ruleset' => {'type'=>'TestScript::Setup::Action::Assert::Ruleset', 'path'=>'Assert.ruleset', 'min'=>0, 'max'=>1},
             'sourceId' => {'type'=>'id', 'path'=>'Assert.sourceId', 'min'=>0, 'max'=>1},
             'validateProfileId' => {'type'=>'id', 'path'=>'Assert.validateProfileId', 'min'=>0, 'max'=>1},
             'value' => {'type'=>'string', 'path'=>'Assert.value', 'min'=>0, 'max'=>1},
-            'warningOnly' => {'type'=>'boolean', 'path'=>'Assert.warningOnly', 'min'=>0, 'max'=>1}
+            'warningOnly' => {'type'=>'boolean', 'path'=>'Assert.warningOnly', 'min'=>1, 'max'=>1}
           }
-
-          class Rule < FHIR::Model
-            include FHIR::Hashable
-            include FHIR::Json
-            include FHIR::Xml
-
-            METADATA = {
-              'id' => {'type'=>'string', 'path'=>'Rule.id', 'min'=>0, 'max'=>1},
-              'extension' => {'type'=>'Extension', 'path'=>'Rule.extension', 'min'=>0, 'max'=>Float::INFINITY},
-              'modifierExtension' => {'type'=>'Extension', 'path'=>'Rule.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-              'ruleId' => {'type'=>'id', 'path'=>'Rule.ruleId', 'min'=>1, 'max'=>1},
-              'param' => {'type'=>'TestScript::Setup::Action::Assert::Rule::Param', 'path'=>'Rule.param', 'min'=>0, 'max'=>Float::INFINITY}
-            }
-
-            class Param < FHIR::Model
-              include FHIR::Hashable
-              include FHIR::Json
-              include FHIR::Xml
-
-              METADATA = {
-                'id' => {'type'=>'string', 'path'=>'Param.id', 'min'=>0, 'max'=>1},
-                'extension' => {'type'=>'Extension', 'path'=>'Param.extension', 'min'=>0, 'max'=>Float::INFINITY},
-                'modifierExtension' => {'type'=>'Extension', 'path'=>'Param.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-                'name' => {'type'=>'string', 'path'=>'Param.name', 'min'=>1, 'max'=>1},
-                'value' => {'type'=>'string', 'path'=>'Param.value', 'min'=>1, 'max'=>1}
-              }
-
-              attr_accessor :id                # 0-1 string
-              attr_accessor :extension         # 0-* [ Extension ]
-              attr_accessor :modifierExtension # 0-* [ Extension ]
-              attr_accessor :name              # 1-1 string
-              attr_accessor :value             # 1-1 string
-            end
-
-            attr_accessor :id                # 0-1 string
-            attr_accessor :extension         # 0-* [ Extension ]
-            attr_accessor :modifierExtension # 0-* [ Extension ]
-            attr_accessor :ruleId            # 1-1 id
-            attr_accessor :param             # 0-* [ TestScript::Setup::Action::Assert::Rule::Param ]
-          end
-
-          class Ruleset < FHIR::Model
-            include FHIR::Hashable
-            include FHIR::Json
-            include FHIR::Xml
-
-            METADATA = {
-              'id' => {'type'=>'string', 'path'=>'Ruleset.id', 'min'=>0, 'max'=>1},
-              'extension' => {'type'=>'Extension', 'path'=>'Ruleset.extension', 'min'=>0, 'max'=>Float::INFINITY},
-              'modifierExtension' => {'type'=>'Extension', 'path'=>'Ruleset.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-              'rulesetId' => {'type'=>'id', 'path'=>'Ruleset.rulesetId', 'min'=>1, 'max'=>1},
-              'rule' => {'type'=>'TestScript::Setup::Action::Assert::Ruleset::Rule', 'path'=>'Ruleset.rule', 'min'=>0, 'max'=>Float::INFINITY}
-            }
-
-            class Rule < FHIR::Model
-              include FHIR::Hashable
-              include FHIR::Json
-              include FHIR::Xml
-
-              METADATA = {
-                'id' => {'type'=>'string', 'path'=>'Rule.id', 'min'=>0, 'max'=>1},
-                'extension' => {'type'=>'Extension', 'path'=>'Rule.extension', 'min'=>0, 'max'=>Float::INFINITY},
-                'modifierExtension' => {'type'=>'Extension', 'path'=>'Rule.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-                'ruleId' => {'type'=>'id', 'path'=>'Rule.ruleId', 'min'=>1, 'max'=>1},
-                'param' => {'type'=>'TestScript::Setup::Action::Assert::Ruleset::Rule::Param', 'path'=>'Rule.param', 'min'=>0, 'max'=>Float::INFINITY}
-              }
-
-              class Param < FHIR::Model
-                include FHIR::Hashable
-                include FHIR::Json
-                include FHIR::Xml
-
-                METADATA = {
-                  'id' => {'type'=>'string', 'path'=>'Param.id', 'min'=>0, 'max'=>1},
-                  'extension' => {'type'=>'Extension', 'path'=>'Param.extension', 'min'=>0, 'max'=>Float::INFINITY},
-                  'modifierExtension' => {'type'=>'Extension', 'path'=>'Param.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-                  'name' => {'type'=>'string', 'path'=>'Param.name', 'min'=>1, 'max'=>1},
-                  'value' => {'type'=>'string', 'path'=>'Param.value', 'min'=>1, 'max'=>1}
-                }
-
-                attr_accessor :id                # 0-1 string
-                attr_accessor :extension         # 0-* [ Extension ]
-                attr_accessor :modifierExtension # 0-* [ Extension ]
-                attr_accessor :name              # 1-1 string
-                attr_accessor :value             # 1-1 string
-              end
-
-              attr_accessor :id                # 0-1 string
-              attr_accessor :extension         # 0-* [ Extension ]
-              attr_accessor :modifierExtension # 0-* [ Extension ]
-              attr_accessor :ruleId            # 1-1 id
-              attr_accessor :param             # 0-* [ TestScript::Setup::Action::Assert::Ruleset::Rule::Param ]
-            end
-
-            attr_accessor :id                # 0-1 string
-            attr_accessor :extension         # 0-* [ Extension ]
-            attr_accessor :modifierExtension # 0-* [ Extension ]
-            attr_accessor :rulesetId         # 1-1 id
-            attr_accessor :rule              # 0-* [ TestScript::Setup::Action::Assert::Ruleset::Rule ]
-          end
 
           attr_accessor :id                        # 0-1 string
           attr_accessor :extension                 # 0-* [ Extension ]
@@ -555,12 +353,10 @@ module FHIR
           attr_accessor :resource                  # 0-1 code
           attr_accessor :response                  # 0-1 code
           attr_accessor :responseCode              # 0-1 string
-          attr_accessor :rule                      # 0-1 TestScript::Setup::Action::Assert::Rule
-          attr_accessor :ruleset                   # 0-1 TestScript::Setup::Action::Assert::Ruleset
           attr_accessor :sourceId                  # 0-1 id
           attr_accessor :validateProfileId         # 0-1 id
           attr_accessor :value                     # 0-1 string
-          attr_accessor :warningOnly               # 0-1 boolean
+          attr_accessor :warningOnly               # 1-1 boolean
         end
 
         attr_accessor :id                # 0-1 string
@@ -683,8 +479,6 @@ module FHIR
     attr_accessor :fixture           # 0-* [ TestScript::Fixture ]
     attr_accessor :profile           # 0-* [ Reference(Resource) ]
     attr_accessor :variable          # 0-* [ TestScript::Variable ]
-    attr_accessor :rule              # 0-* [ TestScript::Rule ]
-    attr_accessor :ruleset           # 0-* [ TestScript::Ruleset ]
     attr_accessor :setup             # 0-1 TestScript::Setup
     attr_accessor :test              # 0-* [ TestScript::Test ]
     attr_accessor :teardown          # 0-1 TestScript::Teardown

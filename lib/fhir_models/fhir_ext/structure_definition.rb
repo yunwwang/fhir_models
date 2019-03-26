@@ -374,12 +374,12 @@ module FHIR
     deprecate :is_data_type?, :data_type?
 
     def check_binding_element(element, value)
-      vs_uri = element.binding.valueSetUri || element.binding.valueSetReference.reference
+      vs_uri = element.binding.valueSet
       valueset = FHIR::Definitions.get_codes(vs_uri)
 
       matching_type = 0
 
-      if vs_uri == 'http://hl7.org/fhir/ValueSet/content-type' || vs_uri == 'http://www.rfc-editor.org/bcp/bcp13.txt'
+      if vs_uri == 'http://hl7.org/fhir/ValueSet/mimetypes' || vs_uri == 'http://www.rfc-editor.org/bcp/bcp13.txt'
         matches = MIME::Types[value]
         if (matches.nil? || matches.size.zero?) && !some_type_of_xml_or_json?(value)
           @errors << "#{element.path} has invalid mime-type: '#{value}'"

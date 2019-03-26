@@ -45,7 +45,7 @@ module FHIR
 
           # try to find a regex
           if type['extension']
-            ext = type['extension'].find { |e| e['url'] == 'http://hl7.org/fhir/StructureDefinition/structuredefinition-regex' }
+            ext = type['extension'].find { |e| e['url'] == 'http://hl7.org/fhir/StructureDefinition/regex' }
             field.regex = ext['valueString'] if ext
           end
 
@@ -175,6 +175,7 @@ module FHIR
 
             # generate a field for each valid datatype... this is for things like Resource.attribute[x]
             element['type'].map { |t| t['code'] }.uniq.each do |data_type|
+              data_type = 'string' unless data_type
               capitalized = cap_first(data_type)
               fieldname = field_base_name.gsub('[x]', capitalized)
               field = FHIR::Field.new(fieldname)
@@ -189,11 +190,8 @@ module FHIR
 
               if %w[code Coding CodeableConcept].include?(data_type) && element['binding']
                 field.binding = element['binding']
-                field.binding['uri'] = field.binding['valueSetUri']
-                field.binding['uri'] = field.binding['valueSetReference'] if field.binding['uri'].nil?
-                field.binding['uri'] = field.binding['uri']['reference'] if field.binding['uri'].is_a?(Hash)
-                field.binding.delete('valueSetUri')
-                field.binding.delete('valueSetReference')
+                field.binding['uri'] = field.binding['valueSet']
+                field.binding.delete('valueSet')
                 field.binding.delete('description')
                 field.binding.delete('extension')
                 # set the actual code list

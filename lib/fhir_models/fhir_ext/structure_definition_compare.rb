@@ -272,14 +272,14 @@ module FHIR
 
       # check bindings
       if x.binding.nil? && !y.binding.nil?
-        val = y.binding.valueSetUri || y.binding.valueSetReference.try(:reference) || y.binding.description
+        val = y.binding.valueSet || y.binding.description
         @warnings << @finding.warning(x.path.to_s, 'binding', 'Inconsistent binding', '', val)
       elsif !x.binding.nil? && y.binding.nil?
-        val = x.binding.valueSetUri || x.binding.valueSetReference.try(:reference) || x.binding.description
+        val = x.binding.valueSet || x.binding.description
         @warnings << @finding.warning(x.path.to_s, 'binding', 'Inconsistent binding', val, '')
       elsif !x.binding.nil? && !y.binding.nil?
-        x_vs = x.binding.valueSetUri || x.binding.valueSetReference.try(:reference)
-        y_vs = y.binding.valueSetUri || y.binding.valueSetReference.try(:reference)
+        x_vs = x.binding.valueSet
+        y_vs = y.binding.valueSet
         if x_vs != y_vs
           if x.binding.strength == 'required' || y.binding.strength == 'required'
             @errors << @finding.error(x.path.to_s, 'binding.strength', 'Incompatible bindings', "#{x.binding.strength} #{x_vs}", "#{y.binding.strength} #{y_vs}")
