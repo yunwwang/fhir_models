@@ -37,52 +37,33 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="1.0">
   <xs:include schemaLocation="fhir-base.xsd"/>
   <xs:element name="MedicinalProductManufactured" type="MedicinalProductManufactured">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">The manufactured item as contained in the packaged medicinal product.</xs:documentation>
-    </xs:annotation>
+    
   </xs:element>
   <xs:complexType name="MedicinalProductManufactured">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">The manufactured item as contained in the packaged medicinal product.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
+    
     <xs:complexContent>
       <xs:extension base="DomainResource">
         <xs:sequence>
           <xs:element name="manufacturedDoseForm" minOccurs="1" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Dose form as manufactured and before any transformation into the pharmaceutical product.</xs:documentation>
-           </xs:annotation>
+            
           </xs:element>
           <xs:element name="unitOfPresentation" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The “real world” units in which the quantity of the manufactured item is described.</xs:documentation>
-           </xs:annotation>
+            
           </xs:element>
           <xs:element name="quantity" minOccurs="1" maxOccurs="1" type="Quantity">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The quantity or &quot;count number&quot; of the manufactured item.</xs:documentation>
-           </xs:annotation>
+            
           </xs:element>
           <xs:element name="manufacturer" minOccurs="0" maxOccurs="unbounded" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Manufacturer of the item (Note that this should be named &quot;manufacturer&quot; but it currently causes technical issues).</xs:documentation>
-           </xs:annotation>
+            
           </xs:element>
           <xs:element name="ingredient" minOccurs="0" maxOccurs="unbounded" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Ingredient.</xs:documentation>
-           </xs:annotation>
+            
           </xs:element>
           <xs:element name="physicalCharacteristics" minOccurs="0" maxOccurs="1" type="ProdCharacteristic">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Dimensions, color etc.</xs:documentation>
-           </xs:annotation>
+            
           </xs:element>
           <xs:element name="otherCharacteristics" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Other codeable characteristics.</xs:documentation>
-           </xs:annotation>
+            
           </xs:element>
         </xs:sequence>
       </xs:extension>
