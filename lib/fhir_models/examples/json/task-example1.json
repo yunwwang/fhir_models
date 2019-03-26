@@ -3,7 +3,7 @@
   "id": "example1",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example1</p><p><b>contained</b>: </p><p><b>identifier</b>: 20170201-001 (OFFICIAL)</p><p><b>basedOn</b>: General Wellness Careplan</p><p><b>groupIdentifier</b>: G20170201-001 (OFFICIAL)</p><p><b>status</b>: in-progress</p><p><b>businessStatus</b>: waiting for specimen <span>(Details )</span></p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>code</b>: Lipid Panel <span>(Details )</span></p><p><b>description</b>: Create order for getting specimen, Set up inhouse testing,  generate order for any sendouts and submit with specimen</p><p><b>focus</b>: <a>Lipid Panel Request</a></p><p><b>for</b>: <a>Peter James Chalmers</a></p><p><b>context</b>: <a>Example In-Patient Encounter</a></p><p><b>executionPeriod</b>: Oct 31, 2016 8:25:05 AM --&gt; (ongoing)</p><p><b>authoredOn</b>: Oct 31, 2016 8:25:05 AM</p><p><b>lastModified</b>: Oct 31, 2016 9:45:05 AM</p><h3>Requesters</h3><table><tr><td>-</td><td><b>Agent</b></td><td><b>OnBehalfOf</b></td></tr><tr><td>*</td><td><a>Dr Adam Careful</a></td><td><a>Good Health Clinic</a></td></tr></table><p><b>performerType</b>: Performer <span>(Details : {http://hl7.org/fhir/task-performer-type code 'performer' = 'Performer', given as 'Performer'})</span></p><p><b>owner</b>: <a>Clinical Laboratory @ Acme Hospital</a></p><p><b>reason</b>: The Task.reason should only be included if there is no Task.focus or if it differs from the reason indicated on the focus <span>(Details )</span></p><p><b>note</b>: This is an example to demonstrate using task for actioning a procedurerequest and to illustrate how to populate many of the task elements - this is the parent task that will be broken into subtask to grab the specimen and a sendout lab test </p><p><b>relevantHistory</b>: Author's Signature. Generated Summary: id: signature; recorded: Oct 31, 2016 8:25:05 AM; </p><h3>Restrictions</h3><table><tr><td>-</td><td><b>Repetitions</b></td><td><b>Period</b></td></tr><tr><td>*</td><td>1</td><td>?? --&gt; Nov 2, 2016 9:45:05 AM</td></tr></table></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: example1\u003c/p\u003e\u003cp\u003e\u003cb\u003econtained\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: 20170201-001 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003ebasedOn\u003c/b\u003e: General Wellness Careplan\u003c/p\u003e\u003cp\u003e\u003cb\u003egroupIdentifier\u003c/b\u003e: G20170201-001 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: in-progress\u003c/p\u003e\u003cp\u003e\u003cb\u003ebusinessStatus\u003c/b\u003e: waiting for specimen \u003cspan\u003e(Details )\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: order\u003c/p\u003e\u003cp\u003e\u003cb\u003epriority\u003c/b\u003e: routine\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: Lipid Panel \u003cspan\u003e(Details )\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Create order for getting specimen, Set up inhouse testing,  generate order for any sendouts and submit with specimen\u003c/p\u003e\u003cp\u003e\u003cb\u003efocus\u003c/b\u003e: \u003ca\u003eLipid Panel Request\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003efor\u003c/b\u003e: \u003ca\u003ePeter James Chalmers\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eencounter\u003c/b\u003e: \u003ca\u003eExample In-Patient Encounter\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eexecutionPeriod\u003c/b\u003e: 31/10/2016 8:25:05 AM --\u0026gt; (ongoing)\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthoredOn\u003c/b\u003e: 31/10/2016 8:25:05 AM\u003c/p\u003e\u003cp\u003e\u003cb\u003elastModified\u003c/b\u003e: 31/10/2016 9:45:05 AM\u003c/p\u003e\u003cp\u003e\u003cb\u003erequester\u003c/b\u003e: \u003ca\u003eDr Adam Careful\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eperformerType\u003c/b\u003e: Performer \u003cspan\u003e(Details : {http://terminology.hl7.org/CodeSystem/task-performer-type code \u0027performer\u0027 \u003d \u0027performer\u0027, given as \u0027Performer\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eowner\u003c/b\u003e: \u003ca\u003eClinical Laboratory @ Acme Hospital\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ereasonCode\u003c/b\u003e: The Task.reason should only be included if there is no Task.focus or if it differs from the reason indicated on the focus \u003cspan\u003e(Details )\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: This is an example to demonstrate using task for actioning a servicerequest and to illustrate how to populate many of the task elements - this is the parent task that will be broken into subtask to grab the specimen and a sendout lab test \u003c/p\u003e\u003cp\u003e\u003cb\u003erelevantHistory\u003c/b\u003e: Author\u0027s Signature. Generated Summary: id: signature; recorded: 31/10/2016 8:25:05 AM; \u003c/p\u003e\u003ch3\u003eRestrictions\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRepetitions\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003ePeriod\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003e?? --\u0026gt; 02/11/2016 9:45:05 AM\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "contained": [
     {
@@ -11,7 +11,7 @@
       "id": "signature",
       "target": [
         {
-          "reference": "ProcedureRequest/physiotherapy/_history/1"
+          "reference": "ServiceRequest/physiotherapy/_history/1"
         }
       ],
       "recorded": "2016-10-31T08:25:05+10:00",
@@ -21,13 +21,13 @@
             {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v3/ParticipationType",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
                   "code": "AUT"
                 }
               ]
             }
           ],
-          "whoReference": {
+          "who": {
             "reference": "Practitioner/f202",
             "display": "Luigi Maas"
           }
@@ -39,16 +39,17 @@
             {
               "system": "urn:iso-astm:E1762-95:2013",
               "code": "1.2.840.10065.1.12.1.1",
-              "display": "Author's Signature"
+              "display": "Author\u0027s Signature"
             }
           ],
           "when": "2016-10-31T08:25:05+10:00",
-          "whoReference": {
+          "who": {
             "reference": "Practitioner/example",
             "display": "Dr Adam Careful"
           },
-          "contentType": "application/signature+xml",
-          "blob": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
+          "targetFormat": "application/fhir+xml",
+          "sigFormat": "application/signature+xml",
+          "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ\u003d"
         }
       ]
     }
@@ -81,14 +82,14 @@
   },
   "description": "Create order for getting specimen, Set up inhouse testing,  generate order for any sendouts and submit with specimen",
   "focus": {
-    "reference": "ProcedureRequest/lipid",
+    "reference": "ServiceRequest/lipid",
     "display": "Lipid Panel Request"
   },
   "for": {
     "reference": "Patient/example",
     "display": "Peter James Chalmers"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/example",
     "display": "Example In-Patient Encounter"
   },
@@ -98,20 +99,14 @@
   "authoredOn": "2016-10-31T08:25:05+10:00",
   "lastModified": "2016-10-31T09:45:05+10:00",
   "requester": {
-    "agent": {
-      "reference": "Practitioner/example",
-      "display": "Dr Adam Careful"
-    },
-    "onBehalfOf": {
-      "reference": "Organization/2.16.840.1.113883.19.5",
-      "display": "Good Health Clinic"
-    }
+    "reference": "Practitioner/example",
+    "display": "Dr Adam Careful"
   },
   "performerType": [
     {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/task-performer-type",
+          "system": "http://terminology.hl7.org/CodeSystem/task-performer-type",
           "code": "performer",
           "display": "Performer"
         }
@@ -123,18 +118,18 @@
     "reference": "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f",
     "display": "Clinical Laboratory @ Acme Hospital"
   },
-  "reason": {
+  "reasonCode": {
     "text": "The Task.reason should only be included if there is no Task.focus or if it differs from the reason indicated on the focus"
   },
   "note": [
     {
-      "text": "This is an example to demonstrate using task for actioning a procedurerequest and to illustrate how to populate many of the task elements - this is the parent task that will be broken into subtask to grab the specimen and a sendout lab test "
+      "text": "This is an example to demonstrate using task for actioning a servicerequest and to illustrate how to populate many of the task elements - this is the parent task that will be broken into subtask to grab the specimen and a sendout lab test "
     }
   ],
   "relevantHistory": [
     {
       "reference": "#signature",
-      "display": "Author's Signature"
+      "display": "Author\u0027s Signature"
     }
   ],
   "restriction": {
@@ -142,5 +137,14 @@
     "period": {
       "end": "2016-11-02T09:45:05+10:00"
     }
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

@@ -3,7 +3,7 @@
   "id": "med-list",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Add hydroxocobalamin</p>\n      <p>Cancel Morphine Sulphate</p>\n    </div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003eAdd hydroxocobalamin\u003c/p\u003e\n      \u003cp\u003eCancel Morphine Sulphate\u003c/p\u003e\n    \u003c/div\u003e"
   },
   "status": "current",
   "mode": "changes",
@@ -51,5 +51,14 @@
         "display": "Morphine Sulfate"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

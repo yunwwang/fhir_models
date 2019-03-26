@@ -3,7 +3,7 @@
   "id": "ER2500",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the PaymentReconciliation</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the PaymentReconciliation\u003c/div\u003e"
   },
   "identifier": [
     {
@@ -17,33 +17,36 @@
     "end": "2014-08-31"
   },
   "created": "2014-08-16",
-  "organization": {
+  "paymentIssuer": {
     "reference": "Organization/2"
   },
   "request": {
-    "reference": "http://www.BenefitsInc.com/fhir/ProcessRequest/225476332402"
+    "reference": "http://www.BenefitsInc.com/fhir/eligibility/225476332402"
   },
-  "outcome": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/remittance-outcome",
-        "code": "complete"
-      }
-    ]
-  },
-  "disposition": "2014 August mid-month settlement.",
-  "requestProvider": {
-    "reference": "Practitioner/example"
-  },
-  "requestOrganization": {
+  "requestor": {
     "reference": "Organization/1"
+  },
+  "outcome": "complete",
+  "disposition": "2014 August mid-month settlement.",
+  "paymentDate": "2014-08-01",
+  "paymentAmount": {
+    "value": 7000.00,
+    "currency": "USD"
+  },
+  "paymentIdentifier": {
+    "system": "http://www.BenefitsInc.com/payment/2018",
+    "value": "10-12345"
   },
   "detail": [
     {
+      "identifier": {
+        "system": "http://www.BenefitsInc.com/payment/2018/detail",
+        "value": "10-12345-001"
+      },
       "type": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/payment-type",
+            "system": "http://terminology.hl7.org/CodeSystem/payment-type",
             "code": "payment"
           }
         ]
@@ -54,30 +57,33 @@
           "value": "AB12345"
         }
       },
+      "submitter": {
+        "reference": "Organization/1"
+      },
       "response": {
         "identifier": {
           "system": "http://www.BenefitsInc.com/fhir/claimresponse",
           "value": "CR20140815-AB12345"
         }
       },
-      "submitter": {
-        "reference": "Organization/1"
-      },
+      "date": "2014-08-16",
       "payee": {
         "reference": "Organization/1"
       },
-      "date": "2014-08-16",
       "amount": {
-        "value": 1000.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 3500.00,
+        "currency": "USD"
       }
     },
     {
+      "identifier": {
+        "system": "http://www.BenefitsInc.com/payment/2018/detail",
+        "value": "10-12345-002"
+      },
       "type": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/payment-type",
+            "system": "http://terminology.hl7.org/CodeSystem/payment-type",
             "code": "payment"
           }
         ]
@@ -88,15 +94,18 @@
       "date": "2014-08-12",
       "amount": {
         "value": 4000.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       }
     },
     {
+      "identifier": {
+        "system": "http://www.BenefitsInc.com/payment/2018/detail",
+        "value": "10-12345-003"
+      },
       "type": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/payment-type",
+            "system": "http://terminology.hl7.org/CodeSystem/payment-type",
             "code": "advance"
           }
         ]
@@ -104,12 +113,11 @@
       "date": "2014-08-16",
       "amount": {
         "value": -1500.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       }
     }
   ],
-  "form": {
+  "formCode": {
     "coding": [
       {
         "system": "http://ncforms.org/formid",
@@ -117,22 +125,19 @@
       }
     ]
   },
-  "total": {
-    "value": 3500.00,
-    "system": "urn:iso:std:iso:4217",
-    "code": "USD"
-  },
   "processNote": [
     {
-      "type": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/note-type",
-            "code": "display"
-          }
-        ]
-      },
+      "type": "display",
       "text": "Due to the year end holiday the cutoff for submissions for December will be the 28th."
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

@@ -3,19 +3,19 @@
   "id": "home",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Encounter with patient @example who is at home</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eEncounter with patient @example who is at home\u003c/div\u003e"
   },
   "contained": [
     {
       "resourceType": "Location",
       "id": "home",
-      "description": "Client's home",
+      "description": "Client\u0027s home",
       "mode": "kind"
     }
   ],
   "status": "finished",
   "class": {
-    "system": "http://hl7.org/fhir/v3/ActCode",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
     "code": "HH",
     "display": "home health"
   },
@@ -42,7 +42,7 @@
     {
       "location": {
         "reference": "#home",
-        "display": "Client's home"
+        "display": "Client\u0027s home"
       },
       "status": "completed",
       "period": {
@@ -50,5 +50,14 @@
         "end": "2015-01-17T16:30:00+10:00"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

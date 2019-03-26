@@ -3,25 +3,27 @@
   "id": "ph",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient's Home</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003ePatient\u0027s Home\u003c/div\u003e"
   },
   "status": "active",
-  "name": "Patient's Home",
-  "description": "Patient's Home",
+  "name": "Patient\u0027s Home",
+  "description": "Patient\u0027s Home",
   "mode": "kind",
-  "type": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/v3/RoleCode",
-        "code": "PTRES",
-        "display": "Patient's Residence"
-      }
-    ]
-  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code": "PTRES",
+          "display": "Patient\u0027s Residence"
+        }
+      ]
+    }
+  ],
   "physicalType": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/location-physical-type",
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
         "code": "ho",
         "display": "House"
       }
@@ -29,5 +31,14 @@
   },
   "managingOrganization": {
     "reference": "Organization/f001"
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

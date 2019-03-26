@@ -3,7 +3,7 @@
   "id": "example-extension",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-extension</p><p><b>url</b>: <a>http://hl7.org/fhir/SearchParameter/example-extension</a></p><p><b>name</b>: Example Search Parameter on an extension</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>publisher</b>: Health Level Seven International (FHIR Infrastructure)</p><p><b>contact</b>: </p><p><b>code</b>: part-agree</p><p><b>base</b>: Patient</p><p><b>type</b>: reference</p><p><b>description</b>: Search by url for a participation agreement, which is stored in a DocumentReference</p><p><b>expression</b>: DocumentReference.extension('http://example.org/fhir/StructureDefinition/participation-agreement')</p><p><b>xpath</b>: f:DocumentReference/f:extension[@url='http://example.org/fhir/StructureDefinition/participation-agreement']</p><p><b>xpathUsage</b>: normal</p><p><b>target</b>: DocumentReference</p></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: example-extension\u003c/p\u003e\u003cp\u003e\u003cb\u003eurl\u003c/b\u003e: \u003cb\u003ehttp://hl7.org/fhir/SearchParameter/example-extension\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ename\u003c/b\u003e: Example Search Parameter on an extension\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: draft\u003c/p\u003e\u003cp\u003e\u003cb\u003eexperimental\u003c/b\u003e: true\u003c/p\u003e\u003cp\u003e\u003cb\u003epublisher\u003c/b\u003e: Health Level Seven International (FHIR Infrastructure)\u003c/p\u003e\u003cp\u003e\u003cb\u003econtact\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Search by url for a participation agreement, which is stored in a DocumentReference\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: part-agree\u003c/p\u003e\u003cp\u003e\u003cb\u003ebase\u003c/b\u003e: Patient\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: reference\u003c/p\u003e\u003cp\u003e\u003cb\u003eexpression\u003c/b\u003e: DocumentReference.extension(\u0027http://example.org/fhir/StructureDefinition/participation-agreement\u0027)\u003c/p\u003e\u003cp\u003e\u003cb\u003expath\u003c/b\u003e: f:DocumentReference/f:extension[@url\u003d\u0027http://example.org/fhir/StructureDefinition/participation-agreement\u0027]\u003c/p\u003e\u003cp\u003e\u003cb\u003expathUsage\u003c/b\u003e: normal\u003c/p\u003e\u003cp\u003e\u003cb\u003etarget\u003c/b\u003e: DocumentReference\u003c/p\u003e\u003c/div\u003e"
   },
   "url": "http://hl7.org/fhir/SearchParameter/example-extension",
   "name": "Example Search Parameter on an extension",
@@ -20,14 +20,14 @@
       ]
     }
   ],
+  "description": "Search by url for a participation agreement, which is stored in a DocumentReference",
   "code": "part-agree",
   "base": [
     "Patient"
   ],
   "type": "reference",
-  "description": "Search by url for a participation agreement, which is stored in a DocumentReference",
-  "expression": "DocumentReference.extension('http://example.org/fhir/StructureDefinition/participation-agreement')",
-  "xpath": "f:DocumentReference/f:extension[@url='http://example.org/fhir/StructureDefinition/participation-agreement']",
+  "expression": "DocumentReference.extension(\u0027http://example.org/fhir/StructureDefinition/participation-agreement\u0027)",
+  "xpath": "f:DocumentReference/f:extension[@url\u003d\u0027http://example.org/fhir/StructureDefinition/participation-agreement\u0027]",
   "xpathUsage": "normal",
   "target": [
     "DocumentReference"

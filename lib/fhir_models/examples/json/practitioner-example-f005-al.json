@@ -3,7 +3,7 @@
   "id": "f005",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f005</p><p><b>identifier</b>: 118265112 (OFFICIAL), 191REW8WE916 (USUAL)</p><p><b>name</b>: Langeveld Anne (OFFICIAL)</p><p><b>telecom</b>: ph: 0205563847(WORK), a.langeveld@bmc.nl(WORK), fax: 0205668916(WORK)</p><p><b>address</b>: Galapagosweg 9 Amsterdam 1105 AZ NLD (WORK)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: Mar 11, 1959</p><p><b>photo</b>: </p><p><b>communication</b>: France <span>(Details : {urn:oid:2.16.840.1.113883.6.121 code 'fr' = 'fr', given as 'France'})</span></p></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: f005\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: 118265112 (OFFICIAL), 191REW8WE916 (USUAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003ename\u003c/b\u003e: Langeveld Anne (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003etelecom\u003c/b\u003e: ph: 0205563847(WORK), a.langeveld@bmc.nl(WORK), fax: 0205668916(WORK)\u003c/p\u003e\u003cp\u003e\u003cb\u003eaddress\u003c/b\u003e: Galapagosweg 9 Amsterdam 1105 AZ NLD (WORK)\u003c/p\u003e\u003cp\u003e\u003cb\u003egender\u003c/b\u003e: female\u003c/p\u003e\u003cp\u003e\u003cb\u003ebirthDate\u003c/b\u003e: 11/03/1959\u003c/p\u003e\u003cp\u003e\u003cb\u003ephoto\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003ecommunication\u003c/b\u003e: France \u003cspan\u003e(Details : {urn:ietf:bcp:47 code \u0027fr\u0027 \u003d \u0027French\u0027, given as \u0027France\u0027})\u003c/span\u003e\u003c/p\u003e\u003c/div\u003e"
   },
   "identifier": [
     {
@@ -69,11 +69,20 @@
     {
       "coding": [
         {
-          "system": "urn:oid:2.16.840.1.113883.6.121",
+          "system": "urn:ietf:bcp:47",
           "code": "fr",
           "display": "France"
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

@@ -3,14 +3,28 @@
   "id": "preg",
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>A maternity care plan (for a pregnant woman).</p>\n      <p>LMP is 1st Jan, 2013 (a great new years party!) The plan has activities to take prenatal vitamins, schedule first antenatal,\n            and 'placeholders' for the second antenatal and delivery (there would be lots of others of course)</p>\n      <p>Note that where is a proposed 'status' element against each activity</p>\n    </div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003eA maternity care plan (for a pregnant woman).\u003c/p\u003e\n      \u003cp\u003eLMP is 1st Jan, 2013 (a great new years party!) The plan has activities to take prenatal vitamins, schedule first antenatal,\n            and \u0027placeholders\u0027 for the second antenatal and delivery (there would be lots of others of course)\u003c/p\u003e\n      \u003cp\u003eNote that where is a proposed \u0027status\u0027 element against each activity\u003c/p\u003e\n    \u003c/div\u003e"
   },
   "contained": [
     {
       "resourceType": "Condition",
       "id": "p1",
-      "clinicalStatus": "active",
-      "verificationStatus": "confirmed",
+      "clinicalStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+            "code": "active"
+          }
+        ]
+      },
+      "verificationStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+            "code": "confirmed"
+          }
+        ]
+      },
       "code": {
         "text": "pregnancy"
       },
@@ -48,30 +62,34 @@
       "id": "careteam",
       "participant": [
         {
-          "role": {
-            "coding": [
-              {
-                "system": "http://example.org/mysys",
-                "code": "lmc"
-              }
-            ],
-            "text": "Midwife"
-          },
+          "role": [
+            {
+              "coding": [
+                {
+                  "system": "http://example.org/mysys",
+                  "code": "lmc"
+                }
+              ],
+              "text": "Midwife"
+            }
+          ],
           "member": {
             "reference": "#pr1",
             "display": "Mavis Midwife"
           }
         },
         {
-          "role": {
-            "coding": [
-              {
-                "system": "http://example.org/mysys",
-                "code": "obs"
-              }
-            ],
-            "text": "Obstretitian"
-          },
+          "role": [
+            {
+              "coding": [
+                {
+                  "system": "http://example.org/mysys",
+                  "code": "obs"
+                }
+              ],
+              "text": "Obstretitian"
+            }
+          ],
           "member": {
             "reference": "#pr2",
             "display": "Oscar Obstetrician"
@@ -82,9 +100,9 @@
     {
       "resourceType": "Goal",
       "id": "goal",
-      "status": "in-progress",
+      "lifecycleStatus": "active",
       "description": {
-        "text": "Maintain patient's health throughout pregnancy and ensure a healthy child"
+        "text": "Maintain patient\u0027s health throughout pregnancy and ensure a healthy child"
       },
       "subject": {
         "reference": "Patient/1",
@@ -138,14 +156,7 @@
         }
       ],
       "detail": {
-        "category": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/care-plan-activity-category",
-              "code": "encounter"
-            }
-          ]
-        },
+        "kind": "Appointment",
         "code": {
           "coding": [
             {
@@ -156,7 +167,7 @@
           "text": "First Antenatal encounter"
         },
         "status": "scheduled",
-        "prohibited": false,
+        "doNotPerform": false,
         "scheduledTiming": {
           "repeat": {
             "boundsPeriod": {
@@ -176,14 +187,7 @@
     },
     {
       "detail": {
-        "category": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/care-plan-activity-category",
-              "code": "encounter"
-            }
-          ]
-        },
+        "kind": "Appointment",
         "code": {
           "coding": [
             {
@@ -194,7 +198,7 @@
           "text": "Follow-up Antenatal encounter"
         },
         "status": "not-started",
-        "prohibited": false,
+        "doNotPerform": false,
         "scheduledTiming": {
           "repeat": {
             "boundsPeriod": {
@@ -214,14 +218,7 @@
     },
     {
       "detail": {
-        "category": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/care-plan-activity-category",
-              "code": "encounter"
-            }
-          ]
-        },
+        "kind": "Appointment",
         "code": {
           "coding": [
             {
@@ -232,7 +229,7 @@
           "text": "Delivery"
         },
         "status": "not-started",
-        "prohibited": false,
+        "doNotPerform": false,
         "scheduledTiming": {
           "repeat": {
             "boundsPeriod": {
@@ -250,5 +247,14 @@
         "description": "The delivery."
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

@@ -3,7 +3,7 @@
   "id": "77654",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the PaymentNotice</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the PaymentNotice\u003c/div\u003e"
   },
   "identifier": [
     {
@@ -18,28 +18,41 @@
   "response": {
     "reference": "http://benefitsinc.com/fhir/claimresponse/CR12345"
   },
-  "statusDate": "2014-08-15",
   "created": "2014-08-16",
-  "target": {
+  "provider": {
+    "reference": "Organization/1"
+  },
+  "payment": {
+    "reference": "PaymentReconciliation/ER2500"
+  },
+  "paymentDate": "2014-08-15",
+  "payee": {
+    "reference": "Organization/1"
+  },
+  "recipient": {
     "identifier": {
       "system": "http://regulators.gov",
       "value": "AB123"
     }
   },
-  "provider": {
-    "identifier": {
-      "system": "http://npid.org/provider",
-      "value": "PR957857"
-    }
-  },
-  "organization": {
-    "reference": "Organization/1"
+  "amount": {
+    "value": 12500.00,
+    "currency": "USD"
   },
   "paymentStatus": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/paymentstatus",
+        "system": "http://terminology.hl7.org/CodeSystem/paymentstatus",
         "code": "paid"
+      }
+    ]
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
       }
     ]
   }

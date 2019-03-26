@@ -3,7 +3,7 @@
   "id": "phr",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n     \n      <p>Prototype Capability Statement for September 2013 Connectathon</p>\n     \n      <p>The server offers read and search support on the following resource types:</p>\n     \n      <ul>\n      \n        <li>Patient</li>\n      \n        <li>DocumentReference</li>\n      \n        <li>Condition</li>\n      \n        <li>DiagnosticReport</li>\n    \n      </ul>\n    \n    </div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n     \n      \u003cp\u003ePrototype Capability Statement for September 2013 Connectathon\u003c/p\u003e\n     \n      \u003cp\u003eThe server offers read and search support on the following resource types:\u003c/p\u003e\n     \n      \u003cul\u003e\n      \n        \u003cli\u003ePatient\u003c/li\u003e\n      \n        \u003cli\u003eDocumentReference\u003c/li\u003e\n      \n        \u003cli\u003eCondition\u003c/li\u003e\n      \n        \u003cli\u003eDiagnosticReport\u003c/li\u003e\n    \n      \u003c/ul\u003e\n    \n    \u003c/div\u003e"
   },
   "name": "PHR Template",
   "status": "draft",
@@ -24,8 +24,7 @@
   "software": {
     "name": "ACME PHR Server"
   },
-  "fhirVersion": "1.0.0",
-  "acceptUnknown": "no",
+  "fhirVersion": "4.0.0",
   "format": [
     "json",
     "xml"
@@ -116,5 +115,14 @@
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

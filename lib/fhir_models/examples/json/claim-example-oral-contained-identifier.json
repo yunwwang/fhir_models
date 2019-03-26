@@ -3,7 +3,7 @@
   "id": "100155",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This example assumes a national health care scheme where patients, providers and organizations have known business identifiers.</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eThis example assumes a national health care scheme where patients, providers and organizations have known business identifiers.\u003c/div\u003e"
   },
   "contained": [
     {
@@ -43,12 +43,12 @@
   "type": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/ex-claimtype",
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
         "code": "oral"
       }
     ]
   },
-  "use": "complete",
+  "use": "claim",
   "patient": {
     "reference": "#patient-1"
   },
@@ -59,7 +59,7 @@
       "value": "123456"
     }
   },
-  "organization": {
+  "provider": {
     "identifier": {
       "system": "http://www.jurisdiction.com/careorganizations",
       "value": "HOSP12345"
@@ -109,17 +109,17 @@
       "sequence": 1,
       "focal": true,
       "coverage": {
-        "reference": "http://www.jurisdiction.com/Coverage/123AB345"
+        "reference": "http://www.jurisdiction.com/nationalplan/123AB345"
       }
     }
   ],
   "item": [
     {
       "sequence": 1,
-      "careTeamLinkId": [
+      "careTeamSequence": [
         1
       ],
-      "service": {
+      "productOrService": {
         "coding": [
           {
             "code": "1200"
@@ -129,14 +129,21 @@
       "servicedDate": "2014-08-16",
       "unitPrice": {
         "value": 135.57,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       },
       "net": {
         "value": 135.57,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

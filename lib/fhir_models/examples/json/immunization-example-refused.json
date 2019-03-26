@@ -3,10 +3,18 @@
   "id": "notGiven",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: notGiven</p><p><b>status</b>: completed</p><p><b>notGiven</b>: true</p><p><b>vaccineCode</b>: DTP <span>(Details : {http://hl7.org/fhir/sid/cvx code '01' = 'DTP', given as 'DTP'})</span></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>date</b>: Jan 10, 2013</p><p><b>primarySource</b>: true</p><h3>Explanations</h3><table><tr><td>-</td><td><b>ReasonNotGiven</b></td></tr><tr><td>*</td><td>medical precaution <span>(Details : {http://hl7.org/fhir/v3/ActReason code 'MEDPREC' = 'medical precaution', given as 'medical precaution'})</span></td></tr></table></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: notGiven\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: not-done\u003c/p\u003e\u003cp\u003e\u003cb\u003estatusReason\u003c/b\u003e: medical precaution \u003cspan\u003e(Details : {http://terminology.hl7.org/CodeSystem/v3-ActReason code \u0027MEDPREC\u0027 \u003d \u0027medical precaution\u0027, given as \u0027medical precaution\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evaccineCode\u003c/b\u003e: DTP \u003cspan\u003e(Details : {http://hl7.org/fhir/sid/cvx code \u002701\u0027 \u003d \u0027DTP\u0027, given as \u0027DTP\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003epatient\u003c/b\u003e: \u003ca\u003ePatient/example\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eoccurrence\u003c/b\u003e: 10/01/2013\u003c/p\u003e\u003cp\u003e\u003cb\u003eprimarySource\u003c/b\u003e: true\u003c/p\u003e\u003c/div\u003e"
   },
-  "status": "completed",
-  "notGiven": true,
+  "status": "not-done",
+  "statusReason": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "MEDPREC",
+        "display": "medical precaution"
+      }
+    ]
+  },
   "vaccineCode": {
     "coding": [
       {
@@ -19,18 +27,14 @@
   "patient": {
     "reference": "Patient/example"
   },
-  "date": "2013-01-10",
+  "occurrenceDateTime": "2013-01-10",
   "primarySource": true,
-  "explanation": {
-    "reasonNotGiven": [
+  "meta": {
+    "tag": [
       {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/v3/ActReason",
-            "code": "MEDPREC",
-            "display": "medical precaution"
-          }
-        ]
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
       }
     ]
   }

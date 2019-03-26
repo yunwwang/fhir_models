@@ -3,14 +3,21 @@
   "id": "family-history",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Family history of cancer of colon</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eFamily history of cancer of colon\u003c/div\u003e"
   },
-  "clinicalStatus": "active",
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "active"
+      }
+    ]
+  },
   "category": [
     {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/condition-category",
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
           "code": "problem-list-item",
           "display": "Problem List Item"
         }
@@ -28,5 +35,14 @@
   },
   "subject": {
     "reference": "Patient/example"
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

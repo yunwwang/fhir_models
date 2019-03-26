@@ -3,21 +3,23 @@
   "id": "amb",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mobile Clinic</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eMobile Clinic\u003c/div\u003e"
   },
   "status": "active",
   "name": "BUMC Ambulance",
   "description": "Ambulance provided by Burgers University Medical Center",
   "mode": "kind",
-  "type": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/v3/RoleCode",
-        "code": "AMB",
-        "display": "Ambulance"
-      }
-    ]
-  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code": "AMB",
+          "display": "Ambulance"
+        }
+      ]
+    }
+  ],
   "telecom": [
     {
       "system": "phone",
@@ -28,7 +30,7 @@
   "physicalType": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/location-physical-type",
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
         "code": "ve",
         "display": "Vehicle"
       }
@@ -36,5 +38,14 @@
   },
   "managingOrganization": {
     "reference": "Organization/f001"
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

@@ -3,7 +3,7 @@
   "id": "emerg",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Emergency visit that escalated into inpatient patient @example</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eEmergency visit that escalated into inpatient patient @example\u003c/div\u003e"
   },
   "status": "in-progress",
   "statusHistory": [
@@ -43,14 +43,14 @@
     }
   ],
   "class": {
-    "system": "http://hl7.org/fhir/v3/ActCode",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
     "code": "IMP",
     "display": "inpatient encounter"
   },
   "classHistory": [
     {
       "class": {
-        "system": "http://hl7.org/fhir/v3/ActCode",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
         "code": "EMER",
         "display": "emergency"
       },
@@ -61,7 +61,7 @@
     },
     {
       "class": {
-        "system": "http://hl7.org/fhir/v3/ActCode",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
         "code": "IMP",
         "display": "inpatient encounter"
       },
@@ -80,7 +80,7 @@
     "admitSource": {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/admit-source",
+          "system": "http://terminology.hl7.org/CodeSystem/admit-source",
           "code": "emd",
           "display": "From accident/emergency department"
         }
@@ -137,5 +137,14 @@
         "start": "2017-02-01T12:45:00+10:00"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

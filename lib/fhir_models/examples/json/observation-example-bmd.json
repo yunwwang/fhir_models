@@ -3,7 +3,7 @@
   "id": "bmd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: bmd</p><p><b>status</b>: final</p><p><b>code</b>: BMD - Left Femur <span>(Details : {LOINC code '24701-5' = 'Femur DXA Bone density', given as 'Femur DXA Bone density'})</span></p><p><b>subject</b>: <a>Patient/pat2</a></p><p><b>performer</b>: <a>Acme Imaging Diagnostics</a></p><p><b>value</b>: 0.887 g/cm²<span> (Details: UCUM code g/cm-2 = 'g/cm-2')</span></p><p><b>bodySite</b>: Left Femur <span>(Details : {SNOMED CT code '71341001:272741003=7771000' = 'Femur where Laterality = Left)</span></p></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: bmd\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: final\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: BMD - Left Femur \u003cspan\u003e(Details : {LOINC code \u002724701-5\u0027 \u003d \u0027Femur DXA Bone density\u0027, given as \u0027Femur DXA Bone density\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003ePatient/pat2\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eperformer\u003c/b\u003e: \u003ca\u003eAcme Imaging Diagnostics\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: 0.887 g/cm²\u003cspan\u003e (Details: UCUM code g/cm-2 \u003d \u0027g/cm-2\u0027)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ebodySite\u003c/b\u003e: Left Femur \u003cspan\u003e(Details : {SNOMED CT code \u002771341001:272741003\u003d7771000\u0027 \u003d \u0027Femur where Laterality \u003d Left)\u003c/span\u003e\u003c/p\u003e\u003c/div\u003e"
   },
   "status": "final",
   "code": {
@@ -35,9 +35,18 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "71341001:272741003=7771000"
+        "code": "71341001:272741003\u003d7771000"
       }
     ],
     "text": "Left Femur"
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

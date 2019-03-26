@@ -3,9 +3,9 @@
   "id": "example-reference",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-reference</p><p><b>url</b>: <a>http://hl7.org/fhir/SearchParameter/example</a></p><p><b>name</b>: Example Search Parameter</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: Oct 23, 2013</p><p><b>publisher</b>: Health Level Seven International (FHIR Infrastructure)</p><p><b>contact</b>: </p><p><b>purpose</b>: Need to search Condition by subject</p><p><b>code</b>: subject</p><p><b>base</b>: Condition</p><p><b>type</b>: reference</p><p><b>description</b>: Search by condition subject</p><p><b>expression</b>: Condition.subject</p><p><b>xpathUsage</b>: normal</p><p><b>target</b>: Organization</p><p><b>modifier</b>: missing</p><p><b>chain</b>: name, identifier</p></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: example-reference\u003c/p\u003e\u003cp\u003e\u003cb\u003eurl\u003c/b\u003e: \u003cb\u003ehttp://hl7.org/fhir/SearchParameter/example-reference\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ename\u003c/b\u003e: Example Search Parameter\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: draft\u003c/p\u003e\u003cp\u003e\u003cb\u003eexperimental\u003c/b\u003e: true\u003c/p\u003e\u003cp\u003e\u003cb\u003edate\u003c/b\u003e: 23/10/2013\u003c/p\u003e\u003cp\u003e\u003cb\u003epublisher\u003c/b\u003e: Health Level Seven International (FHIR Infrastructure)\u003c/p\u003e\u003cp\u003e\u003cb\u003econtact\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Search by condition subject\u003c/p\u003e\u003cp\u003e\u003cb\u003epurpose\u003c/b\u003e: Need to search Condition by subject\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: subject\u003c/p\u003e\u003cp\u003e\u003cb\u003ebase\u003c/b\u003e: Condition\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: reference\u003c/p\u003e\u003cp\u003e\u003cb\u003eexpression\u003c/b\u003e: Condition.subject\u003c/p\u003e\u003cp\u003e\u003cb\u003expathUsage\u003c/b\u003e: normal\u003c/p\u003e\u003cp\u003e\u003cb\u003etarget\u003c/b\u003e: Organization\u003c/p\u003e\u003cp\u003e\u003cb\u003emodifier\u003c/b\u003e: missing\u003c/p\u003e\u003cp\u003e\u003cb\u003echain\u003c/b\u003e: name, identifier\u003c/p\u003e\u003c/div\u003e"
   },
-  "url": "http://hl7.org/fhir/SearchParameter/example",
+  "url": "http://hl7.org/fhir/SearchParameter/example-reference",
   "name": "Example Search Parameter",
   "status": "draft",
   "experimental": true,
@@ -22,13 +22,13 @@
       ]
     }
   ],
+  "description": "Search by condition subject",
   "purpose": "Need to search Condition by subject",
   "code": "subject",
   "base": [
     "Condition"
   ],
   "type": "reference",
-  "description": "Search by condition subject",
   "expression": "Condition.subject",
   "xpathUsage": "normal",
   "target": [

@@ -3,7 +3,7 @@
   "id": "med0301",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med0301</p><p><b>contained</b>: </p><p><b>code</b>: Vancomycin Hydrochloride (VANCOMYCIN HYDROCHLORIDE) <span>(Details : {http://hl7.org/fhir/sid/ndc code '0069-2587-10' = '0069-2587-10', given as 'Vancomycin Hydrochloride (VANCOMYCIN HYDROCHLORIDE)'})</span></p><p><b>status</b>: active</p><p><b>isBrand</b>: true</p><p><b>isOverTheCounter</b>: false</p><p><b>manufacturer</b>: id: org4; name: Pfizer Laboratories Div Pfizer Inc</p><p><b>form</b>: Injection Solution (qualifier value) <span>(Details : {SNOMED CT code '385219001' = 'Injection solution', given as 'Injection Solution (qualifier value)'})</span></p><h3>Ingredients</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>Vancomycin Hydrochloride <span>(Details : {RxNorm code '66955' = '66955', given as 'Vancomycin Hydrochloride'})</span></td><td>true</td><td>500 mg<span> (Details: UCUM code mg = 'mg')</span>/10 mL<span> (Details: UCUM code mL = 'mL')</span></td></tr></table><blockquote><p><b>package</b></p><p><b>container</b>: Vial <span>(Details : {SNOMED CT code '415818006' = 'Vial', given as 'Vial'})</span></p><h3>Contents</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>Vancomycin 500mg powder for infusion solution vial (product) <span>(Details : {SNOMED CT code '324337001' = 'Vancomycin 500mg injection (pdr for recon)', given as 'Vancomycin 500mg powder for infusion solution vial (product)'})</span></td><td>10 mL<span> (Details: UCUM code mL = 'mL')</span></td></tr></table><h3>Batches</h3><table><tr><td>-</td><td><b>LotNumber</b></td><td><b>ExpirationDate</b></td></tr><tr><td>*</td><td>9494788</td><td>May 22, 2017</td></tr></table></blockquote><p><b>image</b>: </p></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: med0301\u003c/p\u003e\u003cp\u003e\u003cb\u003econtained\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: Vancomycin Hydrochloride (VANCOMYCIN HYDROCHLORIDE) \u003cspan\u003e(Details : {http://hl7.org/fhir/sid/ndc code \u00270069-2587-10\u0027 \u003d \u00270069-2587-10\u0027, given as \u0027Vancomycin Hydrochloride (VANCOMYCIN HYDROCHLORIDE)\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: active\u003c/p\u003e\u003cp\u003e\u003cb\u003emanufacturer\u003c/b\u003e: id: org4; name: Pfizer Laboratories Div Pfizer Inc\u003c/p\u003e\u003cp\u003e\u003cb\u003eform\u003c/b\u003e: Injection Solution (qualifier value) \u003cspan\u003e(Details : {SNOMED CT code \u0027385219001\u0027 \u003d \u0027Injection solution\u0027, given as \u0027Injection Solution (qualifier value)\u0027})\u003c/span\u003e\u003c/p\u003e\u003ch3\u003eIngredients\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eItem[x]\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eIsActive\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eStrength\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eVancomycin Hydrochloride \u003cspan\u003e(Details : {RxNorm code \u002766955\u0027 \u003d \u0027Vancomycin Hydrochloride\u0027, given as \u0027Vancomycin Hydrochloride\u0027})\u003c/span\u003e\u003c/td\u003e\u003ctd\u003etrue\u003c/td\u003e\u003ctd\u003e500 mg\u003cspan\u003e (Details: UCUM code mg \u003d \u0027mg\u0027)\u003c/span\u003e/10 mL\u003cspan\u003e (Details: UCUM code mL \u003d \u0027mL\u0027)\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003ch3\u003eBatches\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eLotNumber\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eExpirationDate\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e9494788\u003c/td\u003e\u003ctd\u003e22/05/2017\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "contained": [
     {
@@ -22,8 +22,6 @@
     ]
   },
   "status": "active",
-  "isBrand": true,
-  "isOverTheCounter": false,
   "manufacturer": {
     "reference": "#org4"
   },
@@ -48,7 +46,7 @@
         ]
       },
       "isActive": true,
-      "amount": {
+      "strength": {
         "numerator": {
           "value": 500,
           "system": "http://unitsofmeasure.org",
@@ -62,46 +60,17 @@
       }
     }
   ],
-  "package": {
-    "container": {
-      "coding": [
-        {
-          "system": "http://snomed.info/sct",
-          "code": "415818006",
-          "display": "Vial"
-        }
-      ]
-    },
-    "content": [
+  "batch": {
+    "lotNumber": "9494788",
+    "expirationDate": "2017-05-22"
+  },
+  "meta": {
+    "tag": [
       {
-        "itemCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "324337001",
-              "display": "Vancomycin 500mg powder for infusion solution vial (product)"
-            }
-          ]
-        },
-        "amount": {
-          "value": 10,
-          "system": "http://unitsofmeasure.org",
-          "code": "mL"
-        }
-      }
-    ],
-    "batch": [
-      {
-        "lotNumber": "9494788",
-        "expirationDate": "2017-05-22"
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
       }
     ]
-  },
-  "image": [
-    {
-      "contentType": "application/pdf",
-      "url": "https://www.drugs.com/images/pills/fio/AKN07410.JPG",
-      "title": "Vancomycin Image"
-    }
-  ]
+  }
 }

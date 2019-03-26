@@ -3,7 +3,7 @@
   "id": "100151",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Oral Health Claim</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the Oral Health Claim\u003c/div\u003e"
   },
   "identifier": [
     {
@@ -15,12 +15,12 @@
   "type": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/ex-claimtype",
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
         "code": "oral"
       }
     ]
   },
-  "use": "complete",
+  "use": "claim",
   "patient": {
     "reference": "Patient/1"
   },
@@ -28,7 +28,7 @@
   "insurer": {
     "reference": "Organization/2"
   },
-  "organization": {
+  "provider": {
     "reference": "Organization/1"
   },
   "priority": {
@@ -55,13 +55,13 @@
       }
     }
   ],
-  "information": [
+  "supportingInfo": [
     {
       "sequence": 1,
       "category": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/claiminformationcategory",
+            "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
             "code": "missingtooth"
           }
         ]
@@ -69,7 +69,7 @@
       "code": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/ex-tooth",
+            "system": "http://terminology.hl7.org/CodeSystem/ex-tooth",
             "code": "15"
           }
         ]
@@ -78,7 +78,7 @@
       "reason": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/missingtoothreason",
+            "system": "http://terminology.hl7.org/CodeSystem/missingtoothreason",
             "code": "e"
           }
         ]
@@ -89,7 +89,7 @@
       "category": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/claiminformationcategory",
+            "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
             "code": "exception"
           }
         ]
@@ -97,7 +97,7 @@
       "code": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/claim-exception",
+            "system": "http://terminology.hl7.org/CodeSystem/claim-exception",
             "code": "student"
           }
         ]
@@ -129,10 +129,10 @@
   "item": [
     {
       "sequence": 1,
-      "careTeamLinkId": [
+      "careTeamSequence": [
         1
       ],
-      "service": {
+      "productOrService": {
         "coding": [
           {
             "system": "http://example.org/fhir/oralservicecodes",
@@ -143,21 +143,19 @@
       "servicedDate": "2014-08-16",
       "unitPrice": {
         "value": 135.57,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       },
       "net": {
         "value": 135.57,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       }
     },
     {
       "sequence": 2,
-      "careTeamLinkId": [
+      "careTeamSequence": [
         1
       ],
-      "service": {
+      "productOrService": {
         "coding": [
           {
             "system": "http://example.org/fhir/oralservicecodes",
@@ -168,13 +166,11 @@
       "servicedDate": "2014-08-16",
       "unitPrice": {
         "value": 105.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       },
       "net": {
         "value": 105.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       },
       "bodySite": {
         "coding": [
@@ -197,10 +193,10 @@
     },
     {
       "sequence": 3,
-      "careTeamLinkId": [
+      "careTeamSequence": [
         1
       ],
-      "service": {
+      "productOrService": {
         "coding": [
           {
             "system": "http://example.org/fhir/oralservicecodes",
@@ -211,13 +207,11 @@
       "servicedDate": "2014-08-16",
       "unitPrice": {
         "value": 1100.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       },
       "net": {
         "value": 1100.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       },
       "bodySite": {
         "coding": [
@@ -230,7 +224,7 @@
       "detail": [
         {
           "sequence": 1,
-          "service": {
+          "productOrService": {
             "coding": [
               {
                 "system": "http://example.org/fhir/oralservicecodes",
@@ -240,19 +234,17 @@
           },
           "unitPrice": {
             "value": 1000.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "currency": "USD"
           },
           "factor": 0.75,
           "net": {
             "value": 750.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "currency": "USD"
           }
         },
         {
           "sequence": 2,
-          "service": {
+          "productOrService": {
             "coding": [
               {
                 "system": "http://example.org/fhir/oralservicecodes",
@@ -262,16 +254,23 @@
           },
           "unitPrice": {
             "value": 350.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "currency": "USD"
           },
           "net": {
             "value": 350.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "currency": "USD"
           }
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

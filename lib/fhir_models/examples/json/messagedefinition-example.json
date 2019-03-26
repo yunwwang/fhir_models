@@ -3,7 +3,7 @@
   "id": "example",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Message definition base example</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eMessage definition base example\u003c/div\u003e"
   },
   "url": "http://hl7.org/fhir/MessageDefinition/example",
   "name": "EXAMPLE",
@@ -11,7 +11,7 @@
   "status": "draft",
   "experimental": true,
   "date": "2016-11-09",
-  "publisher": "Health Level Seven, Int'l",
+  "publisher": "Health Level Seven, Int\u0027l",
   "contact": [
     {
       "telecom": [
@@ -22,11 +22,10 @@
       ]
     }
   ],
-  "purpose": "Defines a base example for other MessageDefintion instances.",
-  "event": {
-    "system": "http://hl7.org/fhir/message-events",
-    "code": "communication-request"
+  "purpose": "Defines a base example for other MessageDefinition instances.",
+  "eventCoding": {
+    "system": "http://example.org/fhir/message-events",
+    "code": "admin-notify"
   },
-  "category": "Notification",
-  "responseRequired": false
+  "category": "notification"
 }

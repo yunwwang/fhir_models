@@ -3,7 +3,7 @@
   "id": "860150",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Claim</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the Claim\u003c/div\u003e"
   },
   "identifier": [
     {
@@ -15,12 +15,12 @@
   "type": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/ex-claimtype",
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
         "code": "professional"
       }
     ]
   },
-  "use": "complete",
+  "use": "claim",
   "patient": {
     "reference": "Patient/1"
   },
@@ -28,7 +28,7 @@
   "insurer": {
     "reference": "Organization/2"
   },
-  "organization": {
+  "provider": {
     "reference": "Organization/1"
   },
   "priority": {
@@ -79,10 +79,10 @@
   "item": [
     {
       "sequence": 1,
-      "careTeamLinkId": [
+      "careTeamSequence": [
         1
       ],
-      "service": {
+      "productOrService": {
         "coding": [
           {
             "system": "http://hl7.org/fhir/ex-serviceproduct",
@@ -93,14 +93,21 @@
       "servicedDate": "2014-08-16",
       "unitPrice": {
         "value": 75.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       },
       "net": {
         "value": 75.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "currency": "USD"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

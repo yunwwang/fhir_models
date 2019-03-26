@@ -3,12 +3,13 @@
   "id": "kdn5-example",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Administer gemcitabine and carboplatin.</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eAdminister gemcitabine and carboplatin.\u003c/div\u003e"
   },
   "contained": [
     {
       "resourceType": "MedicationRequest",
       "id": "1111",
+      "status": "unknown",
       "intent": "proposal",
       "medicationCodeableConcept": {
         "coding": [
@@ -35,16 +36,30 @@
           "route": {
             "text": "IV"
           },
-          "doseQuantity": {
-            "value": 1250,
-            "unit": "mg/m²"
-          }
+          "doseAndRate": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                    "code": "ordered",
+                    "display": "Ordered"
+                  }
+                ]
+              },
+              "doseQuantity": {
+                "value": 1250,
+                "unit": "mg/m²"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "resourceType": "MedicationRequest",
       "id": "2222",
+      "status": "unknown",
       "intent": "proposal",
       "medicationCodeableConcept": {
         "coding": [
@@ -71,14 +86,27 @@
           "route": {
             "text": "IV"
           },
-          "doseQuantity": {
-            "extension": [
-              {
-                "url": "http://example.org/fhir/AUC-dose",
-                "valueInteger": 5
+          "doseAndRate": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                    "code": "ordered",
+                    "display": "Ordered"
+                  }
+                ]
+              },
+              "doseQuantity": {
+                "extension": [
+                  {
+                    "url": "http://example.org/fhir/AUC-dose",
+                    "valueInteger": 5
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
       ]
     }
@@ -88,10 +116,8 @@
       "value": "requestgroup-kdn5"
     }
   ],
-  "definition": [
-    {
-      "reference": "PlanDefinition/KDN5"
-    }
+  "instantiatesCanonical": [
+    "PlanDefinition/KDN5"
   ],
   "status": "draft",
   "intent": "plan",
@@ -99,7 +125,7 @@
   "subject": {
     "reference": "Patient/example"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/example"
   },
   "authoredOn": "2017-03-06T17:31:00Z",
@@ -182,5 +208,14 @@
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

@@ -3,7 +3,7 @@
   "id": "f002",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f002</p><p><b>contained</b>: , </p><p><b>identifier</b>: CP2934 (OFFICIAL)</p><p><b>status</b>: completed</p><p><b>intent</b>: plan</p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>period</b>: Jul 6, 2011 --&gt; Jul 7, 2013</p><p><b>careTeam</b>: id: careteam</p><p><b>addresses</b>: <a>?????</a></p><p><b>goal</b>: id: goal; status: achieved; succesful surgery on lung of patient <span>(Details )</span>; P. van de Heuvel; Annotation: goal accomplished with minor complications</p><blockquote><p><b>activity</b></p><h3>Details</h3><table><tr><td>-</td><td><b>Category</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Prohibited</b></td><td><b>Scheduled[x]</b></td><td><b>Performer</b></td></tr><tr><td>*</td><td>Procedure <span>(Details : {http://hl7.org/fhir/care-plan-activity-category code 'procedure' = 'Procedure)</span></td><td>Partial lobectomy of lung <span>(Details : {SNOMED CT code '359615001' = 'Partial lobectomy of lung', given as 'Partial lobectomy of lung'})</span></td><td>completed</td><td>true</td><td>2011-07-07T09:30:10+01:00</td><td><a>M.I.M. Versteegh</a></td></tr></table></blockquote></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: f002\u003c/p\u003e\u003cp\u003e\u003cb\u003econtained\u003c/b\u003e: , \u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: CP2934 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: completed\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: plan\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eP. van de Heuvel\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eperiod\u003c/b\u003e: 06/07/2011 --\u0026gt; 07/07/2013\u003c/p\u003e\u003cp\u003e\u003cb\u003ecareTeam\u003c/b\u003e: id: careteam\u003c/p\u003e\u003cp\u003e\u003cb\u003eaddresses\u003c/b\u003e: \u003ca\u003e?????\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003egoal\u003c/b\u003e: id: goal; lifecycleStatus: completed; Achieved \u003cspan\u003e(Details : {http://terminology.hl7.org/CodeSystem/goal-achievement code \u0027achieved\u0027 \u003d \u0027Achieved\u0027, given as \u0027Achieved\u0027})\u003c/span\u003e; succesful surgery on lung of patient \u003cspan\u003e(Details )\u003c/span\u003e; Annotation: goal accomplished with minor complications\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eactivity\u003c/b\u003e\u003c/p\u003e\u003ch3\u003eDetails\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eKind\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eStatus\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDoNotPerform\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eScheduled[x]\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003ePerformer\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eServiceRequest\u003c/td\u003e\u003ctd\u003ePartial lobectomy of lung \u003cspan\u003e(Details : {SNOMED CT code \u0027359615001\u0027 \u003d \u0027Partial lobectomy of lung\u0027, given as \u0027Partial lobectomy of lung\u0027})\u003c/span\u003e\u003c/td\u003e\u003ctd\u003ecompleted\u003c/td\u003e\u003ctd\u003etrue\u003c/td\u003e\u003ctd\u003e2011-07-07T09:30:10+01:00\u003c/td\u003e\u003ctd\u003e\u003ca\u003eM.I.M. Versteegh\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003c/div\u003e"
   },
   "contained": [
     {
@@ -21,7 +21,17 @@
     {
       "resourceType": "Goal",
       "id": "goal",
-      "status": "achieved",
+      "lifecycleStatus": "completed",
+      "achievementStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/goal-achievement",
+            "code": "achieved",
+            "display": "Achieved"
+          }
+        ],
+        "text": "Achieved"
+      },
       "description": {
         "text": "succesful surgery on lung of patient"
       },
@@ -72,14 +82,7 @@
   "activity": [
     {
       "detail": {
-        "category": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/care-plan-activity-category",
-              "code": "procedure"
-            }
-          ]
-        },
+        "kind": "ServiceRequest",
         "code": {
           "coding": [
             {
@@ -90,7 +93,7 @@
           ]
         },
         "status": "completed",
-        "prohibited": true,
+        "doNotPerform": true,
         "scheduledString": "2011-07-07T09:30:10+01:00",
         "performer": [
           {
@@ -100,5 +103,14 @@
         ]
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

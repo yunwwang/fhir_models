@@ -2,7 +2,14 @@
   "resourceType": "Bundle",
   "id": "b0a5e4277-83c4-4adb-87e2-e3efe3369b6f",
   "meta": {
-    "lastUpdated": "2012-05-29T23:45:32Z"
+    "lastUpdated": "2012-05-29T23:45:32Z",
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   },
   "type": "collection",
   "entry": [
@@ -13,11 +20,11 @@
         "id": "71",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              CarePlan repository, CarePlan<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              CarePlan repository, CarePlan\u003cbr/\u003e\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "hl7-fhir-rest"
         },
         "name": "CarePlan repository",
@@ -46,11 +53,11 @@
         "id": "72",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Questionnaire Destination, QuestionnaireResponse<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Questionnaire Destination, QuestionnaireResponse\u003cbr/\u003e\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "hl7-fhir-rest"
         },
         "name": "Questionnaire Destination",
@@ -79,11 +86,11 @@
         "id": "73",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Referral Requests, ReferralRequest<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Referral Requests, ServiceRequest\u003cbr/\u003e\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "hl7-fhir-rest"
         },
         "name": "Referral Requests",
@@ -94,7 +101,7 @@
           {
             "coding": [
               {
-                "code": "ReferralRequest"
+                "code": "ServiceRequest"
               }
             ]
           }
@@ -112,11 +119,11 @@
         "id": "74",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Referral Requests, ReferralRequest QuestionnaireResponse<br/>\n              Address: https://open.epic.com/Interface/FHIR</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Referral Requests, ServiceRequest QuestionnaireResponse\u003cbr/\u003e\n              Address: https://open.epic.com/Interface/FHIR\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "hl7-fhir-rest"
         },
         "name": "Referral Requests",
@@ -127,7 +134,7 @@
           {
             "coding": [
               {
-                "code": "ReferralRequest QuestionnaireResponse"
+                "code": "ServiceRequest QuestionnaireResponse"
               }
             ]
           }
@@ -145,11 +152,11 @@
         "id": "75",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Subscription receiver, ReferralRequest<br/>\n              Address: mailto:subscriptions@example.org</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Subscription receiver, ServiceRequest\u003cbr/\u003e\n              Address: mailto:subscriptions@example.org\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "secure-email"
         },
         "name": "Subscription receiver",
@@ -160,7 +167,7 @@
           {
             "coding": [
               {
-                "code": "ReferralRequest"
+                "code": "ServiceRequest"
               }
             ]
           }
@@ -178,11 +185,11 @@
         "id": "76",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              valid usecase?, CDA-EventSummary<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              valid usecase?, CDA-EventSummary\u003cbr/\u003e\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "hl7-fhir-msg"
         },
         "name": "valid usecase?",
@@ -211,11 +218,11 @@
         "id": "77",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              v2 referral Requests, REF-I12<br/>\n              Address: 127.0.0.1</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              v2 referral Requests, REF-I12\u003cbr/\u003e\n              Address: 127.0.0.1\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "hl7v2-mllp"
         },
         "name": "v2 referral Requests",
@@ -232,7 +239,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/fhir+json"
+          "application/hl7-v2"
         ],
         "address": "127.0.0.1"
       }
@@ -244,11 +251,11 @@
         "id": "78",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              xds event summaries, CDA-EventSummary<br/>\n              Address: https://open.epic.com/Interface/XDS.b</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              xds event summaries, CDA-EventSummary\u003cbr/\u003e\n              Address: https://open.epic.com/Interface/XDS.b\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "ihe-xds"
         },
         "name": "xds event summaries",
@@ -265,7 +272,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/xml"
+          "application/hl7-sda+xml; variant\u003dXDA/XDS"
         ],
         "address": "https://open.epic.com/Interface/XDS.b"
       }
@@ -277,11 +284,11 @@
         "id": "79",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/dicomweb\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "dicom-wado-rs"
         },
         "name": "Enterprise Image Archive",
@@ -298,7 +305,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom"
+          "application/dicom; variant\u003dDICOM WADO-RS"
         ],
         "address": "https://pacs.hospital.org/dicomweb"
       }
@@ -310,11 +317,11 @@
         "id": "80",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/dicomweb\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "dicom-qido-rs"
         },
         "name": "Enterprise Image Archive",
@@ -331,7 +338,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom"
+          "application/dicom; variant\u003dDICOM QIDO-RS"
         ],
         "address": "https://pacs.hospital.org/dicomweb"
       }
@@ -343,11 +350,11 @@
         "id": "81",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/dicomweb\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "dicom-stow-rs"
         },
         "name": "Enterprise Image Archive",
@@ -364,7 +371,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom"
+          "application/dicom; variant\u003dDICOM STOW-RS"
         ],
         "address": "https://pacs.hospital.org/dicomweb"
       }
@@ -376,11 +383,11 @@
         "id": "82",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/dicomweb\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "dicom-stow-rs"
         },
         "name": "Enterprise Image Archive",
@@ -397,7 +404,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom"
+          "application/dicom; variant\u003dDICOM STOW-RS"
         ],
         "address": "https://pacs.hospital.org/dicomweb"
       }
@@ -409,11 +416,11 @@
         "id": "83",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/wadoUri</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/wadoUri\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "dicom-wado-uri"
         },
         "name": "Enterprise Image Archive",
@@ -430,7 +437,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom"
+          "application/dicom; variant\u003dDICOM WADO-URI"
         ],
         "address": "https://pacs.hospital.org/wadoUri"
       }
@@ -442,11 +449,11 @@
         "id": "84",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/IHEInvokeImageDisplay</div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/IHEInvokeImageDisplay\u003c/div\u003e"
         },
         "status": "active",
         "connectionType": {
-          "system": "http://hl7.org/fhir/endpoint-connection-type",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
           "code": "ihe-iid"
         },
         "name": "Enterprise Image Archive",
@@ -463,7 +470,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom"
+          "application/dicom; variant\u003dIHE IID"
         ],
         "address": "https://pacs.hospital.org/IHEInvokeImageDisplay"
       }

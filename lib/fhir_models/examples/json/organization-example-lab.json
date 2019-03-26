@@ -3,7 +3,7 @@
   "id": "1832473e-2fe0-452d-abe9-3cdb9879522f",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>Clinical Laboratory @ Acme Hospital. ph: +1 555 234 1234, email: \n        <a href=\"mailto:contact@labs.acme.org\">contact@labs.acme.org</a>\n      </p>\n    \n    </div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \n      \u003cp\u003eClinical Laboratory @ Acme Hospital. ph: +1 555 234 1234, email: \n        \u003ca href\u003d\"mailto:contact@labs.acme.org\"\u003econtact@labs.acme.org\u003c/a\u003e\n      \u003c/p\u003e\n    \n    \u003c/div\u003e"
   },
   "identifier": [
     {
@@ -23,5 +23,14 @@
       "value": "contact@labs.acme.org",
       "use": "work"
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

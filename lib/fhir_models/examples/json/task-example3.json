@@ -3,7 +3,7 @@
   "id": "example3",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example3</p><p><b>status</b>: draft</p><p><b>intent</b>: order</p><p><b>code</b>: Refill Request <span>(Details )</span></p><p><b>focus</b>: <a>MedicationRequest/medrx002</a></p><p><b>for</b>: <a>Patient/f001</a></p><p><b>authoredOn</b>: Mar 10, 2016 10:39:32 PM</p><p><b>lastModified</b>: Mar 10, 2016 10:39:32 PM</p><h3>Requesters</h3><table><tr><td>-</td><td><b>Agent</b></td></tr><tr><td>*</td><td><a>Patient/example</a></td></tr></table><p><b>owner</b>: <a>Practitioner/example</a></p></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: example3\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: draft\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: order\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: Refill Request \u003cspan\u003e(Details )\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003efocus\u003c/b\u003e: \u003ca\u003eMedicationRequest/medrx002\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003efor\u003c/b\u003e: \u003ca\u003ePatient/f001\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthoredOn\u003c/b\u003e: 10/03/2016 10:39:32 PM\u003c/p\u003e\u003cp\u003e\u003cb\u003elastModified\u003c/b\u003e: 10/03/2016 10:39:32 PM\u003c/p\u003e\u003cp\u003e\u003cb\u003erequester\u003c/b\u003e: \u003ca\u003ePatient/example\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eowner\u003c/b\u003e: \u003ca\u003ePractitioner/example\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e"
   },
   "status": "draft",
   "intent": "order",
@@ -19,11 +19,18 @@
   "authoredOn": "2016-03-10T22:39:32-04:00",
   "lastModified": "2016-03-10T22:39:32-04:00",
   "requester": {
-    "agent": {
-      "reference": "Patient/example"
-    }
+    "reference": "Patient/example"
   },
   "owner": {
     "reference": "Practitioner/example"
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

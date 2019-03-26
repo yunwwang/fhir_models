@@ -3,7 +3,7 @@
   "id": "example-empty",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>The patient is not on any medications</p>\n    </div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003eThe patient is not on any medications\u003c/p\u003e\n    \u003c/div\u003e"
   },
   "status": "current",
   "mode": "snapshot",
@@ -24,11 +24,20 @@
   "emptyReason": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/list-empty-reason",
+        "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
         "code": "nilknown",
         "display": "Nil Known"
       }
     ],
     "text": "The patient is not on any medications"
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

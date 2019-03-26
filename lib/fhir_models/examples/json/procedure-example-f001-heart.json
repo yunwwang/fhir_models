@@ -3,7 +3,7 @@
   "id": "f001",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>status</b>: completed</p><p><b>code</b>: Heart valve replacement <span>(Details : {SNOMED CT code '34068001' = 'Heart valve replacement', given as 'Heart valve replacement'})</span></p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>context</b>: <a>Encounter/f001</a></p><p><b>performed</b>: Jun 26, 2011 --&gt; Jun 27, 2011</p><h3>Performers</h3><table><tr><td>-</td><td><b>Role</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Care role <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code '01.000' = '01.000', given as 'Arts'})</span></td><td><a>P. Voigt</a></td></tr></table><p><b>reasonCode</b>: Heart valve disorder <span>(Details )</span></p><p><b>bodySite</b>: Heart valve structure <span>(Details : {SNOMED CT code '17401000' = 'Cardiac valve', given as 'Heart valve structure'})</span></p><p><b>outcome</b>: improved blood circulation <span>(Details )</span></p><p><b>report</b>: <a>Lab results blood test</a></p><p><b>followUp</b>: described in care plan <span>(Details )</span></p></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: f001\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: completed\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: Heart valve replacement \u003cspan\u003e(Details : {SNOMED CT code \u002734068001\u0027 \u003d \u0027Heart valve replacement\u0027, given as \u0027Heart valve replacement\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eP. van de Heuvel\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eencounter\u003c/b\u003e: \u003ca\u003eEncounter/f001\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eperformed\u003c/b\u003e: 26/06/2011 --\u0026gt; 27/06/2011\u003c/p\u003e\u003ch3\u003ePerformers\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eFunction\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eActor\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eCare role \u003cspan\u003e(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code \u002701.000\u0027 \u003d \u002701.000\u0027, given as \u0027Arts\u0027})\u003c/span\u003e\u003c/td\u003e\u003ctd\u003e\u003ca\u003eP. Voigt\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003ereasonCode\u003c/b\u003e: Heart valve disorder \u003cspan\u003e(Details )\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ebodySite\u003c/b\u003e: Heart valve structure \u003cspan\u003e(Details : {SNOMED CT code \u002717401000\u0027 \u003d \u0027Cardiac valve\u0027, given as \u0027Heart valve structure\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eoutcome\u003c/b\u003e: improved blood circulation \u003cspan\u003e(Details )\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ereport\u003c/b\u003e: \u003ca\u003eLab results blood test\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003efollowUp\u003c/b\u003e: described in care plan \u003cspan\u003e(Details )\u003c/span\u003e\u003c/p\u003e\u003c/div\u003e"
   },
   "status": "completed",
   "code": {
@@ -19,7 +19,7 @@
     "reference": "Patient/f001",
     "display": "P. van de Heuvel"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/f001"
   },
   "performedPeriod": {
@@ -28,7 +28,7 @@
   },
   "performer": [
     {
-      "role": {
+      "function": {
         "coding": [
           {
             "system": "urn:oid:2.16.840.1.113883.2.4.15.111",
@@ -73,5 +73,14 @@
     {
       "text": "described in care plan"
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

@@ -3,18 +3,8 @@
   "id": "1",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Burgers UMC, South Wing, second floor</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eBurgers UMC, South Wing, second floor\u003c/div\u003e"
   },
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/location-alias",
-      "valueString": "Burgers University Medical Center, South Wing, second floor"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/location-alias",
-      "valueString": "BU MC, SW, F2"
-    }
-  ],
   "identifier": [
     {
       "value": "B1-S.F2"
@@ -22,6 +12,10 @@
   ],
   "status": "active",
   "name": "South Wing, second floor",
+  "alias": [
+    "BU MC, SW, F2",
+    "Burgers University Medical Center, South Wing, second floor"
+  ],
   "description": "Second floor of the Old South Wing, formerly in use by Psychiatry",
   "mode": "instance",
   "telecom": [
@@ -57,7 +51,7 @@
   "physicalType": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/location-physical-type",
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
         "code": "wi",
         "display": "Wing"
       }
@@ -75,5 +69,14 @@
     {
       "reference": "Endpoint/example"
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

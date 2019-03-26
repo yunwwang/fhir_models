@@ -3,7 +3,7 @@
   "id": "exampleresp",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Accept Brian MRI results discussion</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eAccept Brian MRI results discussion\u003c/div\u003e"
   },
   "identifier": [
     {
@@ -21,7 +21,7 @@
     {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/v3/ParticipationType",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
           "code": "ATND"
         }
       ]
@@ -32,5 +32,14 @@
     "display": "Dr Adam Careful"
   },
   "participantStatus": "tentative",
-  "comment": "can't we try for this time, can't do mornings"
+  "comment": "can\u0027t we try for this time, can\u0027t do mornings",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

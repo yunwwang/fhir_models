@@ -3,12 +3,13 @@
   "id": "example",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Example RequestGroup illustrating related actions to administer medications in sequence with time delay.</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eExample RequestGroup illustrating related actions to administer medications in sequence with time delay.\u003c/div\u003e"
   },
   "contained": [
     {
       "resourceType": "MedicationRequest",
       "id": "medicationrequest-1",
+      "status": "unknown",
       "intent": "proposal",
       "medicationCodeableConcept": {
         "text": "Medication 1"
@@ -20,6 +21,7 @@
     {
       "resourceType": "MedicationRequest",
       "id": "medicationrequest-2",
+      "status": "unknown",
       "intent": "proposal",
       "medicationCodeableConcept": {
         "text": "Medication 2"
@@ -44,16 +46,18 @@
   "subject": {
     "reference": "Patient/example"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/example"
   },
   "authoredOn": "2017-03-06T17:31:00Z",
   "author": {
     "reference": "Practitioner/1"
   },
-  "reasonCodeableConcept": {
-    "text": "Treatment"
-  },
+  "reasonCode": [
+    {
+      "text": "Treatment"
+    }
+  ],
   "note": [
     {
       "text": "Additional notes about the request group"
@@ -61,7 +65,7 @@
   ],
   "action": [
     {
-      "label": "1",
+      "prefix": "1",
       "title": "Administer Medications",
       "description": "Administer medications at the appropriate time",
       "textEquivalent": "Administer medication 1, followed an hour later by medication 2",
@@ -81,7 +85,11 @@
           "id": "medication-action-1",
           "description": "Administer medication 1",
           "type": {
-            "code": "create"
+            "coding": [
+              {
+                "code": "create"
+              }
+            ]
           },
           "resource": {
             "reference": "#medicationrequest-1"
@@ -101,7 +109,11 @@
             }
           ],
           "type": {
-            "code": "create"
+            "coding": [
+              {
+                "code": "create"
+              }
+            ]
           },
           "resource": {
             "reference": "#medicationrequest-2"
@@ -109,5 +121,14 @@
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

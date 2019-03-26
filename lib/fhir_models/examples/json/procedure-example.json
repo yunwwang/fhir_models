@@ -3,7 +3,7 @@
   "id": "example",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Routine Appendectomy</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eRoutine Appendectomy\u003c/div\u003e"
   },
   "status": "completed",
   "code": {
@@ -20,6 +20,14 @@
     "reference": "Patient/example"
   },
   "performedDateTime": "2013-04-05",
+  "recorder": {
+    "reference": "Practitioner/example",
+    "display": "Dr Cecil Surgeon"
+  },
+  "asserter": {
+    "reference": "Practitioner/example",
+    "display": "Dr Cecil Surgeon"
+  },
   "performer": [
     {
       "actor": {
@@ -42,5 +50,14 @@
     {
       "text": "Routine Appendectomy. Appendix was inflamed and in retro-caecal position"
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

@@ -3,7 +3,7 @@
   "id": "medrx0311",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medrx0311</p><p><b>contained</b>: </p><p><b>identifier</b>: 12345689 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: id: med0316; Chlorthalidone 50mg tablet (product) <span>(Details : {SNOMED CT code '317935006' = 'Chlortalidone 50mg tablet', given as 'Chlorthalidone 50mg tablet (product)'})</span>; Tablet dose form (qualifier value) <span>(Details : {SNOMED CT code '385055001' = 'Tablet', given as 'Tablet dose form (qualifier value)'})</span></p><p><b>subject</b>: <a>Donald Duck</a></p><p><b>context</b>: <a>encounter who leads to this prescription</a></p><p><b>authoredOn</b>: Jan 15, 2015</p><h3>Requesters</h3><table><tr><td>-</td><td><b>Agent</b></td><td><b>OnBehalfOf</b></td></tr><tr><td>*</td><td><a>Patrick Pump</a></td><td><a>Organization/f002</a></td></tr></table><p><b>reasonReference</b>: <a>condition for prescribing this medication</a></p><p><b>note</b>: Chlorthalidone increases urniation so take it in the morning</p><p><b>dosageInstruction</b>: </p><h3>DispenseRequests</h3><table><tr><td>-</td><td><b>ValidityPeriod</b></td><td><b>NumberOfRepeatsAllowed</b></td><td><b>Quantity</b></td><td><b>ExpectedSupplyDuration</b></td></tr><tr><td>*</td><td>Jan 15, 2015 --&gt; Jan 15, 2016</td><td>1</td><td>30 TAB<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code TAB = 'Tablet')</span></td><td>30 days<span> (Details: UCUM code d = 'd')</span></td></tr></table><h3>Substitutions</h3><table><tr><td>-</td><td><b>Allowed</b></td><td><b>Reason</b></td></tr><tr><td>*</td><td>true</td><td>continuing therapy <span>(Details : {http://hl7.org/fhir/v3/ActReason code 'CT' = 'continuing therapy', given as 'continuing therapy'})</span></td></tr></table></div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: medrx0311\u003c/p\u003e\u003cp\u003e\u003cb\u003econtained\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: 12345689 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: active\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: order\u003c/p\u003e\u003cp\u003e\u003cb\u003emedication\u003c/b\u003e: id: med0316; Chlorthalidone 50mg tablet (product) \u003cspan\u003e(Details : {SNOMED CT code \u0027317935006\u0027 \u003d \u0027Chlortalidone 50mg tablet\u0027, given as \u0027Chlorthalidone 50mg tablet (product)\u0027})\u003c/span\u003e; Tablet dose form (qualifier value) \u003cspan\u003e(Details : {SNOMED CT code \u0027385055001\u0027 \u003d \u0027Tablet\u0027, given as \u0027Tablet dose form (qualifier value)\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eencounter\u003c/b\u003e: \u003ca\u003eencounter who leads to this prescription\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthoredOn\u003c/b\u003e: 15/01/2015\u003c/p\u003e\u003cp\u003e\u003cb\u003erequester\u003c/b\u003e: \u003ca\u003ePatrick Pump\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ereasonReference\u003c/b\u003e: \u003ca\u003econdition for prescribing this medication\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: Chlorthalidone increases urniation so take it in the morning\u003c/p\u003e\u003cp\u003e\u003cb\u003edosageInstruction\u003c/b\u003e: \u003c/p\u003e\u003ch3\u003eDispenseRequests\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eValidityPeriod\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eNumberOfRepeatsAllowed\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eQuantity\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eExpectedSupplyDuration\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e15/01/2015 --\u0026gt; 15/01/2016\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003e30 TAB\u003cspan\u003e (Details: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm code TAB \u003d \u0027Tablet\u0027)\u003c/span\u003e\u003c/td\u003e\u003ctd\u003e30 days\u003cspan\u003e (Details: UCUM code d \u003d \u0027d\u0027)\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003ch3\u003eSubstitutions\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eAllowed[x]\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eReason\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003etrue\u003c/td\u003e\u003ctd\u003econtinuing therapy \u003cspan\u003e(Details : {http://terminology.hl7.org/CodeSystem/v3-ActReason code \u0027CT\u0027 \u003d \u0027continuing therapy\u0027, given as \u0027continuing therapy\u0027})\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "contained": [
     {
@@ -18,7 +18,6 @@
           }
         ]
       },
-      "isBrand": false,
       "form": {
         "coding": [
           {
@@ -46,19 +45,14 @@
     "reference": "Patient/pat1",
     "display": "Donald Duck"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/f001",
     "display": "encounter who leads to this prescription"
   },
   "authoredOn": "2015-01-15",
   "requester": {
-    "agent": {
-      "reference": "Practitioner/f007",
-      "display": "Patrick Pump"
-    },
-    "onBehalfOf": {
-      "reference": "Organization/f002"
-    }
+    "reference": "Practitioner/f007",
+    "display": "Patrick Pump"
   },
   "reasonReference": [
     {
@@ -90,7 +84,7 @@
         "code": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/v3/GTSAbbreviation",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation",
               "code": "QD",
               "display": "QD"
             }
@@ -115,12 +109,25 @@
           }
         ]
       },
-      "doseQuantity": {
-        "value": 1,
-        "unit": "TAB",
-        "system": "http://hl7.org/fhir/v3/orderableDrugForm",
-        "code": "TAB"
-      }
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                "code": "ordered",
+                "display": "Ordered"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 1,
+            "unit": "TAB",
+            "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+            "code": "TAB"
+          }
+        }
+      ]
     }
   ],
   "dispenseRequest": {
@@ -132,7 +139,7 @@
     "quantity": {
       "value": 30,
       "unit": "TAB",
-      "system": "http://hl7.org/fhir/v3/orderableDrugForm",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
       "code": "TAB"
     },
     "expectedSupplyDuration": {
@@ -143,15 +150,24 @@
     }
   },
   "substitution": {
-    "allowed": true,
+    "allowedBoolean": true,
     "reason": {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/v3/ActReason",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
           "code": "CT",
           "display": "continuing therapy"
         }
       ]
     }
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

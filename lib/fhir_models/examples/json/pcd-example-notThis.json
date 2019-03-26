@@ -3,7 +3,7 @@
   "id": "pcd-example-notThis",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n\tThe default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n\tIn other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n\tthan &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n\tspecific to use-case 2. Withhold or withdraw consent for disclosure of a specific record (e.g. Lab Order/Result) \n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; Primary Care Provider, Dr. Philip Primary, has ordered a set of lab test which Adam \n   wishes to keep as private as possible.  At the sample collection facility, he indicates that he would \n   like withhold consent to disclose the order and all results associated with that specific order from \n   all other providers  \n   </p>\n   </div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eThe following scenario is based on existing\n      jurisdictional policy and are realized in existing systems in Canada. The default policy is\n      one of implied consent for the provision of care, so these scenarios all deal with withdrawal\n      or withholding consent for that purpose. In other jurisdictions, where an express consent\n      model is used (Opt-In), these would examples would contain the phrase \u0026quot;consent to\u0026quot; rather than\n      \u0026quot;withhold\u0026quot; or \u0026quot;withdraw\u0026quot; consent for. \u003cp\u003e specific to use-case 2. Withhold or withdraw consent\n        for disclosure of a specific record (e.g. Lab Order/Result) \u003c/p\u003e\u003cp\u003e Patient \u0026quot;P. van de\n        Heuvel\u0026quot; Primary Care Provider, Dr. Philip Primary, has ordered a set of lab test which Adam\n        wishes to keep as private as possible. At the sample collection facility, he indicates that\n        he would like withhold consent to disclose the order and all results associated with that\n        specific order from all other providers \u003c/p\u003e\n    \u003c/div\u003e"
   },
   "issued": "2015-11-18",
   "subject": [
@@ -14,14 +14,14 @@
   ],
   "authority": [
     {
-      "reference": "Organization/Infoway",
-      "display": "Canada Infoway"
+      "reference": "Organization/3",
+      "display": "Michigan Health"
     }
   ],
   "domain": [
     {
-      "reference": "Location/Infoway",
-      "display": "Canada Infoway"
+      "reference": "Location/ukp",
+      "display": "UK Pharmacies"
     }
   ],
   "type": {
@@ -45,6 +45,14 @@
   ],
   "term": [
     {
+      "identifier": {
+        "system": "http://example.org/fhir/term-items",
+        "value": "3347689"
+      },
+      "issued": "2015-11-01",
+      "applies": {
+        "start": "2015-11-18"
+      },
       "type": {
         "coding": [
           {
@@ -54,12 +62,12 @@
           }
         ]
       },
-      "topic": [
-        {
-          "reference": "ProcedureRequest/example-lipid"
-        }
-      ],
-      "text": "Withhold this order and any results or related objects from any provider."
+      "offer": {
+        "topic": {
+          "reference": "ServiceRequest/lipid"
+        },
+        "text": "Withhold this order and any results or related objects from any provider."
+      }
     }
   ],
   "friendly": [
@@ -75,5 +83,14 @@
         "title": "The terms of the consent in lawyer speak."
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

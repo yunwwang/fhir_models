@@ -9,7 +9,7 @@
         "resourceType": "DiagnosticReport",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <h3>HLA-A,-B,-C genotyping report for Mary Chalmers (MRN:12345)</h3>\n\n                <pre>\n  LOCUS   ALLELE 1            ALLELE 2\n  HLA-A   HLA-A:01:01G        HLA-A*01:02\n  HLA-B   HLA-B*15:01:01G     HLA-B*57:01:01G\n  HLA-C   HLA-C*01:02:01G     HLA-C*03:04:01G\n                </pre>\n                <p>Allele assignments based on IMGT/HLA 3.23</p>\n                <p>Effective date: 2015-12-15</p>\n                <p>Method: Sequencing of exons 2 and 3 of HLA Class I genes</p>\n                <p>Lab: aTypingLab Inc</p>\n\n                <p>Note: Please refer the <a href=\"genomics.html#hla\">implementation guide </a> for more explanation on this\n                carefully organized bundle example.</p>\n\n                <pre>\n  Bob Milius - NMDP - 2016-12-01\n\n  Transaction bundle that creates and links:\n  + DiagnosticReport summarizing genotyping for HLA-A,-B,-C typing of patient(donor)\n  + Obervations for each genotype\n  + Observations for each allele\n  + Sequences for exons 2 and 3 for HLA-A,-B, -C\n\n  The endpoints of the following resources are hardcoded into this transaction bundle\n  because these are presumed to already exist when developing the DiagnosticRequest\n  which was to generate this report bundle:\n\n  Patient/119 (potential donor)\n  Specimen/120 (buccal swab)\n  Organization/68  (typing lab)\n  ProcedureRequest/123  (report is based on this request)\n                </pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003ch3\u003eHLA-A,-B,-C genotyping report for Mary Chalmers (MRN:12345)\u003c/h3\u003e\n\t\t\t\t\t\t\u003cpre\u003e\n  LOCUS   ALLELE 1            ALLELE 2\n  HLA-A   HLA-A:01:01G        HLA-A*01:02\n  HLA-B   HLA-B*15:01:01G     HLA-B*57:01:01G\n  HLA-C   HLA-C*01:02:01G     HLA-C*03:04:01G\n                \u003c/pre\u003e\n\t\t\t\t\t\t\u003cp\u003eAllele assignments based on IMGT/HLA 3.23\u003c/p\u003e\n\t\t\t\t\t\t\u003cp\u003eEffective date: 2015-12-15\u003c/p\u003e\n\t\t\t\t\t\t\u003cp\u003eMethod: Sequencing of exons 2 and 3 of HLA Class I genes\u003c/p\u003e\n\t\t\t\t\t\t\u003cp\u003eLab: aTypingLab Inc\u003c/p\u003e\n\t\t\t\t\t\t\u003cp\u003eNote: Please refer the \u003ca href\u003d\"genomics.html#hla\"\u003eimplementation guide \u003c/a\u003e for more explanation on this\n                carefully organized bundle example.\u003c/p\u003e\n\t\t\t\t\t\t\u003cpre\u003e\n  Bob Milius - NMDP - 2016-12-01\n\n  Transaction bundle that creates and links:\n  + DiagnosticReport summarizing genotyping for HLA-A,-B,-C typing of patient(donor)\n  + Obervations for each genotype\n  + Observations for each allele\n  + Sequences for exons 2 and 3 for HLA-A,-B, -C\n\n  The endpoints of the following resources are hardcoded into this transaction bundle\n  because these are presumed to already exist when developing the DiagnosticRequest\n  which was to generate this report bundle:\n\n  Patient/119 (potential donor)\n  Specimen/120 (buccal swab)\n  Organization/68  (typing lab)\n  ServiceRequest/123  (report is based on this request)\n                \u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "extension": [
           {
@@ -17,7 +17,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                  "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                   "version": "3.23"
                 }
               ],
@@ -52,19 +52,21 @@
         ],
         "basedOn": [
           {
-            "reference": "ProcedureRequest/123"
+            "reference": "ServiceRequest/123"
           }
         ],
         "status": "final",
-        "category": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/v2/0074",
-              "code": "GE",
-              "display": "Genetics"
-            }
-          ]
-        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "GE",
+                "display": "Genetics"
+              }
+            ]
+          }
+        ],
         "code": {
           "coding": [
             {
@@ -82,10 +84,8 @@
         "issued": "2016-12-15T14:15:30-06:00",
         "performer": [
           {
-            "actor": {
-              "reference": "Organization/68",
-              "display": "aTypingLab Inc"
-            }
+            "reference": "Organization/68",
+            "display": "aTypingLab Inc"
           }
         ],
         "specimen": [
@@ -117,10 +117,10 @@
     {
       "fullUrl": "urn:uuid:8200dab6-18a2-4550-b913-a7db480c0804",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-A*01:01:01:01, exon 2&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-A*01:01:01:01, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -136,7 +136,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00001"
               }
@@ -150,16 +150,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:7c393185-f15c-45bc-a714-c0fdbea32675",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-A*01:01:01:01, exon 3&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-A*01:01:01:01, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -175,7 +175,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00001"
               }
@@ -189,16 +189,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:65c85f14-c3a0-4b72-818f-820e04fcc621",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-A*01:02, exon 2&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-A*01:02, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -214,7 +214,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00002"
               }
@@ -228,16 +228,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:fbba9fe7-0ece-4ec1-9233-a437a8d242a0",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-A*01:02, exon 3&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-A*01:02, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -253,7 +253,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00002"
               }
@@ -267,16 +267,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:cbabf93e-1b4b-46f2-ba1e-d84862670670",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-B*15:01:01:01, exon 2&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-B*15:01:01:01, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -292,7 +292,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00162"
               }
@@ -306,16 +306,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:c233ad3d-1572-48d6-93da-0a583535e138",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-B*15:01:01:01, exon 3&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-B*15:01:01:01, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -331,7 +331,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00162"
               }
@@ -345,16 +345,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:05fa52d7-5c67-460a-8722-d3460b24d6fe",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-B*57:01:01, exon 2&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-B*57:01:01, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -370,7 +370,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00381"
               }
@@ -384,16 +384,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:db69e549-6267-4777-b4b9-8813f3329309",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-B*57:01:01, exon 3&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-B*57:01:01, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -409,7 +409,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00381"
               }
@@ -423,16 +423,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:bb55c2bc-5ad2-4bc1-8ff3-c407d06b12d0",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-C*01:02:01, exon 2&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-C*01:02:01, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -448,7 +448,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00401"
               }
@@ -462,16 +462,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:46938bb2-0486-4e87-bfd3-89aab2d5e22f",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-C*01:02:01, exon 3&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-C*01:02:01, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -487,7 +487,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00401"
               }
@@ -501,16 +501,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:2ae2ff34-279e-43c2-9018-b054fd3fc1ce",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-C*03:04:01:01, exon 2&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-C*03:04:01:01, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -526,7 +526,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00413"
               }
@@ -540,16 +540,16 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
       "fullUrl": "urn:uuid:19153ef1-68c6-47a2-9676-c4eefbd39af9",
       "resource": {
-        "resourceType": "Sequence",
+        "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>&quot;HLA-C*03:04:01:01, exon 3&quot;</pre>\n                    </div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-C*03:04:01:01, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -565,7 +565,7 @@
           "referenceSeqId": {
             "coding": [
               {
-                "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+                "system": "http://www.ebi.ac.uk/ipd/imgt/hla",
                 "version": "3.23",
                 "code": "HLA00413"
               }
@@ -579,7 +579,7 @@
       },
       "request": {
         "method": "POST",
-        "url": "Sequence"
+        "url": "MolecularSequence"
       }
     },
     {
@@ -588,7 +588,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>HLA-A:01:01:01G</pre></div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-A:01:01:01G\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "extension": [
           {
@@ -604,18 +604,6 @@
             }
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsAlleleName",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://www.ebi.ac.uk/cgi-bin/ipd/imgt/hla/",
-                  "code": "A*01:01:01:01",
-                  "display": "HLA-A*01:01:01G"
-                }
-              ]
-            }
-          },
-          {
             "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsGenomicSourceClass",
             "valueCodeableConcept": {
               "coding": [
@@ -626,10 +614,6 @@
                 }
               ]
             }
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsPhaseSet",
-            "valueUri": "urn:uuid:e13f147e-41e5-4f7a-b20a-1b52b236c5ba"
           }
         ],
         "status": "final",
@@ -651,20 +635,14 @@
           "reference": "Specimen/120",
           "display": "buccal swab from Mary Chalmers"
         },
-        "related": [
+        "derivedFrom": [
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:8200dab6-18a2-4550-b913-a7db480c0804",
-              "display": "HLA-A*01:01:01:01, exon 2"
-            }
+            "reference": "urn:uuid:8200dab6-18a2-4550-b913-a7db480c0804",
+            "display": "HLA-A*01:01:01:01, exon 2"
           },
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:7c393185-f15c-45bc-a714-c0fdbea32675",
-              "display": "HLA-A*01:01:01:01, exon 3"
-            }
+            "reference": "urn:uuid:7c393185-f15c-45bc-a714-c0fdbea32675",
+            "display": "HLA-A*01:01:01:01, exon 3"
           }
         ]
       },
@@ -679,7 +657,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>HLA-A*01:02</pre></div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-A*01:02\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "extension": [
           {
@@ -695,18 +673,6 @@
             }
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsAlleleName",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://www.ebi.ac.uk/cgi-bin/ipd/imgt/hla/",
-                  "code": "A*01:02",
-                  "display": "HLA-A*01:02"
-                }
-              ]
-            }
-          },
-          {
             "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsGenomicSourceClass",
             "valueCodeableConcept": {
               "coding": [
@@ -717,10 +683,6 @@
                 }
               ]
             }
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsPhaseSet",
-            "valueUri": "urn:uuid:af8e79ec-343e-4380-ba65-cec5266dc2d5"
           }
         ],
         "status": "final",
@@ -742,20 +704,14 @@
           "reference": "Specimen/120",
           "display": "buccal swab from Mary Chalmers"
         },
-        "related": [
+        "derivedFrom": [
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:65c85f14-c3a0-4b72-818f-820e04fcc621",
-              "display": "HLA-A*01:02, exon 2"
-            }
+            "reference": "urn:uuid:65c85f14-c3a0-4b72-818f-820e04fcc621",
+            "display": "HLA-A*01:02, exon 2"
           },
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:fbba9fe7-0ece-4ec1-9233-a437a8d242a0",
-              "display": "HLA-A*01:02, exon 3"
-            }
+            "reference": "urn:uuid:fbba9fe7-0ece-4ec1-9233-a437a8d242a0",
+            "display": "HLA-A*01:02, exon 3"
           }
         ]
       },
@@ -770,7 +726,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>HLA-A:01:01G+HLA-A*01:02</pre></div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-A:01:01G+HLA-A*01:02\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "extension": [
           {
@@ -817,20 +773,14 @@
           "reference": "Specimen/120",
           "display": "buccal swab from Mary Chalmers"
         },
-        "related": [
+        "derivedFrom": [
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:b7765bbf-df40-486a-9f2f-404309643de6",
-              "display": "HLA-A*01:01:01G, exons 2 and 3"
-            }
+            "reference": "urn:uuid:b7765bbf-df40-486a-9f2f-404309643de6",
+            "display": "HLA-A*01:01:01G, exons 2 and 3"
           },
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:d98d92a7-0e86-4ae5-b036-b7e1bba6ec32",
-              "display": "HLA-A*01:02, exons 2 and 3"
-            }
+            "reference": "urn:uuid:d98d92a7-0e86-4ae5-b036-b7e1bba6ec32",
+            "display": "HLA-A*01:02, exons 2 and 3"
           }
         ]
       },
@@ -845,7 +795,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>HLA-B*15:01:01G</pre></div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-B*15:01:01G\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "extension": [
           {
@@ -861,18 +811,6 @@
             }
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsAlleleName",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://www.ebi.ac.uk/cgi-bin/ipd/imgt/hla/",
-                  "code": "B*15:01:01:01",
-                  "display": "HLA-B*15:01:01G"
-                }
-              ]
-            }
-          },
-          {
             "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsGenomicSourceClass",
             "valueCodeableConcept": {
               "coding": [
@@ -883,10 +821,6 @@
                 }
               ]
             }
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsPhaseSet",
-            "valueUri": "urn:uuid:29c67a1b-aeaa-4599-ae20-04b947ef73d8"
           }
         ],
         "status": "final",
@@ -908,20 +842,14 @@
           "reference": "Specimen/120",
           "display": "buccal swab from Mary Chalmers"
         },
-        "related": [
+        "derivedFrom": [
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:cbabf93e-1b4b-46f2-ba1e-d84862670670",
-              "display": "HLA-B*15:01:01:01, exon 2"
-            }
+            "reference": "urn:uuid:cbabf93e-1b4b-46f2-ba1e-d84862670670",
+            "display": "HLA-B*15:01:01:01, exon 2"
           },
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:c233ad3d-1572-48d6-93da-0a583535e138",
-              "display": "HLA-B*15:01:01:01, exon 3"
-            }
+            "reference": "urn:uuid:c233ad3d-1572-48d6-93da-0a583535e138",
+            "display": "HLA-B*15:01:01:01, exon 3"
           }
         ]
       },
@@ -936,7 +864,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>HLA-B*57:01:01G</pre></div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-B*57:01:01G\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "extension": [
           {
@@ -952,18 +880,6 @@
             }
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsAlleleName",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://www.ebi.ac.uk/cgi-bin/ipd/imgt/hla/",
-                  "code": "B*57:01:01",
-                  "display": "HLA-B*57:01:01G"
-                }
-              ]
-            }
-          },
-          {
             "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsGenomicSourceClass",
             "valueCodeableConcept": {
               "coding": [
@@ -974,10 +890,6 @@
                 }
               ]
             }
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsPhaseSet",
-            "valueUri": "urn:uuid:a19a3557-b36c-4b35-ab8b-4783022066b9"
           }
         ],
         "status": "final",
@@ -999,20 +911,14 @@
           "reference": "Specimen/120",
           "display": "buccal swab from Mary Chalmers"
         },
-        "related": [
+        "derivedFrom": [
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:05fa52d7-5c67-460a-8722-d3460b24d6fe",
-              "display": "HLA-B*57:01:01, exon 2"
-            }
+            "reference": "urn:uuid:05fa52d7-5c67-460a-8722-d3460b24d6fe",
+            "display": "HLA-B*57:01:01, exon 2"
           },
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:db69e549-6267-4777-b4b9-8813f3329309",
-              "display": "HLA-B*57:01:01, exon 3"
-            }
+            "reference": "urn:uuid:db69e549-6267-4777-b4b9-8813f3329309",
+            "display": "HLA-B*57:01:01, exon 3"
           }
         ]
       },
@@ -1027,7 +933,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>HLA-B*15:01:01G+HLA-B*57:01:01G</pre></div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-B*15:01:01G+HLA-B*57:01:01G\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "extension": [
           {
@@ -1074,20 +980,14 @@
           "reference": "Specimen/120",
           "display": "buccal swab from Mary Chalmers"
         },
-        "related": [
+        "derivedFrom": [
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:e2092243-2970-49d2-a90f-b90d1d49715a",
-              "display": "HLA-B*15:01:01G, exons 2 and 3"
-            }
+            "reference": "urn:uuid:e2092243-2970-49d2-a90f-b90d1d49715a",
+            "display": "HLA-B*15:01:01G, exons 2 and 3"
           },
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:792be53e-d4fb-4887-a367-815ef6c706e5",
-              "display": "HLA-B*57:01:01G, exons 2 and 3"
-            }
+            "reference": "urn:uuid:792be53e-d4fb-4887-a367-815ef6c706e5",
+            "display": "HLA-B*57:01:01G, exons 2 and 3"
           }
         ]
       },
@@ -1102,7 +1002,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>HLA-C*01:02:01</pre></div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-C*01:02:01\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "extension": [
           {
@@ -1118,18 +1018,6 @@
             }
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsAlleleName",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://www.ebi.ac.uk/cgi-bin/ipd/imgt/hla/",
-                  "code": "C*01:02:01",
-                  "display": "HLA-C*01:02:01"
-                }
-              ]
-            }
-          },
-          {
             "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsGenomicSourceClass",
             "valueCodeableConcept": {
               "coding": [
@@ -1140,10 +1028,6 @@
                 }
               ]
             }
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsPhaseSet",
-            "valueUri": "urn:uuid:79383455-4f55-4126-bcc2-03385cad7944"
           }
         ],
         "status": "final",
@@ -1165,20 +1049,14 @@
           "reference": "Specimen/120",
           "display": "buccal swab from Mary Chalmers"
         },
-        "related": [
+        "derivedFrom": [
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:bb55c2bc-5ad2-4bc1-8ff3-c407d06b12d0",
-              "display": "HLA-C*01:02:01, exon 2"
-            }
+            "reference": "urn:uuid:bb55c2bc-5ad2-4bc1-8ff3-c407d06b12d0",
+            "display": "HLA-C*01:02:01, exon 2"
           },
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:46938bb2-0486-4e87-bfd3-89aab2d5e22f",
-              "display": "HLA-C*01:02:01, exon 3"
-            }
+            "reference": "urn:uuid:46938bb2-0486-4e87-bfd3-89aab2d5e22f",
+            "display": "HLA-C*01:02:01, exon 3"
           }
         ]
       },
@@ -1193,7 +1071,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>HLA-C*03:04:01:01</pre></div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-C*03:04:01:01\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "extension": [
           {
@@ -1209,18 +1087,6 @@
             }
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsAlleleName",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://www.ebi.ac.uk/cgi-bin/ipd/imgt/hla/",
-                  "code": "C*03:04:01:01",
-                  "display": "HLA-C*03:04:01:01"
-                }
-              ]
-            }
-          },
-          {
             "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsGenomicSourceClass",
             "valueCodeableConcept": {
               "coding": [
@@ -1231,10 +1097,6 @@
                 }
               ]
             }
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsPhaseSet",
-            "valueUri": "urn:uuid:a220b7a5-2d7a-4cec-a5b1-bfcf5890e391"
           }
         ],
         "status": "final",
@@ -1256,20 +1118,14 @@
           "reference": "Specimen/120",
           "display": "buccal swab from Mary Chalmers"
         },
-        "related": [
+        "derivedFrom": [
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:2ae2ff34-279e-43c2-9018-b054fd3fc1ce",
-              "display": "HLA-C*03:04:01:01, exon 2"
-            }
+            "reference": "urn:uuid:2ae2ff34-279e-43c2-9018-b054fd3fc1ce",
+            "display": "HLA-C*03:04:01:01, exon 2"
           },
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:19153ef1-68c6-47a2-9676-c4eefbd39af9",
-              "display": "HLA-C*03:04:01:01, exon 3"
-            }
+            "reference": "urn:uuid:19153ef1-68c6-47a2-9676-c4eefbd39af9",
+            "display": "HLA-C*03:04:01:01, exon 3"
           }
         ]
       },
@@ -1284,7 +1140,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>HLA-C*01:02:01G+HLA-C*03:04:01G</pre></div>"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-C*01:02:01G+HLA-C*03:04:01G\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
         },
         "extension": [
           {
@@ -1331,20 +1187,14 @@
           "reference": "Specimen/120",
           "display": "buccal swab from Mary Chalmers"
         },
-        "related": [
+        "derivedFrom": [
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:709c5315-9403-4867-9d82-0b953836665f",
-              "display": "HLA-C*01:02:01G, exons 2 and 3"
-            }
+            "reference": "urn:uuid:709c5315-9403-4867-9d82-0b953836665f",
+            "display": "HLA-C*01:02:01G, exons 2 and 3"
           },
           {
-            "type": "derived-from",
-            "target": {
-              "reference": "urn:uuid:8b2aa21c-1426-4717-8ab0-a84d83df7d47",
-              "display": "HLA-C*03:04:01G, exons 2 and 3"
-            }
+            "reference": "urn:uuid:8b2aa21c-1426-4717-8ab0-a84d83df7d47",
+            "display": "HLA-C*03:04:01G, exons 2 and 3"
           }
         ]
       },
@@ -1353,5 +1203,14 @@
         "url": "Observation"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

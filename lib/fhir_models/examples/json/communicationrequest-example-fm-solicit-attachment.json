@@ -3,7 +3,7 @@
   "id": "fm-solicit",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Request for Accident Report</div>"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eRequest for Accident Report\u003c/div\u003e"
   },
   "contained": [
     {
@@ -71,7 +71,7 @@
     {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/v3/ParticipationMode",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
           "code": "WRITTEN",
           "display": "written"
         }
@@ -79,12 +79,7 @@
       "text": "written"
     }
   ],
-  "recipient": [
-    {
-      "reference": "#provider"
-    }
-  ],
-  "context": {
+  "encounter": {
     "reference": "Encounter/example"
   },
   "payload": [
@@ -94,12 +89,24 @@
   ],
   "occurrenceDateTime": "2016-06-10T11:01:10-08:00",
   "authoredOn": "2016-06-10T11:01:10-08:00",
+  "requester": {
+    "reference": "#requester"
+  },
+  "recipient": [
+    {
+      "reference": "#provider"
+    }
+  ],
   "sender": {
     "reference": "#payor"
   },
-  "requester": {
-    "agent": {
-      "reference": "#requester"
-    }
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }
