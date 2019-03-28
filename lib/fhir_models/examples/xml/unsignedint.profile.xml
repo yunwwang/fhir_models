@@ -109,17 +109,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/regex">
           <valueString value="[0]|([1-9][0-9]*)"/>
         </extension>
-        <code>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">
-            <valueString value="number"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type">
-            <valueString value="xsd:nonNegativeInteger"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type">
-            <valueString value="xsd:nonNegativeInteger"/>
-          </extension>
-        </code>
       </type>
       <isModifier value="false"/>
       <isSummary value="false"/>
@@ -145,17 +134,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/regex">
           <valueString value="[0]|([1-9][0-9]*)"/>
         </extension>
-        <code>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">
-            <valueString value="number"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type">
-            <valueString value="xsd:nonNegativeInteger"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type">
-            <valueString value="xsd:nonNegativeInteger"/>
-          </extension>
-        </code>
       </type>
     </element>
   </differential>

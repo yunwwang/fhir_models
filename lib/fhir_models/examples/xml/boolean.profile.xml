@@ -109,17 +109,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/regex">
           <valueString value="true|false"/>
         </extension>
-        <code>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">
-            <valueString value="boolean"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type">
-            <valueString value="xsd:boolean"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type">
-            <valueString value="xsd:boolean"/>
-          </extension>
-        </code>
       </type>
       <isModifier value="false"/>
       <isSummary value="false"/>
@@ -145,17 +134,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/regex">
           <valueString value="true|false"/>
         </extension>
-        <code>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">
-            <valueString value="boolean"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type">
-            <valueString value="xsd:boolean"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type">
-            <valueString value="xsd:boolean"/>
-          </extension>
-        </code>
       </type>
     </element>
   </differential>

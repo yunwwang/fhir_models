@@ -16,17 +16,33 @@ module FHIR
           end
         end
       end
-      hash.keep_if do |_key, value|
-        !value.nil? && ((value.is_a?(Hash) && !value.empty?) ||
-                          (value.is_a?(Array) && !value.empty?) ||
-                          (!value.is_a?(Hash) && !value.is_a?(Array))
-                       )
-      end
+      hash = prune(hash)
       hash['resourceType'] = resourceType if respond_to?(:resourceType)
       hash
     end
 
+    def prune(thing)
+      if thing.is_a?(Array)
+        return nil if thing.empty?
+        thing.map! { |i| prune(i) }
+        thing.compact!
+        return nil if thing.empty?
+      elsif thing.is_a?(Hash)
+        return nil if thing.empty?
+        thing.each do |key, value|
+          thing[key] = prune(value)
+        end
+        thing.delete_if do |_key, value|
+          value.nil?
+        end
+        return nil if thing.empty?
+      end
+      thing
+    end
+
     def from_hash(hash)
+      # eliminate empty stuff
+      hash = prune(hash)
       # clear the existing variables
       self.class::METADATA.each do |key, value|
         local_name = key
@@ -118,6 +134,6 @@ module FHIR
       rval
     end
 
-    private :make_child, :convert_primitive
+    private :prune, :make_child, :convert_primitive
   end
 end

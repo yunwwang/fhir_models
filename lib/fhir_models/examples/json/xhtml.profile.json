@@ -1,9 +1,8 @@
 {
-  "resourceType": "StructureDefinition",
   "id": "xhtml",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eto do\u003c/div\u003e"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">to do</div>"
   },
   "extension": [
     {
@@ -118,26 +117,6 @@
           "min": 1,
           "max": "1"
         },
-        "type": [
-          {
-            "_code": {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                  "valueString": "string"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                  "valueString": "xhtml:div"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                  "valueString": "string"
-                }
-              ]
-            }
-          }
-        ],
         "isModifier": false,
         "isSummary": false
       }
@@ -167,28 +146,9 @@
         "short": "Actual xhtml",
         "definition": "Actual xhtml",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "_code": {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                  "valueString": "string"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                  "valueString": "xhtml:div"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                  "valueString": "string"
-                }
-              ]
-            }
-          }
-        ]
+        "max": "1"
       }
     ]
-  }
+  },
+  "resourceType": "StructureDefinition"
 }

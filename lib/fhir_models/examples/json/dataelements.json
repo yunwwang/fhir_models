@@ -134,23 +134,7 @@
                       "url": "http://hl7.org/fhir/StructureDefinition/regex",
                       "valueString": "([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?"
                     }
-                  ],
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:gYear OR xsd:gYearMonth OR xsd:date"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:gYear OR xsd:gYearMonth OR xsd:date"
-                      }
-                    ]
-                  }
+                  ]
                 }
               ],
               "isModifier": false,
@@ -281,23 +265,7 @@
                       "url": "http://hl7.org/fhir/StructureDefinition/regex",
                       "valueString": "([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"
                     }
-                  ],
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime"
-                      }
-                    ]
-                  }
+                  ]
                 }
               ],
               "isModifier": false,
@@ -428,23 +396,7 @@
                       "url": "http://hl7.org/fhir/StructureDefinition/regex",
                       "valueString": "[ \\r\\n\\t\\S]+"
                     }
-                  ],
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:string"
-                      }
-                    ]
-                  }
+                  ]
                 }
               ],
               "maxLength": 1048576,
@@ -576,23 +528,7 @@
                       "url": "http://hl7.org/fhir/StructureDefinition/regex",
                       "valueString": "-?([0]|([1-9][0-9]*))"
                     }
-                  ],
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "number"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:int"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:int"
-                      }
-                    ]
-                  }
+                  ]
                 }
               ],
               "minValueInteger": -2147483648,
@@ -725,23 +661,7 @@
                       "url": "http://hl7.org/fhir/StructureDefinition/regex",
                       "valueString": "\\S*"
                     }
-                  ],
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:anyURI"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:string"
-                      }
-                    ]
-                  }
+                  ]
                 }
               ],
               "isModifier": false,
@@ -872,23 +792,7 @@
                       "url": "http://hl7.org/fhir/StructureDefinition/regex",
                       "valueString": "([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))"
                     }
-                  ],
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:dateTime"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:dateTime"
-                      }
-                    ]
-                  }
+                  ]
                 }
               ],
               "isModifier": false,
@@ -1019,23 +923,7 @@
                       "url": "http://hl7.org/fhir/StructureDefinition/regex",
                       "valueString": "true|false"
                     }
-                  ],
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "boolean"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:boolean"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:boolean"
-                      }
-                    ]
-                  }
+                  ]
                 }
               ],
               "isModifier": false,
@@ -1166,23 +1054,7 @@
                       "url": "http://hl7.org/fhir/StructureDefinition/regex",
                       "valueString": "(\\s*([0-9a-zA-Z\\+/\u003d]){4}\\s*)+"
                     }
-                  ],
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:base64Binary"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:base64Binary"
-                      }
-                    ]
-                  }
+                  ]
                 }
               ],
               "isModifier": false,
@@ -1313,23 +1185,7 @@
                       "url": "http://hl7.org/fhir/StructureDefinition/regex",
                       "valueString": "([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?"
                     }
-                  ],
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:time"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:time"
-                      }
-                    ]
-                  }
+                  ]
                 }
               ],
               "isModifier": false,
@@ -1460,23 +1316,7 @@
                       "url": "http://hl7.org/fhir/StructureDefinition/regex",
                       "valueString": "-?(0|[1-9][0-9]*)(\\.[0-9]+)?([eE][+-]?[0-9]+)?"
                     }
-                  ],
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "number"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:decimal OR xsd:double"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:decimal OR xsd:double"
-                      }
-                    ]
-                  }
+                  ]
                 }
               ],
               "isModifier": false,
@@ -1600,26 +1440,6 @@
                 "min": 1,
                 "max": "1"
               },
-              "type": [
-                {
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xhtml:div"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "string"
-                      }
-                    ]
-                  }
-                }
-              ],
               "isModifier": false,
               "isSummary": false
             }
@@ -23328,30 +23148,6 @@
                 "min": 1,
                 "max": "1"
               },
-              "type": [
-                {
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/regex",
-                        "valueString": "((http|https)://([A-Za-z0-9\\\\\\.\\:\\%\\$]*\\/)*)?(Account|ActivityDefinition|AdverseEvent|AllergyIntolerance|Appointment|AppointmentResponse|AuditEvent|Basic|Binary|BiologicallyDerivedProduct|BodyStructure|Bundle|CapabilityStatement|CarePlan|CareTeam|CatalogEntry|ChargeItem|ChargeItemDefinition|Claim|ClaimResponse|ClinicalImpression|CodeSystem|Communication|CommunicationRequest|CompartmentDefinition|Composition|ConceptMap|Condition|Consent|Contract|Coverage|CoverageEligibilityRequest|CoverageEligibilityResponse|DetectedIssue|Device|DeviceDefinition|DeviceMetric|DeviceRequest|DeviceUseStatement|DiagnosticReport|DocumentManifest|DocumentReference|EffectEvidenceSynthesis|Encounter|Endpoint|EnrollmentRequest|EnrollmentResponse|EpisodeOfCare|EventDefinition|Evidence|EvidenceVariable|ExampleScenario|ExplanationOfBenefit|FamilyMemberHistory|Flag|Goal|GraphDefinition|Group|GuidanceResponse|HealthcareService|ImagingStudy|Immunization|ImmunizationEvaluation|ImmunizationRecommendation|ImplementationGuide|InsurancePlan|Invoice|Library|Linkage|List|Location|Measure|MeasureReport|Media|Medication|MedicationAdministration|MedicationDispense|MedicationKnowledge|MedicationRequest|MedicationStatement|MedicinalProduct|MedicinalProductAuthorization|MedicinalProductContraindication|MedicinalProductIndication|MedicinalProductIngredient|MedicinalProductInteraction|MedicinalProductManufactured|MedicinalProductPackaged|MedicinalProductPharmaceutical|MedicinalProductUndesirableEffect|MessageDefinition|MessageHeader|MolecularSequence|NamingSystem|NutritionOrder|Observation|ObservationDefinition|OperationDefinition|OperationOutcome|Organization|OrganizationAffiliation|Patient|PaymentNotice|PaymentReconciliation|Person|PlanDefinition|Practitioner|PractitionerRole|Procedure|Provenance|Questionnaire|QuestionnaireResponse|RelatedPerson|RequestGroup|ResearchDefinition|ResearchElementDefinition|ResearchStudy|ResearchSubject|RiskAssessment|RiskEvidenceSynthesis|Schedule|SearchParameter|ServiceRequest|Slot|Specimen|SpecimenDefinition|StructureDefinition|StructureMap|Subscription|Substance|SubstanceNucleicAcid|SubstancePolymer|SubstanceProtein|SubstanceReferenceInformation|SubstanceSourceMaterial|SubstanceSpecification|SupplyDelivery|SupplyRequest|Task|TerminologyCapabilities|TestReport|TestScript|ValueSet|VerificationResult|VisionPrescription)\\/[A-Za-z0-9\\-\\.]{1,64}(\\/_history\\/[A-Za-z0-9\\-\\.]{1,64})?"
-                      }
-                    ]
-                  }
-                }
-              ],
               "isModifier": false,
               "isSummary": false,
               "mapping": [
@@ -23895,26 +23691,6 @@
                 "min": 0,
                 "max": "1"
               },
-              "type": [
-                {
-                  "_code": {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-                        "valueString": "string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-                        "valueString": "xsd:string"
-                      },
-                      {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
-                        "valueString": "xsd:string"
-                      }
-                    ]
-                  }
-                }
-              ],
               "isModifier": false,
               "isSummary": false,
               "mapping": [

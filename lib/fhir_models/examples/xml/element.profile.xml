@@ -161,21 +161,6 @@
         <min value="0"/>
         <max value="1"/>
       </base>
-    <!-- Note: primitive values do not have an assigned type. e.g. this is compiler magic. XML,
-    JSON and RDF types provided by extension -->
-      <type>
-        <code>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">
-            <valueString value="string"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type">
-            <valueString value="xsd:string"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type">
-            <valueString value="xsd:string"/>
-          </extension>
-        </code>
-      </type>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -249,21 +234,6 @@
       <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
       <min value="0"/>
       <max value="1"/>
-    <!-- Note: primitive values do not have an assigned type. e.g. this is compiler magic. XML,
-    JSON and RDF types provided by extension -->
-      <type>
-        <code>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">
-            <valueString value="string"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type">
-            <valueString value="xsd:string"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type">
-            <valueString value="xsd:string"/>
-          </extension>
-        </code>
-      </type>
       <mapping>
         <identity value="rim"/>
         <map value="n/a"/>

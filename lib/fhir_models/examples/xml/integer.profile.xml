@@ -110,17 +110,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/regex">
           <valueString value="-?([0]|([1-9][0-9]*))"/>
         </extension>
-        <code>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">
-            <valueString value="number"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type">
-            <valueString value="xsd:int"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type">
-            <valueString value="xsd:int"/>
-          </extension>
-        </code>
       </type>
       <minValueInteger value="-2147483648"/>
       <maxValueInteger value="2147483647"/>
@@ -149,17 +138,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/regex">
           <valueString value="-?([0]|([1-9][0-9]*))"/>
         </extension>
-        <code>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">
-            <valueString value="number"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type">
-            <valueString value="xsd:int"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type">
-            <valueString value="xsd:int"/>
-          </extension>
-        </code>
       </type>
       <minValueInteger value="-2147483648"/>
       <maxValueInteger value="2147483647"/>

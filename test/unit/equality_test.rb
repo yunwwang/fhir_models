@@ -94,7 +94,7 @@ class EqualityTest < Test::Unit::TestCase
     input_xml = File.read(example_xml_file)
     instance_json = FHIR::Json.from_json(input_json)
     instance_xml = FHIR::Xml.from_xml(input_xml)
-    exclude = ['div']
+    exclude = ['div', 'meta']
     if !instance_json.equals?(instance_xml, exclude) || !instance_xml.equals?(instance_json, exclude)
       File.open("#{ERROR_DIR}/#{example_name}_json.json", 'w:UTF-8') { |file| file.write(instance_json.to_json) }
       File.open("#{ERROR_DIR}/#{example_name}_xml.json", 'w:UTF-8') { |file| file.write(instance_xml.to_json) }

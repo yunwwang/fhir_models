@@ -110,17 +110,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/regex">
           <valueString value="urn:oid:[0-2](\.(0|[1-9][0-9]*))+"/>
         </extension>
-        <code>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">
-            <valueString value="string"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type">
-            <valueString value="xsd:anyURI"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type">
-            <valueString value="xsd:string"/>
-          </extension>
-        </code>
       </type>
       <isModifier value="false"/>
       <isSummary value="false"/>
@@ -147,17 +136,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/regex">
           <valueString value="urn:oid:[0-2](\.(0|[1-9][0-9]*))+"/>
         </extension>
-        <code>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">
-            <valueString value="string"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type">
-            <valueString value="xsd:anyURI"/>
-          </extension>
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type">
-            <valueString value="xsd:string"/>
-          </extension>
-        </code>
       </type>
     </element>
   </differential>
