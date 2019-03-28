@@ -42,7 +42,7 @@ module FHIR
 
     def from_hash(hash)
       # eliminate empty stuff
-      hash = prune(hash)
+      hash = prune(hash) unless hash.empty?
       # clear the existing variables
       self.class::METADATA.each do |key, value|
         local_name = key
