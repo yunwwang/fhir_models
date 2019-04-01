@@ -26,6 +26,14 @@ class MultipleTypesTest < Test::Unit::TestCase
     assert (obs.value == obs.valueString), 'Observation.value did not return valueString'
     obs.valueString = nil
 
+    obs.valueBoolean = FLAG
+    assert (obs.value == obs.valueBoolean), 'Observation.value did not return valueBoolean'
+    obs.valueBoolean = nil
+
+    obs.valueInteger = FLAG
+    assert (obs.value == obs.valueInteger), 'Observation.value did not return valueInteger'
+    obs.valueInteger = nil
+
     obs.valueRange = FLAG
     assert (obs.value == obs.valueRange), 'Observation.value did not return valueRange'
     obs.valueRange = nil
@@ -37,10 +45,6 @@ class MultipleTypesTest < Test::Unit::TestCase
     obs.valueSampledData = FLAG
     assert (obs.value == obs.valueSampledData), 'Observation.value did not return valueSampledData'
     obs.valueSampledData = nil
-
-    obs.valueAttachment = FLAG
-    assert (obs.value == obs.valueAttachment), 'Observation.value did not return valueAttachment'
-    obs.valueAttachment = nil
 
     obs.valueTime = FLAG
     assert (obs.value == obs.valueTime), 'Observation.value did not return valueTime'
