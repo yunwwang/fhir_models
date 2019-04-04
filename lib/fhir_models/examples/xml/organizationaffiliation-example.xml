@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><OrganizationAffiliation xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<OrganizationAffiliation xmlns="http://hl7.org/fhir">
 	<id value="example"/>
 
 	<meta>
@@ -8,14 +9,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<p>
-				HL7 Payer Network services for Acme Hospital from 1-Jan 2012 to 31-Mar 2012
-			</p>
-		</div>
-	</text>
+  
 
 	<identifier>
 		<system value="http://www.acme.org/practitioners"/>

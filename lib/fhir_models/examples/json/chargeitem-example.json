@@ -1,10 +1,6 @@
 {
   "resourceType": "ChargeItem",
   "id": "example",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eExample of ChargeItem Usage in Context of the German EBM Billing code system\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://myHospital.org/ChargeItems",
@@ -83,7 +79,7 @@
     "value": 40,
     "currency": "EUR"
   },
-  "overrideReason": "Patient is Cardiologist\u0027s golf buddy, so he gets a 20% discount!",
+  "overrideReason": "Patient is Cardiologist's golf buddy, so he gets a 20% discount!",
   "enterer": {
     "reference": "Practitioner/example"
   },

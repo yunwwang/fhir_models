@@ -150,7 +150,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -158,8 +158,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -171,7 +171,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dPERT].target[classCode\u003dCLNTRL, moodCode\u003dEVN]"
+            "map": ".outboundRelationship[typeCode=PERT].target[classCode=CLNTRL, moodCode=EVN]"
           }
         ]
       },
@@ -313,7 +313,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dPERT].target[classCode\u003dCLNTRL, moodCode\u003dEVN]"
+            "map": ".outboundRelationship[typeCode=PERT].target[classCode=CLNTRL, moodCode=EVN]"
           }
         ]
       },

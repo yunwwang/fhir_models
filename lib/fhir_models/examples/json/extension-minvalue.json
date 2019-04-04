@@ -67,7 +67,7 @@
           }
         ],
         "path": "Extension",
-        "short": "Must be \u003e\u003d this value",
+        "short": "Must be >= this value",
         "definition": "The inclusive lower bound on the range of allowed values for the data element.",
         "comment": "Data type specified must be the same as the data type for the data element.",
         "min": 0,
@@ -85,7 +85,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -93,8 +93,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -245,7 +245,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Must be \u003e\u003d this value",
+        "short": "Must be >= this value",
         "definition": "The inclusive lower bound on the range of allowed values for the data element.",
         "comment": "Data type specified must be the same as the data type for the data element.",
         "min": 0,

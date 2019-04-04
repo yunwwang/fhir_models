@@ -1,10 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "Request",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eto do\u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -73,7 +69,7 @@
           },
           {
             "identity": "rim",
-            "map": "Act[moodCode\u003c\u003dINT]"
+            "map": "Act[moodCode<=INT]"
           }
         ]
       },
@@ -142,7 +138,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dDEFN].target"
+            "map": ".outboundRelationship[typeCode=DEFN].target"
           }
         ]
       },
@@ -173,7 +169,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dDEFN].target"
+            "map": ".outboundRelationship[typeCode=DEFN].target"
           }
         ]
       },
@@ -211,7 +207,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dFLFS].target"
+            "map": ".outboundRelationship[typeCode=FLFS].target"
           }
         ]
       },
@@ -247,11 +243,11 @@
         "mapping": [
           {
             "identity": "v2",
-            "map": "Handled by message location of ORC (ORC.1\u003dRO or RU)"
+            "map": "Handled by message location of ORC (ORC.1=RO or RU)"
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dRPLC].target"
+            "map": ".outboundRelationship[typeCode=RPLC].target"
           }
         ]
       },
@@ -287,7 +283,7 @@
           },
           {
             "identity": "rim",
-            "map": ".inboundRelationship(typeCode\u003dCOMP].source[moodCode\u003dINT].identifier"
+            "map": ".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier"
           }
         ]
       },
@@ -296,7 +292,7 @@
         "path": "Request.status",
         "short": "draft | active | suspended | cancelled | completed | entered-in-error | unknown",
         "definition": "The current state of the {{title}}.",
-        "comment": "The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, completed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding [Event](event.html)(s) or using the [Task](task.html) resource.  A nominal state-transition diagram can be found in the [[request.html#statemachine | Request pattern]] documentation  Unknown does not represent \"other\" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.  A status of \u0027active\u0027 when doNotPerform is true means that the request to not perform is currently in force.\n\nA status of completed for a \"doNotPerform\" request indicates that the period of non-performance is now satisfied and the request no longer holds.",
+        "comment": "The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, completed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding [Event](event.html)(s) or using the [Task](task.html) resource.  A nominal state-transition diagram can be found in the [[request.html#statemachine | Request pattern]] documentation  Unknown does not represent \"other\" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.  A status of 'active' when doNotPerform is true means that the request to not perform is currently in force.\n\nA status of completed for a \"doNotPerform\" request indicates that the period of non-performance is now satisfied and the request no longer holds.",
         "min": 1,
         "max": "1",
         "base": {
@@ -375,7 +371,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".inboundRelationship[typeCode\u003dSUBJ].source[classCode\u003dCACT, moodCode\u003dEVN].reasonCOde"
+            "map": ".inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde"
           }
         ]
       },
@@ -384,7 +380,7 @@
         "path": "Request.intent",
         "short": "proposal | plan | order (immutable)",
         "definition": "Indicates the level of authority/intentionality associated with the {{title}} and where the request fits into the workflow chain.",
-        "comment": "This element is expected to be immutable.  E.g. A \"proposal\" instance should never change to be a \"plan\" instance or \"order\" instance.  Instead, a new instance \u0027basedOn\u0027 the prior instance should be created with the new \u0027intent\u0027 value.\n\nOne exception to this is that the granularity of Request.intent is allowed to change.  For example, a Request identified as an \"order\" might later be clarified to be a \"filler-order\".  Or, in rarer cases (to meet recipient constraints), the reverse might also occur.\n\nWhen resources map to this element, they are free to define as many codes as necessary to cover their space and will map to \"proposal, plan or order\".  Can have multiple codes that map to one of these.  E.g. \"original order\", \"encoded order\", \"reflex order\" would all map to \"order\".  Expectation is that the set of codes is mutually exclusive or a strict all-encompassing hierarchy.",
+        "comment": "This element is expected to be immutable.  E.g. A \"proposal\" instance should never change to be a \"plan\" instance or \"order\" instance.  Instead, a new instance 'basedOn' the prior instance should be created with the new 'intent' value.\n\nOne exception to this is that the granularity of Request.intent is allowed to change.  For example, a Request identified as an \"order\" might later be clarified to be a \"filler-order\".  Or, in rarer cases (to meet recipient constraints), the reverse might also occur.\n\nWhen resources map to this element, they are free to define as many codes as necessary to cover their space and will map to \"proposal, plan or order\".  Can have multiple codes that map to one of these.  E.g. \"original order\", \"encoded order\", \"reflex order\" would all map to \"order\".  Expectation is that the set of codes is mutually exclusive or a strict all-encompassing hierarchy.",
         "requirements": "Proposals/recommendations, plans and orders all use the same structure and can exist in the same fulfillment chain.",
         "alias": [
           "category"
@@ -506,7 +502,7 @@
       {
         "id": "Request.code",
         "path": "Request.code",
-        "short": "What\u0027s being requested/ordered",
+        "short": "What's being requested/ordered",
         "definition": "A code that identifies the specific service or action being asked to be done (or not done).",
         "alias": [
           "type"
@@ -555,7 +551,7 @@
         "path": "Request.subject",
         "short": "Individual the service is ordered/prohibited for",
         "definition": "The individual or set of individuals the action is to be performed/not performed on or for.",
-        "comment": "[For resources that aren\u0027t patient-specific, the set of allowed resources may be extended to include other things.  Group should generally be retained unless there\u0027s certainty this resource won\u0027t be used for veterinary, research or public health settings where Group may be necessary (e.g. this cage of rats/crate of chickens, group of people in a 5 mile radious of the incident, etc.)].",
+        "comment": "[For resources that aren't patient-specific, the set of allowed resources may be extended to include other things.  Group should generally be retained unless there's certainty this resource won't be used for veterinary, research or public health settings where Group may be necessary (e.g. this cage of rats/crate of chickens, group of people in a 5 mile radious of the incident, etc.)].",
         "requirements": "Links the request to the Patient context.",
         "alias": [
           "patient"
@@ -585,7 +581,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dSBJ].role"
+            "map": ".participation[typeCode=SBJ].role"
           },
           {
             "identity": "w5",
@@ -627,7 +623,7 @@
           },
           {
             "identity": "rim",
-            "map": ".inboundRelationship(typeCode\u003dCOMP].source[classCode\u003c\u003dPCPR, moodCode\u003dEVN]"
+            "map": ".inboundRelationship(typeCode=COMP].source[classCode<=PCPR, moodCode=EVN]"
           },
           {
             "identity": "w5",
@@ -709,7 +705,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dAUT].time"
+            "map": ".participation[typeCode=AUT].time"
           },
           {
             "identity": "w5",
@@ -755,7 +751,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dAUT].role"
+            "map": ".participation[typeCode=AUT].role"
           },
           {
             "identity": "w5",
@@ -767,7 +763,7 @@
         "id": "Request.reported[x]",
         "path": "Request.reported[x]",
         "short": "Reported rather than primary record",
-        "definition": "Indicates if this record was captured as a secondary \u0027reported\u0027 record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.",
+        "definition": "Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.",
         "requirements": "Reported data may have different rules on editing and may be visually distinguished from primary data.",
         "alias": [
           "informer"
@@ -799,7 +795,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dRPT].role"
+            "map": ".participation[typeCode=RPT].role"
           },
           {
             "identity": "w5",
@@ -812,7 +808,7 @@
         "path": "Request.performerType",
         "short": "Desired kind of service performer",
         "definition": "The type of individual that is desired to act upon/ not act upon the {{request}}.",
-        "comment": "If specified without indicating a performer, this indicates that the performer must be (or can\u0027t be) of the specified type.  If specified with a performer then it indicates the requirements of the performer if the designated performer is not available.  If doNotPerform is true, then only one of performerType and performer should be present.",
+        "comment": "If specified without indicating a performer, this indicates that the performer must be (or can't be) of the specified type.  If specified with a performer then it indicates the requirements of the performer if the designated performer is not available.  If doNotPerform is true, then only one of performerType and performer should be present.",
         "min": 0,
         "max": "1",
         "base": {
@@ -844,7 +840,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dPRF].role[scoper.determinerCode\u003dKIND].code"
+            "map": ".participation[typeCode=PRF].role[scoper.determinerCode=KIND].code"
           },
           {
             "identity": "w5",
@@ -888,7 +884,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dPRF].role[scoper.determinerCode\u003dINSTANCE]"
+            "map": ".participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]"
           },
           {
             "identity": "w5",
@@ -974,7 +970,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dRSON].target"
+            "map": ".outboundRelationship[typeCode=RSON].target"
           },
           {
             "identity": "w5",
@@ -1012,7 +1008,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dCOVBY].target"
+            "map": ".outboundRelationship[typeCode=COVBY].target"
           }
         ]
       },
@@ -1045,7 +1041,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dPERT].target"
+            "map": ".outboundRelationship[typeCode=PERT].target"
           }
         ]
       },
@@ -1075,7 +1071,7 @@
           },
           {
             "identity": "rim",
-            "map": ".inboundRelationship(typeCode\u003dSUBJ].source[classCode\u003dANNGEN, moodCode\u003dEVN].value[xsi:type\u003dST]"
+            "map": ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]"
           }
         ]
       },
@@ -1112,7 +1108,7 @@
           },
           {
             "identity": "rim",
-            "map": ".inboundRelationship(typeCode\u003dSUBJ].source[classCode\u003dCACT, moodCode\u003dEVN]"
+            "map": ".inboundRelationship(typeCode=SUBJ].source[classCode=CACT, moodCode=EVN]"
           }
         ]
       }

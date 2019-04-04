@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
   <id value="animal"/>
   <meta>
     <security>
@@ -7,52 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      
-      <table>
-        
-        <tbody>
-          
-          <tr>
-            
-            <td>Id</td>
-            
-            <td>Kenzi (Dog: Golden Retriever)</td>
-          
-          </tr>
-          
-          <tr>
-            
-            <td>Owner</td>
-            
-            <td>Peter Chalmers, 534 Erewhon, Pleasantville, Vic, 3999</td>
-          
-          </tr>
-          
-          <tr>
-            
-            <td>Contacts</td>
-            
-            <td>Work: (03) 5555 6473</td>
-          
-          </tr>
-          
-          <tr>
-            
-            <td>Id</td>
-            
-            <td>Dog Tag: 1234123 (Maroondah City Council)</td>
-          
-          </tr>
-        
-        </tbody>
-      
-      </table>
-    
-    </div>
-  </text>
+  
 	<extension url="http://hl7.org/fhir/StructureDefinition/patient-animal">
 		<extension url="species">
 			<valueCodeableConcept>

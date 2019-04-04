@@ -2115,7 +2115,7 @@
             ]
           }
         ],
-        "description": "This example value set defines a set of codes that can be used to indicate the current state of the animal\u0027s reproductive organs.",
+        "description": "This example value set defines a set of codes that can be used to indicate the current state of the animal's reproductive organs.",
         "uniqueId": [
           {
             "type": "uri",
@@ -5844,7 +5844,7 @@
             ]
           }
         ],
-        "description": "This example value set defines a set of codes that can be used to indicate a patient\u0027s gender identity.",
+        "description": "This example value set defines a set of codes that can be used to indicate a patient's gender identity.",
         "uniqueId": [
           {
             "type": "uri",
@@ -6714,7 +6714,7 @@
             ]
           }
         ],
-        "description": "This value set defines the set of codes for describing the type or mode of the patient\u0027s preferred language.",
+        "description": "This value set defines the set of codes for describing the type or mode of the patient's preferred language.",
         "uniqueId": [
           {
             "type": "uri",
@@ -8656,7 +8656,7 @@
             ]
           }
         ],
-        "description": "Codes defining the purpose of a Questionnaire item of type \u0027text\u0027.",
+        "description": "Codes defining the purpose of a Questionnaire item of type 'text'.",
         "uniqueId": [
           {
             "type": "uri",
@@ -9869,7 +9869,7 @@
             ]
           }
         ],
-        "description": "Why an entry is in the result set - whether it\u0027s included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
+        "description": "Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
         "uniqueId": [
           {
             "type": "uri",
@@ -10197,7 +10197,7 @@
             ]
           }
         ],
-        "description": "The license that applies to an Implementation Guide (using an SPDX license Identifiers, or \u0027not-open-source\u0027). The binding is required but new SPDX license Identifiers are allowed to be used (https://spdx.org/licenses/).",
+        "description": "The license that applies to an Implementation Guide (using an SPDX license Identifiers, or 'not-open-source'). The binding is required but new SPDX license Identifiers are allowed to be used (https://spdx.org/licenses/).",
         "uniqueId": [
           {
             "type": "uri",
@@ -11053,7 +11053,7 @@
             ]
           }
         ],
-        "description": "The IHE FormatCode code set is defined to be the set of FormatCode(s) defined by IHE http://wiki.ihe.net/index.php?title\u003dIHE_Format_Codes. This code set additionally includes format codes defined by the HL7 CDA http://wiki.hl7.org/index.php?title\u003dCDA_Format_Codes_for_IHE_XDS. The set was listed in HITSP C80 Table 2-153 Format Code Value Set Definition. The use of the FormatCode specifies the technical format of the document. The FormatCode is a further specialization more detailed than the mime-type. The FormatCode provides sufficient information to allow any potential document consumer to know if it can process and/or display by identifying a document encoding, structure and template. The actual list of codes is intended to be extensible. ",
+        "description": "The IHE FormatCode code set is defined to be the set of FormatCode(s) defined by IHE http://wiki.ihe.net/index.php?title=IHE_Format_Codes. This code set additionally includes format codes defined by the HL7 CDA http://wiki.hl7.org/index.php?title=CDA_Format_Codes_for_IHE_XDS. The set was listed in HITSP C80 Table 2-153 Format Code Value Set Definition. The use of the FormatCode specifies the technical format of the document. The FormatCode is a further specialization more detailed than the mime-type. The FormatCode provides sufficient information to allow any potential document consumer to know if it can process and/or display by identifying a document encoding, structure and template. The actual list of codes is intended to be extensible. ",
         "uniqueId": [
           {
             "type": "uri",
@@ -14996,7 +14996,7 @@
             ]
           }
         ],
-        "description": "Defines how concepts are processed into the expansion when it\u0027s for UI presentation.",
+        "description": "Defines how concepts are processed into the expansion when it's for UI presentation.",
         "uniqueId": [
           {
             "type": "uri",
@@ -15514,7 +15514,7 @@
             ]
           }
         ],
-        "description": "Codes describing the reason why a family member\u0027s history is not available.",
+        "description": "Codes describing the reason why a family member's history is not available.",
         "uniqueId": [
           {
             "type": "uri",
@@ -15728,7 +15728,7 @@
             ]
           }
         ],
-        "description": "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the patient\u0027s eligibility for a vaccination program. This value set is provided as a suggestive example.",
+        "description": "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the patient's eligibility for a vaccination program. This value set is provided as a suggestive example.",
         "uniqueId": [
           {
             "type": "uri",
@@ -23903,7 +23903,7 @@
             ]
           }
         ],
-        "description": "FHIR Value set/code system definition for HL7 v2 table 0242 ( Primary Observer\u0027s Qualification)",
+        "description": "FHIR Value set/code system definition for HL7 v2 table 0242 ( Primary Observer's Qualification)",
         "uniqueId": [
           {
             "type": "uri",
@@ -31113,7 +31113,7 @@
             ]
           }
         ],
-        "description": "FHIR Value set/code system definition for HL7 v2 table 0548 ( Signatory\u0027s Relationship to Subject)",
+        "description": "FHIR Value set/code system definition for HL7 v2 table 0548 ( Signatory's Relationship to Subject)",
         "uniqueId": [
           {
             "type": "uri",
@@ -34053,7 +34053,7 @@
             ]
           }
         ],
-        "description": " A code identifying the specific message to be provided.  Discussion:\r\nA textual value may be specified as the print name, or for non-coded messages, as the original text.  Examples:\r\n\u0027Required attribute xxx is missing\u0027, \u0027System will be unavailable March 19 from 0100 to 0300\u0027",
+        "description": " A code identifying the specific message to be provided.  Discussion:\r\nA textual value may be specified as the print name, or for non-coded messages, as the original text.  Examples:\r\n'Required attribute xxx is missing', 'System will be unavailable March 19 from 0100 to 0300'",
         "uniqueId": [
           {
             "type": "uri",
@@ -34473,7 +34473,7 @@
             ]
           }
         ],
-        "description": " \u003cns1:p\u003eUsed to indicate that the target of the relationship will be a filtered subset of the total related set of targets.\u003c/ns1:p\u003e\u003cns1:p\u003eUsed when there is a need to limit the number of components to the first, the last, the next, the total, the average or some other filtered or calculated subset.\u003c/ns1:p\u003e",
+        "description": " <ns1:p>Used to indicate that the target of the relationship will be a filtered subset of the total related set of targets.</ns1:p><ns1:p>Used when there is a need to limit the number of components to the first, the last, the next, the total, the average or some other filtered or calculated subset.</ns1:p>",
         "uniqueId": [
           {
             "type": "uri",
@@ -36013,7 +36013,7 @@
             ]
           }
         ],
-        "description": " In the United States, federal standards for classifying data on ethnicity determine the categories used by federal agencies and exert a strong influence on categorization by state and local agencies and private sector organizations. The federal standards do not conceptually define ethnicity, and they recognize the absence of an anthropological or scientific basis for ethnicity classification.  Instead, the federal standards acknowledge that ethnicity is a social-political construct in which an individual\u0027s own identification with a particular ethnicity is preferred to observer identification.  The standards specify two minimum ethnicity categories: Hispanic or Latino, and Not Hispanic or Latino.  The standards define a Hispanic or Latino as a person of \"Mexican, Puerto Rican, Cuban, South or Central America, or other Spanish culture or origin, regardless of race.\" The standards stipulate that ethnicity data need not be limited to the two minimum categories, but any expansion must be collapsible to those categories.  In addition, the standards stipulate that an individual can be Hispanic or Latino or can be Not Hispanic or Latino, but cannot be both.",
+        "description": " In the United States, federal standards for classifying data on ethnicity determine the categories used by federal agencies and exert a strong influence on categorization by state and local agencies and private sector organizations. The federal standards do not conceptually define ethnicity, and they recognize the absence of an anthropological or scientific basis for ethnicity classification.  Instead, the federal standards acknowledge that ethnicity is a social-political construct in which an individual's own identification with a particular ethnicity is preferred to observer identification.  The standards specify two minimum ethnicity categories: Hispanic or Latino, and Not Hispanic or Latino.  The standards define a Hispanic or Latino as a person of \"Mexican, Puerto Rican, Cuban, South or Central America, or other Spanish culture or origin, regardless of race.\" The standards stipulate that ethnicity data need not be limited to the two minimum categories, but any expansion must be collapsible to those categories.  In addition, the standards stipulate that an individual can be Hispanic or Latino or can be Not Hispanic or Latino, but cannot be both.",
         "uniqueId": [
           {
             "type": "uri",
@@ -36503,7 +36503,7 @@
             ]
           }
         ],
-        "description": " Tells a receiver to ignore just the local markup tags (local_markup, local_header, local_attr) when value\u003d\"markup\", or to ignore the local markup tags and all contained content when value\u003d\"all\"",
+        "description": " Tells a receiver to ignore just the local markup tags (local_markup, local_header, local_attr) when value=\"markup\", or to ignore the local markup tags and all contained content when value=\"all\"",
         "uniqueId": [
           {
             "type": "uri",
@@ -37133,7 +37133,7 @@
             ]
           }
         ],
-        "description": " A code identifying a person\u0027s disability.",
+        "description": " A code identifying a person's disability.",
         "uniqueId": [
           {
             "type": "uri",
@@ -37448,7 +37448,7 @@
             ]
           }
         ],
-        "description": " In the United States, federal standards for classifying data on race determine the categories used by federal agencies and exert a strong influence on categorization by state and local agencies and private sector organizations.  The federal standards do not conceptually define race, and they recognize the absence of an anthropological or scientific basis for racial classification.  Instead, the federal standards acknowledge that race is a social-political construct in which an individual\u0027s own identification with one more race categories is preferred to observer identification. The standards use a variety of features to define five minimum race categories. Among these features are descent from \"the original peoples\" of a specified region or nation.  The minimum race categories are American Indian or Alaska Native, Asian, Black or African American, Native Hawaiian or Other Pacific Islander, and White.  The federal standards stipulate that race data need not be limited to the five minimum categories, but any expansion must be collapsible to those categories.",
+        "description": " In the United States, federal standards for classifying data on race determine the categories used by federal agencies and exert a strong influence on categorization by state and local agencies and private sector organizations.  The federal standards do not conceptually define race, and they recognize the absence of an anthropological or scientific basis for racial classification.  Instead, the federal standards acknowledge that race is a social-political construct in which an individual's own identification with one more race categories is preferred to observer identification. The standards use a variety of features to define five minimum race categories. Among these features are descent from \"the original peoples\" of a specified region or nation.  The minimum race categories are American Indian or Alaska Native, Asian, Black or African American, Native Hawaiian or Other Pacific Islander, and White.  The federal standards stipulate that race data need not be limited to the five minimum categories, but any expansion must be collapsible to those categories.",
         "uniqueId": [
           {
             "type": "uri",
@@ -38428,7 +38428,7 @@
             ]
           }
         ],
-        "description": " Code system of concepts representing a person\u0027s job type as defined by compensation and sector (e.g. paid vs. unpaid, self-employed vs. not self-employed, government vs. private, etc.).",
+        "description": " Code system of concepts representing a person's job type as defined by compensation and sector (e.g. paid vs. unpaid, self-employed vs. not self-employed, government vs. private, etc.).",
         "uniqueId": [
           {
             "type": "uri",
@@ -38463,7 +38463,7 @@
             ]
           }
         ],
-        "description": "  Description:\r\nCodes for concepts describing the approval level of HL7 artifacts.  This code system reflects the concepts expressed in HL7\u0027s Governance \u0026 Operations Manual (GOM) past and present.",
+        "description": "  Description:\r\nCodes for concepts describing the approval level of HL7 artifacts.  This code system reflects the concepts expressed in HL7's Governance & Operations Manual (GOM) past and present.",
         "uniqueId": [
           {
             "type": "uri",
@@ -38708,7 +38708,7 @@
             ]
           }
         ],
-        "description": "  Description:\r\nCoded concepts representing Binding Realms (used for Context Binding of terminology in HL7 models)  and/or Namespace Realms (used to help ensure unique identification of HL7 artifacts). This code system is partitioned into three sections: Affiliate realms, Binding realms and Namespace realms.  All affiliate realm codes may automatically be used as both binding realms and namespace realms.  Furthermore, affiliate realms are the only realms that have authority over the creation of binding realms.  (Note that \u0027affiliate\u0027 includes the idea of both international affiliates and the HL7 International organization.)  All other codes must be associated with an owning affiliate realm and must appear as a specialization of _BindingRealm or _NamespaceRealm.  For affiliates whose concepts align with nations, the country codes from ISO 3166-1 2-character alpha are used for the code when possible so these codes should not be used for other realm types.  It is recommended that binding realm and namespace codes submitted by affiliates use the realm code as a prefix to avoid possible collisions with ISO codes.  However, tooling does not currently support namepace realm codes greater than 2 characters.  Open Issue:\r\nThe name of the concept property \"owningAffiliate\" should be changed to better reflect that the property value is the human readable name of the organizational entity that manages the Realm identified by the Realm Code.  Open Issue:\r\nIn spite of the inability of tooling to process codes longer than 2 characters, there is at least one realm codes (\u0027SOA\u0027) that was added that is 3 characters in length.",
+        "description": "  Description:\r\nCoded concepts representing Binding Realms (used for Context Binding of terminology in HL7 models)  and/or Namespace Realms (used to help ensure unique identification of HL7 artifacts). This code system is partitioned into three sections: Affiliate realms, Binding realms and Namespace realms.  All affiliate realm codes may automatically be used as both binding realms and namespace realms.  Furthermore, affiliate realms are the only realms that have authority over the creation of binding realms.  (Note that 'affiliate' includes the idea of both international affiliates and the HL7 International organization.)  All other codes must be associated with an owning affiliate realm and must appear as a specialization of _BindingRealm or _NamespaceRealm.  For affiliates whose concepts align with nations, the country codes from ISO 3166-1 2-character alpha are used for the code when possible so these codes should not be used for other realm types.  It is recommended that binding realm and namespace codes submitted by affiliates use the realm code as a prefix to avoid possible collisions with ISO codes.  However, tooling does not currently support namepace realm codes greater than 2 characters.  Open Issue:\r\nThe name of the concept property \"owningAffiliate\" should be changed to better reflect that the property value is the human readable name of the organizational entity that manages the Realm identified by the Realm Code.  Open Issue:\r\nIn spite of the inability of tooling to process codes longer than 2 characters, there is at least one realm codes ('SOA') that was added that is 3 characters in length.",
         "uniqueId": [
           {
             "type": "uri",
@@ -38778,7 +38778,7 @@
             ]
           }
         ],
-        "description": "  Description:\r\nBased on concepts for resolutions from HL7 ballot spreadsheet according to HL7\u0027s Governance \u0026 Operations Manual (GOM).",
+        "description": "  Description:\r\nBased on concepts for resolutions from HL7 ballot spreadsheet according to HL7's Governance & Operations Manual (GOM).",
         "uniqueId": [
           {
             "type": "uri",
@@ -38883,7 +38883,7 @@
             ]
           }
         ],
-        "description": " \u003cns1:p\u003eThe style code is used within the CDA/SPL narrative block to give the instance author some control over various aspects of style\u003c/ns1:p\u003e",
+        "description": " <ns1:p>The style code is used within the CDA/SPL narrative block to give the instance author some control over various aspects of style</ns1:p>",
         "uniqueId": [
           {
             "type": "uri",
@@ -39188,7 +39188,7 @@
             ]
           }
         ],
-        "description": "Attested information may be validated by process that are manual or automated. For automated processes it may accomplished by the system of record reaching out through another system\u0027s API or information may be sent to the system of record. This value set defines a set of codes to describing the process, the how, a resource or data element is validated.",
+        "description": "Attested information may be validated by process that are manual or automated. For automated processes it may accomplished by the system of record reaching out through another system's API or information may be sent to the system of record. This value set defines a set of codes to describing the process, the how, a resource or data element is validated.",
         "uniqueId": [
           {
             "type": "uri",

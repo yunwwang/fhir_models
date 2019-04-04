@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><MedicinalProductManufactured xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicinalProductManufactured xmlns="http://hl7.org/fhir">
     <id value="example"/>
     <meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>manufacturedDoseForm</b>: Film-coatedtablet <span>(Details : {http://ema.europa.eu/example/manufactureddoseform code 'Film-coatedtablet' = 'Film-coatedtablet)</span></p><p><b>unitOfPresentation</b>: Tablet <span>(Details : {http://ema.europa.eu/example/unitofpresentation code 'Tablet' = 'Tablet)</span></p><p><b>quantity</b>: 10 1</p><p><b>manufacturer</b>: <a>Organization/example</a></p><p><b>ingredient</b>: <a>MedicinalProductIngredient/example</a></p><p><b>physicalCharacteristics</b>: </p></div></text><manufacturedDoseForm>
+  <manufacturedDoseForm>
       <coding>
         <system value="http://ema.europa.eu/example/manufactureddoseform"/>
         <code value="Film-coatedtablet"/>

@@ -1,10 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "Definition",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eto do\u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -69,7 +65,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": "Act[moodCode\u003c\u003dDEFN]"
+            "map": "Act[moodCode<=DEFN]"
           }
         ]
       },
@@ -224,7 +220,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dDEFN].target"
+            "map": ".outboundRelationship[typeCode=DEFN].target"
           }
         ]
       },
@@ -256,7 +252,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dDEFN].target"
+            "map": ".outboundRelationship[typeCode=DEFN].target"
           }
         ]
       },
@@ -290,7 +286,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".inboundRelationship[typeCode\u003dCOMP].source[moodCode\u003dDEFN]"
+            "map": ".inboundRelationship[typeCode=COMP].source[moodCode=DEFN]"
           }
         ]
       },
@@ -325,7 +321,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dRPLC].target"
+            "map": ".outboundRelationship[typeCode=RPLC].target"
           }
         ]
       },
@@ -451,7 +447,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dSBJ].role"
+            "map": ".participation[typeCode=SBJ].role"
           },
           {
             "identity": "w5",
@@ -484,7 +480,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dAUT].time"
+            "map": ".participation[typeCode=AUT].time"
           },
           {
             "identity": "w5",
@@ -523,7 +519,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dAUT].role"
+            "map": ".participation[typeCode=AUT].role"
           },
           {
             "identity": "w5",
@@ -554,7 +550,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dCALLBCK].role"
+            "map": ".participation[typeCode=CALLBCK].role"
           }
         ]
       },
@@ -562,7 +558,7 @@
         "id": "Definition.description",
         "path": "Definition.description",
         "short": "Natural language description of the {{title}}",
-        "definition": "A free text natural language description of the {{title}} from the consumer\u0027s perspective.",
+        "definition": "A free text natural language description of the {{title}} from the consumer's perspective.",
         "comment": "This description can be used to capture details such as why the {{title}} was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the module as conveyed in the text field of the resource itself. This item SHOULD be populated unless the information is available from context.",
         "min": 0,
         "max": "1",
@@ -659,7 +655,7 @@
         "path": "Definition.purpose",
         "short": "Why this {{title}} is defined",
         "definition": "Explains why this {{title}} is needed and why it has been designed as it has.",
-        "comment": "This element does not describe the usage of the {{title}}.  Rather it is for traceability of \u0027\u0027why\u0027\u0027 the resource is either needed or \u0027\u0027why\u0027\u0027 it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this {{title}}.",
+        "comment": "This element does not describe the usage of the {{title}}.  Rather it is for traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this {{title}}.",
         "min": 0,
         "max": "1",
         "base": {
@@ -739,7 +735,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003d\"SUBJ\"].act[classCode\u003dCACT;moodCode\u003dEVN;code\u003d\"approval\"].effectiveTime"
+            "map": ".outboundRelationship[typeCode=\"SUBJ\"].act[classCode=CACT;moodCode=EVN;code=\"approval\"].effectiveTime"
           }
         ]
       },
@@ -747,7 +743,7 @@
         "id": "Definition.lastReviewDate",
         "path": "Definition.lastReviewDate",
         "short": "Last review date for the {{title}}",
-        "definition": "The date on which the asset content was last reviewed. Review happens periodically after that, but doesn\u0027t change the original approval date.",
+        "definition": "The date on which the asset content was last reviewed. Review happens periodically after that, but doesn't change the original approval date.",
         "comment": "If specified, this is usually after the approval date.",
         "min": 0,
         "max": "1",
@@ -766,7 +762,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003d\"SUBJ\"; subsetCode\u003d\"RECENT\"].act[classCode\u003dCACT;moodCode\u003dEVN;code\u003d\"review\"].effectiveTime"
+            "map": ".outboundRelationship[typeCode=\"SUBJ\"; subsetCode=\"RECENT\"].act[classCode=CACT;moodCode=EVN;code=\"review\"].effectiveTime"
           }
         ]
       },
@@ -829,7 +825,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dPRF].role[scoper.determinerCode\u003dKIND].code"
+            "map": ".participation[typeCode=PRF].role[scoper.determinerCode=KIND].code"
           },
           {
             "identity": "w5",

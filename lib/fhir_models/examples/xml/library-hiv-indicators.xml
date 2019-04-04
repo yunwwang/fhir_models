@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Library xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Library xmlns="http://hl7.org/fhir">
   <id value="hiv-indicators"/>
   <meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: hiv-indicators</p><p><b>url</b>: <b>http://ohie.org/Library/hiv-indicators</b></p><p><b>identifier</b>: hiv-indicators</p><p><b>version</b>: 0.0.0</p><p><b>title</b>: HIV Indicators</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>type</b>: Logic Library <span>(Details : {http://terminology.hl7.org/CodeSystem/library-type code 'logic-library' = 'Logic Library', given as 'Logic Library'})</span></p><p><b>date</b>: 03/08/2018</p><p><b>description</b>: HIV Indicators Reporting Example</p><p><b>relatedArtifact</b>: </p><p><b>content</b>: </p></div></text><url value="http://ohie.org/Library/hiv-indicators"/>
+  <url value="http://ohie.org/Library/hiv-indicators"/>
   <identifier>
     <system value="http://ohie.org/Library/"/>
     <value value="hiv-indicators"/>

@@ -4,10 +4,6 @@
   "meta": {
     "lastUpdated": "2018-12-27T22:37:54.724+11:00"
   },
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eOperation Outcome Codes\u003c/h2\u003e\u003cdiv\u003e\u003cp\u003eOperation Outcome codes used by FHIR test servers (see Implementation file translations.xml)\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eThis code system http://terminology.hl7.org/CodeSystem/operation-outcome defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eDELETE_MULTIPLE_MATCHES\u003ca name\u003d\"operation-outcome-DELETE_MULTIPLE_MATCHES\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eError: Multiple matches exist for the conditional delete\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_AUTH_REQUIRED\u003ca name\u003d\"operation-outcome-MSG_AUTH_REQUIRED\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eYou must authenticate before you can use this service\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_BAD_FORMAT\u003ca name\u003d\"operation-outcome-MSG_BAD_FORMAT\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eBad Syntax: \u0026quot;%s\u0026quot; must be a %s\u0027\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_BAD_SYNTAX\u003ca name\u003d\"operation-outcome-MSG_BAD_SYNTAX\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eBad Syntax in %s\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_CANT_PARSE_CONTENT\u003ca name\u003d\"operation-outcome-MSG_CANT_PARSE_CONTENT\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUnable to parse feed (entry content type \u003d \u0026quot;%s\u0026quot;)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_CANT_PARSE_ROOT\u003ca name\u003d\"operation-outcome-MSG_CANT_PARSE_ROOT\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUnable to parse feed (root element name \u003d \u0026quot;%s\u0026quot;)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_CREATED\u003ca name\u003d\"operation-outcome-MSG_CREATED\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNew resource created\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_DATE_FORMAT\u003ca name\u003d\"operation-outcome-MSG_DATE_FORMAT\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eThe Date value %s is not in the correct format (Xml Date Format required)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_DELETED\u003ca name\u003d\"operation-outcome-MSG_DELETED\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eThis resource has been deleted\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_DELETED_DONE\u003ca name\u003d\"operation-outcome-MSG_DELETED_DONE\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResource deleted\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_DELETED_ID\u003ca name\u003d\"operation-outcome-MSG_DELETED_ID\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eThe resource \u0026quot;%s\u0026quot; has been deleted\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_DUPLICATE_ID\u003ca name\u003d\"operation-outcome-MSG_DUPLICATE_ID\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDuplicate Id %s for resource type %s\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_ERROR_PARSING\u003ca name\u003d\"operation-outcome-MSG_ERROR_PARSING\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eError parsing resource Xml (%s)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_ID_INVALID\u003ca name\u003d\"operation-outcome-MSG_ID_INVALID\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eId \u0026quot;%s\u0026quot; has an invalid character \u0026quot;%s\u0026quot;\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_ID_TOO_LONG\u003ca name\u003d\"operation-outcome-MSG_ID_TOO_LONG\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eId \u0026quot;%s\u0026quot; too long (length limit 36)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_INVALID_ID\u003ca name\u003d\"operation-outcome-MSG_INVALID_ID\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eId not accepted\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_JSON_OBJECT\u003ca name\u003d\"operation-outcome-MSG_JSON_OBJECT\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eJson Source for a resource should start with an object\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_LOCAL_FAIL\u003ca name\u003d\"operation-outcome-MSG_LOCAL_FAIL\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUnable to resolve local reference to resource %s\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_NO_EXIST\u003ca name\u003d\"operation-outcome-MSG_NO_EXIST\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResource Id \u0026quot;%s\u0026quot; does not exist\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_NO_MATCH\u003ca name\u003d\"operation-outcome-MSG_NO_MATCH\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNo Resource found matching the query \u0026quot;%s\u0026quot;\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_NO_MODULE\u003ca name\u003d\"operation-outcome-MSG_NO_MODULE\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNo module could be found to handle the request \u0026quot;%s\u0026quot;\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_NO_SUMMARY\u003ca name\u003d\"operation-outcome-MSG_NO_SUMMARY\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNo Summary for this resource\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_OP_NOT_ALLOWED\u003ca name\u003d\"operation-outcome-MSG_OP_NOT_ALLOWED\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eOperation %s not allowed for resource %s (due to local configuration)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_PARAM_CHAINED\u003ca name\u003d\"operation-outcome-MSG_PARAM_CHAINED\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUnknown chained parameter name \u0026quot;%s\u0026quot;\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_PARAM_INVALID\u003ca name\u003d\"operation-outcome-MSG_PARAM_INVALID\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eParameter \u0026quot;%s\u0026quot; content is invalid\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_PARAM_MODIFIER_INVALID\u003ca name\u003d\"operation-outcome-MSG_PARAM_MODIFIER_INVALID\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eParameter \u0026quot;%s\u0026quot; modifier is invalid\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_PARAM_NO_REPEAT\u003ca name\u003d\"operation-outcome-MSG_PARAM_NO_REPEAT\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eParameter \u0026quot;%s\u0026quot; is not allowed to repeat\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_PARAM_UNKNOWN\u003ca name\u003d\"operation-outcome-MSG_PARAM_UNKNOWN\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eParameter \u0026quot;%s\u0026quot; not understood\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_RESOURCE_EXAMPLE_PROTECTED\u003ca name\u003d\"operation-outcome-MSG_RESOURCE_EXAMPLE_PROTECTED\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResources with identity \u0026quot;example\u0026quot; cannot be deleted (for testing/training purposes)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_RESOURCE_ID_FAIL\u003ca name\u003d\"operation-outcome-MSG_RESOURCE_ID_FAIL\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eunable to allocate resource id\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_RESOURCE_ID_MISMATCH\u003ca name\u003d\"operation-outcome-MSG_RESOURCE_ID_MISMATCH\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResource Id Mismatch\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_RESOURCE_ID_MISSING\u003ca name\u003d\"operation-outcome-MSG_RESOURCE_ID_MISSING\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResource Id Missing\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_RESOURCE_NOT_ALLOWED\u003ca name\u003d\"operation-outcome-MSG_RESOURCE_NOT_ALLOWED\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNot allowed to submit a resource for this operation\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_RESOURCE_REQUIRED\u003ca name\u003d\"operation-outcome-MSG_RESOURCE_REQUIRED\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eA resource is required\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_RESOURCE_TYPE_MISMATCH\u003ca name\u003d\"operation-outcome-MSG_RESOURCE_TYPE_MISMATCH\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResource Type Mismatch\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_SORT_UNKNOWN\u003ca name\u003d\"operation-outcome-MSG_SORT_UNKNOWN\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUnknown sort parameter name \u0026quot;%s\u0026quot;\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_TRANSACTION_DUPLICATE_ID\u003ca name\u003d\"operation-outcome-MSG_TRANSACTION_DUPLICATE_ID\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDuplicate Identifier in transaction: %s\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_TRANSACTION_MISSING_ID\u003ca name\u003d\"operation-outcome-MSG_TRANSACTION_MISSING_ID\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMissing Identifier in transaction - an entry.id must be provided\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_UNHANDLED_NODE_TYPE\u003ca name\u003d\"operation-outcome-MSG_UNHANDLED_NODE_TYPE\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUnhandled xml node type \u0026quot;%s\u0026quot;\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_UNKNOWN_CONTENT\u003ca name\u003d\"operation-outcome-MSG_UNKNOWN_CONTENT\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUnknown Content (%s) at %s\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_UNKNOWN_OPERATION\u003ca name\u003d\"operation-outcome-MSG_UNKNOWN_OPERATION\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eunknown FHIR http operation\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_UNKNOWN_TYPE\u003ca name\u003d\"operation-outcome-MSG_UNKNOWN_TYPE\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResource Type \u0026quot;%s\u0026quot; not recognised\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_UPDATED\u003ca name\u003d\"operation-outcome-MSG_UPDATED\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eexisting resource updated\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_VERSION_AWARE\u003ca name\u003d\"operation-outcome-MSG_VERSION_AWARE\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eVersion aware updates are required for this resource\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_VERSION_AWARE_CONFLICT\u003ca name\u003d\"operation-outcome-MSG_VERSION_AWARE_CONFLICT\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUpdate Conflict (server current version \u003d \u0026quot;%s\u0026quot;, client version referenced \u003d \u0026quot;%s\u0026quot;)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_VERSION_AWARE_URL\u003ca name\u003d\"operation-outcome-MSG_VERSION_AWARE_URL\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eVersion specific URL not recognised\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eMSG_WRONG_NS\u003ca name\u003d\"operation-outcome-MSG_WRONG_NS\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eThis does not appear to be a FHIR element or resource (wrong namespace \u0026quot;%s\u0026quot;)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eSEARCH_MULTIPLE\u003ca name\u003d\"operation-outcome-SEARCH_MULTIPLE\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eError: Multiple matches exist for %s search parameters \u0026quot;%s\u0026quot;\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eSEARCH_NONE\u003ca name\u003d\"operation-outcome-SEARCH_NONE\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eError: no processable search found for %s search parameters \u0026quot;%s\u0026quot;\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eUPDATE_MULTIPLE_MATCHES\u003ca name\u003d\"operation-outcome-UPDATE_MULTIPLE_MATCHES\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eError: Multiple matches exist for the conditional update\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -124,7 +120,7 @@
     },
     {
       "code": "MSG_BAD_FORMAT",
-      "display": "Bad Syntax: \"%s\" must be a %s\u0027",
+      "display": "Bad Syntax: \"%s\" must be a %s'",
       "designation": [
         {
           "language": "ru",
@@ -140,7 +136,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Sintassi Errata: \"%s\" deve essere un %s\u0027"
+          "value": "Sintassi Errata: \"%s\" deve essere un %s'"
         },
         {
           "language": "pl",
@@ -148,7 +144,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Błąd składni: \"%s\" powinno być %s\u0027"
+          "value": "Błąd składni: \"%s\" powinno być %s'"
         },
         {
           "language": "fr",
@@ -172,7 +168,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "句法错误: \"%s\" 必须是一个 %s\u0027"
+          "value": "句法错误: \"%s\" 必须是一个 %s'"
         },
         {
           "language": "es",
@@ -180,7 +176,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Sintaxis Incorrecta: \"%s\" debe de ser un %s\u0027"
+          "value": "Sintaxis Incorrecta: \"%s\" debe de ser un %s'"
         }
       ]
     },
@@ -248,7 +244,7 @@
     },
     {
       "code": "MSG_CANT_PARSE_CONTENT",
-      "display": "Unable to parse feed (entry content type \u003d \"%s\")",
+      "display": "Unable to parse feed (entry content type = \"%s\")",
       "designation": [
         {
           "language": "it",
@@ -256,7 +252,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Impossibile effettuare il parsing del feed (tipo del contenuto della entry \u003d \"%s\")"
+          "value": "Impossibile effettuare il parsing del feed (tipo del contenuto della entry = \"%s\")"
         },
         {
           "language": "pl",
@@ -264,7 +260,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Błąd parsowania (typ zawartości wejściowej \u003d \"%s\")"
+          "value": "Błąd parsowania (typ zawartości wejściowej = \"%s\")"
         },
         {
           "language": "fr",
@@ -272,7 +268,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Impossible d\u0027analyser le flux (type de contenu de l\u0027entrée \u003d \"%s\")"
+          "value": "Impossible d'analyser le flux (type de contenu de l'entrée = \"%s\")"
         },
         {
           "language": "nl",
@@ -280,7 +276,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Kan feed niet verwerken (contenttype inhoud \u003d \"%s\")"
+          "value": "Kan feed niet verwerken (contenttype inhoud = \"%s\")"
         },
         {
           "language": "zh",
@@ -288,7 +284,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "无法解析feed (条目的内容类型 \u003d \"%s\")"
+          "value": "无法解析feed (条目的内容类型 = \"%s\")"
         },
         {
           "language": "es",
@@ -296,13 +292,13 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "No se pudo parsear el feed (el tipo de contenido de la entry \u003d \"%s\")"
+          "value": "No se pudo parsear el feed (el tipo de contenido de la entry = \"%s\")"
         }
       ]
     },
     {
       "code": "MSG_CANT_PARSE_ROOT",
-      "display": "Unable to parse feed (root element name \u003d \"%s\")",
+      "display": "Unable to parse feed (root element name = \"%s\")",
       "designation": [
         {
           "language": "ru",
@@ -310,7 +306,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Не удалось разобрать данные (корневой элемент \u003d \"%s\")"
+          "value": "Не удалось разобрать данные (корневой элемент = \"%s\")"
         },
         {
           "language": "it",
@@ -318,7 +314,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Impossibile effettuare il parsing del feed (nome elemento root \u003d \"%s\")"
+          "value": "Impossibile effettuare il parsing del feed (nome elemento root = \"%s\")"
         },
         {
           "language": "pl",
@@ -326,7 +322,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Błąd parsowania (nazwa elementu root \u003d \"%s\")"
+          "value": "Błąd parsowania (nazwa elementu root = \"%s\")"
         },
         {
           "language": "fr",
@@ -334,7 +330,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Impossible d\u0027analyser le flux (nom de l\u0027élément racine \u003d \"%s\")"
+          "value": "Impossible d'analyser le flux (nom de l'élément racine = \"%s\")"
         },
         {
           "language": "nl",
@@ -342,7 +338,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Kan feed niet verwerken (rootelementnaam \u003d \"%s\")"
+          "value": "Kan feed niet verwerken (rootelementnaam = \"%s\")"
         },
         {
           "language": "zh",
@@ -350,7 +346,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "无法解析feed (根元素名 \u003d \"%s\")"
+          "value": "无法解析feed (根元素名 = \"%s\")"
         },
         {
           "language": "es",
@@ -358,7 +354,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "No se pudo parsear el feed (nombre del elemento raiz \u003d \"%s\")"
+          "value": "No se pudo parsear el feed (nombre del elemento raiz = \"%s\")"
         }
       ]
     },
@@ -720,7 +716,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Erreur d\u0027analyse de la ressource Xml (%s)"
+          "value": "Erreur d'analyse de la ressource Xml (%s)"
         },
         {
           "language": "nl",
@@ -766,7 +762,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "L\u0027\u0027Id \"%s\" ha un carattere non valido: \"%s\""
+          "value": "L''Id \"%s\" ha un carattere non valido: \"%s\""
         },
         {
           "language": "pl",
@@ -1092,7 +1088,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "La ressource avec l\u0027Id \"%s\" n\u0027existe pas"
+          "value": "La ressource avec l'Id \"%s\" n'existe pas"
         },
         {
           "language": "nl",
@@ -1300,7 +1296,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "L\u0027opération %s n\u0027est pas permise pour la ressource %s (à cause de la configuration locale)"
+          "value": "L'opération %s n'est pas permise pour la ressource %s (à cause de la configuration locale)"
         },
         {
           "language": "nl",
@@ -1568,7 +1564,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Le Risorse aventi l\u0027identità \"example\" non possono essere cancellate (per finalità di test/formazione)"
+          "value": "Le Risorse aventi l'identità \"example\" non possono essere cancellate (per finalità di test/formazione)"
         },
         {
           "language": "pl",
@@ -1584,7 +1580,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Les ressources ayant l\u0027identité \"example\" ne peuvent pas être supprimées (utilisées pour les tests/formations)"
+          "value": "Les ressources ayant l'identité \"example\" ne peuvent pas être supprimées (utilisées pour les tests/formations)"
         },
         {
           "language": "nl",
@@ -1630,7 +1626,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "impossibile allocare l\u0027\u0027id della risorsa"
+          "value": "impossibile allocare l''id della risorsa"
         },
         {
           "language": "pl",
@@ -1646,7 +1642,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "impossible d\u0027allouer l\u0027id de la ressource"
+          "value": "impossible d'allouer l'id de la ressource"
         },
         {
           "language": "nl",
@@ -1684,7 +1680,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Problème de correspondance d\u0027Id de la Ressource"
+          "value": "Problème de correspondance d'Id de la Ressource"
         },
         {
           "language": "nl",
@@ -1692,7 +1688,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Resource ID\u0027s komen niet overeen"
+          "value": "Resource ID's komen niet overeen"
         }
       ]
     },
@@ -1806,7 +1802,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "E\u0027\u0027 richiesta una risorsa"
+          "value": "E'' richiesta una risorsa"
         },
         {
           "language": "pl",
@@ -2456,7 +2452,7 @@
     },
     {
       "code": "MSG_VERSION_AWARE_CONFLICT",
-      "display": "Update Conflict (server current version \u003d \"%s\", client version referenced \u003d \"%s\")",
+      "display": "Update Conflict (server current version = \"%s\", client version referenced = \"%s\")",
       "designation": [
         {
           "language": "ru",
@@ -2464,7 +2460,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Конфликт обновления (текущая версия сервера \u003d \"%s\", указанная версия клиента \u003d \"%s\")"
+          "value": "Конфликт обновления (текущая версия сервера = \"%s\", указанная версия клиента = \"%s\")"
         },
         {
           "language": "it",
@@ -2472,7 +2468,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Conflitto nell\u0027\u0027aggiornamento (attuale \u003d \"%s\", quotato \u003d \"%s\")"
+          "value": "Conflitto nell''aggiornamento (attuale = \"%s\", quotato = \"%s\")"
         },
         {
           "language": "pl",
@@ -2480,7 +2476,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Konflikt podczas uaktualnienia (obecna wersja na serwerze \u003d \"%s\", wersja wskazana przez klienta \u003d \"%s\")"
+          "value": "Konflikt podczas uaktualnienia (obecna wersja na serwerze = \"%s\", wersja wskazana przez klienta = \"%s\")"
         },
         {
           "language": "fr",
@@ -2488,7 +2484,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Conflit de mise à jour (version courante du serveur \u003d \"%s\", version référencée du client \u003d \"%s\")"
+          "value": "Conflit de mise à jour (version courante du serveur = \"%s\", version référencée du client = \"%s\")"
         },
         {
           "language": "nl",
@@ -2496,7 +2492,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Updateconflict (huidige serverversie \u003d \"%s\", opgegeven clientversie \u003d \"%s\")"
+          "value": "Updateconflict (huidige serverversie = \"%s\", opgegeven clientversie = \"%s\")"
         },
         {
           "language": "zh",
@@ -2504,7 +2500,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "更新冲突 (服务器当前版本 \u003d \"%s\", 客户端引用的版本 \u003d \"%s\")"
+          "value": "更新冲突 (服务器当前版本 = \"%s\", 客户端引用的版本 = \"%s\")"
         },
         {
           "language": "es",
@@ -2512,7 +2508,7 @@
             "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
             "code": "display"
           },
-          "value": "Conflicto de actualizaciones (versión actual del servidor \u003d \"%s\", versión del cliente referenciada \u003d \"%s\")"
+          "value": "Conflicto de actualizaciones (versión actual del servidor = \"%s\", versión del cliente referenciada = \"%s\")"
         }
       ]
     },

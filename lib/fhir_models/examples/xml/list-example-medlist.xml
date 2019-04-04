@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><List xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<List xmlns="http://hl7.org/fhir">
   <id value="med-list"/>
   <meta>
     <security>
@@ -7,13 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Add hydroxocobalamin</p>
-      <p>Cancel Morphine Sulphate</p>
-    </div>
-  </text>
+  
   <status value="current"/>
   <mode value="changes"/>
   <code>

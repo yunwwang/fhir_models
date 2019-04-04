@@ -7,10 +7,6 @@
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\u003ch2\u003eRequestPriority\u003c/h2\u003e\n\t\t\t\u003cdiv\u003e\n\t\t\t\t\u003cp\u003eThe clinical priority of a diagnostic order.\u003c/p\u003e\n\t\t\t\u003c/div\u003e\n\t\t\t\u003cp\u003eThis value set includes codes from the following code systems:\u003c/p\u003e\n\t\t\t\u003cul\u003e\n\t\t\t\t\u003cli\u003eInclude all codes defined in \u003ca href\u003d\"codesystem-request-priority.html\"\u003ehttp://hl7.org/fhir/request-priority\u003c/a\u003e\n\t\t\t\t\u003c/li\u003e\n\t\t\t\u003c/ul\u003e\n\t\t\u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",

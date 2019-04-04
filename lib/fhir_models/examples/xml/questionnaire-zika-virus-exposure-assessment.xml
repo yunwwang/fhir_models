@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Questionnaire xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://hl7.org/fhir">
   <id value="zika-virus-exposure-assessment"/>
   <meta>
     <security>
@@ -7,13 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <pre>
-      </pre>
-    </div>
-  </text>
+  
   <url value="http://example.org/Questionnaire/zika-virus-exposure-assessment"/>
   <name value="ExampleZikaVirusExposureAssessment"/>
   <title value="Example Zika Virus Exposure Assessment"/>

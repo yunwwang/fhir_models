@@ -6,7 +6,7 @@
   "name": "mothersMaidenName",
   "status": "draft",
   "experimental": true,
-  "description": "Search based on patient\u0027s mother\u0027s maiden name",
+  "description": "Search based on patient's mother's maiden name",
   "code": "mothersMaidenName",
   "base": [
     "Patient"

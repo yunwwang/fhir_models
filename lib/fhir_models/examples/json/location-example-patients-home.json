@@ -1,13 +1,9 @@
 {
   "resourceType": "Location",
   "id": "ph",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003ePatient\u0027s Home\u003c/div\u003e"
-  },
   "status": "active",
-  "name": "Patient\u0027s Home",
-  "description": "Patient\u0027s Home",
+  "name": "Patient's Home",
+  "description": "Patient's Home",
   "mode": "kind",
   "type": [
     {
@@ -15,7 +11,7 @@
         {
           "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
           "code": "PTRES",
-          "display": "Patient\u0027s Residence"
+          "display": "Patient's Residence"
         }
       ]
     }

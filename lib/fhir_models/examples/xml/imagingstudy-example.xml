@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ImagingStudy xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ImagingStudy xmlns="http://hl7.org/fhir">
 	<id value="example"/>
 	<meta>
     <security>
@@ -7,10 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">CT Chest.  John Smith (MRN: 09236). Accession: W12342398. Performed: 2011-01-01. 3 series, 12 images.</div>
-	</text>
+  
 	<identifier>
 		<system value="urn:dicom:uid"/>
 		<value value="urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045"/>

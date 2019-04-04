@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><OperationOutcome xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<OperationOutcome xmlns="http://hl7.org/fhir">
   <id value="searchfail"/>
   <meta>
     <security>
@@ -7,17 +8,12 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>The "name" parameter has the modifier "exact" which is not supported by this server</p>
-    </div>
-  </text>
+  
   <issue>
     <severity value="fatal"/>
     <code value="code-invalid"/>
     <details>
-      <text value="The &#34;name&#34; parameter has the modifier &#34;exact&#34; which is not supported by this server"/>    
+      <text value="The &quot;name&quot; parameter has the modifier &quot;exact&quot; which is not supported by this server"/>    
     </details> 
     <location value="http.name:exact"/>    
   </issue>

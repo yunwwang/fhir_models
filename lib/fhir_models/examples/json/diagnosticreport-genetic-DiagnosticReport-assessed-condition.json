@@ -12,7 +12,7 @@
     "DiagnosticReport"
   ],
   "type": "reference",
-  "expression": "DiagnosticReport.extension(\u0027http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsAssessedCondition\u0027)",
+  "expression": "DiagnosticReport.extension('http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsAssessedCondition')",
   "xpathUsage": "normal",
   "multipleOr": true,
   "multipleAnd": true

@@ -4,10 +4,6 @@
   "meta": {
     "lastUpdated": "2018-12-27T22:37:54.724+11:00"
   },
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eTransactionMode\u003c/h2\u003e\u003cdiv\u003e\u003cp\u003eA code that indicates how transactions are supported.\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eThis code system http://hl7.org/fhir/transaction-mode defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003enot-supported\u003ca name\u003d\"transaction-mode-not-supported\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNone\u003c/td\u003e\u003ctd\u003eNeither batch or transaction is supported.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ebatch\u003ca name\u003d\"transaction-mode-batch\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eBatches supported\u003c/td\u003e\u003ctd\u003eBatches are  supported.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003etransaction\u003ca name\u003d\"transaction-mode-transaction\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTransactions Supported\u003c/td\u003e\u003ctd\u003eTransactions are supported.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eboth\u003ca name\u003d\"transaction-mode-both\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eBatches \u0026amp; Transactions\u003c/td\u003e\u003ctd\u003eBoth batches and transactions are supported.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
-  },
   "url": "http://hl7.org/fhir/transaction-mode",
   "identifier": [
     {
@@ -58,7 +54,7 @@
     },
     {
       "code": "both",
-      "display": "Batches \u0026 Transactions",
+      "display": "Batches & Transactions",
       "definition": "Both batches and transactions are supported."
     }
   ]

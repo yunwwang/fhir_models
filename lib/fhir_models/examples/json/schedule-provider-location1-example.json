@@ -1,10 +1,6 @@
 {
   "resourceType": "Schedule",
   "id": "exampleloc1",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      Dr. Beverly Crusher - USS Enterprise-D Sickbay Schedule\n\t\t\u003c/div\u003e"
-  },
   "identifier": [
     {
       "use": "usual",

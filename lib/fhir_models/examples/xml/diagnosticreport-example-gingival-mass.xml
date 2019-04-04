@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><DiagnosticReport xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<DiagnosticReport xmlns="http://hl7.org/fhir">
 	<id value="gingival-mass"/>
 	<meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: gingival-mass</p><p><b>identifier</b>: P73456090</p><p><b>status</b>: final</p><p><b>category</b>: Pathology <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0074 code 'PAT' = 'Pathology (gross &amp; histopath, not surgical)', given as 'Pathology (gross &amp; histopath, not surgical)'})</span></p><p><b>code</b>: Biopsy without Microscopic Description (1 Site/Lesion)-Standard <span>(Details : {https://www.acmeonline.com code '4503' = '4503', given as 'Biopsy without Microscopic Description (1 Site/Lesion)-Standard'})</span></p><p><b>subject</b>: Max Jones</p><p><b>effective</b>: 02/03/2017</p><p><b>issued</b>: 15/03/2017 8:13:08 AM</p><p><b>performer</b>: Acme Animal Labs</p><p><b>resultsInterpreter</b>: Sean Stover, BS, DVM, DABVP (Canine/Feline), DACVP</p><p><b>presentedForm</b>: </p></div></text><identifier>
+  <identifier>
 		<system value="https://www.acmeonline.com"/>
 		<value value="P73456090"/>
 	</identifier>

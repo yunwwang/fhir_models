@@ -1,10 +1,6 @@
 {
   "resourceType": "ClaimResponse",
   "id": "R3502",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the ClaimResponse\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://thebenefitcompany.com/claimresponse",
@@ -60,7 +56,7 @@
             ]
           },
           "amount": {
-            "value": 235.40,
+            "value": 235.4,
             "currency": "USD"
           }
         },
@@ -73,7 +69,7 @@
             ]
           },
           "amount": {
-            "value": 20.00,
+            "value": 20.0,
             "currency": "USD"
           }
         },
@@ -85,7 +81,7 @@
               }
             ]
           },
-          "value": 80.00
+          "value": 80.0
         },
         {
           "category": {
@@ -117,7 +113,7 @@
                 ]
               },
               "amount": {
-                "value": 100.00,
+                "value": 100.0,
                 "currency": "USD"
               }
             },
@@ -130,7 +126,7 @@
                 ]
               },
               "amount": {
-                "value": 20.00,
+                "value": 20.0,
                 "currency": "USD"
               }
             },
@@ -142,7 +138,7 @@
                   }
                 ]
               },
-              "value": 80.00
+              "value": 80.0
             },
             {
               "category": {
@@ -153,7 +149,7 @@
                 ]
               },
               "amount": {
-                "value": 80.00,
+                "value": 80.0,
                 "currency": "USD"
               }
             }
@@ -174,7 +170,7 @@
                 ]
               },
               "amount": {
-                "value": 110.00,
+                "value": 110.0,
                 "currency": "USD"
               }
             },
@@ -186,7 +182,7 @@
                   }
                 ]
               },
-              "value": 80.00
+              "value": 80.0
             },
             {
               "category": {
@@ -197,7 +193,7 @@
                 ]
               },
               "amount": {
-                "value": 88.00,
+                "value": 88.0,
                 "currency": "USD"
               }
             }
@@ -218,7 +214,7 @@
                     ]
                   },
                   "amount": {
-                    "value": 60.00,
+                    "value": 60.0,
                     "currency": "USD"
                   }
                 },
@@ -230,7 +226,7 @@
                       }
                     ]
                   },
-                  "value": 80.00
+                  "value": 80.0
                 },
                 {
                   "category": {
@@ -241,7 +237,7 @@
                     ]
                   },
                   "amount": {
-                    "value": 48.00,
+                    "value": 48.0,
                     "currency": "USD"
                   }
                 }
@@ -259,7 +255,7 @@
                     ]
                   },
                   "amount": {
-                    "value": 30.00,
+                    "value": 30.0,
                     "currency": "USD"
                   }
                 },
@@ -271,7 +267,7 @@
                       }
                     ]
                   },
-                  "value": 80.00
+                  "value": 80.0
                 },
                 {
                   "category": {
@@ -282,7 +278,7 @@
                     ]
                   },
                   "amount": {
-                    "value": 24.00,
+                    "value": 24.0,
                     "currency": "USD"
                   }
                 }
@@ -303,7 +299,7 @@
                     ]
                   },
                   "amount": {
-                    "value": 10.00,
+                    "value": 10.0,
                     "currency": "USD"
                   }
                 },
@@ -315,7 +311,7 @@
                       }
                     ]
                   },
-                  "value": 80.00
+                  "value": 80.0
                 },
                 {
                   "category": {
@@ -326,7 +322,7 @@
                     ]
                   },
                   "amount": {
-                    "value": 8.00,
+                    "value": 8.0,
                     "currency": "USD"
                   }
                 }
@@ -349,7 +345,7 @@
                 ]
               },
               "amount": {
-                "value": 200.00,
+                "value": 200.0,
                 "currency": "USD"
               }
             },
@@ -361,7 +357,7 @@
                   }
                 ]
               },
-              "value": 80.00
+              "value": 80.0
             },
             {
               "category": {
@@ -372,7 +368,7 @@
                 ]
               },
               "amount": {
-                "value": 14.00,
+                "value": 14.0,
                 "currency": "USD"
               }
             }
@@ -391,7 +387,7 @@
         ]
       },
       "amount": {
-        "value": 235.40,
+        "value": 235.4,
         "currency": "USD"
       }
     },
@@ -404,7 +400,7 @@
         ]
       },
       "amount": {
-        "value": 182.00,
+        "value": 182.0,
         "currency": "USD"
       }
     }
@@ -419,7 +415,7 @@
       ]
     },
     "adjustment": {
-      "value": 75.00,
+      "value": 75.0,
       "currency": "USD"
     },
     "adjustmentReason": {
@@ -433,7 +429,7 @@
     },
     "date": "2014-08-16",
     "amount": {
-      "value": 107.00,
+      "value": 107.0,
       "currency": "USD"
     },
     "identifier": {

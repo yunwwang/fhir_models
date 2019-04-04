@@ -12,19 +12,19 @@
     {
       "request": {
         "method": "GET",
-        "url": "/Condition?patient\u003dexample"
+        "url": "/Condition?patient=example"
       }
     },
     {
       "request": {
         "method": "GET",
-        "url": "/MedicationStatement?patient\u003dexample"
+        "url": "/MedicationStatement?patient=example"
       }
     },
     {
       "request": {
         "method": "GET",
-        "url": "/Observation?patient\u003dexample\u0026code\u003dhttp://loinc.org|55284-4\u0026date\u003dge2015-01-01"
+        "url": "/Observation?patient=example&code=http://loinc.org|55284-4&date=ge2015-01-01"
       }
     }
   ],

@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "100153",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the Oral Health Claim\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://happyvalley.com/claim",
@@ -103,11 +99,11 @@
       },
       "servicedDate": "2015-05-16",
       "unitPrice": {
-        "value": 9000.00,
+        "value": 9000.0,
         "currency": "USD"
       },
       "net": {
-        "value": 9000.00,
+        "value": 9000.0,
         "currency": "USD"
       },
       "detail": [
@@ -122,11 +118,11 @@
             ]
           },
           "unitPrice": {
-            "value": 1000.00,
+            "value": 1000.0,
             "currency": "USD"
           },
           "net": {
-            "value": 1000.00,
+            "value": 1000.0,
             "currency": "USD"
           }
         },
@@ -141,11 +137,11 @@
             ]
           },
           "unitPrice": {
-            "value": 1500.00,
+            "value": 1500.0,
             "currency": "USD"
           },
           "net": {
-            "value": 1500.00,
+            "value": 1500.0,
             "currency": "USD"
           }
         },
@@ -160,11 +156,11 @@
             ]
           },
           "unitPrice": {
-            "value": 500.00,
+            "value": 500.0,
             "currency": "USD"
           },
           "net": {
-            "value": 500.00,
+            "value": 500.0,
             "currency": "USD"
           }
         },
@@ -196,11 +192,11 @@
             "value": 24
           },
           "unitPrice": {
-            "value": 250.00,
+            "value": 250.0,
             "currency": "USD"
           },
           "net": {
-            "value": 250.00,
+            "value": 250.0,
             "currency": "USD"
           }
         }
@@ -221,11 +217,11 @@
       },
       "servicedDate": "2014-08-16",
       "unitPrice": {
-        "value": 105.00,
+        "value": 105.0,
         "currency": "USD"
       },
       "net": {
-        "value": 105.00,
+        "value": 105.0,
         "currency": "USD"
       },
       "bodySite": {
@@ -262,11 +258,11 @@
       },
       "servicedDate": "2014-08-16",
       "unitPrice": {
-        "value": 1100.00,
+        "value": 1100.0,
         "currency": "USD"
       },
       "net": {
-        "value": 1100.00,
+        "value": 1100.0,
         "currency": "USD"
       },
       "bodySite": {
@@ -289,11 +285,11 @@
             ]
           },
           "unitPrice": {
-            "value": 750.00,
+            "value": 750.0,
             "currency": "USD"
           },
           "net": {
-            "value": 750.00,
+            "value": 750.0,
             "currency": "USD"
           }
         },
@@ -308,11 +304,11 @@
             ]
           },
           "unitPrice": {
-            "value": 350.00,
+            "value": 350.0,
             "currency": "USD"
           },
           "net": {
-            "value": 350.00,
+            "value": 350.0,
             "currency": "USD"
           }
         }

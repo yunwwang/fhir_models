@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Consent xmlns="http://hl7.org/fhir">
   <id value="consent-example-notThem"/>
   <meta>
     <security>
@@ -7,22 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. 
-	The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. 
-	In other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase "consent to" rather 
-	than "withhold" or "withdraw" consent for.
-    <p>
-	specific to use-case 4) Withhold or withdraw consent for disclosure to a specific provider agent (an individual within an organization) 
-	</p><p>
-    Patient "P. van de Heuvel" ex-spouse, Bill T Lookafter is a Nurse that is employed by Good Health Hospital.
-   P. realizes that she may receive treatment at GHH, however she does not want her ex-spouse to have any 
-   access to her IIHI.  She indicates that she would like to withdraw/withhold consent to disclose any instance 
-   of her health information to her ex-spouse as a result of his employment at Good Health Clinic.
-   </p>
-   </div>
-  </text>
+  
   <status value="active"/>
   <scope>
     <coding>

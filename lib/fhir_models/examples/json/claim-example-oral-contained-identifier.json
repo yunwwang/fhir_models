@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "100155",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eThis example assumes a national health care scheme where patients, providers and organizations have known business identifiers.\u003c/div\u003e"
-  },
   "contained": [
     {
       "resourceType": "Patient",

@@ -65,7 +65,7 @@
         "path": "Extension",
         "short": "Another Version this applies to",
         "definition": "An additional version that this profile apples to, other than the version explicitly stated in StructureDefinition.fhirVersion.",
-        "comment": "This is typically only used where derivation \u003d constraint. As the underlying resources become more stable, profiles on one version become applicable to other versions as well. It\u0027s possible to calculate automatically with the strutural features of a profile apply to a given version, but just because it\u0027s structurally ok doesn\u0027t mean that the meaning is correct. This extension allows a positive statement that the profile applies.",
+        "comment": "This is typically only used where derivation = constraint. As the underlying resources become more stable, profiles on one version become applicable to other versions as well. It's possible to calculate automatically with the strutural features of a profile apply to a given version, but just because it's structurally ok doesn't mean that the meaning is correct. This extension allows a positive statement that the profile applies.",
         "min": 0,
         "max": "*",
         "base": {
@@ -81,7 +81,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -89,8 +89,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -236,7 +236,7 @@
         "path": "Extension",
         "short": "Another Version this applies to",
         "definition": "An additional version that this profile apples to, other than the version explicitly stated in StructureDefinition.fhirVersion.",
-        "comment": "This is typically only used where derivation \u003d constraint. As the underlying resources become more stable, profiles on one version become applicable to other versions as well. It\u0027s possible to calculate automatically with the strutural features of a profile apply to a given version, but just because it\u0027s structurally ok doesn\u0027t mean that the meaning is correct. This extension allows a positive statement that the profile applies.",
+        "comment": "This is typically only used where derivation = constraint. As the underlying resources become more stable, profiles on one version become applicable to other versions as well. It's possible to calculate automatically with the strutural features of a profile apply to a given version, but just because it's structurally ok doesn't mean that the meaning is correct. This extension allows a positive statement that the profile applies.",
         "min": 0,
         "max": "*"
       },

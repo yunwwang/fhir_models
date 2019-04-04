@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "100152",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the Oral Health Claim\u003c/div\u003e"
-  },
   "contained": [
     {
       "resourceType": "Organization",
@@ -113,7 +109,7 @@
             ]
           },
           "value": "CBI35",
-          "name": "Corporate Baker\u0027s Inc. Plan#35"
+          "name": "Corporate Baker's Inc. Plan#35"
         },
         {
           "type": {

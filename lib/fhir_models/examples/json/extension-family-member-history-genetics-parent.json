@@ -62,7 +62,7 @@
           }
         ],
         "path": "Extension",
-        "short": "Mother(s) \u0026 Father(s) - genetic \u0026 other",
+        "short": "Mother(s) & Father(s) - genetic & other",
         "definition": "Identifies a parent of the relative.",
         "comment": "Some individuals may have more than two parents (e.g. genetic vs. adoptive parents).  Even non-genetic relationships can be relevant in terms of genetic exposure.",
         "min": 0,
@@ -80,7 +80,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -88,8 +88,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -97,7 +97,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": "player[classCode\u003cLIV, determinerCode\u003dINSTANCE].scopesRole"
+            "map": "player[classCode<LIV, determinerCode=INSTANCE].scopesRole"
           }
         ]
       },
@@ -679,7 +679,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Mother(s) \u0026 Father(s) - genetic \u0026 other",
+        "short": "Mother(s) & Father(s) - genetic & other",
         "definition": "Identifies a parent of the relative.",
         "comment": "Some individuals may have more than two parents (e.g. genetic vs. adoptive parents).  Even non-genetic relationships can be relevant in terms of genetic exposure.",
         "min": 0,
@@ -688,7 +688,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": "player[classCode\u003cLIV, determinerCode\u003dINSTANCE].scopesRole"
+            "map": "player[classCode<LIV, determinerCode=INSTANCE].scopesRole"
           }
         ]
       },

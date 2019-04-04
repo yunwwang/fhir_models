@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="conceptmaps"/>
   <meta>
@@ -1880,7 +1879,7 @@
           
                 <td>BAD (bad address)</td>
           
-                <td>In the HL7 v3 AD, old is handled by the usablePeriod element, but you have to provide a time, there&#39;s no simple equivalent of flagging an address as old</td>
+                <td>In the HL7 v3 AD, old is handled by the usablePeriod element, but you have to provide a time, there's no simple equivalent of flagging an address as old</td>
         
               </tr>
       
@@ -1964,7 +1963,7 @@
               <code value="BAD"/>
               <display value="bad address"/>
               <equivalence value="disjoint"/>
-              <comment value="In the HL7 v3 AD, old is handled by the usablePeriod element, but you have to provide a time, there&#39;s no simple equivalent of flagging an address as old"/>
+              <comment value="In the HL7 v3 AD, old is handled by the usablePeriod element, but you have to provide a time, there's no simple equivalent of flagging an address as old"/>
             </target>
           </element>
           <unmapped>
@@ -2515,7 +2514,7 @@
         
               <tr>
           
-                <td>BCYST (Cyst, Baker&#39;s)</td>
+                <td>BCYST (Cyst, Baker's)</td>
           
                 <td>
             
@@ -2663,7 +2662,7 @@
           
                 <td/>
           
-                <td>Don&#39;t use this term for human samples - use Stool instead. animal would use small intestinal contents, large intestinal contents</td>
+                <td>Don't use this term for human samples - use Stool instead. animal would use small intestinal contents, large intestinal contents</td>
         
               </tr>
         
@@ -8446,7 +8445,7 @@
             <code value="BOWL"/>
             <target>
               <equivalence value="unmatched"/>
-              <comment value="Don&#39;t use this term for human samples - use Stool instead. animal would use small intestinal contents, large intestinal contents"/>
+              <comment value="Don't use this term for human samples - use Stool instead. animal would use small intestinal contents, large intestinal contents"/>
             </target>
           </element>
           <element>

@@ -1,10 +1,6 @@
 {
   "resourceType": "Task",
   "id": "example1",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: example1\u003c/p\u003e\u003cp\u003e\u003cb\u003econtained\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: 20170201-001 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003ebasedOn\u003c/b\u003e: General Wellness Careplan\u003c/p\u003e\u003cp\u003e\u003cb\u003egroupIdentifier\u003c/b\u003e: G20170201-001 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: in-progress\u003c/p\u003e\u003cp\u003e\u003cb\u003ebusinessStatus\u003c/b\u003e: waiting for specimen \u003cspan\u003e(Details )\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: order\u003c/p\u003e\u003cp\u003e\u003cb\u003epriority\u003c/b\u003e: routine\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: Lipid Panel \u003cspan\u003e(Details )\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Create order for getting specimen, Set up inhouse testing,  generate order for any sendouts and submit with specimen\u003c/p\u003e\u003cp\u003e\u003cb\u003efocus\u003c/b\u003e: \u003ca\u003eLipid Panel Request\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003efor\u003c/b\u003e: \u003ca\u003ePeter James Chalmers\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eencounter\u003c/b\u003e: \u003ca\u003eExample In-Patient Encounter\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eexecutionPeriod\u003c/b\u003e: 31/10/2016 8:25:05 AM --\u0026gt; (ongoing)\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthoredOn\u003c/b\u003e: 31/10/2016 8:25:05 AM\u003c/p\u003e\u003cp\u003e\u003cb\u003elastModified\u003c/b\u003e: 31/10/2016 9:45:05 AM\u003c/p\u003e\u003cp\u003e\u003cb\u003erequester\u003c/b\u003e: \u003ca\u003eDr Adam Careful\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eperformerType\u003c/b\u003e: Performer \u003cspan\u003e(Details : {http://terminology.hl7.org/CodeSystem/task-performer-type code \u0027performer\u0027 \u003d \u0027performer\u0027, given as \u0027Performer\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eowner\u003c/b\u003e: \u003ca\u003eClinical Laboratory @ Acme Hospital\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ereasonCode\u003c/b\u003e: The Task.reason should only be included if there is no Task.focus or if it differs from the reason indicated on the focus \u003cspan\u003e(Details )\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: This is an example to demonstrate using task for actioning a servicerequest and to illustrate how to populate many of the task elements - this is the parent task that will be broken into subtask to grab the specimen and a sendout lab test \u003c/p\u003e\u003cp\u003e\u003cb\u003erelevantHistory\u003c/b\u003e: Author\u0027s Signature. Generated Summary: id: signature; recorded: 31/10/2016 8:25:05 AM; \u003c/p\u003e\u003ch3\u003eRestrictions\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRepetitions\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003ePeriod\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003e?? --\u0026gt; 02/11/2016 9:45:05 AM\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
-  },
   "contained": [
     {
       "resourceType": "Provenance",
@@ -39,7 +35,7 @@
             {
               "system": "urn:iso-astm:E1762-95:2013",
               "code": "1.2.840.10065.1.12.1.1",
-              "display": "Author\u0027s Signature"
+              "display": "Author's Signature"
             }
           ],
           "when": "2016-10-31T08:25:05+10:00",
@@ -49,7 +45,7 @@
           },
           "targetFormat": "application/fhir+xml",
           "sigFormat": "application/signature+xml",
-          "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ\u003d"
+          "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
         }
       ]
     }
@@ -129,7 +125,7 @@
   "relevantHistory": [
     {
       "reference": "#signature",
-      "display": "Author\u0027s Signature"
+      "display": "Author's Signature"
     }
   ],
   "restriction": {

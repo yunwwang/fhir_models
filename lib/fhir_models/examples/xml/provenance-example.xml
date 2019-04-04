@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Provenance xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Provenance xmlns="http://hl7.org/fhir">
 	<id value="example"/>
 	<meta>
     <security>
@@ -7,10 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">procedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from XDS managed CDA Referral received 26-June as authorized by a referenced Consent.</div>
-	</text>
+  
 	<!--  
     where possible, provenance targets should be version specific,
     so that there is no ambiguity about which version of the 

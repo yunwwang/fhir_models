@@ -117,6 +117,44 @@ module FHIR
         finish = File.size(filename)
         puts "  Removed #{(start - finish) / 1024} KB" if start != finish
       end
+
+      def self.pre_process_json_example(filename)
+        # Read the file
+        puts "Processing #{File.basename(filename)}..."
+        start = File.size(filename)
+        json = File.open(filename, 'r:UTF-8', &:read)
+        hash = JSON.parse(json)
+
+        # Remove narratives
+        %w[text].each { |key| hash.delete(key) }
+
+        # Output the post processed file
+        f = File.open(filename, 'w:UTF-8')
+        f.write(JSON.pretty_unparse(hash))
+        f.close
+        finish = File.size(filename)
+        puts "  Removed #{(start - finish) / 1024} KB" if start != finish
+      end
+
+      def self.pre_process_xml_example(filename)
+        # Read the file
+        puts "Processing #{File.basename(filename)}..."
+        start = File.size(filename)
+        raw = File.open(filename, 'r:UTF-8', &:read)
+
+        # Remove annotations
+        doc = Nokogiri::XML(raw)
+        doc.search('text').each do |node|
+          node.remove if node.parent == doc.root
+        end
+
+        # Output the post processed file
+        f = File.open(filename, 'w:UTF-8')
+        f.write(doc.to_xml)
+        f.close
+        finish = File.size(filename)
+        puts "  Removed #{(start - finish) / 1024} KB" if start != finish
+      end
     end
   end
 end

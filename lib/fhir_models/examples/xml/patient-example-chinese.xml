@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
   <id value="ch-example"/>
   <meta>
     <versionId value="1"/>
@@ -10,30 +11,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <table>
-        <tbody>
-          <tr>
-            <td>名字</td>
-            <td>张无忌</td> </tr>
-          <tr>
-            <td>地址</td>
-            <td>上海市黄埔区马当路190号, 1974年12月25日</td> 
-          </tr>
-          <tr>
-            <td>联系方式</td>
-            <td>住宅: 不详。工作: 18337177888</td> 
-          </tr>
-          <tr>
-            <td>Id</td>
-            <td>MRN: 3112219680806371X (市卫生局)</td> 
-          </tr> 
-        </tbody> 
-      </table> 
-    </div>
-  </text>
+  
   <identifier>
     <use value="usual"/>
     <type>

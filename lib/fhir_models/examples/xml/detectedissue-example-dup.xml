@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><DetectedIssue xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<DetectedIssue xmlns="http://hl7.org/fhir">
   <id value="duplicate"/>
   <meta>
     <security>
@@ -7,20 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Similar test was performed within the past 14 days</p>
-      <ul>
-        <li>
-          <a href="ServiceRequest/id">Chest CT - ordered May 8, 2013 by Dr. Adam Careful</a>
-        </li>
-        <li>
-          <a href="ImagingStudy/example">Image 1 from Series 3: CT Images on Patient MINT (MINT1234) taken at 1-Jan 2011 01:20 AM</a>
-        </li>
-      </ul>
-    </div>
-  </text>
+  
   <identifier>
     <use value="official"/>
     <system value="http://example.org"/>

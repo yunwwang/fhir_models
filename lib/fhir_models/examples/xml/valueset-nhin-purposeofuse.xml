@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
   <id value="nhin-purposeofuse"/>
   <meta>
     <security>
@@ -7,24 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <h2>NHIN PurposeOfUse</h2>
-      <div>
-        <p>This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7 v3 Purpose of use Code system.</p>
-
-      </div>
-      <p>This value set includes codes from the following code systems:</p>
-      <ul>
-        <li>Include all codes defined in 
-          <a href="codesystem-nhin-purposeofuse.html">
-            <code>http://healthit.gov/nhin/purposeofuse</code>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </text>
+  
   <contained>
     <ConceptMap>
       <id value="map"/>

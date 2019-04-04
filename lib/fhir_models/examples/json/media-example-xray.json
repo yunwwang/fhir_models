@@ -1,10 +1,6 @@
 {
   "resourceType": "Media",
   "id": "xray",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eXray of left hand for Patient Henry Levin (MRN 12345) 2016-03-15\u003c/div\u003e"
-  },
   "basedOn": [
     {
       "identifier": {

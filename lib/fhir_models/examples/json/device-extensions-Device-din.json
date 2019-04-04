@@ -12,7 +12,7 @@
     "Device"
   ],
   "type": "token",
-  "expression": "Device.extension(\u0027http://hl7.org/fhir/SearchParameter/device-extensions-Device-din\u0027)",
+  "expression": "Device.extension('http://hl7.org/fhir/SearchParameter/device-extensions-Device-din')",
   "xpathUsage": "normal",
   "multipleOr": true,
   "multipleAnd": true

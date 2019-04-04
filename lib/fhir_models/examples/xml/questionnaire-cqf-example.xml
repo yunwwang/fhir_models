@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Questionnaire xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://hl7.org/fhir">
   <id value="phq-9-questionnaire"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/cqf-questionnaire"/>
@@ -9,10 +10,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">PHQ-9 Questionnaire with dynamic logic</div>
-  </text>
+  
   <extension url="http://hl7.org/fhir/StructureDefinition/cqf-library">
     <valueCanonical value="Library/phq-9-logic"/>
   </extension>

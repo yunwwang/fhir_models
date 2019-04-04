@@ -1,10 +1,6 @@
 {
   "resourceType": "RiskAssessment",
   "id": "prognosis",
-  "text": {
-    "status": "additional",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003eModerate risk of permanent weakness of the left arm, but otherwise no permanent disability\u003c/p\u003e\n    \u003c/div\u003e"
-  },
   "status": "final",
   "subject": {
     "reference": "Patient/example"
@@ -20,7 +16,7 @@
         "coding": [
           {
             "system": "http://snomed.info/sct",
-            "code": "249943000:363698007\u003d72098002,260868000\u003d6934004"
+            "code": "249943000:363698007=72098002,260868000=6934004"
           }
         ],
         "text": "permanent weakness of the left arm"

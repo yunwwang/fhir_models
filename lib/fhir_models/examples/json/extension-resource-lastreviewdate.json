@@ -18,7 +18,7 @@
   "status": "draft",
   "date": "2018-12-27T22:37:54+11:00",
   "publisher": "HL7",
-  "description": "The date on which the asset content was last reviewed. Review happens periodically after that, but doesn\u0027t change the original approval date.",
+  "description": "The date on which the asset content was last reviewed. Review happens periodically after that, but doesn't change the original approval date.",
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -94,7 +94,7 @@
         ],
         "path": "Extension",
         "short": "Last review date for the resource",
-        "definition": "The date on which the asset content was last reviewed. Review happens periodically after that, but doesn\u0027t change the original approval date.",
+        "definition": "The date on which the asset content was last reviewed. Review happens periodically after that, but doesn't change the original approval date.",
         "comment": "If specified, this is usually after the approval date.",
         "min": 0,
         "max": "1",
@@ -111,7 +111,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -119,8 +119,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -250,7 +250,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Last review date for the resource",
-        "definition": "The date on which the asset content was last reviewed. Review happens periodically after that, but doesn\u0027t change the original approval date.",
+        "definition": "The date on which the asset content was last reviewed. Review happens periodically after that, but doesn't change the original approval date.",
         "comment": "If specified, this is usually after the approval date.",
         "min": 0,
         "max": "1"

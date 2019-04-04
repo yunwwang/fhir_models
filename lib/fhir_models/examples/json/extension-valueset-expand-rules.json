@@ -17,7 +17,7 @@
   "status": "draft",
   "date": "2018-12-27T22:37:54+11:00",
   "publisher": "HL7",
-  "description": "Defines how concepts are processed into the expansion when it\u0027s for UI presentation.",
+  "description": "Defines how concepts are processed into the expansion when it's for UI presentation.",
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -53,7 +53,7 @@
         ],
         "path": "Extension",
         "short": "all-codes | ungrouped | groups-only",
-        "definition": "Defines how concepts are processed into the expansion when it\u0027s for UI presentation.",
+        "definition": "Defines how concepts are processed into the expansion when it's for UI presentation.",
         "min": 0,
         "max": "1",
         "base": {
@@ -69,7 +69,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -77,8 +77,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -201,7 +201,7 @@
             }
           ],
           "strength": "required",
-          "description": "Defines how concepts are processed into the expansion when it\u0027s for UI presentation.",
+          "description": "Defines how concepts are processed into the expansion when it's for UI presentation.",
           "valueSet": "http://hl7.org/fhir/ValueSet/expansion-processing-rule|4.0.0"
         },
         "mapping": [
@@ -219,7 +219,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "all-codes | ungrouped | groups-only",
-        "definition": "Defines how concepts are processed into the expansion when it\u0027s for UI presentation.",
+        "definition": "Defines how concepts are processed into the expansion when it's for UI presentation.",
         "min": 0,
         "max": "1"
       },
@@ -254,7 +254,7 @@
             }
           ],
           "strength": "required",
-          "description": "Defines how concepts are processed into the expansion when it\u0027s for UI presentation.",
+          "description": "Defines how concepts are processed into the expansion when it's for UI presentation.",
           "valueSet": "http://hl7.org/fhir/ValueSet/expansion-processing-rule|4.0.0"
         }
       }

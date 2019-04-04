@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Slot xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Slot xmlns="http://hl7.org/fhir">
  <id value="1"/>
 	<meta>
     <security>
@@ -7,12 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			25 Dec 2013 9:00am - 9:15am: <b>Busy</b> Physiotherapy
-		</div>
-	</text>
+  
 	<identifier>
     <system value="http://example.org/identifiers/slots"/>
     <value value="123132"/>

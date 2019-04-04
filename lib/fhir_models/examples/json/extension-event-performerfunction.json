@@ -28,7 +28,7 @@
       ]
     }
   ],
-  "description": "Distinguishes the type of involvement of the performer in the event. For example, \u0027author\u0027,  \u0027verifier\u0027 or \u0027responsible party\u0027.",
+  "description": "Distinguishes the type of involvement of the performer in the event. For example, 'author',  'verifier' or 'responsible party'.",
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -77,7 +77,7 @@
         ],
         "path": "Extension",
         "short": "Type of performance",
-        "definition": "Distinguishes the type of involvement of the performer in the event. For example, \u0027author\u0027,  \u0027verifier\u0027 or \u0027responsible party\u0027.",
+        "definition": "Distinguishes the type of involvement of the performer in the event. For example, 'author',  'verifier' or 'responsible party'.",
         "min": 0,
         "max": "1",
         "base": {
@@ -93,7 +93,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -101,8 +101,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -248,7 +248,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Type of performance",
-        "definition": "Distinguishes the type of involvement of the performer in the event. For example, \u0027author\u0027,  \u0027verifier\u0027 or \u0027responsible party\u0027.",
+        "definition": "Distinguishes the type of involvement of the performer in the event. For example, 'author',  'verifier' or 'responsible party'.",
         "min": 0,
         "max": "1",
         "mapping": [

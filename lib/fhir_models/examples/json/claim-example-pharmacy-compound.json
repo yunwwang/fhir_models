@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "760152",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the Pharmacy Claim\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://happypharma.com/claim",
@@ -185,7 +181,7 @@
         "code": "TAB"
       },
       "net": {
-        "value": 155.00,
+        "value": 155.0,
         "currency": "USD"
       },
       "detail": [
@@ -205,7 +201,7 @@
             "unit": "mg"
           },
           "net": {
-            "value": 20.00,
+            "value": 20.0,
             "currency": "USD"
           },
           "subDetail": [
@@ -220,7 +216,7 @@
                 ]
               },
               "net": {
-                "value": 20.00,
+                "value": 20.0,
                 "currency": "USD"
               }
             }
@@ -242,7 +238,7 @@
             "unit": "mg"
           },
           "net": {
-            "value": 25.00,
+            "value": 25.0,
             "currency": "USD"
           },
           "subDetail": [
@@ -257,7 +253,7 @@
                 ]
               },
               "net": {
-                "value": 25.00,
+                "value": 25.0,
                 "currency": "USD"
               }
             }
@@ -279,7 +275,7 @@
             "unit": "mg"
           },
           "net": {
-            "value": 28.00,
+            "value": 28.0,
             "currency": "USD"
           },
           "subDetail": [
@@ -294,7 +290,7 @@
                 ]
               },
               "net": {
-                "value": 28.00,
+                "value": 28.0,
                 "currency": "USD"
               }
             }
@@ -311,7 +307,7 @@
             ]
           },
           "net": {
-            "value": 22.00,
+            "value": 22.0,
             "currency": "USD"
           }
         },
@@ -326,7 +322,7 @@
             ]
           },
           "net": {
-            "value": 60.00,
+            "value": 60.0,
             "currency": "USD"
           }
         }
@@ -334,7 +330,7 @@
     }
   ],
   "total": {
-    "value": 155.00,
+    "value": 155.0,
     "currency": "USD"
   },
   "meta": {

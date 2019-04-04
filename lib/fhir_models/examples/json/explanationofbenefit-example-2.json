@@ -1,10 +1,6 @@
 {
   "resourceType": "ExplanationOfBenefit",
   "id": "EB3501",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the ExplanationOfBenefit for a claim that had errors, various other attributes (such as accident and hospitalization) are also completed.\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://www.BenefitsInc.com/fhir/explanationofbenefit",
@@ -168,7 +164,7 @@
         ]
       },
       "amount": {
-        "value": 0.00,
+        "value": 0.0,
         "currency": "USD"
       }
     }

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><RelatedPerson xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
  <id value="benedicte"/>
   <meta>
     <security>
@@ -7,28 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <table>
-        <tbody>
-          <tr>
-            <td>Name</td>
-            <td>Bénédicte du Marché</td>
-          </tr>
-          <tr>
-            <td>Address</td>
-            <td>43, Place du Marché Sainte Catherine, 75004 Paris, France</td>
-          </tr>
-          <tr>
-            <td>Contacts</td>
-            <td>Phone: +33 (237) 998327</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </text>
+  
 
   <identifier>
     <use value="usual"/>

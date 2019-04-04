@@ -62,9 +62,9 @@
           }
         ],
         "path": "Extension",
-        "short": "natural brother(s) \u0026 natural sister(s) - genetic \u0026 other",
+        "short": "natural brother(s) & natural sister(s) - genetic & other",
         "definition": "Identifies a sibling of the relative.",
-        "comment": "Some cases may have complex inner-pedigree-tree relationship. For instance, double cousin relationship need two extra link with In pedigree tree itself. This can\u0027t be revealed by relationship to subject.",
+        "comment": "Some cases may have complex inner-pedigree-tree relationship. For instance, double cousin relationship need two extra link with In pedigree tree itself. This can't be revealed by relationship to subject.",
         "min": 0,
         "max": "*",
         "base": {
@@ -80,7 +80,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -88,8 +88,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -661,9 +661,9 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "natural brother(s) \u0026 natural sister(s) - genetic \u0026 other",
+        "short": "natural brother(s) & natural sister(s) - genetic & other",
         "definition": "Identifies a sibling of the relative.",
-        "comment": "Some cases may have complex inner-pedigree-tree relationship. For instance, double cousin relationship need two extra link with In pedigree tree itself. This can\u0027t be revealed by relationship to subject.",
+        "comment": "Some cases may have complex inner-pedigree-tree relationship. For instance, double cousin relationship need two extra link with In pedigree tree itself. This can't be revealed by relationship to subject.",
         "min": 0,
         "max": "*",
         "isModifier": false

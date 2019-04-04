@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
   <id value="dicom"/>
   <meta>
     <security>
@@ -7,11 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml"> Patient MINT_TEST, ID = MINT1234. Age = 56y, Size =
-      1.83m, Weight = 72.58kg </div>
-  </text>
+  
   <extension url="http://nema.org/fhir/extensions#0010:1010">
     <valueQuantity>
       <value value="56"/>

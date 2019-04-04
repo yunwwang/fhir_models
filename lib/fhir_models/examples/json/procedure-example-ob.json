@@ -1,10 +1,6 @@
 {
   "resourceType": "Procedure",
   "id": "ob",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eVaginal delivery of healthy male infant on June 2, 2012\u003c/div\u003e"
-  },
   "status": "completed",
   "category": {
     "coding": [

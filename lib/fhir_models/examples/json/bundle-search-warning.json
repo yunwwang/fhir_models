@@ -16,7 +16,7 @@
   "link": [
     {
       "relation": "self",
-      "url": "https://example.org/fhir/Observation?patient.identifier\u003dhttp://example.com/fhir/identifier/mrn|123456"
+      "url": "https://example.org/fhir/Observation?patient.identifier=http://example.com/fhir/identifier/mrn|123456"
     }
   ],
   "entry": [
@@ -26,7 +26,7 @@
         "id": "warning",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eThere is no matching patient for MRN 123456\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">There is no matching patient for MRN 123456</div>"
         },
         "issue": [
           {

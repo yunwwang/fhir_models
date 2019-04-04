@@ -1,10 +1,6 @@
 {
   "resourceType": "Consent",
   "id": "consent-example-Emergency",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003e\n\tWithhold Authorization for Treatment rule for Emegency Treatment\n\t\u003c/p\u003e\n      \u003cp\u003e\n    Patient \u0026quot;P. van de Heuvel\u0026quot; wishes to have no data at the Good Health Psychiatric Hospital \n   available rule for Emergency treatment use.\n   An overall Deny consent Directive, with an exception \u0026quot;Permit\u0026quot; of purposeOfUse \u0026quot;ETREAT\u0026quot; \n   at \u0026quot;Good Health\u0026quot; hospital, and exception \u0026quot;Deny\u0026quot; all other purposeOfUse from good health hospital.\n   \u003c/p\u003e\n    \u003c/div\u003e"
-  },
   "status": "active",
   "scope": {
     "coding": [

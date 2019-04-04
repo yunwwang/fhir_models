@@ -1,10 +1,6 @@
 {
   "resourceType": "Composition",
   "id": "example",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\u003cp\u003eConsultation note for Henry Levin the 7th\u003c/p\u003e\n\t\t\t\u003cp\u003eManaged by Good Health Clinic\u003c/p\u003e\n\t\t\u003c/div\u003e"
-  },
   "identifier": {
     "system": "http://healthintersections.com.au/test",
     "value": "1"
@@ -113,7 +109,7 @@
       },
       "text": {
         "status": "generated",
-        "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\u003ctable\u003e\n\t\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\t\u003ctd\u003e\n\t\t\t\t\t\t\t\u003cb\u003eCode\u003c/b\u003e\n\t\t\t\t\t\t\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e\n\t\t\t\t\t\t\t\u003cb\u003eDate\u003c/b\u003e\n\t\t\t\t\t\t\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e\n\t\t\t\t\t\t\t\u003cb\u003eType\u003c/b\u003e\n\t\t\t\t\t\t\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e\n\t\t\t\t\t\t\t\u003cb\u003eBodySite\u003c/b\u003e\n\t\t\t\t\t\t\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e\n\t\t\t\t\t\t\t\u003cb\u003eSeverity\u003c/b\u003e\n\t\t\t\t\t\t\u003c/td\u003e\n\t\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\t\u003ctd\u003eStroke\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e2010-07-18\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003eDiagnosis\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd/\u003e\n\t\t\t\t\t\t\u003ctd/\u003e\n\t\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\t\u003ctd\u003eBurnt Ear\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e2012-05-24\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003eDiagnosis\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003eLeft Ear\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd/\u003e\n\t\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\t\u003ctd\u003eAsthma\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e2012-11-12\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003eFinding\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd/\u003e\n\t\t\t\t\t\t\u003ctd\u003eMild\u003c/td\u003e\n\t\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003c/table\u003e\n\t\t\t\u003c/div\u003e"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t<table>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Code</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Date</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Type</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>BodySite</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Severity</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Stroke</td>\n\t\t\t\t\t\t<td>2010-07-18</td>\n\t\t\t\t\t\t<td>Diagnosis</td>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Burnt Ear</td>\n\t\t\t\t\t\t<td>2012-05-24</td>\n\t\t\t\t\t\t<td>Diagnosis</td>\n\t\t\t\t\t\t<td>Left Ear</td>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Asthma</td>\n\t\t\t\t\t\t<td>2012-11-12</td>\n\t\t\t\t\t\t<td>Finding</td>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t\t<td>Mild</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</table>\n\t\t\t</div>"
       },
       "mode": "snapshot",
       "orderedBy": {
@@ -150,7 +146,7 @@
       },
       "text": {
         "status": "generated",
-        "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\u003cp\u003eHistory of family member diseases - not available\u003c/p\u003e\n\t\t\t\u003c/div\u003e"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t<p>History of family member diseases - not available</p>\n\t\t\t</div>"
       },
       "mode": "snapshot",
       "emptyReason": {

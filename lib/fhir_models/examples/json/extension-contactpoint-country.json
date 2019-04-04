@@ -28,7 +28,7 @@
       ]
     }
   ],
-  "description": "The country code as defined by the ITU. This extension is used when a system wishes to designate specific parts of a phone number (and potentially place constraints on which components must be present and how they\u0027re filled in).",
+  "description": "The country code as defined by the ITU. This extension is used when a system wishes to designate specific parts of a phone number (and potentially place constraints on which components must be present and how they're filled in).",
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -69,7 +69,7 @@
         ],
         "path": "Extension",
         "short": "Country code as defined by the ITU",
-        "definition": "The country code as defined by the ITU. This extension is used when a system wishes to designate specific parts of a phone number (and potentially place constraints on which components must be present and how they\u0027re filled in).",
+        "definition": "The country code as defined by the ITU. This extension is used when a system wishes to designate specific parts of a phone number (and potentially place constraints on which components must be present and how they're filled in).",
         "comment": "The ContactPoint.value element SHOULD still be populated even if the extension is present.",
         "min": 0,
         "max": "1",
@@ -86,7 +86,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -94,8 +94,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -235,7 +235,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Country code as defined by the ITU",
-        "definition": "The country code as defined by the ITU. This extension is used when a system wishes to designate specific parts of a phone number (and potentially place constraints on which components must be present and how they\u0027re filled in).",
+        "definition": "The country code as defined by the ITU. This extension is used when a system wishes to designate specific parts of a phone number (and potentially place constraints on which components must be present and how they're filled in).",
         "comment": "The ContactPoint.value element SHOULD still be populated even if the extension is present.",
         "min": 0,
         "max": "1",

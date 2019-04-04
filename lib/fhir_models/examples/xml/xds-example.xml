@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Bundle xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
 	<id value="xds"/>
 	<meta>
 		<lastUpdated value="2013-07-01T13:11:33Z"/>

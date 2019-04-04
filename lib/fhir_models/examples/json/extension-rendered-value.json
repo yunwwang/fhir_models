@@ -101,7 +101,7 @@
         "path": "Extension",
         "short": "What should be displayed to human (if default is not appropriate)",
         "definition": "Provides a rendered version of the value intended for human display.  For example, a sensitive identifier (e.g. social security number) partially obscured by asterisks; a drivers licence number with dashes inserted; a date formatted as MMM dd, yyyy; etc.",
-        "comment": "In some cases, this extension may be present and the value won\u0027t be present.  For example if the recipient only has permission to see a partially masked view of a value.  The rendering may be realm-specific.  (E.g. the use of \u0027,\u0027 vs. \u0027.\u0027 when rendering numbers.).",
+        "comment": "In some cases, this extension may be present and the value won't be present.  For example if the recipient only has permission to see a partially masked view of a value.  The rendering may be realm-specific.  (E.g. the use of ',' vs. '.' when rendering numbers.).",
         "min": 0,
         "max": "1",
         "base": {
@@ -117,7 +117,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -125,8 +125,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -257,7 +257,7 @@
         "path": "Extension",
         "short": "What should be displayed to human (if default is not appropriate)",
         "definition": "Provides a rendered version of the value intended for human display.  For example, a sensitive identifier (e.g. social security number) partially obscured by asterisks; a drivers licence number with dashes inserted; a date formatted as MMM dd, yyyy; etc.",
-        "comment": "In some cases, this extension may be present and the value won\u0027t be present.  For example if the recipient only has permission to see a partially masked view of a value.  The rendering may be realm-specific.  (E.g. the use of \u0027,\u0027 vs. \u0027.\u0027 when rendering numbers.).",
+        "comment": "In some cases, this extension may be present and the value won't be present.  For example if the recipient only has permission to see a partially masked view of a value.  The rendering may be realm-specific.  (E.g. the use of ',' vs. '.' when rendering numbers.).",
         "min": 0,
         "max": "1"
       },

@@ -13,7 +13,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n                        \u003ctable\u003e\n                            \u003ctbody\u003e\n                                \u003ctr\u003e\n                                    \u003ctd\u003eName\u003c/td\u003e\n                                    \u003ctd\u003ePeter James \n                                        \u003cb\u003eChalmers\u003c/b\u003e (\u0026quot;Jim\u0026quot;)\n                                    \u003c/td\u003e\n                                \u003c/tr\u003e\n                                \u003ctr\u003e\n                                    \u003ctd\u003eAddress\u003c/td\u003e\n                                    \u003ctd\u003e534 Erewhon, Pleasantville, Vic, 3999\u003c/td\u003e\n                                \u003c/tr\u003e\n                                \u003ctr\u003e\n                                    \u003ctd\u003eContacts\u003c/td\u003e\n                                    \u003ctd\u003eHome: unknown. Work: (03) 5555 6473\u003c/td\u003e\n                                \u003c/tr\u003e\n                                \u003ctr\u003e\n                                    \u003ctd\u003eId\u003c/td\u003e\n                                    \u003ctd\u003eMRN: 12345 (Acme Healthcare)\u003c/td\u003e\n                                \u003c/tr\u003e\n                            \u003c/tbody\u003e\n                        \u003c/table\u003e\n                    \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <table>\n                            <tbody>\n                                <tr>\n                                    <td>Name</td>\n                                    <td>Peter James \n                                        <b>Chalmers</b> (&quot;Jim&quot;)\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td>Address</td>\n                                    <td>534 Erewhon, Pleasantville, Vic, 3999</td>\n                                </tr>\n                                <tr>\n                                    <td>Contacts</td>\n                                    <td>Home: unknown. Work: (03) 5555 6473</td>\n                                </tr>\n                                <tr>\n                                    <td>Id</td>\n                                    <td>MRN: 12345 (Acme Healthcare)</td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>"
         },
         "identifier": [
           {
@@ -191,7 +191,7 @@
         "link": [
           {
             "relation": "self",
-            "url": "http://local.fhir.org:960/r4/Condition?_format\u003dapplication/fhir+xml\u0026search-id\u003d36aac5c3-a9f6-4c3a-bf94-24d32ed604\u0026\u0026patient\u003dexample\u0026_sort\u003d_id"
+            "url": "http://local.fhir.org:960/r4/Condition?_format=application/fhir+xml&search-id=36aac5c3-a9f6-4c3a-bf94-24d32ed604&&patient=example&_sort=_id"
           }
         ],
         "entry": [
@@ -206,7 +206,7 @@
               },
               "text": {
                 "status": "generated",
-                "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSevere burn of left ear (Date: 24-May 2012)\u003c/div\u003e"
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Severe burn of left ear (Date: 24-May 2012)</div>"
               },
               "clinicalStatus": {
                 "coding": [
@@ -291,7 +291,7 @@
               },
               "text": {
                 "status": "generated",
-                "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eMild Asthma (Date: 12-Nov 2012)\u003c/div\u003e"
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mild Asthma (Date: 12-Nov 2012)</div>"
               },
               "clinicalStatus": {
                 "coding": [
@@ -352,7 +352,7 @@
               },
               "text": {
                 "status": "generated",
-                "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eFamily history of cancer of colon\u003c/div\u003e"
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Family history of cancer of colon</div>"
               },
               "clinicalStatus": {
                 "coding": [
@@ -401,7 +401,7 @@
               },
               "text": {
                 "status": "generated",
-                "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eIschemic stroke, July 18, 2010\u003c/div\u003e"
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ischemic stroke, July 18, 2010</div>"
               },
               "clinicalStatus": {
                 "coding": [
@@ -469,7 +469,7 @@
         "link": [
           {
             "relation": "self",
-            "url": "http://local.fhir.org:960/r4/MedicationStatement?_format\u003dapplication/fhir+xml\u0026search-id\u003d0f08b401-5120-4444-9a83-3fd21d33df\u0026\u0026patient\u003dexample\u0026_sort\u003d_id"
+            "url": "http://local.fhir.org:960/r4/MedicationStatement?_format=application/fhir+xml&search-id=0f08b401-5120-4444-9a83-3fd21d33df&&patient=example&_sort=_id"
           }
         ]
       },
@@ -491,7 +491,7 @@
         "link": [
           {
             "relation": "self",
-            "url": "http://local.fhir.org:960/r4/Observation?_format\u003dapplication/fhir+xml\u0026search-id\u003d50df0414-1375-48a4-ba1e-66f580360a\u0026\u0026patient\u003dexample\u0026code\u003dhttp%3A//loinc.org%7C55284%2D4\u0026date\u003dge2015%2D01%2D01\u0026_sort\u003d_id"
+            "url": "http://local.fhir.org:960/r4/Observation?_format=application/fhir+xml&search-id=50df0414-1375-48a4-ba1e-66f580360a&&patient=example&code=http%3A//loinc.org%7C55284%2D4&date=ge2015%2D01%2D01&_sort=_id"
           }
         ]
       },

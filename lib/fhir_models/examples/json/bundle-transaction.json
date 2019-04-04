@@ -19,7 +19,7 @@
         "resourceType": "Patient",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSome narrative\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
         },
         "active": true,
         "name": [
@@ -46,7 +46,7 @@
         "resourceType": "Patient",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSome narrative\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
         },
         "identifier": [
           {
@@ -71,7 +71,7 @@
       "request": {
         "method": "POST",
         "url": "Patient",
-        "ifNoneExist": "identifier\u003dhttp:/example.org/fhir/ids|234234"
+        "ifNoneExist": "identifier=http:/example.org/fhir/ids|234234"
       }
     },
     {
@@ -81,7 +81,7 @@
         "id": "123",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSome narrative\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
         },
         "active": true,
         "name": [
@@ -108,7 +108,7 @@
         "resourceType": "Patient",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSome narrative\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
         },
         "identifier": [
           {
@@ -132,7 +132,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Patient?identifier\u003dhttp:/example.org/fhir/ids|456456"
+        "url": "Patient?identifier=http:/example.org/fhir/ids|456456"
       }
     },
     {
@@ -142,7 +142,7 @@
         "id": "123a",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSome narrative\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
         },
         "active": true,
         "name": [
@@ -173,7 +173,7 @@
     {
       "request": {
         "method": "DELETE",
-        "url": "Patient?identifier\u003d123456"
+        "url": "Patient?identifier=123456"
       }
     },
     {
@@ -198,7 +198,7 @@
     {
       "request": {
         "method": "GET",
-        "url": "Patient?name\u003dpeter"
+        "url": "Patient?name=peter"
       }
     },
     {

@@ -20,7 +20,7 @@
         "id": "71",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              CarePlan repository, CarePlan\u003cbr/\u003e\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              CarePlan repository, CarePlan<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"
         },
         "status": "active",
         "connectionType": {
@@ -53,7 +53,7 @@
         "id": "72",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Questionnaire Destination, QuestionnaireResponse\u003cbr/\u003e\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Questionnaire Destination, QuestionnaireResponse<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"
         },
         "status": "active",
         "connectionType": {
@@ -86,7 +86,7 @@
         "id": "73",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Referral Requests, ServiceRequest\u003cbr/\u003e\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Referral Requests, ServiceRequest<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"
         },
         "status": "active",
         "connectionType": {
@@ -119,7 +119,7 @@
         "id": "74",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Referral Requests, ServiceRequest QuestionnaireResponse\u003cbr/\u003e\n              Address: https://open.epic.com/Interface/FHIR\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Referral Requests, ServiceRequest QuestionnaireResponse<br/>\n              Address: https://open.epic.com/Interface/FHIR</div>"
         },
         "status": "active",
         "connectionType": {
@@ -152,7 +152,7 @@
         "id": "75",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Subscription receiver, ServiceRequest\u003cbr/\u003e\n              Address: mailto:subscriptions@example.org\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Subscription receiver, ServiceRequest<br/>\n              Address: mailto:subscriptions@example.org</div>"
         },
         "status": "active",
         "connectionType": {
@@ -185,7 +185,7 @@
         "id": "76",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              valid usecase?, CDA-EventSummary\u003cbr/\u003e\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              valid usecase?, CDA-EventSummary<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"
         },
         "status": "active",
         "connectionType": {
@@ -218,7 +218,7 @@
         "id": "77",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              v2 referral Requests, REF-I12\u003cbr/\u003e\n              Address: 127.0.0.1\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              v2 referral Requests, REF-I12<br/>\n              Address: 127.0.0.1</div>"
         },
         "status": "active",
         "connectionType": {
@@ -251,7 +251,7 @@
         "id": "78",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              xds event summaries, CDA-EventSummary\u003cbr/\u003e\n              Address: https://open.epic.com/Interface/XDS.b\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              xds event summaries, CDA-EventSummary<br/>\n              Address: https://open.epic.com/Interface/XDS.b</div>"
         },
         "status": "active",
         "connectionType": {
@@ -272,7 +272,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/hl7-sda+xml; variant\u003dXDA/XDS"
+          "application/hl7-sda+xml; variant=XDA/XDS"
         ],
         "address": "https://open.epic.com/Interface/XDS.b"
       }
@@ -284,7 +284,7 @@
         "id": "79",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/dicomweb\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"
         },
         "status": "active",
         "connectionType": {
@@ -305,7 +305,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom; variant\u003dDICOM WADO-RS"
+          "application/dicom; variant=DICOM WADO-RS"
         ],
         "address": "https://pacs.hospital.org/dicomweb"
       }
@@ -317,7 +317,7 @@
         "id": "80",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/dicomweb\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"
         },
         "status": "active",
         "connectionType": {
@@ -338,7 +338,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom; variant\u003dDICOM QIDO-RS"
+          "application/dicom; variant=DICOM QIDO-RS"
         ],
         "address": "https://pacs.hospital.org/dicomweb"
       }
@@ -350,7 +350,7 @@
         "id": "81",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/dicomweb\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"
         },
         "status": "active",
         "connectionType": {
@@ -371,7 +371,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom; variant\u003dDICOM STOW-RS"
+          "application/dicom; variant=DICOM STOW-RS"
         ],
         "address": "https://pacs.hospital.org/dicomweb"
       }
@@ -383,7 +383,7 @@
         "id": "82",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/dicomweb\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"
         },
         "status": "active",
         "connectionType": {
@@ -404,7 +404,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom; variant\u003dDICOM STOW-RS"
+          "application/dicom; variant=DICOM STOW-RS"
         ],
         "address": "https://pacs.hospital.org/dicomweb"
       }
@@ -416,7 +416,7 @@
         "id": "83",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/wadoUri\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/wadoUri</div>"
         },
         "status": "active",
         "connectionType": {
@@ -437,7 +437,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom; variant\u003dDICOM WADO-URI"
+          "application/dicom; variant=DICOM WADO-URI"
         ],
         "address": "https://pacs.hospital.org/wadoUri"
       }
@@ -449,7 +449,7 @@
         "id": "84",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)\u003cbr/\u003e\n              Address: https://pacs.hospital.org/IHEInvokeImageDisplay\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/IHEInvokeImageDisplay</div>"
         },
         "status": "active",
         "connectionType": {
@@ -470,7 +470,7 @@
           }
         ],
         "payloadMimeType": [
-          "application/dicom; variant\u003dIHE IID"
+          "application/dicom; variant=IHE IID"
         ],
         "address": "https://pacs.hospital.org/IHEInvokeImageDisplay"
       }

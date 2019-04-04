@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "660152",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the Vision Claim for Glasses\u003c/div\u003e"
-  },
   "contained": [
     {
       "resourceType": "Device",
@@ -159,11 +155,11 @@
       ],
       "servicedDate": "2014-08-16",
       "unitPrice": {
-        "value": 235.40,
+        "value": 235.4,
         "currency": "USD"
       },
       "net": {
-        "value": 235.40,
+        "value": 235.4,
         "currency": "USD"
       },
       "detail": [
@@ -206,12 +202,12 @@
             }
           ],
           "unitPrice": {
-            "value": 100.00,
+            "value": 100.0,
             "currency": "USD"
           },
           "factor": 1.1,
           "net": {
-            "value": 110.00,
+            "value": 110.0,
             "currency": "USD"
           },
           "udi": [
@@ -262,11 +258,11 @@
             "value": 2
           },
           "unitPrice": {
-            "value": 55.00,
+            "value": 55.0,
             "currency": "USD"
           },
           "net": {
-            "value": 110.00,
+            "value": 110.0,
             "currency": "USD"
           },
           "subDetail": [
@@ -322,12 +318,12 @@
                 "value": 2
               },
               "unitPrice": {
-                "value": 30.00,
+                "value": 30.0,
                 "currency": "USD"
               },
               "factor": 1.1,
               "net": {
-                "value": 66.00,
+                "value": 66.0,
                 "currency": "USD"
               },
               "udi": [
@@ -378,12 +374,12 @@
                 "value": 2
               },
               "unitPrice": {
-                "value": 15.00,
+                "value": 15.0,
                 "currency": "USD"
               },
               "factor": 1.1,
               "net": {
-                "value": 33.00,
+                "value": 33.0,
                 "currency": "USD"
               }
             },
@@ -429,12 +425,12 @@
                 "value": 2
               },
               "unitPrice": {
-                "value": 5.00,
+                "value": 5.0,
                 "currency": "USD"
               },
               "factor": 1.1,
               "net": {
-                "value": 11.00,
+                "value": 11.0,
                 "currency": "USD"
               }
             }
@@ -469,12 +465,12 @@
             ]
           },
           "unitPrice": {
-            "value": 220.00,
+            "value": 220.0,
             "currency": "USD"
           },
           "factor": 0.07,
           "net": {
-            "value": 15.40,
+            "value": 15.4,
             "currency": "USD"
           }
         }

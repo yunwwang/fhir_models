@@ -7,10 +7,6 @@
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003ch2\u003eSubject Type\u003c/h2\u003e\n      \u003cp\u003ePossible subject types.\u003c/p\u003e\n    \u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",

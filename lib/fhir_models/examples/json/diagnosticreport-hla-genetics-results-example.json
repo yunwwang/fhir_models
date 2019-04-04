@@ -9,7 +9,7 @@
         "resourceType": "DiagnosticReport",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003ch3\u003eHLA-A,-B,-C genotyping report for Mary Chalmers (MRN:12345)\u003c/h3\u003e\n\t\t\t\t\t\t\u003cpre\u003e\n  LOCUS   ALLELE 1            ALLELE 2\n  HLA-A   HLA-A:01:01G        HLA-A*01:02\n  HLA-B   HLA-B*15:01:01G     HLA-B*57:01:01G\n  HLA-C   HLA-C*01:02:01G     HLA-C*03:04:01G\n                \u003c/pre\u003e\n\t\t\t\t\t\t\u003cp\u003eAllele assignments based on IMGT/HLA 3.23\u003c/p\u003e\n\t\t\t\t\t\t\u003cp\u003eEffective date: 2015-12-15\u003c/p\u003e\n\t\t\t\t\t\t\u003cp\u003eMethod: Sequencing of exons 2 and 3 of HLA Class I genes\u003c/p\u003e\n\t\t\t\t\t\t\u003cp\u003eLab: aTypingLab Inc\u003c/p\u003e\n\t\t\t\t\t\t\u003cp\u003eNote: Please refer the \u003ca href\u003d\"genomics.html#hla\"\u003eimplementation guide \u003c/a\u003e for more explanation on this\n                carefully organized bundle example.\u003c/p\u003e\n\t\t\t\t\t\t\u003cpre\u003e\n  Bob Milius - NMDP - 2016-12-01\n\n  Transaction bundle that creates and links:\n  + DiagnosticReport summarizing genotyping for HLA-A,-B,-C typing of patient(donor)\n  + Obervations for each genotype\n  + Observations for each allele\n  + Sequences for exons 2 and 3 for HLA-A,-B, -C\n\n  The endpoints of the following resources are hardcoded into this transaction bundle\n  because these are presumed to already exist when developing the DiagnosticRequest\n  which was to generate this report bundle:\n\n  Patient/119 (potential donor)\n  Specimen/120 (buccal swab)\n  Organization/68  (typing lab)\n  ServiceRequest/123  (report is based on this request)\n                \u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<h3>HLA-A,-B,-C genotyping report for Mary Chalmers (MRN:12345)</h3>\n\t\t\t\t\t\t<pre>\n  LOCUS   ALLELE 1            ALLELE 2\n  HLA-A   HLA-A:01:01G        HLA-A*01:02\n  HLA-B   HLA-B*15:01:01G     HLA-B*57:01:01G\n  HLA-C   HLA-C*01:02:01G     HLA-C*03:04:01G\n                </pre>\n\t\t\t\t\t\t<p>Allele assignments based on IMGT/HLA 3.23</p>\n\t\t\t\t\t\t<p>Effective date: 2015-12-15</p>\n\t\t\t\t\t\t<p>Method: Sequencing of exons 2 and 3 of HLA Class I genes</p>\n\t\t\t\t\t\t<p>Lab: aTypingLab Inc</p>\n\t\t\t\t\t\t<p>Note: Please refer the <a href=\"genomics.html#hla\">implementation guide </a> for more explanation on this\n                carefully organized bundle example.</p>\n\t\t\t\t\t\t<pre>\n  Bob Milius - NMDP - 2016-12-01\n\n  Transaction bundle that creates and links:\n  + DiagnosticReport summarizing genotyping for HLA-A,-B,-C typing of patient(donor)\n  + Obervations for each genotype\n  + Observations for each allele\n  + Sequences for exons 2 and 3 for HLA-A,-B, -C\n\n  The endpoints of the following resources are hardcoded into this transaction bundle\n  because these are presumed to already exist when developing the DiagnosticRequest\n  which was to generate this report bundle:\n\n  Patient/119 (potential donor)\n  Specimen/120 (buccal swab)\n  Organization/68  (typing lab)\n  ServiceRequest/123  (report is based on this request)\n                </pre>\n\t\t\t\t\t</div>"
         },
         "extension": [
           {
@@ -120,7 +120,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-A*01:01:01:01, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-A*01:01:01:01, exon 2&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -159,7 +159,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-A*01:01:01:01, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-A*01:01:01:01, exon 3&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -198,7 +198,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-A*01:02, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-A*01:02, exon 2&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -237,7 +237,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-A*01:02, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-A*01:02, exon 3&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -276,7 +276,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-B*15:01:01:01, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-B*15:01:01:01, exon 2&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -315,7 +315,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-B*15:01:01:01, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-B*15:01:01:01, exon 3&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -354,7 +354,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-B*57:01:01, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-B*57:01:01, exon 2&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -393,7 +393,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-B*57:01:01, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-B*57:01:01, exon 3&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -432,7 +432,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-C*01:02:01, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-C*01:02:01, exon 2&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -471,7 +471,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-C*01:02:01, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-C*01:02:01, exon 3&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -510,7 +510,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-C*03:04:01:01, exon 2\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-C*03:04:01:01, exon 2&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -549,7 +549,7 @@
         "resourceType": "MolecularSequence",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003e\u0026quot;HLA-C*03:04:01:01, exon 3\u0026quot;\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>&quot;HLA-C*03:04:01:01, exon 3&quot;</pre>\n\t\t\t\t\t</div>"
         },
         "type": "dna",
         "coordinateSystem": 0,
@@ -588,7 +588,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-A:01:01:01G\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>HLA-A:01:01:01G</pre>\n\t\t\t\t\t</div>"
         },
         "extension": [
           {
@@ -657,7 +657,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-A*01:02\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>HLA-A*01:02</pre>\n\t\t\t\t\t</div>"
         },
         "extension": [
           {
@@ -726,7 +726,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-A:01:01G+HLA-A*01:02\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>HLA-A:01:01G+HLA-A*01:02</pre>\n\t\t\t\t\t</div>"
         },
         "extension": [
           {
@@ -795,7 +795,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-B*15:01:01G\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>HLA-B*15:01:01G</pre>\n\t\t\t\t\t</div>"
         },
         "extension": [
           {
@@ -864,7 +864,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-B*57:01:01G\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>HLA-B*57:01:01G</pre>\n\t\t\t\t\t</div>"
         },
         "extension": [
           {
@@ -933,7 +933,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-B*15:01:01G+HLA-B*57:01:01G\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>HLA-B*15:01:01G+HLA-B*57:01:01G</pre>\n\t\t\t\t\t</div>"
         },
         "extension": [
           {
@@ -1002,7 +1002,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-C*01:02:01\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>HLA-C*01:02:01</pre>\n\t\t\t\t\t</div>"
         },
         "extension": [
           {
@@ -1071,7 +1071,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-C*03:04:01:01\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>HLA-C*03:04:01:01</pre>\n\t\t\t\t\t</div>"
         },
         "extension": [
           {
@@ -1140,7 +1140,7 @@
         "resourceType": "Observation",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\t\t\t\u003cpre\u003eHLA-C*01:02:01G+HLA-C*03:04:01G\u003c/pre\u003e\n\t\t\t\t\t\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<pre>HLA-C*01:02:01G+HLA-C*03:04:01G</pre>\n\t\t\t\t\t</div>"
         },
         "extension": [
           {

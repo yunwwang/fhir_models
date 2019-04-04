@@ -27,7 +27,7 @@
       ]
     }
   ],
-  "description": "Additional instructions for the user to guide their input (i.e. a human readable version of a regular expression like \"nnn-nnn-nnn\"). In most UIs this is the placeholder (or \u0027ghost\u0027) text placed directly inside the edit controls and that disappear when the control gets the focus.",
+  "description": "Additional instructions for the user to guide their input (i.e. a human readable version of a regular expression like \"nnn-nnn-nnn\"). In most UIs this is the placeholder (or 'ghost') text placed directly inside the edit controls and that disappear when the control gets the focus.",
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -72,7 +72,7 @@
         ],
         "path": "Extension",
         "short": "User prompt for format",
-        "definition": "Additional instructions for the user to guide their input (i.e. a human readable version of a regular expression like \"nnn-nnn-nnn\"). In most UIs this is the placeholder (or \u0027ghost\u0027) text placed directly inside the edit controls and that disappear when the control gets the focus.",
+        "definition": "Additional instructions for the user to guide their input (i.e. a human readable version of a regular expression like \"nnn-nnn-nnn\"). In most UIs this is the placeholder (or 'ghost') text placed directly inside the edit controls and that disappear when the control gets the focus.",
         "min": 0,
         "max": "1",
         "base": {
@@ -88,7 +88,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -96,8 +96,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -237,7 +237,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "User prompt for format",
-        "definition": "Additional instructions for the user to guide their input (i.e. a human readable version of a regular expression like \"nnn-nnn-nnn\"). In most UIs this is the placeholder (or \u0027ghost\u0027) text placed directly inside the edit controls and that disappear when the control gets the focus.",
+        "definition": "Additional instructions for the user to guide their input (i.e. a human readable version of a regular expression like \"nnn-nnn-nnn\"). In most UIs this is the placeholder (or 'ghost') text placed directly inside the edit controls and that disappear when the control gets the focus.",
         "min": 0,
         "max": "1",
         "mapping": [

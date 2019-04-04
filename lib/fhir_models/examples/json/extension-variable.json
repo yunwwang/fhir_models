@@ -27,7 +27,7 @@
       ]
     }
   ],
-  "description": "Variable specifying a logic to generate a variable for use in subsequent logic.  The name of the variable will be added to FHIRPath\u0027s context when processing descendants of the element that contains this extension.",
+  "description": "Variable specifying a logic to generate a variable for use in subsequent logic.  The name of the variable will be added to FHIRPath's context when processing descendants of the element that contains this extension.",
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -71,7 +71,7 @@
         ],
         "path": "Extension",
         "short": "Variable for processing",
-        "definition": "Variable specifying a logic to generate a variable for use in subsequent logic.  The name of the variable will be added to FHIRPath\u0027s context when processing descendants of the element that contains this extension.",
+        "definition": "Variable specifying a logic to generate a variable for use in subsequent logic.  The name of the variable will be added to FHIRPath's context when processing descendants of the element that contains this extension.",
         "comment": "Ordering of variable extension declarations is significant as variables declared in one repetition of this extension might be used in subsequent extension repetitions.",
         "min": 0,
         "max": "*",
@@ -88,7 +88,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -96,8 +96,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -227,7 +227,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Variable for processing",
-        "definition": "Variable specifying a logic to generate a variable for use in subsequent logic.  The name of the variable will be added to FHIRPath\u0027s context when processing descendants of the element that contains this extension.",
+        "definition": "Variable specifying a logic to generate a variable for use in subsequent logic.  The name of the variable will be added to FHIRPath's context when processing descendants of the element that contains this extension.",
         "comment": "Ordering of variable extension declarations is significant as variables declared in one repetition of this extension might be used in subsequent extension repetitions.",
         "min": 0,
         "max": "*"

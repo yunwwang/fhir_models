@@ -8,9 +8,11 @@
   "experimental": true,
   "description": "Optional Extensions Element",
   "code": "effective",
-  "base": ["ValueSet"],
+  "base": [
+    "ValueSet"
+  ],
   "type": "date",
-  "xpath": "f:ValueSet/f:extension[@url\u003d\u0027http://hl7.org/fhir/StructureDefinition/valueset-effectiveDate\u0027] | /f:#effectiveDate",
+  "xpath": "f:ValueSet/f:extension[@url='http://hl7.org/fhir/StructureDefinition/valueset-effectiveDate'] | /f:#effectiveDate",
   "xpathUsage": "normal",
   "multipleOr": true,
   "multipleAnd": true

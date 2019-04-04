@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Bundle xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
   <id value="bundle-response"/>
 <!--   this example bundle is a transaction response    -->
   <meta>
@@ -47,7 +48,7 @@
     <!--   important responses from the server   -->
       <status value="201 Created"/>
       <location value="Patient/12423/_history/1"/>
-      <etag value="W/&#34;1&#34;"/>
+      <etag value="W/&quot;1&quot;"/>
       <lastModified value="2014-08-18T01:43:33Z"/>
       <outcome>
         <OperationOutcome>
@@ -79,7 +80,7 @@
     <response>
       <status value="200 OK"/>
       <location value="Patient/123/_history/4"/>
-      <etag value="W/&#34;4&#34;"/>
+      <etag value="W/&quot;4&quot;"/>
     </response>
   </entry>
   <entry>
@@ -88,7 +89,7 @@
     <!--   created a new resource for this one   -->
       <status value="201 Created"/>
       <location value="Patient/12424/_history/1"/>
-      <etag value="W/&#34;1&#34;"/>
+      <etag value="W/&quot;1&quot;"/>
     </response>
   </entry>
   <entry>
@@ -97,7 +98,7 @@
     <!--   created a new resource for this one   -->
       <status value="200 ok"/>
       <location value="Patient/123a/_history/3"/>
-      <etag value="W/&#34;3&#34;"/>
+      <etag value="W/&quot;3&quot;"/>
     </response>
   </entry>
   <entry>

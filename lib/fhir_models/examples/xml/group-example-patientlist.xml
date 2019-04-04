@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Group xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Group xmlns="http://hl7.org/fhir">
   <id value="example-patientlist"/>
   <meta>
     <security>
@@ -7,12 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="additional"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>All patients primarily attributed to Practitioner 123</p>
-    </div>
-  </text>
+  
   <type value="person"/>
   <actual value="true"/>
   <characteristic>

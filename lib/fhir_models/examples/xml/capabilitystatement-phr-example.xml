@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><CapabilityStatement xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir">
   <id value="phr"/>
   <meta>
     <security>
@@ -7,28 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-     
-      <p>Prototype Capability Statement for September 2013 Connectathon</p>
-     
-      <p>The server offers read and search support on the following resource types:</p>
-     
-      <ul>
-      
-        <li>Patient</li>
-      
-        <li>DocumentReference</li>
-      
-        <li>Condition</li>
-      
-        <li>DiagnosticReport</li>
-    
-      </ul>
-    
-    </div>
-  </text>
+  
   <name value="PHR Template"/>
   <status value="draft"/>
   <date value="2013-06-18"/>

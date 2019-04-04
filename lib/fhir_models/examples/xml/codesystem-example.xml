@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><CodeSystem xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
   <id value="example"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
@@ -9,44 +10,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>CodeSystem "ACME Codes for Cholesterol": This is an example code system that includes 
-        all the codes for serum cholesterol defined by ACME inc.</p>
-      <p>Developed by: FHIR project team (example)</p>
-      <p>Published for testing on 28-Jan 2016</p>
-      <p>This code system defines all the ACME codes for serum cholesterol:</p>
-      <table class="grid">
-        <tr>
-          <td>
-            <b>Code</b>
-          </td>
-          <td>
-            <b>Display</b>
-          </td>
-          <td>
-            <b>Definition</b>
-          </td>
-        </tr>
-        <tr>
-          <td>chol-mmol</td>
-          <td>SChol (mmol/L)</td>
-          <td>Serum Cholesterol, in mmol/L</td>
-        </tr>
-        <tr>
-          <td>chol-mass</td>
-          <td>SChol (mg/L)</td>
-          <td>Serum Cholesterol, in mg/L</td>
-        </tr>
-        <tr>
-          <td>chol</td>
-          <td>SChol</td>
-          <td>Serum Cholesterol</td>
-        </tr>
-      </table>
-    </div>
-  </text>
+  
   
 <!--    
 	  for this example, we use a real URI, since this example does have a canonical URL

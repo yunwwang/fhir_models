@@ -1,10 +1,6 @@
 {
   "resourceType": "AppointmentResponse",
   "id": "exampleresp",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eAccept Brian MRI results discussion\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://example.org/sampleappointmentresponse-identifier",
@@ -32,7 +28,7 @@
     "display": "Dr Adam Careful"
   },
   "participantStatus": "tentative",
-  "comment": "can\u0027t we try for this time, can\u0027t do mornings",
+  "comment": "can't we try for this time, can't do mornings",
   "meta": {
     "tag": [
       {

@@ -1,10 +1,6 @@
 {
   "resourceType": "ClaimResponse",
   "id": "UR3503",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA sample unsolicited pre-authorization response which authorizes basic dental services to be performed for a patient.\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://www.SocialBenefitsInc.com/fhir/ClaimResponse",
@@ -70,7 +66,7 @@
         }
       ],
       "net": {
-        "value": 250.00,
+        "value": 250.0,
         "currency": "USD"
       },
       "noteNumber": [
@@ -86,7 +82,7 @@
             ]
           },
           "amount": {
-            "value": 250.00,
+            "value": 250.0,
             "currency": "USD"
           }
         },
@@ -99,7 +95,7 @@
             ]
           },
           "amount": {
-            "value": 10.00,
+            "value": 10.0,
             "currency": "USD"
           }
         },
@@ -111,7 +107,7 @@
               }
             ]
           },
-          "value": 100.00
+          "value": 100.0
         },
         {
           "category": {
@@ -122,7 +118,7 @@
             ]
           },
           "amount": {
-            "value": 240.00,
+            "value": 240.0,
             "currency": "USD"
           }
         }
@@ -142,7 +138,7 @@
         ]
       },
       "net": {
-        "value": 800.00,
+        "value": 800.0,
         "currency": "USD"
       },
       "adjudication": [
@@ -155,7 +151,7 @@
             ]
           },
           "amount": {
-            "value": 800.00,
+            "value": 800.0,
             "currency": "USD"
           }
         },
@@ -167,7 +163,7 @@
               }
             ]
           },
-          "value": 100.00
+          "value": 100.0
         },
         {
           "category": {
@@ -178,7 +174,7 @@
             ]
           },
           "amount": {
-            "value": 800.00,
+            "value": 800.0,
             "currency": "USD"
           }
         }
@@ -195,7 +191,7 @@
         ]
       },
       "amount": {
-        "value": 1050.00,
+        "value": 1050.0,
         "currency": "USD"
       }
     },
@@ -208,7 +204,7 @@
         ]
       },
       "amount": {
-        "value": 1040.00,
+        "value": 1040.0,
         "currency": "USD"
       }
     }

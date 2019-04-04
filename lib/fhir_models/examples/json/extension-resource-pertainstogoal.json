@@ -55,7 +55,7 @@
         "path": "Extension",
         "short": "Pertains to goal",
         "definition": "Indicates that the resource is related to either the measurement, achievement or progress towards the referenced goal.  For example, a Procedure to exercise pertainsToGoal of losing weight.",
-        "comment": "This extension is  limited to subject-specific activity-related resources (events \u0026 intents).  I.e. This can\u0027t be put on Goal or Patient.  This association isn\u0027t for the purpose of goal management, but for things such as noting that a particular observation result, prescription or other activity is pertinent to the achievement (or possibly non-achievement) of the referenced goal.",
+        "comment": "This extension is  limited to subject-specific activity-related resources (events & intents).  I.e. This can't be put on Goal or Patient.  This association isn't for the purpose of goal management, but for things such as noting that a particular observation result, prescription or other activity is pertinent to the achievement (or possibly non-achievement) of the referenced goal.",
         "min": 0,
         "max": "*",
         "base": {
@@ -71,7 +71,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -79,8 +79,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -214,7 +214,7 @@
         "path": "Extension",
         "short": "Pertains to goal",
         "definition": "Indicates that the resource is related to either the measurement, achievement or progress towards the referenced goal.  For example, a Procedure to exercise pertainsToGoal of losing weight.",
-        "comment": "This extension is  limited to subject-specific activity-related resources (events \u0026 intents).  I.e. This can\u0027t be put on Goal or Patient.  This association isn\u0027t for the purpose of goal management, but for things such as noting that a particular observation result, prescription or other activity is pertinent to the achievement (or possibly non-achievement) of the referenced goal.",
+        "comment": "This extension is  limited to subject-specific activity-related resources (events & intents).  I.e. This can't be put on Goal or Patient.  This association isn't for the purpose of goal management, but for things such as noting that a particular observation result, prescription or other activity is pertinent to the achievement (or possibly non-achievement) of the referenced goal.",
         "min": 0,
         "max": "*"
       },

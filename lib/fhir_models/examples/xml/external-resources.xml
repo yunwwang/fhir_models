@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="externals"/>
   <meta>
@@ -380,7 +379,7 @@
         <date value="2018-02-15"/>
         <publisher value="NEMA MITA DICOM"/>
         <description value="Transitive closure of CID 29 AcquisitionModality"/>
-        <copyright value="&#xA9; 2018 NEMA"/>
+        <copyright value="© 2018 NEMA"/>
         <compose>
           <include>
             <system value="http://dicom.nema.org/resources/ontology/DCM"/>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><AllergyIntolerance xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
   <id value="fishallergy"/>
   <meta>
     <security>
@@ -7,14 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="additional"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>allergy is to fresh fish. Tolerates canned fish</p>
-      <p>recordedDate:2015-08-06T00:00:00-06:00</p>
-      <p>substance:Fish - dietary (substance)</p>
-    </div>   
-  </text>
+  
 
   <!--  an identifier used for this Adverse Reaction Risk  -->
   <identifier>

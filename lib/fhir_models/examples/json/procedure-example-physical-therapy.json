@@ -1,10 +1,6 @@
 {
   "resourceType": "Procedure",
   "id": "physical-therapy",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eAssessment of passive range of motion for both knees on Sept 27, 2016 due to osteoarthritis\u003c/div\u003e"
-  },
   "basedOn": [
     {
       "reference": "ServiceRequest/physical-therapy",

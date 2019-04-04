@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Questionnaire xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://hl7.org/fhir">
   <id value="bb"/>
   <meta>
     <security>
@@ -7,27 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <pre>
-        <b>Birth details - To be completed by health professional</b>
-  Name of child: ____________________________________
-            Sex: __
-            
-  Neonatal Information
-    Birth Weight (kg): ___________
-    Birth Length (cm): ___________
-    Vitamin K given  : __
-             1st dose: ___________
-             2nd dose: ___________
-    Hep B given      : __
-      Date given     : ___________
-    Abnormalities noted at birth:
-      _______________________________________________
-      </pre>
-    </div>
-  </text>
+  
   <url value="http://hl7.org/fhir/Questionnaire/bb"/>
   <title value="NSW Government My Personal Health Record"/>
   <status value="draft"/>

@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "860150",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the Claim\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://happypdocs.com/claim",
@@ -92,11 +88,11 @@
       },
       "servicedDate": "2014-08-16",
       "unitPrice": {
-        "value": 75.00,
+        "value": 75.0,
         "currency": "USD"
       },
       "net": {
-        "value": 75.00,
+        "value": 75.0,
         "currency": "USD"
       }
     }

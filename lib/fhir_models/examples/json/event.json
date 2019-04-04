@@ -1,10 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "Event",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eto do\u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -68,16 +64,16 @@
           {
             "key": "inv-2",
             "severity": "error",
-            "human": "reason elements can only be specified if status is NOT \u0027not-done\u0027",
-            "expression": "status!\u003d\u0027not-done\u0027 or (reasonCode.exists().not() and reasonReference.exists().not())",
-            "xpath": "not(f:status/@value\u003d\u0027not-done\u0027) or not(exists(f:reasonCode) or exists(f:reasonReference))"
+            "human": "reason elements can only be specified if status is NOT 'not-done'",
+            "expression": "status!='not-done' or (reasonCode.exists().not() and reasonReference.exists().not())",
+            "xpath": "not(f:status/@value='not-done') or not(exists(f:reasonCode) or exists(f:reasonReference))"
           },
           {
             "key": "inv-1",
             "severity": "error",
-            "human": "Not Done Reason can only be specified if status is \u0027not-done\u0027",
-            "expression": "status\u003d\u0027not-done\u0027 or notDoneReason.exists().not()",
-            "xpath": "f:status/@value\u003d\u0027not-done\u0027 or not(exists(f:notDoneReason))"
+            "human": "Not Done Reason can only be specified if status is 'not-done'",
+            "expression": "status='not-done' or notDoneReason.exists().not()",
+            "xpath": "f:status/@value='not-done' or not(exists(f:notDoneReason))"
           }
         ],
         "isModifier": false,
@@ -89,7 +85,7 @@
           },
           {
             "identity": "rim",
-            "map": "Act[moodCode\u003dEVN]"
+            "map": "Act[moodCode=EVN]"
           }
         ]
       },
@@ -158,7 +154,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dDEFN].target"
+            "map": ".outboundRelationship[typeCode=DEFN].target"
           }
         ]
       },
@@ -189,7 +185,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dDEFN].target"
+            "map": ".outboundRelationship[typeCode=DEFN].target"
           }
         ]
       },
@@ -227,7 +223,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dFLFS].target"
+            "map": ".outboundRelationship[typeCode=FLFS].target"
           }
         ]
       },
@@ -236,7 +232,7 @@
         "path": "Event.partOf",
         "short": "Part of referenced event",
         "definition": "A larger event of which this particular {{title}} is a component or step.",
-        "comment": "Not to be used to link an {{title}} to an Encounter - use \u0027context\u0027 for that.\n\n[The allowed reference resources may be adjusted as appropriate for the event resource].",
+        "comment": "Not to be used to link an {{title}} to an Encounter - use 'context' for that.\n\n[The allowed reference resources may be adjusted as appropriate for the event resource].",
         "requirements": "[E.g. Drug administration as part of a procedure, procedure as part of observation, etc.].",
         "alias": [
           "container"
@@ -265,7 +261,7 @@
           },
           {
             "identity": "rim",
-            "map": ".inboundRelationship[typeCode\u003dCOMP].source[moodCode\u003dEVN]"
+            "map": ".inboundRelationship[typeCode=COMP].source[moodCode=EVN]"
           }
         ]
       },
@@ -299,7 +295,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dPERT].target[classCode\u003dCLNTRL, moodCode\u003dEVN]"
+            "map": ".outboundRelationship[typeCode=PERT].target[classCode=CLNTRL, moodCode=EVN]"
           }
         ]
       },
@@ -387,7 +383,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".inboundRelationship[typeCode\u003dSUBJ].source[classCode\u003dCACT, moodCode\u003dEVN].reasonCOde"
+            "map": ".inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde"
           }
         ]
       },
@@ -443,7 +439,7 @@
         "path": "Event.subject",
         "short": "Individual service was done for/to",
         "definition": "The individual or set of individuals the action is being or was performed on.",
-        "comment": "[For resources that aren\u0027t patient-specific, the set of allowed resources may be extended to include other things.  Group should generally be retained unless there\u0027s certainty this resource won\u0027t be used for veterinary, research or public health settings where Group may be necessary (e.g. this cage of rats/crate of chickens, group of people in a 5 mile radious of the incident, etc.)].",
+        "comment": "[For resources that aren't patient-specific, the set of allowed resources may be extended to include other things.  Group should generally be retained unless there's certainty this resource won't be used for veterinary, research or public health settings where Group may be necessary (e.g. this cage of rats/crate of chickens, group of people in a 5 mile radious of the incident, etc.)].",
         "requirements": "Links the {{title}} to the Patient context.",
         "alias": [
           "patient"
@@ -473,7 +469,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dSBJ].role"
+            "map": ".participation[typeCode=SBJ].role"
           },
           {
             "identity": "w5",
@@ -515,7 +511,7 @@
           },
           {
             "identity": "rim",
-            "map": ".inboundRelationship(typeCode\u003dCOMP].source[classCode\u003c\u003dPCPR, moodCode\u003dEVN]"
+            "map": ".inboundRelationship(typeCode=COMP].source[classCode<=PCPR, moodCode=EVN]"
           },
           {
             "identity": "w5",
@@ -528,7 +524,7 @@
         "path": "Event.occurrence[x]",
         "short": "When {{title}} occurred/is occurring",
         "definition": "The date, period or timing when the {{title}} did occur or is occurring.",
-        "comment": "This indicates when the activity actually occurred or is occurring, not when it was asked/requested/ordered to occur.  For the latter, look at the occurence element of the  Request this {{event}} is \"basedOn\".  The status code allows differentiation of whether the timing reflects a historic event or an ongoing event.  Ongoing events should not include an upper bound in the Period or Timing.bounds.\n\n[The list of types may be constrained as appropriate for the type of event.  The use of \u0027Timing\u0027 in type is generally only appropriate for Events that are typically used to represent summary information.].",
+        "comment": "This indicates when the activity actually occurred or is occurring, not when it was asked/requested/ordered to occur.  For the latter, look at the occurence element of the  Request this {{event}} is \"basedOn\".  The status code allows differentiation of whether the timing reflects a historic event or an ongoing event.  Ongoing events should not include an upper bound in the Period or Timing.bounds.\n\n[The list of types may be constrained as appropriate for the type of event.  The use of 'Timing' in type is generally only appropriate for Events that are typically used to represent summary information.].",
         "alias": [
           "timing"
         ],
@@ -570,7 +566,7 @@
       {
         "id": "Event.recorded",
         "path": "Event.recorded",
-        "short": "When {{title}} was first captured in the subject\u0027s record",
+        "short": "When {{title}} was first captured in the subject's record",
         "definition": "The date the occurrence of the {{title}} was first captured in the record - potentially significantly after the occurrence of the event.",
         "min": 0,
         "max": "1",
@@ -593,7 +589,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dAUT].time"
+            "map": ".participation[typeCode=AUT].time"
           },
           {
             "identity": "w5",
@@ -605,7 +601,7 @@
         "id": "Event.reported[x]",
         "path": "Event.reported[x]",
         "short": "Reported rather than primary record",
-        "definition": "Indicates if this record was captured as a secondary \u0027reported\u0027 record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.",
+        "definition": "Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.",
         "requirements": "Reported data may have different rules on editing and may be visually distinguished from primary data.",
         "alias": [
           "informer"
@@ -637,7 +633,7 @@
         "mapping": [
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dRPT].role"
+            "map": ".participation[typeCode=RPT].role"
           },
           {
             "identity": "w5",
@@ -650,7 +646,7 @@
         "path": "Event.performer",
         "short": "Who performed {{title}} and what they did",
         "definition": "Indicates who or what performed the {{title}} and how they were involved.",
-        "comment": "[Resources may choose to replace this with just a single performer or repeating where there\u0027s no need to distinguish the function performed].",
+        "comment": "[Resources may choose to replace this with just a single performer or repeating where there's no need to distinguish the function performed].",
         "min": 0,
         "max": "*",
         "base": {
@@ -732,7 +728,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dPRF].role[scoper.determinerCode\u003dINSTANCE]"
+            "map": ".participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]"
           },
           {
             "identity": "w5",
@@ -770,7 +766,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dLOC].role"
+            "map": ".participation[typeCode=LOC].role"
           },
           {
             "identity": "w5",
@@ -857,7 +853,7 @@
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode\u003dRSON].target"
+            "map": ".outboundRelationship[typeCode=RSON].target"
           },
           {
             "identity": "w5",
@@ -891,7 +887,7 @@
           },
           {
             "identity": "rim",
-            "map": ".inboundRelationship(typeCode\u003dSUBJ].source[classCode\u003dANNGEN, moodCode\u003dEVN].value[xsi:type\u003dST]"
+            "map": ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]"
           }
         ]
       }

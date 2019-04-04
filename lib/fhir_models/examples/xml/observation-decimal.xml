@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
 	<id value="decimal"/>
 	<meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: decimal</p><p><b>status</b>: final</p><p><b>code</b>: Decimal Testing Observation <span>(Details )</span></p><blockquote><p><b>component</b></p><p><b>code</b>: Component <span>(Details )</span></p><p><b>value</b>: 1.0 g</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Component <span>(Details )</span></p><p><b>value</b>: 1.00 g</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Component <span>(Details )</span></p><p><b>value</b>: 1.0 g</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Component <span>(Details )</span></p><p><b>value</b>: 1E-22 g</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Component <span>(Details )</span></p><p><b>value</b>: 1000000000000000000 g</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Component <span>(Details )</span></p><p><b>value</b>: 1.000000000000000000E-245 g</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Component <span>(Details )</span></p><p><b>value</b>: -1.000000000000000000E+245 g</p></blockquote></div></text><status value="final"/>
+  <status value="final"/>
 	<code>
     <text value="Decimal Testing Observation"/>
 	</code>

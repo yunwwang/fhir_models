@@ -1,15 +1,11 @@
 {
   "resourceType": "Encounter",
   "id": "home",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eEncounter with patient @example who is at home\u003c/div\u003e"
-  },
   "contained": [
     {
       "resourceType": "Location",
       "id": "home",
-      "description": "Client\u0027s home",
+      "description": "Client's home",
       "mode": "kind"
     }
   ],
@@ -42,7 +38,7 @@
     {
       "location": {
         "reference": "#home",
-        "display": "Client\u0027s home"
+        "display": "Client's home"
       },
       "status": "completed",
       "period": {

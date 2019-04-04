@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Consent xmlns="http://hl7.org/fhir">
   <id value="consent-example-notThis"/>
   <meta>
     <security>
@@ -7,22 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. 
-	The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. 
-	In other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase "consent to" rather 
-	than "withhold" or "withdraw" consent for.
-    <p>
-	specific to use-case 2. Withhold or withdraw consent for disclosure of a specific record (e.g. Lab Order/Result) 
-	</p><p>
-    Patient "P. van de Heuvel" Primary Care Provider, Dr. Philip Primary, has ordered a set of lab test which Adam 
-   wishes to keep as private as possible.  At the sample collection facility, he indicates that he would 
-   like withhold consent to disclose the order and all results associated with that specific order from 
-   all other providers  
-   </p>
-   </div>
-  </text>
+  
   <status value="active"/>
   <scope>
     <coding>

@@ -1,10 +1,6 @@
 {
   "resourceType": "Patient",
   "id": "animal",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \n      \u003ctable\u003e\n        \n        \u003ctbody\u003e\n          \n          \u003ctr\u003e\n            \n            \u003ctd\u003eId\u003c/td\u003e\n            \n            \u003ctd\u003eKenzi (Dog: Golden Retriever)\u003c/td\u003e\n          \n          \u003c/tr\u003e\n          \n          \u003ctr\u003e\n            \n            \u003ctd\u003eOwner\u003c/td\u003e\n            \n            \u003ctd\u003ePeter Chalmers, 534 Erewhon, Pleasantville, Vic, 3999\u003c/td\u003e\n          \n          \u003c/tr\u003e\n          \n          \u003ctr\u003e\n            \n            \u003ctd\u003eContacts\u003c/td\u003e\n            \n            \u003ctd\u003eWork: (03) 5555 6473\u003c/td\u003e\n          \n          \u003c/tr\u003e\n          \n          \u003ctr\u003e\n            \n            \u003ctd\u003eId\u003c/td\u003e\n            \n            \u003ctd\u003eDog Tag: 1234123 (Maroondah City Council)\u003c/td\u003e\n          \n          \u003c/tr\u003e\n        \n        \u003c/tbody\u003e\n      \n      \u003c/table\u003e\n    \n    \u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/patient-animal",
@@ -107,7 +103,7 @@
     }
   ],
   "managingOrganization": {
-    "display": "Pete\u0027s Vetinary Services"
+    "display": "Pete's Vetinary Services"
   },
   "meta": {
     "tag": [

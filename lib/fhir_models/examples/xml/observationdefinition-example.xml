@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ObservationDefinition xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ObservationDefinition xmlns="http://hl7.org/fhir">
   <id value="example"/>
   <meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>code</b>: Glucose [Moles/volume] in Blood <span>(Details : {LOINC code '15074-8' = 'Glucose [Moles/volume] in Blood', given as 'Glucose [Moles/volume] in Blood'})</span></p></div></text><code> 
+  <code> 
     <coding>
       <system value="http://loinc.org"/> 
       <code value="15074-8"/> 

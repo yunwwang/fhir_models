@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
   <id value="glossy"/>
   <meta>
     <lastUpdated value="2014-11-13T11:41:00+11:00"/>
@@ -9,13 +10,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Henry Levin the 7th</p>
-      <p>MRN: 123456. Male, 24-Sept 1932</p>
-    </div>
-  </text>
+  
   <extension url="http://example.org/StructureDefinition/trials">
     <valueCode value="renal"/>
   </extension>

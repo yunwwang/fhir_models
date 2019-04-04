@@ -8,9 +8,11 @@
   "experimental": true,
   "description": "Optional Extensions Element",
   "code": "author",
-  "base": ["ValueSet"],
+  "base": [
+    "ValueSet"
+  ],
   "type": "string",
-  "xpath": "f:ValueSet/f:extension[@url\u003d\u0027http://hl7.org/fhir/StructureDefinition/valueset-author\u0027] | /f:#author",
+  "xpath": "f:ValueSet/f:extension[@url='http://hl7.org/fhir/StructureDefinition/valueset-author'] | /f:#author",
   "xpathUsage": "normal",
   "multipleOr": true,
   "multipleAnd": true

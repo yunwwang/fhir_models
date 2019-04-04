@@ -1,10 +1,6 @@
 {
   "resourceType": "QuestionnaireResponse",
   "id": "ussg-fht-answers",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: ussg-fht-answers\u003c/p\u003e\u003cp\u003e\u003cb\u003equestionnaire\u003c/b\u003e: \u003ca\u003eQuestionnaire/ussg-fht\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: in-progress\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003ehttp://hl7.org/fhir/Patient/proband\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthored\u003c/b\u003e: 17/01/2008\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eitem\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003elinkId\u003c/b\u003e: 0\u003c/p\u003e\u003ch3\u003eItems\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eitem\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003elinkId\u003c/b\u003e: 1\u003c/p\u003e\u003cp\u003e\u003cb\u003edefinition\u003c/b\u003e: \u003ca\u003ehttp://loinc.org/fhir/DataElement/54126-8\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etext\u003c/b\u003e: Your health information\u003c/p\u003e\u003ch3\u003eItems\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eitem\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003elinkId\u003c/b\u003e: 2\u003c/p\u003e\u003cp\u003e\u003cb\u003edefinition\u003c/b\u003e: \u003ca\u003ehttp://loinc.org/fhir/DataElement/54114-4\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etext\u003c/b\u003e: Family member health information\u003c/p\u003e\u003ch3\u003eItems\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003c/div\u003e"
-  },
   "questionnaire": "Questionnaire/ussg-fht",
   "status": "in-progress",
   "subject": {
@@ -434,7 +430,7 @@
             },
             {
               "linkId": "2.1.2",
-              "text": "This family member\u0027s history of disease",
+              "text": "This family member's history of disease",
               "item": [
                 {
                   "linkId": "2.1.2.1",
@@ -573,7 +569,7 @@
             },
             {
               "linkId": "2.1.2",
-              "text": "This family member\u0027s history of disease",
+              "text": "This family member's history of disease",
               "item": [
                 {
                   "linkId": "2.1.2.1",
@@ -1140,7 +1136,7 @@
             },
             {
               "linkId": "2.1.2",
-              "text": "This family member\u0027s history of disease",
+              "text": "This family member's history of disease",
               "item": [
                 {
                   "linkId": "2.1.2.1",
@@ -1284,7 +1280,7 @@
             },
             {
               "linkId": "2.1.2",
-              "text": "This family member\u0027s history of disease",
+              "text": "This family member's history of disease",
               "item": [
                 {
                   "linkId": "2.1.2.1",
@@ -1577,7 +1573,7 @@
             },
             {
               "linkId": "2.1.2",
-              "text": "This family member\u0027s history of disease",
+              "text": "This family member's history of disease",
               "item": [
                 {
                   "linkId": "2.1.2.1",
@@ -2073,7 +2069,7 @@
             },
             {
               "linkId": "2.1.2",
-              "text": "This family member\u0027s history of disease",
+              "text": "This family member's history of disease",
               "item": [
                 {
                   "linkId": "2.1.2.1",
@@ -2105,7 +2101,7 @@
             },
             {
               "linkId": "2.1.2",
-              "text": "This family member\u0027s history of disease",
+              "text": "This family member's history of disease",
               "item": [
                 {
                   "linkId": "2.1.2.1",
@@ -2244,7 +2240,7 @@
             },
             {
               "linkId": "2.1.2",
-              "text": "This family member\u0027s history of disease",
+              "text": "This family member's history of disease",
               "item": [
                 {
                   "linkId": "2.1.2.1",

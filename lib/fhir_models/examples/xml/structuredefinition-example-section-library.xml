@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><StructureDefinition xmlns="http://hl7.org/fhir"> 
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir"> 
   <id value="example-section-library"/>
   <meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-section-library</p><p><b>url</b>: <b>http://hl7.org/fhir/StructureDefinition/example-section-library</b></p><p><b>name</b>: DocumentSectionLibrary</p><p><b>title</b>: Document Section Library (For testing section templates)</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: 05/11/2018 5:57:00 PM</p><p><b>kind</b>: complex-type</p><p><b>abstract</b>: true</p><p><b>type</b>: <a>Composition</a></p><p><b>baseDefinition</b>: <a>http://hl7.org/fhir/StructureDefinition/Composition</a></p><p><b>derivation</b>: constraint</p><h3>Differentials</h3><table><tr><td>-</td><td><b>Element</b></td></tr><tr><td>*</td><td>todo-bundle</td></tr></table></div></text><url value="http://hl7.org/fhir/StructureDefinition/example-section-library"/>
+  <url value="http://hl7.org/fhir/StructureDefinition/example-section-library"/>
   <name value="DocumentSectionLibrary"/>
   <title value="Document Section Library (For testing section templates)"/>
   <status value="active"/>

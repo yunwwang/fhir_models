@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Consent xmlns="http://hl7.org/fhir">
   <id value="consent-example-Out"/>
   <meta>
     <security>
@@ -7,20 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. 
-	The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. 
-	In other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase "consent to" rather 
-	than "withhold" or "withdraw" consent for.
-    <p>
-	Specific to use-case 0) Withhold Authorization of sharing data for Treatment
-	</p><p>
-    Patient "P. van de Heuvel" wishes to have no data at the Good Health Psychiatric Hospital 
-   available for normal treatment use.
-   </p>
-   </div>
-  </text>
+  
   <status value="active"/>
   <scope>
     <coding>

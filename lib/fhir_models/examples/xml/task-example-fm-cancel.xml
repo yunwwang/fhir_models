@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Task xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Task xmlns="http://hl7.org/fhir">
 	<!--    This is an example to demonstrate using task for actioning a claim reversal  -->
 	<id value="fm-example1"/> 
 	<meta>
@@ -8,14 +9,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<p>
-				<b> Generated Narrative with Details</b>
-			</p>
-		</div>
-	</text>
+  
 	<identifier> 
 		<use value="official"/> 
 		<system value="http:/happyvalley.com/task"/> 

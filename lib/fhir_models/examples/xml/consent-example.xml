@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Consent xmlns="http://hl7.org/fhir">
 	<id value="consent-example-basic"/>
 	<meta>
     <security>
@@ -7,18 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<p>
-	Authorize Normal access for Treatment
-			</p>
-			<p>
-    Patient "P. van de Heuvel" wishes to have all of the PHI collected at the Good Health Psychiatric Hospital 
-   available for normal treatment use.
-			</p>
-		</div>
-	</text>
+  
 	<status value="active"/>
 	<scope>
 		<coding>

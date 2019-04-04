@@ -1,10 +1,6 @@
 {
   "resourceType": "ImagingStudy",
   "id": "example-xr",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eXR Wrist 3+ Views. John Smith (MRN: 09236). Accession: W12342398. Performed: 2017-01-01. 1 series, 2 images.\u003c/div\u003e"
-  },
   "identifier": [
     {
       "use": "official",

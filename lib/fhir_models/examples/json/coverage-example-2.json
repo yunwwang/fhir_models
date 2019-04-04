@@ -1,10 +1,6 @@
 {
   "resourceType": "Coverage",
   "id": "7546D",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the coverage\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://xyz.com/codes/identifier",
@@ -96,7 +92,7 @@
         ]
       },
       "valueMoney": {
-        "value": 20.00,
+        "value": 20.0,
         "currency": "USD"
       },
       "exception": [

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
 	<id value="example-extensional"/>
 	<meta>
 		<!--    shareable value sets are fully described, and can be put in the HL7 registry    -->
@@ -10,23 +11,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<p>Value set "LOINC Codes for Cholesterol": This is an example value set that includes 
-        all the  codes for serum cholesterol from LOINC v2.36.</p>
-			<p>Developed by: FHIR project team (example)</p>
-			<p>Published for testing on 13-June 2012</p>
-			<p>This value set includes the following LOINC codes:</p>
-			<ul>
-				<li>14647-2: Cholesterol [Moles/Volume]</li>
-				<li>2093-3: Cholesterol [Mass/Volume]</li>
-				<li>35200-5: Cholesterol [Mass Or Moles/Volume] </li>
-				<li>9342-7: Cholesterol [Percentile]</li>
-			</ul>
-			<p>This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.</p>
-		</div>
-	</text>
+	
 	<!--    
 	  for this example, we use a real URI, since this example does have a canonical address
 		at which it's posted. Alternatively, We could have used an OID, or a UUID.

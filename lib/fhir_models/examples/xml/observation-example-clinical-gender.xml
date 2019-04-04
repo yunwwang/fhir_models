@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
   <id value="clinical-gender"/>
   <meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: clinical-gender</p><p><b>status</b>: final</p><p><b>category</b>: Social History <span>(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'social-history' = 'Social History', given as 'Social History'})</span></p><p><b>code</b>: Gender identity <span>(Details : {LOINC code '76691-5' = 'Gender identity', given as 'Gender identity'})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>encounter</b>: <a>Encounter/example</a></p><p><b>effective</b>: 01/02/2018</p><p><b>performer</b>: <a>Encounter/example</a></p><p><b>value</b>: Feminism in boy <span>(Details : {SNOMED CT code '191788006' = 'Feminism in boy', given as 'Feminism in boy (finding)'})</span></p></div></text><status value="final"/>
+  <status value="final"/>
   <category>
     <coding>
       <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>

@@ -65,7 +65,7 @@
         "path": "Extension",
         "short": "Reference to a contra-indication that is the basis for this error",
         "definition": "A reference to a stored contraindication that is the basis for this issue. A recipient can expect that the item referenced in this extension is being retained for record keeping purposes.",
-        "comment": "Operation Outcome records are transient items that are returned in response to specific interactions or operations. Contraindications are items that can be stored in the patient\u0027s records as reasons that things were not done (or done). This extension allows a transient operation outcome to refer to a persistent entry in the patient record as the basis for the outcome.",
+        "comment": "Operation Outcome records are transient items that are returned in response to specific interactions or operations. Contraindications are items that can be stored in the patient's records as reasons that things were not done (or done). This extension allows a transient operation outcome to refer to a persistent entry in the patient record as the basis for the outcome.",
         "min": 0,
         "max": "1",
         "base": {
@@ -81,7 +81,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -89,8 +89,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -224,7 +224,7 @@
         "path": "Extension",
         "short": "Reference to a contra-indication that is the basis for this error",
         "definition": "A reference to a stored contraindication that is the basis for this issue. A recipient can expect that the item referenced in this extension is being retained for record keeping purposes.",
-        "comment": "Operation Outcome records are transient items that are returned in response to specific interactions or operations. Contraindications are items that can be stored in the patient\u0027s records as reasons that things were not done (or done). This extension allows a transient operation outcome to refer to a persistent entry in the patient record as the basis for the outcome.",
+        "comment": "Operation Outcome records are transient items that are returned in response to specific interactions or operations. Contraindications are items that can be stored in the patient's records as reasons that things were not done (or done). This extension allows a transient operation outcome to refer to a persistent entry in the patient record as the basis for the outcome.",
         "min": 0,
         "max": "1"
       },

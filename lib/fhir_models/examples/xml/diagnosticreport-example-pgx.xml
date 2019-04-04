@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><DiagnosticReport xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<DiagnosticReport xmlns="http://hl7.org/fhir">
 	<id value="example-pgx"/>
 	<meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-pgx</p><p><b>basedOn</b>: <a>ServiceRequest/example-pgx</a></p><p><b>status</b>: final</p><p><b>code</b>: Pharmacogenetics Report <span>(Details : {https://system/PGxReport code 'PGxReport' = 'PGxReport', given as 'Pharmacogenetics Report'})</span></p><p><b>subject</b>: <a>Bob Smith</a></p><p><b>effective</b>: 15/10/2016 12:34:56 PM</p><p><b>issued</b>: 20/10/2016 2:00:05 PM</p><p><b>performer</b>: <a>Organization/4829</a></p><p><b>result</b>: <a>Observation/example-phenotype</a></p><p><b>presentedForm</b>: </p></div></text><basedOn>
+  <basedOn>
 		<reference value="ServiceRequest/example-pgx"/>
 	</basedOn>
 	<status value="final"/>

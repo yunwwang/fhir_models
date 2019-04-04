@@ -1,10 +1,6 @@
 {
   "resourceType": "PaymentReconciliation",
   "id": "ER2500",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the PaymentReconciliation\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://www.BenefitsInc.com/fhir/enrollmentresponse",
@@ -30,7 +26,7 @@
   "disposition": "2014 August mid-month settlement.",
   "paymentDate": "2014-08-01",
   "paymentAmount": {
-    "value": 7000.00,
+    "value": 7000.0,
     "currency": "USD"
   },
   "paymentIdentifier": {
@@ -71,7 +67,7 @@
         "reference": "Organization/1"
       },
       "amount": {
-        "value": 3500.00,
+        "value": 3500.0,
         "currency": "USD"
       }
     },
@@ -93,7 +89,7 @@
       },
       "date": "2014-08-12",
       "amount": {
-        "value": 4000.00,
+        "value": 4000.0,
         "currency": "USD"
       }
     },
@@ -112,7 +108,7 @@
       },
       "date": "2014-08-16",
       "amount": {
-        "value": -1500.00,
+        "value": -1500.0,
         "currency": "USD"
       }
     }

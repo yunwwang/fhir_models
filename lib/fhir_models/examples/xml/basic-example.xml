@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Basic xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Basic xmlns="http://hl7.org/fhir">
   <id value="referral"/>
   <meta>
     <security>
@@ -7,17 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p><b>Patient:</b>Roel</p>
-      <p><b>Requestor:</b>Dokter Bronsig</p>
-      <p><b>Type:</b>Consultation</p>
-      <p><b>Target Date:</b>April 1 - April 31</p>
-      <p>COMPLETED</p>
-      <b>The patient had fever peaks over the last couple of days. He is worried about these peaks.</b>
-    </div>
-  </text>
+  
   <extension url="http://example.org/do-not-use/fhir-extensions/referral#requestingPractitioner">
     <valueReference>
       <reference value="Practitioner/f201"/>

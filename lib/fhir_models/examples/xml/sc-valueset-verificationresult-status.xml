@@ -1,64 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <ConceptMap xmlns="http://hl7.org/fhir">
   <id value="sc-verificationresult-status"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <h2>statusCanonicalMap (http://hl7.org/fhir/ConceptMap/sc-verificationresult-status)</h2>
-      <p>Mapping from 
-        <a href="valueset-verificationresult-status.html">http://hl7.org/fhir/ValueSet/verificationresult-status</a> to 
-        <a href="valueset-resource-status.html">http://hl7.org/fhir/ValueSet/resource-status</a>
-      </p>
-      <p>DRAFT. Published on 06/06/2018 12:06:02 AM by HL7 (FHIR Project) (
-        <a href="http://hl7.org/fhir">http://hl7.org/fhir</a>, 
-        <a href="mailto:fhir@lists.hl7.org">fhir@lists.hl7.org</a>). 
-      </p>
-      <div>
-        <p>Canonical Mapping for &quot;The validation status of the target&quot;</p>
-
-      </div>
-      <br/>
-      <table class="grid">
-        <tr>
-          <td>
-            <b>Source Code</b>
-          </td>
-          <td>
-            <b>Equivalence</b>
-          </td>
-          <td>
-            <b>Destination Code</b>
-          </td>
-        </tr>
-        <tr>
-          <td>attested</td>
-          <td>equivalent</td>
-          <td>draft</td>
-        </tr>
-        <tr>
-          <td>validated</td>
-          <td>equivalent</td>
-          <td>accepted</td>
-        </tr>
-        <tr>
-          <td>in-process</td>
-          <td>equivalent</td>
-          <td>active</td>
-        </tr>
-        <tr>
-          <td>val-fail, reval-fail</td>
-          <td>equivalent</td>
-          <td>failed</td>
-        </tr>
-        <tr>
-          <td>req-revalid (Requires revalidation)</td>
-          <td>equivalent</td>
-          <td>replaced</td>
-        </tr>
-      </table>
-    </div>
-  </text>
+  
   <url value="http://hl7.org/fhir/ConceptMap/sc-verificationresult-status"/>
   <version value="4.0.0"/>
   <name value="statusCanonicalMap"/>

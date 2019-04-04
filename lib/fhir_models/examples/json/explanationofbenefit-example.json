@@ -1,10 +1,6 @@
 {
   "resourceType": "ExplanationOfBenefit",
   "id": "EB3500",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the ExplanationOfBenefit\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://www.BenefitsInc.com/fhir/explanationofbenefit",
@@ -117,7 +113,7 @@
             ]
           },
           "amount": {
-            "value": 120.00,
+            "value": 120.0,
             "currency": "USD"
           }
         },
@@ -129,7 +125,7 @@
               }
             ]
           },
-          "value": 0.80
+          "value": 0.8
         },
         {
           "category": {
@@ -140,7 +136,7 @@
             ]
           },
           "amount": {
-            "value": 96.00,
+            "value": 96.0,
             "currency": "USD"
           }
         }
@@ -160,7 +156,7 @@
       },
       "servicedDate": "2014-08-16",
       "net": {
-        "value": 200.00,
+        "value": 200.0,
         "currency": "USD"
       },
       "adjudication": [
@@ -173,7 +169,7 @@
             ]
           },
           "amount": {
-            "value": 180.00,
+            "value": 180.0,
             "currency": "USD"
           }
         }
@@ -189,7 +185,7 @@
             ]
           },
           "net": {
-            "value": 200.00,
+            "value": 200.0,
             "currency": "USD"
           },
           "udi": [
@@ -207,7 +203,7 @@
                 ]
               },
               "amount": {
-                "value": 180.00,
+                "value": 180.0,
                 "currency": "USD"
               }
             }
@@ -224,11 +220,11 @@
                 ]
               },
               "unitPrice": {
-                "value": 200.00,
+                "value": 200.0,
                 "currency": "USD"
               },
               "net": {
-                "value": 200.00,
+                "value": 200.0,
                 "currency": "USD"
               },
               "udi": [
@@ -246,7 +242,7 @@
                     ]
                   },
                   "amount": {
-                    "value": 200.00,
+                    "value": 200.0,
                     "currency": "USD"
                   }
                 },
@@ -258,7 +254,7 @@
                       }
                     ]
                   },
-                  "value": 0.90
+                  "value": 0.9
                 },
                 {
                   "category": {
@@ -269,7 +265,7 @@
                     ]
                   },
                   "amount": {
-                    "value": 180.00,
+                    "value": 180.0,
                     "currency": "USD"
                   }
                 }
@@ -303,7 +299,7 @@
         ]
       },
       "amount": {
-        "value": 96.00,
+        "value": 96.0,
         "currency": "USD"
       }
     }

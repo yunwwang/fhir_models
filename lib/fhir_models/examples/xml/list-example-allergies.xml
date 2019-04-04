@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><List xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<List xmlns="http://hl7.org/fhir">
   <id value="current-allergies"/>
   <meta>
     <security>
@@ -7,16 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Patient Peter Chalmers, DOB = Dec 25, 1974, MRN = 12345 (Acme Healthcare) has the following allergies</p>
-      <ul>
-        <li>cashew nut allergenic extract Injectable Product (<b>High</b>)</li>
-        <li>Allergenic extract, penicillin (high)</li>
-      </ul>
-    </div>
-  </text>
+  
   <status value="current"/>
   <mode value="working"/>
   <title value="Current Allergy List"/>

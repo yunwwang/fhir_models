@@ -1,10 +1,6 @@
 {
   "resourceType": "ClaimResponse",
   "id": "R3503",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the ClaimResponse to Claim Oral Average with additional items\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://www.BenefitsInc.com/fhir/remittance",
@@ -63,7 +59,7 @@
             ]
           },
           "amount": {
-            "value": 0.00,
+            "value": 0.0,
             "currency": "USD"
           }
         },
@@ -76,7 +72,7 @@
             ]
           },
           "amount": {
-            "value": 0.00,
+            "value": 0.0,
             "currency": "USD"
           }
         }
@@ -94,7 +90,7 @@
             ]
           },
           "amount": {
-            "value": 105.00,
+            "value": 105.0,
             "currency": "USD"
           }
         },
@@ -106,7 +102,7 @@
               }
             ]
           },
-          "value": 80.00
+          "value": 80.0
         },
         {
           "category": {
@@ -117,7 +113,7 @@
             ]
           },
           "amount": {
-            "value": 84.00,
+            "value": 84.0,
             "currency": "USD"
           }
         }
@@ -135,7 +131,7 @@
             ]
           },
           "amount": {
-            "value": 750.00,
+            "value": 750.0,
             "currency": "USD"
           }
         },
@@ -147,7 +143,7 @@
               }
             ]
           },
-          "value": 80.00
+          "value": 80.0
         },
         {
           "category": {
@@ -158,7 +154,7 @@
             ]
           },
           "amount": {
-            "value": 600.00,
+            "value": 600.0,
             "currency": "USD"
           }
         }
@@ -176,7 +172,7 @@
                 ]
               },
               "amount": {
-                "value": 750.00,
+                "value": 750.0,
                 "currency": "USD"
               }
             },
@@ -188,7 +184,7 @@
                   }
                 ]
               },
-              "value": 80.00
+              "value": 80.0
             },
             {
               "category": {
@@ -199,7 +195,7 @@
                 ]
               },
               "amount": {
-                "value": 600.00,
+                "value": 600.0,
                 "currency": "USD"
               }
             }
@@ -217,7 +213,7 @@
                 ]
               },
               "amount": {
-                "value": 0.00,
+                "value": 0.0,
                 "currency": "USD"
               }
             },
@@ -230,7 +226,7 @@
                 ]
               },
               "amount": {
-                "value": 0.00,
+                "value": 0.0,
                 "currency": "USD"
               }
             }
@@ -280,7 +276,7 @@
             ]
           },
           "amount": {
-            "value": 100.00,
+            "value": 100.0,
             "currency": "USD"
           }
         },
@@ -293,7 +289,7 @@
             ]
           },
           "amount": {
-            "value": 10.00,
+            "value": 10.0,
             "currency": "USD"
           }
         },
@@ -305,7 +301,7 @@
               }
             ]
           },
-          "value": 80.00
+          "value": 80.0
         },
         {
           "category": {
@@ -325,7 +321,7 @@
             ]
           },
           "amount": {
-            "value": 72.00,
+            "value": 72.0,
             "currency": "USD"
           }
         }
@@ -370,7 +366,7 @@
               }
             ]
           },
-          "value": 80.00
+          "value": 80.0
         },
         {
           "category": {
@@ -414,7 +410,7 @@
         }
       ],
       "net": {
-        "value": 350.00,
+        "value": 350.0,
         "currency": "USD"
       },
       "noteNumber": [
@@ -430,7 +426,7 @@
             ]
           },
           "amount": {
-            "value": 350.00,
+            "value": 350.0,
             "currency": "USD"
           }
         },
@@ -442,7 +438,7 @@
               }
             ]
           },
-          "value": 80.00
+          "value": 80.0
         },
         {
           "category": {
@@ -453,7 +449,7 @@
             ]
           },
           "amount": {
-            "value": 270.00,
+            "value": 270.0,
             "currency": "USD"
           }
         }

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><GuidanceResponse xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<GuidanceResponse xmlns="http://hl7.org/fhir">
   <id value="example"/>
   <!--   This example demonstrates the response to an $evaluate operation using the GuidanceResponse resource.   -->
   <meta>
@@ -8,7 +9,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>contained</b>: </p><p><b>requestIdentifier</b>: guidanceRequest1</p><p><b>identifier</b>: guidanceResponse1</p><p><b>module</b>: <a>http://someguidelineprovider.org/radiology-appropriateness-guidelines.html</a></p><p><b>status</b>: success</p><p><b>subject</b>: <a>Patient/example</a></p><p><b>encounter</b>: <a>Encounter/example</a></p><p><b>occurrenceDateTime</b>: 10/03/2017 4:02:00 PM</p><p><b>performer</b>: <a>Device/software</a></p><p><b>reasonCode</b>: Guideline Appropriate Ordering Assessment <span>(Details )</span></p><p><b>outputParameters</b>: id: outputParameters1</p></div></text><contained>
+  <contained>
     <Parameters>
       <id value="outputParameters1"/>
       <parameter>

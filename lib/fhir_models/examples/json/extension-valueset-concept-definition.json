@@ -59,7 +59,7 @@
         "path": "Extension",
         "short": "A definition for this code",
         "definition": "A definition that describes the meaning of this code when used as part of this value set.",
-        "comment": "This is provided for when the source code system doesn\u0027t actually provide a definition (there are many such). Providing an definition for a code SHOULD NOT be done where the underlying code system provides a definition.",
+        "comment": "This is provided for when the source code system doesn't actually provide a definition (there are many such). Providing an definition for a code SHOULD NOT be done where the underlying code system provides a definition.",
         "min": 0,
         "max": "1",
         "base": {
@@ -75,7 +75,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -83,8 +83,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -215,7 +215,7 @@
         "path": "Extension",
         "short": "A definition for this code",
         "definition": "A definition that describes the meaning of this code when used as part of this value set.",
-        "comment": "This is provided for when the source code system doesn\u0027t actually provide a definition (there are many such). Providing an definition for a code SHOULD NOT be done where the underlying code system provides a definition.",
+        "comment": "This is provided for when the source code system doesn't actually provide a definition (there are many such). Providing an definition for a code SHOULD NOT be done where the underlying code system provides a definition.",
         "min": 0,
         "max": "1",
         "isModifier": false

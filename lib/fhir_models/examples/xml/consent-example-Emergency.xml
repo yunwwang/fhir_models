@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Consent xmlns="http://hl7.org/fhir">
   <id value="consent-example-Emergency"/>
   <meta>
     <security>
@@ -7,20 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>
-	Withhold Authorization for Treatment rule for Emegency Treatment
-	</p>
-      <p>
-    Patient "P. van de Heuvel" wishes to have no data at the Good Health Psychiatric Hospital 
-   available rule for Emergency treatment use.
-   An overall Deny consent Directive, with an exception "Permit" of purposeOfUse "ETREAT" 
-   at "Good Health" hospital, and exception "Deny" all other purposeOfUse from good health hospital.
-   </p>
-    </div>
-  </text>
+  
   <status value="active"/>
   <scope>
     <coding>

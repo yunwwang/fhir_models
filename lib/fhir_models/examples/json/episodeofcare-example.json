@@ -1,10 +1,6 @@
 {
   "resourceType": "EpisodeOfCare",
   "id": "example",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      HACC Program for Peter James Chalmers at HL7 Healthcare 15 Sept 2014 - current\u003cbr/\u003e\n\t\t\twas on leave from 22 Sept - 24 Sept while in respite care\n    \u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://example.org/sampleepisodeofcare-identifier",

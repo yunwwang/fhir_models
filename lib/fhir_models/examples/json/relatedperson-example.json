@@ -1,10 +1,6 @@
 {
   "resourceType": "RelatedPerson",
   "id": "benedicte",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003ctable\u003e\n        \u003ctbody\u003e\n          \u003ctr\u003e\n            \u003ctd\u003eName\u003c/td\u003e\n            \u003ctd\u003eBénédicte du Marché\u003c/td\u003e\n          \u003c/tr\u003e\n          \u003ctr\u003e\n            \u003ctd\u003eAddress\u003c/td\u003e\n            \u003ctd\u003e43, Place du Marché Sainte Catherine, 75004 Paris, France\u003c/td\u003e\n          \u003c/tr\u003e\n          \u003ctr\u003e\n            \u003ctd\u003eContacts\u003c/td\u003e\n            \u003ctd\u003ePhone: +33 (237) 998327\u003c/td\u003e\n          \u003c/tr\u003e\n        \u003c/tbody\u003e\n      \u003c/table\u003e\n    \u003c/div\u003e"
-  },
   "identifier": [
     {
       "use": "usual",

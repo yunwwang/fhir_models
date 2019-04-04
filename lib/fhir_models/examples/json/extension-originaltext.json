@@ -65,7 +65,7 @@
         "path": "Extension",
         "short": "Original Text that represents the data as seen/selected/uttered originally",
         "definition": "A human language representation of the concept (resource/element) as seen/selected/uttered by the user who entered the data and/or which represents the full intended meaning of the user. This can be provided either directly as text, or as a url that is a reference to a portion of the narrative of a resource ([DomainResource.text](narrative.html)).",
-        "comment": "The data in the element does not always capture the correct meaning with all the nuances of the original text. In these cases, the text is used to capture the full meaning of the source. This is commonly used to provide \"what did the user actually see/type\". Note that this extension has the same definition as CodeableConcept.text and SHALL NOT be used on CodeableConcept with type \u003d string in place of CodeableConcept.text but MAY be used with type url. If present on a CodeableConcept with type url as well as CodeableConcept.text, then the CodeableConcept.text SHALL match the referenced narrative. \n\nIt\u0027s also possible to link to the resource narrative using the [narrativeLink extension](extension-narrativelink.html) which does not claim that the data is derived from the text.",
+        "comment": "The data in the element does not always capture the correct meaning with all the nuances of the original text. In these cases, the text is used to capture the full meaning of the source. This is commonly used to provide \"what did the user actually see/type\". Note that this extension has the same definition as CodeableConcept.text and SHALL NOT be used on CodeableConcept with type = string in place of CodeableConcept.text but MAY be used with type url. If present on a CodeableConcept with type url as well as CodeableConcept.text, then the CodeableConcept.text SHALL match the referenced narrative. \n\nIt's also possible to link to the resource narrative using the [narrativeLink extension](extension-narrativelink.html) which does not claim that the data is derived from the text.",
         "min": 0,
         "max": "1",
         "base": {
@@ -81,7 +81,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -89,8 +89,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -221,7 +221,7 @@
         "path": "Extension",
         "short": "Original Text that represents the data as seen/selected/uttered originally",
         "definition": "A human language representation of the concept (resource/element) as seen/selected/uttered by the user who entered the data and/or which represents the full intended meaning of the user. This can be provided either directly as text, or as a url that is a reference to a portion of the narrative of a resource ([DomainResource.text](narrative.html)).",
-        "comment": "The data in the element does not always capture the correct meaning with all the nuances of the original text. In these cases, the text is used to capture the full meaning of the source. This is commonly used to provide \"what did the user actually see/type\". Note that this extension has the same definition as CodeableConcept.text and SHALL NOT be used on CodeableConcept with type \u003d string in place of CodeableConcept.text but MAY be used with type url. If present on a CodeableConcept with type url as well as CodeableConcept.text, then the CodeableConcept.text SHALL match the referenced narrative. \n\nIt\u0027s also possible to link to the resource narrative using the [narrativeLink extension](extension-narrativelink.html) which does not claim that the data is derived from the text.",
+        "comment": "The data in the element does not always capture the correct meaning with all the nuances of the original text. In these cases, the text is used to capture the full meaning of the source. This is commonly used to provide \"what did the user actually see/type\". Note that this extension has the same definition as CodeableConcept.text and SHALL NOT be used on CodeableConcept with type = string in place of CodeableConcept.text but MAY be used with type url. If present on a CodeableConcept with type url as well as CodeableConcept.text, then the CodeableConcept.text SHALL match the referenced narrative. \n\nIt's also possible to link to the resource narrative using the [narrativeLink extension](extension-narrativelink.html) which does not claim that the data is derived from the text.",
         "min": 0,
         "max": "1"
       },

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><OrganizationAffiliation xmlns="http://hl7.org/fhir"> <!--   describes the relationship between Monument HIE and Founding Fathers Memorial Hospital. Founding Fathers is a member of the HIE   -->
+<?xml version="1.0" encoding="UTF-8"?>
+<OrganizationAffiliation xmlns="http://hl7.org/fhir"> <!--   describes the relationship between Monument HIE and Founding Fathers Memorial Hospital. Founding Fathers is a member of the HIE   -->
 
 	<id value="orgrole2"/>
 
@@ -9,7 +10,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: orgrole2</p><p><b>identifier</b>: member hospital = hosp32 (SECONDARY)</p><p><b>active</b>: true</p><p><b>organization</b>: <a>Monument Health Information Exchange</a></p><p><b>participatingOrganization</b>: <a>Founding Fathers Memorial Hospital</a></p><p><b>code</b>: Hospital member <span>(Details : {http://hl7.org/fhir/organization-role code 'member' = 'Member', given as 'Member'})</span></p><p><b>endpoint</b>: <a>Founding Fathers Memorial Hospital HIE endpoint</a></p></div></text><identifier> <!--   internal business ID for Founding Fathers Memorial Hospital assigned by Monument HIE   -->
+  <identifier> <!--   internal business ID for Founding Fathers Memorial Hospital assigned by Monument HIE   -->
         <use value="secondary"/>
         <type>
             <text value="member hospital"/>

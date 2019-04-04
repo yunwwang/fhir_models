@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "760151",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the Pharmacy Claim\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://happypharma.com/claim",
@@ -172,7 +168,7 @@
         "code": "TAB"
       },
       "net": {
-        "value": 90.00,
+        "value": 90.0,
         "currency": "USD"
       },
       "detail": [
@@ -187,7 +183,7 @@
             ]
           },
           "net": {
-            "value": 45.00,
+            "value": 45.0,
             "currency": "USD"
           }
         },
@@ -202,7 +198,7 @@
             ]
           },
           "net": {
-            "value": 9.00,
+            "value": 9.0,
             "currency": "USD"
           }
         },
@@ -217,7 +213,7 @@
             ]
           },
           "net": {
-            "value": 36.00,
+            "value": 36.0,
             "currency": "USD"
           }
         }
@@ -225,7 +221,7 @@
     }
   ],
   "total": {
-    "value": 90.00,
+    "value": 90.0,
     "currency": "USD"
   },
   "meta": {

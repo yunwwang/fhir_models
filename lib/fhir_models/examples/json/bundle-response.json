@@ -24,7 +24,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSome narrative\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
         },
         "active": true,
         "name": [

@@ -1,10 +1,6 @@
 {
   "resourceType": "MessageHeader",
   "id": "1cbdfb97-5859-48a4-8301-d54eab818d68",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003eUpdate Person resource for Peter James CHALMERS (Jim), MRN: 12345 (Acme Healthcare)\u003c/p\u003e\n    \u003c/div\u003e"
-  },
   "eventCoding": {
     "system": "http://example.org/fhir/message-events",
     "code": "admin-notify"

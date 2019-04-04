@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
   <id value="genetics-example1"/>
   <meta>
     <lastUpdated value="2012-05-29T23:45:32Z"/>
@@ -9,11 +10,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Everywoman, Eve. SSN:
-      444222222</div>
-  </text>
+  
   <identifier>
     <type>
       <coding>

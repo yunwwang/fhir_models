@@ -70,7 +70,7 @@
         "path": "Extension",
         "short": "Exposure risk of adverse reaction (allergy or intolerance) to the specified substance/product",
         "definition": "A complex extension allowing structured capture of the exposure risk of the patient for an adverse reaction (allergy or intolerance) to the specified substance/product.",
-        "comment": "This extension is available and is intended to be used as a more completely structured and flexible alternative to the \u0027code\u0027 element for representing positive and negative allergy and intolerance statements.  If this extension element is present, the AllergyIntolerance.code element SHALL be omitted (see invariant \"code or substanceExposureRisk\").",
+        "comment": "This extension is available and is intended to be used as a more completely structured and flexible alternative to the 'code' element for representing positive and negative allergy and intolerance statements.  If this extension element is present, the AllergyIntolerance.code element SHALL be omitted (see invariant \"code or substanceExposureRisk\").",
         "min": 0,
         "max": "1",
         "base": {
@@ -86,7 +86,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -94,8 +94,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           },
           {
@@ -206,7 +206,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dCAGNT].role[classCode\u003dADMM].player[classCode\u003dMAT, determinerCode\u003dKIND, code \u003c\u003d ExposureAgentEntityType]"
+            "map": ".participation[typeCode=CAGNT].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]"
           }
         ]
       },
@@ -696,7 +696,7 @@
         "path": "Extension",
         "short": "Exposure risk of adverse reaction (allergy or intolerance) to the specified substance/product",
         "definition": "A complex extension allowing structured capture of the exposure risk of the patient for an adverse reaction (allergy or intolerance) to the specified substance/product.",
-        "comment": "This extension is available and is intended to be used as a more completely structured and flexible alternative to the \u0027code\u0027 element for representing positive and negative allergy and intolerance statements.  If this extension element is present, the AllergyIntolerance.code element SHALL be omitted (see invariant \"code or substanceExposureRisk\").",
+        "comment": "This extension is available and is intended to be used as a more completely structured and flexible alternative to the 'code' element for representing positive and negative allergy and intolerance statements.  If this extension element is present, the AllergyIntolerance.code element SHALL be omitted (see invariant \"code or substanceExposureRisk\").",
         "min": 0,
         "max": "1",
         "constraint": [
@@ -730,7 +730,7 @@
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode\u003dCAGNT].role[classCode\u003dADMM].player[classCode\u003dMAT, determinerCode\u003dKIND, code \u003c\u003d ExposureAgentEntityType]"
+            "map": ".participation[typeCode=CAGNT].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]"
           }
         ]
       },

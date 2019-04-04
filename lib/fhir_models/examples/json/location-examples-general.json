@@ -10,7 +10,7 @@
         "id": "2",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eUSS Enterprise\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">USS Enterprise</div>"
         },
         "status": "active",
         "name": "USSS Enterprise-D",
@@ -24,7 +24,7 @@
         "id": "3",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eUSSS Enterprise-D Sickbay\u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">USSS Enterprise-D Sickbay</div>"
         },
         "status": "active",
         "name": "USSS Enterprise-D Sickbay",

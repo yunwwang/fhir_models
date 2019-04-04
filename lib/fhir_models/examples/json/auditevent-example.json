@@ -1,10 +1,6 @@
 {
   "resourceType": "AuditEvent",
   "id": "example",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eApplication Start for under service login \u0026quot;Grahame\u0026quot; (id: Grahame\u0027s Test HL7Connect)\u003c/div\u003e"
-  },
   "type": {
     "system": "http://dicom.nema.org/resources/ontology/DCM",
     "code": "110100",
@@ -74,7 +70,7 @@
   "source": {
     "site": "Development",
     "observer": {
-      "display": "Grahame\u0027s Laptop"
+      "display": "Grahame's Laptop"
     },
     "type": [
       {
@@ -115,7 +111,7 @@
         "code": "6",
         "display": "Access / Use"
       },
-      "name": "Grahame\u0027s Laptop"
+      "name": "Grahame's Laptop"
     }
   ],
   "meta": {

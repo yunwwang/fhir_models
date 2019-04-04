@@ -1,10 +1,6 @@
 {
   "resourceType": "CarePlan",
   "id": "preg",
-  "text": {
-    "status": "additional",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003eA maternity care plan (for a pregnant woman).\u003c/p\u003e\n      \u003cp\u003eLMP is 1st Jan, 2013 (a great new years party!) The plan has activities to take prenatal vitamins, schedule first antenatal,\n            and \u0027placeholders\u0027 for the second antenatal and delivery (there would be lots of others of course)\u003c/p\u003e\n      \u003cp\u003eNote that where is a proposed \u0027status\u0027 element against each activity\u003c/p\u003e\n    \u003c/div\u003e"
-  },
   "contained": [
     {
       "resourceType": "Condition",
@@ -102,7 +98,7 @@
       "id": "goal",
       "lifecycleStatus": "active",
       "description": {
-        "text": "Maintain patient\u0027s health throughout pregnancy and ensure a healthy child"
+        "text": "Maintain patient's health throughout pregnancy and ensure a healthy child"
       },
       "subject": {
         "reference": "Patient/1",

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Bundle xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
 	<id value="ussg-fht"/>
 	<meta>
     <security>
@@ -83,7 +84,7 @@
             <value value="http://loinc.org"/>
           </telecom>
 				</contact>
-				<description value="This represents an implementation of the &#34;US Surgeon General family health portrait&#34; form found at https://lforms-demo.nlm.nih.gov"/>
+				<description value="This represents an implementation of the &quot;US Surgeon General family health portrait&quot; form found at https://lforms-demo.nlm.nih.gov"/>
 				<useContext>
           <code>
             <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>

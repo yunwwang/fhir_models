@@ -12,25 +12,25 @@
     {
       "request": {
         "method": "GET",
-        "url": "/MedicationStatement?patient\u003dexample\u0026_list\u003d$current-medications"
+        "url": "/MedicationStatement?patient=example&_list=$current-medications"
       }
     },
     {
       "request": {
         "method": "GET",
-        "url": "/AllergyIntolerance?patient\u003dexample\u0026_list\u003d$current-allergies"
+        "url": "/AllergyIntolerance?patient=example&_list=$current-allergies"
       }
     },
     {
       "request": {
         "method": "GET",
-        "url": "/Condition?patient\u003dexample\u0026_list\u003d$current-problems"
+        "url": "/Condition?patient=example&_list=$current-problems"
       }
     },
     {
       "request": {
         "method": "GET",
-        "url": "/MedicationStatement?patient\u003dexample\u0026notgiven:not\u003dtrue"
+        "url": "/MedicationStatement?patient=example&notgiven:not=true"
       }
     }
   ],

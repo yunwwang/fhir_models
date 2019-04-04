@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><MessageHeader xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageHeader xmlns="http://hl7.org/fhir">
   <id value="1cbdfb97-5859-48a4-8301-d54eab818d68"/>
   <meta>
     <security>
@@ -7,12 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Update Person resource for Peter James CHALMERS (Jim), MRN: 12345 (Acme Healthcare)</p>
-    </div>
-  </text>
+  
   <eventCoding>
     <system value="http://example.org/fhir/message-events"/>
     <code value="admin-notify"/>

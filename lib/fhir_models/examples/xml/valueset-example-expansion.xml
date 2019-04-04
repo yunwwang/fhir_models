@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
 	<id value="example-expansion"/>
 	<meta>
 		<!--    many expansions are not shareable, but this one is    -->
@@ -10,63 +11,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<table class="grid">
-				<tr>
-					<td>http://loinc.org</td>
-					<td>14647-2</td>
-					<td>Cholesterol [Moles/volume] in Serum or Plasma</td>
-				</tr>
-				<tr>
-					<td colspan="3">
-						<b>Additional Cholesterol codes</b>
-					</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>2093-3</td>
-					<td>Cholesterol [Mass/volume] in Serum or Plasma</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>48620-9</td>
-					<td>Cholesterol [Mass/volume] in Serum or Plasma ultracentrifugate</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>9342-7</td>
-					<td>Cholesterol [Percentile]</td>
-				</tr>
-				<tr>
-					<td colspan="3">
-						<b>Cholesterol Ratios</b>
-					</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>2096-6</td>
-					<td>Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>35200-5</td>
-					<td>Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>48089-7</td>
-					<td>Cholesterol/Apolipoprotein B [Molar ratio] in Serum or Plasma</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>55838-7</td>
-					<td>Cholesterol/Phospholipid [Molar ratio] in Serum or Plasma</td>
-				</tr>
-			</table>
-		</div>
-	</text>
+	
 	<url value="http://hl7.org/fhir/ValueSet/example-expansion"/>
 	<version value="20150622"/>
 	<name value="LOINC Codes for Cholesterol in Serum/Plasma"/>

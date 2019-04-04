@@ -7,10 +7,6 @@
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eAccount Types\u003c/h2\u003e\u003cdiv\u003e\u003cp\u003eThis examples value set defines the set of codes that can be used to represent the type of an account.\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eThis value set includes codes from the following code systems:\u003c/p\u003e\u003cul\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"v3/ActCode/cs.html\"\u003e\u003ccode\u003ehttp://terminology.hl7.org/CodeSystem/v3-ActCode\u003c/code\u003e\u003c/a\u003e where concept  is-a  \u003ca href\u003d\"v3/ActCode/cs.html#v3-ActCode-_ActAccountCode\"\u003e_ActAccountCode\u003c/a\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",

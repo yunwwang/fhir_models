@@ -4,10 +4,6 @@
   "meta": {
     "lastUpdated": "2018-12-27T22:37:54.724+11:00"
   },
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e This value set includes codes from multiple codesets. \u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/valueset-extensible",

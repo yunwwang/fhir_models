@@ -65,7 +65,7 @@
         "path": "Extension",
         "short": "Timezone offset, for dates (no timezone in date)",
         "definition": "Timezone offset, for dates where timezone is not allowed as part of the base date.",
-        "comment": "The format must either be \u0027Z\u0027 or +/-HH:NN. This is not allowed on the base date because many implementations have no way to carry a timezone on the base date structure.",
+        "comment": "The format must either be 'Z' or +/-HH:NN. This is not allowed on the base date because many implementations have no way to carry a timezone on the base date structure.",
         "min": 0,
         "max": "1",
         "base": {
@@ -81,7 +81,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -89,8 +89,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -221,7 +221,7 @@
         "path": "Extension",
         "short": "Timezone offset, for dates (no timezone in date)",
         "definition": "Timezone offset, for dates where timezone is not allowed as part of the base date.",
-        "comment": "The format must either be \u0027Z\u0027 or +/-HH:NN. This is not allowed on the base date because many implementations have no way to carry a timezone on the base date structure.",
+        "comment": "The format must either be 'Z' or +/-HH:NN. This is not allowed on the base date because many implementations have no way to carry a timezone on the base date structure.",
         "min": 0,
         "max": "1"
       },

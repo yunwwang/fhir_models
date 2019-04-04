@@ -65,7 +65,7 @@
         "path": "Extension",
         "short": "Dependent Profiles - must be valid against these too",
         "definition": "Instances can only be valid against this StructureDefinition, if they also sucessfully validate against the dependent profile identified in this extension.",
-        "comment": "Ideally, a profile will restate the constraints of it\u0027s base profile and all it\u0027s dependent profiles, but this can get pretty complicated once slicing enters the picture. Tools SHOULD not assume that this profile includes all the constraints from the dependent profile.",
+        "comment": "Ideally, a profile will restate the constraints of it's base profile and all it's dependent profiles, but this can get pretty complicated once slicing enters the picture. Tools SHOULD not assume that this profile includes all the constraints from the dependent profile.",
         "min": 0,
         "max": "*",
         "base": {
@@ -81,7 +81,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -89,8 +89,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -224,7 +224,7 @@
         "path": "Extension",
         "short": "Dependent Profiles - must be valid against these too",
         "definition": "Instances can only be valid against this StructureDefinition, if they also sucessfully validate against the dependent profile identified in this extension.",
-        "comment": "Ideally, a profile will restate the constraints of it\u0027s base profile and all it\u0027s dependent profiles, but this can get pretty complicated once slicing enters the picture. Tools SHOULD not assume that this profile includes all the constraints from the dependent profile.",
+        "comment": "Ideally, a profile will restate the constraints of it's base profile and all it's dependent profiles, but this can get pretty complicated once slicing enters the picture. Tools SHOULD not assume that this profile includes all the constraints from the dependent profile.",
         "min": 0,
         "max": "*"
       },

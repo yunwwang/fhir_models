@@ -1,10 +1,6 @@
 {
   "resourceType": "Consent",
   "id": "consent-example-grantor",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eThe following scenario is based on a question asked on John Moehrke\u0027s blog in the \n\t\u003ca href\u003d\"http://healthcaresecprivacy.blogspot.com/2016/04/consent-given-to-authorized.html\"\u003eConsent given to authorized representative\u003c/a\u003e\n    \u003cp\u003e\nThis is a case where a Patient is giving a limited (read-only) access to an individual.\n\t\u003c/p\u003e\u003cp\u003e\n    Patient \u0026quot;P. van de Heuvel\u0026quot; wishes to provide XXX with read-only access to the data at Good Health Psychiatric Hospital \n   available for patient requested access use.\n   \u003c/p\u003e\n   \u003c/div\u003e"
-  },
   "status": "active",
   "scope": {
     "coding": [

@@ -1,10 +1,6 @@
 {
   "resourceType": "Location",
   "id": "hl7",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      Health Level Seven International\u003cbr/\u003e\n\t\t\t\t3300 Washtenaw Avenue, Suite 227\u003cbr/\u003e\n\t\t\t\tAnn Arbor, MI 48104\u003cbr/\u003e\n\t\t\t\tUSA\u003cbr/\u003e\n\t\t\t\t(+1) 734-677-7777 (phone)\u003cbr/\u003e\n\t\t\t\t(+1) 734-677-6622 (fax)\u003cbr/\u003e\n\t\t\t\tE-mail:  \u003ca href\u003d\"mailto:hq@HL7.org\"\u003ehq@HL7.org\u003c/a\u003e\n    \u003c/div\u003e"
-  },
   "status": "active",
   "name": "Health Level Seven International",
   "description": "HL7 Headquarters",
@@ -53,8 +49,8 @@
     ]
   },
   "position": {
-    "longitude": 42.256500,
-    "latitude": -83.694710
+    "longitude": 42.2565,
+    "latitude": -83.69471
   },
   "meta": {
     "tag": [

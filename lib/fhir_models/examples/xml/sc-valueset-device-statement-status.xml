@@ -1,69 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <ConceptMap xmlns="http://hl7.org/fhir">
   <id value="sc-device-statement-status"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <h2>DeviceUseStatementStatusCanonicalMap (http://hl7.org/fhir/ConceptMap/sc-device-statement-status)</h2>
-      <p>Mapping from 
-        <a href="valueset-device-statement-status.html">http://hl7.org/fhir/ValueSet/device-statement-status</a> to 
-        <a href="valueset-resource-status.html">http://hl7.org/fhir/ValueSet/resource-status</a>
-      </p>
-      <p>DRAFT. Published on 27/12/2018 10:37:54 PM by HL7 (FHIR Project) (
-        <a href="http://hl7.org/fhir">http://hl7.org/fhir</a>, 
-        <a href="mailto:fhir@lists.hl7.org">fhir@lists.hl7.org</a>). 
-      </p>
-      <div>
-        <p>Canonical Mapping for &quot;A coded concept indicating the current status of the Device Usage.&quot;</p>
-
-      </div>
-      <br/>
-      <table class="grid">
-        <tr>
-          <td>
-            <b>Source Code</b>
-          </td>
-          <td>
-            <b>Equivalence</b>
-          </td>
-          <td>
-            <b>Destination Code</b>
-          </td>
-        </tr>
-        <tr>
-          <td>entered-in-error</td>
-          <td>equivalent</td>
-          <td>error</td>
-        </tr>
-        <tr>
-          <td>intended</td>
-          <td>equivalent</td>
-          <td>planned</td>
-        </tr>
-        <tr>
-          <td>active</td>
-          <td>equivalent</td>
-          <td>active</td>
-        </tr>
-        <tr>
-          <td>on-hold</td>
-          <td>equivalent</td>
-          <td>suspended</td>
-        </tr>
-        <tr>
-          <td>stopped</td>
-          <td>equivalent</td>
-          <td>failed</td>
-        </tr>
-        <tr>
-          <td>completed</td>
-          <td>equivalent</td>
-          <td>complete</td>
-        </tr>
-      </table>
-    </div>
-  </text>
+  
   <url value="http://hl7.org/fhir/ConceptMap/sc-device-statement-status"/>
   <version value="4.0.0"/>
   <name value="DeviceUseStatementStatusCanonicalMap"/>

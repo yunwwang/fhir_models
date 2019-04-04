@@ -13,7 +13,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n                        \u003ctable\u003e\n                            \u003ctbody\u003e\n                                \u003ctr\u003e\n                                    \u003ctd\u003eName\u003c/td\u003e\n                                    \u003ctd\u003ePeter James \n                                        \u003cb\u003eChalmers\u003c/b\u003e (\u0026quot;Jim\u0026quot;)\n                                    \u003c/td\u003e\n                                \u003c/tr\u003e\n                                \u003ctr\u003e\n                                    \u003ctd\u003eAddress\u003c/td\u003e\n                                    \u003ctd\u003e534 Erewhon, Pleasantville, Vic, 3999\u003c/td\u003e\n                                \u003c/tr\u003e\n                                \u003ctr\u003e\n                                    \u003ctd\u003eContacts\u003c/td\u003e\n                                    \u003ctd\u003eHome: unknown. Work: (03) 5555 6473\u003c/td\u003e\n                                \u003c/tr\u003e\n                                \u003ctr\u003e\n                                    \u003ctd\u003eId\u003c/td\u003e\n                                    \u003ctd\u003eMRN: 12345 (Acme Healthcare)\u003c/td\u003e\n                                \u003c/tr\u003e\n                            \u003c/tbody\u003e\n                        \u003c/table\u003e\n                    \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <table>\n                            <tbody>\n                                <tr>\n                                    <td>Name</td>\n                                    <td>Peter James \n                                        <b>Chalmers</b> (&quot;Jim&quot;)\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td>Address</td>\n                                    <td>534 Erewhon, Pleasantville, Vic, 3999</td>\n                                </tr>\n                                <tr>\n                                    <td>Contacts</td>\n                                    <td>Home: unknown. Work: (03) 5555 6473</td>\n                                </tr>\n                                <tr>\n                                    <td>Id</td>\n                                    <td>MRN: 12345 (Acme Healthcare)</td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>"
         },
         "identifier": [
           {
@@ -191,7 +191,7 @@
         "link": [
           {
             "relation": "self",
-            "url": "http://local.fhir.org:960/r4/MedicationStatement?_format\u003dapplication/fhir+xml\u0026search-id\u003d804eee4a-0a54-4414-9c07-169952f929\u0026\u0026patient\u003dexample\u0026_list\u003d%24current%2Dmedications\u0026_sort\u003d_id"
+            "url": "http://local.fhir.org:960/r4/MedicationStatement?_format=application/fhir+xml&search-id=804eee4a-0a54-4414-9c07-169952f929&&patient=example&_list=%24current%2Dmedications&_sort=_id"
           }
         ]
       },
@@ -213,7 +213,7 @@
         "link": [
           {
             "relation": "self",
-            "url": "http://local.fhir.org:960/r4/AllergyIntolerance?_format\u003dapplication/fhir+xml\u0026search-id\u003db1981f8a-4139-4db6-923d-77d764c990\u0026\u0026patient\u003dexample\u0026_list\u003d%24current%2Dallergies\u0026_sort\u003d_id"
+            "url": "http://local.fhir.org:960/r4/AllergyIntolerance?_format=application/fhir+xml&search-id=b1981f8a-4139-4db6-923d-77d764c990&&patient=example&_list=%24current%2Dallergies&_sort=_id"
           }
         ]
       },
@@ -235,7 +235,7 @@
         "link": [
           {
             "relation": "self",
-            "url": "http://local.fhir.org:960/r4/Condition?_format\u003dapplication/fhir+xml\u0026search-id\u003d4d097c43-54aa-4157-b500-be22208dd0\u0026\u0026patient\u003dexample\u0026_list\u003d%24current%2Dproblems\u0026_sort\u003d_id"
+            "url": "http://local.fhir.org:960/r4/Condition?_format=application/fhir+xml&search-id=4d097c43-54aa-4157-b500-be22208dd0&&patient=example&_list=%24current%2Dproblems&_sort=_id"
           }
         ]
       },
@@ -257,7 +257,7 @@
         "link": [
           {
             "relation": "self",
-            "url": "http://local.fhir.org:960/r4/MedicationStatement?_format\u003dapplication/fhir+xml\u0026search-id\u003d31d4af75-cdcf-4f85-9666-4bafadebb5\u0026\u0026patient\u003dexample\u0026_sort\u003d_id"
+            "url": "http://local.fhir.org:960/r4/MedicationStatement?_format=application/fhir+xml&search-id=31d4af75-cdcf-4f85-9666-4bafadebb5&&patient=example&_sort=_id"
           }
         ]
       },

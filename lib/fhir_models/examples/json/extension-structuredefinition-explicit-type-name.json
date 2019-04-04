@@ -27,7 +27,7 @@
       ]
     }
   ],
-  "description": "A name to use for the type, in implementations. This is a suggestion; it\u0027s not a normative part of the FHIR specification, but it does appear in the UML diagrams, and is used in generated code, schemas, etc.to identify the type.",
+  "description": "A name to use for the type, in implementations. This is a suggestion; it's not a normative part of the FHIR specification, but it does appear in the UML diagrams, and is used in generated code, schemas, etc.to identify the type.",
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -63,7 +63,7 @@
         ],
         "path": "Extension",
         "short": "Advisory - name of Type for implementations",
-        "definition": "A name to use for the type, in implementations. This is a suggestion; it\u0027s not a normative part of the FHIR specification, but it does appear in the UML diagrams, and is used in generated code, schemas, etc.to identify the type.",
+        "definition": "A name to use for the type, in implementations. This is a suggestion; it's not a normative part of the FHIR specification, but it does appear in the UML diagrams, and is used in generated code, schemas, etc.to identify the type.",
         "min": 0,
         "max": "1",
         "base": {
@@ -79,7 +79,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -87,8 +87,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -218,7 +218,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Advisory - name of Type for implementations",
-        "definition": "A name to use for the type, in implementations. This is a suggestion; it\u0027s not a normative part of the FHIR specification, but it does appear in the UML diagrams, and is used in generated code, schemas, etc.to identify the type.",
+        "definition": "A name to use for the type, in implementations. This is a suggestion; it's not a normative part of the FHIR specification, but it does appear in the UML diagrams, and is used in generated code, schemas, etc.to identify the type.",
         "min": 0,
         "max": "1"
       },

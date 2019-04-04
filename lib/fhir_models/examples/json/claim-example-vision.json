@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "660150",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the Vision Claim\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://happysight.com/claim",
@@ -92,11 +88,11 @@
       },
       "servicedDate": "2014-08-16",
       "unitPrice": {
-        "value": 80.00,
+        "value": 80.0,
         "currency": "USD"
       },
       "net": {
-        "value": 80.00,
+        "value": 80.0,
         "currency": "USD"
       }
     }

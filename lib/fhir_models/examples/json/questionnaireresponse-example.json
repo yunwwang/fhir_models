@@ -1,10 +1,6 @@
 {
   "resourceType": "QuestionnaireResponse",
   "id": "3141",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cpre\u003e\n            Comorbidity? YES\n              Cardial Comorbidity? YES\n                Angina? YES\n                MI? NO\n              Vascular Comorbidity?\n                (no answers)\n              ...\n            Histopathology\n              Abdominal\n                pT category: 1a\n              ...\n          \u003c/pre\u003e\n    \u003c/div\u003e"
-  },
   "contained": [
     {
       "resourceType": "Patient",

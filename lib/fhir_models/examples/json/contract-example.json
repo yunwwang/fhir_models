@@ -1,10 +1,6 @@
 {
   "resourceType": "Contract",
   "id": "C-123",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the contract\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://happyvalley.com/contract",
@@ -14,7 +10,7 @@
   "term": [
     {
       "offer": {
-        "text": "Can\u0027t refuse"
+        "text": "Can't refuse"
       },
       "asset": [
         {
@@ -52,13 +48,13 @@
                 "value": 1
               },
               "unitPrice": {
-                "value": 200.00,
+                "value": 200.0,
                 "currency": "CAD"
               },
               "factor": 1.0,
               "points": 1.0,
               "net": {
-                "value": 200.00,
+                "value": 200.0,
                 "currency": "CAD"
               }
             }

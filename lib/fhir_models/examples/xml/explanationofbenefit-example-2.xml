@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ExplanationOfBenefit xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ExplanationOfBenefit xmlns="http://hl7.org/fhir">
 	<id value="EB3501"/>
 
 	<meta>
@@ -8,10 +9,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">A human-readable rendering of the ExplanationOfBenefit for a claim that had errors, various other attributes (such as accident and hospitalization) are also completed.</div>
-	</text>
+  
 
 	<identifier>
 		<system value="http://www.BenefitsInc.com/fhir/explanationofbenefit"/>

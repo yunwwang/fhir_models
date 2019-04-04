@@ -27,7 +27,7 @@
       ]
     }
   ],
-  "description": "Status code taken from [HL7 template specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id\u003d377) - allows for alignment with the template DSTU, and has more authoring status codes.",
+  "description": "Status code taken from [HL7 template specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=377) - allows for alignment with the template DSTU, and has more authoring status codes.",
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -63,7 +63,7 @@
         ],
         "path": "Extension",
         "short": "Template Status Code (more authoring statuses)",
-        "definition": "Status code taken from [HL7 template specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id\u003d377) - allows for alignment with the template DSTU, and has more authoring status codes.",
+        "definition": "Status code taken from [HL7 template specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=377) - allows for alignment with the template DSTU, and has more authoring status codes.",
         "comment": "The Profile status has the codes that are relevant to end-users/developers, while this extension has the codes used by profile developers.",
         "min": 0,
         "max": "1",
@@ -80,7 +80,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -88,8 +88,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -230,7 +230,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Template Status Code (more authoring statuses)",
-        "definition": "Status code taken from [HL7 template specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id\u003d377) - allows for alignment with the template DSTU, and has more authoring status codes.",
+        "definition": "Status code taken from [HL7 template specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=377) - allows for alignment with the template DSTU, and has more authoring status codes.",
         "comment": "The Profile status has the codes that are relevant to end-users/developers, while this extension has the codes used by profile developers.",
         "min": 0,
         "max": "1"

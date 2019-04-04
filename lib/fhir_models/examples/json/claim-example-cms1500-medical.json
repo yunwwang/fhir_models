@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "MED-00050",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of a CMS 1500 Claim\u003c/div\u003e"
-  },
   "contained": [
     {
       "resourceType": "Patient",
@@ -293,17 +289,17 @@
         ]
       },
       "unitPrice": {
-        "value": 12500.00,
+        "value": 12500.0,
         "currency": "USD"
       },
       "net": {
-        "value": 12500.00,
+        "value": 12500.0,
         "currency": "USD"
       }
     }
   ],
   "total": {
-    "value": 12500.00,
+    "value": 12500.0,
     "currency": "USD"
   },
   "meta": {

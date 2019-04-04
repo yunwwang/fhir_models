@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Provenance xmlns="http://hl7.org/fhir"> 
+<?xml version="1.0" encoding="UTF-8"?>
+<Provenance xmlns="http://hl7.org/fhir"> 
   <id value="consent-signature"/>
   <meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: consent-signature</p><p><b>target</b>: <a>Consent/consent-example-signature</a></p><p><b>recorded</b>: 26/05/2016 12:41:10 AM</p><h3>Agents</h3><table><tr><td>-</td><td><b>Role</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>author (originator) <span>(Details : {http://terminology.hl7.org/CodeSystem/v3-ParticipationType code 'AUT' = 'author (originator))</span></td><td><a>Patient/72</a></td></tr></table><p><b>signature</b>: </p></div></text><target>
+  <target>
     <reference value="Consent/consent-example-signature"/>
   </target>
  

@@ -12,7 +12,7 @@
     "Observation"
   ],
   "type": "string",
-  "expression": "Observation.extension(\u0027http://hl7.org/fhir/StructureDefinition/observation-geneticsAminoAcidChangeName\u0027)",
+  "expression": "Observation.extension('http://hl7.org/fhir/StructureDefinition/observation-geneticsAminoAcidChangeName')",
   "xpathUsage": "normal",
   "multipleOr": true,
   "multipleAnd": true

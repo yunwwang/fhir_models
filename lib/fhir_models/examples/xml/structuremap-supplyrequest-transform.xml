@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><StructureMap xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureMap xmlns="http://hl7.org/fhir">
   <id value="supplyrequest-transform"/>
   <meta>
     <security>
@@ -7,27 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-map "http://hl7.org/fhir/StructureMap/supplyrequest-transform" = supplyRequestTransform
-
-uses "http://hl7.org/fhir/StructureDefinition/ActivityDefinition" as source
-uses "http://hl7.org/fhir/StructureDefinition/SupplyRequest" as target
-
-group main
-  input "source": ActivityDefinition as source
-  input "target": SupplyRequest as target
-
-  "status": for source.id make target.status = 'draft'
-  "category": for source.id make target.category = 'non-stock'
-  "priority": for source.id make target.priority = 'routine'
-  "quantity": for source.quantity make target.orderedItem.quantity
-  "item": for source.code make target.orderedItem.itemCodeableConcept
-  "when": for source.id make target.occurrenceDateTime = Now()
-  "authoredOn": for source.id make target.authoredOn = Now()
-    </div>
-  </text>
+  
   <url value="http://hl7.org/fhir/StructureMap/supplyrequest-transform"/>
   <name value="Transform from an ActivityDefinition to a SupplyRequest"/>
   <status value="draft"/>

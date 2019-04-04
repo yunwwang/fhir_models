@@ -35,7 +35,7 @@
     }
   ],
   "contextInvariant": [
-    "mode \u003d \u0027changes\u0027"
+    "mode = 'changes'"
   ],
   "type": "Extension",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
@@ -57,7 +57,7 @@
         "path": "Extension",
         "short": "Base List for changes",
         "definition": "Reference to the List that a \"change\" list is asserting changes with respect to.",
-        "comment": "Only for mode \u003d changes.",
+        "comment": "Only for mode = changes.",
         "min": 0,
         "max": "1",
         "base": {
@@ -73,7 +73,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -81,8 +81,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -216,7 +216,7 @@
         "path": "Extension",
         "short": "Base List for changes",
         "definition": "Reference to the List that a \"change\" list is asserting changes with respect to.",
-        "comment": "Only for mode \u003d changes.",
+        "comment": "Only for mode = changes.",
         "min": 0,
         "max": "1"
       },

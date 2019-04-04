@@ -1,10 +1,6 @@
 {
   "resourceType": "DetectedIssue",
   "id": "duplicate",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003eSimilar test was performed within the past 14 days\u003c/p\u003e\n      \u003cul\u003e\n        \u003cli\u003e\n          \u003ca href\u003d\"ServiceRequest/id\"\u003eChest CT - ordered May 8, 2013 by Dr. Adam Careful\u003c/a\u003e\n        \u003c/li\u003e\n        \u003cli\u003e\n          \u003ca href\u003d\"ImagingStudy/example\"\u003eImage 1 from Series 3: CT Images on Patient MINT (MINT1234) taken at 1-Jan 2011 01:20 AM\u003c/a\u003e\n        \u003c/li\u003e\n      \u003c/ul\u003e\n    \u003c/div\u003e"
-  },
   "identifier": [
     {
       "use": "official",

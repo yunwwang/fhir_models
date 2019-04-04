@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><QuestionnaireResponse xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
   <!--  Please not that in this questionnaire, the questions are mostly unnamed, that is, the questions are not identified using the <name> element. It will therefore
     be hard to extract useful information in an automated way from this questionnaire. This is, however, quite often the case when modeling existing questionnaires  -->
   <id value="bb"/>
@@ -9,16 +10,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <pre>
-        Cathy Jones, female. Birth weight 3.25 kg at 44.3 cm. 
-        Injection of Vitamin K given on 1972-11-30 (first dose) and 1972-12-11 (second dose)
-        Note: Was able to speak Chinese at birth.
-      </pre>
-    </div>
-  </text>
+  
   <status value="completed"/>
   <subject>
     <reference value="http://hl7.org/fhir/Patient/1"/>

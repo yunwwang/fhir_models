@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><AuditEvent xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<AuditEvent xmlns="http://hl7.org/fhir">
 	<id value="example-error"/>
 	<meta>
     <security>
@@ -7,10 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">Recording that an error has happened due to a client requesting that an Observation resource be Created on the Patient endpoint. Note that the OperationOutcome from failed transaction is recorded as an AuditEvent.entity.</div>
-	</text>  
+    
 	<contained>
 		<!--  contained OperationOutcome from failed transaction  -->
 		<OperationOutcome>

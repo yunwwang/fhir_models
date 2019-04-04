@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "660151",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the Vision Claim for Glasses\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://happysight.com/claim",
@@ -95,11 +91,11 @@
       },
       "servicedDate": "2014-08-16",
       "unitPrice": {
-        "value": 214.00,
+        "value": 214.0,
         "currency": "USD"
       },
       "net": {
-        "value": 214.00,
+        "value": 214.0,
         "currency": "USD"
       },
       "detail": [
@@ -114,11 +110,11 @@
             ]
           },
           "unitPrice": {
-            "value": 100.00,
+            "value": 100.0,
             "currency": "USD"
           },
           "net": {
-            "value": 100.00,
+            "value": 100.0,
             "currency": "USD"
           }
         },
@@ -136,11 +132,11 @@
             "value": 2
           },
           "unitPrice": {
-            "value": 50.00,
+            "value": 50.0,
             "currency": "USD"
           },
           "net": {
-            "value": 100.00,
+            "value": 100.0,
             "currency": "USD"
           }
         },
@@ -155,12 +151,12 @@
             ]
           },
           "unitPrice": {
-            "value": 200.00,
+            "value": 200.0,
             "currency": "USD"
           },
           "factor": 0.07,
           "net": {
-            "value": 14.00,
+            "value": 14.0,
             "currency": "USD"
           }
         }

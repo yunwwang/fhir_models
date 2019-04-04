@@ -13,10 +13,6 @@
       }
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003ePHQ-9 Questionnaire with dynamic logic\u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><NamingSystem xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
   <id value="example-id"/>
   <meta>
     <security>
@@ -7,19 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>
-        <b>Australian IHI Number</b>
-      </p>
-      
-      <p> oid: 1.2.36.1.2001.1003.0</p>
-      
-      <p> uri: http://ns.electronichealth.net.au/id/hi/ihi/1.0</p>
-    
-    </div>
-  </text>
+  
   <name value="Austalian Healthcare Identifier - Individual"/>
   <status value="active"/>
   <kind value="identifier"/>

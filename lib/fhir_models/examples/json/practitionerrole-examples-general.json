@@ -10,7 +10,7 @@
         "id": "f003-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Marc Versteegh\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e BMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Care role\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Marc Versteegh<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f003",
@@ -53,7 +53,7 @@
         "id": "example-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Adam Careful\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003elocation:\u003c/span\u003e South Wing, second floor\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e RP\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eEmail:\u003c/span\u003e dr.adam.careful@example.org\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eidentifier:\u003c/span\u003e 52\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Adam Careful<br/><span style=\"color: gray;\">location:</span> South Wing, second floor<br/><span style=\"color: gray;\">role:</span> RP<br/><span style=\"color: gray;\">Email:</span> dr.adam.careful@example.org<br/><span style=\"color: gray;\">identifier:</span> 52\n          </div>"
         },
         "identifier": [
           {
@@ -113,7 +113,7 @@
         "id": "example-1",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Adam Careful\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e Good Health Clinic\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Adam Careful<br/><span style=\"color: gray;\">organization:</span> Good Health Clinic\n          </div>"
         },
         "period": {
           "start": "2012-01-01"
@@ -135,7 +135,7 @@
         "id": "example-2",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Adam Careful\u003cbr/\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e Good Health Clinic\u003cbr/\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e On call physcologist\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Adam Careful<br/>\n            <span style=\"color: gray;\">organization:</span> Good Health Clinic<br/>\n            <span style=\"color: gray;\">role:</span> On call physcologist\n          </div>"
         },
         "period": {
           "start": "2016-07-01",
@@ -180,7 +180,7 @@
         "id": "f007-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Simone Heps\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e BMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Care role\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Simone Heps<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f007",
@@ -223,7 +223,7 @@
         "id": "f004-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Ronald Briet\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e BMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Care role\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Ronald Briet<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f004",
@@ -266,7 +266,7 @@
         "id": "xcda1-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Sherry Dopplemeyer\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e Cleveland Clinic\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Primary Surgon\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Sherry Dopplemeyer<br/><span style=\"color: gray;\">organization:</span> Cleveland Clinic<br/><span style=\"color: gray;\">role:</span> Primary Surgon\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/xcda1",
@@ -294,7 +294,7 @@
         "id": "f202-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Luigi Maas\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e AUMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Electronic laboratory reporting\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Luigi Maas<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Electronic laboratory reporting\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f202",
@@ -335,7 +335,7 @@
         "id": "f201-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Dokter Bronsig\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e AUMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Implementation of planned interventions\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Dokter Bronsig<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Implementation of planned interventions\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f201",
@@ -376,7 +376,7 @@
         "id": "f203-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Juri van Gelder\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e AUMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Physical therapist\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Juri van Gelder<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Physical therapist\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f203",
@@ -417,7 +417,7 @@
         "id": "f005-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Langeveld Anne\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e BMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Care role\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Langeveld Anne<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f005",
@@ -460,7 +460,7 @@
         "id": "f006-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Rob van den Berk\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e BMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Care role\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Rob van den Berk<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f006",
@@ -503,7 +503,7 @@
         "id": "f001-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Eric van den broek\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e BMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Care role\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Eric van den broek<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f001",
@@ -546,7 +546,7 @@
         "id": "f002-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Pieter Voigt\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e BMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Care role\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Pieter Voigt<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f002",
@@ -589,7 +589,7 @@
         "id": "f204-0",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \u003cspan style\u003d\"color: gray;\"\u003epractitioner:\u003c/span\u003e Carla Espinosa\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003eorganization:\u003c/span\u003e AUMC\u003cbr/\u003e\u003cspan style\u003d\"color: gray;\"\u003erole:\u003c/span\u003e Renal nurse\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Carla Espinosa<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Renal nurse\n          </div>"
         },
         "practitioner": {
           "reference": "Practitioner/f204",

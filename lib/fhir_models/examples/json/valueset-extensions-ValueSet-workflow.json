@@ -8,9 +8,11 @@
   "experimental": true,
   "description": "Optional Extensions Element",
   "code": "workflow",
-  "base": ["ValueSet"],
+  "base": [
+    "ValueSet"
+  ],
   "type": "token",
-  "xpath": "f:ValueSet/f:extension[@url\u003d\u0027http://hl7.org/fhir/StructureDefinition/valueset-workflowStatus\u0027] | /f:#workflowStatus",
+  "xpath": "f:ValueSet/f:extension[@url='http://hl7.org/fhir/StructureDefinition/valueset-workflowStatus'] | /f:#workflowStatus",
   "xpathUsage": "normal",
   "multipleOr": true,
   "multipleAnd": true

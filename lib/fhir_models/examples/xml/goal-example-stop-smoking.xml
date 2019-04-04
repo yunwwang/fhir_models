@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Goal xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Goal xmlns="http://hl7.org/fhir">
 	<id value="stop-smoking"/>
 	<meta>
     <security>
@@ -7,12 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="additional"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<p> A simple care goal for a patient to stop smoking.</p>
-		</div>
-	</text>
+  
 	<identifier>
 		<value value="123"/>
 	</identifier>

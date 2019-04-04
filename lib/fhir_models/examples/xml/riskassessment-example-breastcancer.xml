@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><RiskAssessment xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<RiskAssessment xmlns="http://hl7.org/fhir">
  <id value="breastcancer-risk"/>
   <meta>
     <security>
@@ -7,36 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="additional"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <table>
-        <tr>
-          <td colspan="2">
-            <h1>Information about your risk score:</h1>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <strong>Birthdate:</strong>
-          </td>
-          <td>1981-01-01</td>
-        </tr>
-        <tr>
-          <td>
-            <strong>Gender:</strong>
-          </td>
-          <td>female</td>
-        </tr>
-        <tr>
-          <td>
-            <strong>Ethnicity:</strong>
-          </td>
-          <td>Unknown / Not Reported</td>
-        </tr>
-      </table>
-    </div>
-  </text>
+  
   
   <identifier>
       <use value="official"/>

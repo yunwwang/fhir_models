@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Consent xmlns="http://hl7.org/fhir">
 	<id value="consent-example-pkb"/>
 	<meta>
     <security>
@@ -7,20 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<p>
-        This example demonstrates how to encode this screen shot in a consent resource:
-			</p>
-			<p>
-				<img alt="Screenshot from Patient Knows Best" src="pkb.png"/>
-			</p>
-			<p>
-        Thanks to <a href="https://www.patientsknowbest.com/">Patients Know Best</a> for contributing this example
-			</p>
-		</div>
-	</text>
+  
 	<status value="active"/>
 	<scope>
 		<coding>

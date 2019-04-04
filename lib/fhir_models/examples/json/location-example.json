@@ -1,10 +1,6 @@
 {
   "resourceType": "Location",
   "id": "1",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eBurgers UMC, South Wing, second floor\u003c/div\u003e"
-  },
   "identifier": [
     {
       "value": "B1-S.F2"

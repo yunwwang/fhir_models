@@ -1,10 +1,6 @@
 {
   "resourceType": "AuditEvent",
   "id": "example-error",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eRecording that an error has happened due to a client requesting that an Observation resource be Created on the Patient endpoint. Note that the OperationOutcome from failed transaction is recorded as an AuditEvent.entity.\u003c/div\u003e"
-  },
   "contained": [
     {
       "resourceType": "OperationOutcome",

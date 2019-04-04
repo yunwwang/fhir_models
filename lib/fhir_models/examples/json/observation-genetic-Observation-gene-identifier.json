@@ -12,7 +12,7 @@
     "Observation"
   ],
   "type": "token",
-  "expression": "Observation.extension(\u0027http://hl7.org/fhir/StructureDefinition/observation-geneticsGene\u0027)",
+  "expression": "Observation.extension('http://hl7.org/fhir/StructureDefinition/observation-geneticsGene')",
   "xpathUsage": "normal",
   "multipleOr": true,
   "multipleAnd": true

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Consent xmlns="http://hl7.org/fhir">
   <id value="consent-example-grantor"/>
   <meta>
     <security>
@@ -7,18 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">The following scenario is based on a question asked on John Moehrke's blog in the 
-	<a href="http://healthcaresecprivacy.blogspot.com/2016/04/consent-given-to-authorized.html">Consent given to authorized representative</a>
-    <p>
-This is a case where a Patient is giving a limited (read-only) access to an individual.
-	</p><p>
-    Patient "P. van de Heuvel" wishes to provide XXX with read-only access to the data at Good Health Psychiatric Hospital 
-   available for patient requested access use.
-   </p>
-   </div>
-  </text>
+  
   <status value="active"/>
   <scope>
     <coding>

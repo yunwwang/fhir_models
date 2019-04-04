@@ -1,10 +1,6 @@
 {
   "resourceType": "Coverage",
   "id": "9876B1",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the coverage\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://benefitsinc.com/certificate",
@@ -58,7 +54,7 @@
         ]
       },
       "value": "CB135",
-      "name": "Corporate Baker\u0027s Inc. Local #35"
+      "name": "Corporate Baker's Inc. Local #35"
     },
     {
       "type": {

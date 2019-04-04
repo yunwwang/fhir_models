@@ -1,10 +1,6 @@
 {
   "resourceType": "Location",
   "id": "amb",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eMobile Clinic\u003c/div\u003e"
-  },
   "status": "active",
   "name": "BUMC Ambulance",
   "description": "Ambulance provided by Burgers University Medical Center",

@@ -1,10 +1,6 @@
 {
   "resourceType": "Communication",
   "id": "fm-attachment",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eAttachment which is unsolicited\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://www.providerco.com/communication",
@@ -58,7 +54,7 @@
     {
       "contentAttachment": {
         "contentType": "application/pdf",
-        "data": "SGVsbG8\u003d",
+        "data": "SGVsbG8=",
         "title": "accident notes 20100201.pdf",
         "creation": "2010-02-01T11:50:23-05:00"
       }
@@ -68,7 +64,7 @@
         "contentType": "application/pdf",
         "url": "http://example.org/docs/AB12345",
         "size": 104274,
-        "hash": "SGVsbG8gdGhlcmU\u003d",
+        "hash": "SGVsbG8gdGhlcmU=",
         "creation": "2010-02-01T10:57:34+01:00"
       }
     }

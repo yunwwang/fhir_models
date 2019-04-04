@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Contract xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Contract xmlns="http://hl7.org/fhir">
   <id value="pcd-example-notOrg"/>
 
   <meta>
@@ -8,20 +9,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">The following scenario is based on existing
-      jurisdictional policy and are realized in existing systems in Canada. The default policy is
-      one of implied consent for the provision of care, so these scenarios all deal with withdrawal
-      or withholding consent for that purpose. In other jurisdictions, where an express consent
-      model is used (Opt-In), these would examples would contain the phrase "consent to" rather than
-      "withhold" or "withdraw" consent for. <p> specific to use-case 3) Withhold or withdraw consent
-        for disclosure to a specific provider organization </p><p> Patient "P. van de Heuvel"
-        ex-spouse is a Physician that is employed by Good Health Clinic. P. decides that he would
-        like to withdraw/withhold consent to disclose any instance of his health information to Good
-        Health Clinic. </p>
-    </div>
-  </text>
+  
 
   <issued value="2015-11-18"/>
   <!--  not bound by a timeframe - Contract.applies  -->

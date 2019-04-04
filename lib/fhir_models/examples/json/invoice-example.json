@@ -1,10 +1,6 @@
 {
   "resourceType": "Invoice",
   "id": "example",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eExample of Invoice\u003c/div\u003e"
-  },
   "identifier": [
     {
       "system": "http://myHospital.org/Invoices",

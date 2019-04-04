@@ -1,78 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <ConceptMap xmlns="http://hl7.org/fhir">
   <id value="sc-medication-statement-status"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <h2>Medication Status CodesCanonicalMap (http://hl7.org/fhir/ConceptMap/sc-medication-statement-status)</h2>
-      <p>Mapping from 
-        <a href="valueset-medication-statement-status.html">http://hl7.org/fhir/ValueSet/medication-statement-status</a> to 
-        <a href="valueset-resource-status.html">http://hl7.org/fhir/ValueSet/resource-status</a>
-      </p>
-      <p>DRAFT. Published on 27/12/2018 10:37:54 PM by FHIR Project team (
-        <a href="http://hl7.org/fhir">http://hl7.org/fhir</a>). 
-      </p>
-      <div>
-        <p>Canonical Mapping for &quot;Medication Status Codes&quot;</p>
-
-      </div>
-      <br/>
-      <table class="grid">
-        <tr>
-          <td>
-            <b>Source Code</b>
-          </td>
-          <td>
-            <b>Equivalence</b>
-          </td>
-          <td>
-            <b>Destination Code</b>
-          </td>
-        </tr>
-        <tr>
-          <td>entered-in-error</td>
-          <td>equivalent</td>
-          <td>error</td>
-        </tr>
-        <tr>
-          <td>intended</td>
-          <td>equivalent</td>
-          <td>planned</td>
-        </tr>
-        <tr>
-          <td>active</td>
-          <td>equivalent</td>
-          <td>active</td>
-        </tr>
-        <tr>
-          <td>on-hold</td>
-          <td>equivalent</td>
-          <td>suspended</td>
-        </tr>
-        <tr>
-          <td>stopped</td>
-          <td>equivalent</td>
-          <td>failed</td>
-        </tr>
-        <tr>
-          <td>completed</td>
-          <td>equivalent</td>
-          <td>complete</td>
-        </tr>
-        <tr>
-          <td>unknown</td>
-          <td>equivalent</td>
-          <td>unknown</td>
-        </tr>
-        <tr>
-          <td>not-taken</td>
-          <td>equivalent</td>
-          <td>not-done</td>
-        </tr>
-      </table>
-    </div>
-  </text>
+  
   <url value="http://hl7.org/fhir/ConceptMap/sc-medication-statement-status"/>
   <version value="4.0.0"/>
   <name value="Medication Status CodesCanonicalMap"/>

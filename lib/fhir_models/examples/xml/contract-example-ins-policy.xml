@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Contract xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Contract xmlns="http://hl7.org/fhir">
    <id value="INS-101"/>
 
    <meta>
@@ -8,13 +9,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-      <status value="generated"/>
-      <div xmlns="http://www.w3.org/1999/xhtml">
-         <p>Plan: Your Choice Split Copay (Non-Grandfathered)</p>
-         <p>Certificate Form Number: YCSCWLN (01-2017)</p>
-      </div>
-   </text>
+  
 
    <identifier>
       <system value="http://xyz-insurance.com/forms"/>

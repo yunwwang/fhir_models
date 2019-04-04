@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Group xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Group xmlns="http://hl7.org/fhir">
   <id value="102"/>
   <meta>
     <security>
@@ -7,18 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="additional"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Selected Patients</p>
-      <ul>
-        <li>Patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321</li>
-        <li>Patient Donald D DUCK @ Acme Healthcare, Inc. MR = 123456</li>
-        <li>Patient Simon Notsowell @ Acme Healthcare, Inc. MR = 123457, DECEASED</li>
-        <li>Patient Sandy Notsowell @ Acme Healthcare, Inc. MR = 123458, DECEASED</li>
-      </ul>
-    </div>
-  </text>
+  
   <type value="person"/>
   <actual value="true"/>
   <member>

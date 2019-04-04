@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><BodyStructure xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<BodyStructure xmlns="http://hl7.org/fhir">
 	<id value="tumor"/>
 	<meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: tumor</p><p><b>identifier</b>: 12345</p><p><b>morphology</b>: Splenic mass <span>(Details : {SNOMED CT code '4147007' = 'Mass', given as 'Mass (morphologic abnormality)'})</span></p><p><b>location</b>: Spleen <span>(Details : {SNOMED CT code '78961009' = 'Spleen', given as 'Splenic structure (body structure)'})</span></p><p><b>description</b>: 7 cm maximum diameter</p><p><b>image</b>: </p><p><b>patient</b>: <a>Patient/example</a></p></div></text><identifier>
+  <identifier>
 		<system value="http://goodhealth.org/bodystructure/identifiers"/>
 		<value value="12345"/>
 	</identifier>

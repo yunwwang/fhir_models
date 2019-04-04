@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
   <id value="example-hierarchical"/>
 	<meta>
 		<!--    many expansions are not shareable, but this one is    -->
@@ -10,30 +11,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-     <table class="grid">
-      <tr><td/><td>(Most common)</td></tr>
-      <tr><td>..login</td><td>Login Required</td></tr>
-      <tr><td>..conflict</td><td>Edit Version Conflict</td></tr>
-      <tr><td>processing</td><td>Processing Failure</td></tr>
-      <tr><td>..duplicate</td><td>Duplicate</td></tr>
-      <tr><td>..not-found</td><td>Not Found</td></tr>
-      <tr><td>invalid</td><td>Invalid Content</td></tr>
-      <tr><td>..structure</td><td>Structural Issue</td></tr>
-      <tr><td>..required</td><td>Required element missing</td></tr>
-      <tr><td>..value</td><td>Element value invalid</td></tr>
-      <tr><td>transient</td><td>Transient Issue</td></tr>
-      <tr><td>..lock-error</td><td>Lock Error</td></tr>
-      <tr><td>..exception</td><td>Exception</td></tr>
-      <tr><td>..throttled</td><td>Throttled</td></tr>
-      <tr><td>security</td><td>Security Problem</td></tr>
-      <tr><td>..login</td><td>Login Required</td></tr>
-      <tr><td>..unknown</td><td>Unknown User</td></tr>
-     </table>
-		</div>
-	</text>
+	
   <contained>
     <!--  
       include the code system this value is derived from since it's been hacked a little, and for simplicity

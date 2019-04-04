@@ -1,10 +1,6 @@
 {
   "resourceType": "CoverageEligibilityResponse",
   "id": "E2502",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eA human-readable rendering of the CoverageEligibilityResponse.\u003c/div\u003e"
-  },
   "contained": [
     {
       "resourceType": "Coverage",
@@ -57,7 +53,7 @@
             ]
           },
           "value": "CBI35",
-          "name": "Corporate Baker\u0027s Inc. Plan#35"
+          "name": "Corporate Baker's Inc. Plan#35"
         },
         {
           "type": {
@@ -169,7 +165,7 @@
                 "currency": "USD"
               },
               "usedMoney": {
-                "value": 3748.00,
+                "value": 3748.0,
                 "currency": "USD"
               }
             },

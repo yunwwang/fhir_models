@@ -65,7 +65,7 @@
         "path": "Extension",
         "short": "Purpose of the family member history",
         "definition": "Purpose of the family member history or why it was created, such as when family member history is targeted for cardiovascular health, mental health, or genetic counseling.",
-        "comment": "List.code can be used to capture the type across a list of family members\u0027 histories.",
+        "comment": "List.code can be used to capture the type across a list of family members' histories.",
         "min": 0,
         "max": "1",
         "base": {
@@ -81,7 +81,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -89,8 +89,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -221,7 +221,7 @@
         "path": "Extension",
         "short": "Purpose of the family member history",
         "definition": "Purpose of the family member history or why it was created, such as when family member history is targeted for cardiovascular health, mental health, or genetic counseling.",
-        "comment": "List.code can be used to capture the type across a list of family members\u0027 histories.",
+        "comment": "List.code can be used to capture the type across a list of family members' histories.",
         "min": 0,
         "max": "1"
       },

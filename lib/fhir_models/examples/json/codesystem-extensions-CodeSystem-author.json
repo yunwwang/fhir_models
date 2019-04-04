@@ -8,9 +8,11 @@
   "experimental": true,
   "description": "Optional Extensions Element",
   "code": "author",
-  "base": ["CodeSystem"],
+  "base": [
+    "CodeSystem"
+  ],
   "type": "string",
-  "xpath": "f:CodeSystem/f:extension[@url\u003d\u0027http://hl7.org/fhir/StructureDefinition/codesystem-author\u0027] | /f:#author",
+  "xpath": "f:CodeSystem/f:extension[@url='http://hl7.org/fhir/StructureDefinition/codesystem-author'] | /f:#author",
   "xpathUsage": "normal",
   "multipleOr": true,
   "multipleAnd": true

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Claim xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Claim xmlns="http://hl7.org/fhir">
 	<id value="660150"/>
 
 	<meta>
@@ -8,10 +9,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">A human-readable rendering of the Vision Claim</div>
-	</text>
+  
 
 	<identifier>
 		<system value="http://happysight.com/claim"/>

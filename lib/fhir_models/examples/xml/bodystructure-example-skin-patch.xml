@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><BodyStructure xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<BodyStructure xmlns="http://hl7.org/fhir">
 	<id value="skin-patch"/>
 	<meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: skin-patch</p><p><b>identifier</b>: 12345</p><p><b>active</b>: false</p><p><b>morphology</b>: Skin patch <span>(Details )</span></p><p><b>location</b>: Forearm <span>(Details : {SNOMED CT code '14975008' = 'Forearm', given as 'Forearm'})</span></p><p><b>locationQualifier</b>: Left <span>(Details : {SNOMED CT code '419161000' = 'Unilateral left', given as 'Unilateral left'})</span>, Volar <span>(Details : {SNOMED CT code '263929005' = 'Volar', given as 'Volar'})</span></p><p><b>description</b>: inner surface (volar) of the left forearm</p><p><b>patient</b>: <a>Patient/example</a></p></div></text><identifier>
+  <identifier>
 		<system value="http://goodhealth.org/bodystructure/identifiers"/>
 		<value value="12345"/>
 	</identifier>

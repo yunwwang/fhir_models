@@ -14,11 +14,11 @@
   "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
   "version": "4.0.0",
   "name": "mothersMaidenName",
-  "title": "Mother\u0027s Maiden Name",
+  "title": "Mother's Maiden Name",
   "status": "draft",
   "date": "2018-12-27T22:37:54+11:00",
   "publisher": "HL7",
-  "description": "Mother\u0027s maiden (unmarried) name, commonly collected to help verify patient identity.",
+  "description": "Mother's maiden (unmarried) name, commonly collected to help verify patient identity.",
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -58,8 +58,8 @@
           }
         ],
         "path": "Extension",
-        "short": "Mother\u0027s Maiden name",
-        "definition": "Mother\u0027s maiden (unmarried) name, commonly collected to help verify patient identity.",
+        "short": "Mother's Maiden name",
+        "definition": "Mother's maiden (unmarried) name, commonly collected to help verify patient identity.",
         "min": 0,
         "max": "1",
         "base": {
@@ -75,7 +75,7 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           },
@@ -83,8 +83,8 @@
             "key": "ext-1",
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "Extension"
           }
         ],
@@ -223,8 +223,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Mother\u0027s Maiden name",
-        "definition": "Mother\u0027s maiden (unmarried) name, commonly collected to help verify patient identity.",
+        "short": "Mother's Maiden name",
+        "definition": "Mother's maiden (unmarried) name, commonly collected to help verify patient identity.",
         "min": 0,
         "max": "1",
         "mapping": [

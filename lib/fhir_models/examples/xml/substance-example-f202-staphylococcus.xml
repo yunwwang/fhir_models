@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Substance xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Substance xmlns="http://hl7.org/fhir">
  <id value="f202"/>
   <meta>
     <security>
@@ -7,7 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f202</p><p><b>code</b>: Staphylococcus Aureus <span>(Details : {SNOMED CT code '3092008' = 'Staphylococcus aureus', given as 'Staphylococcus Aureus'})</span></p></div></text><code>     
+  <code>     
     <coding>
       <system value="http://snomed.info/sct"/>
       <code value="3092008"/>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><RiskAssessment xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<RiskAssessment xmlns="http://hl7.org/fhir">
  <id value="genetic"/>
   <meta>
     <security>
@@ -7,54 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Probability of developing breast cancer before the age indicated:</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Age</th>
-            <th>Probability (%)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>current-53</td>
-            <td>0.0168</td>
-          </tr>
-          <tr>
-            <td>54-57</td>
-            <td>0.0368</td>
-          </tr>
-          <tr>
-            <td>58-62</td>
-            <td>0.0594</td>
-          </tr>
-          <tr>
-            <td>63-67</td>
-            <td>0.0838</td>
-          </tr>
-          <tr>
-            <td>68-72</td>
-            <td>0.1089</td>
-          </tr>
-          <tr>
-            <td>73-77</td>
-            <td>0.1327</td>
-          </tr>
-          <tr>
-            <td>78-82</td>
-            <td>0.1530</td>
-          </tr>
-          <tr>
-            <td>83-87</td>
-            <td>0.1663</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </text>
+  
   <status value="final"/>
   <method>
     <coding>

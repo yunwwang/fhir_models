@@ -1,10 +1,6 @@
 {
   "resourceType": "Provenance",
   "id": "signature",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eprocedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from Referral received 26-June\u003c/div\u003e"
-  },
   "target": [
     {
       "reference": "DocumentReference/example"

@@ -1,10 +1,6 @@
 {
   "resourceType": "Observation",
   "id": "example-genetics-1",
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: example-genetics-1\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: final\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: Genetic analysis master panel-- This is the parent OBR for the panel holding all of the associated observations that can be reported with a molecular genetics analysis result. \u003cspan\u003e(Details : {LOINC code \u002755233-1\u0027 \u003d \u0027Genetic analysis master panel - Blood or Tissue by Molecular genetics method\u0027, given as \u0027Genetic analysis master panel-- This is the parent OBR for the panel holding all of the associated observations that can be reported with a molecular genetics analysis result.\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eMolecular Lab Patient ID: HOSP-23456\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eissued\u003c/b\u003e: 03/04/2013 3:30:10 PM\u003c/p\u003e\u003cp\u003e\u003cb\u003eperformer\u003c/b\u003e: \u003ca\u003eMolecular Diagnostics Laboratory\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: Positive \u003cspan\u003e(Details : {SNOMED CT code \u002710828004\u0027 \u003d \u0027Positive\u0027, given as \u0027Positive\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003especimen\u003c/b\u003e: \u003ca\u003eMolecular Specimen ID: MLD45-Z4-1234\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/observation-geneticsGene",

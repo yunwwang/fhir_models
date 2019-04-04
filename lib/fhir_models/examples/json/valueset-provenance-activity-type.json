@@ -7,10 +7,6 @@
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e  This is a value set of representative FHIR Activity Type codes. \u003c/div\u003e"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/valueset-extensible",

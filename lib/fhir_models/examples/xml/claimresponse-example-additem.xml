@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ClaimResponse xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ClaimResponse xmlns="http://hl7.org/fhir">
 
 	<id value="R3503"/>
 
@@ -9,10 +10,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">A human-readable rendering of the ClaimResponse to Claim Oral Average with additional items</div>
-	</text>
+  
 
 	<identifier>
 		<system value="http://www.BenefitsInc.com/fhir/remittance"/>

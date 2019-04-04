@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Procedure xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure xmlns="http://hl7.org/fhir">
   <id value="biopsy"/>
   <meta>
     <security>
@@ -7,10 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Biopsy of suspected melanoma L) arm</div>
-  </text>
+  
   <status value="completed"/>
   <category>
     <coding>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><QuestionnaireResponse xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
   <id value="3141"/>
   <meta>
     <security>
@@ -7,24 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <pre>
-            Comorbidity? YES
-              Cardial Comorbidity? YES
-                Angina? YES
-                MI? NO
-              Vascular Comorbidity?
-                (no answers)
-              ...
-            Histopathology
-              Abdominal
-                pT category: 1a
-              ...
-          </pre>
-    </div>
-  </text>
+  
   <contained>
     <Patient>
       <id value="patsub"/>

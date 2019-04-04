@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ImagingStudy xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ImagingStudy xmlns="http://hl7.org/fhir">
 	<id value="example-xr"/>
 	<meta>
     <security>
@@ -7,10 +8,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">XR Wrist 3+ Views. John Smith (MRN: 09236). Accession: W12342398. Performed: 2017-01-01. 1 series, 2 images.</div>
-	</text>
+  
 	<identifier>
 		<use value="official"/>
 		<system value="urn:dicom:uid"/>

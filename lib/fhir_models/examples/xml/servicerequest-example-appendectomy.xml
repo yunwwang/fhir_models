@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ServiceRequest xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceRequest xmlns="http://hl7.org/fhir">
 	<id value="appendectomy-narrative"/>
 	<!--  Example of an appendectomy procedure that is primarily narrative  -->
 	<meta>
@@ -8,16 +9,7 @@
       <display value="test health data"/>
     </security>
   </meta>
-  <text>
-		<status value="additional"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<p>Date: 2013-03-16</p>
-			<p>Patient:: Paula Patient</p>
-			<p>Ordered by: Angela Care, MD</p>
-			<p>Procedure: Routine Appendectomy</p>
-			<p>Surgeon: Dr Cecil Surgeon</p>
-		</div>
-	</text>
+  
 	<status value="completed"/>
 	<intent value="order"/>
 	<code>

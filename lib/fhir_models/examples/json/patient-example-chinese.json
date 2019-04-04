@@ -12,10 +12,6 @@
       }
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003ctable\u003e\n        \u003ctbody\u003e\n          \u003ctr\u003e\n            \u003ctd\u003e名字\u003c/td\u003e\n            \u003ctd\u003e张无忌\u003c/td\u003e \u003c/tr\u003e\n          \u003ctr\u003e\n            \u003ctd\u003e地址\u003c/td\u003e\n            \u003ctd\u003e上海市黄埔区马当路190号, 1974年12月25日\u003c/td\u003e \n          \u003c/tr\u003e\n          \u003ctr\u003e\n            \u003ctd\u003e联系方式\u003c/td\u003e\n            \u003ctd\u003e住宅: 不详。工作: 18337177888\u003c/td\u003e \n          \u003c/tr\u003e\n          \u003ctr\u003e\n            \u003ctd\u003eId\u003c/td\u003e\n            \u003ctd\u003eMRN: 3112219680806371X (市卫生局)\u003c/td\u003e \n          \u003c/tr\u003e \n        \u003c/tbody\u003e \n      \u003c/table\u003e \n    \u003c/div\u003e"
-  },
   "identifier": [
     {
       "use": "usual",

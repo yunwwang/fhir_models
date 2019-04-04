@@ -11,7 +11,7 @@
         "id": "caf609cf-c3a7-4be3-a3aa-356b9bb69d4f",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n             \n            \u003cp\u003eThis message is a request to link Patient records 654321 (Patient Donald DUCK @ Acme Healthcare, Inc) and 123456 (Patient Donald D DUCK @ Acme Healthcare, Inc)\u003c/p\u003e\n           \n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n             \n            <p>This message is a request to link Patient records 654321 (Patient Donald DUCK @ Acme Healthcare, Inc) and 123456 (Patient Donald D DUCK @ Acme Healthcare, Inc)</p>\n           \n          </div>"
         },
         "eventCoding": {
           "system": "http://example.org/fhir/message-events",
@@ -44,7 +44,7 @@
         "id": "03f9aa7d-b395-47b9-84e0-053678b6e4e3",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            MPI approval rating: 80%\n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            MPI approval rating: 80%\n          </div>"
         },
         "issue": [
           {
@@ -64,7 +64,7 @@
         "id": "pat1",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \n            \u003cp\u003ePatient Donald DUCK @ Acme Healthcare, Inc. MR \u003d 654321\u003c/p\u003e\n          \n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            \n            <p>Patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321</p>\n          \n          </div>"
         },
         "identifier": [
           {
@@ -131,7 +131,7 @@
         "id": "pat2",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            \n            \u003cp\u003ePatient Donald D DUCK @ Acme Healthcare, Inc. MR \u003d 123456\u003c/p\u003e\n          \n          \u003c/div\u003e"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            \n            <p>Patient Donald D DUCK @ Acme Healthcare, Inc. MR = 123456</p>\n          \n          </div>"
         },
         "identifier": [
           {
