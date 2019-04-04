@@ -211,7 +211,7 @@ module FHIR
               valueset_uri = element.binding && element.binding.valueSet
               if valueset_uri.include?('|')
                 x = valueset_uri.index('|')
-                valueset_uri = valueset_uri[0..x-1]
+                valueset_uri = valueset_uri[0..x - 1]
               end
               vcc = FHIR::CodeableConcept.new(value)
               if valueset_uri && self.class.vs_validators[valueset_uri]
@@ -381,7 +381,7 @@ module FHIR
       vs_uri = element.binding.valueSet
       if vs_uri.include?('|')
         x = vs_uri.index('|')
-        vs_uri = vs_uri[0..x-1]
+        vs_uri = vs_uri[0..x - 1]
       end
       valueset = FHIR::Definitions.get_codes(vs_uri)
 
