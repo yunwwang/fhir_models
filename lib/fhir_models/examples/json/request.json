@@ -49,6 +49,7 @@
   ],
   "kind": "logical",
   "abstract": false,
+  "type": "Request",
   "snapshot": {
     "element": [
       {

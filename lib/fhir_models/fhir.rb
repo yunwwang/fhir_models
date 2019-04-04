@@ -34,7 +34,7 @@ module FHIR
     when 'string', 'markdown'
       value.is_a?(String)
     when 'decimal'
-      !(value.to_s =~ /\A([-+]?([0]|([1-9][0-9]*))(\.[0-9]+)?)\Z/).nil?
+      !(value.to_s =~ /\A([-+]?(0|[1-9][0-9]*)(\.[0-9]+)?([eE][+-]?[0-9]+)?)\Z/).nil?
     when 'uri'
       begin
         !URI.parse(value).nil?

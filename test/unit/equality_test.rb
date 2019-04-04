@@ -90,6 +90,8 @@ class EqualityTest < Test::Unit::TestCase
   end
 
   def run_equality_test(example_json_file, example_xml_file, example_name)
+    omit 'fhir_models does not support primitive extensions' if PRIMITIVE_EXTENSIONS.include?(example_name)
+    omit "fhir_models does not support significantly extreme decimal precision." if example_name == 'observation-decimal'
     input_json = File.read(example_json_file)
     input_xml = File.read(example_xml_file)
     instance_json = FHIR::Json.from_json(input_json)

@@ -39,6 +39,7 @@
   ],
   "kind": "logical",
   "abstract": false,
+  "type": "DomainResource",
   "snapshot": {
     "element": [
       {

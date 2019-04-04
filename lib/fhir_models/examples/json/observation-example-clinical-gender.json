@@ -36,7 +36,7 @@
   "effectiveDateTime": "2018-02-01",
   "performer": [
     {
-      "reference": "Encounter/example"
+      "reference": "Organization/example"
     }
   ],
   "valueCodeableConcept": {

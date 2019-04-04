@@ -20,7 +20,7 @@
   },
   "reasonReference": [
     {
-      "reference": "Procedure/example",
+      "reference": "Condition/example",
       "display": "Appendectomy (surgery)"
     }
   ],

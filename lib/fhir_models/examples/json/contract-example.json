@@ -70,7 +70,7 @@
   "rule": [
     {
       "contentAttachment": {
-        "contentType": "application/txt",
+        "contentType": "text/plain",
         "url": "http://www.rfc-editor.org/bcp/bcp13.txt"
       }
     }

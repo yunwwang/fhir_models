@@ -208,7 +208,11 @@ module FHIR
                   [] # Drop issues errors on the floor, in throwaway array
                 end
 
-              valueset_uri = element.binding && element.binding.valueSetReference && element.binding.valueSetReference.reference
+              valueset_uri = element.binding && element.binding.valueSet
+              if valueset_uri.include?('|')
+                x = valueset_uri.index('|')
+                valueset_uri = valueset_uri[0..x-1]
+              end
               vcc = FHIR::CodeableConcept.new(value)
               if valueset_uri && self.class.vs_validators[valueset_uri]
                 check_fn = self.class.vs_validators[valueset_uri]
@@ -375,13 +379,18 @@ module FHIR
 
     def check_binding_element(element, value)
       vs_uri = element.binding.valueSet
+      if vs_uri.include?('|')
+        x = vs_uri.index('|')
+        vs_uri = vs_uri[0..x-1]
+      end
       valueset = FHIR::Definitions.get_codes(vs_uri)
 
       matching_type = 0
 
       if vs_uri == 'http://hl7.org/fhir/ValueSet/mimetypes' || vs_uri == 'http://www.rfc-editor.org/bcp/bcp13.txt'
         matches = MIME::Types[value]
-        if (matches.nil? || matches.size.zero?) && !some_type_of_xml_or_json?(value)
+        known_weird = ['text/cql', 'application/cql+text', 'application/hl7-v2'].include?(value)
+        if (matches.nil? || matches.size.zero? || known_weird) && !some_type_of_xml_or_json?(value)
           @errors << "#{element.path} has invalid mime-type: '#{value}'"
           matching_type -= 1 if element.binding.strength == 'required'
         end

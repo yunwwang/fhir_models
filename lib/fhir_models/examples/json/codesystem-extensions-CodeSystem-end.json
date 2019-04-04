@@ -8,6 +8,7 @@
   "experimental": true,
   "description": "Optional Extensions Element",
   "code": "end",
+  "base": ["CodeSystem"],
   "type": "date",
   "xpath": "f:CodeSystem/f:extension[@url\u003d\u0027http://hl7.org/fhir/StructureDefinition/codesystem-expirationDate\u0027] | /f:#expirationDate",
   "xpathUsage": "normal",

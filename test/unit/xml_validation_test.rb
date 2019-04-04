@@ -20,6 +20,7 @@ class XmlValidationTest < Test::Unit::TestCase
   end
 
   def run_xml_validation_test(example_file, example_name)
+    omit 'fhir_models does not support primitive extensions' if PRIMITIVE_EXTENSIONS.include?(example_name)
     input_xml = File.read(example_file)
     resource = FHIR::Xml.from_xml(input_xml)
     errors = resource.validate

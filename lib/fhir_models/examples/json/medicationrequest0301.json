@@ -250,7 +250,7 @@
       "code": "d"
     },
     "performer": {
-      "reference": "Practitioner/f001"
+      "reference": "Organization/f001"
     }
   },
   "substitution": {
