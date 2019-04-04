@@ -6,7 +6,7 @@ rvm:
   - 2.5
   - 2.6
 script:
-  - bundle exec rake
+  - travis_wait bundle exec rake
   - bundle exec codeclimate-test-reporter
 notifications:
   email:
