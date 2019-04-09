@@ -235,7 +235,7 @@ module FHIR
           end
         else
           the_codes.each do |code|
-            has_valid_code = true if check_binding_uri(meta['binding']['valueSet'], code)
+            has_valid_code = true if check_binding_uri(meta['binding']['uri'], code)
             break if has_valid_code
           end
         end
