@@ -9,7 +9,7 @@ module FHIR
       'id' => {'type'=>'id', 'path'=>'ImplementationGuide.id', 'min'=>0, 'max'=>1},
       'meta' => {'type'=>'Meta', 'path'=>'ImplementationGuide.meta', 'min'=>0, 'max'=>1},
       'implicitRules' => {'type'=>'uri', 'path'=>'ImplementationGuide.implicitRules', 'min'=>0, 'max'=>1},
-      'language' => {'type'=>'code', 'path'=>'ImplementationGuide.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'preferred', 'valueSet'=>'http://hl7.org/fhir/ValueSet/languages', 'uri'=>nil}},
+      'language' => {'valid_codes'=>{'urn:ietf:bcp:47'=>['ar', 'bn', 'cs', 'da', 'de', 'de-AT', 'de-CH', 'de-DE', 'el', 'en', 'en-AU', 'en-CA', 'en-GB', 'en-IN', 'en-NZ', 'en-SG', 'en-US', 'es', 'es-AR', 'es-ES', 'es-UY', 'fi', 'fr', 'fr-BE', 'fr-CH', 'fr-FR', 'fy', 'fy-NL', 'hi', 'hr', 'it', 'it-CH', 'it-IT', 'ja', 'ko', 'nl', 'nl-BE', 'nl-NL', 'no', 'no-NO', 'pa', 'pl', 'pt', 'pt-BR', 'ru', 'ru-RU', 'sr', 'sr-RS', 'sv', 'sv-SE', 'te', 'zh', 'zh-CN', 'zh-HK', 'zh-SG', 'zh-TW']}, 'type'=>'code', 'path'=>'ImplementationGuide.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'preferred', 'uri'=>'http://hl7.org/fhir/ValueSet/languages'}},
       'text' => {'type'=>'Narrative', 'path'=>'ImplementationGuide.text', 'min'=>0, 'max'=>1},
       'contained' => {'type'=>'Resource', 'path'=>'ImplementationGuide.contained', 'min'=>0, 'max'=>Float::INFINITY},
       'extension' => {'type'=>'Extension', 'path'=>'ImplementationGuide.extension', 'min'=>0, 'max'=>Float::INFINITY},
@@ -18,18 +18,18 @@ module FHIR
       'version' => {'type'=>'string', 'path'=>'ImplementationGuide.version', 'min'=>0, 'max'=>1},
       'name' => {'type'=>'string', 'path'=>'ImplementationGuide.name', 'min'=>1, 'max'=>1},
       'title' => {'type'=>'string', 'path'=>'ImplementationGuide.title', 'min'=>0, 'max'=>1},
-      'status' => {'type'=>'code', 'path'=>'ImplementationGuide.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0', 'uri'=>nil}},
+      'status' => {'type'=>'code', 'path'=>'ImplementationGuide.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
       'experimental' => {'type'=>'boolean', 'path'=>'ImplementationGuide.experimental', 'min'=>0, 'max'=>1},
       'date' => {'type'=>'dateTime', 'path'=>'ImplementationGuide.date', 'min'=>0, 'max'=>1},
       'publisher' => {'type'=>'string', 'path'=>'ImplementationGuide.publisher', 'min'=>0, 'max'=>1},
       'contact' => {'type'=>'ContactDetail', 'path'=>'ImplementationGuide.contact', 'min'=>0, 'max'=>Float::INFINITY},
       'description' => {'type'=>'markdown', 'path'=>'ImplementationGuide.description', 'min'=>0, 'max'=>1},
       'useContext' => {'type'=>'UsageContext', 'path'=>'ImplementationGuide.useContext', 'min'=>0, 'max'=>Float::INFINITY},
-      'jurisdiction' => {'type'=>'CodeableConcept', 'path'=>'ImplementationGuide.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'valueSet'=>'http://hl7.org/fhir/ValueSet/jurisdiction', 'uri'=>nil}},
+      'jurisdiction' => {'valid_codes'=>{'urn:iso:std:iso:3166'=>[], 'urn:iso:std:iso:3166:-2'=>[], 'http://unstats.un.org/unsd/methods/m49/m49.htm'=>[]}, 'type'=>'CodeableConcept', 'path'=>'ImplementationGuide.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/jurisdiction'}},
       'copyright' => {'type'=>'markdown', 'path'=>'ImplementationGuide.copyright', 'min'=>0, 'max'=>1},
       'packageId' => {'type'=>'id', 'path'=>'ImplementationGuide.packageId', 'min'=>1, 'max'=>1},
-      'license' => {'type'=>'code', 'path'=>'ImplementationGuide.license', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/spdx-license|4.0.0', 'uri'=>nil}},
-      'fhirVersion' => {'type'=>'code', 'path'=>'ImplementationGuide.fhirVersion', 'min'=>1, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/FHIR-version|4.0.0', 'uri'=>nil}},
+      'license' => {'type'=>'code', 'path'=>'ImplementationGuide.license', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/spdx-license|4.0.0'}},
+      'fhirVersion' => {'type'=>'code', 'path'=>'ImplementationGuide.fhirVersion', 'min'=>1, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/FHIR-version|4.0.0'}},
       'dependsOn' => {'type'=>'ImplementationGuide::DependsOn', 'path'=>'ImplementationGuide.dependsOn', 'min'=>0, 'max'=>Float::INFINITY},
       'global' => {'type'=>'ImplementationGuide::Global', 'path'=>'ImplementationGuide.global', 'min'=>0, 'max'=>Float::INFINITY},
       'definition' => {'type'=>'ImplementationGuide::Definition', 'path'=>'ImplementationGuide.definition', 'min'=>0, 'max'=>1},
@@ -67,7 +67,7 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'Global.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Global.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Global.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'type' => {'type'=>'code', 'path'=>'Global.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/resource-types|4.0.0', 'uri'=>nil}},
+        'type' => {'type'=>'code', 'path'=>'Global.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/resource-types|4.0.0'}},
         'profile' => {'type'=>'canonical', 'path'=>'Global.profile', 'min'=>1, 'max'=>1}
       }
 
@@ -127,7 +127,7 @@ module FHIR
           'extension' => {'type'=>'Extension', 'path'=>'Resource.extension', 'min'=>0, 'max'=>Float::INFINITY},
           'modifierExtension' => {'type'=>'Extension', 'path'=>'Resource.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
           'reference' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'Resource.reference', 'min'=>1, 'max'=>1},
-          'fhirVersion' => {'type'=>'code', 'path'=>'Resource.fhirVersion', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/FHIR-version|4.0.0', 'uri'=>nil}},
+          'fhirVersion' => {'type'=>'code', 'path'=>'Resource.fhirVersion', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/FHIR-version|4.0.0'}},
           'name' => {'type'=>'string', 'path'=>'Resource.name', 'min'=>0, 'max'=>1},
           'description' => {'type'=>'string', 'path'=>'Resource.description', 'min'=>0, 'max'=>1},
           'exampleBoolean' => {'type'=>'boolean', 'path'=>'Resource.example[x]', 'min'=>0, 'max'=>1},
@@ -162,7 +162,7 @@ module FHIR
           'nameUrl' => {'type'=>'url', 'path'=>'Page.name[x]', 'min'=>1, 'max'=>1},
           'nameReference' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Binary'], 'type'=>'Reference', 'path'=>'Page.name[x]', 'min'=>1, 'max'=>1},
           'title' => {'type'=>'string', 'path'=>'Page.title', 'min'=>1, 'max'=>1},
-          'generation' => {'type'=>'code', 'path'=>'Page.generation', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/guide-page-generation|4.0.0', 'uri'=>nil}},
+          'generation' => {'type'=>'code', 'path'=>'Page.generation', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/guide-page-generation|4.0.0'}},
           'page' => {'type'=>'ImplementationGuide::Definition::Page', 'path'=>'Page.page', 'min'=>0, 'max'=>Float::INFINITY}
         }
 
@@ -185,7 +185,7 @@ module FHIR
           'id' => {'type'=>'string', 'path'=>'Parameter.id', 'min'=>0, 'max'=>1},
           'extension' => {'type'=>'Extension', 'path'=>'Parameter.extension', 'min'=>0, 'max'=>Float::INFINITY},
           'modifierExtension' => {'type'=>'Extension', 'path'=>'Parameter.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-          'code' => {'type'=>'code', 'path'=>'Parameter.code', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/guide-parameter-code|4.0.0', 'uri'=>nil}},
+          'code' => {'type'=>'code', 'path'=>'Parameter.code', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/guide-parameter-code|4.0.0'}},
           'value' => {'type'=>'string', 'path'=>'Parameter.value', 'min'=>1, 'max'=>1}
         }
 

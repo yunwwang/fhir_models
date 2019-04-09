@@ -4,11 +4,11 @@ module FHIR
     include FHIR::Json
     include FHIR::Xml
 
-    SEARCH_PARAMS = 
+    SEARCH_PARAMS = []
     METADATA = {
       'id' => {'type'=>'string', 'path'=>'RelatedArtifact.id', 'min'=>0, 'max'=>1},
       'extension' => {'type'=>'Extension', 'path'=>'RelatedArtifact.extension', 'min'=>0, 'max'=>Float::INFINITY},
-      'type' => {'type'=>'code', 'path'=>'RelatedArtifact.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/related-artifact-type|4.0.0', 'uri'=>nil}},
+      'type' => {'type'=>'code', 'path'=>'RelatedArtifact.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/related-artifact-type|4.0.0'}},
       'label' => {'type'=>'string', 'path'=>'RelatedArtifact.label', 'min'=>0, 'max'=>1},
       'display' => {'type'=>'string', 'path'=>'RelatedArtifact.display', 'min'=>0, 'max'=>1},
       'citation' => {'type'=>'markdown', 'path'=>'RelatedArtifact.citation', 'min'=>0, 'max'=>1},

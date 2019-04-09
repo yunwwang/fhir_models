@@ -4,11 +4,11 @@ module FHIR
     include FHIR::Json
     include FHIR::Xml
 
-    SEARCH_PARAMS = 
+    SEARCH_PARAMS = []
     METADATA = {
       'id' => {'type'=>'string', 'path'=>'Narrative.id', 'min'=>0, 'max'=>1},
       'extension' => {'type'=>'Extension', 'path'=>'Narrative.extension', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'type'=>'code', 'path'=>'Narrative.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/narrative-status|4.0.0', 'uri'=>nil}},
+      'status' => {'type'=>'code', 'path'=>'Narrative.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/narrative-status|4.0.0'}},
       'div' => {'type'=>'xhtml', 'path'=>'Narrative.div', 'min'=>1, 'max'=>1}
     }
 

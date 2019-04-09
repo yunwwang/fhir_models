@@ -7,7 +7,7 @@ module FHIR
     MULTIPLE_TYPES = {
       'age' => ['Range', 'CodeableConcept']
     }
-    SEARCH_PARAMS = 
+    SEARCH_PARAMS = []
     METADATA = {
       'id' => {'type'=>'string', 'path'=>'Population.id', 'min'=>0, 'max'=>1},
       'extension' => {'type'=>'Extension', 'path'=>'Population.extension', 'min'=>0, 'max'=>Float::INFINITY},
