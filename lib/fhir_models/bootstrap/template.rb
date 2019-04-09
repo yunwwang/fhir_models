@@ -83,7 +83,7 @@ module FHIR
             s[-1] = s[-1][0..-2] # remove the trailing comma
             s << "#{space}}"
           else
-            s << "#{space}#{constant.upcase} = #{value.to_s.tr!('"', '\'')}"
+            s << "#{space}#{constant.upcase} = #{value.empty? ? value.to_s : value.to_s.tr!('"', '\'')}"
           end
         end
         s << ''
