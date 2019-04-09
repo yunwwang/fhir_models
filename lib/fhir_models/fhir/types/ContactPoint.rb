@@ -4,13 +4,13 @@ module FHIR
     include FHIR::Json
     include FHIR::Xml
 
-    SEARCH_PARAMS = 
+    SEARCH_PARAMS = []
     METADATA = {
       'id' => {'type'=>'string', 'path'=>'ContactPoint.id', 'min'=>0, 'max'=>1},
       'extension' => {'type'=>'Extension', 'path'=>'ContactPoint.extension', 'min'=>0, 'max'=>Float::INFINITY},
-      'system' => {'type'=>'code', 'path'=>'ContactPoint.system', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/contact-point-system|4.0.0', 'uri'=>nil}},
+      'system' => {'type'=>'code', 'path'=>'ContactPoint.system', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/contact-point-system|4.0.0'}},
       'value' => {'type'=>'string', 'path'=>'ContactPoint.value', 'min'=>0, 'max'=>1},
-      'use' => {'type'=>'code', 'path'=>'ContactPoint.use', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/contact-point-use|4.0.0', 'uri'=>nil}},
+      'use' => {'type'=>'code', 'path'=>'ContactPoint.use', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/contact-point-use|4.0.0'}},
       'rank' => {'type'=>'positiveInt', 'path'=>'ContactPoint.rank', 'min'=>0, 'max'=>1},
       'period' => {'type'=>'Period', 'path'=>'ContactPoint.period', 'min'=>0, 'max'=>1}
     }

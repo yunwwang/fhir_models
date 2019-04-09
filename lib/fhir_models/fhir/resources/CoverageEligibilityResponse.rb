@@ -12,26 +12,26 @@ module FHIR
       'id' => {'type'=>'id', 'path'=>'CoverageEligibilityResponse.id', 'min'=>0, 'max'=>1},
       'meta' => {'type'=>'Meta', 'path'=>'CoverageEligibilityResponse.meta', 'min'=>0, 'max'=>1},
       'implicitRules' => {'type'=>'uri', 'path'=>'CoverageEligibilityResponse.implicitRules', 'min'=>0, 'max'=>1},
-      'language' => {'type'=>'code', 'path'=>'CoverageEligibilityResponse.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'preferred', 'valueSet'=>'http://hl7.org/fhir/ValueSet/languages', 'uri'=>nil}},
+      'language' => {'valid_codes'=>{'urn:ietf:bcp:47'=>['ar', 'bn', 'cs', 'da', 'de', 'de-AT', 'de-CH', 'de-DE', 'el', 'en', 'en-AU', 'en-CA', 'en-GB', 'en-IN', 'en-NZ', 'en-SG', 'en-US', 'es', 'es-AR', 'es-ES', 'es-UY', 'fi', 'fr', 'fr-BE', 'fr-CH', 'fr-FR', 'fy', 'fy-NL', 'hi', 'hr', 'it', 'it-CH', 'it-IT', 'ja', 'ko', 'nl', 'nl-BE', 'nl-NL', 'no', 'no-NO', 'pa', 'pl', 'pt', 'pt-BR', 'ru', 'ru-RU', 'sr', 'sr-RS', 'sv', 'sv-SE', 'te', 'zh', 'zh-CN', 'zh-HK', 'zh-SG', 'zh-TW']}, 'type'=>'code', 'path'=>'CoverageEligibilityResponse.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'preferred', 'uri'=>'http://hl7.org/fhir/ValueSet/languages'}},
       'text' => {'type'=>'Narrative', 'path'=>'CoverageEligibilityResponse.text', 'min'=>0, 'max'=>1},
       'contained' => {'type'=>'Resource', 'path'=>'CoverageEligibilityResponse.contained', 'min'=>0, 'max'=>Float::INFINITY},
       'extension' => {'type'=>'Extension', 'path'=>'CoverageEligibilityResponse.extension', 'min'=>0, 'max'=>Float::INFINITY},
       'modifierExtension' => {'type'=>'Extension', 'path'=>'CoverageEligibilityResponse.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
       'identifier' => {'type'=>'Identifier', 'path'=>'CoverageEligibilityResponse.identifier', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'type'=>'code', 'path'=>'CoverageEligibilityResponse.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/fm-status|4.0.0', 'uri'=>nil}},
-      'purpose' => {'type'=>'code', 'path'=>'CoverageEligibilityResponse.purpose', 'min'=>1, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/eligibilityresponse-purpose|4.0.0', 'uri'=>nil}},
+      'status' => {'type'=>'code', 'path'=>'CoverageEligibilityResponse.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/fm-status|4.0.0'}},
+      'purpose' => {'type'=>'code', 'path'=>'CoverageEligibilityResponse.purpose', 'min'=>1, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/eligibilityresponse-purpose|4.0.0'}},
       'patient' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Patient'], 'type'=>'Reference', 'path'=>'CoverageEligibilityResponse.patient', 'min'=>1, 'max'=>1},
       'servicedDate' => {'type'=>'date', 'path'=>'CoverageEligibilityResponse.serviced[x]', 'min'=>0, 'max'=>1},
       'servicedPeriod' => {'type'=>'Period', 'path'=>'CoverageEligibilityResponse.serviced[x]', 'min'=>0, 'max'=>1},
       'created' => {'type'=>'dateTime', 'path'=>'CoverageEligibilityResponse.created', 'min'=>1, 'max'=>1},
       'requestor' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Practitioner', 'http://hl7.org/fhir/StructureDefinition/PractitionerRole', 'http://hl7.org/fhir/StructureDefinition/Organization'], 'type'=>'Reference', 'path'=>'CoverageEligibilityResponse.requestor', 'min'=>0, 'max'=>1},
       'request' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest'], 'type'=>'Reference', 'path'=>'CoverageEligibilityResponse.request', 'min'=>1, 'max'=>1},
-      'outcome' => {'type'=>'code', 'path'=>'CoverageEligibilityResponse.outcome', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/remittance-outcome|4.0.0', 'uri'=>nil}},
+      'outcome' => {'type'=>'code', 'path'=>'CoverageEligibilityResponse.outcome', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/remittance-outcome|4.0.0'}},
       'disposition' => {'type'=>'string', 'path'=>'CoverageEligibilityResponse.disposition', 'min'=>0, 'max'=>1},
       'insurer' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Organization'], 'type'=>'Reference', 'path'=>'CoverageEligibilityResponse.insurer', 'min'=>1, 'max'=>1},
       'insurance' => {'type'=>'CoverageEligibilityResponse::Insurance', 'path'=>'CoverageEligibilityResponse.insurance', 'min'=>0, 'max'=>Float::INFINITY},
       'preAuthRef' => {'type'=>'string', 'path'=>'CoverageEligibilityResponse.preAuthRef', 'min'=>0, 'max'=>1},
-      'form' => {'type'=>'CodeableConcept', 'path'=>'CoverageEligibilityResponse.form', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'valueSet'=>'http://hl7.org/fhir/ValueSet/forms', 'uri'=>nil}},
+      'form' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/forms-codes'=>['1', '2']}, 'type'=>'CodeableConcept', 'path'=>'CoverageEligibilityResponse.form', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/forms'}},
       'error' => {'type'=>'CoverageEligibilityResponse::Error', 'path'=>'CoverageEligibilityResponse.error', 'min'=>0, 'max'=>Float::INFINITY}
     }
 
@@ -59,19 +59,19 @@ module FHIR
           'id' => {'type'=>'string', 'path'=>'Item.id', 'min'=>0, 'max'=>1},
           'extension' => {'type'=>'Extension', 'path'=>'Item.extension', 'min'=>0, 'max'=>Float::INFINITY},
           'modifierExtension' => {'type'=>'Extension', 'path'=>'Item.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-          'category' => {'type'=>'CodeableConcept', 'path'=>'Item.category', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'valueSet'=>'http://hl7.org/fhir/ValueSet/ex-benefitcategory', 'uri'=>nil}},
-          'productOrService' => {'type'=>'CodeableConcept', 'path'=>'Item.productOrService', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'valueSet'=>'http://hl7.org/fhir/ValueSet/service-uscls', 'uri'=>nil}},
-          'modifier' => {'type'=>'CodeableConcept', 'path'=>'Item.modifier', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'valueSet'=>'http://hl7.org/fhir/ValueSet/claim-modifiers', 'uri'=>nil}},
+          'category' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/ex-benefitcategory'=>['1', '2', '3', '4', '5', '14', '23', '24', '25', '26', '27', '28', '30', '35', '36', '37', '49', '55', '56', '61', '62', '63', '69', '76', 'F1', 'F3', 'F4', 'F6']}, 'type'=>'CodeableConcept', 'path'=>'Item.category', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/ex-benefitcategory'}},
+          'productOrService' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/ex-USCLS'=>['1101', '1102', '1103', '1201', '1205', '2101', '2102', '2141', '2601', '11101', '11102', '11103', '11104', '21211', '21212', '27211', '67211', '99111', '99333', '99555']}, 'type'=>'CodeableConcept', 'path'=>'Item.productOrService', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/service-uscls'}},
+          'modifier' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/modifiers'=>['a', 'b', 'c', 'e', 'rooh', 'x']}, 'type'=>'CodeableConcept', 'path'=>'Item.modifier', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/claim-modifiers'}},
           'provider' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Practitioner', 'http://hl7.org/fhir/StructureDefinition/PractitionerRole'], 'type'=>'Reference', 'path'=>'Item.provider', 'min'=>0, 'max'=>1},
           'excluded' => {'type'=>'boolean', 'path'=>'Item.excluded', 'min'=>0, 'max'=>1},
           'name' => {'type'=>'string', 'path'=>'Item.name', 'min'=>0, 'max'=>1},
           'description' => {'type'=>'string', 'path'=>'Item.description', 'min'=>0, 'max'=>1},
-          'network' => {'type'=>'CodeableConcept', 'path'=>'Item.network', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'valueSet'=>'http://hl7.org/fhir/ValueSet/benefit-network', 'uri'=>nil}},
-          'unit' => {'type'=>'CodeableConcept', 'path'=>'Item.unit', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'valueSet'=>'http://hl7.org/fhir/ValueSet/benefit-unit', 'uri'=>nil}},
-          'term' => {'type'=>'CodeableConcept', 'path'=>'Item.term', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'valueSet'=>'http://hl7.org/fhir/ValueSet/benefit-term', 'uri'=>nil}},
+          'network' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/benefit-network'=>['in', 'out']}, 'type'=>'CodeableConcept', 'path'=>'Item.network', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/benefit-network'}},
+          'unit' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/benefit-unit'=>['individual', 'family']}, 'type'=>'CodeableConcept', 'path'=>'Item.unit', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/benefit-unit'}},
+          'term' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/benefit-term'=>['annual', 'day', 'lifetime']}, 'type'=>'CodeableConcept', 'path'=>'Item.term', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/benefit-term'}},
           'benefit' => {'type'=>'CoverageEligibilityResponse::Insurance::Item::Benefit', 'path'=>'Item.benefit', 'min'=>0, 'max'=>Float::INFINITY},
           'authorizationRequired' => {'type'=>'boolean', 'path'=>'Item.authorizationRequired', 'min'=>0, 'max'=>1},
-          'authorizationSupporting' => {'type'=>'CodeableConcept', 'path'=>'Item.authorizationSupporting', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'valueSet'=>'http://hl7.org/fhir/ValueSet/coverageeligibilityresponse-ex-auth-support', 'uri'=>nil}},
+          'authorizationSupporting' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support'=>['laborder', 'labreport', 'diagnosticimageorder', 'diagnosticimagereport', 'professionalreport', 'accidentreport', 'model', 'picture']}, 'type'=>'CodeableConcept', 'path'=>'Item.authorizationSupporting', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/coverageeligibilityresponse-ex-auth-support'}},
           'authorizationUrl' => {'type'=>'uri', 'path'=>'Item.authorizationUrl', 'min'=>0, 'max'=>1}
         }
 
@@ -88,7 +88,7 @@ module FHIR
             'id' => {'type'=>'string', 'path'=>'Benefit.id', 'min'=>0, 'max'=>1},
             'extension' => {'type'=>'Extension', 'path'=>'Benefit.extension', 'min'=>0, 'max'=>Float::INFINITY},
             'modifierExtension' => {'type'=>'Extension', 'path'=>'Benefit.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-            'type' => {'type'=>'CodeableConcept', 'path'=>'Benefit.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'valueSet'=>'http://hl7.org/fhir/ValueSet/benefit-type', 'uri'=>nil}},
+            'type' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/benefit-type'=>['benefit', 'deductible', 'visit', 'room', 'copay', 'copay-percent', 'copay-maximum', 'vision-exam', 'vision-glasses', 'vision-contacts', 'medical-primarycare', 'pharmacy-dispense']}, 'type'=>'CodeableConcept', 'path'=>'Benefit.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/benefit-type'}},
             'allowedUnsignedInt' => {'type'=>'unsignedInt', 'path'=>'Benefit.allowed[x]', 'min'=>0, 'max'=>1},
             'allowedString' => {'type'=>'string', 'path'=>'Benefit.allowed[x]', 'min'=>0, 'max'=>1},
             'allowedMoney' => {'type'=>'Money', 'path'=>'Benefit.allowed[x]', 'min'=>0, 'max'=>1},
@@ -146,7 +146,7 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'Error.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Error.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Error.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'code' => {'type'=>'CodeableConcept', 'path'=>'Error.code', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'valueSet'=>'http://hl7.org/fhir/ValueSet/adjudication-error', 'uri'=>nil}}
+        'code' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/adjudication-error'=>['a001', 'a002']}, 'type'=>'CodeableConcept', 'path'=>'Error.code', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/adjudication-error'}}
       }
 
       attr_accessor :id                # 0-1 string

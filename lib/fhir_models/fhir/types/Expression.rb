@@ -4,13 +4,13 @@ module FHIR
     include FHIR::Json
     include FHIR::Xml
 
-    SEARCH_PARAMS = 
+    SEARCH_PARAMS = []
     METADATA = {
       'id' => {'type'=>'string', 'path'=>'Expression.id', 'min'=>0, 'max'=>1},
       'extension' => {'type'=>'Extension', 'path'=>'Expression.extension', 'min'=>0, 'max'=>Float::INFINITY},
       'description' => {'type'=>'string', 'path'=>'Expression.description', 'min'=>0, 'max'=>1},
       'name' => {'type'=>'id', 'path'=>'Expression.name', 'min'=>0, 'max'=>1},
-      'language' => {'type'=>'code', 'path'=>'Expression.language', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'valueSet'=>'http://hl7.org/fhir/ValueSet/expression-language', 'uri'=>nil}},
+      'language' => {'valid_codes'=>{'http://hl7.org/fhir/expression-language'=>['text/cql', 'text/fhirpath', 'application/x-fhir-query']}, 'type'=>'code', 'path'=>'Expression.language', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/expression-language'}},
       'expression' => {'type'=>'string', 'path'=>'Expression.expression', 'min'=>0, 'max'=>1},
       'reference' => {'type'=>'uri', 'path'=>'Expression.reference', 'min'=>0, 'max'=>1}
     }

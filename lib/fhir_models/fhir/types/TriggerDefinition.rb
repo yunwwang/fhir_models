@@ -7,11 +7,11 @@ module FHIR
     MULTIPLE_TYPES = {
       'timing' => ['Timing', 'Reference', 'date', 'dateTime']
     }
-    SEARCH_PARAMS = 
+    SEARCH_PARAMS = []
     METADATA = {
       'id' => {'type'=>'string', 'path'=>'TriggerDefinition.id', 'min'=>0, 'max'=>1},
       'extension' => {'type'=>'Extension', 'path'=>'TriggerDefinition.extension', 'min'=>0, 'max'=>Float::INFINITY},
-      'type' => {'type'=>'code', 'path'=>'TriggerDefinition.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/trigger-type|4.0.0', 'uri'=>nil}},
+      'type' => {'type'=>'code', 'path'=>'TriggerDefinition.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/trigger-type|4.0.0'}},
       'name' => {'type'=>'string', 'path'=>'TriggerDefinition.name', 'min'=>0, 'max'=>1},
       'timingTiming' => {'type'=>'Timing', 'path'=>'TriggerDefinition.timing[x]', 'min'=>0, 'max'=>1},
       'timingReference' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Schedule'], 'type'=>'Reference', 'path'=>'TriggerDefinition.timing[x]', 'min'=>0, 'max'=>1},

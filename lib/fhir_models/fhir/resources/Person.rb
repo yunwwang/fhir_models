@@ -9,7 +9,7 @@ module FHIR
       'id' => {'type'=>'id', 'path'=>'Person.id', 'min'=>0, 'max'=>1},
       'meta' => {'type'=>'Meta', 'path'=>'Person.meta', 'min'=>0, 'max'=>1},
       'implicitRules' => {'type'=>'uri', 'path'=>'Person.implicitRules', 'min'=>0, 'max'=>1},
-      'language' => {'type'=>'code', 'path'=>'Person.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'preferred', 'valueSet'=>'http://hl7.org/fhir/ValueSet/languages', 'uri'=>nil}},
+      'language' => {'valid_codes'=>{'urn:ietf:bcp:47'=>['ar', 'bn', 'cs', 'da', 'de', 'de-AT', 'de-CH', 'de-DE', 'el', 'en', 'en-AU', 'en-CA', 'en-GB', 'en-IN', 'en-NZ', 'en-SG', 'en-US', 'es', 'es-AR', 'es-ES', 'es-UY', 'fi', 'fr', 'fr-BE', 'fr-CH', 'fr-FR', 'fy', 'fy-NL', 'hi', 'hr', 'it', 'it-CH', 'it-IT', 'ja', 'ko', 'nl', 'nl-BE', 'nl-NL', 'no', 'no-NO', 'pa', 'pl', 'pt', 'pt-BR', 'ru', 'ru-RU', 'sr', 'sr-RS', 'sv', 'sv-SE', 'te', 'zh', 'zh-CN', 'zh-HK', 'zh-SG', 'zh-TW']}, 'type'=>'code', 'path'=>'Person.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'preferred', 'uri'=>'http://hl7.org/fhir/ValueSet/languages'}},
       'text' => {'type'=>'Narrative', 'path'=>'Person.text', 'min'=>0, 'max'=>1},
       'contained' => {'type'=>'Resource', 'path'=>'Person.contained', 'min'=>0, 'max'=>Float::INFINITY},
       'extension' => {'type'=>'Extension', 'path'=>'Person.extension', 'min'=>0, 'max'=>Float::INFINITY},
@@ -17,7 +17,7 @@ module FHIR
       'identifier' => {'type'=>'Identifier', 'path'=>'Person.identifier', 'min'=>0, 'max'=>Float::INFINITY},
       'name' => {'type'=>'HumanName', 'path'=>'Person.name', 'min'=>0, 'max'=>Float::INFINITY},
       'telecom' => {'type'=>'ContactPoint', 'path'=>'Person.telecom', 'min'=>0, 'max'=>Float::INFINITY},
-      'gender' => {'type'=>'code', 'path'=>'Person.gender', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/administrative-gender|4.0.0', 'uri'=>nil}},
+      'gender' => {'type'=>'code', 'path'=>'Person.gender', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/administrative-gender|4.0.0'}},
       'birthDate' => {'type'=>'date', 'path'=>'Person.birthDate', 'min'=>0, 'max'=>1},
       'address' => {'type'=>'Address', 'path'=>'Person.address', 'min'=>0, 'max'=>Float::INFINITY},
       'photo' => {'type'=>'Attachment', 'path'=>'Person.photo', 'min'=>0, 'max'=>1},
@@ -36,7 +36,7 @@ module FHIR
         'extension' => {'type'=>'Extension', 'path'=>'Link.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Link.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
         'target' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Patient', 'http://hl7.org/fhir/StructureDefinition/Practitioner', 'http://hl7.org/fhir/StructureDefinition/RelatedPerson', 'http://hl7.org/fhir/StructureDefinition/Person'], 'type'=>'Reference', 'path'=>'Link.target', 'min'=>1, 'max'=>1},
-        'assurance' => {'type'=>'code', 'path'=>'Link.assurance', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'valueSet'=>'http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.0', 'uri'=>nil}}
+        'assurance' => {'type'=>'code', 'path'=>'Link.assurance', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/identity-assuranceLevel|4.0.0'}}
       }
 
       attr_accessor :id                # 0-1 string
