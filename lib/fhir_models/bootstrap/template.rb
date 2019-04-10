@@ -75,9 +75,10 @@ module FHIR
           if value.is_a?(Hash)
             s << "#{space}#{constant.upcase} = {"
             value.each do |k, v|
-              s << "#{space}  '#{k}' => #{v},"
+              s << "#{space}  \"#{k}\" => #{v},"
               # Replace wildcard string with Infinity constant
               s[-1].gsub!('"max"=>"*"', '"max"=>Float::INFINITY')
+              s[-1].gsub!(/'/, %q(\\\'))
               s[-1].tr!('"', '\'')
             end
             s[-1] = s[-1][0..-2] # remove the trailing comma
