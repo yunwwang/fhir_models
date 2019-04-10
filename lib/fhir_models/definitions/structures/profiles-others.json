@@ -5550,7 +5550,7 @@
                 ],
                 "strength": "extensible",
                 "description": "Codes describing the sex assigned at birth as documented on the birth registration.",
-                "valueSet": "http://build.fhir.org/valueset-administrative-gender.html"
+                "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender|4.0.0"
               }
             },
             {

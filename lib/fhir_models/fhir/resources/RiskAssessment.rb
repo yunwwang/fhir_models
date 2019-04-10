@@ -20,7 +20,7 @@ module FHIR
       'identifier' => {'type'=>'Identifier', 'path'=>'RiskAssessment.identifier', 'min'=>0, 'max'=>Float::INFINITY},
       'basedOn' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'RiskAssessment.basedOn', 'min'=>0, 'max'=>1},
       'parent' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'RiskAssessment.parent', 'min'=>0, 'max'=>1},
-      'status' => {'type'=>'code', 'path'=>'RiskAssessment.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/observation-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/observation-status'=>['registered', 'preliminary', 'final', 'amended', 'corrected', 'cancelled', 'entered-in-error', 'unknown']}, 'type'=>'code', 'path'=>'RiskAssessment.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/observation-status|4.0.0'}},
       'method' => {'local_name'=>'local_method', 'type'=>'CodeableConcept', 'path'=>'RiskAssessment.method', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>nil}},
       'code' => {'type'=>'CodeableConcept', 'path'=>'RiskAssessment.code', 'min'=>0, 'max'=>1},
       'subject' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Patient', 'http://hl7.org/fhir/StructureDefinition/Group'], 'type'=>'Reference', 'path'=>'RiskAssessment.subject', 'min'=>1, 'max'=>1},

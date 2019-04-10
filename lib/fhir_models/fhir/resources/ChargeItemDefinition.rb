@@ -21,7 +21,7 @@ module FHIR
       'derivedFromUri' => {'type'=>'uri', 'path'=>'ChargeItemDefinition.derivedFromUri', 'min'=>0, 'max'=>Float::INFINITY},
       'partOf' => {'type'=>'canonical', 'path'=>'ChargeItemDefinition.partOf', 'min'=>0, 'max'=>Float::INFINITY},
       'replaces' => {'type'=>'canonical', 'path'=>'ChargeItemDefinition.replaces', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'type'=>'code', 'path'=>'ChargeItemDefinition.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'ChargeItemDefinition.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
       'experimental' => {'type'=>'boolean', 'path'=>'ChargeItemDefinition.experimental', 'min'=>0, 'max'=>1},
       'date' => {'type'=>'dateTime', 'path'=>'ChargeItemDefinition.date', 'min'=>0, 'max'=>1},
       'publisher' => {'type'=>'string', 'path'=>'ChargeItemDefinition.publisher', 'min'=>0, 'max'=>1},
@@ -83,7 +83,7 @@ module FHIR
           'id' => {'type'=>'string', 'path'=>'PriceComponent.id', 'min'=>0, 'max'=>1},
           'extension' => {'type'=>'Extension', 'path'=>'PriceComponent.extension', 'min'=>0, 'max'=>Float::INFINITY},
           'modifierExtension' => {'type'=>'Extension', 'path'=>'PriceComponent.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-          'type' => {'type'=>'code', 'path'=>'PriceComponent.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/invoice-priceComponentType|4.0.0'}},
+          'type' => {'valid_codes'=>{'http://hl7.org/fhir/invoice-priceComponentType'=>['base', 'surcharge', 'deduction', 'discount', 'tax', 'informational']}, 'type'=>'code', 'path'=>'PriceComponent.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/invoice-priceComponentType|4.0.0'}},
           'code' => {'type'=>'CodeableConcept', 'path'=>'PriceComponent.code', 'min'=>0, 'max'=>1},
           'factor' => {'type'=>'decimal', 'path'=>'PriceComponent.factor', 'min'=>0, 'max'=>1},
           'amount' => {'type'=>'Money', 'path'=>'PriceComponent.amount', 'min'=>0, 'max'=>1}

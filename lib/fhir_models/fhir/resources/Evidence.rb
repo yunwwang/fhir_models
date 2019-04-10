@@ -21,7 +21,7 @@ module FHIR
       'title' => {'type'=>'string', 'path'=>'Evidence.title', 'min'=>0, 'max'=>1},
       'shortTitle' => {'type'=>'string', 'path'=>'Evidence.shortTitle', 'min'=>0, 'max'=>1},
       'subtitle' => {'type'=>'string', 'path'=>'Evidence.subtitle', 'min'=>0, 'max'=>1},
-      'status' => {'type'=>'code', 'path'=>'Evidence.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'Evidence.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
       'date' => {'type'=>'dateTime', 'path'=>'Evidence.date', 'min'=>0, 'max'=>1},
       'publisher' => {'type'=>'string', 'path'=>'Evidence.publisher', 'min'=>0, 'max'=>1},
       'contact' => {'type'=>'ContactDetail', 'path'=>'Evidence.contact', 'min'=>0, 'max'=>Float::INFINITY},

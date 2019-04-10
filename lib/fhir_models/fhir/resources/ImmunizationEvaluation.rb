@@ -19,7 +19,7 @@ module FHIR
       'extension' => {'type'=>'Extension', 'path'=>'ImmunizationEvaluation.extension', 'min'=>0, 'max'=>Float::INFINITY},
       'modifierExtension' => {'type'=>'Extension', 'path'=>'ImmunizationEvaluation.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
       'identifier' => {'type'=>'Identifier', 'path'=>'ImmunizationEvaluation.identifier', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'type'=>'code', 'path'=>'ImmunizationEvaluation.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/immunization-evaluation-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/medication-admin-status'=>['completed', 'entered-in-error', 'in-progress', 'not-done', 'on-hold', 'stopped', 'unknown']}, 'type'=>'code', 'path'=>'ImmunizationEvaluation.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/immunization-evaluation-status|4.0.0'}},
       'patient' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Patient'], 'type'=>'Reference', 'path'=>'ImmunizationEvaluation.patient', 'min'=>1, 'max'=>1},
       'date' => {'type'=>'dateTime', 'path'=>'ImmunizationEvaluation.date', 'min'=>0, 'max'=>1},
       'authority' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Organization'], 'type'=>'Reference', 'path'=>'ImmunizationEvaluation.authority', 'min'=>0, 'max'=>1},

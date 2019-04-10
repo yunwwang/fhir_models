@@ -18,7 +18,7 @@ module FHIR
       'extension' => {'type'=>'Extension', 'path'=>'Consent.extension', 'min'=>0, 'max'=>Float::INFINITY},
       'modifierExtension' => {'type'=>'Extension', 'path'=>'Consent.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
       'identifier' => {'type'=>'Identifier', 'path'=>'Consent.identifier', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'type'=>'code', 'path'=>'Consent.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/consent-state-codes|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/consent-state-codes'=>['draft', 'proposed', 'active', 'rejected', 'inactive', 'entered-in-error']}, 'type'=>'code', 'path'=>'Consent.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/consent-state-codes|4.0.0'}},
       'scope' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/consentscope'=>['adr', 'research', 'patient-privacy', 'treatment']}, 'type'=>'CodeableConcept', 'path'=>'Consent.scope', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/consent-scope'}},
       'category' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/consentcategorycodes'=>['acd', 'dnr', 'emrgonly', 'hcd', 'npp', 'polst', 'research', 'rsdid', 'rsreid'], 'http://terminology.hl7.org/CodeSystem/v3-ActCode'=>['ICOL', 'IDSCL', 'INFA', 'INFAO', 'INFASO', 'IRDSCL', 'RESEARCH', 'RSDID', 'RSREID'], 'http://loinc.org'=>['59284-0', '57016-8', '57017-6', '64292-6'], nil=>[]}, 'type'=>'CodeableConcept', 'path'=>'Consent.category', 'min'=>1, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/consent-category'}},
       'patient' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Patient'], 'type'=>'Reference', 'path'=>'Consent.patient', 'min'=>0, 'max'=>1},
@@ -84,7 +84,7 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'Provision.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Provision.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Provision.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'type' => {'type'=>'code', 'path'=>'Provision.type', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/consent-provision-type|4.0.0'}},
+        'type' => {'valid_codes'=>{'http://hl7.org/fhir/consent-provision-type'=>['deny', 'permit']}, 'type'=>'code', 'path'=>'Provision.type', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/consent-provision-type|4.0.0'}},
         'period' => {'type'=>'Period', 'path'=>'Provision.period', 'min'=>0, 'max'=>1},
         'actor' => {'type'=>'Consent::Provision::Actor', 'path'=>'Provision.actor', 'min'=>0, 'max'=>Float::INFINITY},
         'action' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/consentaction'=>['collect', 'access', 'use', 'disclose', 'correct']}, 'type'=>'CodeableConcept', 'path'=>'Provision.action', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/consent-action'}},
@@ -126,7 +126,7 @@ module FHIR
           'id' => {'type'=>'string', 'path'=>'Data.id', 'min'=>0, 'max'=>1},
           'extension' => {'type'=>'Extension', 'path'=>'Data.extension', 'min'=>0, 'max'=>Float::INFINITY},
           'modifierExtension' => {'type'=>'Extension', 'path'=>'Data.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-          'meaning' => {'type'=>'code', 'path'=>'Data.meaning', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/consent-data-meaning|4.0.0'}},
+          'meaning' => {'valid_codes'=>{'http://hl7.org/fhir/consent-data-meaning'=>['instance', 'related', 'dependents', 'authoredby']}, 'type'=>'code', 'path'=>'Data.meaning', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/consent-data-meaning|4.0.0'}},
           'reference' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'Data.reference', 'min'=>1, 'max'=>1}
         }
 

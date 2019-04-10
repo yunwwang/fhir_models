@@ -19,7 +19,7 @@ module FHIR
       'version' => {'type'=>'string', 'path'=>'StructureDefinition.version', 'min'=>0, 'max'=>1},
       'name' => {'type'=>'string', 'path'=>'StructureDefinition.name', 'min'=>1, 'max'=>1},
       'title' => {'type'=>'string', 'path'=>'StructureDefinition.title', 'min'=>0, 'max'=>1},
-      'status' => {'type'=>'code', 'path'=>'StructureDefinition.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'StructureDefinition.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
       'experimental' => {'type'=>'boolean', 'path'=>'StructureDefinition.experimental', 'min'=>0, 'max'=>1},
       'date' => {'type'=>'dateTime', 'path'=>'StructureDefinition.date', 'min'=>0, 'max'=>1},
       'publisher' => {'type'=>'string', 'path'=>'StructureDefinition.publisher', 'min'=>0, 'max'=>1},
@@ -30,15 +30,15 @@ module FHIR
       'purpose' => {'type'=>'markdown', 'path'=>'StructureDefinition.purpose', 'min'=>0, 'max'=>1},
       'copyright' => {'type'=>'markdown', 'path'=>'StructureDefinition.copyright', 'min'=>0, 'max'=>1},
       'keyword' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/definition-use'=>['fhir-structure', 'custom-resource', 'dam', 'wire-format', 'archetype', 'template']}, 'type'=>'Coding', 'path'=>'StructureDefinition.keyword', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/definition-use'}},
-      'fhirVersion' => {'type'=>'code', 'path'=>'StructureDefinition.fhirVersion', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/FHIR-version|4.0.0'}},
+      'fhirVersion' => {'valid_codes'=>{'http://hl7.org/fhir/FHIR-version'=>['0.01', '0.05', '0.06', '0.11', '0.0.80', '0.0.81', '0.0.82', '0.4.0', '0.5.0', '1.0.0', '1.0.1', '1.0.2', '1.1.0', '1.4.0', '1.6.0', '1.8.0', '3.0.0', '3.0.1', '3.3.0', '3.5.0', '4.0.0']}, 'type'=>'code', 'path'=>'StructureDefinition.fhirVersion', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/FHIR-version|4.0.0'}},
       'mapping' => {'type'=>'StructureDefinition::Mapping', 'path'=>'StructureDefinition.mapping', 'min'=>0, 'max'=>Float::INFINITY},
-      'kind' => {'type'=>'code', 'path'=>'StructureDefinition.kind', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/structure-definition-kind|4.0.0'}},
+      'kind' => {'valid_codes'=>{'http://hl7.org/fhir/structure-definition-kind'=>['primitive-type', 'complex-type', 'resource', 'logical']}, 'type'=>'code', 'path'=>'StructureDefinition.kind', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/structure-definition-kind|4.0.0'}},
       'abstract' => {'type'=>'boolean', 'path'=>'StructureDefinition.abstract', 'min'=>1, 'max'=>1},
       'context' => {'type'=>'StructureDefinition::Context', 'path'=>'StructureDefinition.context', 'min'=>0, 'max'=>Float::INFINITY},
       'contextInvariant' => {'type'=>'string', 'path'=>'StructureDefinition.contextInvariant', 'min'=>0, 'max'=>Float::INFINITY},
       'type' => {'type'=>'uri', 'path'=>'StructureDefinition.type', 'min'=>1, 'max'=>1},
       'baseDefinition' => {'type'=>'canonical', 'path'=>'StructureDefinition.baseDefinition', 'min'=>0, 'max'=>1},
-      'derivation' => {'type'=>'code', 'path'=>'StructureDefinition.derivation', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/type-derivation-rule|4.0.0'}},
+      'derivation' => {'valid_codes'=>{'http://hl7.org/fhir/type-derivation-rule'=>['specialization', 'constraint']}, 'type'=>'code', 'path'=>'StructureDefinition.derivation', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/type-derivation-rule|4.0.0'}},
       'snapshot' => {'type'=>'StructureDefinition::Snapshot', 'path'=>'StructureDefinition.snapshot', 'min'=>0, 'max'=>1},
       'differential' => {'type'=>'StructureDefinition::Differential', 'path'=>'StructureDefinition.differential', 'min'=>0, 'max'=>1}
     }
@@ -76,7 +76,7 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'Context.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Context.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Context.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'type' => {'type'=>'code', 'path'=>'Context.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/extension-context-type|4.0.0'}},
+        'type' => {'valid_codes'=>{'http://hl7.org/fhir/extension-context-type'=>['fhirpath', 'element', 'extension']}, 'type'=>'code', 'path'=>'Context.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/extension-context-type|4.0.0'}},
         'expression' => {'type'=>'string', 'path'=>'Context.expression', 'min'=>1, 'max'=>1}
       }
 

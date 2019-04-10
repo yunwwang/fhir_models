@@ -17,7 +17,7 @@ module FHIR
       'extension' => {'type'=>'Extension', 'path'=>'ElementDefinition.extension', 'min'=>0, 'max'=>Float::INFINITY},
       'modifierExtension' => {'type'=>'Extension', 'path'=>'ElementDefinition.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
       'path' => {'type'=>'string', 'path'=>'ElementDefinition.path', 'min'=>1, 'max'=>1},
-      'representation' => {'type'=>'code', 'path'=>'ElementDefinition.representation', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/property-representation|4.0.0'}},
+      'representation' => {'valid_codes'=>{'http://hl7.org/fhir/property-representation'=>['xmlAttr', 'xmlText', 'typeAttr', 'cdaText', 'xhtml']}, 'type'=>'code', 'path'=>'ElementDefinition.representation', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/property-representation|4.0.0'}},
       'sliceName' => {'type'=>'string', 'path'=>'ElementDefinition.sliceName', 'min'=>0, 'max'=>1},
       'sliceIsConstraining' => {'type'=>'boolean', 'path'=>'ElementDefinition.sliceIsConstraining', 'min'=>0, 'max'=>1},
       'label' => {'type'=>'string', 'path'=>'ElementDefinition.label', 'min'=>0, 'max'=>1},
@@ -223,7 +223,7 @@ module FHIR
         'discriminator' => {'type'=>'ElementDefinition::Slicing::Discriminator', 'path'=>'Slicing.discriminator', 'min'=>0, 'max'=>Float::INFINITY},
         'description' => {'type'=>'string', 'path'=>'Slicing.description', 'min'=>0, 'max'=>1},
         'ordered' => {'type'=>'boolean', 'path'=>'Slicing.ordered', 'min'=>0, 'max'=>1},
-        'rules' => {'type'=>'code', 'path'=>'Slicing.rules', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/resource-slicing-rules|4.0.0'}}
+        'rules' => {'valid_codes'=>{'http://hl7.org/fhir/resource-slicing-rules'=>['closed', 'open', 'openAtEnd']}, 'type'=>'code', 'path'=>'Slicing.rules', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/resource-slicing-rules|4.0.0'}}
       }
 
       class Discriminator < FHIR::Model
@@ -234,7 +234,7 @@ module FHIR
         METADATA = {
           'id' => {'type'=>'string', 'path'=>'Discriminator.id', 'min'=>0, 'max'=>1},
           'extension' => {'type'=>'Extension', 'path'=>'Discriminator.extension', 'min'=>0, 'max'=>Float::INFINITY},
-          'type' => {'type'=>'code', 'path'=>'Discriminator.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/discriminator-type|4.0.0'}},
+          'type' => {'valid_codes'=>{'http://hl7.org/fhir/discriminator-type'=>['value', 'exists', 'pattern', 'type', 'profile']}, 'type'=>'code', 'path'=>'Discriminator.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/discriminator-type|4.0.0'}},
           'path' => {'type'=>'string', 'path'=>'Discriminator.path', 'min'=>1, 'max'=>1}
         }
 
@@ -283,8 +283,8 @@ module FHIR
         'code' => {'type'=>'uri', 'path'=>'Type.code', 'min'=>1, 'max'=>1},
         'profile' => {'type'=>'canonical', 'path'=>'Type.profile', 'min'=>0, 'max'=>Float::INFINITY},
         'targetProfile' => {'type'=>'canonical', 'path'=>'Type.targetProfile', 'min'=>0, 'max'=>Float::INFINITY},
-        'aggregation' => {'type'=>'code', 'path'=>'Type.aggregation', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/resource-aggregation-mode|4.0.0'}},
-        'versioning' => {'type'=>'code', 'path'=>'Type.versioning', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/reference-version-rules|4.0.0'}}
+        'aggregation' => {'valid_codes'=>{'http://hl7.org/fhir/resource-aggregation-mode'=>['contained', 'referenced', 'bundled']}, 'type'=>'code', 'path'=>'Type.aggregation', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/resource-aggregation-mode|4.0.0'}},
+        'versioning' => {'valid_codes'=>{'http://hl7.org/fhir/reference-version-rules'=>['either', 'independent', 'specific']}, 'type'=>'code', 'path'=>'Type.versioning', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/reference-version-rules|4.0.0'}}
       }
 
       attr_accessor :id            # 0-1 string
@@ -423,7 +423,7 @@ module FHIR
         'extension' => {'type'=>'Extension', 'path'=>'Constraint.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'key' => {'type'=>'id', 'path'=>'Constraint.key', 'min'=>1, 'max'=>1},
         'requirements' => {'type'=>'string', 'path'=>'Constraint.requirements', 'min'=>0, 'max'=>1},
-        'severity' => {'type'=>'code', 'path'=>'Constraint.severity', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/constraint-severity|4.0.0'}},
+        'severity' => {'valid_codes'=>{'http://hl7.org/fhir/constraint-severity'=>['error', 'warning']}, 'type'=>'code', 'path'=>'Constraint.severity', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/constraint-severity|4.0.0'}},
         'human' => {'type'=>'string', 'path'=>'Constraint.human', 'min'=>1, 'max'=>1},
         'expression' => {'type'=>'string', 'path'=>'Constraint.expression', 'min'=>0, 'max'=>1},
         'xpath' => {'type'=>'string', 'path'=>'Constraint.xpath', 'min'=>0, 'max'=>1},
@@ -449,7 +449,7 @@ module FHIR
       METADATA = {
         'id' => {'type'=>'string', 'path'=>'Binding.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Binding.extension', 'min'=>0, 'max'=>Float::INFINITY},
-        'strength' => {'type'=>'code', 'path'=>'Binding.strength', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/binding-strength|4.0.0'}},
+        'strength' => {'valid_codes'=>{'http://hl7.org/fhir/binding-strength'=>['required', 'extensible', 'preferred', 'example']}, 'type'=>'code', 'path'=>'Binding.strength', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/binding-strength|4.0.0'}},
         'description' => {'type'=>'string', 'path'=>'Binding.description', 'min'=>0, 'max'=>1},
         'valueSet' => {'type'=>'canonical', 'path'=>'Binding.valueSet', 'min'=>0, 'max'=>1}
       }
@@ -470,7 +470,7 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'Mapping.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Mapping.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'identity' => {'type'=>'id', 'path'=>'Mapping.identity', 'min'=>1, 'max'=>1},
-        'language' => {'type'=>'code', 'path'=>'Mapping.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0'}},
+        'language' => {'valid_codes'=>{'urn:ietf:bcp:13'=>[]}, 'type'=>'code', 'path'=>'Mapping.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0'}},
         'map' => {'type'=>'string', 'path'=>'Mapping.map', 'min'=>1, 'max'=>1},
         'comment' => {'type'=>'string', 'path'=>'Mapping.comment', 'min'=>0, 'max'=>1}
       }

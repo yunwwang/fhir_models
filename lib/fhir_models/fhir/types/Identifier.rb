@@ -8,7 +8,7 @@ module FHIR
     METADATA = {
       'id' => {'type'=>'string', 'path'=>'Identifier.id', 'min'=>0, 'max'=>1},
       'extension' => {'type'=>'Extension', 'path'=>'Identifier.extension', 'min'=>0, 'max'=>Float::INFINITY},
-      'use' => {'type'=>'code', 'path'=>'Identifier.use', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/identifier-use|4.0.0'}},
+      'use' => {'valid_codes'=>{'http://hl7.org/fhir/identifier-use'=>['usual', 'official', 'temp', 'secondary', 'old']}, 'type'=>'code', 'path'=>'Identifier.use', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/identifier-use|4.0.0'}},
       'type' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/v2-0203'=>['DL', 'PPN', 'BRN', 'MR', 'MCN', 'EN', 'TAX', 'NIIP', 'PRN', 'MD', 'DR', 'ACSN', 'UDI', 'SNO', 'SB', 'PLAC', 'FILL', 'JHN']}, 'type'=>'CodeableConcept', 'path'=>'Identifier.type', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/identifier-type'}},
       'system' => {'type'=>'uri', 'path'=>'Identifier.system', 'min'=>0, 'max'=>1},
       'value' => {'type'=>'string', 'path'=>'Identifier.value', 'min'=>0, 'max'=>1},

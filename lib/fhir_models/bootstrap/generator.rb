@@ -195,10 +195,12 @@ module FHIR
                 field.binding.delete('description')
                 field.binding.delete('extension')
                 # set the actual code list
-                codes = @defn.get_codes(field.binding['uri'])
+                binding_uri = field.binding['uri']
+                binding_uri = binding_uri[0..-7] if binding_uri && binding_uri.end_with?('|4.0.0')
+                codes = @defn.get_codes(binding_uri)
                 field.valid_codes = codes unless codes.nil?
-                if field.valid_codes.empty? && field.binding['uri'] && !field.binding['uri'].end_with?('bcp47') && !field.binding['uri'].end_with?('bcp13.txt')
-                  FHIR.logger.warn "  MISSING EXPANSION -- #{field.path} #{field.min}..#{field.max}: #{field.binding['uri']} (#{field.binding['strength']})"
+                if field.valid_codes.empty? && field.binding['uri'] && !binding_uri.end_with?('bcp47') && !binding_uri.end_with?('bcp13.txt')
+                  FHIR.logger.warn "  MISSING EXPANSION -- #{field.path} #{field.min}..#{field.max}: #{binding_uri} (#{field.binding['strength']})"
                   @missing_expansions = true
                   @missing_required_expansion = (field.binding['strength'] == 'required') unless @missing_required_expansion
                 end

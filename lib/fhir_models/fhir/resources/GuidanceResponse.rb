@@ -22,7 +22,7 @@ module FHIR
       'moduleUri' => {'type'=>'uri', 'path'=>'GuidanceResponse.module[x]', 'min'=>1, 'max'=>1},
       'moduleCanonical' => {'type'=>'canonical', 'path'=>'GuidanceResponse.module[x]', 'min'=>1, 'max'=>1},
       'moduleCodeableConcept' => {'type'=>'CodeableConcept', 'path'=>'GuidanceResponse.module[x]', 'min'=>1, 'max'=>1},
-      'status' => {'type'=>'code', 'path'=>'GuidanceResponse.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/guidance-response-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/guidance-response-status'=>['success', 'data-requested', 'data-required', 'in-progress', 'failure', 'entered-in-error']}, 'type'=>'code', 'path'=>'GuidanceResponse.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/guidance-response-status|4.0.0'}},
       'subject' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Patient', 'http://hl7.org/fhir/StructureDefinition/Group'], 'type'=>'Reference', 'path'=>'GuidanceResponse.subject', 'min'=>0, 'max'=>1},
       'encounter' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Encounter'], 'type'=>'Reference', 'path'=>'GuidanceResponse.encounter', 'min'=>0, 'max'=>1},
       'occurrenceDateTime' => {'type'=>'dateTime', 'path'=>'GuidanceResponse.occurrenceDateTime', 'min'=>0, 'max'=>1},

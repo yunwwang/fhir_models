@@ -21,7 +21,7 @@ module FHIR
       'title' => {'type'=>'string', 'path'=>'EvidenceVariable.title', 'min'=>0, 'max'=>1},
       'shortTitle' => {'type'=>'string', 'path'=>'EvidenceVariable.shortTitle', 'min'=>0, 'max'=>1},
       'subtitle' => {'type'=>'string', 'path'=>'EvidenceVariable.subtitle', 'min'=>0, 'max'=>1},
-      'status' => {'type'=>'code', 'path'=>'EvidenceVariable.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'EvidenceVariable.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
       'date' => {'type'=>'dateTime', 'path'=>'EvidenceVariable.date', 'min'=>0, 'max'=>1},
       'publisher' => {'type'=>'string', 'path'=>'EvidenceVariable.publisher', 'min'=>0, 'max'=>1},
       'contact' => {'type'=>'ContactDetail', 'path'=>'EvidenceVariable.contact', 'min'=>0, 'max'=>Float::INFINITY},
@@ -39,7 +39,7 @@ module FHIR
       'reviewer' => {'type'=>'ContactDetail', 'path'=>'EvidenceVariable.reviewer', 'min'=>0, 'max'=>Float::INFINITY},
       'endorser' => {'type'=>'ContactDetail', 'path'=>'EvidenceVariable.endorser', 'min'=>0, 'max'=>Float::INFINITY},
       'relatedArtifact' => {'type'=>'RelatedArtifact', 'path'=>'EvidenceVariable.relatedArtifact', 'min'=>0, 'max'=>Float::INFINITY},
-      'type' => {'type'=>'code', 'path'=>'EvidenceVariable.type', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/variable-type|4.0.0'}},
+      'type' => {'valid_codes'=>{'http://hl7.org/fhir/variable-type'=>['dichotomous', 'continuous', 'descriptive']}, 'type'=>'code', 'path'=>'EvidenceVariable.type', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/variable-type|4.0.0'}},
       'characteristic' => {'type'=>'EvidenceVariable::Characteristic', 'path'=>'EvidenceVariable.characteristic', 'min'=>1, 'max'=>Float::INFINITY}
     }
 
@@ -70,7 +70,7 @@ module FHIR
         'participantEffectiveDuration' => {'type'=>'Duration', 'path'=>'Characteristic.participantEffective[x]', 'min'=>0, 'max'=>1},
         'participantEffectiveTiming' => {'type'=>'Timing', 'path'=>'Characteristic.participantEffective[x]', 'min'=>0, 'max'=>1},
         'timeFromStart' => {'type'=>'Duration', 'path'=>'Characteristic.timeFromStart', 'min'=>0, 'max'=>1},
-        'groupMeasure' => {'type'=>'code', 'path'=>'Characteristic.groupMeasure', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/group-measure|4.0.0'}}
+        'groupMeasure' => {'valid_codes'=>{'http://hl7.org/fhir/group-measure'=>['mean', 'median', 'mean-of-mean', 'mean-of-median', 'median-of-mean', 'median-of-median']}, 'type'=>'code', 'path'=>'Characteristic.groupMeasure', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/group-measure|4.0.0'}}
       }
 
       attr_accessor :id                           # 0-1 string
