@@ -30,7 +30,7 @@ module FHIR
       'serviceProvisionCode' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/service-provision-conditions'=>['free', 'disc', 'cost']}, 'type'=>'CodeableConcept', 'path'=>'HealthcareService.serviceProvisionCode', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/service-provision-conditions'}},
       'eligibility' => {'type'=>'HealthcareService::Eligibility', 'path'=>'HealthcareService.eligibility', 'min'=>0, 'max'=>Float::INFINITY},
       'program' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/program'=>['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45']}, 'type'=>'CodeableConcept', 'path'=>'HealthcareService.program', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/program'}},
-      'characteristic' => {'type'=>'CodeableConcept', 'path'=>'HealthcareService.characteristic', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>nil}},
+      'characteristic' => {'type'=>'CodeableConcept', 'path'=>'HealthcareService.characteristic', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example'}},
       'communication' => {'valid_codes'=>{'urn:ietf:bcp:47'=>['ar', 'bn', 'cs', 'da', 'de', 'de-AT', 'de-CH', 'de-DE', 'el', 'en', 'en-AU', 'en-CA', 'en-GB', 'en-IN', 'en-NZ', 'en-SG', 'en-US', 'es', 'es-AR', 'es-ES', 'es-UY', 'fi', 'fr', 'fr-BE', 'fr-CH', 'fr-FR', 'fy', 'fy-NL', 'hi', 'hr', 'it', 'it-CH', 'it-IT', 'ja', 'ko', 'nl', 'nl-BE', 'nl-NL', 'no', 'no-NO', 'pa', 'pl', 'pt', 'pt-BR', 'ru', 'ru-RU', 'sr', 'sr-RS', 'sv', 'sv-SE', 'te', 'zh', 'zh-CN', 'zh-HK', 'zh-SG', 'zh-TW']}, 'type'=>'CodeableConcept', 'path'=>'HealthcareService.communication', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'preferred', 'uri'=>'http://hl7.org/fhir/ValueSet/languages'}},
       'referralMethod' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/service-referral-method'=>['fax', 'phone', 'elec', 'semail', 'mail']}, 'type'=>'CodeableConcept', 'path'=>'HealthcareService.referralMethod', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/service-referral-method'}},
       'appointmentRequired' => {'type'=>'boolean', 'path'=>'HealthcareService.appointmentRequired', 'min'=>0, 'max'=>1},
@@ -49,7 +49,7 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'Eligibility.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Eligibility.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Eligibility.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'code' => {'type'=>'CodeableConcept', 'path'=>'Eligibility.code', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>nil}},
+        'code' => {'type'=>'CodeableConcept', 'path'=>'Eligibility.code', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example'}},
         'comment' => {'type'=>'markdown', 'path'=>'Eligibility.comment', 'min'=>0, 'max'=>1}
       }
 

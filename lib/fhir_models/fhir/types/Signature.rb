@@ -12,8 +12,8 @@ module FHIR
       'when' => {'type'=>'instant', 'path'=>'Signature.when', 'min'=>1, 'max'=>1},
       'who' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Practitioner', 'http://hl7.org/fhir/StructureDefinition/PractitionerRole', 'http://hl7.org/fhir/StructureDefinition/RelatedPerson', 'http://hl7.org/fhir/StructureDefinition/Patient', 'http://hl7.org/fhir/StructureDefinition/Device', 'http://hl7.org/fhir/StructureDefinition/Organization'], 'type'=>'Reference', 'path'=>'Signature.who', 'min'=>1, 'max'=>1},
       'onBehalfOf' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Practitioner', 'http://hl7.org/fhir/StructureDefinition/PractitionerRole', 'http://hl7.org/fhir/StructureDefinition/RelatedPerson', 'http://hl7.org/fhir/StructureDefinition/Patient', 'http://hl7.org/fhir/StructureDefinition/Device', 'http://hl7.org/fhir/StructureDefinition/Organization'], 'type'=>'Reference', 'path'=>'Signature.onBehalfOf', 'min'=>0, 'max'=>1},
-      'targetFormat' => {'valid_codes'=>{'urn:ietf:bcp:13'=>[]}, 'type'=>'code', 'path'=>'Signature.targetFormat', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0'}},
-      'sigFormat' => {'valid_codes'=>{'urn:ietf:bcp:13'=>[]}, 'type'=>'code', 'path'=>'Signature.sigFormat', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0'}},
+      'targetFormat' => {'type'=>'code', 'path'=>'Signature.targetFormat', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0'}},
+      'sigFormat' => {'type'=>'code', 'path'=>'Signature.sigFormat', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0'}},
       'data' => {'type'=>'base64Binary', 'path'=>'Signature.data', 'min'=>0, 'max'=>1}
     }
 

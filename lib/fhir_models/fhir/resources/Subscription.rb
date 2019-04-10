@@ -34,7 +34,7 @@ module FHIR
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Channel.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
         'type' => {'valid_codes'=>{'http://hl7.org/fhir/subscription-channel-type'=>['rest-hook', 'websocket', 'email', 'sms', 'message']}, 'type'=>'code', 'path'=>'Channel.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/subscription-channel-type|4.0.0'}},
         'endpoint' => {'type'=>'url', 'path'=>'Channel.endpoint', 'min'=>0, 'max'=>1},
-        'payload' => {'valid_codes'=>{'urn:ietf:bcp:13'=>[]}, 'type'=>'code', 'path'=>'Channel.payload', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0'}},
+        'payload' => {'type'=>'code', 'path'=>'Channel.payload', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0'}},
         'header' => {'type'=>'string', 'path'=>'Channel.header', 'min'=>0, 'max'=>Float::INFINITY}
       }
 

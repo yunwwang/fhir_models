@@ -34,7 +34,7 @@ module FHIR
       'description' => {'type'=>'markdown', 'path'=>'ResearchDefinition.description', 'min'=>0, 'max'=>1},
       'comment' => {'type'=>'string', 'path'=>'ResearchDefinition.comment', 'min'=>0, 'max'=>Float::INFINITY},
       'useContext' => {'type'=>'UsageContext', 'path'=>'ResearchDefinition.useContext', 'min'=>0, 'max'=>Float::INFINITY},
-      'jurisdiction' => {'valid_codes'=>{'urn:iso:std:iso:3166'=>[], 'urn:iso:std:iso:3166:-2'=>[], 'http://unstats.un.org/unsd/methods/m49/m49.htm'=>[]}, 'type'=>'CodeableConcept', 'path'=>'ResearchDefinition.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/jurisdiction'}},
+      'jurisdiction' => {'type'=>'CodeableConcept', 'path'=>'ResearchDefinition.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/jurisdiction'}},
       'purpose' => {'type'=>'markdown', 'path'=>'ResearchDefinition.purpose', 'min'=>0, 'max'=>1},
       'usage' => {'type'=>'string', 'path'=>'ResearchDefinition.usage', 'min'=>0, 'max'=>1},
       'copyright' => {'type'=>'markdown', 'path'=>'ResearchDefinition.copyright', 'min'=>0, 'max'=>1},

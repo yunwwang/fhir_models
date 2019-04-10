@@ -26,7 +26,7 @@ module FHIR
       'description' => {'type'=>'markdown', 'path'=>'RiskEvidenceSynthesis.description', 'min'=>0, 'max'=>1},
       'note' => {'type'=>'Annotation', 'path'=>'RiskEvidenceSynthesis.note', 'min'=>0, 'max'=>Float::INFINITY},
       'useContext' => {'type'=>'UsageContext', 'path'=>'RiskEvidenceSynthesis.useContext', 'min'=>0, 'max'=>Float::INFINITY},
-      'jurisdiction' => {'valid_codes'=>{'urn:iso:std:iso:3166'=>[], 'urn:iso:std:iso:3166:-2'=>[], 'http://unstats.un.org/unsd/methods/m49/m49.htm'=>[]}, 'type'=>'CodeableConcept', 'path'=>'RiskEvidenceSynthesis.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/jurisdiction'}},
+      'jurisdiction' => {'type'=>'CodeableConcept', 'path'=>'RiskEvidenceSynthesis.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/jurisdiction'}},
       'copyright' => {'type'=>'markdown', 'path'=>'RiskEvidenceSynthesis.copyright', 'min'=>0, 'max'=>1},
       'approvalDate' => {'type'=>'date', 'path'=>'RiskEvidenceSynthesis.approvalDate', 'min'=>0, 'max'=>1},
       'lastReviewDate' => {'type'=>'date', 'path'=>'RiskEvidenceSynthesis.lastReviewDate', 'min'=>0, 'max'=>1},

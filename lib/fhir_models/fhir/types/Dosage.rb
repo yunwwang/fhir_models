@@ -14,7 +14,7 @@ module FHIR
       'modifierExtension' => {'type'=>'Extension', 'path'=>'Dosage.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
       'sequence' => {'type'=>'integer', 'path'=>'Dosage.sequence', 'min'=>0, 'max'=>1},
       'text' => {'type'=>'string', 'path'=>'Dosage.text', 'min'=>0, 'max'=>1},
-      'additionalInstruction' => {'valid_codes'=>{'http://snomed.info/sct'=>[]}, 'type'=>'CodeableConcept', 'path'=>'Dosage.additionalInstruction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/additional-instruction-codes'}},
+      'additionalInstruction' => {'type'=>'CodeableConcept', 'path'=>'Dosage.additionalInstruction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/additional-instruction-codes'}},
       'patientInstruction' => {'type'=>'string', 'path'=>'Dosage.patientInstruction', 'min'=>0, 'max'=>1},
       'timing' => {'type'=>'Timing', 'path'=>'Dosage.timing', 'min'=>0, 'max'=>1},
       'asNeededBoolean' => {'type'=>'boolean', 'path'=>'Dosage.asNeeded[x]', 'min'=>0, 'max'=>1},

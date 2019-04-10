@@ -24,7 +24,7 @@ module FHIR
       'publisher' => {'type'=>'string', 'path'=>'ExampleScenario.publisher', 'min'=>0, 'max'=>1},
       'contact' => {'type'=>'ContactDetail', 'path'=>'ExampleScenario.contact', 'min'=>0, 'max'=>Float::INFINITY},
       'useContext' => {'type'=>'UsageContext', 'path'=>'ExampleScenario.useContext', 'min'=>0, 'max'=>Float::INFINITY},
-      'jurisdiction' => {'valid_codes'=>{'urn:iso:std:iso:3166'=>[], 'urn:iso:std:iso:3166:-2'=>[], 'http://unstats.un.org/unsd/methods/m49/m49.htm'=>[]}, 'type'=>'CodeableConcept', 'path'=>'ExampleScenario.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/jurisdiction'}},
+      'jurisdiction' => {'type'=>'CodeableConcept', 'path'=>'ExampleScenario.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/jurisdiction'}},
       'copyright' => {'type'=>'markdown', 'path'=>'ExampleScenario.copyright', 'min'=>0, 'max'=>1},
       'purpose' => {'type'=>'markdown', 'path'=>'ExampleScenario.purpose', 'min'=>0, 'max'=>1},
       'actor' => {'type'=>'ExampleScenario::Actor', 'path'=>'ExampleScenario.actor', 'min'=>0, 'max'=>Float::INFINITY},

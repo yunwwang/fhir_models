@@ -1,5 +1,7 @@
 module FHIR
   class Field
+    include FHIR::Hashable
+
     attr_accessor :name
     attr_accessor :local_name
     attr_accessor :path
@@ -25,13 +27,7 @@ module FHIR
         hash[v.to_s[1..-1]] = instance_variable_get(v)
       end
       hash.delete('name')
-      hash.keep_if do |_key, value|
-        !value.nil? && ((value.is_a?(Hash) && !value.empty?) ||
-                          (value.is_a?(Array) && !value.empty?) ||
-                          (!value.is_a?(Hash) && !value.is_a?(Array))
-                       )
-      end
-      hash
+      prune(hash)
     end
 
     def fix_name(name)

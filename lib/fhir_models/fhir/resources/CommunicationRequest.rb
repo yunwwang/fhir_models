@@ -22,7 +22,7 @@ module FHIR
       'replaces' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/CommunicationRequest'], 'type'=>'Reference', 'path'=>'CommunicationRequest.replaces', 'min'=>0, 'max'=>Float::INFINITY},
       'groupIdentifier' => {'type'=>'Identifier', 'path'=>'CommunicationRequest.groupIdentifier', 'min'=>0, 'max'=>1},
       'status' => {'valid_codes'=>{'http://hl7.org/fhir/request-status'=>['draft', 'active', 'on-hold', 'revoked', 'completed', 'entered-in-error', 'unknown']}, 'type'=>'code', 'path'=>'CommunicationRequest.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/request-status|4.0.0'}},
-      'statusReason' => {'type'=>'CodeableConcept', 'path'=>'CommunicationRequest.statusReason', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>nil}},
+      'statusReason' => {'type'=>'CodeableConcept', 'path'=>'CommunicationRequest.statusReason', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example'}},
       'category' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/communication-category'=>['alert', 'notification', 'reminder', 'instruction']}, 'type'=>'CodeableConcept', 'path'=>'CommunicationRequest.category', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/communication-category'}},
       'priority' => {'valid_codes'=>{'http://hl7.org/fhir/request-priority'=>['routine', 'urgent', 'asap', 'stat']}, 'type'=>'code', 'path'=>'CommunicationRequest.priority', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/request-priority|4.0.0'}},
       'doNotPerform' => {'type'=>'boolean', 'path'=>'CommunicationRequest.doNotPerform', 'min'=>0, 'max'=>1},

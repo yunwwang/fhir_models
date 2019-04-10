@@ -28,7 +28,7 @@ module FHIR
       'contact' => {'type'=>'ContactDetail', 'path'=>'Questionnaire.contact', 'min'=>0, 'max'=>Float::INFINITY},
       'description' => {'type'=>'markdown', 'path'=>'Questionnaire.description', 'min'=>0, 'max'=>1},
       'useContext' => {'type'=>'UsageContext', 'path'=>'Questionnaire.useContext', 'min'=>0, 'max'=>Float::INFINITY},
-      'jurisdiction' => {'valid_codes'=>{'urn:iso:std:iso:3166'=>[], 'urn:iso:std:iso:3166:-2'=>[], 'http://unstats.un.org/unsd/methods/m49/m49.htm'=>[]}, 'type'=>'CodeableConcept', 'path'=>'Questionnaire.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/jurisdiction'}},
+      'jurisdiction' => {'type'=>'CodeableConcept', 'path'=>'Questionnaire.jurisdiction', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/jurisdiction'}},
       'purpose' => {'type'=>'markdown', 'path'=>'Questionnaire.purpose', 'min'=>0, 'max'=>1},
       'copyright' => {'type'=>'markdown', 'path'=>'Questionnaire.copyright', 'min'=>0, 'max'=>1},
       'approvalDate' => {'type'=>'date', 'path'=>'Questionnaire.approvalDate', 'min'=>0, 'max'=>1},
@@ -86,7 +86,7 @@ module FHIR
           'answerDateTime' => {'type'=>'dateTime', 'path'=>'EnableWhen.answer[x]', 'min'=>1, 'max'=>1},
           'answerTime' => {'type'=>'time', 'path'=>'EnableWhen.answer[x]', 'min'=>1, 'max'=>1},
           'answerString' => {'type'=>'string', 'path'=>'EnableWhen.answer[x]', 'min'=>1, 'max'=>1},
-          'answerCoding' => {'valid_codes'=>{'http://snomed.info/sct'=>[]}, 'type'=>'Coding', 'path'=>'EnableWhen.answer[x]', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/questionnaire-answers'}},
+          'answerCoding' => {'type'=>'Coding', 'path'=>'EnableWhen.answer[x]', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/questionnaire-answers'}},
           'answerQuantity' => {'type'=>'Quantity', 'path'=>'EnableWhen.answer[x]', 'min'=>1, 'max'=>1},
           'answerReference' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'EnableWhen.answer[x]', 'min'=>1, 'max'=>1}
         }
@@ -124,7 +124,7 @@ module FHIR
           'valueDate' => {'type'=>'date', 'path'=>'AnswerOption.value[x]', 'min'=>1, 'max'=>1},
           'valueTime' => {'type'=>'time', 'path'=>'AnswerOption.value[x]', 'min'=>1, 'max'=>1},
           'valueString' => {'type'=>'string', 'path'=>'AnswerOption.value[x]', 'min'=>1, 'max'=>1},
-          'valueCoding' => {'valid_codes'=>{'http://snomed.info/sct'=>[]}, 'type'=>'Coding', 'path'=>'AnswerOption.value[x]', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/questionnaire-answers'}},
+          'valueCoding' => {'type'=>'Coding', 'path'=>'AnswerOption.value[x]', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/questionnaire-answers'}},
           'valueReference' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'AnswerOption.value[x]', 'min'=>1, 'max'=>1},
           'initialSelected' => {'type'=>'boolean', 'path'=>'AnswerOption.initialSelected', 'min'=>0, 'max'=>1}
         }
@@ -162,7 +162,7 @@ module FHIR
           'valueString' => {'type'=>'string', 'path'=>'Initial.value[x]', 'min'=>1, 'max'=>1},
           'valueUri' => {'type'=>'uri', 'path'=>'Initial.value[x]', 'min'=>1, 'max'=>1},
           'valueAttachment' => {'type'=>'Attachment', 'path'=>'Initial.value[x]', 'min'=>1, 'max'=>1},
-          'valueCoding' => {'valid_codes'=>{'http://snomed.info/sct'=>[]}, 'type'=>'Coding', 'path'=>'Initial.value[x]', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/questionnaire-answers'}},
+          'valueCoding' => {'type'=>'Coding', 'path'=>'Initial.value[x]', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/questionnaire-answers'}},
           'valueQuantity' => {'type'=>'Quantity', 'path'=>'Initial.value[x]', 'min'=>1, 'max'=>1},
           'valueReference' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'Initial.value[x]', 'min'=>1, 'max'=>1}
         }
