@@ -20,6 +20,11 @@ PRIMITIVE_EXTENSIONS = [
   'plandefinition-example-cardiology-os',
   'plandefinition-example'
 ]
+SLOW_FIXTURES = [
+  'valueset-ucum-common',
+  'capabilitystatement-base',
+  'conceptmaps'
+]
 
 TESTMEMORY = (ENV['TESTMEMORY'] || 0).to_i
 puts "***** TESTMEMORY: #{TESTMEMORY} *****"

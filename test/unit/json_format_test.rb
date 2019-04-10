@@ -51,6 +51,7 @@ class JsonFormatTest < Test::Unit::TestCase
   end
 
   def run_json_xml_json_lossiness_test(example_file, example_name)
+    omit 'Skipping slow test fixtures' if SLOW_FIXTURES.include?(example_name)
     input_json = File.read(example_file)
     resource_from_json = FHIR::Json.from_json(input_json)
     output_xml = resource_from_json.to_xml
