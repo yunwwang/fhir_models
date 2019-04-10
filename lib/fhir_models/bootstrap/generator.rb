@@ -196,7 +196,7 @@ module FHIR
                 field.binding.delete('extension')
                 # set the actual code list
                 binding_uri = field.binding['uri']
-                binding_uri = binding_uri[0..-7] if binding_uri && binding_uri.end_with?('|4.0.0')
+                binding_uri = binding_uri[0..-7] if binding_uri&.end_with?('|4.0.0')
                 codes = @defn.get_codes(binding_uri)
                 field.valid_codes = codes unless codes.nil?
                 if field.valid_codes.empty? && field.binding['uri'] && !binding_uri.end_with?('bcp47') && !binding_uri.end_with?('bcp13.txt')
