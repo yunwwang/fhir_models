@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><EnrollmentRequest xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<EnrollmentRequest xmlns="http://hl7.org/fhir">
  <id value="22345"/>
 
- <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">A human-readable rendering of the EnrollmentRequest.</div>
-  </text>
+ <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 
   <identifier>
     <system value="http://happyvalley.com/enrollmentrequest"/>
@@ -15,13 +20,17 @@
  
   <created value="2014-08-16"/>
 
-  <organization>
+  <insurer>
+    <reference value="Organization/2"/>
+  </insurer>
+  
+  <provider>
     <reference value="Organization/1"/>
-  </organization>
+  </provider>
 
-  <subject>
+  <candidate>
     <reference value="Patient/1"/>
-  </subject>
+  </candidate>
   
   <coverage>
      <reference value="Coverage/9876B1"/>

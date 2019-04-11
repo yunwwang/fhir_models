@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 26, 2017 18:33-0400 for FHIR v3.0.0 
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -48,6 +48,9 @@
             
           </xs:element>
           <xs:element name="type" minOccurs="1" maxOccurs="1" type="BundleType">
+            
+          </xs:element>
+          <xs:element name="timestamp" minOccurs="0" maxOccurs="1" type="instant">
             
           </xs:element>
           <xs:element name="total" minOccurs="0" maxOccurs="1" type="unsignedInt">
@@ -179,6 +182,9 @@
       <xs:enumeration value="GET">
         
       </xs:enumeration>
+      <xs:enumeration value="HEAD">
+        
+      </xs:enumeration>
       <xs:enumeration value="POST">
         
       </xs:enumeration>
@@ -186,6 +192,9 @@
         
       </xs:enumeration>
       <xs:enumeration value="DELETE">
+        
+      </xs:enumeration>
+      <xs:enumeration value="PATCH">
         
       </xs:enumeration>
     </xs:restriction>

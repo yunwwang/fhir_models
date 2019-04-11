@@ -1,17 +1,13 @@
 {
   "resourceType": "Measure",
   "id": "measure-predecessor-example",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid dict\"><tr><td><b>Id: </b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\">Measure/measure-predecessor-example</td></tr></table><p/><table class=\"grid dict\"><tr><td><b>Identifier: </b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>value: </b><span>exclusive-breastfeeding-measure</span></td></tr></table><p/><table class=\"grid dict\"><tr><td><b>Title: </b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\">Exclusive Breastfeeding Measure</td></tr></table><p/><table class=\"grid dict\"><tr><td><b>Status: </b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\">active</td></tr></table><p/><table class=\"grid dict\"><tr><td><b>Description: </b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\">Exclusive breastfeeding measure of outcomes for exclusive breastmilk feeding of newborns.</td></tr></table><p/><table class=\"grid dict\"><tr><td><b>Purpose: </b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\">Exclusive breast milk feeding for the first 6 months of neonatal life can result in numerous long-term health benefits for both mother and newborn and is recommended by a number of national and international organizations. Evidence suggests that the prenatal and intrapartum period is critical for the success of exclusive (or any) breast feeding. Therefore, it is recommended that newborns are fed breast milk only from birth to discharge.</td></tr></table><p/><table class=\"grid dict\"><tr><td><b>Topic: </b></td></tr><tr><td style=\"padding-right: 25px;\"><span style=\"padding-left: 25px;\"><b>text: </b><span>Exclusive Breastfeeding</span><br/></span></td></tr></table><p/><table class=\"grid dict\"><tr><td><b>Library: </b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>reference: </b><span>Library/library-exclusive-breastfeeding-cqm-logic</span></td></tr></table><p/><table class=\"grid dict\"><tr><td><b>Type: </b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\">outcome</td></tr></table><p/><table class=\"grid dict\"><tr><td><b>Group:</b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>Identifier:</b><br/><span style=\"padding-left: 25px;\"><b>value: </b><span>Population Group 1</span><br/></span></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>Population:</b><br/><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>type:</b><span>initial-population</span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>Identifier:</b><br/><span style=\"padding-left: 25px;\"><b>value: </b><span>initial-population-1-identifier</span><br/></span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>criteria: </b><span>InitialPopulation1</span></p></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>Population:</b><br/><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>type:</b><span>denominator</span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>Identifier:</b><br/><span style=\"padding-left: 25px;\"><b>value: </b><span>denominator-1-identifier</span><br/></span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>criteria: </b><span>Denominator1</span></p></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>Population:</b><br/><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>type:</b><span>denominator-exclusion</span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>Identifier:</b><br/><span style=\"padding-left: 25px;\"><b>value: </b><span>denominator-exclusions-1-identifier</span><br/></span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>criteria: </b><span>DenominatorExclusions1</span></p></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>Population:</b><br/><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>type:</b><span>numerator</span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>Identifier:</b><br/><span style=\"padding-left: 25px;\"><b>value: </b><span>numerator-1-identifier</span><br/></span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>criteria: </b><span>Numerator1</span></p></td></tr></table><table class=\"grid dict\"><tr><td><b>Group:</b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>Identifier:</b><br/><span style=\"padding-left: 25px;\"><b>value: </b><span>Population Group 2</span><br/></span></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>Population:</b><br/><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>type:</b><span>initial-population</span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>Identifier:</b><br/><span style=\"padding-left: 25px;\"><b>value: </b><span>initial-population-2-identifier</span><br/></span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>criteria: </b><span>InitialPopulation2</span></p></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>Population:</b><br/><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>type:</b><span>denominator</span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>Identifier:</b><br/><span style=\"padding-left: 25px;\"><b>value: </b><span>denominator-2-identifier</span><br/></span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>criteria: </b><span>Denominator2</span></p></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>Population:</b><br/><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>type:</b><span>denominator-exclusion</span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>Identifier:</b><br/><span style=\"padding-left: 25px;\"><b>value: </b><span>denominator-exclusions-2-identifier</span><br/></span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>criteria: </b><span>DenominatorExclusions2</span></p></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\"><b>Population:</b><br/><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>type:</b><span>numerator</span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>Identifier:</b><br/><span style=\"padding-left: 25px;\"><b>value: </b><span>numerator-2-identifier</span><br/></span></p><p style=\"margin-bottom: 5px; padding-left: 25px;\"><b>criteria: </b><span>Numerator2</span></p></td></tr></table></div>"
-  },
   "identifier": [
     {
       "use": "official",
       "value": "exclusive-breastfeeding-measure"
     }
   ],
-  "version": "3.0.0",
+  "version": "4.0.0",
   "title": "Exclusive Breastfeeding Measure",
   "status": "active",
   "date": "2014-03-08",
@@ -73,15 +69,11 @@
     },
     {
       "type": "successor",
-      "resource": {
-        "reference": "Measure/measure-exclusive-breastfeeding"
-      }
+      "resource": "Measure/measure-exclusive-breastfeeding"
     }
   ],
   "library": [
-    {
-      "reference": "Library/library-exclusive-breastfeeding-cqm-logic"
-    }
+    "Library/library-exclusive-breastfeeding-cqm-logic"
   ],
   "disclaimer": "These performance measures are not clinical guidelines and do not establish a standard of medical care, and have not been tested for all potential applications. The measures and specifications are provided without warranty.",
   "scoring": {
@@ -102,18 +94,20 @@
   ],
   "rationale": "Exclusive breast milk feeding for the first 6 months of neonatal life has long been the expressed goal of World Health Organization (WHO), Department of Health and Human Services (DHHS), American Academy of Pediatrics (AAP) and American College of Obstetricians and Gynecologists (ACOG). ACOG has recently reiterated its position (ACOG, 2007). A recent Cochrane review substantiates the benefits (Kramer et al., 2002). Much evidence has now focused on the prenatal and intrapartum period as critical for the success of exclusive (or any) BF (Centers for Disease Control and Prevention [CDC], 2007; Petrova et al., 2007; Shealy et al., 2005; Taveras et al., 2004). Exclusive breast milk feeding rate during birth hospital stay has been calculated by the California Department of Public Health for the last several years using newborn genetic disease testing data. Healthy People 2010 and the CDC have also been active in promoting this goal.",
   "clinicalRecommendationStatement": "Exclusive breast milk feeding for the first 6 months of neonatal life can result in numerous long-term health benefits for both mother and newborn and is recommended by a number of national and international organizations. Evidence suggests that the prenatal and intrapartum period is critical for the success of exclusive (or any) breast feeding. Therefore, it is recommended that newborns are fed breast milk only from birth to discharge.",
-  "improvementNotation": "Improvement noted as an increase in the rate",
+  "improvementNotation": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+        "code": "increase"
+      }
+    ]
+  },
   "guidance": "A discharge to a designated cancer center or children's hospital should be captured as a discharge to an acute care facility. It is acceptable to calculate Gestational Age using the American College of Obstetricians and Gynecologists ReVITALize guidelines, which define Gestational Age as calculated using the best obstetrical Estimated Due Date (EDD) based on the formula: Gestational Age= (280-(EDD-Reference Date))/7 where Reference Date is the date on which you are trying to determine gestational age. For PC-05, Reference Date is the Birth Date. Note however that the calculation may yield a non-whole number and gestational age should be rounded off to the nearest completed week. For example, an infant born on the 5th day of the 36th week (35 weeks and 5/7 days) is at a gestational age of 35 weeks, not 36 weeks.",
   "group": [
     {
-      "identifier": {
-        "value": "Population Group 1"
-      },
+      "id": "PopulationGroup1",
       "population": [
         {
-          "identifier": {
-            "value": "initial-population-1-identifier"
-          },
           "code": {
             "coding": [
               {
@@ -121,12 +115,12 @@
               }
             ]
           },
-          "criteria": "InitialPopulation1"
+          "criteria": {
+            "language": "text/cql",
+            "expression": "InitialPopulation1"
+          }
         },
         {
-          "identifier": {
-            "value": "denominator-1-identifier"
-          },
           "code": {
             "coding": [
               {
@@ -134,12 +128,12 @@
               }
             ]
           },
-          "criteria": "Denominator1"
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Denominator1"
+          }
         },
         {
-          "identifier": {
-            "value": "denominator-exclusions-1-identifier"
-          },
           "code": {
             "coding": [
               {
@@ -147,12 +141,12 @@
               }
             ]
           },
-          "criteria": "DenominatorExclusions1"
+          "criteria": {
+            "language": "text/cql",
+            "expression": "DenominatorExclusions1"
+          }
         },
         {
-          "identifier": {
-            "value": "numerator-1-identifier"
-          },
           "code": {
             "coding": [
               {
@@ -160,19 +154,17 @@
               }
             ]
           },
-          "criteria": "Numerator1"
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Numerator1"
+          }
         }
       ]
     },
     {
-      "identifier": {
-        "value": "Population Group 2"
-      },
+      "id": "PopulationGroup2",
       "population": [
         {
-          "identifier": {
-            "value": "initial-population-2-identifier"
-          },
           "code": {
             "coding": [
               {
@@ -180,12 +172,12 @@
               }
             ]
           },
-          "criteria": "InitialPopulation2"
+          "criteria": {
+            "language": "text/cql",
+            "expression": "InitialPopulation2"
+          }
         },
         {
-          "identifier": {
-            "value": "denominator-2-identifier"
-          },
           "code": {
             "coding": [
               {
@@ -193,12 +185,12 @@
               }
             ]
           },
-          "criteria": "Denominator2"
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Denominator2"
+          }
         },
         {
-          "identifier": {
-            "value": "denominator-exclusions-2-identifier"
-          },
           "code": {
             "coding": [
               {
@@ -206,12 +198,12 @@
               }
             ]
           },
-          "criteria": "DenominatorExclusions2"
+          "criteria": {
+            "language": "text/cql",
+            "expression": "DenominatorExclusions2"
+          }
         },
         {
-          "identifier": {
-            "value": "numerator-2-identifier"
-          },
           "code": {
             "coding": [
               {
@@ -219,9 +211,21 @@
               }
             ]
           },
-          "criteria": "Numerator2"
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Numerator2"
+          }
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

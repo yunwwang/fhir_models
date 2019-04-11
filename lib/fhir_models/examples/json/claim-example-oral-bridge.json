@@ -1,17 +1,13 @@
 {
   "resourceType": "Claim",
   "id": "100156",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Oral Health Claim</div>"
-  },
   "contained": [
     {
       "resourceType": "Device",
       "id": "device-bridge"
     },
     {
-      "resourceType": "ReferralRequest",
+      "resourceType": "ServiceRequest",
       "id": "referral",
       "status": "active",
       "intent": "order",
@@ -30,12 +26,12 @@
   "type": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/ex-claimtype",
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
         "code": "oral"
       }
     ]
   },
-  "use": "complete",
+  "use": "claim",
   "patient": {
     "reference": "Patient/1"
   },
@@ -43,7 +39,7 @@
   "insurer": {
     "reference": "Organization/2"
   },
-  "organization": {
+  "provider": {
     "reference": "Organization/1"
   },
   "priority": {
@@ -61,7 +57,7 @@
       "relationship": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/ex-relatedclaimrelationship",
+            "system": "http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship",
             "code": "associated"
           }
         ]
@@ -75,14 +71,10 @@
     "type": {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/payeetype",
+          "system": "http://terminology.hl7.org/CodeSystem/payeetype",
           "code": "other"
         }
       ]
-    },
-    "resourceType": {
-      "system": "http://hl7.org/fhir/ex-payee-resource-type",
-      "code": "relatedperson"
     },
     "party": {
       "reference": "RelatedPerson/peter"
@@ -99,13 +91,13 @@
       }
     }
   ],
-  "information": [
+  "supportingInfo": [
     {
       "sequence": 1,
       "category": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/claiminformationcategory",
+            "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
             "code": "prosthesis"
           }
         ]
@@ -143,13 +135,13 @@
   "item": [
     {
       "sequence": 1,
-      "careTeamLinkId": [
+      "careTeamSequence": [
         1
       ],
-      "informationLinkId": [
+      "informationSequence": [
         1
       ],
-      "service": {
+      "productOrService": {
         "coding": [
           {
             "system": "http://example.org/fhir/oralservicecodes",
@@ -162,21 +154,19 @@
       "locationCodeableConcept": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/ex-serviceplace",
+            "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
             "code": "11"
           }
         ]
       },
       "unitPrice": {
-        "value": 1400.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 1400.0,
+        "currency": "USD"
       },
       "factor": 0.75,
       "net": {
-        "value": 1050.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 1050.0,
+        "currency": "USD"
       },
       "udi": [
         {
@@ -194,10 +184,10 @@
     },
     {
       "sequence": 2,
-      "careTeamLinkId": [
+      "careTeamSequence": [
         1
       ],
-      "service": {
+      "productOrService": {
         "coding": [
           {
             "system": "http://example.org/fhir/oralservicecodes",
@@ -209,20 +199,18 @@
       "locationCodeableConcept": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/ex-serviceplace",
+            "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
             "code": "11"
           }
         ]
       },
       "unitPrice": {
-        "value": 105.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 105.0,
+        "currency": "USD"
       },
       "net": {
-        "value": 105.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 105.0,
+        "currency": "USD"
       },
       "bodySite": {
         "coding": [
@@ -245,13 +233,13 @@
     },
     {
       "sequence": 3,
-      "careTeamLinkId": [
+      "careTeamSequence": [
         1
       ],
-      "procedureLinkId": [
+      "procedureSequence": [
         1
       ],
-      "service": {
+      "productOrService": {
         "coding": [
           {
             "system": "http://example.org/fhir/oralservicecodes",
@@ -263,20 +251,18 @@
       "locationCodeableConcept": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/ex-serviceplace",
+            "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
             "code": "11"
           }
         ]
       },
       "unitPrice": {
-        "value": 1100.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 1100.0,
+        "currency": "USD"
       },
       "net": {
-        "value": 1100.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 1100.0,
+        "currency": "USD"
       },
       "bodySite": {
         "coding": [
@@ -289,7 +275,7 @@
       "detail": [
         {
           "sequence": 1,
-          "service": {
+          "productOrService": {
             "coding": [
               {
                 "system": "http://example.org/fhir/oralservicecodes",
@@ -298,20 +284,18 @@
             ]
           },
           "unitPrice": {
-            "value": 1000.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 1000.0,
+            "currency": "USD"
           },
           "factor": 0.75,
           "net": {
-            "value": 750.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 750.0,
+            "currency": "USD"
           }
         },
         {
           "sequence": 2,
-          "service": {
+          "productOrService": {
             "coding": [
               {
                 "system": "http://example.org/fhir/oralservicecodes",
@@ -320,22 +304,28 @@
             ]
           },
           "unitPrice": {
-            "value": 350.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 350.0,
+            "currency": "USD"
           },
           "net": {
-            "value": 350.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 350.0,
+            "currency": "USD"
           }
         }
       ]
     }
   ],
   "total": {
-    "value": 2255.00,
-    "system": "urn:iso:std:iso:4217",
-    "code": "USD"
+    "value": 2255.0,
+    "currency": "USD"
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

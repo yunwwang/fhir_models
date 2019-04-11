@@ -1,66 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
 	<id value="example-expansion"/>
 	<meta>
 		<!--    many expansions are not shareable, but this one is    -->
 		<profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
-	</meta>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<table class="grid">
-				<tr>
-					<td>http://loinc.org</td>
-					<td>14647-2</td>
-					<td>Cholesterol [Moles/volume] in Serum or Plasma</td>
-				</tr>
-				<tr>
-					<td colspan="3">
-						<b>Additional Cholesterol codes</b>
-					</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>2093-3</td>
-					<td>Cholesterol [Mass/volume] in Serum or Plasma</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>48620-9</td>
-					<td>Cholesterol [Mass/volume] in Serum or Plasma ultracentrifugate</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>9342-7</td>
-					<td>Cholesterol [Percentile]</td>
-				</tr>
-				<tr>
-					<td colspan="3">
-						<b>Cholesterol Ratios</b>
-					</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>2096-6</td>
-					<td>Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>35200-5</td>
-					<td>Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>48089-7</td>
-					<td>Cholesterol/Apolipoprotein B [Molar ratio] in Serum or Plasma</td>
-				</tr>
-				<tr>
-					<td>http://loinc.org</td>
-					<td>55838-7</td>
-					<td>Cholesterol/Phospholipid [Molar ratio] in Serum or Plasma</td>
-				</tr>
-			</table>
-		</div>
-	</text>
+	
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+	
 	<url value="http://hl7.org/fhir/ValueSet/example-expansion"/>
 	<version value="20150622"/>
 	<name value="LOINC Codes for Cholesterol in Serum/Plasma"/>
@@ -77,7 +28,7 @@
 		</telecom>
 	</contact>
 	<description value="This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36."/>
-	<copyright value="This content from LOINC&#xAE; is copyright &#xA9; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use."/>
+	<copyright value="This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use."/>
 	<!--    it's optional whether to include the content logical definition, but 
 	  when an expansion is being persisted, it's better to do so (avoids
 		subsequent mystification as to what the intent was)
@@ -124,10 +75,10 @@
 		<!--    and the actual expansion    -->
 		<!--    
 		  this expansion is made as a hierarchy - a preferred code, followed by two 
-			sets of codes categorised by a label. This is to help a human user 
+			sets of codes categorized by a label. This is to help a human user 
 			navigate the list (e.g. in a picklist)
 			
-			Note that the hierarchy may not have anything to do with the
+			Note that the hierarchy might not have anything to do with the
 			definitions of the codes (e.g. could be divided into common and less common)
 			
 			Building a hierarchy like this is not explicitly specified in a standard value set,

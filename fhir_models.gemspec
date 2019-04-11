@@ -6,7 +6,7 @@ require 'fhir_models/version'
 Gem::Specification.new do |spec|
   spec.name          = 'fhir_models'
   spec.version       = FHIR::Models::VERSION
-  spec.authors       = ['Jason Walonoski', 'Andre Quina', "Michael O'Keefe", 'Robert Scanlon']
+  spec.authors       = ['Jason Walonoski', 'Andre Quina', "Michael O'Keefe", 'Robert Scanlon', 'Reece Adamson']
   spec.email         = ['jwalonoski@mitre.org']
 
   spec.summary       = %q{A Gem for handling FHIR models in ruby}
@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'pry-coolline'
   spec.add_development_dependency 'test-unit'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'simplecov'

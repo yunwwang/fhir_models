@@ -1,24 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?><CarePlan xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<CarePlan xmlns="http://hl7.org/fhir">
   <id value="gpvisit"/>
-  <text>
-    <status value="additional"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>  Represents the flow of a patient within a practice. The plan is created when
-        they arrive and represents the &#39;care&#39; of the patient over the course of that encounter.
-        They first see the nurse for basic observations (BP, pulse, temp) then the doctor for
-        the consultation and finally the nurse again for a tetanus immunization. As the plan is
-        updated (e.g. a new activity added), different versions of the plan exist, and workflow timings
-        for reporting can be gained by examining the plan history. This example is the version after
-        seeing the doctor, and waiting for the nurse.The plan can either be created &#39;ad hoc&#39; and modified as
-        the parient progresses, or start with a standard template (which can, of course, be altered to suit the patient.</p>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <contained>
     <!--  This is the reason for the encounter. It is referenced by the concern  -->
     <Condition>
       <id value="p1"/>
-      <clinicalStatus value="active"/>
-	  <verificationStatus value="confirmed"/>
+      <clinicalStatus>
+		<coding>
+		  <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+		  <code value="active"/>
+		</coding>
+	  </clinicalStatus>
+
+	  <verificationStatus>
+		<coding>
+		  <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+		  <code value="confirmed"/>
+		</coding>
+	  </verificationStatus>
       <code>
         <!--  Could coded if we wanted to... -->
         <text value="Overseas encounter"/>
@@ -92,7 +99,7 @@
 <contained>
     <Goal>
       <id value="goal"/>
-      <status value="planned"/>
+      <lifecycleStatus value="planned"/>
 	  <description>
         <text value="Complete consultation"/>
       </description>
@@ -132,7 +139,7 @@
     </outcomeReference>
     <detail>
       <!--  This activity is for the initial nurse encounter where vitals are taken. It has been completed. -->
-      <category><coding><system value="http://hl7.org/fhir/care-plan-activity-category"/><code value="encounter"/></coding></category>
+      <kind value="Appointment"/>
       <code>
         <coding>
           <system value="http://example.org/local"/>
@@ -141,7 +148,7 @@
         <text value="Nurse Consultation"/>
       </code>
       <status value="completed"/>
-      <prohibited value="false"/>
+      <doNotPerform value="false"/>
       <scheduledPeriod>
         <!--  the nurse saw the patient between 10:38 and 10:50  -->
         <start value="2013-01-01T10:38:00+00:00"/>
@@ -158,7 +165,7 @@
     <detail>
       <!--  This activity is for the encounter with the doctor. It is scheduled, but not yet started,
               so there is no timing[x]  or actionTaken element yet  -->
-      <category><coding><system value="http://hl7.org/fhir/care-plan-activity-category"/><code value="encounter"/></coding></category>
+      <kind value="Appointment"/>
       <code>
         <coding>
           <system value="http://example.org/local"/>
@@ -167,7 +174,7 @@
         <text value="Doctor Consultation"/>
       </code>
       <status value="scheduled"/>
-      <prohibited value="false"/>
+      <doNotPerform value="false"/>
       <!--  The status is 'scheduled' so the doctor knows the patient is waiting.   -->
       <performer>
         <!--  refer to the participant (the nurse) in this resource -->

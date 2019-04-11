@@ -1,19 +1,13 @@
 {
   "resourceType": "Procedure",
   "id": "ambulation",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ambulation procedure was not done</div>"
-  },
   "identifier": [
     {
       "value": "12345"
     }
   ],
-  "definition": [
-    {
-      "display": "Protocol for hypertension during pregnancy"
-    }
+  "instantiatesUri": [
+    "http://example.org/protocol-for-hypertension-during-pregnancy"
   ],
   "basedOn": [
     {
@@ -21,9 +15,8 @@
       "display": "Maternity care plan"
     }
   ],
-  "status": "suspended",
-  "notDone": true,
-  "notDoneReason": {
+  "status": "not-done",
+  "statusReason": {
     "coding": [
       {
         "system": "http://snomed.info/sct",
@@ -67,5 +60,14 @@
       "reference": "Observation/blood-pressure",
       "display": "Blood Pressure"
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

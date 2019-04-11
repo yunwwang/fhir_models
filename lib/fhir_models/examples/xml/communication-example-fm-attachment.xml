@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><Communication xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Communication xmlns="http://hl7.org/fhir">
   <id value="fm-attachment"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Attachment which is unsolicited</div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   
   <!--  insert contents here  -->
   <!-- 
@@ -76,6 +81,24 @@
   <subject>
     <reference value="Patient/1"/>
   </subject>
+  
+  <!--  Example using about 0..* Resource(Any) to provide focal resources  -->
+  <about>
+    <!--  reference value="#claim"/  -->
+      <identifier>
+	    <system value="http://happyvalley.com/claim"/>
+        <value value="12345"/>
+      </identifier>
+  </about>
+  <about>
+    <!--  reference value="#claimresponse"/  -->
+      <identifier>
+	    <system value="http://www.BenefitsInc.com/fhir/claimresponse"/>
+        <value value="R3500"/>
+      </identifier>
+  </about>
+  
+  <sent value="2016-06-12T18:01:10-08:00"/>
   <recipient>
     <!--  reference value="#payor"/  -->
       <identifier>
@@ -83,23 +106,6 @@
         <value value="123456"/>
       </identifier>
   </recipient>
-  <!--  Example using topic 0..* Resource(Any) to provide focal resources  -->
-  <topic>
-    <!--  reference value="#claim"/  -->
-      <identifier>
-	    <system value="http://happyvalley.com/claim"/>
-        <value value="12345"/>
-      </identifier>
-  </topic>
-  <topic>
-    <!--  reference value="#claimresponse"/  -->
-      <identifier>
-	    <system value="http://www.BenefitsInc.com/fhir/claimresponse"/>
-        <value value="R3500"/>
-      </identifier>
-  </topic>
-  
-  <sent value="2016-06-12T18:01:10-08:00"/>
   <sender>
     <!--  reference value="#provider"/  -->
       <identifier>
@@ -121,7 +127,7 @@
   <payload>
     <contentAttachment>
 	  <contentType value="application/pdf"/>
-	  <url value="http://happyvalley.com/docs/AB12345"/>
+	  <url value="http://example.org/docs/AB12345"/>
 	  <size value="104274"/>
 	  <hash value="SGVsbG8gdGhlcmU="/>
 	  <creation value="2010-02-01T10:57:34+01:00"/>

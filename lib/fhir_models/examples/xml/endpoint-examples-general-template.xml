@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><Bundle xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
   <id value="b0a5e4277-83c4-4adb-87e2-e3efe3369b6f"/>
   <meta>
     <lastUpdated value="2012-05-29T23:45:32Z"/> 
+  
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
   </meta> 
   <type value="collection"/> 
   <entry>
@@ -17,7 +24,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="hl7-fhir-rest"/>
         </connectionType>
         <name value="CarePlan repository"/>
@@ -52,7 +59,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="hl7-fhir-rest"/>
         </connectionType>
         <name value="Questionnaire Destination"/>
@@ -82,12 +89,12 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-              Referral Requests, ReferralRequest<br/>
+              Referral Requests, ServiceRequest<br/>
               Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="hl7-fhir-rest"/>
         </connectionType>
         <name value="Referral Requests"/>
@@ -101,7 +108,7 @@
         <payloadType>
           <coding>
               <!-- <system value="http://hl7.org/fhir/resource-types" /> -->
-            <code value="ReferralRequest"/>
+            <code value="ServiceRequest"/>
           </coding>
         </payloadType>
         <payloadMimeType value="application/fhir+xml"/>
@@ -117,12 +124,12 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-              Referral Requests, ReferralRequest QuestionnaireResponse<br/>
+              Referral Requests, ServiceRequest QuestionnaireResponse<br/>
               Address: https://open.epic.com/Interface/FHIR</div>
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="hl7-fhir-rest"/>
         </connectionType>
         <name value="Referral Requests"/>
@@ -136,7 +143,7 @@
         <payloadType>
           <coding>
               <!-- <system value="http://hl7.org/fhir/resource-types" /> -->
-            <code value="ReferralRequest QuestionnaireResponse"/>
+            <code value="ServiceRequest QuestionnaireResponse"/>
           </coding>
         </payloadType>
         <payloadMimeType value="application/fhir+json"/>
@@ -152,12 +159,12 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-              Subscription receiver, ReferralRequest<br/>
+              Subscription receiver, ServiceRequest<br/>
               Address: mailto:subscriptions@example.org</div>
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="secure-email"/>
         </connectionType>
         <name value="Subscription receiver"/>
@@ -171,7 +178,7 @@
         <payloadType>
           <coding>
               <!-- <system value="http://hl7.org/fhir/resource-types" /> -->
-            <code value="ReferralRequest"/>
+            <code value="ServiceRequest"/>
           </coding>
         </payloadType>
         <payloadMimeType value="application/fhir+xml"/>
@@ -192,7 +199,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="hl7-fhir-msg"/>
         </connectionType>
         <name value="valid usecase?"/>
@@ -227,7 +234,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="hl7v2-mllp"/>
         </connectionType>
         <name value="v2 referral Requests"/>
@@ -244,7 +251,7 @@
             <code value="REF-I12"/>
           </coding>
         </payloadType>
-        <payloadMimeType value="application/fhir+json"/>
+        <payloadMimeType value="application/hl7-v2"/>
         <address value="127.0.0.1"/>
       </Endpoint>
     </resource>
@@ -262,7 +269,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="ihe-xds"/>
         </connectionType>
         <name value="xds event summaries"/>
@@ -279,7 +286,7 @@
             <code value="CDA-EventSummary"/>
           </coding>
         </payloadType>
-        <payloadMimeType value="application/xml"/>
+        <payloadMimeType value="application/hl7-sda+xml; variant=XDA/XDS"/>
         <address value="https://open.epic.com/Interface/XDS.b"/>
       </Endpoint>
     </resource>
@@ -297,7 +304,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="dicom-wado-rs"/>
         </connectionType>
         <name value="Enterprise Image Archive"/>
@@ -314,7 +321,7 @@
             <code value="varies (application/dicom, application/dicom+xml, image/jpeg, and many more)"/>
           </coding>
         </payloadType>
-        <payloadMimeType value="application/dicom"/>
+        <payloadMimeType value="application/dicom; variant=DICOM WADO-RS"/>
         <address value="https://pacs.hospital.org/dicomweb"/>
       </Endpoint>
     </resource>
@@ -332,7 +339,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="dicom-qido-rs"/>
         </connectionType>
         <name value="Enterprise Image Archive"/>
@@ -349,7 +356,7 @@
             <code value="varies (application/dicom, application/dicom+xml, image/jpeg, and many more)"/>
           </coding>
         </payloadType>
-        <payloadMimeType value="application/dicom"/>
+        <payloadMimeType value="application/dicom; variant=DICOM QIDO-RS"/>
         <address value="https://pacs.hospital.org/dicomweb"/>
       </Endpoint>
     </resource>
@@ -367,7 +374,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="dicom-stow-rs"/>
         </connectionType>
         <name value="Enterprise Image Archive"/>
@@ -384,7 +391,7 @@
             <code value="varies (application/dicom, application/dicom+xml, image/jpeg, and many more)"/>
           </coding>
         </payloadType>
-        <payloadMimeType value="application/dicom"/>
+        <payloadMimeType value="application/dicom; variant=DICOM STOW-RS"/>
         <address value="https://pacs.hospital.org/dicomweb"/>
       </Endpoint>
     </resource>
@@ -402,7 +409,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="dicom-stow-rs"/>
         </connectionType>
         <name value="Enterprise Image Archive"/>
@@ -419,7 +426,7 @@
             <code value="varies (application/dicom, application/dicom+xml, image/jpeg, and many more)"/>
           </coding>
         </payloadType>
-        <payloadMimeType value="application/dicom"/>
+        <payloadMimeType value="application/dicom; variant=DICOM STOW-RS"/>
         <address value="https://pacs.hospital.org/dicomweb"/>
       </Endpoint>
     </resource>
@@ -437,7 +444,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="dicom-wado-uri"/>
         </connectionType>
         <name value="Enterprise Image Archive"/>
@@ -454,7 +461,7 @@
             <code value="varies (application/dicom, application/dicom+xml, image/jpeg, and many more)"/>
           </coding>
         </payloadType>
-        <payloadMimeType value="application/dicom"/>
+        <payloadMimeType value="application/dicom; variant=DICOM WADO-URI"/>
         <address value="https://pacs.hospital.org/wadoUri"/>
       </Endpoint>
     </resource>
@@ -472,7 +479,7 @@
         </text>
         <status value="active"/>
         <connectionType>
-           <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+           <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
            <code value="ihe-iid"/>
         </connectionType>
         <name value="Enterprise Image Archive"/>
@@ -489,7 +496,7 @@
             <code value="varies (application/dicom, application/dicom+xml, image/jpeg, and many more)"/>
           </coding>
         </payloadType>
-        <payloadMimeType value="application/dicom"/>
+        <payloadMimeType value="application/dicom; variant=IHE IID"/>
         <address value="https://pacs.hospital.org/IHEInvokeImageDisplay"/>
       </Endpoint>
     </resource>

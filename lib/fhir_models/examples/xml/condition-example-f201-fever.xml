@@ -1,10 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?><Condition xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
   <id value="f201"/>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>identifier</b>: 12345</p><p><b>clinicalStatus</b>: resolved</p><p><b>verificationStatus</b>: confirmed</p><p><b>category</b>: Problem <span>(Details : {SNOMED CT code &#39;55607006&#39; = &#39;Problem&#39;, given as &#39;Problem&#39;}; {http://hl7.org/fhir/condition-category code &#39;problem-list-item&#39; = &#39;Problem List Item)</span></p><p><b>severity</b>: Mild <span>(Details : {SNOMED CT code &#39;255604002&#39; = &#39;Mild&#39;, given as &#39;Mild&#39;})</span></p><p><b>code</b>: Fever <span>(Details : {SNOMED CT code &#39;386661006&#39; = &#39;Fever&#39;, given as &#39;Fever&#39;})</span></p><p><b>bodySite</b>: Entire body as a whole <span>(Details : {SNOMED CT code &#39;38266002&#39; = &#39;Body as a whole&#39;, given as &#39;Entire body as a whole&#39;})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>context</b>: <a>Encounter/f201</a></p><p><b>onset</b>: Apr 2, 2013</p><p><b>abatement</b>: around April 9, 2013</p><p><b>assertedDate</b>: Apr 4, 2013</p><p><b>asserter</b>: <a>Practitioner/f201</a></p><h3>Evidences</h3><table><tr><td>-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td>*</td><td>degrees C <span>(Details : {SNOMED CT code &#39;258710007&#39; = &#39;degrees C&#39;, given as &#39;degrees C&#39;})</span></td><td><a>Temperature</a></td></tr></table></div></text><identifier>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <identifier>
     <value value="12345"/>
   </identifier>
-  <clinicalStatus value="resolved"/>
-  <verificationStatus value="confirmed"/>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="resolved"/>
+    </coding>
+  </clinicalStatus>
+
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
+
   <category>
     <!--  The fever is a mild problem  -->
     <coding>
@@ -13,7 +33,7 @@
       <display value="Problem"/>
     </coding>
     <coding>
-      <system value="http://hl7.org/fhir/condition-category"/>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
       <code value="problem-list-item"/>
     </coding>
   </category>
@@ -46,12 +66,15 @@
     <reference value="Patient/f201"/>
     <display value="Roel"/>
   </subject>
-  <context>
+  <encounter>
     <reference value="Encounter/f201"/>
-  </context>
+  </encounter>
   <onsetDateTime value="2013-04-02"/>
   <abatementString value="around April 9, 2013"/>
-  <assertedDate value="2013-04-04"/>
+  <recordedDate value="2013-04-04"/>
+  <recorder>
+    <reference value="Practitioner/f201"/>
+  </recorder>
   <asserter>
     <reference value="Practitioner/f201"/>
   </asserter>

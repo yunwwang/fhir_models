@@ -1,10 +1,6 @@
 {
   "resourceType": "OperationOutcome",
   "id": "exception",
-  "text": {
-    "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>SQL Link Communication Error (dbx = 34234)</p>\n    </div>"
-  },
   "issue": [
     {
       "severity": "error",
@@ -13,5 +9,14 @@
         "text": "SQL Link Communication Error (dbx = 34234)"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

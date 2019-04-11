@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><List xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<List xmlns="http://hl7.org/fhir">
   <id value="example-simple-empty"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Patient Admission Waitoing list</p>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <status value="current"/>
   <mode value="snapshot"/>
   <code>

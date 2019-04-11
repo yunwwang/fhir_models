@@ -1,7 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><Condition xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
   <id value="f001"/>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: confirmed</p><p><b>category</b>: diagnosis <span>(Details : {SNOMED CT code &#39;439401001&#39; = &#39;Diagnosis&#39;, given as &#39;diagnosis&#39;})</span></p><p><b>severity</b>: Moderate <span>(Details : {SNOMED CT code &#39;6736007&#39; = &#39;Moderate&#39;, given as &#39;Moderate&#39;})</span></p><p><b>code</b>: Heart valve disorder <span>(Details : {SNOMED CT code &#39;368009&#39; = &#39;Heart valve disorder&#39;, given as &#39;Heart valve disorder&#39;})</span></p><p><b>bodySite</b>: heart structure <span>(Details : {SNOMED CT code &#39;40768004&#39; = &#39;Left thorax&#39;, given as &#39;Left thorax&#39;})</span></p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>context</b>: <a>Encounter/f001</a></p><p><b>onset</b>: Aug 5, 2011</p><p><b>assertedDate</b>: Oct 5, 2011</p><p><b>asserter</b>: <a>P. van de Heuvel</a></p><h3>Evidences</h3><table><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Cardiac chest pain <span>(Details : {SNOMED CT code &#39;426396005&#39; = &#39;Cardiac chest pain&#39;, given as &#39;Cardiac chest pain&#39;})</span></td></tr></table></div></text><clinicalStatus value="active"/>
-  <verificationStatus value="confirmed"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
   <category>
     <coding>
       <system value="http://snomed.info/sct"/>
@@ -35,11 +54,11 @@
     <reference value="Patient/f001"/>
     <display value="P. van de Heuvel"/>
   </subject>
-  <context>
+  <encounter>
     <reference value="Encounter/f001"/>
-  </context>
+  </encounter>
   <onsetDateTime value="2011-08-05"/>
-  <assertedDate value="2011-10-05"/>
+  <recordedDate value="2011-10-05"/>
   <asserter>
     <reference value="Patient/f001"/>
     <display value="P. van de Heuvel"/>

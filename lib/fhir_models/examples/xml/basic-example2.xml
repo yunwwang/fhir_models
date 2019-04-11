@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><Basic xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Basic xmlns="http://hl7.org/fhir">
   <id value="classModel"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p><b>Class1</b></p>
-      <ul>
-        <li>Attribute1: 1..*</li>
-        <li>Attribute2: 0..1</li>
-      </ul>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <extension url="http://example.org/do-not-use/fhir-extensions/UMLclass">
     <extension url="name">
       <valueString value="Class1"/>

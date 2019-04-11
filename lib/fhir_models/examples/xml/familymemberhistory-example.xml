@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><FamilyMemberHistory xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<FamilyMemberHistory xmlns="http://hl7.org/fhir">
   <id value="father"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Father died of a heart attack aged 74</div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <identifier>
 	<value value="12345"/>
   </identifier>
-  <definition>
-    <display value="Family Member History Questionnaire"/>
-  </definition>
+  <instantiatesUri value="http://example.org/family-member-history-questionnaire"/>
   <status value="completed"/>
-  <notDone value="false"/>
   <patient>
     <reference value="Patient/example"/>
     <display value="Peter Patient"/>
@@ -21,12 +23,18 @@
   
   <relationship>
     <coding>
-      <system value="http://hl7.org/fhir/v3/RoleCode"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
       <code value="FTH"/>
       <display value="father"/>
     </coding>
   </relationship>
-  <gender value="male"/>
+  <sex>
+	<coding>
+      <system value="http://hl7.org/fhir/administrative-gender"/>
+      <code value="male"/>
+      <display value="Male"/>
+    </coding>
+  </sex>
   <condition>
     <code>
     <coding>
@@ -37,7 +45,7 @@
     <text value="Heart Attack"/>
     </code>
  
-
+	<contributedToDeath value="true"/>
     <onsetAge>
       <value value="74"/>
       <unit value="yr"/>

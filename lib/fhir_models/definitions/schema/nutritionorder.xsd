@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 26, 2017 18:33-0400 for FHIR v3.0.0 
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -47,7 +47,19 @@
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             
           </xs:element>
-          <xs:element name="status" minOccurs="0" maxOccurs="1" type="NutritionOrderStatus">
+          <xs:element name="instantiatesCanonical" minOccurs="0" maxOccurs="unbounded" type="canonical">
+            
+          </xs:element>
+          <xs:element name="instantiatesUri" minOccurs="0" maxOccurs="unbounded" type="uri">
+            
+          </xs:element>
+          <xs:element name="instantiates" minOccurs="0" maxOccurs="unbounded" type="uri">
+            
+          </xs:element>
+          <xs:element name="status" minOccurs="1" maxOccurs="1" type="RequestStatus">
+            
+          </xs:element>
+          <xs:element name="intent" minOccurs="1" maxOccurs="1" type="RequestIntent">
             
           </xs:element>
           <xs:element name="patient" minOccurs="1" maxOccurs="1" type="Reference">
@@ -78,6 +90,9 @@
             
           </xs:element>
           <xs:element name="enteralFormula" type="NutritionOrder.EnteralFormula" minOccurs="0" maxOccurs="1">
+            
+          </xs:element>
+          <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             
           </xs:element>
         </xs:sequence>
@@ -218,45 +233,6 @@
             <xs:element name="rateRatio" type="Ratio"/>
           </xs:choice>
         </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="NutritionOrderStatus-list">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="proposed">
-        
-      </xs:enumeration>
-      <xs:enumeration value="draft">
-        
-      </xs:enumeration>
-      <xs:enumeration value="planned">
-        
-      </xs:enumeration>
-      <xs:enumeration value="requested">
-        
-      </xs:enumeration>
-      <xs:enumeration value="active">
-        
-      </xs:enumeration>
-      <xs:enumeration value="on-hold">
-        
-      </xs:enumeration>
-      <xs:enumeration value="completed">
-        
-      </xs:enumeration>
-      <xs:enumeration value="cancelled">
-        
-      </xs:enumeration>
-      <xs:enumeration value="entered-in-error">
-        
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="NutritionOrderStatus">
-    
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="NutritionOrderStatus-list" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

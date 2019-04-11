@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><Practitioner xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner xmlns="http://hl7.org/fhir">
   <id value="example"/>
 
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Dr Adam Careful is a Referring Practitioner for Acme Hospital from 1-Jan 2012 to 31-Mar
-        2012</p>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 
   <identifier>
     <system value="http://www.acme.org/practitioners"/>
@@ -33,7 +35,7 @@
 		</identifier>
 		<code>
       <coding>
-        <system value="http://hl7.org/fhir/v2/0360/2.7"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0360/2.7"/>
         <code value="BS"/>
         <display value="Bachelor of Science"/>
       </coding>

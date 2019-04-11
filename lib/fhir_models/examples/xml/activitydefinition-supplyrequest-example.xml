@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><ActivityDefinition xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ActivityDefinition xmlns="http://hl7.org/fhir">
   <id value="blood-tubes-supply"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <status value="draft"/>
   <description value="10 Blood collect tubes blue cap"/>
   <purpose value="Describes a request for 10 Blood collection tubes with blue caps."/>
@@ -19,7 +23,5 @@
   <quantity>
     <value value="10"/>
   </quantity>
-  <transform>
-    <reference value="StructureMap/supplyrequest-transform"/>
-  </transform>
+  <transform value="StructureMap/supplyrequest-transform"/>
 </ActivityDefinition>

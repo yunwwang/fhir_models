@@ -1,18 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
   <id value="pat1"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      
-      <p>Patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321</p>
-    
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <identifier>
     <use value="usual"/>
     <type>
       <coding>
-        <system value="http://hl7.org/fhir/v2/0203"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
         <code value="MR"/>
       </coding>
     </type>
@@ -33,7 +34,7 @@
   <contact>
     <relationship>
       <coding>
-        <system value="http://hl7.org/fhir/v2/0131"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
         <code value="E"/>
       </coding>
     </relationship>

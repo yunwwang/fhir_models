@@ -1,16 +1,26 @@
 {
   "resourceType": "CarePlan",
   "id": "example",
-  "text": {
-    "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
-  },
   "contained": [
     {
       "resourceType": "Condition",
       "id": "p1",
-      "clinicalStatus": "active",
-      "verificationStatus": "confirmed",
+      "clinicalStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+            "code": "active"
+          }
+        ]
+      },
+      "verificationStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+            "code": "confirmed"
+          }
+        ]
+      },
       "code": {
         "text": "Obesity"
       },
@@ -25,10 +35,8 @@
       "value": "12345"
     }
   ],
-  "definition": [
-    {
-      "display": "A PlanDefinition protocol for obesity"
-    }
+  "instantiatesUri": [
+    "http://example.org/protocol-for-obesity"
   ],
   "basedOn": [
     {
@@ -57,18 +65,17 @@
     "reference": "Patient/example",
     "display": "Peter James Chalmers"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/home"
   },
   "period": {
     "end": "2017-06-01"
   },
-  "author": [
-    {
-      "reference": "Practitioner/example",
-      "display": "Dr Adam Careful"
-    }
-  ],
+  "created": "2016-01-01",
+  "author": {
+    "reference": "Practitioner/example",
+    "display": "Dr Adam Careful"
+  },
   "careTeam": [
     {
       "reference": "CareTeam/example"
@@ -105,14 +112,6 @@
         }
       ],
       "detail": {
-        "category": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/care-plan-activity-category",
-              "code": "observation"
-            }
-          ]
-        },
         "code": {
           "coding": [
             {
@@ -128,8 +127,10 @@
           ]
         },
         "status": "completed",
-        "statusReason": "Achieved weight loss to mitigate diabetes risk.",
-        "prohibited": false,
+        "statusReason": {
+          "text": "Achieved weight loss to mitigate diabetes risk."
+        },
+        "doNotPerform": false,
         "scheduledTiming": {
           "repeat": {
             "frequency": 1,
@@ -148,5 +149,14 @@
         ]
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

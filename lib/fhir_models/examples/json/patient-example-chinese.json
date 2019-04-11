@@ -3,11 +3,14 @@
   "id": "ch-example",
   "meta": {
     "versionId": "1",
-    "lastUpdated": "2016-05-16T00:55:52Z"
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table>\n        <tbody>\n          <tr>\n            <td>名字</td>\n            <td>张无忌</td> </tr>\n          <tr>\n            <td>地址</td>\n            <td>上海市黄埔区马当路190号, 1974年12月25日</td> \n          </tr>\n          <tr>\n            <td>联系方式</td>\n            <td>住宅: 不详。工作: 18337177888</td> \n          </tr>\n          <tr>\n            <td>Id</td>\n            <td>MRN: 3112219680806371X (市卫生局)</td> \n          </tr> \n        </tbody> \n      </table> \n    </div>"
+    "lastUpdated": "2016-05-16T00:55:52Z",
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   },
   "identifier": [
     {
@@ -15,7 +18,7 @@
       "type": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/v2/0203",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
             "code": "MR"
           }
         ]

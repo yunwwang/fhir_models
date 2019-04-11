@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><Group xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Group xmlns="http://hl7.org/fhir">
   <id value="102"/>
-  <text>
-    <status value="additional"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Selected Patients</p>
-      <ul>
-        <li>Patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321</li>
-        <li>Patient Donald D DUCK @ Acme Healthcare, Inc. MR = 123456</li>
-        <li>Patient Simon Notsowell @ Acme Healthcare, Inc. MR = 123457, DECEASED</li>
-        <li>Patient Sandy Notsowell @ Acme Healthcare, Inc. MR = 123458, DECEASED</li>
-      </ul>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <type value="person"/>
   <actual value="true"/>
   <member>

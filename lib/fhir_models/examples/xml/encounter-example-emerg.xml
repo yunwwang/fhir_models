@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><Encounter xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Encounter xmlns="http://hl7.org/fhir">
 	<id value="emerg"/>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">Emergency visit that escalated into inpatient patient @example</div>
-	</text>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 	<status value="in-progress"/>
 	<statusHistory>
 		<status value="arrived"/>
@@ -40,13 +45,13 @@
 		</period>
 	</statusHistory>
 	<class>
-		<system value="http://hl7.org/fhir/v3/ActCode"/>
+		<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
 		<code value="IMP"/>
 		<display value="inpatient encounter"/>
 	</class>
 	<classHistory>
 		<class>
-			<system value="http://hl7.org/fhir/v3/ActCode"/>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
 			<code value="EMER"/>
 			<display value="emergency"/>
 		</class>
@@ -57,7 +62,7 @@
 	</classHistory>
 	<classHistory>
 		<class>
-			<system value="http://hl7.org/fhir/v3/ActCode"/>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
 			<code value="IMP"/>
 			<display value="inpatient encounter"/>
 		</class>
@@ -74,7 +79,7 @@
 	<hospitalization>
 		<admitSource>
 			<coding>
-				<system value="http://hl7.org/fhir/admit-source"/>
+				<system value="http://terminology.hl7.org/CodeSystem/admit-source"/>
 				<code value="emd"/>
 				<display value="From accident/emergency department"/>
 			</coding>

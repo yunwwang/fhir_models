@@ -1,10 +1,6 @@
 {
   "resourceType": "Claim",
   "id": "960151",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Claim</div>"
-  },
   "identifier": [
     {
       "system": "http://happyhospital.com/claim",
@@ -15,12 +11,12 @@
   "type": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/ex-claimtype",
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
         "code": "institutional"
       }
     ]
   },
-  "use": "complete",
+  "use": "claim",
   "patient": {
     "reference": "Patient/1"
   },
@@ -43,9 +39,6 @@
       "system": "http://npid.org/providerid",
       "value": "NJ12345"
     }
-  },
-  "organization": {
-    "reference": "Organization/1"
   },
   "priority": {
     "coding": [
@@ -79,7 +72,7 @@
       "role": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/claim-careteamrole",
+            "system": "http://example.org/fhir/CodeSystem/claim-careteamrole",
             "code": "primary"
           }
         ]
@@ -87,10 +80,42 @@
       "qualification": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/provider-qualification",
+            "system": "http://example.org/fhir/CodeSystem/provider-qualification",
             "code": "physician"
           }
         ]
+      }
+    }
+  ],
+  "supportingInfo": [
+    {
+      "sequence": 1,
+      "category": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+            "code": "employmentimpacted"
+          }
+        ]
+      },
+      "timingPeriod": {
+        "start": "2014-08-16",
+        "end": "2014-08-16"
+      }
+    },
+    {
+      "sequence": 2,
+      "category": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+            "code": "hospitalized"
+          }
+        ]
+      },
+      "timingPeriod": {
+        "start": "2014-08-15",
+        "end": "2014-08-16"
       }
     }
   ],
@@ -108,7 +133,7 @@
         {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/ex-diagnosistype",
+              "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
               "code": "admitting"
             }
           ]
@@ -117,7 +142,7 @@
       "packageCode": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/ex-diagnosisrelatedgroup",
+            "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup",
             "code": "400",
             "display": "Head trauma - concussion"
           }
@@ -143,7 +168,7 @@
     "type": {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/v3/ActIncidentCode",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActIncidentCode",
           "code": "SPT",
           "display": "Sporting Accident"
         }
@@ -153,21 +178,13 @@
       "text": "Grouse Mountain Ski Hill"
     }
   },
-  "employmentImpacted": {
-    "start": "2014-08-16",
-    "end": "2014-08-16"
-  },
-  "hospitalization": {
-    "start": "2014-08-15",
-    "end": "2014-08-16"
-  },
   "item": [
     {
       "sequence": 1,
-      "careTeamLinkId": [
+      "careTeamSequence": [
         1
       ],
-      "service": {
+      "productOrService": {
         "coding": [
           {
             "system": "http://hl7.org/fhir/ex-serviceproduct",
@@ -177,20 +194,26 @@
       },
       "servicedDate": "2014-08-16",
       "unitPrice": {
-        "value": 125.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 125.0,
+        "currency": "USD"
       },
       "net": {
-        "value": 125.00,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 125.0,
+        "currency": "USD"
       }
     }
   ],
   "total": {
-    "value": 125.00,
-    "system": "urn:iso:std:iso:4217",
-    "code": "USD"
+    "value": 125.0,
+    "currency": "USD"
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

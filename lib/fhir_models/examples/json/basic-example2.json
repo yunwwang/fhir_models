@@ -1,10 +1,6 @@
 {
   "resourceType": "Basic",
   "id": "classModel",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><b>Class1</b></p>\n      <ul>\n        <li>Attribute1: 1..*</li>\n        <li>Attribute2: 0..1</li>\n      </ul>\n    </div>"
-  },
   "extension": [
     {
       "url": "http://example.org/do-not-use/fhir-extensions/UMLclass",
@@ -55,6 +51,15 @@
       {
         "system": "http://example.org/do-not-use/fhir-codes#resourceTypes",
         "code": "UMLCLASSMODEL"
+      }
+    ]
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
       }
     ]
   }

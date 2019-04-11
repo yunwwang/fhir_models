@@ -10,40 +10,40 @@ class ProfileValidationTest < Test::Unit::TestCase
   Dir.glob(us_core_ig).each do |definition|
     json = File.read(definition)
     resource = FHIR.from_contents(json)
-    PROFILES[resource.url] = resource
+    PROFILES[resource.url] = resource if resource
   end
 
   # Create a blank folder for the errors
   FileUtils.rm_rf(ERROR_DIR) if File.directory?(ERROR_DIR)
   FileUtils.mkdir_p ERROR_DIR
 
-  def validate_each_entry(bundle)
-    complete_error_list = []
-    bundle.entry.each do |entry|
-      if entry.resource.meta
-        # validate against the declared profile
-        profile = PROFILES[entry.resource.meta.profile.first]
-        assert profile, "Failed to find profile: #{entry.resource.meta.profile.first}"
-        rerrors = profile.validate_resource(entry.resource)
-        complete_error_list << rerrors unless rerrors.empty?
-      else
-        # validate the base resource
-        rerrors = entry.resource.validate
-        complete_error_list << rerrors unless rerrors.empty?
-      end
+  us_core_fixtures = File.join(FIXTURES_DIR, 'us_core_examples', '*.json')
+  Dir.glob(us_core_fixtures).each do |example_file|
+    example_name = File.basename(example_file, '.json')
+    define_method("test_profile_validation_#{example_name}") do
+      run_profile_validation(example_file, example_name)
     end
-    complete_error_list.flatten
   end
 
-  def test_profile_validation
-    example_name = 'sample-us-core-record.json'
-    patient_record = File.join(FIXTURES_DIR, example_name)
-    input_json = File.read(patient_record)
-    bundle = FHIR::Json.from_json(input_json)
-    errors = validate_each_entry(bundle)
+  def run_profile_validation(example_file, example_name)
+    json = File.read(example_file)
+    resource = FHIR::Json.from_json(json)
+    errors = []
+    if resource.meta
+      # validate against the declared profile
+      profile = PROFILES[resource.meta.profile.first]
+      profile = FHIR::Definitions.profile(resource.meta.profile.first) unless profile
+      assert profile, "Failed to find profile: #{resource.meta.profile.first}"
+      errors = profile.validate_resource(resource)
+      errors << "Validated against #{resource.meta.profile.first}" unless errors.empty?
+    else
+      # validate the base resource
+      errors = resource.validate
+      errors << "Validated against base resource definition" unless errors.empty?
+    end
     unless errors.empty?
-      File.open("#{ERROR_DIR}/#{example_name}.err", 'w:UTF-8') { |file| errors.each { |e| file.write("#{e}\n") } }
-      File.open("#{ERROR_DIR}/#{example_name}.json", 'w:UTF-8') { |file| file.write(input_json) }
+      File.open("#{ERROR_DIR}/#{example_name}.err", 'w:UTF-8') { |file| file.write(errors.join("\n")) }
+      File.open("#{ERROR_DIR}/#{example_name}.json", 'w:UTF-8') { |file| file.write(json) }
     end
     assert errors.empty?, 'Record failed to validate.'
     # check memory
@@ -55,107 +55,12 @@ class ProfileValidationTest < Test::Unit::TestCase
     assert_memory(before, after)
   end
 
-  def validate_vital_sign_resource
-    example_name = 'sample-us-core-record.json'
-    patient_record = File.join(FIXTURES_DIR, example_name)
-    input_json = File.read(patient_record)
-    bundle = FHIR::Json.from_json(input_json)
-
-    vitalsign = bundle.entry.find do |entry|
-      entry.resource.meta and (entry.resource.meta.profile.first == 'http://hl7.org/fhir/StructureDefinition/vitalsigns')
-    end
-    assert vitalsign, 'Unable to find vital sign Observation resource'
-    profile = PROFILES['http://hl7.org/fhir/StructureDefinition/vitalsigns']
-    assert profile, 'Failed to find http://hl7.org/fhir/StructureDefinition/vitalsigns profile'
-    profile.validate_resource(vitalsign.resource)
-    profile
-  end
-
-  def test_profile_code_system_check
-    # Clear any registered validators
-    FHIR::StructureDefinition.clear_all_validates_vs
-    FHIR::StructureDefinition.validates_vs "http://hl7.org/fhir/ValueSet/observation-vitalsignresult" do |coding|
-      false # fails so that the code system validation happens
-    end
-    FHIR::StructureDefinition.validates_vs "http://loinc.org" do |coding|
-      false # errors related to code system validation should be present
-    end
-    profile = validate_vital_sign_resource
-    assert profile.errors.empty?, 'Expected no errors.'
-    assert profile.warnings.detect{|x| x.start_with?('Observation.code has no codings from http://hl7.org/fhir/ValueSet/observation-vitalsignresult')}
-    assert profile.warnings.detect{|x| x.start_with?("Observation.code has no codings from it's specified system: http://loinc.org")}
-    # check memory
-    before = check_memory
-    resource = nil
-    profile = nil
-    wait_for_gc
-    after = check_memory
-    assert_memory(before, after)
-  end
-
-  def test_profile_valueset_check
-    # Clear any registered validators
-    FHIR::StructureDefinition.clear_all_validates_vs
-    FHIR::StructureDefinition.validates_vs "http://hl7.org/fhir/ValueSet/observation-vitalsignresult" do |coding|
-      true # fails so that the code system validation never happens
-    end
-    FHIR::StructureDefinition.validates_vs "http://loinc.org" do |coding|
-      false # no errors related to code system should be present
-    end
-    profile = validate_vital_sign_resource
-    assert profile.errors.empty?, 'Expected no errors.'
-    assert !profile.warnings.detect{|x| x.start_with?('Observation.code has no codings from http://hl7.org/fhir/ValueSet/observation-vitalsignresult')}
-    assert !profile.warnings.detect{|x| x.start_with?("Observation.code has no codings from it's specified system: http://loinc.org")}
-    # check memory
-    before = check_memory
-    resource = nil
-    profile = nil
-    wait_for_gc
-    after = check_memory
-    assert_memory(before, after)
-  end
-
-  def test_invalid_profile_validation
-    example_name = 'invalid-us-core-record.json'
-    patient_record = File.join(FIXTURES_DIR, example_name)
-    input_json = File.read(patient_record)
-    bundle = FHIR::Json.from_json(input_json)
-    errors = validate_each_entry(bundle)
-    unless errors
-      File.open("#{ERROR_DIR}/#{example_name}.json", 'w:UTF-8') { |file| file.write(input_json) }
-    end
-    assert !errors.empty?, 'Record improperly validated.'
-    assert errors.detect{|x| x.start_with?('Patient.identifier.value failed cardinality test')}
-    # check memory
-    before = check_memory
-    resource = nil
-    profile = nil
-    wait_for_gc
-    after = check_memory
-    assert_memory(before, after)
-  end
-
-  def test_profile_validation_resource
-    example_name = 'sample-us-core-record.json'
-    patient_record = File.join(FIXTURES_DIR, example_name)
-    input_json = File.read(patient_record)
-    bundle = FHIR::Json.from_json(input_json)
-    definition = FHIR::Definitions.resource_definition('Bundle')
-    assert definition.validates_resource?(bundle), 'Bundle StructureDefinition failed to validate Bundle.'
-    # check memory
-    before = check_memory
-    model = nil
-    wait_for_gc
-    after = check_memory
-    assert_memory(before, after)
-  end
-
   def test_profile_validation_rejects_bad_resource
     definition = FHIR::Definitions.resource_definition('Bundle')
     assert !definition.validates_resource?(String.new), 'Bundle StructureDefinition should reject anything that is not a FHIR::Model.'
     # check memory
     before = check_memory
-    model = nil
+    definition = nil
     wait_for_gc
     after = check_memory
     assert_memory(before, after)
@@ -167,17 +72,19 @@ class ProfileValidationTest < Test::Unit::TestCase
     structure_definition_json = JSON.parse(File.read(structure_definition_file))
     profile = FHIR::StructureDefinition.new(structure_definition_json)
 
-    example_name = 'sample-us-core-record.json'
-    patient_record = File.join(FIXTURES_DIR, example_name)
+    example_name = 'Patient-example.json'
+    patient_record = File.join(FIXTURES_DIR, 'us_core_examples', example_name)
     input_json = File.read(patient_record)
-    bundle = FHIR::Json.from_json(input_json)
-    patient_entry = bundle.entry.find { |e| e.resource.is_a?(FHIR::Patient) }
+    patient = FHIR::Json.from_json(input_json)
 
-    assert_empty profile.validate_resource(patient_entry.resource), 'Record failed to validate against modified core profile.'
+    errors = profile.validate_resource(patient)
+    assert !errors.empty?, 'Record was expected to fail to validate against modified core profile'
     # check memory
     before = check_memory
-    bundle = nil
-    patient_entry = nil
+    structure_definition_file = nil
+    structure_definition_json = nil
+    profile = nil
+    patient = nil
     wait_for_gc
     after = check_memory
     assert_memory(before, after)
@@ -408,7 +315,7 @@ class ProfileValidationTest < Test::Unit::TestCase
 
     # first 2 value sets are special cases
     element = FHIR::ElementDefinition.new('path' => 'mime', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
-                                          'binding' => { 'valueSetUri' => 'http://hl7.org/fhir/ValueSet/content-type' })
+                                          'binding' => { 'valueSet' => 'http://hl7.org/fhir/ValueSet/mimetypes' })
     sd.errors = []
     sd.send(:check_binding_element, element, 'xml')
     assert_empty(sd.errors)
@@ -420,7 +327,7 @@ class ProfileValidationTest < Test::Unit::TestCase
     assert_equal("mime has invalid mime-type: 'jpeg'", sd.errors[0])
 
     element = FHIR::ElementDefinition.new('path' => 'lang', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
-                                          'binding' => { 'valueSetUri' => 'http://hl7.org/fhir/ValueSet/languages' })
+                                          'binding' => { 'valueSet' => 'http://hl7.org/fhir/ValueSet/languages' })
     sd.errors = []
     sd.send(:check_binding_element, element, 'en')
     assert_empty(sd.errors)
@@ -435,7 +342,7 @@ class ProfileValidationTest < Test::Unit::TestCase
 
     # use a valueset we don't have defined here
     element = FHIR::ElementDefinition.new('path' => 'problem', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
-                                          'binding' => { 'valueSetUri' => 'http://standardhealthrecord.org/shr/problem/vs/ProblemCategoryVS' })
+                                          'binding' => { 'valueSet' => 'http://standardhealthrecord.org/shr/problem/vs/ProblemCategoryVS' })
     sd.errors = []
     sd.warnings = []
     sd.send(:check_binding_element, element, 'disease')
@@ -445,37 +352,36 @@ class ProfileValidationTest < Test::Unit::TestCase
 
     # regular case, FHIR VS with nothing special about it
     # binding strength required => error if wrong
-    element = FHIR::ElementDefinition.new('path' => 'county', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
-                                          'binding' => { 'valueSetUri' => 'http://hl7.org/fhir/ValueSet/fips-county',
+    element = FHIR::ElementDefinition.new('path' => 'support', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
+                                          'binding' => { 'valueSet' => 'http://hl7.org/fhir/ValueSet/code-search-support',
                                                          'strength' => 'required' })
     sd.errors = []
     sd.warnings = []
-    sd.send(:check_binding_element, element, '25017')
+    sd.send(:check_binding_element, element, 'explicit')
     assert_empty(sd.errors)
     assert_empty(sd.warnings)
 
     sd.errors = []
     sd.warnings = []
-    sd.send(:check_binding_element, element, '98765')
-    assert_equal("county has invalid code '98765' from http://hl7.org/fhir/ValueSet/fips-county", sd.errors[0])
+    sd.send(:check_binding_element, element, 'some')
+    assert_equal("support has invalid code 'some' from http://hl7.org/fhir/ValueSet/code-search-support", sd.errors[0])
     assert_empty(sd.warnings)
 
     # binding strength example => warning if wrong
-    element = FHIR::ElementDefinition.new('path' => 'county', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
-                                          'binding' => { 'valueSetUri' => 'http://hl7.org/fhir/ValueSet/fips-county',
+    element = FHIR::ElementDefinition.new('path' => 'support', 'type' => [{ 'code' => 'string' }], 'min' => 1, 'max' => '1',
+                                          'binding' => { 'valueSet' => 'http://hl7.org/fhir/ValueSet/code-search-support',
                                                          'strength' => 'example' })
     sd.errors = []
     sd.warnings = []
-    sd.send(:check_binding_element, element, '25017')
+    sd.send(:check_binding_element, element, 'explicit')
     assert_empty(sd.errors)
     assert_empty(sd.warnings)
 
     sd.errors = []
     sd.warnings = []
-    sd.send(:check_binding_element, element, '98765')
-    assert_equal("county has invalid code '98765' from http://hl7.org/fhir/ValueSet/fips-county", sd.warnings[0])
+    sd.send(:check_binding_element, element, 'some')
+    assert_equal("support has invalid code 'some' from http://hl7.org/fhir/ValueSet/code-search-support", sd.warnings[0])
     assert_empty(sd.errors)
-
   end
 
   def test_get_json_nodes

@@ -1,52 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
   <id value="animal"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      
-      <table>
-        
-        <tbody>
-          
-          <tr>
-            
-            <td>Id</td>
-            
-            <td>Kenzi (Dog: Golden Retriever)</td>
-          
-          </tr>
-          
-          <tr>
-            
-            <td>Owner</td>
-            
-            <td>Peter Chalmers, 534 Erewhon, Pleasantville, Vic, 3999</td>
-          
-          </tr>
-          
-          <tr>
-            
-            <td>Contacts</td>
-            
-            <td>Work: (03) 5555 6473</td>
-          
-          </tr>
-          
-          <tr>
-            
-            <td>Id</td>
-            
-            <td>Dog Tag: 1234123 (Maroondah City Council)</td>
-          
-          </tr>
-        
-        </tbody>
-      
-      </table>
-    
-    </div>
-  </text>
-<!--   Dog tag, under Maroondah City council   -->
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
+	<extension url="http://hl7.org/fhir/StructureDefinition/patient-animal">
+		<extension url="species">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://hl7.org/fhir/animal-species"/>
+				<code value="canislf"/>
+				<display value="Dog"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="breed">
+			<valueCodeableConcept>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="58108001"/>
+					<display value="Golden retriever"/>
+				</coding>
+				<coding>
+					<system value="http://example.org/fhir/CodeSystem/animal-breed"/>
+					<code value="gret"/>
+					<display value="Golden Retriever"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="genderStatus">
+			<valueCodeableConcept>
+				<coding>
+					<system value="http://hl7.org/fhir/animal-genderstatus"/>
+					<code value="neutered"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+	</extension>
+	
+  <!--   Dog tag, under Maroondah City council   -->
+  
   <identifier>
     <type>
       <text value="Dog Tag"/>
@@ -71,7 +69,7 @@
   <contact>
     <relationship>
       <coding>
-        <system value="http://hl7.org/fhir/v2/0131"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
         <code value="C"/>
       </coding>
     </relationship>
@@ -86,34 +84,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <animal>
-    <species>
-      <coding>
-        <system value="http://hl7.org/fhir/animal-species"/>
-        <code value="canislf"/>
-        <display value="Dog"/>
-      </coding>
-    </species>
-    <breed>
-      <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="58108001"/>
-        <display value="Golden retriever"/>
-      </coding>
-      <coding>
-        <system value="http://hl7.org/fhir/animal-breed"/>
-        <code value="gret"/>
-        <display value="Golden Retriever"/>
-      </coding>
-    </breed>
-    <genderStatus>
-      <coding>
-        <system value="http://hl7.org/fhir/animal-genderstatus"/>
-        <code value="neutered"/>
-      </coding>
-    </genderStatus>
-  </animal>
   <managingOrganization>
-    <display value="Pete&#39;s Vetinary Services"/>
+    <display value="Pete's Vetinary Services"/>
   </managingOrganization>
 </Patient>

@@ -1,10 +1,6 @@
 {
   "resourceType": "QuestionnaireResponse",
   "id": "3141",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>\n            Comorbidity? YES\n              Cardial Comorbidity? YES\n                Angina? YES\n                MI? NO\n              Vascular Comorbidity?\n                (no answers)\n              ...\n            Histopathology\n              Abdominal\n                pT category: 1a\n              ...\n          </pre>\n    </div>"
-  },
   "contained": [
     {
       "resourceType": "Patient",
@@ -26,7 +22,7 @@
       "birthDate": "1972-11-30"
     },
     {
-      "resourceType": "ReferralRequest",
+      "resourceType": "ServiceRequest",
       "id": "order",
       "status": "unknown",
       "intent": "order",
@@ -34,9 +30,7 @@
         "reference": "#patsub"
       },
       "requester": {
-        "agent": {
-          "reference": "Practitioner/example"
-        }
+        "reference": "Practitioner/example"
       }
     },
     {
@@ -62,7 +56,7 @@
       "reference": "#order"
     }
   ],
-  "parent": [
+  "partOf": [
     {
       "reference": "Procedure/f201"
     }
@@ -71,7 +65,7 @@
   "subject": {
     "reference": "#patsub"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/example"
   },
   "authored": "2013-02-19T14:15:00-05:00",
@@ -136,5 +130,14 @@
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

@@ -1,11 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><Procedure xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure xmlns="http://hl7.org/fhir">
   <id value="physical-therapy"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Assessment of passive range of motion for both knees on Sept 27, 2016 due to osteoarthritis</div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <basedOn>
-	<reference value="ProcedureRequest/physical-therapy"/> 
+	<reference value="ServiceRequest/physical-therapy"/> 
     <display value="Order for the assessment of passive range of motion"/> 
   </basedOn>
   <status value="completed"/>

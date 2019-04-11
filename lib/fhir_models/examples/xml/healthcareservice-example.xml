@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><HealthcareService xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<HealthcareService xmlns="http://hl7.org/fhir">
 	<id value="example"/>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			25 Dec 2013 9:15am - 9:30am: <b>Busy</b> Physiotherapy
-		</div>
-	</text>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 	<contained>
 		<Location>
 			<id value="DenBurg"/>
@@ -30,7 +33,7 @@
   </providedBy>
   <category>
     <coding>
-      <system value="http://hl7.org/fhir/service-category"/>
+      <system value="http://terminology.hl7.org/CodeSystem/service-category"/>
       <code value="8"/>
       <display value="Counselling"/>
     </coding>
@@ -79,18 +82,22 @@
 	</coverageArea>
   <serviceProvisionCode>
     <coding>
-      <system value="http://hl7.org/fhir/service-provision-conditions"/>
+      <system value="http://terminology.hl7.org/CodeSystem/service-provision-conditions"/>
       <code value="cost"/>
       <display value="Fees apply"/>
     </coding>
   </serviceProvisionCode>
 	<eligibility>
-		<coding>
-			<display value="DVA Required"/>
-		</coding>
+		<code>
+			<coding>
+				<display value="DVA Required"/>
+			</coding>
+		</code>
+		<comment value="Evidence of application for DVA status may be sufficient for commencing assessment"/>
 	</eligibility>
-	<eligibilityNote value="Evidence of application for DVA status may be sufficient for commencing assessment"/>
-	<programName value="PTSD outreach"/>
+	<program>
+		<text value="PTSD outreach"/>
+	</program>
 	<characteristic>
 		<coding>
 			<display value="Wheelchair access"/>

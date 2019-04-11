@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 26, 2017 18:33-0400 for FHIR v3.0.0 
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -47,7 +47,10 @@
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             
           </xs:element>
-          <xs:element name="definition" minOccurs="0" maxOccurs="unbounded" type="Reference">
+          <xs:element name="instantiatesCanonical" minOccurs="0" maxOccurs="unbounded" type="canonical">
+            
+          </xs:element>
+          <xs:element name="instantiatesUri" minOccurs="0" maxOccurs="unbounded" type="uri">
             
           </xs:element>
           <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -68,10 +71,13 @@
           <xs:element name="priority" minOccurs="0" maxOccurs="1" type="RequestPriority">
             
           </xs:element>
+          <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            
+          </xs:element>
           <xs:element name="subject" minOccurs="0" maxOccurs="1" type="Reference">
             
           </xs:element>
-          <xs:element name="context" minOccurs="0" maxOccurs="1" type="Reference">
+          <xs:element name="encounter" minOccurs="0" maxOccurs="1" type="Reference">
             
           </xs:element>
           <xs:element name="authoredOn" minOccurs="0" maxOccurs="1" type="dateTime">
@@ -80,11 +86,12 @@
           <xs:element name="author" minOccurs="0" maxOccurs="1" type="Reference">
             
           </xs:element>
-          <xs:choice minOccurs="0" maxOccurs="1">
+          <xs:element name="reasonCode" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             
-            <xs:element name="reasonCodeableConcept" type="CodeableConcept"/>
-            <xs:element name="reasonReference" type="Reference"/>
-          </xs:choice>
+          </xs:element>
+          <xs:element name="reasonReference" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            
+          </xs:element>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             
           </xs:element>
@@ -100,7 +107,7 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="label" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="prefix" minOccurs="0" maxOccurs="1" type="string">
             
           </xs:element>
           <xs:element name="title" minOccurs="0" maxOccurs="1" type="string">
@@ -110,6 +117,9 @@
             
           </xs:element>
           <xs:element name="textEquivalent" minOccurs="0" maxOccurs="1" type="string">
+            
+          </xs:element>
+          <xs:element name="priority" minOccurs="0" maxOccurs="1" type="RequestPriority">
             
           </xs:element>
           <xs:element name="code" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
@@ -127,6 +137,7 @@
           <xs:choice minOccurs="0" maxOccurs="1">
             
             <xs:element name="timingDateTime" type="dateTime"/>
+            <xs:element name="timingAge" type="Age"/>
             <xs:element name="timingPeriod" type="Period"/>
             <xs:element name="timingDuration" type="Duration"/>
             <xs:element name="timingRange" type="Range"/>
@@ -135,7 +146,7 @@
           <xs:element name="participant" minOccurs="0" maxOccurs="unbounded" type="Reference">
             
           </xs:element>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="Coding">
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
           <xs:element name="groupingBehavior" minOccurs="0" maxOccurs="1" type="ActionGroupingBehavior">
@@ -171,13 +182,7 @@
           <xs:element name="kind" minOccurs="1" maxOccurs="1" type="ActionConditionKind">
             
           </xs:element>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
-            
-          </xs:element>
-          <xs:element name="language" minOccurs="0" maxOccurs="1" type="string">
-            
-          </xs:element>
-          <xs:element name="expression" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="expression" minOccurs="0" maxOccurs="1" type="Expression">
             
           </xs:element>
         </xs:sequence>

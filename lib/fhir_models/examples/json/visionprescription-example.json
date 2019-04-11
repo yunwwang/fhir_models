@@ -1,10 +1,6 @@
 {
   "resourceType": "VisionPrescription",
   "id": "33123",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t  <p>OD -2.00 SPH         +2.00 add    0.5 p.d. BD</p>\n      <p>OS -1.00 -0.50 x 180 +2.00 add    0.5 p.d. BU</p>\n    </div>"
-  },
   "identifier": [
     {
       "system": "http://www.happysight.com/prescription",
@@ -12,6 +8,7 @@
     }
   ],
   "status": "active",
+  "created": "2014-06-15",
   "patient": {
     "reference": "Patient/example"
   },
@@ -19,38 +16,55 @@
   "prescriber": {
     "reference": "Practitioner/example"
   },
-  "dispense": [
+  "lensSpecification": [
     {
       "product": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/ex-visionprescriptionproduct",
+            "system": "http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct",
             "code": "lens"
           }
         ]
       },
       "eye": "right",
-      "sphere": -2.00,
-      "prism": 0.5,
-      "base": "down",
-      "add": 2.00
+      "sphere": -2.0,
+      "prism": [
+        {
+          "amount": 0.5,
+          "base": "down"
+        }
+      ],
+      "add": 2.0
     },
     {
       "product": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/ex-visionprescriptionproduct",
+            "system": "http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct",
             "code": "lens"
           }
         ]
       },
       "eye": "left",
-      "sphere": -1.00,
-      "cylinder": -0.50,
+      "sphere": -1.0,
+      "cylinder": -0.5,
       "axis": 180,
-      "prism": 0.5,
-      "base": "up",
-      "add": 2.00
+      "prism": [
+        {
+          "amount": 0.5,
+          "base": "up"
+        }
+      ],
+      "add": 2.0
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

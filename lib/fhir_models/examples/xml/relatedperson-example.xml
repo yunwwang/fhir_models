@@ -1,27 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><RelatedPerson xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
  <id value="benedicte"/>
-  <text>
-
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <table>
-        <tbody>
-          <tr>
-            <td>Name</td>
-            <td>B&#xE9;n&#xE9;dicte du March&#xE9;</td>
-          </tr>
-          <tr>
-            <td>Address</td>
-            <td>43, Place du March&#xE9; Sainte Catherine, 75004 Paris, France</td>
-          </tr>
-          <tr>
-            <td>Contacts</td>
-            <td>Phone: +33 (237) 998327</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 
   <identifier>
     <use value="usual"/>
@@ -37,23 +24,23 @@
   
   <relationship>
     <coding>
-      <system value="http://hl7.org/fhir/v2/0131"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
       <code value="N"/>
     </coding>
     <coding>
-      <system value="http://hl7.org/fhir/v3/RoleCode"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
       <code value="WIFE"/>
     </coding>    
   </relationship>
   
   <name>
-    <family value="du March&#xE9;">
+    <family value="du Marché">
     <!--   the "du" part is a family name prefix (VV in iso 21090)   -->
       <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
         <valueString value="VV"/>
       </extension>
     </family>
-    <given value="B&#xE9;n&#xE9;dicte"/>
+    <given value="Bénédicte"/>
   </name>
 
   <telecom>
@@ -64,7 +51,7 @@
 	<gender value="female"/>
  
   <address>
-    <line value="43, Place du March&#xE9; Sainte Catherine"/>
+    <line value="43, Place du Marché Sainte Catherine"/>
     <city value="Paris"/>
     <postalCode value="75004"/>
     <country value="FRA"/>

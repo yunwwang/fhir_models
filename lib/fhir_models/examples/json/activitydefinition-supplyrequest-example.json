@@ -1,10 +1,6 @@
 {
   "resourceType": "ActivityDefinition",
   "id": "blood-tubes-supply",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    </div>"
-  },
   "status": "draft",
   "description": "10 Blood collect tubes blue cap",
   "purpose": "Describes a request for 10 Blood collection tubes with blue caps.",
@@ -21,7 +17,14 @@
   "quantity": {
     "value": 10
   },
-  "transform": {
-    "reference": "StructureMap/supplyrequest-transform"
+  "transform": "StructureMap/supplyrequest-transform",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

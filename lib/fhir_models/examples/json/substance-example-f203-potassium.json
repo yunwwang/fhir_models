@@ -1,10 +1,6 @@
 {
   "resourceType": "Substance",
   "id": "f203",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f203</p><p><b>identifier</b>: 1234</p><p><b>category</b>: Chemical <span>(Details : {http://hl7.org.fhir/substance-category code 'chemical' = 'chemical', given as 'Chemical'})</span></p><p><b>code</b>: Potassium <span>(Details : {SNOMED CT code '88480006' = 'Potassium', given as 'Potassium'})</span></p></div>"
-  },
   "identifier": [
     {
       "system": "http://acme.org/identifiers/substances",
@@ -15,7 +11,7 @@
     {
       "coding": [
         {
-          "system": "http://hl7.org.fhir/substance-category",
+          "system": "http://terminology.hl7.org/CodeSystem/substance-category",
           "code": "chemical",
           "display": "Chemical"
         }
@@ -28,6 +24,15 @@
         "system": "http://snomed.info/sct",
         "code": "88480006",
         "display": "Potassium"
+      }
+    ]
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
       }
     ]
   }

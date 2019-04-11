@@ -1,10 +1,6 @@
 {
   "resourceType": "DocumentManifest",
   "id": "example",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Text</div>"
-  },
   "contained": [
     {
       "resourceType": "Practitioner",
@@ -57,9 +53,7 @@
   "description": "Physical",
   "content": [
     {
-      "pReference": {
-        "reference": "DocumentReference/example"
-      }
+      "reference": "DocumentReference/example"
     }
   ],
   "related": [
@@ -72,5 +66,14 @@
         "reference": "DocumentReference/example"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

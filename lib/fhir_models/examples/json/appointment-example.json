@@ -1,20 +1,18 @@
 {
   "resourceType": "Appointment",
   "id": "example",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian MRI results discussion</div>"
-  },
   "status": "booked",
-  "serviceCategory": {
-    "coding": [
-      {
-        "system": "http://example.org/service-category",
-        "code": "gp",
-        "display": "General Practice"
-      }
-    ]
-  },
+  "serviceCategory": [
+    {
+      "coding": [
+        {
+          "system": "http://example.org/service-category",
+          "code": "gp",
+          "display": "General Practice"
+        }
+      ]
+    }
+  ],
   "serviceType": [
     {
       "coding": [
@@ -29,9 +27,9 @@
     {
       "coding": [
         {
-          "system": "http://example.org/specialty",
-          "code": "gp",
-          "display": "General Practice"
+          "system": "http://snomed.info/sct",
+          "code": "394814009",
+          "display": "General practice"
         }
       ]
     }
@@ -39,13 +37,13 @@
   "appointmentType": {
     "coding": [
       {
-        "system": "http://example.org/appointment-type",
-        "code": "follow",
-        "display": "Followup"
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+        "code": "FOLLOWUP",
+        "display": "A follow up visit from a previous appointment"
       }
     ]
   },
-  "indication": [
+  "reasonReference": [
     {
       "reference": "Condition/example",
       "display": "Severe burn of left ear"
@@ -57,9 +55,9 @@
   "end": "2013-12-10T11:00:00Z",
   "created": "2013-10-10",
   "comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",
-  "incomingReferral": [
+  "basedOn": [
     {
-      "reference": "ReferralRequest/example"
+      "reference": "ServiceRequest/myringotomy"
     }
   ],
   "participant": [
@@ -76,7 +74,7 @@
         {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/v3/ParticipationType",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
               "code": "ATND"
             }
           ]
@@ -97,5 +95,14 @@
       "required": "required",
       "status": "accepted"
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

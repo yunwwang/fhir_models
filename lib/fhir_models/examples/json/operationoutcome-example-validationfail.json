@@ -1,10 +1,6 @@
 {
   "resourceType": "OperationOutcome",
   "id": "validationfail",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Error parsing resource XML (Unknown Content &quot;label&quot; @ /Patient/identifier/label)</p>\n    </div>"
-  },
   "issue": [
     {
       "severity": "error",
@@ -19,5 +15,14 @@
         "Patient.identifier"
       ]
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

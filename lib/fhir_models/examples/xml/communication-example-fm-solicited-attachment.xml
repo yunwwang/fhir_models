@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><Communication xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Communication xmlns="http://hl7.org/fhir">
   <id value="fm-solicited"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Attachment in response to a Request</div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
    <contained>
     <Organization>
       <id value="provider"/>
@@ -57,10 +62,11 @@
   <subject>
     <reference value="Patient/1"/>
   </subject>
+  
+  <sent value="2016-06-12T18:01:10-08:00"/>
   <recipient>
     <reference value="#payor"/>
   </recipient>
-  <sent value="2016-06-12T18:01:10-08:00"/>
   <sender>
     <reference value="#provider"/>
   </sender>

@@ -237,6 +237,9 @@ RSpec.describe 'FHIR' do
         specify 'value= 1.5' do
           expect(subject.primitive?(datatype: datatype, value: 1.5)).to be result
         end
+        specify "value= '1E3'" do
+          expect(subject.primitive?(datatype: datatype, value: '1E3')).to be result
+        end
       end
       context 'returns false when' do
         let(:result) { false }
@@ -254,9 +257,6 @@ RSpec.describe 'FHIR' do
         end
         specify "value= '001'" do
           expect(subject.primitive?(datatype: datatype, value: '001')).to be result
-        end
-        specify "value= '1E3'" do
-          expect(subject.primitive?(datatype: datatype, value: '1E3')).to be result
         end
       end
     end

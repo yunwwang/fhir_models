@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 26, 2017 18:33-0400 for FHIR v3.0.0 
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -59,25 +59,45 @@
           <xs:element name="title" minOccurs="0" maxOccurs="1" type="string">
             
           </xs:element>
+          <xs:element name="subtitle" minOccurs="0" maxOccurs="1" type="string">
+            
+          </xs:element>
           <xs:element name="status" minOccurs="1" maxOccurs="1" type="PublicationStatus">
             
           </xs:element>
           <xs:element name="experimental" minOccurs="0" maxOccurs="1" type="boolean">
             
           </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1">
+            
+            <xs:element name="subjectCodeableConcept" type="CodeableConcept"/>
+            <xs:element name="subjectReference" type="Reference"/>
+          </xs:choice>
           <xs:element name="date" minOccurs="0" maxOccurs="1" type="dateTime">
             
           </xs:element>
           <xs:element name="publisher" minOccurs="0" maxOccurs="1" type="string">
             
           </xs:element>
+          <xs:element name="contact" minOccurs="0" maxOccurs="unbounded" type="ContactDetail">
+            
+          </xs:element>
           <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
+            
+          </xs:element>
+          <xs:element name="useContext" minOccurs="0" maxOccurs="unbounded" type="UsageContext">
+            
+          </xs:element>
+          <xs:element name="jurisdiction" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             
           </xs:element>
           <xs:element name="purpose" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
           <xs:element name="usage" minOccurs="0" maxOccurs="1" type="string">
+            
+          </xs:element>
+          <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
           <xs:element name="approvalDate" minOccurs="0" maxOccurs="1" type="date">
@@ -89,28 +109,25 @@
           <xs:element name="effectivePeriod" minOccurs="0" maxOccurs="1" type="Period">
             
           </xs:element>
-          <xs:element name="useContext" minOccurs="0" maxOccurs="unbounded" type="UsageContext">
-            
-          </xs:element>
-          <xs:element name="jurisdiction" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
-            
-          </xs:element>
           <xs:element name="topic" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             
           </xs:element>
-          <xs:element name="contributor" minOccurs="0" maxOccurs="unbounded" type="Contributor">
+          <xs:element name="author" minOccurs="0" maxOccurs="unbounded" type="ContactDetail">
             
           </xs:element>
-          <xs:element name="contact" minOccurs="0" maxOccurs="unbounded" type="ContactDetail">
+          <xs:element name="editor" minOccurs="0" maxOccurs="unbounded" type="ContactDetail">
             
           </xs:element>
-          <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="markdown">
+          <xs:element name="reviewer" minOccurs="0" maxOccurs="unbounded" type="ContactDetail">
+            
+          </xs:element>
+          <xs:element name="endorser" minOccurs="0" maxOccurs="unbounded" type="ContactDetail">
             
           </xs:element>
           <xs:element name="relatedArtifact" minOccurs="0" maxOccurs="unbounded" type="RelatedArtifact">
             
           </xs:element>
-          <xs:element name="library" minOccurs="0" maxOccurs="unbounded" type="Reference">
+          <xs:element name="library" minOccurs="0" maxOccurs="unbounded" type="canonical">
             
           </xs:element>
           <xs:element name="disclaimer" minOccurs="0" maxOccurs="1" type="markdown">
@@ -137,16 +154,13 @@
           <xs:element name="clinicalRecommendationStatement" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
-          <xs:element name="improvementNotation" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="improvementNotation" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
           <xs:element name="definition" minOccurs="0" maxOccurs="unbounded" type="markdown">
             
           </xs:element>
           <xs:element name="guidance" minOccurs="0" maxOccurs="1" type="markdown">
-            
-          </xs:element>
-          <xs:element name="set" minOccurs="0" maxOccurs="1" type="string">
             
           </xs:element>
           <xs:element name="group" type="Measure.Group" minOccurs="0" maxOccurs="unbounded">
@@ -164,10 +178,7 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="identifier" minOccurs="1" maxOccurs="1" type="Identifier">
-            
-          </xs:element>
-          <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
           <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
@@ -188,19 +199,13 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
-            
-          </xs:element>
           <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            
-          </xs:element>
-          <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
             
           </xs:element>
           <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
             
           </xs:element>
-          <xs:element name="criteria" minOccurs="1" maxOccurs="1" type="string">
+          <xs:element name="criteria" minOccurs="1" maxOccurs="1" type="Expression">
             
           </xs:element>
         </xs:sequence>
@@ -212,13 +217,34 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
+          <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
-          <xs:element name="criteria" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
             
           </xs:element>
-          <xs:element name="path" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="criteria" minOccurs="0" maxOccurs="1" type="Expression">
+            
+          </xs:element>
+          <xs:element name="component" type="Measure.Component" minOccurs="0" maxOccurs="unbounded">
+            
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Measure.Component">
+    
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            
+          </xs:element>
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
+            
+          </xs:element>
+          <xs:element name="criteria" minOccurs="1" maxOccurs="1" type="Expression">
             
           </xs:element>
         </xs:sequence>
@@ -230,16 +256,16 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
+          <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
           <xs:element name="usage" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             
           </xs:element>
-          <xs:element name="criteria" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
             
           </xs:element>
-          <xs:element name="path" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="criteria" minOccurs="1" maxOccurs="1" type="Expression">
             
           </xs:element>
         </xs:sequence>

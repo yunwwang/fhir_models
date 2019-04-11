@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 26, 2017 18:33-0400 for FHIR v3.0.0 
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -50,6 +50,9 @@
           <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
             
           </xs:element>
+          <xs:element name="partOf" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            
+          </xs:element>
           <xs:element name="status" minOccurs="1" maxOccurs="1" type="ObservationStatus">
             
           </xs:element>
@@ -62,13 +65,18 @@
           <xs:element name="subject" minOccurs="0" maxOccurs="1" type="Reference">
             
           </xs:element>
-          <xs:element name="context" minOccurs="0" maxOccurs="1" type="Reference">
+          <xs:element name="focus" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            
+          </xs:element>
+          <xs:element name="encounter" minOccurs="0" maxOccurs="1" type="Reference">
             
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1">
             
             <xs:element name="effectiveDateTime" type="dateTime"/>
             <xs:element name="effectivePeriod" type="Period"/>
+            <xs:element name="effectiveTiming" type="Timing"/>
+            <xs:element name="effectiveInstant" type="instant"/>
           </xs:choice>
           <xs:element name="issued" minOccurs="0" maxOccurs="1" type="instant">
             
@@ -82,10 +90,10 @@
             <xs:element name="valueCodeableConcept" type="CodeableConcept"/>
             <xs:element name="valueString" type="string"/>
             <xs:element name="valueBoolean" type="boolean"/>
+            <xs:element name="valueInteger" type="integer"/>
             <xs:element name="valueRange" type="Range"/>
             <xs:element name="valueRatio" type="Ratio"/>
             <xs:element name="valueSampledData" type="SampledData"/>
-            <xs:element name="valueAttachment" type="Attachment"/>
             <xs:element name="valueTime" type="time"/>
             <xs:element name="valueDateTime" type="dateTime"/>
             <xs:element name="valuePeriod" type="Period"/>
@@ -93,10 +101,10 @@
           <xs:element name="dataAbsentReason" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
-          <xs:element name="interpretation" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="interpretation" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             
           </xs:element>
-          <xs:element name="comment" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             
           </xs:element>
           <xs:element name="bodySite" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -114,7 +122,10 @@
           <xs:element name="referenceRange" type="Observation.ReferenceRange" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
-          <xs:element name="related" type="Observation.Related" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="hasMember" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            
+          </xs:element>
+          <xs:element name="derivedFrom" minOccurs="0" maxOccurs="unbounded" type="Reference">
             
           </xs:element>
           <xs:element name="component" type="Observation.Component" minOccurs="0" maxOccurs="unbounded">
@@ -151,21 +162,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="Observation.Related">
-    
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="ObservationRelationshipType">
-            
-          </xs:element>
-          <xs:element name="target" minOccurs="1" maxOccurs="1" type="Reference">
-            
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="Observation.Component">
     
     <xs:complexContent>
@@ -179,10 +175,11 @@
             <xs:element name="valueQuantity" type="Quantity"/>
             <xs:element name="valueCodeableConcept" type="CodeableConcept"/>
             <xs:element name="valueString" type="string"/>
+            <xs:element name="valueBoolean" type="boolean"/>
+            <xs:element name="valueInteger" type="integer"/>
             <xs:element name="valueRange" type="Range"/>
             <xs:element name="valueRatio" type="Ratio"/>
             <xs:element name="valueSampledData" type="SampledData"/>
-            <xs:element name="valueAttachment" type="Attachment"/>
             <xs:element name="valueTime" type="time"/>
             <xs:element name="valueDateTime" type="dateTime"/>
             <xs:element name="valuePeriod" type="Period"/>
@@ -190,43 +187,13 @@
           <xs:element name="dataAbsentReason" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
-          <xs:element name="interpretation" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="interpretation" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             
           </xs:element>
           <xs:element name="referenceRange" type="Observation.ReferenceRange" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
         </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="ObservationRelationshipType-list">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="has-member">
-        
-      </xs:enumeration>
-      <xs:enumeration value="derived-from">
-        
-      </xs:enumeration>
-      <xs:enumeration value="sequel-to">
-        
-      </xs:enumeration>
-      <xs:enumeration value="replaces">
-        
-      </xs:enumeration>
-      <xs:enumeration value="qualified-by">
-        
-      </xs:enumeration>
-      <xs:enumeration value="interfered-by">
-        
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="ObservationRelationshipType">
-    
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="ObservationRelationshipType-list" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

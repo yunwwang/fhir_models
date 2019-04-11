@@ -4,7 +4,7 @@ module FHIR
     include FHIR::Json
     include FHIR::Xml
 
-    SEARCH_PARAMS = 
+    SEARCH_PARAMS = []
     METADATA = {
       'id' => {'type'=>'string', 'path'=>'SampledData.id', 'min'=>0, 'max'=>1},
       'extension' => {'type'=>'Extension', 'path'=>'SampledData.extension', 'min'=>0, 'max'=>Float::INFINITY},
@@ -14,7 +14,7 @@ module FHIR
       'lowerLimit' => {'type'=>'decimal', 'path'=>'SampledData.lowerLimit', 'min'=>0, 'max'=>1},
       'upperLimit' => {'type'=>'decimal', 'path'=>'SampledData.upperLimit', 'min'=>0, 'max'=>1},
       'dimensions' => {'type'=>'positiveInt', 'path'=>'SampledData.dimensions', 'min'=>1, 'max'=>1},
-      'data' => {'type'=>'string', 'path'=>'SampledData.data', 'min'=>1, 'max'=>1}
+      'data' => {'type'=>'string', 'path'=>'SampledData.data', 'min'=>0, 'max'=>1}
     }
 
     attr_accessor :id         # 0-1 string
@@ -25,6 +25,6 @@ module FHIR
     attr_accessor :lowerLimit # 0-1 decimal
     attr_accessor :upperLimit # 0-1 decimal
     attr_accessor :dimensions # 1-1 positiveInt
-    attr_accessor :data       # 1-1 string
+    attr_accessor :data       # 0-1 string
   end
 end

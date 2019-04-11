@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><EnrollmentResponse xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<EnrollmentResponse xmlns="http://hl7.org/fhir">
  <id value="ER2500"/>
 
- <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">A human-readable rendering of the EnrollmentResponse</div>
-  </text>
+ <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 
   <identifier>
     <system value="http://www.BenefitsInc.com/fhir/enrollmentresponse"/>
@@ -17,12 +22,7 @@
 	<reference value="http://www.BenefitsInc.com/fhir/EnrollmentRequest/225476332402"/>
   </request>
   
-  <outcome>
-    <coding>
-      <system value="http://hl7.org/fhir/remittance-outcome"/>
-	  <code value="complete"/>
-	</coding>  
-  </outcome>
+  <outcome value="complete"/>
   
   <disposition value="Dependant added to policy."/>
  
@@ -31,9 +31,9 @@
   <organization>
     <reference value="Organization/2"/>
   </organization>
-
-  <!-- requestOrganizationReference> PK don't know why the tooling rejects this.
+  
+  <requestProvider>
     <reference value="Organization/1"/>
-  </requestOrganizationReference -->
- 
+  </requestProvider>
+
 </EnrollmentResponse>

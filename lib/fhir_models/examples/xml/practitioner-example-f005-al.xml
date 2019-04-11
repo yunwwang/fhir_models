@@ -1,6 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><Practitioner xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner xmlns="http://hl7.org/fhir">
   <id value="f005"/>
-    <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f005</p><p><b>identifier</b>: 118265112 (OFFICIAL), 191REW8WE916 (USUAL)</p><p><b>name</b>: Langeveld Anne (OFFICIAL)</p><p><b>telecom</b>: ph: 0205563847(WORK), a.langeveld@bmc.nl(WORK), fax: 0205668916(WORK)</p><p><b>address</b>: Galapagosweg 9 Amsterdam 1105 AZ NLD (WORK)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: Mar 11, 1959</p><p><b>photo</b>: </p><p><b>communication</b>: France <span>(Details : {urn:oid:2.16.840.1.113883.6.121 code &#39;fr&#39; = &#39;fr&#39;, given as &#39;France&#39;})</span></p></div></text><identifier>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <identifier>
         <use value="official"/>
         <system value="urn:oid:2.16.528.1.1007.3.1"/>
         <!--   Identificatiesysteem Zorgverlener UZI   -->
@@ -52,7 +60,7 @@
 
 	<communication>
         <coding>
-            <system value="urn:oid:2.16.840.1.113883.6.121"/>
+            <system value="urn:ietf:bcp:47"/>
             <!--   List of ISO 639-1 language codes (ISO 3066)   -->
             <code value="fr"/>
             <display value="France"/>

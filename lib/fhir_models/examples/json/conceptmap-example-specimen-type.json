@@ -1,12 +1,8 @@
 {
   "resourceType": "ConceptMap",
   "id": "102",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>Specimen mapping from v2 table 0487 to SNOMED CT (http://hl7.org/fhir/ConceptMap/102)</h2>\n      <p>Mapping from http://hl7.org/fhir/ValueSet/v2-0487 to http://snomed.info/id?fhir_vs</p>\n      <p>DRAFT. Published on Jul 25, 2013 by FHIR project team (original source: LabMCoP) (\n        <a href=\"http://hl7.org/fhir\">http://hl7.org/fhir</a>, \n        <a href=\"http://www.phconnect.org/group/laboratorymessagingcommunityofpractice/forum/attachment/download?id=3649725%3AUploadedFile%3A145786\">http://www.phconnect.org/group...</a>). \n      </p>\n      <br/>\n      <table class=\"grid\">\n        <tr>\n          <td colspan=\"1\">\n            <b>Source Concept</b>\n          </td>\n          <td>\n            <b>Equivalence</b>\n          </td>\n          <td colspan=\"4\">\n            <b>Destination Concept</b>\n          </td>\n          <td>\n            <b>Comment</b>\n          </td>\n        </tr>\n        <tr>\n          <td>\n            <b>Code [http://hl7.org/fhir/v2/0487]</b>\n          </td>\n          <td/>\n          <td>\n            <b>Code [http://snomed.info/sct]</b>\n          </td>\n          <td>\n            <b>http://snomed.info/id/246380002 [http://snomed.info/sct]</b>\n          </td>\n          <td>\n            <b>http://snomed.info/id/3006873018 [http://snomed.info/sct]</b>\n          </td>\n          <td>\n            <b>TypeModifier [http://snomed.info/sct]</b>\n          </td>\n          <td/>\n        </tr>\n        <tr>\n          <td>ACNE (Tissue, Acne)</td>\n          <td>:(equivalent)</td>\n          <td>309068002 (Skin lesion sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ACNFLD (Fluid, Acne)</td>\n          <td>:(equivalent)</td>\n          <td>119323008 (Pus specimen)</td>\n          <td/>\n          <td/>\n          <td>47002008 (Pustule)</td>\n          <td>HL7 term is a historical term. mapped to Pus</td>\n        </tr>\n        <tr>\n          <td>AIRS (Air Sample)</td>\n          <td>:(equivalent)</td>\n          <td>446302006 (Air sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ALL (Allograft)</td>\n          <td>:(equivalent)</td>\n          <td>119376003 (Tissue specimen)</td>\n          <td/>\n          <td/>\n          <td>7970006 (Allograft)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>AMP (Amputation)</td>\n          <td>:(equivalent)</td>\n          <td>408654003 (Specimen obtained by amputation)</td>\n          <td>81723002 (Amputation)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ANGI (Catheter Tip, Angio)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>ARTC (Catheter Tip, Arterial)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>ASERU (Serum, Acute)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>pending</td>\n        </tr>\n        <tr>\n          <td>ASP (Aspirate)</td>\n          <td>:(equivalent)</td>\n          <td>119295008 (Specimen obtained by aspiration)</td>\n          <td>14766002 (Removal by suction)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ATTE (Environment, Attest)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>AUTOC (Environmental, Autoclave Capsule)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>AUTP (Autopsy)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>This really is not a specimen per se - it is the state of the subject from whom the specimen is collected, so it should be used as a  specimen type modifier ONLY!. Often this is indicated with a special medical record number or other notation on the patient. needs to have specimen type (e.g. SPM-4) and source site (SPM.8) and spatial orientation (SPM.9)</td>\n        </tr>\n        <tr>\n          <td>BBL (Blood bag)</td>\n          <td>:(equivalent)</td>\n          <td>119304001 (Blood bag specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>BCYST (Cyst, Baker's)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td>32361000 (Popliteal fossa)</td>\n          <td/>\n          <td>submitted (PLR155) with parent of  167874004^knee joint synovial fluid (specimen), with specimen source topography 32361000^Popliteal fossa structure (body structure)</td>\n        </tr>\n        <tr>\n          <td>BITE (Bite)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>Submit for new term with parent 119365002</td>\n        </tr>\n        <tr>\n          <td>BLEB (Bleb)</td>\n          <td>:(equivalent)</td>\n          <td>309049000 (Lesion sample)</td>\n          <td/>\n          <td/>\n          <td>339008 (Blister)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>BLIST (Blister)</td>\n          <td>:(equivalent)</td>\n          <td>309049000 (Lesion sample)</td>\n          <td/>\n          <td/>\n          <td>339008 (Blister)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>BOIL (Boil)</td>\n          <td>:(equivalent)</td>\n          <td>119295008 (Specimen obtained by aspiration)</td>\n          <td>14766002 (Removal by suction)</td>\n          <td/>\n          <td>59843005 (Furuncle)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>BON (Bone)</td>\n          <td>:(equivalent)</td>\n          <td>430268003 (Specimen from bone)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>BOWL (Bowel contents)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>Don't use this term for human samples - use Stool instead. animal would use small intestinal contents, large intestinal contents</td>\n        </tr>\n        <tr>\n          <td>BPU (Blood product unit)</td>\n          <td>:(equivalent)</td>\n          <td>119300005 (Specimen from blood product)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>BRN (Burn)</td>\n          <td>:(equivalent)</td>\n          <td>119367005 (Specimen from burn injury)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>BRSH (Brush)</td>\n          <td>:(equivalent)</td>\n          <td>258415003 (Biopsy sample)</td>\n          <td>439336003 (Brush biopsy)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>BRTH (Breath (use EXHLD))</td>\n          <td>:(equivalent)</td>\n          <td>119336008 (Exhaled air specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>BRUS (Brushing)</td>\n          <td>:(equivalent)</td>\n          <td>309176002 (Bronchial brushings sample)</td>\n          <td>80657008 (Bronchoscopy with brush biopsy)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>BUB (Bubo)</td>\n          <td>:(equivalent)</td>\n          <td>302795002 (Lymph node aspirate)</td>\n          <td>14766002 (Removal by suction)</td>\n          <td/>\n          <td>11585000 (Bubo)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>BULLA (Bulla/Bullae)</td>\n          <td>:(equivalent)</td>\n          <td>258482009 (Vesicle fluid sample)</td>\n          <td/>\n          <td/>\n          <td>339008 (Blister)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>BX (Biopsy)</td>\n          <td>:(equivalent)</td>\n          <td>258415003 (Biopsy sample)</td>\n          <td>86273004 (Biopsy)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>CALC (Calculus (=Stone))</td>\n          <td>:(equivalent)</td>\n          <td>119350003 (Calculus specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>CARBU (Carbuncle)</td>\n          <td>:(equivalent)</td>\n          <td>309051001 (Body fluid sample)</td>\n          <td/>\n          <td/>\n          <td>41570003 (Carbuncle)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>CAT (Catheter)</td>\n          <td>:(equivalent)</td>\n          <td>119311002 (Catheter specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>CBITE (Bite, Cat)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>Submit for new term with parent 119365002</td>\n        </tr>\n        <tr>\n          <td>CLIPP (Clippings)</td>\n          <td>:(equivalent)</td>\n          <td>119327009 (Nail specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>Be more specific use either: 119326000^hair specimen or 119327009^nail specimen</td>\n        </tr>\n        <tr>\n          <td>CNJT (Conjunctiva)</td>\n          <td>:(equivalent)</td>\n          <td>119401005 (Specimen from conjunctiva)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>CNJT (Conjunctiva)</td>\n          <td>:(equivalent)</td>\n          <td>128160006 (Tissue specimen from conjunctiva)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>CNJT (Conjunctiva)</td>\n          <td>:(equivalent)</td>\n          <td>258498002 (Conjunctival swab)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>COL (Colostrum)</td>\n          <td>:(equivalent)</td>\n          <td>119329007 (Colostrum specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>CONE (Biospy, Cone)</td>\n          <td>:(equivalent)</td>\n          <td>399713008 (Specimen from uterine cervix obtained by cone biopsy)</td>\n          <td>54535009 (Cone biopsy of cervix)</td>\n          <td>71252005 (Uterine cervix)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>CSCR (Scratch, Cat)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>submit for new term with parent 119365002^Specimen from wound (specimen)</td>\n        </tr>\n        <tr>\n          <td>CSERU (Serum, Convalescent)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>pending</td>\n        </tr>\n        <tr>\n          <td>CSITE (Catheter Insertion Site)</td>\n          <td>:(equivalent)</td>\n          <td>258507003 (Swab of line insertion site)</td>\n          <td>285570007 (Taking of swab)</td>\n          <td/>\n          <td>386144009 (Line insertion site)</td>\n          <td>Prefer to have aspirate of the pus oozing out from cleaned insertion site - if swab is all that can be obtained, then swab after cleaning, otherwise you may get a contaminated specimen and a falsely identified infected central line. Do not just swab the reddened area - that will just collect skin flora       </td>\n        </tr>\n        <tr>\n          <td>CSMY (Fluid,  Cystostomy Tube)</td>\n          <td>:(equivalent)</td>\n          <td>309051001 (Body fluid sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>CST (Fluid, Cyst)</td>\n          <td>:(equivalent)</td>\n          <td>258453008 (Cyst fluid sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>CSVR (Blood, Cell Saver)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD - may use blood and SPM-6</td>\n        </tr>\n        <tr>\n          <td>CTP (Catheter tip)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>CVPS (Site, CVP)</td>\n          <td>:(equivalent)</td>\n          <td>258507003 (Swab of line insertion site)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>CVPT (Catheter Tip, CVP)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td>445085009 (Tunneled central venous catheter)</td>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>CYN (Nodule, Cystic)</td>\n          <td>:(equivalent)</td>\n          <td>119368000 (Specimen from cyst)</td>\n          <td/>\n          <td/>\n          <td>27925004 (Nodule)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>CYST (Cyst)</td>\n          <td>:(equivalent)</td>\n          <td>119368000 (Specimen from cyst)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>DBITE (Bite, Dog)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>Submit for new term with parent 119365002</td>\n        </tr>\n        <tr>\n          <td>DCS (Sputum, Deep Cough)</td>\n          <td>:(equivalent)</td>\n          <td>119335007 (Coughed sputum specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>DEC (Ulcer, Decubitus)</td>\n          <td>:(equivalent)</td>\n          <td>258505006 (Skin ulcer swab)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>DEION (Environmental, Water  (Deionized))</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>DIA (Dialysate)</td>\n          <td>:(equivalent)</td>\n          <td>119360007 (Dialysis fluid specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>DISCHG (Discharge)</td>\n          <td>:(equivalent)</td>\n          <td>258439008 (Discharge)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>DIV (Diverticulum)</td>\n          <td>:(equivalent)</td>\n          <td>119376003 (Tissue specimen)</td>\n          <td/>\n          <td/>\n          <td>31113003 (Diverticulum)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>DRN (Drain)</td>\n          <td>:(equivalent)</td>\n          <td>119306004 (Drain device specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>DRNG (Drainage, Tube)</td>\n          <td>:(equivalent)</td>\n          <td>258455001 (Drainage fluid sample)</td>\n          <td>122462000 (Drainage)</td>\n          <td/>\n          <td/>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead: not an acceptable specimen for micro - not specific enough term</td>\n        </tr>\n        <tr>\n          <td>DRNGP (Drainage, Penrose)</td>\n          <td>:(equivalent)</td>\n          <td>309051001 (Body fluid sample)</td>\n          <td>122462000 (Drainage)</td>\n          <td/>\n          <td/>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead</td>\n        </tr>\n        <tr>\n          <td>EARW (Ear wax (cerumen))</td>\n          <td>:(equivalent)</td>\n          <td>122580007 (Cerumen specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>EBRUSH (Brush, Esophageal)</td>\n          <td>:(equivalent)</td>\n          <td>309210009 (Oesophageal brushings sample)</td>\n          <td>36213007 (Endoscopy and brush biopsy)</td>\n          <td>32849002 (Esophagus)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>EEYE (Environmental, Eye Wash)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>EFF (Environmental, Effluent)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>EFFUS (Effusion)</td>\n          <td>:(equivalent)</td>\n          <td>258440005 (Effusion sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>EFOD (Environmental, Food)</td>\n          <td>:(equivalent)</td>\n          <td>119320006 (Food specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>EISO (Environmental, Isolette)</td>\n          <td>:(equivalent)</td>\n          <td>258536003 (Incubator swab)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ELT (Electrode)</td>\n          <td>:(equivalent)</td>\n          <td>119314005 (Electrode specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ENVIR (Environmental, Unidentified Substance)</td>\n          <td>:(equivalent)</td>\n          <td>119324002 (Specimen of unknown material)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>EOTH (Environmental, Other Substance)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>ESOI (Environmental, Soil)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>ESOS (Environmental, Solution (Sterile))</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>ETA (Aspirate,  Endotrach)</td>\n          <td>:(equivalent)</td>\n          <td>119307008 (Endotracheal tube specimen)</td>\n          <td>14766002 (Removal by suction)</td>\n          <td>321667001 (Respiratory tract structure)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ETTP (Catheter Tip, Endotracheal)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>ETTUB (Tube, Endotracheal)</td>\n          <td>:(equivalent)</td>\n          <td>119307008 (Endotracheal tube specimen)</td>\n          <td>14766002 (Removal by suction)</td>\n          <td>321667001 (Respiratory tract structure)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>EWHI (Environmental, Whirlpool)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>EXG (Gas, exhaled (=breath))</td>\n          <td>:(equivalent)</td>\n          <td>119336008 (Exhaled air specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>EXS (Shunt, External)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>EXUDTE (Exudate)</td>\n          <td>:(equivalent)</td>\n          <td>258441009 (Exudate sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>FAW (Environmental, Water  (Well))</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>FBLOOD (Blood, Fetal)</td>\n          <td>:(equivalent)</td>\n          <td>119297000 (Blood specimen)</td>\n          <td/>\n          <td/>\n          <td>303112003 (Fetal period)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>FGA (Fluid,  Abdomen)</td>\n          <td>:(equivalent)</td>\n          <td>168139001 (Peritoneal fluid sample)</td>\n          <td/>\n          <td>83670000 (Peritoneal cavity)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>FIST (Fistula)</td>\n          <td>:(equivalent)</td>\n          <td>119370009 (Specimen from fistula)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>FLD (Fluid, Other)</td>\n          <td>:(equivalent)</td>\n          <td>309051001 (Body fluid sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>FLT (Filter)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>FLU (Fluid, Body unsp)</td>\n          <td>:(equivalent)</td>\n          <td>309051001 (Body fluid sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>FLUID (Fluid)</td>\n          <td>:(equivalent)</td>\n          <td>258442002 (Fluid sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>FOLEY (Catheter Tip, Foley)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>FRS (Fluid, Respiratory)</td>\n          <td>:(equivalent)</td>\n          <td>258442002 (Fluid sample)</td>\n          <td/>\n          <td>272626006 (Respiratory organ)</td>\n          <td/>\n          <td>this term is not specific enough, choose from terms that more accurately describe the specimen</td>\n        </tr>\n        <tr>\n          <td>FSCLP (Scalp, Fetal)</td>\n          <td>:(equivalent)</td>\n          <td>309502007 (Fetus specimen)</td>\n          <td/>\n          <td>41695006 (Scalp)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>FUR (Furuncle)</td>\n          <td>:(equivalent)</td>\n          <td>119295008 (Specimen obtained by aspiration)</td>\n          <td/>\n          <td/>\n          <td>59843005 (Furuncle)</td>\n          <td>Further describe the sample as tissue or pus. or by the collection method. The term boil is not specifc to a body site - need to indicate source site (spm.8). preferred term is Aspirate_Boil</td>\n        </tr>\n        <tr>\n          <td>GAS (Gas)</td>\n          <td>:(equivalent)</td>\n          <td>119317003 (Gaseous material specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>GASA (Aspirate, Gastric)</td>\n          <td>:(equivalent)</td>\n          <td>168137004 (Gastric aspirate sample)</td>\n          <td>14766002 (Removal by suction)</td>\n          <td>69695003 (Stomach)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>GASAN (Antrum, Gastric)</td>\n          <td>:(equivalent)</td>\n          <td>119379005 (Specimen from stomach)</td>\n          <td/>\n          <td>66051006 (Pyloric antrum)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>GASBR (Brushing, Gastric)</td>\n          <td>:(equivalent)</td>\n          <td>309213006 (Gastric brushings sample)</td>\n          <td>235157009 (Endoscopic brushings of GIT)</td>\n          <td>69695003 (Stomach)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>GASD (Drainage, Gastric)</td>\n          <td>:(equivalent)</td>\n          <td>258459007 (Gastric fluid sample)</td>\n          <td>122462000 (Drainage)</td>\n          <td>69695003 (Stomach)</td>\n          <td/>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead</td>\n        </tr>\n        <tr>\n          <td>GAST (Fluid/contents, Gastric)</td>\n          <td>:(equivalent)</td>\n          <td>258459007 (Gastric fluid sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>GENV (Genital vaginal)</td>\n          <td>:(equivalent)</td>\n          <td>119394009 (Specimen from vagina)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>GRAFT (Graft)</td>\n          <td>:(equivalent)</td>\n          <td>440493002 (Graft sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>GRANU (Granuloma)</td>\n          <td>:(equivalent)</td>\n          <td>119376003 (Tissue specimen)</td>\n          <td/>\n          <td/>\n          <td>45647009 (Granuloma)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>GROSH (Catheter, Groshong)</td>\n          <td>:(equivalent)</td>\n          <td>119311002 (Catheter specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>GSOL (Solution, Gastrostomy)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>GSPEC (Biopsy, Gastric)</td>\n          <td>:(equivalent)</td>\n          <td>309211008 (Gastric biopsy sample)</td>\n          <td>79121003 (Biopsy of stomach)</td>\n          <td>69695003 (Stomach)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>GT (Tube, Gastric)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>GTUBE (Drainage Tube, Drainage (Gastrostomy))</td>\n          <td>:(equivalent)</td>\n          <td>258459007 (Gastric fluid sample)</td>\n          <td>122462000 (Drainage)</td>\n          <td>69695003 (Stomach)</td>\n          <td>127490009 (Gastrostomy route)</td>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead</td>\n        </tr>\n        <tr>\n          <td>HBITE (Bite, Human)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>Submit for new term with parent 119365002</td>\n        </tr>\n        <tr>\n          <td>HBLUD (Blood, Autopsy)</td>\n          <td>:(equivalent)</td>\n          <td>119297000 (Blood specimen)</td>\n          <td/>\n          <td/>\n          <td>303113008 (Postmortem period)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>HEMAQ (Catheter Tip, Hemaquit)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>HEMO (Catheter Tip, Hemovac)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>HERNI (Tissue, Herniated)</td>\n          <td>:(equivalent)</td>\n          <td>119376003 (Tissue specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>HEV (Drain, Hemovac)</td>\n          <td>:(equivalent)</td>\n          <td>119306004 (Drain device specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>HIC (Catheter, Hickman)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td>445085009 (Tunneled central venous catheter)</td>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>HYDC (Fluid, Hydrocele)</td>\n          <td>:(equivalent)</td>\n          <td>309051001 (Body fluid sample)</td>\n          <td/>\n          <td/>\n          <td>55434001 (Hydrocele)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>IBITE (Bite, Insect)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>Submit for new term with parent 119365002</td>\n        </tr>\n        <tr>\n          <td>ICYST (Cyst, Inclusion)</td>\n          <td>:(equivalent)</td>\n          <td>309075001 (Skin cyst sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>IDC (Catheter Tip, Indwelling)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>IHG (Gas, Inhaled)</td>\n          <td>:(equivalent)</td>\n          <td>119337004 (Inhaled gas specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ILEO (Drainage, Ileostomy)</td>\n          <td>:(equivalent)</td>\n          <td>258455001 (Drainage fluid sample)</td>\n          <td/>\n          <td/>\n          <td>419954003 (Ileostomy route)</td>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead: stool is what is expected, should use stool sample</td>\n        </tr>\n        <tr>\n          <td>ILLEG (Source of Specimen Is Illigible)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>IMP (Implant)</td>\n          <td>:(equivalent)</td>\n          <td>439961009 (Implant submitted as specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>INCI (Site, Incision/Surgical)</td>\n          <td>:(equivalent)</td>\n          <td>438660002 (Specimen from prosthetic device)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>INFIL (Infiltrate)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>This describes a morphologic abnormality, not a sample</td>\n        </tr>\n        <tr>\n          <td>INS (Insect)</td>\n          <td>:(equivalent)</td>\n          <td>258614005 (Insect sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>INTRD (Catheter Tip, Introducer)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>IT (Intubation tube)</td>\n          <td>:(equivalent)</td>\n          <td>119307008 (Endotracheal tube specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>IUD (Intrauterine Device)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>pending</td>\n        </tr>\n        <tr>\n          <td>IVCAT (Catheter Tip, IV)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td>255560000 (Intravenous)</td>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>IVFLD (Fluid, IV)</td>\n          <td>:(equivalent)</td>\n          <td>258649003 (Intravenous infusion fluid sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>IVTIP (Tubing Tip, IV)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>JEJU (Drainage, Jejunal)</td>\n          <td>:(equivalent)</td>\n          <td>258463000 (Jejunal fluid sample)</td>\n          <td>122462000 (Drainage)</td>\n          <td>21306003 (Jejunum)</td>\n          <td/>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead: stool is what is expected, should use stool sample</td>\n        </tr>\n        <tr>\n          <td>JNTFLD (Fluid, Joint)</td>\n          <td>:(equivalent)</td>\n          <td>119332005 (Synovial fluid specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>JP (Drainage, Jackson Pratt)</td>\n          <td>:(equivalent)</td>\n          <td>309051001 (Body fluid sample)</td>\n          <td>122462000 (Drainage)</td>\n          <td/>\n          <td/>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead</td>\n        </tr>\n        <tr>\n          <td>KELOI (Lavage)</td>\n          <td>:(equivalent)</td>\n          <td>440674008 (Wash out specimen)</td>\n          <td>67889009 (Irrigation)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>KIDFLD (Fluid, Kidney)</td>\n          <td>:(equivalent)</td>\n          <td>309051001 (Body fluid sample)</td>\n          <td/>\n          <td>64033007 (Kidney)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>LAVG (Lavage, Bronhial)</td>\n          <td>:(equivalent)</td>\n          <td>258607008 (Bronchoalveolar lavage fluid sample)</td>\n          <td>397394009 (Bronchoalveolar lavage)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>LAVGG (Lavage, Gastric)</td>\n          <td>:(equivalent)</td>\n          <td>168138009 (Gastric lavage aspirate sample)</td>\n          <td>173830003 (Irrigation of stomach)</td>\n          <td>69695003 (Stomach)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>LAVGP (Lavage, Peritoneal)</td>\n          <td>:(equivalent)</td>\n          <td>440137008 (Specimen obtained by peritoneal lavage)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>LAVPG (Lavage, Pre-Bronch)</td>\n          <td>:(equivalent)</td>\n          <td>440674008 (Wash out specimen)</td>\n          <td>67889009 (Irrigation)</td>\n          <td>44567001 (Trachea)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>LENS1 (Contact Lens)</td>\n          <td>:(equivalent)</td>\n          <td>440473005 (Contact lens submitted as specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>LENS2 (Contact Lens Case)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>LESN (Lesion)</td>\n          <td>:(equivalent)</td>\n          <td>309049000 (Lesion sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>should be more specific what kind of lesion is observed - be more specific is it a wound, abscess, mass - specify! Ask SNOMED CT to mark it as a grouper term only (309049000)</td>\n        </tr>\n        <tr>\n          <td>LIQ (Liquid, Unspecified)</td>\n          <td>:(equivalent)</td>\n          <td>258442002 (Fluid sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>LIQO (Liquid, Other)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>LSAC (Fluid, Lumbar Sac)</td>\n          <td>:(equivalent)</td>\n          <td>258450006 (Cerebrospinal fluid sample)</td>\n          <td/>\n          <td>303949008 (Lumbar spinal cerebrospinal fluid pathway)</td>\n          <td/>\n          <td>The HL7 term is a historical term Mapped to CSF obtained by lumbar puncture</td>\n        </tr>\n        <tr>\n          <td>MAHUR (Catheter Tip, Makurkour)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>MASS (Mass)</td>\n          <td>:(equivalent)</td>\n          <td>420548004 (Specimen from mass)</td>\n          <td/>\n          <td/>\n          <td>4147007 (Mass)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>MBLD (Blood, Menstrual)</td>\n          <td>:(equivalent)</td>\n          <td>119345009 (Menstrual blood specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>MUCOS (Mucosa)</td>\n          <td>:(equivalent)</td>\n          <td>119376003 (Tissue specimen)</td>\n          <td/>\n          <td>414781009 (Mucous membrane structure)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>MUCUS (Mucus)</td>\n          <td>:(equivalent)</td>\n          <td>258483004 (Mucus sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>NASDR (Drainage, Nasal)</td>\n          <td>:(equivalent)</td>\n          <td>258474009 (Sinus fluid sample)</td>\n          <td>122462000 (Drainage)</td>\n          <td>2095001 (Accessory sinus)</td>\n          <td/>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead</td>\n        </tr>\n        <tr>\n          <td>NEDL (Needle)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>NEPH (Site, Nephrostomy)</td>\n          <td>:(equivalent)</td>\n          <td>438660002 (Specimen from prosthetic device)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>NGASP (Aspirate, Nasogastric)</td>\n          <td>:(equivalent)</td>\n          <td>302794003 (Nasogastric aspirate)</td>\n          <td>6853008 (Nasogastric tube aspiration)</td>\n          <td>69695003 (Stomach)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>NGAST (Drainage, Nasogastric)</td>\n          <td>:(equivalent)</td>\n          <td>258459007 (Gastric fluid sample)</td>\n          <td>122462000 (Drainage)</td>\n          <td>69695003 (Stomach)</td>\n          <td>127492001 (Nasogastric route)</td>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead</td>\n        </tr>\n        <tr>\n          <td>NGS (Site, Naso/Gastric)</td>\n          <td>:(equivalent)</td>\n          <td>438660002 (Specimen from prosthetic device)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>NODUL (Nodule(s))</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>pending</td>\n        </tr>\n        <tr>\n          <td>NSECR (Secretion, Nasal)</td>\n          <td>:(equivalent)</td>\n          <td>168141000 (Nasal fluid sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ORH (Other)</td>\n          <td>:(equivalent)</td>\n          <td>123038009 (Specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ORL (Lesion, Oral)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td>74262004 (Oral cavity)</td>\n          <td/>\n          <td>be more precise use ulcer, tumor, vesicle</td>\n        </tr>\n        <tr>\n          <td>OTH (Source, Other)</td>\n          <td>:(equivalent)</td>\n          <td>123038009 (Specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PACEM (Pacemaker)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>PCFL (Fluid, Pericardial)</td>\n          <td>:(equivalent)</td>\n          <td>122571007 (Pericardial fluid specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PDSIT (Site, Peritoneal Dialysis)</td>\n          <td>:(equivalent)</td>\n          <td>438660002 (Specimen from prosthetic device)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PDTS (Site, Peritoneal Dialysis Tunnel)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>submitted for code</td>\n        </tr>\n        <tr>\n          <td>PELVA (Abscess, Pelvic)</td>\n          <td>:(equivalent)</td>\n          <td>119371008 (Specimen from abscess)</td>\n          <td/>\n          <td>12921003 (Pelvis)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PENIL (Lesion, Penile)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td>18911002 (Penis)</td>\n          <td/>\n          <td>need to know what kind of lesion, so map to: UlcerTissue_penile, VesicleFluid_penile, Wound_penile, Mass tissue_penile, Necrotic tissue_penile, AbscessAspirate_penile, Anything else?</td>\n        </tr>\n        <tr>\n          <td>PERIA (Abscess, Perianal)</td>\n          <td>:(equivalent)</td>\n          <td>119371008 (Specimen from abscess)</td>\n          <td/>\n          <td>397158004 (Perianal region structure)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PILOC (Cyst, Pilonidal)</td>\n          <td>:(equivalent)</td>\n          <td>119368000 (Specimen from cyst)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PINS (Site, Pin)</td>\n          <td>:(equivalent)</td>\n          <td>438660002 (Specimen from prosthetic device)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PIS (Site, Pacemaker Insetion)</td>\n          <td>:(equivalent)</td>\n          <td>258507003 (Swab of line insertion site)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PLAN (Plant Material)</td>\n          <td>:(equivalent)</td>\n          <td>119301009 (Plant specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PLAS (Plasma)</td>\n          <td>:(equivalent)</td>\n          <td>119361006 (Plasma specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PLB (Plasma bag)</td>\n          <td>:(equivalent)</td>\n          <td>119305000 (Plasma bag specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PLEVS (Serum, Peak Level)</td>\n          <td>:(equivalent)</td>\n          <td>119364003 (Serum specimen)</td>\n          <td/>\n          <td/>\n          <td>255587001 (Peak)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>PND (Drainage, Penile)</td>\n          <td>:(equivalent)</td>\n          <td>258439008 (Discharge)</td>\n          <td>122462000 (Drainage)</td>\n          <td>13648007 (Urethra)</td>\n          <td/>\n          <td>Historical term -though in this case more often used for discharge</td>\n        </tr>\n        <tr>\n          <td>POL (Polyps)</td>\n          <td>:(equivalent)</td>\n          <td>119376003 (Tissue specimen)</td>\n          <td/>\n          <td/>\n          <td>41329004 (Polyp)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>POPGS (Graft Site, Popliteal)</td>\n          <td>:(equivalent)</td>\n          <td>440493002 (Graft sample)</td>\n          <td/>\n          <td>6902008 (Popliteal region)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>POPLG (Graft, Popliteal)</td>\n          <td>:(equivalent)</td>\n          <td>440493002 (Graft sample)</td>\n          <td/>\n          <td>6902008 (Popliteal region)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>POPLV (Site, Popliteal Vein)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>PORTA (Catheter, Porta)</td>\n          <td>:(equivalent)</td>\n          <td>119311002 (Catheter specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>PPP (Plasma, Platelet poor)</td>\n          <td>:(equivalent)</td>\n          <td>119362004 (Platelet poor plasma specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PROST (Prosthetic Device)</td>\n          <td>:(equivalent)</td>\n          <td>438660002 (Specimen from prosthetic device)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PRP (Plasma, Platelet rich)</td>\n          <td>:(equivalent)</td>\n          <td>119363009 (Platelet rich plasma specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PSC (Pseudocyst)</td>\n          <td>:(equivalent)</td>\n          <td>119368000 (Specimen from cyst)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PUNCT (Wound, Puncture)</td>\n          <td>:(equivalent)</td>\n          <td>119365002 (Specimen from wound)</td>\n          <td/>\n          <td/>\n          <td>129300006 (Puncture - action)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>PUS (Pus)</td>\n          <td>:(equivalent)</td>\n          <td>119323008 (Pus specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>PUSFR (Pustule)</td>\n          <td>:(equivalent)</td>\n          <td>119323008 (Pus specimen)</td>\n          <td/>\n          <td/>\n          <td>47002008 (Pustule)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>PUST (Pus)</td>\n          <td>:(equivalent)</td>\n          <td>119323008 (Pus specimen)</td>\n          <td/>\n          <td/>\n          <td>47002008 (Pustule)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>QC3 (Quality Control)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>RANDU (Urine, Random)</td>\n          <td>:(equivalent)</td>\n          <td>278020009 (Spot urine sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>RBITE (Bite, Reptile)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>Submit for new term with parent: 119365002</td>\n        </tr>\n        <tr>\n          <td>RECT (Drainage, Rectal)</td>\n          <td>:(equivalent)</td>\n          <td>119339001 (Stool specimen)</td>\n          <td>122462000 (Drainage)</td>\n          <td>34402009 (Rectum)</td>\n          <td/>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead: stool is what is expected, should use stool sample</td>\n        </tr>\n        <tr>\n          <td>RECTA (Abscess, Rectal)</td>\n          <td>:(equivalent)</td>\n          <td>119371008 (Specimen from abscess)</td>\n          <td/>\n          <td>34402009 (Rectum)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>RENALC (Cyst, Renal)</td>\n          <td>:(equivalent)</td>\n          <td>258420003 (Cyst tissue)</td>\n          <td/>\n          <td>64033007 (Kidney)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>RENC (Fluid, Renal Cyst)</td>\n          <td>:(equivalent)</td>\n          <td>258453008 (Cyst fluid sample)</td>\n          <td/>\n          <td>64033007 (Kidney)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>RES (Respiratory)</td>\n          <td>:(equivalent)</td>\n          <td>258603007 (Respiratory sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SAL (Saliva)</td>\n          <td>:(equivalent)</td>\n          <td>119342007 (Saliva specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SCAR (Tissue, Keloid (Scar))</td>\n          <td>:(equivalent)</td>\n          <td>119376003 (Tissue specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SCLV (Catheter Tip, Subclavian)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td>9454009 (Subclavian vein)</td>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>SCROA (Abscess, Scrotal)</td>\n          <td>:(equivalent)</td>\n          <td>119371008 (Specimen from abscess)</td>\n          <td/>\n          <td>20233005 (Scrotum)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SECRE (Secretion(s))</td>\n          <td>:(equivalent)</td>\n          <td>432825001 (Body secretion specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SER (Serum)</td>\n          <td>:(equivalent)</td>\n          <td>119364003 (Serum specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SHU (Site, Shunt)</td>\n          <td>:(equivalent)</td>\n          <td>119295008 (Specimen obtained by aspiration)</td>\n          <td>14766002 (Removal by suction)</td>\n          <td/>\n          <td>257351008 (Shunt)</td>\n          <td>Preferred is aspiration with sterile syringe from inflamed area. Specify body location of shunt site</td>\n        </tr>\n        <tr>\n          <td>SHUNF (Fluid, Shunt)</td>\n          <td>:(equivalent)</td>\n          <td>446861007 (Cerebrospinal fluid specimen obtained via ventriculoperitoneal shunt)</td>\n          <td>446860008 (Collection of cerebrospinal fluid via ventriculoperitoneal shunt)</td>\n          <td>279107003 (Central nervous system space)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SHUNT (Shunt)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>SITE (Site)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>SKBP (Biopsy, Skin)</td>\n          <td>:(equivalent)</td>\n          <td>309066003 (Skin biopsy sample)</td>\n          <td>240977001 (Biopsy of skin)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SKN (Skin)</td>\n          <td>:(equivalent)</td>\n          <td>119325001 (Skin specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SMM (Mass, Sub-Mandibular)</td>\n          <td>:(equivalent)</td>\n          <td>420548004 (Specimen from mass)</td>\n          <td/>\n          <td/>\n          <td>4147007 (Mass)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>SNV (Fluid, synovial (Joint fluid))</td>\n          <td>:(equivalent)</td>\n          <td>119332005 (Synovial fluid specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SPRM (Spermatozoa)</td>\n          <td>:(equivalent)</td>\n          <td>119349003 (Spermatozoa specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SPRP (Catheter Tip, Suprapubic)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>SPRPB (Cathether Tip, Suprapubic)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>SPS (Environmental, Spore Strip)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>SPT (Sputum)</td>\n          <td>:(equivalent)</td>\n          <td>119334006 (Sputum specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SPTC (Sputum - coughed)</td>\n          <td>:(equivalent)</td>\n          <td>119335007 (Coughed sputum specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SPTT (Sputum - tracheal aspirate)</td>\n          <td>:(equivalent)</td>\n          <td>258609006 (Sputum specimen obtained by aspiration from trachea)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SPUT1 (Sputum, Simulated)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>SPUTIN (Sputum, Inducted)</td>\n          <td>:(equivalent)</td>\n          <td>258610001 (Sputum specimen obtained by sputum induction)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SPUTSP (Sputum, Spontaneous)</td>\n          <td>:(equivalent)</td>\n          <td>119335007 (Coughed sputum specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>STER (Environmental, Sterrad)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>STL (Stool = Fecal)</td>\n          <td>:(equivalent)</td>\n          <td>119339001 (Stool specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>STONE (Stone, Kidney)</td>\n          <td>:(equivalent)</td>\n          <td>119350003 (Calculus specimen)</td>\n          <td/>\n          <td>64033007 (Kidney)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SUBMA (Abscess, Submandibular)</td>\n          <td>:(equivalent)</td>\n          <td>119371008 (Specimen from abscess)</td>\n          <td/>\n          <td>5713008 (Submandibular triangle)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SUBMX (Abscess, Submaxillary)</td>\n          <td>:(equivalent)</td>\n          <td>119371008 (Specimen from abscess)</td>\n          <td/>\n          <td>4335006 (Upper jaw)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SUMP (Drainage, Sump)</td>\n          <td>:(equivalent)</td>\n          <td>446562005 (Body fluid specimen obtained via sump drain)</td>\n          <td>122462000 (Drainage)</td>\n          <td/>\n          <td/>\n          <td>Historical term - consider what is being drained and indicate that in SPM-4 instead</td>\n        </tr>\n        <tr>\n          <td>SUP (Suprapubic Tap)</td>\n          <td>:(equivalent)</td>\n          <td>122575003 (Urine specimen)</td>\n          <td>58088002 (Urine specimen collection, suprapubic)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>SUTUR (Suture)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>SWGZ (Catheter Tip, Swan Gantz)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>TASP (Aspirate, Tracheal)</td>\n          <td>:(equivalent)</td>\n          <td>122877000 (Upper respiratory fluid specimen obtained by tracheal aspiration)</td>\n          <td>129112001 (Aspiration from trachea)</td>\n          <td>44567001 (Trachea)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>TISS (Tissue)</td>\n          <td>:(equivalent)</td>\n          <td>119376003 (Tissue specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>TISU (Tissue ulcer)</td>\n          <td>:(equivalent)</td>\n          <td>122593002 (Tissue specimen obtained from ulcer)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>TLC (Cathether Tip, Triple Lumen)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>TRAC (Site, Tracheostomy)</td>\n          <td>:(equivalent)</td>\n          <td>438660002 (Specimen from prosthetic device)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>TRANS (Transudate)</td>\n          <td>:(equivalent)</td>\n          <td>258538002 (Transudate sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>TSERU (Serum, Trough)</td>\n          <td>:(equivalent)</td>\n          <td>119364003 (Serum specimen)</td>\n          <td/>\n          <td/>\n          <td>255588006 (Trough)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>TSTES (Abscess, Testicular)</td>\n          <td>:(equivalent)</td>\n          <td>119371008 (Specimen from abscess)</td>\n          <td/>\n          <td>279572002 (Testicular structure)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>TTRA (Aspirate, Transtracheal)</td>\n          <td>:(equivalent)</td>\n          <td>258480001 (Transtracheal aspirate sample)</td>\n          <td>129112001 (Aspiration from trachea)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>TUBES (Tubes)</td>\n          <td>:(equivalent)</td>\n          <td>119310001 (Tube specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>TUMOR (Tumor)</td>\n          <td>:(equivalent)</td>\n          <td>258435002 (Tumour tissue)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>TZANC (Smear, Tzanck)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>This is the name of a lab test. A skin sample is examined for viral inclusions.</td>\n        </tr>\n        <tr>\n          <td>UDENT (Source, Unidentified)</td>\n          <td>:(equivalent)</td>\n          <td>123038009 (Specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>UR (Urine)</td>\n          <td>:(equivalent)</td>\n          <td>122575003 (Urine specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>URC (Urine clean catch)</td>\n          <td>:(equivalent)</td>\n          <td>122880004 (Urine specimen obtained by clean catch procedure)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>URINB (Urine, Bladder Washings)</td>\n          <td>:(equivalent)</td>\n          <td>122575003 (Urine specimen)</td>\n          <td>78533007 (Irrigation of urinary bladder)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>URINC (Urine, Catheterized)</td>\n          <td>:(equivalent)</td>\n          <td>446846006 (Urine specimen obtained via indwelling urinary catheter)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>URINM (Urine, Midstream)</td>\n          <td>:(equivalent)</td>\n          <td>258574006 (Mid-stream urine sample)</td>\n          <td>225271002 (Collection of mid-stream specimen of urine)</td>\n          <td>431938005 (Structure of urinary tract proper)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>URINN (Urine, Nephrostomy)</td>\n          <td>:(equivalent)</td>\n          <td>446277003 (Urine specimen obtained from nephrostomy tube after percutaneous insertion)</td>\n          <td>225109005 (Collection of nephrostomy urine specimen)</td>\n          <td>25990002 (Renal pelvis)</td>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>URINP (Urine, Pedibag)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>URT (Urine catheter)</td>\n          <td>:(equivalent)</td>\n          <td>122565001 (Urinary catheter specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>USCOP (Urine, Cystoscopy)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td>176178006 (Diagnostic cystoscopy)</td>\n          <td>89837001 (Urinary bladder)</td>\n          <td/>\n          <td>NEW specimenTERM 7</td>\n        </tr>\n        <tr>\n          <td>USPEC (Source, Unspecified)</td>\n          <td>:(equivalent)</td>\n          <td>123038009 (Specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>VASTIP (Catheter Tip, Vas)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>VENT (Catheter Tip, Ventricular)</td>\n          <td>:(equivalent)</td>\n          <td>119312009 (Catheter tip specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD in detail</td>\n        </tr>\n        <tr>\n          <td>VITF (Vitreous Fluid)</td>\n          <td>:(equivalent)</td>\n          <td>258438000 (Vitreous humor sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>VOM (Vomitus)</td>\n          <td>:(equivalent)</td>\n          <td>122572000 (Vomitus specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WASH (Wash)</td>\n          <td>:(equivalent)</td>\n          <td>440674008 (Wash out specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WASI (Washing, e.g. bronchial washing)</td>\n          <td>:(equivalent)</td>\n          <td>122609004 (Specimen from lung obtained by bronchial washing procedure)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WAT (Water)</td>\n          <td>:(equivalent)</td>\n          <td>119318008 (Water specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WB (Blood, Whole)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>Bloodbanking term ONLY now map to blood and the respective preservative</td>\n        </tr>\n        <tr>\n          <td>WEN (Wen)</td>\n          <td>:(equivalent)</td>\n          <td>309075001 (Skin cyst sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WICK (Wick)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>WND (Wound)</td>\n          <td>:(equivalent)</td>\n          <td>119365002 (Specimen from wound)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WNDA (Wound abscess)</td>\n          <td>:(equivalent)</td>\n          <td>119366001 (Specimen from wound abscess)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WNDD (Wound drainage)</td>\n          <td>:(equivalent)</td>\n          <td>122566000 (Fluid specimen from wound)</td>\n          <td>122462000 (Drainage)</td>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WNDE (Wound exudate)</td>\n          <td>:(equivalent)</td>\n          <td>122568004 (Exudate specimen from wound)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WORM (Worm)</td>\n          <td>:(equivalent)</td>\n          <td>258618008 (Helminth sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WRT (Wart)</td>\n          <td>:(equivalent)</td>\n          <td>309068002 (Skin lesion sample)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WWA (Environmental, Water)</td>\n          <td>:(equivalent)</td>\n          <td>119318008 (Water specimen)</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>WWO (Environmental, Water (Ocean))</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>WWT (Environmental, Water  (Tap))</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td>TBD</td>\n        </tr>\n        <tr>\n          <td>CSITE (Catheter Insertion Site)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td>386144009 (Line insertion site)</td>\n          <td>14766002 (Removal by suction)</td>\n          <td>119295008 (Specimen obtained by aspiration)</td>\n          <td>Prefer to have aspirate of the pus oozing out from cleaned insertion site - if swab is all that can be obtained, then swab after cleaning, otherwise you may get a contaminated specimen and a falsely identified infected central line. Do not just swab the reddened area - that will just collect skin flora</td>\n        </tr>\n        <tr>\n          <td>CLIPP (Clippings)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td/>\n          <td/>\n          <td>119326000 (Hair specimen)</td>\n          <td>Be more specific use either: 119326000^hair specimen, or 119327009^nail specimen</td>\n        </tr>\n        <tr>\n          <td>SHU (Site, Shunt)</td>\n          <td>:unmatched</td>\n          <td/>\n          <td>257351008 (Shunt)</td>\n          <td/>\n          <td>438660002 (Specimen from prosthetic device)</td>\n          <td>assume swab from shunt site for mapping here - clean surface of skin prior to expressing the shunt site - preferred is aspiration with sterile syringe should use SPM.8 to specify body approximate match location of shunt site</td>\n        </tr>\n      </table>\n    </div>"
-  },
   "url": "http://hl7.org/fhir/ConceptMap/102",
-  "version": "20130725",
+  "version": "4.0.0",
   "name": "Specimen mapping from v2 table 0487 to SNOMED CT",
   "status": "draft",
   "experimental": false,
@@ -30,22 +26,19 @@
       ]
     }
   ],
-  "sourceReference": {
-    "reference": "http://hl7.org/fhir/ValueSet/v2-0487"
-  },
-  "targetReference": {
-    "reference": "http://hl7.org/fhir/ValueSet/specimen-container-type"
-  },
+  "sourceCanonical": "http://terminology.hl7.org/ValueSet/v2-0487",
+  "targetCanonical": "http://snomed.info/id?fhir_vs",
   "group": [
     {
-      "source": "http://hl7.org/fhir/v2/0487",
+      "source": "http://terminology.hl7.org/CodeSystem/v2-0487",
       "target": "http://snomed.info/sct",
       "element": [
         {
           "code": "ACNE",
           "target": [
             {
-              "code": "309068002"
+              "code": "309068002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -54,12 +47,13 @@
           "target": [
             {
               "code": "119323008",
+              "equivalence": "equivalent",
               "comment": "HL7 term is a historical term. mapped to Pus",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "47002008"
+                  "value": "47002008"
                 }
               ]
             }
@@ -69,7 +63,8 @@
           "code": "AIRS",
           "target": [
             {
-              "code": "446302006"
+              "code": "446302006",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -78,11 +73,12 @@
           "target": [
             {
               "code": "119376003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "7970006"
+                  "value": "7970006"
                 }
               ]
             }
@@ -93,11 +89,12 @@
           "target": [
             {
               "code": "408654003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "81723002"
+                  "value": "81723002"
                 }
               ]
             }
@@ -108,6 +105,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -117,6 +115,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -135,11 +134,12 @@
           "target": [
             {
               "code": "119295008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "14766002"
+                  "value": "14766002"
                 }
               ]
             }
@@ -176,7 +176,8 @@
           "code": "BBL",
           "target": [
             {
-              "code": "119304001"
+              "code": "119304001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -190,7 +191,7 @@
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "32361000"
+                  "value": "32361000"
                 }
               ]
             }
@@ -210,11 +211,12 @@
           "target": [
             {
               "code": "309049000",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "339008"
+                  "value": "339008"
                 }
               ]
             }
@@ -225,11 +227,12 @@
           "target": [
             {
               "code": "309049000",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "339008"
+                  "value": "339008"
                 }
               ]
             }
@@ -240,16 +243,17 @@
           "target": [
             {
               "code": "119295008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "59843005"
+                  "value": "59843005"
                 },
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "14766002"
+                  "value": "14766002"
                 }
               ]
             }
@@ -259,7 +263,8 @@
           "code": "BON",
           "target": [
             {
-              "code": "430268003"
+              "code": "430268003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -276,7 +281,8 @@
           "code": "BPU",
           "target": [
             {
-              "code": "119300005"
+              "code": "119300005",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -284,7 +290,8 @@
           "code": "BRN",
           "target": [
             {
-              "code": "119367005"
+              "code": "119367005",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -293,11 +300,12 @@
           "target": [
             {
               "code": "258415003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "439336003"
+                  "value": "439336003"
                 }
               ]
             }
@@ -307,7 +315,8 @@
           "code": "BRTH",
           "target": [
             {
-              "code": "119336008"
+              "code": "119336008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -316,11 +325,12 @@
           "target": [
             {
               "code": "309176002",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "80657008"
+                  "value": "80657008"
                 }
               ]
             }
@@ -331,16 +341,17 @@
           "target": [
             {
               "code": "302795002",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "11585000"
+                  "value": "11585000"
                 },
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "14766002"
+                  "value": "14766002"
                 }
               ]
             }
@@ -351,11 +362,12 @@
           "target": [
             {
               "code": "258482009",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "339008"
+                  "value": "339008"
                 }
               ]
             }
@@ -366,11 +378,12 @@
           "target": [
             {
               "code": "258415003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "86273004"
+                  "value": "86273004"
                 }
               ]
             }
@@ -380,7 +393,8 @@
           "code": "CALC",
           "target": [
             {
-              "code": "119350003"
+              "code": "119350003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -389,11 +403,12 @@
           "target": [
             {
               "code": "309051001",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "41570003"
+                  "value": "41570003"
                 }
               ]
             }
@@ -403,7 +418,8 @@
           "code": "CAT",
           "target": [
             {
-              "code": "119311002"
+              "code": "119311002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -421,6 +437,7 @@
           "target": [
             {
               "code": "119327009",
+              "equivalence": "equivalent",
               "comment": "Be more specific use either: 119326000^hair specimen or 119327009^nail specimen"
             }
           ]
@@ -429,7 +446,8 @@
           "code": "CNJT",
           "target": [
             {
-              "code": "119401005"
+              "code": "119401005",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -437,7 +455,8 @@
           "code": "CNJT",
           "target": [
             {
-              "code": "128160006"
+              "code": "128160006",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -445,7 +464,8 @@
           "code": "CNJT",
           "target": [
             {
-              "code": "258498002"
+              "code": "258498002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -453,7 +473,8 @@
           "code": "COL",
           "target": [
             {
-              "code": "119329007"
+              "code": "119329007",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -462,16 +483,17 @@
           "target": [
             {
               "code": "399713008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "54535009"
+                  "value": "54535009"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "71252005"
+                  "value": "71252005"
                 }
               ]
             }
@@ -500,17 +522,18 @@
           "target": [
             {
               "code": "258507003",
+              "equivalence": "equivalent",
               "comment": "Prefer to have aspirate of the pus oozing out from cleaned insertion site - if swab is all that can be obtained, then swab after cleaning, otherwise you may get a contaminated specimen and a falsely identified infected central line. Do not just swab the reddened area - that will just collect skin flora       ",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "386144009"
+                  "value": "386144009"
                 },
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "285570007"
+                  "value": "285570007"
                 }
               ]
             }
@@ -520,7 +543,8 @@
           "code": "CSMY",
           "target": [
             {
-              "code": "309051001"
+              "code": "309051001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -528,7 +552,8 @@
           "code": "CST",
           "target": [
             {
-              "code": "258453008"
+              "code": "258453008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -546,6 +571,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -554,7 +580,8 @@
           "code": "CVPS",
           "target": [
             {
-              "code": "258507003"
+              "code": "258507003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -563,12 +590,13 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "445085009"
+                  "value": "445085009"
                 }
               ]
             }
@@ -579,11 +607,12 @@
           "target": [
             {
               "code": "119368000",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "27925004"
+                  "value": "27925004"
                 }
               ]
             }
@@ -593,7 +622,8 @@
           "code": "CYST",
           "target": [
             {
-              "code": "119368000"
+              "code": "119368000",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -610,7 +640,8 @@
           "code": "DCS",
           "target": [
             {
-              "code": "119335007"
+              "code": "119335007",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -618,7 +649,8 @@
           "code": "DEC",
           "target": [
             {
-              "code": "258505006"
+              "code": "258505006",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -635,7 +667,8 @@
           "code": "DIA",
           "target": [
             {
-              "code": "119360007"
+              "code": "119360007",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -643,7 +676,8 @@
           "code": "DISCHG",
           "target": [
             {
-              "code": "258439008"
+              "code": "258439008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -652,11 +686,12 @@
           "target": [
             {
               "code": "119376003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "31113003"
+                  "value": "31113003"
                 }
               ]
             }
@@ -666,7 +701,8 @@
           "code": "DRN",
           "target": [
             {
-              "code": "119306004"
+              "code": "119306004",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -675,12 +711,13 @@
           "target": [
             {
               "code": "258455001",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead: not an acceptable specimen for micro - not specific enough term",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 }
               ]
             }
@@ -691,12 +728,13 @@
           "target": [
             {
               "code": "309051001",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 }
               ]
             }
@@ -706,7 +744,8 @@
           "code": "EARW",
           "target": [
             {
-              "code": "122580007"
+              "code": "122580007",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -715,16 +754,17 @@
           "target": [
             {
               "code": "309210009",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "36213007"
+                  "value": "36213007"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "32849002"
+                  "value": "32849002"
                 }
               ]
             }
@@ -752,7 +792,8 @@
           "code": "EFFUS",
           "target": [
             {
-              "code": "258440005"
+              "code": "258440005",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -760,7 +801,8 @@
           "code": "EFOD",
           "target": [
             {
-              "code": "119320006"
+              "code": "119320006",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -768,7 +810,8 @@
           "code": "EISO",
           "target": [
             {
-              "code": "258536003"
+              "code": "258536003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -776,7 +819,8 @@
           "code": "ELT",
           "target": [
             {
-              "code": "119314005"
+              "code": "119314005",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -784,7 +828,8 @@
           "code": "ENVIR",
           "target": [
             {
-              "code": "119324002"
+              "code": "119324002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -820,16 +865,17 @@
           "target": [
             {
               "code": "119307008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "14766002"
+                  "value": "14766002"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "321667001"
+                  "value": "321667001"
                 }
               ]
             }
@@ -840,6 +886,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -849,16 +896,17 @@
           "target": [
             {
               "code": "119307008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "14766002"
+                  "value": "14766002"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "321667001"
+                  "value": "321667001"
                 }
               ]
             }
@@ -877,7 +925,8 @@
           "code": "EXG",
           "target": [
             {
-              "code": "119336008"
+              "code": "119336008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -894,7 +943,8 @@
           "code": "EXUDTE",
           "target": [
             {
-              "code": "258441009"
+              "code": "258441009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -912,11 +962,12 @@
           "target": [
             {
               "code": "119297000",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "303112003"
+                  "value": "303112003"
                 }
               ]
             }
@@ -927,11 +978,12 @@
           "target": [
             {
               "code": "168139001",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "83670000"
+                  "value": "83670000"
                 }
               ]
             }
@@ -941,7 +993,8 @@
           "code": "FIST",
           "target": [
             {
-              "code": "119370009"
+              "code": "119370009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -949,7 +1002,8 @@
           "code": "FLD",
           "target": [
             {
-              "code": "309051001"
+              "code": "309051001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -966,7 +1020,8 @@
           "code": "FLU",
           "target": [
             {
-              "code": "309051001"
+              "code": "309051001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -974,7 +1029,8 @@
           "code": "FLUID",
           "target": [
             {
-              "code": "258442002"
+              "code": "258442002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -983,6 +1039,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -992,12 +1049,13 @@
           "target": [
             {
               "code": "258442002",
+              "equivalence": "equivalent",
               "comment": "this term is not specific enough, choose from terms that more accurately describe the specimen",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "272626006"
+                  "value": "272626006"
                 }
               ]
             }
@@ -1008,11 +1066,12 @@
           "target": [
             {
               "code": "309502007",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "41695006"
+                  "value": "41695006"
                 }
               ]
             }
@@ -1023,12 +1082,13 @@
           "target": [
             {
               "code": "119295008",
-              "comment": "Further describe the sample as tissue or pus. or by the collection method. The term boil is not specifc to a body site - need to indicate source site (spm.8). preferred term is Aspirate_Boil",
+              "equivalence": "equivalent",
+              "comment": "Further describe the sample as tissue or pus. or by the collection method. The term boil is not specific to a body site - need to indicate source site (spm.8). preferred term is Aspirate_Boil",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "59843005"
+                  "value": "59843005"
                 }
               ]
             }
@@ -1038,7 +1098,8 @@
           "code": "GAS",
           "target": [
             {
-              "code": "119317003"
+              "code": "119317003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1047,16 +1108,17 @@
           "target": [
             {
               "code": "168137004",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "14766002"
+                  "value": "14766002"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "69695003"
+                  "value": "69695003"
                 }
               ]
             }
@@ -1067,11 +1129,12 @@
           "target": [
             {
               "code": "119379005",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "66051006"
+                  "value": "66051006"
                 }
               ]
             }
@@ -1082,16 +1145,17 @@
           "target": [
             {
               "code": "309213006",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "235157009"
+                  "value": "235157009"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "69695003"
+                  "value": "69695003"
                 }
               ]
             }
@@ -1102,17 +1166,18 @@
           "target": [
             {
               "code": "258459007",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "69695003"
+                  "value": "69695003"
                 }
               ]
             }
@@ -1122,7 +1187,8 @@
           "code": "GAST",
           "target": [
             {
-              "code": "258459007"
+              "code": "258459007",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1130,7 +1196,8 @@
           "code": "GENV",
           "target": [
             {
-              "code": "119394009"
+              "code": "119394009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1138,7 +1205,8 @@
           "code": "GRAFT",
           "target": [
             {
-              "code": "440493002"
+              "code": "440493002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1147,11 +1215,12 @@
           "target": [
             {
               "code": "119376003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "45647009"
+                  "value": "45647009"
                 }
               ]
             }
@@ -1162,6 +1231,7 @@
           "target": [
             {
               "code": "119311002",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -1180,16 +1250,17 @@
           "target": [
             {
               "code": "309211008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "79121003"
+                  "value": "79121003"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "69695003"
+                  "value": "69695003"
                 }
               ]
             }
@@ -1209,22 +1280,23 @@
           "target": [
             {
               "code": "258459007",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "127490009"
+                  "value": "127490009"
                 },
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "69695003"
+                  "value": "69695003"
                 }
               ]
             }
@@ -1244,11 +1316,12 @@
           "target": [
             {
               "code": "119297000",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "303113008"
+                  "value": "303113008"
                 }
               ]
             }
@@ -1259,6 +1332,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -1268,6 +1342,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -1276,7 +1351,8 @@
           "code": "HERNI",
           "target": [
             {
-              "code": "119376003"
+              "code": "119376003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1284,7 +1360,8 @@
           "code": "HEV",
           "target": [
             {
-              "code": "119306004"
+              "code": "119306004",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1293,12 +1370,13 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "445085009"
+                  "value": "445085009"
                 }
               ]
             }
@@ -1309,11 +1387,12 @@
           "target": [
             {
               "code": "309051001",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "55434001"
+                  "value": "55434001"
                 }
               ]
             }
@@ -1332,7 +1411,8 @@
           "code": "ICYST",
           "target": [
             {
-              "code": "309075001"
+              "code": "309075001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1341,6 +1421,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -1349,7 +1430,8 @@
           "code": "IHG",
           "target": [
             {
-              "code": "119337004"
+              "code": "119337004",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1358,12 +1440,13 @@
           "target": [
             {
               "code": "258455001",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead: stool is what is expected, should use stool sample",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "419954003"
+                  "value": "419954003"
                 }
               ]
             }
@@ -1382,7 +1465,8 @@
           "code": "IMP",
           "target": [
             {
-              "code": "439961009"
+              "code": "439961009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1390,7 +1474,8 @@
           "code": "INCI",
           "target": [
             {
-              "code": "438660002"
+              "code": "438660002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1407,7 +1492,8 @@
           "code": "INS",
           "target": [
             {
-              "code": "258614005"
+              "code": "258614005",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1416,6 +1502,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -1424,7 +1511,8 @@
           "code": "IT",
           "target": [
             {
-              "code": "119307008"
+              "code": "119307008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1442,12 +1530,13 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "255560000"
+                  "value": "255560000"
                 }
               ]
             }
@@ -1457,7 +1546,8 @@
           "code": "IVFLD",
           "target": [
             {
-              "code": "258649003"
+              "code": "258649003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1465,7 +1555,8 @@
           "code": "IVTIP",
           "target": [
             {
-              "code": "119312009"
+              "code": "119312009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1474,17 +1565,18 @@
           "target": [
             {
               "code": "258463000",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead: stool is what is expected, should use stool sample",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "21306003"
+                  "value": "21306003"
                 }
               ]
             }
@@ -1494,7 +1586,8 @@
           "code": "JNTFLD",
           "target": [
             {
-              "code": "119332005"
+              "code": "119332005",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1503,12 +1596,13 @@
           "target": [
             {
               "code": "309051001",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 }
               ]
             }
@@ -1519,11 +1613,12 @@
           "target": [
             {
               "code": "440674008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "67889009"
+                  "value": "67889009"
                 }
               ]
             }
@@ -1534,11 +1629,12 @@
           "target": [
             {
               "code": "309051001",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "64033007"
+                  "value": "64033007"
                 }
               ]
             }
@@ -1549,11 +1645,12 @@
           "target": [
             {
               "code": "258607008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "397394009"
+                  "value": "397394009"
                 }
               ]
             }
@@ -1564,16 +1661,17 @@
           "target": [
             {
               "code": "168138009",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "173830003"
+                  "value": "173830003"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "69695003"
+                  "value": "69695003"
                 }
               ]
             }
@@ -1583,7 +1681,8 @@
           "code": "LAVGP",
           "target": [
             {
-              "code": "440137008"
+              "code": "440137008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1592,16 +1691,17 @@
           "target": [
             {
               "code": "440674008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "67889009"
+                  "value": "67889009"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "44567001"
+                  "value": "44567001"
                 }
               ]
             }
@@ -1611,7 +1711,8 @@
           "code": "LENS1",
           "target": [
             {
-              "code": "440473005"
+              "code": "440473005",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1629,6 +1730,7 @@
           "target": [
             {
               "code": "309049000",
+              "equivalence": "equivalent",
               "comment": "should be more specific what kind of lesion is observed - be more specific is it a wound, abscess, mass - specify! Ask SNOMED CT to mark it as a grouper term only (309049000)"
             }
           ]
@@ -1637,7 +1739,8 @@
           "code": "LIQ",
           "target": [
             {
-              "code": "258442002"
+              "code": "258442002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1655,12 +1758,13 @@
           "target": [
             {
               "code": "258450006",
+              "equivalence": "equivalent",
               "comment": "The HL7 term is a historical term Mapped to CSF obtained by lumbar puncture",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "303949008"
+                  "value": "303949008"
                 }
               ]
             }
@@ -1671,6 +1775,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -1680,11 +1785,12 @@
           "target": [
             {
               "code": "420548004",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "4147007"
+                  "value": "4147007"
                 }
               ]
             }
@@ -1694,7 +1800,8 @@
           "code": "MBLD",
           "target": [
             {
-              "code": "119345009"
+              "code": "119345009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1703,11 +1810,12 @@
           "target": [
             {
               "code": "119376003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "414781009"
+                  "value": "414781009"
                 }
               ]
             }
@@ -1717,7 +1825,8 @@
           "code": "MUCUS",
           "target": [
             {
-              "code": "258483004"
+              "code": "258483004",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1726,17 +1835,18 @@
           "target": [
             {
               "code": "258474009",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "2095001"
+                  "value": "2095001"
                 }
               ]
             }
@@ -1755,7 +1865,8 @@
           "code": "NEPH",
           "target": [
             {
-              "code": "438660002"
+              "code": "438660002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1764,16 +1875,17 @@
           "target": [
             {
               "code": "302794003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "6853008"
+                  "value": "6853008"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "69695003"
+                  "value": "69695003"
                 }
               ]
             }
@@ -1784,22 +1896,23 @@
           "target": [
             {
               "code": "258459007",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "127492001"
+                  "value": "127492001"
                 },
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "69695003"
+                  "value": "69695003"
                 }
               ]
             }
@@ -1809,7 +1922,8 @@
           "code": "NGS",
           "target": [
             {
-              "code": "438660002"
+              "code": "438660002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1826,7 +1940,8 @@
           "code": "NSECR",
           "target": [
             {
-              "code": "168141000"
+              "code": "168141000",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1834,7 +1949,8 @@
           "code": "ORH",
           "target": [
             {
-              "code": "123038009"
+              "code": "123038009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1848,7 +1964,7 @@
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "74262004"
+                  "value": "74262004"
                 }
               ]
             }
@@ -1858,7 +1974,8 @@
           "code": "OTH",
           "target": [
             {
-              "code": "123038009"
+              "code": "123038009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1875,7 +1992,8 @@
           "code": "PCFL",
           "target": [
             {
-              "code": "122571007"
+              "code": "122571007",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1883,7 +2001,8 @@
           "code": "PDSIT",
           "target": [
             {
-              "code": "438660002"
+              "code": "438660002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1901,11 +2020,12 @@
           "target": [
             {
               "code": "119371008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "12921003"
+                  "value": "12921003"
                 }
               ]
             }
@@ -1921,7 +2041,7 @@
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "18911002"
+                  "value": "18911002"
                 }
               ]
             }
@@ -1932,11 +2052,12 @@
           "target": [
             {
               "code": "119371008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "397158004"
+                  "value": "397158004"
                 }
               ]
             }
@@ -1946,7 +2067,8 @@
           "code": "PILOC",
           "target": [
             {
-              "code": "119368000"
+              "code": "119368000",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1954,7 +2076,8 @@
           "code": "PINS",
           "target": [
             {
-              "code": "438660002"
+              "code": "438660002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1962,7 +2085,8 @@
           "code": "PIS",
           "target": [
             {
-              "code": "258507003"
+              "code": "258507003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1970,7 +2094,8 @@
           "code": "PLAN",
           "target": [
             {
-              "code": "119301009"
+              "code": "119301009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1978,7 +2103,8 @@
           "code": "PLAS",
           "target": [
             {
-              "code": "119361006"
+              "code": "119361006",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1986,7 +2112,8 @@
           "code": "PLB",
           "target": [
             {
-              "code": "119305000"
+              "code": "119305000",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1995,11 +2122,12 @@
           "target": [
             {
               "code": "119364003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "255587001"
+                  "value": "255587001"
                 }
               ]
             }
@@ -2010,17 +2138,18 @@
           "target": [
             {
               "code": "258439008",
+              "equivalence": "equivalent",
               "comment": "Historical term -though in this case more often used for discharge",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "13648007"
+                  "value": "13648007"
                 }
               ]
             }
@@ -2031,11 +2160,12 @@
           "target": [
             {
               "code": "119376003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "41329004"
+                  "value": "41329004"
                 }
               ]
             }
@@ -2046,11 +2176,12 @@
           "target": [
             {
               "code": "440493002",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "6902008"
+                  "value": "6902008"
                 }
               ]
             }
@@ -2061,11 +2192,12 @@
           "target": [
             {
               "code": "440493002",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "6902008"
+                  "value": "6902008"
                 }
               ]
             }
@@ -2085,6 +2217,7 @@
           "target": [
             {
               "code": "119311002",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -2093,7 +2226,8 @@
           "code": "PPP",
           "target": [
             {
-              "code": "119362004"
+              "code": "119362004",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2101,7 +2235,8 @@
           "code": "PROST",
           "target": [
             {
-              "code": "438660002"
+              "code": "438660002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2109,7 +2244,8 @@
           "code": "PRP",
           "target": [
             {
-              "code": "119363009"
+              "code": "119363009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2117,7 +2253,8 @@
           "code": "PSC",
           "target": [
             {
-              "code": "119368000"
+              "code": "119368000",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2126,11 +2263,12 @@
           "target": [
             {
               "code": "119365002",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "129300006"
+                  "value": "129300006"
                 }
               ]
             }
@@ -2140,7 +2278,8 @@
           "code": "PUS",
           "target": [
             {
-              "code": "119323008"
+              "code": "119323008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2149,11 +2288,12 @@
           "target": [
             {
               "code": "119323008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "47002008"
+                  "value": "47002008"
                 }
               ]
             }
@@ -2164,11 +2304,12 @@
           "target": [
             {
               "code": "119323008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "47002008"
+                  "value": "47002008"
                 }
               ]
             }
@@ -2187,7 +2328,8 @@
           "code": "RANDU",
           "target": [
             {
-              "code": "278020009"
+              "code": "278020009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2205,17 +2347,18 @@
           "target": [
             {
               "code": "119339001",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead: stool is what is expected, should use stool sample",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "34402009"
+                  "value": "34402009"
                 }
               ]
             }
@@ -2226,11 +2369,12 @@
           "target": [
             {
               "code": "119371008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "34402009"
+                  "value": "34402009"
                 }
               ]
             }
@@ -2241,11 +2385,12 @@
           "target": [
             {
               "code": "258420003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "64033007"
+                  "value": "64033007"
                 }
               ]
             }
@@ -2256,11 +2401,12 @@
           "target": [
             {
               "code": "258453008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "64033007"
+                  "value": "64033007"
                 }
               ]
             }
@@ -2270,7 +2416,8 @@
           "code": "RES",
           "target": [
             {
-              "code": "258603007"
+              "code": "258603007",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2278,7 +2425,8 @@
           "code": "SAL",
           "target": [
             {
-              "code": "119342007"
+              "code": "119342007",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2286,7 +2434,8 @@
           "code": "SCAR",
           "target": [
             {
-              "code": "119376003"
+              "code": "119376003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2295,12 +2444,13 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "9454009"
+                  "value": "9454009"
                 }
               ]
             }
@@ -2311,11 +2461,12 @@
           "target": [
             {
               "code": "119371008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "20233005"
+                  "value": "20233005"
                 }
               ]
             }
@@ -2325,7 +2476,8 @@
           "code": "SECRE",
           "target": [
             {
-              "code": "432825001"
+              "code": "432825001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2333,7 +2485,8 @@
           "code": "SER",
           "target": [
             {
-              "code": "119364003"
+              "code": "119364003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2342,17 +2495,18 @@
           "target": [
             {
               "code": "119295008",
+              "equivalence": "equivalent",
               "comment": "Preferred is aspiration with sterile syringe from inflamed area. Specify body location of shunt site",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "257351008"
+                  "value": "257351008"
                 },
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "14766002"
+                  "value": "14766002"
                 }
               ]
             }
@@ -2363,16 +2517,17 @@
           "target": [
             {
               "code": "446861007",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "446860008"
+                  "value": "446860008"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "279107003"
+                  "value": "279107003"
                 }
               ]
             }
@@ -2401,11 +2556,12 @@
           "target": [
             {
               "code": "309066003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "240977001"
+                  "value": "240977001"
                 }
               ]
             }
@@ -2415,7 +2571,8 @@
           "code": "SKN",
           "target": [
             {
-              "code": "119325001"
+              "code": "119325001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2424,11 +2581,12 @@
           "target": [
             {
               "code": "420548004",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "4147007"
+                  "value": "4147007"
                 }
               ]
             }
@@ -2438,7 +2596,8 @@
           "code": "SNV",
           "target": [
             {
-              "code": "119332005"
+              "code": "119332005",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2446,7 +2605,8 @@
           "code": "SPRM",
           "target": [
             {
-              "code": "119349003"
+              "code": "119349003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2455,6 +2615,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -2464,6 +2625,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -2481,7 +2643,8 @@
           "code": "SPT",
           "target": [
             {
-              "code": "119334006"
+              "code": "119334006",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2489,7 +2652,8 @@
           "code": "SPTC",
           "target": [
             {
-              "code": "119335007"
+              "code": "119335007",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2497,7 +2661,8 @@
           "code": "SPTT",
           "target": [
             {
-              "code": "258609006"
+              "code": "258609006",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2514,7 +2679,8 @@
           "code": "SPUTIN",
           "target": [
             {
-              "code": "258610001"
+              "code": "258610001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2522,7 +2688,8 @@
           "code": "SPUTSP",
           "target": [
             {
-              "code": "119335007"
+              "code": "119335007",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2539,7 +2706,8 @@
           "code": "STL",
           "target": [
             {
-              "code": "119339001"
+              "code": "119339001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2548,11 +2716,12 @@
           "target": [
             {
               "code": "119350003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "64033007"
+                  "value": "64033007"
                 }
               ]
             }
@@ -2563,11 +2732,12 @@
           "target": [
             {
               "code": "119371008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "5713008"
+                  "value": "5713008"
                 }
               ]
             }
@@ -2578,11 +2748,12 @@
           "target": [
             {
               "code": "119371008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "4335006"
+                  "value": "4335006"
                 }
               ]
             }
@@ -2593,12 +2764,13 @@
           "target": [
             {
               "code": "446562005",
+              "equivalence": "equivalent",
               "comment": "Historical term - consider what is being drained and indicate that in SPM-4 instead",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 }
               ]
             }
@@ -2609,11 +2781,12 @@
           "target": [
             {
               "code": "122575003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "58088002"
+                  "value": "58088002"
                 }
               ]
             }
@@ -2633,6 +2806,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -2642,16 +2816,17 @@
           "target": [
             {
               "code": "122877000",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "129112001"
+                  "value": "129112001"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "44567001"
+                  "value": "44567001"
                 }
               ]
             }
@@ -2661,7 +2836,8 @@
           "code": "TISS",
           "target": [
             {
-              "code": "119376003"
+              "code": "119376003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2669,7 +2845,8 @@
           "code": "TISU",
           "target": [
             {
-              "code": "122593002"
+              "code": "122593002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2678,6 +2855,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -2686,7 +2864,8 @@
           "code": "TRAC",
           "target": [
             {
-              "code": "438660002"
+              "code": "438660002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2694,7 +2873,8 @@
           "code": "TRANS",
           "target": [
             {
-              "code": "258538002"
+              "code": "258538002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2703,11 +2883,12 @@
           "target": [
             {
               "code": "119364003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "255588006"
+                  "value": "255588006"
                 }
               ]
             }
@@ -2718,11 +2899,12 @@
           "target": [
             {
               "code": "119371008",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "279572002"
+                  "value": "279572002"
                 }
               ]
             }
@@ -2733,11 +2915,12 @@
           "target": [
             {
               "code": "258480001",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "129112001"
+                  "value": "129112001"
                 }
               ]
             }
@@ -2747,7 +2930,8 @@
           "code": "TUBES",
           "target": [
             {
-              "code": "119310001"
+              "code": "119310001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2755,7 +2939,8 @@
           "code": "TUMOR",
           "target": [
             {
-              "code": "258435002"
+              "code": "258435002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2772,7 +2957,8 @@
           "code": "UDENT",
           "target": [
             {
-              "code": "123038009"
+              "code": "123038009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2780,7 +2966,8 @@
           "code": "UR",
           "target": [
             {
-              "code": "122575003"
+              "code": "122575003",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2788,7 +2975,8 @@
           "code": "URC",
           "target": [
             {
-              "code": "122880004"
+              "code": "122880004",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2797,11 +2985,12 @@
           "target": [
             {
               "code": "122575003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "78533007"
+                  "value": "78533007"
                 }
               ]
             }
@@ -2811,7 +3000,8 @@
           "code": "URINC",
           "target": [
             {
-              "code": "446846006"
+              "code": "446846006",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2820,16 +3010,17 @@
           "target": [
             {
               "code": "258574006",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "225271002"
+                  "value": "225271002"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "431938005"
+                  "value": "431938005"
                 }
               ]
             }
@@ -2840,16 +3031,17 @@
           "target": [
             {
               "code": "446277003",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "225109005"
+                  "value": "225109005"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "25990002"
+                  "value": "25990002"
                 }
               ]
             }
@@ -2868,7 +3060,8 @@
           "code": "URT",
           "target": [
             {
-              "code": "122565001"
+              "code": "122565001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2882,12 +3075,12 @@
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "176178006"
+                  "value": "176178006"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "89837001"
+                  "value": "89837001"
                 }
               ]
             }
@@ -2897,7 +3090,8 @@
           "code": "USPEC",
           "target": [
             {
-              "code": "123038009"
+              "code": "123038009",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2906,6 +3100,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -2915,6 +3110,7 @@
           "target": [
             {
               "code": "119312009",
+              "equivalence": "equivalent",
               "comment": "TBD in detail"
             }
           ]
@@ -2923,7 +3119,8 @@
           "code": "VITF",
           "target": [
             {
-              "code": "258438000"
+              "code": "258438000",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2931,7 +3128,8 @@
           "code": "VOM",
           "target": [
             {
-              "code": "122572000"
+              "code": "122572000",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2939,7 +3137,8 @@
           "code": "WASH",
           "target": [
             {
-              "code": "440674008"
+              "code": "440674008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2947,7 +3146,8 @@
           "code": "WASI",
           "target": [
             {
-              "code": "122609004"
+              "code": "122609004",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2955,7 +3155,8 @@
           "code": "WAT",
           "target": [
             {
-              "code": "119318008"
+              "code": "119318008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2972,7 +3173,8 @@
           "code": "WEN",
           "target": [
             {
-              "code": "309075001"
+              "code": "309075001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2989,7 +3191,8 @@
           "code": "WND",
           "target": [
             {
-              "code": "119365002"
+              "code": "119365002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -2997,7 +3200,8 @@
           "code": "WNDA",
           "target": [
             {
-              "code": "119366001"
+              "code": "119366001",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -3006,11 +3210,12 @@
           "target": [
             {
               "code": "122566000",
+              "equivalence": "equivalent",
               "product": [
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "122462000"
+                  "value": "122462000"
                 }
               ]
             }
@@ -3020,7 +3225,8 @@
           "code": "WNDE",
           "target": [
             {
-              "code": "122568004"
+              "code": "122568004",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -3028,7 +3234,8 @@
           "code": "WORM",
           "target": [
             {
-              "code": "258618008"
+              "code": "258618008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -3036,7 +3243,8 @@
           "code": "WRT",
           "target": [
             {
-              "code": "309068002"
+              "code": "309068002",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -3044,7 +3252,8 @@
           "code": "WWA",
           "target": [
             {
-              "code": "119318008"
+              "code": "119318008",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -3076,17 +3285,17 @@
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "119295008"
+                  "value": "119295008"
                 },
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "386144009"
+                  "value": "386144009"
                 },
                 {
                   "property": "http://snomed.info/id/3006873018",
                   "system": "http://snomed.info/sct",
-                  "code": "14766002"
+                  "value": "14766002"
                 }
               ]
             }
@@ -3102,7 +3311,7 @@
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "119326000"
+                  "value": "119326000"
                 }
               ]
             }
@@ -3118,12 +3327,12 @@
                 {
                   "property": "TypeModifier",
                   "system": "http://snomed.info/sct",
-                  "code": "438660002"
+                  "value": "438660002"
                 },
                 {
                   "property": "http://snomed.info/id/246380002",
                   "system": "http://snomed.info/sct",
-                  "code": "257351008"
+                  "value": "257351008"
                 }
               ]
             }

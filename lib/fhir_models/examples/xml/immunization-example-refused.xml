@@ -1,7 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><Immunization xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Immunization xmlns="http://hl7.org/fhir">
 	<id value="notGiven"/>
-	<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: notGiven</p><p><b>status</b>: completed</p><p><b>notGiven</b>: true</p><p><b>vaccineCode</b>: DTP <span>(Details : {http://hl7.org/fhir/sid/cvx code &#39;01&#39; = &#39;DTP&#39;, given as &#39;DTP&#39;})</span></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>date</b>: Jan 10, 2013</p><p><b>primarySource</b>: true</p><h3>Explanations</h3><table><tr><td>-</td><td><b>ReasonNotGiven</b></td></tr><tr><td>*</td><td>medical precaution <span>(Details : {http://hl7.org/fhir/v3/ActReason code &#39;MEDPREC&#39; = &#39;medical precaution&#39;, given as &#39;medical precaution&#39;})</span></td></tr></table></div></text><status value="completed"/>
-	<notGiven value="true"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <status value="not-done"/>
+	<statusReason>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+			<code value="MEDPREC"/>
+			<display value="medical precaution"/>
+		</coding>
+	</statusReason>
 	<vaccineCode>
 		<coding>
 			<system value="http://hl7.org/fhir/sid/cvx"/>
@@ -12,15 +26,6 @@
 	<patient>
 		<reference value="Patient/example"/>
 	</patient>
-	<date value="2013-01-10"/>
+	<occurrenceDateTime value="2013-01-10"/>
 	<primarySource value="true"/>
-	<explanation>
-		<reasonNotGiven>
-			<coding>
-				<system value="http://hl7.org/fhir/v3/ActReason"/>
-				<code value="MEDPREC"/>
-				<display value="medical precaution"/>
-			</coding>
-		</reasonNotGiven>
-	</explanation>
 </Immunization>

@@ -1,5 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><Bundle xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
   <id value="3ad0687e-f477-468c-afd5-fcc2bf897819"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
   <type value="collection"/>
   <entry>
     <fullUrl value="http://hl7.org/fhir/Location/2"/>

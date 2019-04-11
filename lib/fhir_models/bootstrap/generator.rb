@@ -45,7 +45,7 @@ module FHIR
 
           # try to find a regex
           if type['extension']
-            ext = type['extension'].find { |e| e['url'] == 'http://hl7.org/fhir/StructureDefinition/structuredefinition-regex' }
+            ext = type['extension'].find { |e| e['url'] == 'http://hl7.org/fhir/StructureDefinition/regex' }
             field.regex = ext['valueString'] if ext
           end
 
@@ -175,6 +175,7 @@ module FHIR
 
             # generate a field for each valid datatype... this is for things like Resource.attribute[x]
             element['type'].map { |t| t['code'] }.uniq.each do |data_type|
+              data_type = 'string' unless data_type
               capitalized = cap_first(data_type)
               fieldname = field_base_name.gsub('[x]', capitalized)
               field = FHIR::Field.new(fieldname)
@@ -189,18 +190,17 @@ module FHIR
 
               if %w[code Coding CodeableConcept].include?(data_type) && element['binding']
                 field.binding = element['binding']
-                field.binding['uri'] = field.binding['valueSetUri']
-                field.binding['uri'] = field.binding['valueSetReference'] if field.binding['uri'].nil?
-                field.binding['uri'] = field.binding['uri']['reference'] if field.binding['uri'].is_a?(Hash)
-                field.binding.delete('valueSetUri')
-                field.binding.delete('valueSetReference')
+                field.binding['uri'] = field.binding['valueSet']
+                field.binding.delete('valueSet')
                 field.binding.delete('description')
                 field.binding.delete('extension')
                 # set the actual code list
-                codes = @defn.get_codes(field.binding['uri'])
+                binding_uri = field.binding['uri']
+                binding_uri = binding_uri[0..-7] if binding_uri&.end_with?('|4.0.0')
+                codes = @defn.get_codes(binding_uri)
                 field.valid_codes = codes unless codes.nil?
-                if field.valid_codes.empty? && field.binding['uri'] && !field.binding['uri'].end_with?('bcp47') && !field.binding['uri'].end_with?('bcp13.txt')
-                  FHIR.logger.warn "  MISSING EXPANSION -- #{field.path} #{field.min}..#{field.max}: #{field.binding['uri']} (#{field.binding['strength']})"
+                if field.valid_codes.empty? && field.binding['uri'] && !binding_uri.end_with?('bcp47') && !binding_uri.end_with?('bcp13.txt')
+                  FHIR.logger.warn "  MISSING EXPANSION -- #{field.path} #{field.min}..#{field.max}: #{binding_uri} (#{field.binding['strength']})"
                   @missing_expansions = true
                   @missing_required_expansion = (field.binding['strength'] == 'required') unless @missing_required_expansion
                 end

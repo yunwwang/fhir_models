@@ -4,11 +4,11 @@ module FHIR
     include FHIR::Json
     include FHIR::Xml
 
-    SEARCH_PARAMS = 
+    SEARCH_PARAMS = []
     METADATA = {
       'id' => {'type'=>'string', 'path'=>'Contributor.id', 'min'=>0, 'max'=>1},
       'extension' => {'type'=>'Extension', 'path'=>'Contributor.extension', 'min'=>0, 'max'=>Float::INFINITY},
-      'type' => {'valid_codes'=>{'http://hl7.org/fhir/contributor-type'=>['author', 'editor', 'reviewer', 'endorser']}, 'type'=>'code', 'path'=>'Contributor.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/contributor-type'}},
+      'type' => {'valid_codes'=>{'http://hl7.org/fhir/contributor-type'=>['author', 'editor', 'reviewer', 'endorser']}, 'type'=>'code', 'path'=>'Contributor.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/contributor-type|4.0.0'}},
       'name' => {'type'=>'string', 'path'=>'Contributor.name', 'min'=>1, 'max'=>1},
       'contact' => {'type'=>'ContactDetail', 'path'=>'Contributor.contact', 'min'=>0, 'max'=>Float::INFINITY}
     }

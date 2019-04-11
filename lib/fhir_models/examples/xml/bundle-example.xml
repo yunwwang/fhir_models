@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><Bundle xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
   <id value="bundle-example"/>
   <!--   this example bundle is a search set   -->
   <meta>
     <lastUpdated value="2014-08-18T01:43:30Z"/>
     <!--   when the search was executed   --> 
+  
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
   </meta> 
   <type value="searchset"/>  
 
@@ -16,7 +23,7 @@
     asked the server to, if it cares   -->
   <link>
     <relation value="self"/>
-    <url value="https://example.com/base/MedicationRequest?patient=347&amp;_include=MedicationRequest.medication"/>
+    <url value="https://example.com/base/MedicationRequest?patient=347&amp;_include=MedicationRequest.medication&amp;_count=2"/>
   </link>
   <!--   now, the link to the next set of results. The actual URL is entirely at the 
   discretion of the server, and is opaque to the client. Many servers will insert 
@@ -36,9 +43,9 @@
       <MedicationRequest>
         <id value="3123"/>
         <!--   snip   -->
-        <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 3123</p><p><b>intent</b>: order</p><p><b>medication</b>: <a>Medication/example</a></p><p><b>subject</b>: <a>Patient/347</a></p></div></text><intent value="order">
-        </intent>
-	<medicationReference>
+        <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 3123</p><p><b>status</b>: unknown</p><p><b>intent</b>: order</p><p><b>medication</b>: <a>Medication/example</a></p><p><b>subject</b>: <a>Patient/347</a></p></div></text><status value="unknown"/>
+        <intent value="order"/>
+	      <medicationReference>
           <reference value="Medication/example"/>
         </medicationReference>
         <subject>

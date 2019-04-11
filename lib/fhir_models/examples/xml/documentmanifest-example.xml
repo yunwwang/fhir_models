@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><DocumentManifest xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentManifest xmlns="http://hl7.org/fhir">
 	<id value="example"/>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">Text</div>
-	</text>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 	<!--  Many XDS systems do not track any id for the author. When systems don't do this, 
     the only option is for the author information to be contained in the Document Reference  -->
 	<contained>
@@ -44,9 +49,9 @@
 	<source value="urn:oid:1.3.6.1.4.1.21367.2009.1.2.1"/>
 	<description value="Physical"/>
 	<content>
-		<pReference>
+
 			<reference value="DocumentReference/example"/>
-		</pReference>
+
 	</content>
 	<related>
 		<identifier>

@@ -1,9 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><SupplyDelivery xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<SupplyDelivery xmlns="http://hl7.org/fhir">
 	<id value="simpledelivery"/>
 	<!--  
 business identifier - in this case the same as the request id
   -->
-	<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: simpledelivery</p><p><b>identifier</b>: Order10284</p><p><b>basedOn</b>: <a>SupplyRequest/simpleorder</a></p><p><b>partOf</b>: Central Supply Restock</p><p><b>status</b>: completed</p><p><b>type</b>: Blood collect tubes blue cap <span>(Details : {http://hl7.org/fhir/supply-item-type code &#39;device&#39; = &#39;Device)</span></p><h3>SuppliedItems</h3><table><tr><td>-</td><td><b>Quantity</b></td><td><b>Item[x]</b></td></tr><tr><td>*</td><td>10</td><td>Blood collect tubes blue cap <span>(Details : {[not stated] code &#39;BlueTubes&#39; = &#39;BlueTubes&#39;, given as &#39;Blood collect tubes blue cap&#39;})</span></td></tr></table><p><b>occurrence</b>: Dec 31, 2016</p><p><b>supplier</b>: Vendor1</p><p><b>destination</b>: Location 1</p></div></text><identifier>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <identifier>
 		<value value="Order10284"/>
 	</identifier>
 	<basedOn>
@@ -15,7 +23,7 @@ business identifier - in this case the same as the request id
 	<status value="completed"/>
 	<type>
 		<coding>
-			<system value="http://hl7.org/fhir/supply-item-type"/>
+			<system value="http://terminology.hl7.org/CodeSystem/supply-item-type"/>
 			<code value="device"/>
 		</coding>
 		<text value="Blood collect tubes blue cap"/>

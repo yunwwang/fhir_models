@@ -1,21 +1,7 @@
 {
   "resourceType": "Claim",
   "id": "660152",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Vision Claim for Glasses</div>"
-  },
   "contained": [
-    {
-      "resourceType": "ClaimResponse",
-      "id": "claimresponse-1",
-      "identifier": [
-        {
-          "system": "http://thebenefircompany.com/claimresponse",
-          "value": "CR6532875367"
-        }
-      ]
-    },
     {
       "resourceType": "Device",
       "id": "device-frame"
@@ -35,12 +21,12 @@
   "type": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/ex-claimtype",
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
         "code": "vision"
       }
     ]
   },
-  "use": "complete",
+  "use": "claim",
   "patient": {
     "reference": "Patient/1"
   },
@@ -48,7 +34,7 @@
   "insurer": {
     "reference": "Organization/2"
   },
-  "organization": {
+  "provider": {
     "reference": "Organization/1"
   },
   "priority": {
@@ -101,7 +87,7 @@
         "PR7652387237"
       ],
       "claimResponse": {
-        "reference": "#claimresponse-1"
+        "reference": "ClaimResponse/R3500"
       }
     },
     {
@@ -118,13 +104,13 @@
   "item": [
     {
       "sequence": 1,
-      "careTeamLinkId": [
+      "careTeamSequence": [
         1
       ],
       "revenue": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/ex-revenue-center",
+            "system": "http://terminology.hl7.org/CodeSystem/ex-revenue-center",
             "code": "0010",
             "display": "Vision Clinic"
           }
@@ -133,16 +119,16 @@
       "category": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/benefit-subcategory",
+            "system": "http://example.org/fhir/CodeSystem/benefit-subcategory",
             "code": "F6",
             "display": "Vision Coverage"
           }
         ]
       },
-      "service": {
+      "productOrService": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/ex-visionservice",
+            "system": "http://example.org/fhir/CodeSystem/ex-visionservice",
             "code": "glasses"
           }
         ]
@@ -151,7 +137,7 @@
         {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/modifiers",
+              "system": "http://terminology.hl7.org/CodeSystem/modifiers",
               "code": "rooh"
             }
           ]
@@ -161,7 +147,7 @@
         {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/ex-programcode",
+              "system": "http://terminology.hl7.org/CodeSystem/ex-programcode",
               "code": "none"
             }
           ]
@@ -169,14 +155,12 @@
       ],
       "servicedDate": "2014-08-16",
       "unitPrice": {
-        "value": 235.40,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 235.4,
+        "currency": "USD"
       },
       "net": {
-        "value": 235.40,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
+        "value": 235.4,
+        "currency": "USD"
       },
       "detail": [
         {
@@ -184,7 +168,7 @@
           "revenue": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/ex-revenue-center",
+                "system": "http://terminology.hl7.org/CodeSystem/ex-revenue-center",
                 "code": "0010",
                 "display": "Vision Clinic"
               }
@@ -193,16 +177,16 @@
           "category": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/benefit-subcategory",
+                "system": "http://example.org/fhir/CodeSystem/benefit-subcategory",
                 "code": "F6",
                 "display": "Vision Coverage"
               }
             ]
           },
-          "service": {
+          "productOrService": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/ex-visionservice",
+                "system": "http://example.org/fhir/CodeSystem/ex-visionservice",
                 "code": "frame"
               }
             ]
@@ -211,22 +195,20 @@
             {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/modifiers",
+                  "system": "http://terminology.hl7.org/CodeSystem/modifiers",
                   "code": "rooh"
                 }
               ]
             }
           ],
           "unitPrice": {
-            "value": 100.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 100.0,
+            "currency": "USD"
           },
           "factor": 1.1,
           "net": {
-            "value": 110.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 110.0,
+            "currency": "USD"
           },
           "udi": [
             {
@@ -239,7 +221,7 @@
           "revenue": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/ex-revenue-center",
+                "system": "http://terminology.hl7.org/CodeSystem/ex-revenue-center",
                 "code": "0010",
                 "display": "Vision Clinic"
               }
@@ -248,16 +230,16 @@
           "category": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/benefit-subcategory",
+                "system": "http://example.org/fhir/CodeSystem/benefit-subcategory",
                 "code": "F6",
                 "display": "Vision Coverage"
               }
             ]
           },
-          "service": {
+          "productOrService": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/ex-visionservice",
+                "system": "http://example.org/fhir/CodeSystem/ex-visionservice",
                 "code": "lens"
               }
             ]
@@ -266,7 +248,7 @@
             {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/ex-programcode",
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-programcode",
                   "code": "none"
                 }
               ]
@@ -276,14 +258,12 @@
             "value": 2
           },
           "unitPrice": {
-            "value": 55.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 55.0,
+            "currency": "USD"
           },
           "net": {
-            "value": 110.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 110.0,
+            "currency": "USD"
           },
           "subDetail": [
             {
@@ -291,7 +271,7 @@
               "revenue": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/ex-revenue-center",
+                    "system": "http://terminology.hl7.org/CodeSystem/ex-revenue-center",
                     "code": "0010",
                     "display": "Vision Clinic"
                   }
@@ -300,16 +280,16 @@
               "category": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/benefit-subcategory",
+                    "system": "http://example.org/fhir/CodeSystem/benefit-subcategory",
                     "code": "F6",
                     "display": "Vision Coverage"
                   }
                 ]
               },
-              "service": {
+              "productOrService": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/ex-visionservice",
+                    "system": "http://example.org/fhir/CodeSystem/ex-visionservice",
                     "code": "lens"
                   }
                 ]
@@ -318,7 +298,7 @@
                 {
                   "coding": [
                     {
-                      "system": "http://hl7.org/fhir/modifiers",
+                      "system": "http://terminology.hl7.org/CodeSystem/modifiers",
                       "code": "rooh"
                     }
                   ]
@@ -328,7 +308,7 @@
                 {
                   "coding": [
                     {
-                      "system": "http://hl7.org/fhir/ex-programcode",
+                      "system": "http://terminology.hl7.org/CodeSystem/ex-programcode",
                       "code": "none"
                     }
                   ]
@@ -338,15 +318,13 @@
                 "value": 2
               },
               "unitPrice": {
-                "value": 30.00,
-                "system": "urn:iso:std:iso:4217",
-                "code": "USD"
+                "value": 30.0,
+                "currency": "USD"
               },
               "factor": 1.1,
               "net": {
-                "value": 66.00,
-                "system": "urn:iso:std:iso:4217",
-                "code": "USD"
+                "value": 66.0,
+                "currency": "USD"
               },
               "udi": [
                 {
@@ -359,7 +337,7 @@
               "revenue": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/ex-revenue-center",
+                    "system": "http://terminology.hl7.org/CodeSystem/ex-revenue-center",
                     "code": "0010",
                     "display": "Vision Clinic"
                   }
@@ -368,16 +346,16 @@
               "category": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/benefit-subcategory",
+                    "system": "http://example.org/fhir/CodeSystem/benefit-subcategory",
                     "code": "F6",
                     "display": "Vision Coverage"
                   }
                 ]
               },
-              "service": {
+              "productOrService": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/ex-visionservice",
+                    "system": "http://example.org/fhir/CodeSystem/ex-visionservice",
                     "code": "hardening"
                   }
                 ]
@@ -386,7 +364,7 @@
                 {
                   "coding": [
                     {
-                      "system": "http://hl7.org/fhir/modifiers",
+                      "system": "http://terminology.hl7.org/CodeSystem/modifiers",
                       "code": "rooh"
                     }
                   ]
@@ -396,15 +374,13 @@
                 "value": 2
               },
               "unitPrice": {
-                "value": 15.00,
-                "system": "urn:iso:std:iso:4217",
-                "code": "USD"
+                "value": 15.0,
+                "currency": "USD"
               },
               "factor": 1.1,
               "net": {
-                "value": 33.00,
-                "system": "urn:iso:std:iso:4217",
-                "code": "USD"
+                "value": 33.0,
+                "currency": "USD"
               }
             },
             {
@@ -412,7 +388,7 @@
               "revenue": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/ex-revenue-center",
+                    "system": "http://terminology.hl7.org/CodeSystem/ex-revenue-center",
                     "code": "0010",
                     "display": "Vision Clinic"
                   }
@@ -421,16 +397,16 @@
               "category": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/benefit-subcategory",
+                    "system": "http://example.org/fhir/CodeSystem/benefit-subcategory",
                     "code": "F6",
                     "display": "Vision Coverage"
                   }
                 ]
               },
-              "service": {
+              "productOrService": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/ex-visionservice",
+                    "system": "http://example.org/fhir/CodeSystem/ex-visionservice",
                     "code": "UV coating"
                   }
                 ]
@@ -439,7 +415,7 @@
                 {
                   "coding": [
                     {
-                      "system": "http://hl7.org/fhir/modifiers",
+                      "system": "http://terminology.hl7.org/CodeSystem/modifiers",
                       "code": "rooh"
                     }
                   ]
@@ -449,15 +425,13 @@
                 "value": 2
               },
               "unitPrice": {
-                "value": 5.00,
-                "system": "urn:iso:std:iso:4217",
-                "code": "USD"
+                "value": 5.0,
+                "currency": "USD"
               },
               "factor": 1.1,
               "net": {
-                "value": 11.00,
-                "system": "urn:iso:std:iso:4217",
-                "code": "USD"
+                "value": 11.0,
+                "currency": "USD"
               }
             }
           ]
@@ -467,7 +441,7 @@
           "revenue": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/ex-revenue-center",
+                "system": "http://terminology.hl7.org/CodeSystem/ex-revenue-center",
                 "code": "0010",
                 "display": "Vision Clinic"
               }
@@ -476,33 +450,40 @@
           "category": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/benefit-subcategory",
+                "system": "http://example.org/fhir/CodeSystem/benefit-subcategory",
                 "code": "F6",
                 "display": "Vision Coverage"
               }
             ]
           },
-          "service": {
+          "productOrService": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/ex-visionservice",
+                "system": "http://example.org/fhir/CodeSystem/ex-visionservice",
                 "code": "fst"
               }
             ]
           },
           "unitPrice": {
-            "value": 220.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 220.0,
+            "currency": "USD"
           },
           "factor": 0.07,
           "net": {
-            "value": 15.40,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 15.4,
+            "currency": "USD"
           }
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

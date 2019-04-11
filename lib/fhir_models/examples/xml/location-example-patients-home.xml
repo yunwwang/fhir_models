@@ -1,23 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><Location xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Location xmlns="http://hl7.org/fhir">
   <id value="ph"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Patient&#39;s Home</div>
-  </text>  
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+    
   <status value="active"/>
-  <name value="Patient&#39;s Home"/>
-  <description value="Patient&#39;s Home"/>
+  <name value="Patient's Home"/>
+  <description value="Patient's Home"/>
 	<mode value="kind"/>
 	<type>
     <coding>
-      <system value="http://hl7.org/fhir/v3/RoleCode"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
       <code value="PTRES"/>
-      <display value="Patient&#39;s Residence"/>
+      <display value="Patient's Residence"/>
     </coding>
   </type>
   <physicalType>
     <coding>
-      <system value="http://hl7.org/fhir/location-physical-type"/>
+      <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
       <code value="ho"/>
       <display value="House"/>
     </coding>

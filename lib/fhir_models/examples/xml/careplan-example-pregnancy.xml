@@ -1,19 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?><CarePlan xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<CarePlan xmlns="http://hl7.org/fhir">
   <id value="preg"/>
-  <text>
-    <status value="additional"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>A maternity care plan (for a pregnant woman).</p>
-      <p>LMP is 1st Jan, 2013 (a great new years party!) The plan has activities to take prenatal vitamins, schedule first antenatal,
-            and &#39;placeholders&#39; for the second antenatal and delivery (there would be lots of others of course)</p>
-      <p>Note that where is a proposed &#39;status&#39; element against each activity</p>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <contained>
     <Condition>
       <id value="p1"/>
-      <clinicalStatus value="active"/>
-	  <verificationStatus value="confirmed"/>
+      <clinicalStatus>
+		<coding>
+		  <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+		  <code value="active"/>
+		</coding>
+	  </clinicalStatus>
+
+	  <verificationStatus>
+		<coding>
+		  <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+		  <code value="confirmed"/>
+		</coding>
+	  </verificationStatus>
       <code>
         <text value="pregnancy"/>
       </code>
@@ -79,9 +90,9 @@
   <contained>
     <Goal>
       <id value="goal"/>
-      <status value="in-progress"/>
+      <lifecycleStatus value="active"/>
       <description>
-        <text value="Maintain patient&#39;s health throughout pregnancy and ensure a healthy child"/>
+        <text value="Maintain patient's health throughout pregnancy and ensure a healthy child"/>
       </description>
       <subject>
         <reference value="Patient/1"/>
@@ -126,12 +137,7 @@
       <valueUri value="http://orionhealth.com/fhir/careplan/1andetails"/>
     </extension>
     <detail>
-      <category>
-        <coding>
-          <system value="http://hl7.org/fhir/care-plan-activity-category"/>
-          <code value="encounter"/>
-        </coding>
-      </category>
+     <kind value="Appointment"/>
       <code>
         <coding>
           <system value="http://example.org/mySystem"/>
@@ -140,7 +146,7 @@
         <text value="First Antenatal encounter"/>
       </code>
       <status value="scheduled"/>
-      <prohibited value="false"/>
+      <doNotPerform value="false"/>
       <scheduledTiming>
         <!--  The encounter should occur between 14 feb and 28 feb  -->
         <repeat>
@@ -167,12 +173,7 @@
   <activity>
     <detail>
       <!--  This will be the second antenatal encounter - 3 months after LMP. It is not yet scheduled.  -->
-      <category>
-        <coding>
-          <system value="http://hl7.org/fhir/care-plan-activity-category"/>
-          <code value="encounter"/>
-        </coding>
-      </category>
+      <kind value="Appointment"/>
       <code>
         <!--  The code is just for an antenatal encounter. There are many of these, the first is special...  -->
         <coding>
@@ -182,7 +183,7 @@
         <text value="Follow-up Antenatal encounter"/>
       </code>
       <status value="not-started"/>
-      <prohibited value="false"/>
+      <doNotPerform value="false"/>
       <scheduledTiming>
         <!--  The encounter should occur between 1 march and 14 march  -->
         <repeat>
@@ -209,12 +210,7 @@
   <activity>
     <detail>
       <!--  This will be the delivery. It is not yet scheduled.  -->
-      <category>
-        <coding>
-          <system value="http://hl7.org/fhir/care-plan-activity-category"/>
-          <code value="encounter"/>
-        </coding>
-      </category>
+      <kind value="Appointment"/>
       <code>
         <coding>
           <system value="http://example.org/mySystem"/>
@@ -223,7 +219,7 @@
         <text value="Delivery"/>
       </code>
       <status value="not-started"/>
-      <prohibited value="false"/>
+      <doNotPerform value="false"/>
       <scheduledTiming>
         <!--  The delivery should occur between 1 September and 14 September  -->
         <repeat>

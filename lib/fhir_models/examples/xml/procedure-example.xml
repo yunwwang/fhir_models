@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><Procedure xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure xmlns="http://hl7.org/fhir">
   <id value="example"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Routine Appendectomy</div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <status value="completed"/>
   <code>
     <coding>
@@ -17,6 +22,14 @@
     <reference value="Patient/example"/>
   </subject>
   <performedDateTime value="2013-04-05"/>
+  <recorder>
+    <reference value="Practitioner/example"/>
+    <display value="Dr Cecil Surgeon"/>
+  </recorder>
+  <asserter>
+    <reference value="Practitioner/example"/>
+    <display value="Dr Cecil Surgeon"/>
+  </asserter>
   <performer>
     <actor>
       <reference value="Practitioner/example"/>

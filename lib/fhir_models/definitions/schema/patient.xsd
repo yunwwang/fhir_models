@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 26, 2017 18:33-0400 for FHIR v3.0.0 
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -84,9 +84,6 @@
           <xs:element name="contact" type="Patient.Contact" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
-          <xs:element name="animal" type="Patient.Animal" minOccurs="0" maxOccurs="1">
-            
-          </xs:element>
           <xs:element name="communication" type="Patient.Communication" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
@@ -127,24 +124,6 @@
             
           </xs:element>
           <xs:element name="period" minOccurs="0" maxOccurs="1" type="Period">
-            
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="Patient.Animal">
-    
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="species" minOccurs="1" maxOccurs="1" type="CodeableConcept">
-            
-          </xs:element>
-          <xs:element name="breed" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            
-          </xs:element>
-          <xs:element name="genderStatus" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
         </xs:sequence>

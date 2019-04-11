@@ -36,6 +36,12 @@ namespace :fhir do
     FileList['lib/fhir_models/definitions/schema/*.xsd'].each do |file|
       FHIR::Boot::Preprocess.pre_process_schema(file)
     end
+    FileList['lib/fhir_models/examples/json/*.json'].each do |file|
+      FHIR::Boot::Preprocess.pre_process_json_example(file)
+    end
+    FileList['lib/fhir_models/examples/xml/*.xml'].each do |file|
+      FHIR::Boot::Preprocess.pre_process_xml_example(file)
+    end
   end
 
   desc 'shrink implementation guide'

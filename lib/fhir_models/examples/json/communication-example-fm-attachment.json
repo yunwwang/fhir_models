@@ -1,10 +1,6 @@
 {
   "resourceType": "Communication",
   "id": "fm-attachment",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Attachment which is unsolicited</div>"
-  },
   "identifier": [
     {
       "system": "http://www.providerco.com/communication",
@@ -25,15 +21,7 @@
   "subject": {
     "reference": "Patient/1"
   },
-  "recipient": [
-    {
-      "identifier": {
-        "system": "http://www.jurisdiction.com/insurer",
-        "value": "123456"
-      }
-    }
-  ],
-  "topic": [
+  "about": [
     {
       "identifier": {
         "system": "http://happyvalley.com/claim",
@@ -48,6 +36,14 @@
     }
   ],
   "sent": "2016-06-12T18:01:10-08:00",
+  "recipient": [
+    {
+      "identifier": {
+        "system": "http://www.jurisdiction.com/insurer",
+        "value": "123456"
+      }
+    }
+  ],
   "sender": {
     "identifier": {
       "system": "http://www.jurisdiction.com/provideroffices",
@@ -66,11 +62,20 @@
     {
       "contentAttachment": {
         "contentType": "application/pdf",
-        "url": "http://happyvalley.com/docs/AB12345",
+        "url": "http://example.org/docs/AB12345",
         "size": 104274,
         "hash": "SGVsbG8gdGhlcmU=",
         "creation": "2010-02-01T10:57:34+01:00"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

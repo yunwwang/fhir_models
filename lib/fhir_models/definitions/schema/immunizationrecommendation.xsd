@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 26, 2017 18:33-0400 for FHIR v3.0.0 
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -50,6 +50,12 @@
           <xs:element name="patient" minOccurs="1" maxOccurs="1" type="Reference">
             
           </xs:element>
+          <xs:element name="date" minOccurs="1" maxOccurs="1" type="dateTime">
+            
+          </xs:element>
+          <xs:element name="authority" minOccurs="0" maxOccurs="1" type="Reference">
+            
+          </xs:element>
           <xs:element name="recommendation" type="ImmunizationRecommendation.Recommendation" minOccurs="1" maxOccurs="unbounded">
             
           </xs:element>
@@ -62,27 +68,40 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="date" minOccurs="1" maxOccurs="1" type="dateTime">
-            
-          </xs:element>
-          <xs:element name="vaccineCode" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="vaccineCode" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             
           </xs:element>
           <xs:element name="targetDisease" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
-          <xs:element name="doseNumber" minOccurs="0" maxOccurs="1" type="positiveInt">
+          <xs:element name="contraindicatedVaccineCode" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             
           </xs:element>
           <xs:element name="forecastStatus" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
+          <xs:element name="forecastReason" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            
+          </xs:element>
           <xs:element name="dateCriterion" type="ImmunizationRecommendation.DateCriterion" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
-          <xs:element name="protocol" type="ImmunizationRecommendation.Protocol" minOccurs="0" maxOccurs="1">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
             
           </xs:element>
+          <xs:element name="series" minOccurs="0" maxOccurs="1" type="string">
+            
+          </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1">
+            
+            <xs:element name="doseNumberPositiveInt" type="positiveInt"/>
+            <xs:element name="doseNumberString" type="string"/>
+          </xs:choice>
+          <xs:choice minOccurs="0" maxOccurs="1">
+            
+            <xs:element name="seriesDosesPositiveInt" type="positiveInt"/>
+            <xs:element name="seriesDosesString" type="string"/>
+          </xs:choice>
           <xs:element name="supportingImmunization" minOccurs="0" maxOccurs="unbounded" type="Reference">
             
           </xs:element>
@@ -102,27 +121,6 @@
             
           </xs:element>
           <xs:element name="value" minOccurs="1" maxOccurs="1" type="dateTime">
-            
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="ImmunizationRecommendation.Protocol">
-    
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="doseSequence" minOccurs="0" maxOccurs="1" type="positiveInt">
-            
-          </xs:element>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
-            
-          </xs:element>
-          <xs:element name="authority" minOccurs="0" maxOccurs="1" type="Reference">
-            
-          </xs:element>
-          <xs:element name="series" minOccurs="0" maxOccurs="1" type="string">
             
           </xs:element>
         </xs:sequence>

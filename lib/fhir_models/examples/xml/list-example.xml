@@ -1,37 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><List xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<List xmlns="http://hl7.org/fhir">
   <id value="example"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <table>
-        <thead>
-          <tr>
-            <th>Condition</th>
-            <th>Severity</th>
-            <th>Date</th>
-            <th>Location</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Burnt Ear</td>
-            <td>Severe</td>
-            <td>24-May 2012</td>
-            <td>Left Ear</td>
-            <td>deleted</td>
-          </tr>
-          <tr>
-            <td>Asthma</td>
-            <td>Mild</td>
-            <td>21-Nov 2012</td>
-            <td>--</td>
-            <td>added</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <identifier>
     <system value="urn:uuid:a9fcea7c-fcdf-4d17-a5e0-f26dda030b59"/>
     <value value="23974652"/>
@@ -66,7 +43,6 @@
     <flag>
       <text value="Added"/>
     </flag>
-    <date value="2012-11-21"/>
     <item>
       <reference value="Condition/example2"/>
     </item>

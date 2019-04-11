@@ -1,23 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><QuestionnaireResponse xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
   <id value="3141"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <pre>
-            Comorbidity? YES
-              Cardial Comorbidity? YES
-                Angina? YES
-                MI? NO
-              Vascular Comorbidity?
-                (no answers)
-              ...
-            Histopathology
-              Abdominal
-                pT category: 1a
-              ...
-          </pre>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <contained>
     <Patient>
       <id value="patsub"/>
@@ -37,7 +28,7 @@
     </Patient>
   </contained>
   <contained>
-    <ReferralRequest>
+    <ServiceRequest>
       <id value="order"/>
       <status value="unknown"/>
       <intent value="order"/>
@@ -45,11 +36,9 @@
         <reference value="#patsub"/>
       </subject>
       <requester>
-        <agent>
           <reference value="Practitioner/example"/>
-        </agent>
       </requester>
-    </ReferralRequest>
+    </ServiceRequest>
   </contained>
   <contained>
     <Practitioner>
@@ -65,7 +54,7 @@
   </contained>
   <!--    TODO: decide how to do this
   <contained>
-  
+
     <Observation>
       <id value="obs.pt-category"/>
       <status value="final"/>
@@ -98,16 +87,16 @@
   <basedOn>
     <reference value="#order"/>
   </basedOn>
-  <parent>
+  <partOf>
     <reference value="Procedure/f201"/>
-  </parent>
+  </partOf>
   <status value="completed"/>
   <subject>
     <reference value="#patsub"/>
   </subject>
-  <context>
+  <encounter>
     <reference value="Encounter/example"/>
-  </context>
+  </encounter>
   <authored value="2013-02-19T14:15:00-05:00"/>
   <author>
     <reference value="#questauth"/>

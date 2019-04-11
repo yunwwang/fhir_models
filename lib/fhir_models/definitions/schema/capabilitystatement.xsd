@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 26, 2017 18:33-0400 for FHIR v3.0.0 
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -89,7 +89,10 @@
           <xs:element name="kind" minOccurs="1" maxOccurs="1" type="CapabilityStatementKind">
             
           </xs:element>
-          <xs:element name="instantiates" minOccurs="0" maxOccurs="unbounded" type="uri">
+          <xs:element name="instantiates" minOccurs="0" maxOccurs="unbounded" type="canonical">
+            
+          </xs:element>
+          <xs:element name="imports" minOccurs="0" maxOccurs="unbounded" type="canonical">
             
           </xs:element>
           <xs:element name="software" type="CapabilityStatement.Software" minOccurs="0" maxOccurs="1">
@@ -98,10 +101,7 @@
           <xs:element name="implementation" type="CapabilityStatement.Implementation" minOccurs="0" maxOccurs="1">
             
           </xs:element>
-          <xs:element name="fhirVersion" minOccurs="1" maxOccurs="1" type="id">
-            
-          </xs:element>
-          <xs:element name="acceptUnknown" minOccurs="1" maxOccurs="1" type="UnknownContentCode">
+          <xs:element name="fhirVersion" minOccurs="1" maxOccurs="1" type="FHIRVersion">
             
           </xs:element>
           <xs:element name="format" minOccurs="1" maxOccurs="unbounded" type="code">
@@ -110,10 +110,7 @@
           <xs:element name="patchFormat" minOccurs="0" maxOccurs="unbounded" type="code">
             
           </xs:element>
-          <xs:element name="implementationGuide" minOccurs="0" maxOccurs="unbounded" type="uri">
-            
-          </xs:element>
-          <xs:element name="profile" minOccurs="0" maxOccurs="unbounded" type="Reference">
+          <xs:element name="implementationGuide" minOccurs="0" maxOccurs="unbounded" type="canonical">
             
           </xs:element>
           <xs:element name="rest" type="CapabilityStatement.Rest" minOccurs="0" maxOccurs="unbounded">
@@ -155,7 +152,10 @@
           <xs:element name="description" minOccurs="1" maxOccurs="1" type="string">
             
           </xs:element>
-          <xs:element name="url" minOccurs="0" maxOccurs="1" type="uri">
+          <xs:element name="url" minOccurs="0" maxOccurs="1" type="url">
+            
+          </xs:element>
+          <xs:element name="custodian" minOccurs="0" maxOccurs="1" type="Reference">
             
           </xs:element>
         </xs:sequence>
@@ -170,7 +170,7 @@
           <xs:element name="mode" minOccurs="1" maxOccurs="1" type="RestfulCapabilityMode">
             
           </xs:element>
-          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
           <xs:element name="security" type="CapabilityStatement.Security" minOccurs="0" maxOccurs="1">
@@ -188,7 +188,7 @@
           <xs:element name="operation" type="CapabilityStatement.Operation" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
-          <xs:element name="compartment" minOccurs="0" maxOccurs="unbounded" type="uri">
+          <xs:element name="compartment" minOccurs="0" maxOccurs="unbounded" type="canonical">
             
           </xs:element>
         </xs:sequence>
@@ -206,25 +206,7 @@
           <xs:element name="service" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             
           </xs:element>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
-            
-          </xs:element>
-          <xs:element name="certificate" type="CapabilityStatement.Certificate" minOccurs="0" maxOccurs="unbounded">
-            
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="CapabilityStatement.Certificate">
-    
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="code">
-            
-          </xs:element>
-          <xs:element name="blob" minOccurs="0" maxOccurs="1" type="base64Binary">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
         </xs:sequence>
@@ -236,16 +218,19 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="type" minOccurs="1" maxOccurs="1" type="ResourceType">
+          <xs:element name="type" minOccurs="1" maxOccurs="1" type="code">
             
           </xs:element>
-          <xs:element name="profile" minOccurs="0" maxOccurs="1" type="Reference">
+          <xs:element name="profile" minOccurs="0" maxOccurs="1" type="canonical">
+            
+          </xs:element>
+          <xs:element name="supportedProfile" minOccurs="0" maxOccurs="unbounded" type="canonical">
             
           </xs:element>
           <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
-          <xs:element name="interaction" type="CapabilityStatement.Interaction" minOccurs="1" maxOccurs="unbounded">
+          <xs:element name="interaction" type="CapabilityStatement.Interaction" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
           <xs:element name="versioning" minOccurs="0" maxOccurs="1" type="ResourceVersionPolicy">
@@ -281,6 +266,9 @@
           <xs:element name="searchParam" type="CapabilityStatement.SearchParam" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
+          <xs:element name="operation" type="CapabilityStatement.Operation" minOccurs="0" maxOccurs="unbounded">
+            
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -293,7 +281,7 @@
           <xs:element name="code" minOccurs="1" maxOccurs="1" type="TypeRestfulInteraction">
             
           </xs:element>
-          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
         </xs:sequence>
@@ -308,28 +296,13 @@
           <xs:element name="name" minOccurs="1" maxOccurs="1" type="string">
             
           </xs:element>
-          <xs:element name="definition" minOccurs="0" maxOccurs="1" type="uri">
+          <xs:element name="definition" minOccurs="0" maxOccurs="1" type="canonical">
             
           </xs:element>
           <xs:element name="type" minOccurs="1" maxOccurs="1" type="SearchParamType">
             
           </xs:element>
-          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="string">
-            
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="CapabilityStatement.Interaction1">
-    
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="code" minOccurs="1" maxOccurs="1" type="SystemRestfulInteraction">
-            
-          </xs:element>
-          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
         </xs:sequence>
@@ -344,7 +317,25 @@
           <xs:element name="name" minOccurs="1" maxOccurs="1" type="string">
             
           </xs:element>
-          <xs:element name="definition" minOccurs="1" maxOccurs="1" type="Reference">
+          <xs:element name="definition" minOccurs="1" maxOccurs="1" type="canonical">
+            
+          </xs:element>
+          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="markdown">
+            
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CapabilityStatement.Interaction1">
+    
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="code" minOccurs="1" maxOccurs="1" type="SystemRestfulInteraction">
+            
+          </xs:element>
+          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
         </xs:sequence>
@@ -362,13 +353,10 @@
           <xs:element name="reliableCache" minOccurs="0" maxOccurs="1" type="unsignedInt">
             
           </xs:element>
-          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
           <xs:element name="supportedMessage" type="CapabilityStatement.SupportedMessage" minOccurs="0" maxOccurs="unbounded">
-            
-          </xs:element>
-          <xs:element name="event" type="CapabilityStatement.Event" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
         </xs:sequence>
@@ -383,7 +371,7 @@
           <xs:element name="protocol" minOccurs="1" maxOccurs="1" type="Coding">
             
           </xs:element>
-          <xs:element name="address" minOccurs="1" maxOccurs="1" type="uri">
+          <xs:element name="address" minOccurs="1" maxOccurs="1" type="url">
             
           </xs:element>
         </xs:sequence>
@@ -398,37 +386,7 @@
           <xs:element name="mode" minOccurs="1" maxOccurs="1" type="EventCapabilityMode">
             
           </xs:element>
-          <xs:element name="definition" minOccurs="1" maxOccurs="1" type="Reference">
-            
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="CapabilityStatement.Event">
-    
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="code" minOccurs="1" maxOccurs="1" type="Coding">
-            
-          </xs:element>
-          <xs:element name="category" minOccurs="0" maxOccurs="1" type="MessageSignificanceCategory">
-            
-          </xs:element>
-          <xs:element name="mode" minOccurs="1" maxOccurs="1" type="EventCapabilityMode">
-            
-          </xs:element>
-          <xs:element name="focus" minOccurs="1" maxOccurs="1" type="ResourceType">
-            
-          </xs:element>
-          <xs:element name="request" minOccurs="1" maxOccurs="1" type="Reference">
-            
-          </xs:element>
-          <xs:element name="response" minOccurs="1" maxOccurs="1" type="Reference">
-            
-          </xs:element>
-          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="definition" minOccurs="1" maxOccurs="1" type="canonical">
             
           </xs:element>
         </xs:sequence>
@@ -443,10 +401,10 @@
           <xs:element name="mode" minOccurs="1" maxOccurs="1" type="DocumentMode">
             
           </xs:element>
-          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="documentation" minOccurs="0" maxOccurs="1" type="markdown">
             
           </xs:element>
-          <xs:element name="profile" minOccurs="1" maxOccurs="1" type="Reference">
+          <xs:element name="profile" minOccurs="1" maxOccurs="1" type="canonical">
             
           </xs:element>
         </xs:sequence>
@@ -513,27 +471,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="MessageSignificanceCategory-list">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="Consequence">
-        
-      </xs:enumeration>
-      <xs:enumeration value="Currency">
-        
-      </xs:enumeration>
-      <xs:enumeration value="Notification">
-        
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="MessageSignificanceCategory">
-    
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="MessageSignificanceCategory-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:simpleType name="DocumentMode-list">
     <xs:restriction base="code-primitive">
       <xs:enumeration value="producer">
@@ -567,30 +504,6 @@
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="RestfulCapabilityMode-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="UnknownContentCode-list">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="no">
-        
-      </xs:enumeration>
-      <xs:enumeration value="extensions">
-        
-      </xs:enumeration>
-      <xs:enumeration value="elements">
-        
-      </xs:enumeration>
-      <xs:enumeration value="both">
-        
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="UnknownContentCode">
-    
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="UnknownContentCode-list" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

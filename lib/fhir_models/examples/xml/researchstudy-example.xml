@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><ResearchStudy xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ResearchStudy xmlns="http://hl7.org/fhir">
 	<id value="example"/>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">[Put rendering here]</div>
-	</text>
-	<status value="draft"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
+	<status value="completed"/>
 </ResearchStudy>

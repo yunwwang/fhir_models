@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 26, 2017 18:33-0400 for FHIR v3.0.0 
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -44,13 +44,13 @@
     <xs:complexContent>
       <xs:extension base="DomainResource">
         <xs:sequence>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             
           </xs:element>
           <xs:element name="status" minOccurs="1" maxOccurs="1" type="ObservationStatus">
             
           </xs:element>
-          <xs:element name="category" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             
           </xs:element>
           <xs:element name="severity" minOccurs="0" maxOccurs="1" type="DetectedIssueSeverity">
@@ -59,13 +59,18 @@
           <xs:element name="patient" minOccurs="0" maxOccurs="1" type="Reference">
             
           </xs:element>
-          <xs:element name="date" minOccurs="0" maxOccurs="1" type="dateTime">
+          <xs:choice minOccurs="0" maxOccurs="1">
             
-          </xs:element>
+            <xs:element name="identifiedDateTime" type="dateTime"/>
+            <xs:element name="identifiedPeriod" type="Period"/>
+          </xs:choice>
           <xs:element name="author" minOccurs="0" maxOccurs="1" type="Reference">
             
           </xs:element>
           <xs:element name="implicated" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            
+          </xs:element>
+          <xs:element name="evidence" type="DetectedIssue.Evidence" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
           <xs:element name="detail" minOccurs="0" maxOccurs="1" type="string">
@@ -75,6 +80,21 @@
             
           </xs:element>
           <xs:element name="mitigation" type="DetectedIssue.Mitigation" minOccurs="0" maxOccurs="unbounded">
+            
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DetectedIssue.Evidence">
+    
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="code" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            
+          </xs:element>
+          <xs:element name="detail" minOccurs="0" maxOccurs="unbounded" type="Reference">
             
           </xs:element>
         </xs:sequence>

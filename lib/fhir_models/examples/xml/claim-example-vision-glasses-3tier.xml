@@ -1,36 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><Claim xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Claim xmlns="http://hl7.org/fhir">
 	<id value="660152"/>
 
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">A human-readable rendering of the Vision Claim for Glasses</div>
-	</text>
-
-	<contained>
-		<ClaimResponse>
-			<id value="claimresponse-1"/>
-
-			<identifier>
-				<system value="http://thebenefircompany.com/claimresponse"/>
-				<value value="CR6532875367"/>
-			</identifier>
-
-			<!--  rest of the resource ommitted for brevity  -->
-
-		</ClaimResponse>
-	</contained>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 
 	<contained>
 		<Device>
 			<id value="device-frame"/>
-			<!--  rest of the resource ommitted for brevity  -->
+			<!--  rest of the resource omitted for brevity  -->
 		</Device>
 	</contained>
 
 	<contained>
 		<Device>
 			<id value="device-lens"/>
-			<!--  rest of the resource ommitted for brevity  -->
+			<!--  rest of the resource omitted for brevity  -->
 		</Device>
 	</contained>
 
@@ -44,12 +35,12 @@
 
 	<type>
 		<coding>
-			<system value="http://hl7.org/fhir/ex-claimtype"/>
+			<system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
 			<code value="vision"/>
 		</coding>
 	</type>
 
-	<use value="complete"/>
+	<use value="claim"/>
 
 	<patient>
 		<reference value="Patient/1"/>
@@ -61,9 +52,9 @@
 		<reference value="Organization/2"/>
 	</insurer>
 
-	<organization>
+	<provider>
 		<reference value="Organization/1"/>
-	</organization>
+	</provider>
 
 	<priority>
 		<coding>
@@ -107,7 +98,7 @@
 		</coverage>
 		<preAuthRef value="PR7652387237"/>
 		<claimResponse>
-			<reference value="#claimresponse-1"/>
+			<reference value="ClaimResponse/R3500"/>
 		</claimResponse>
 	</insurance>
 
@@ -122,89 +113,85 @@
 
 	<item>
 		<sequence value="1"/>
-		<careTeamLinkId value="1"/>
+		<careTeamSequence value="1"/>
 		<revenue>
 			<coding>
-				<system value="http://hl7.org/fhir/ex-revenue-center"/>
+				<system value="http://terminology.hl7.org/CodeSystem/ex-revenue-center"/>
 				<code value="0010"/>
 				<display value="Vision Clinic"/>
 			</coding>
 		</revenue>
 		<category>
 			<coding>
-				<system value="http://hl7.org/fhir/benefit-subcategory"/>
+				<system value="http://example.org/fhir/CodeSystem/benefit-subcategory"/>
 				<code value="F6"/>
 				<display value="Vision Coverage"/>
 			</coding>
 		</category>
-		<service>
+		<productOrService>
 			<coding>
-				<system value="http://hl7.org/fhir/ex-visionservice"/>
+				<system value="http://example.org/fhir/CodeSystem/ex-visionservice"/>
 				<code value="glasses"/>
 			</coding>
-		</service>
+		</productOrService>
 		<modifier>
 			<coding>
-				<system value="http://hl7.org/fhir/modifiers"/>
+				<system value="http://terminology.hl7.org/CodeSystem/modifiers"/>
 				<code value="rooh"/>
 			</coding>
 		</modifier>
 		<programCode>
 			<coding>
-				<system value="http://hl7.org/fhir/ex-programcode"/>
+				<system value="http://terminology.hl7.org/CodeSystem/ex-programcode"/>
 				<code value="none"/>
 			</coding>
 		</programCode>	
 		<servicedDate value="2014-08-16"/>
 		<unitPrice>
 			<value value="235.40"/>
-			<system value="urn:iso:std:iso:4217"/>
-			<code value="USD"/> 
+			<currency value="USD"/> 
 		</unitPrice> 
 		<net>
 			<value value="235.40"/>
-			<system value="urn:iso:std:iso:4217"/>
-			<code value="USD"/> 
+			<currency value="USD"/> 
 		</net> 
 
 		<detail>
 			<sequence value="1"/>
 			<revenue>
 				<coding>
-					<system value="http://hl7.org/fhir/ex-revenue-center"/>
+					<system value="http://terminology.hl7.org/CodeSystem/ex-revenue-center"/>
 					<code value="0010"/>
 					<display value="Vision Clinic"/>
 				</coding>
 			</revenue>
 			<category>
 				<coding>
-					<system value="http://hl7.org/fhir/benefit-subcategory"/>
+					<system value="http://example.org/fhir/CodeSystem/benefit-subcategory"/>
 					<code value="F6"/>
 					<display value="Vision Coverage"/>
 				</coding>
 			</category>
-			<service>
+			<productOrService>
 				<coding>
-					<system value="http://hl7.org/fhir/ex-visionservice"/>
+					<system value="http://example.org/fhir/CodeSystem/ex-visionservice"/>
 					<code value="frame"/>
 				</coding>
-			</service>
+			</productOrService>
 			<modifier>
 				<coding>
-					<system value="http://hl7.org/fhir/modifiers"/>
+					<system value="http://terminology.hl7.org/CodeSystem/modifiers"/>
 					<code value="rooh"/>
 				</coding>
 			</modifier>
 			<unitPrice>
 				<value value="100.00"/>
-				<system value="urn:iso:std:iso:4217"/>
-				<code value="USD"/> 
+				<currency value="USD"/> 
 			</unitPrice> 
-			<factor value="1.1"/> <!--  10% surchage for out of hours work  -->
+			<factor value="1.1"/> <!--  10% surcharge for out of hours work  -->
 			<net>
 				<value value="110.00"/>
-				<system value="urn:iso:std:iso:4217"/>
-				<code value="USD"/> 
+				<currency value="USD"/> 
 			</net> 
 			<udi>
 				<reference value="#device-frame"/>
@@ -215,27 +202,27 @@
 			<sequence value="2"/>
 			<revenue>
 				<coding>
-					<system value="http://hl7.org/fhir/ex-revenue-center"/>
+					<system value="http://terminology.hl7.org/CodeSystem/ex-revenue-center"/>
 					<code value="0010"/>
 					<display value="Vision Clinic"/>
 				</coding>
 			</revenue>
 			<category>
 				<coding>
-					<system value="http://hl7.org/fhir/benefit-subcategory"/>
+					<system value="http://example.org/fhir/CodeSystem/benefit-subcategory"/>
 					<code value="F6"/>
 					<display value="Vision Coverage"/>
 				</coding>
 			</category>
-			<service>
+			<productOrService>
 				<coding>
-					<system value="http://hl7.org/fhir/ex-visionservice"/>
+					<system value="http://example.org/fhir/CodeSystem/ex-visionservice"/>
 					<code value="lens"/>
 				</coding>
-			</service>
+			</productOrService>
 			<programCode>
 				<coding>
-					<system value="http://hl7.org/fhir/ex-programcode"/>
+					<system value="http://terminology.hl7.org/CodeSystem/ex-programcode"/>
 					<code value="none"/>
 				</coding>
 			</programCode>	
@@ -244,46 +231,44 @@
 			</quantity>
 			<unitPrice>
 				<value value="55.00"/>
-				<system value="urn:iso:std:iso:4217"/>
-				<code value="USD"/> 
+				<currency value="USD"/> 
 			</unitPrice> 
 			<net>
 				<value value="110.00"/>
-				<system value="urn:iso:std:iso:4217"/>
-				<code value="USD"/> 
+				<currency value="USD"/> 
 			</net> 
 
 			<subDetail>
 				<sequence value="1"/>
 				<revenue>
 					<coding>
-						<system value="http://hl7.org/fhir/ex-revenue-center"/>
+						<system value="http://terminology.hl7.org/CodeSystem/ex-revenue-center"/>
 						<code value="0010"/>
 						<display value="Vision Clinic"/>
 					</coding>
 				</revenue>
 				<category>
 					<coding>
-						<system value="http://hl7.org/fhir/benefit-subcategory"/>
+						<system value="http://example.org/fhir/CodeSystem/benefit-subcategory"/>
 						<code value="F6"/>
 						<display value="Vision Coverage"/>
 					</coding>
 				</category>
-				<service>
+				<productOrService>
 					<coding>
-						<system value="http://hl7.org/fhir/ex-visionservice"/>
+						<system value="http://example.org/fhir/CodeSystem/ex-visionservice"/>
 						<code value="lens"/>
 					</coding>
-				</service>
+				</productOrService>
 				<modifier>
 					<coding>
-						<system value="http://hl7.org/fhir/modifiers"/>
+						<system value="http://terminology.hl7.org/CodeSystem/modifiers"/>
 						<code value="rooh"/>
 					</coding>
 				</modifier>
 				<programCode>
 					<coding>
-						<system value="http://hl7.org/fhir/ex-programcode"/>
+						<system value="http://terminology.hl7.org/CodeSystem/ex-programcode"/>
 						<code value="none"/>
 					</coding>
 				</programCode>	
@@ -292,14 +277,12 @@
 				</quantity>
 				<unitPrice>
 					<value value="30.00"/>
-					<system value="urn:iso:std:iso:4217"/>
-					<code value="USD"/> 
+					<currency value="USD"/> 
 				</unitPrice> 
 				<factor value="1.1"/> <!--  10% surchage for out of hours work  -->
 				<net>
 					<value value="66.00"/>
-					<system value="urn:iso:std:iso:4217"/>
-					<code value="USD"/> 
+					<currency value="USD"/> 
 				</net> 
 				<udi>
 					<reference value="#device-lens"/>
@@ -310,27 +293,27 @@
 				<sequence value="2"/>
 				<revenue>
 					<coding>
-						<system value="http://hl7.org/fhir/ex-revenue-center"/>
+						<system value="http://terminology.hl7.org/CodeSystem/ex-revenue-center"/>
 						<code value="0010"/>
 						<display value="Vision Clinic"/>
 					</coding>
 				</revenue>
 				<category>
 					<coding>
-						<system value="http://hl7.org/fhir/benefit-subcategory"/>
+						<system value="http://example.org/fhir/CodeSystem/benefit-subcategory"/>
 						<code value="F6"/>
 						<display value="Vision Coverage"/>
 					</coding>
 				</category>
-				<service>
+				<productOrService>
 					<coding>
-						<system value="http://hl7.org/fhir/ex-visionservice"/>
+						<system value="http://example.org/fhir/CodeSystem/ex-visionservice"/>
 						<code value="hardening"/>
 					</coding>
-				</service>
+				</productOrService>
 				<modifier>
 					<coding>
-						<system value="http://hl7.org/fhir/modifiers"/>
+						<system value="http://terminology.hl7.org/CodeSystem/modifiers"/>
 						<code value="rooh"/>
 					</coding>
 				</modifier>
@@ -339,14 +322,12 @@
 				</quantity>
 				<unitPrice>
 					<value value="15.00"/>
-					<system value="urn:iso:std:iso:4217"/>
-					<code value="USD"/> 
+					<currency value="USD"/> 
 				</unitPrice> 
 				<factor value="1.1"/> <!--  10% surchage for out of hours work  -->
 				<net>
 					<value value="33.00"/>
-					<system value="urn:iso:std:iso:4217"/>
-					<code value="USD"/> 
+					<currency value="USD"/> 
 				</net> 
 			</subDetail>
 
@@ -354,27 +335,27 @@
 				<sequence value="3"/>
 				<revenue>
 					<coding>
-						<system value="http://hl7.org/fhir/ex-revenue-center"/>
+						<system value="http://terminology.hl7.org/CodeSystem/ex-revenue-center"/>
 						<code value="0010"/>
 						<display value="Vision Clinic"/>
 					</coding>
 				</revenue>
 				<category>
 					<coding>
-						<system value="http://hl7.org/fhir/benefit-subcategory"/>
+						<system value="http://example.org/fhir/CodeSystem/benefit-subcategory"/>
 						<code value="F6"/>
 						<display value="Vision Coverage"/>
 					</coding>
 				</category>
-				<service>
+				<productOrService>
 					<coding>
-						<system value="http://hl7.org/fhir/ex-visionservice"/>
+						<system value="http://example.org/fhir/CodeSystem/ex-visionservice"/>
 						<code value="UV coating"/>
 					</coding>
-				</service>
+				</productOrService>
 				<modifier>
 					<coding>
-						<system value="http://hl7.org/fhir/modifiers"/>
+						<system value="http://terminology.hl7.org/CodeSystem/modifiers"/>
 						<code value="rooh"/>
 					</coding>
 				</modifier>
@@ -383,14 +364,12 @@
 				</quantity>
 				<unitPrice>
 					<value value="5.00"/>
-					<system value="urn:iso:std:iso:4217"/>
-					<code value="USD"/> 
+					<currency value="USD"/> 
 				</unitPrice> 
 				<factor value="1.1"/> <!--  10% surchage for out of hours work  -->
 				<net>
 					<value value="11.00"/>
-					<system value="urn:iso:std:iso:4217"/>
-					<code value="USD"/> 
+					<currency value="USD"/> 
 				</net> 
 			</subDetail>
 		</detail>
@@ -399,34 +378,32 @@
 			<sequence value="3"/>
 			<revenue>
 				<coding>
-					<system value="http://hl7.org/fhir/ex-revenue-center"/>
+					<system value="http://terminology.hl7.org/CodeSystem/ex-revenue-center"/>
 					<code value="0010"/>
 					<display value="Vision Clinic"/>
 				</coding>
 			</revenue>
 			<category>
 				<coding>
-					<system value="http://hl7.org/fhir/benefit-subcategory"/>
+					<system value="http://example.org/fhir/CodeSystem/benefit-subcategory"/>
 					<code value="F6"/>
 					<display value="Vision Coverage"/>
 				</coding>
 			</category>
-			<service>
+			<productOrService>
 				<coding>
-					<system value="http://hl7.org/fhir/ex-visionservice"/>
+					<system value="http://example.org/fhir/CodeSystem/ex-visionservice"/>
 					<code value="fst"/>
 				</coding>
-			</service>
+			</productOrService>
 			<unitPrice>
 				<value value="220.00"/>
-				<system value="urn:iso:std:iso:4217"/>
-				<code value="USD"/> 
+				<currency value="USD"/> 
 			</unitPrice> 
 			<factor value="0.07"/>
 			<net>
 				<value value="15.40"/>
-				<system value="urn:iso:std:iso:4217"/>
-				<code value="USD"/> 
+				<currency value="USD"/> 
 			</net> 
 		</detail>
 	</item>

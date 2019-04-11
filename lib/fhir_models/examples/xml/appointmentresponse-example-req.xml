@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><AppointmentResponse xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<AppointmentResponse xmlns="http://hl7.org/fhir">
 	<id value="exampleresp"/>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">Accept Brian MRI results discussion</div>
-	</text>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 	<identifier>
 		<system value="http://example.org/sampleappointmentresponse-identifier"/>
 		<value value="response123"/>
@@ -16,7 +21,7 @@
 	<end value="2013-12-25T13:30:00Z"/>
   <participantType>
     <coding>
-      <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
       <code value="ATND"/>
     </coding>
   </participantType>
@@ -25,5 +30,5 @@
 		<display value="Dr Adam Careful"/>
 	</actor>
 	<participantStatus value="tentative"/>
-	<comment value="can&#39;t we try for this time, can&#39;t do mornings"/>
+	<comment value="can't we try for this time, can't do mornings"/>
 </AppointmentResponse>

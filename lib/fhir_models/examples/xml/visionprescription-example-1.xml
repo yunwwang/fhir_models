@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><VisionPrescription xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<VisionPrescription xmlns="http://hl7.org/fhir">
 	<id value="33124"/>
 
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">Sample Contract Lens prescription</div>
-	</text>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 
 	<identifier>
 		<system value="http://www.happysight.com/prescription"/>
@@ -12,6 +17,8 @@
 	</identifier>
 
 	<status value="active"/>
+
+	<created value="2014-06-15"/>
 
 	<patient>
 		<reference value="Patient/example"/>
@@ -27,17 +34,10 @@
 		<reference value="Practitioner/example"/>
 	</prescriber>
 
-	<reasonCodeableConcept>
-		<coding>
-			<system value="http://samplevisionreasoncodes.com"/>
-			<code value="myopia"/>
-		</coding>
-	</reasonCodeableConcept>
-
-	<dispense>
+	<lensSpecification>
 		<product>
 			<coding>
-				<system value="http://hl7.org/fhir/ex-visionprescriptionproduct"/>
+				<system value="http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct"/>
 				<code value="contact"/>
 			</coding>
 		</product>
@@ -59,12 +59,12 @@
 		<note>
 			<text value="Shade treatment for extreme light sensitivity"/>
 		</note>
-	</dispense>
+	</lensSpecification>
 
-	<dispense>
+	<lensSpecification>
 		<product>
 			<coding>
-				<system value="http://hl7.org/fhir/ex-visionprescriptionproduct"/>
+				<system value="http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct"/>
 				<code value="contact"/>
 			</coding>
 		</product>
@@ -86,6 +86,6 @@
 		<note>
 			<text value="Shade treatment for extreme light sensitivity"/>
 		</note>
-	</dispense>
+	</lensSpecification>
 
 </VisionPrescription>

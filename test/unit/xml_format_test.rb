@@ -26,6 +26,7 @@ class XmlFormatTest < Test::Unit::TestCase
   end
 
   def run_xml_roundtrip_test(example_file, example_name)
+    omit 'Skipping slow test fixtures' if SLOW_FIXTURES.include?(example_name)
     input_xml = File.read(example_file)
     resource = FHIR::Xml.from_xml(input_xml)
     output_xml = resource.to_xml
@@ -53,6 +54,7 @@ class XmlFormatTest < Test::Unit::TestCase
   end
 
   def run_xml_json_xml_lossiness_test(example_file, example_name)
+    omit 'Skipping slow test fixtures' if SLOW_FIXTURES.include?(example_name)
     input_xml = File.read(example_file)
     resource_from_xml = FHIR::Xml.from_xml(input_xml)
     output_json = resource_from_xml.to_json

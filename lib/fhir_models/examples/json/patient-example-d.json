@@ -1,17 +1,13 @@
 {
   "resourceType": "Patient",
   "id": "pat4",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>Patient Sandy Notsowell @ Acme Healthcare, Inc. MR = 123458, DECEASED</p>\n\t\t</div>"
-  },
   "identifier": [
     {
       "use": "usual",
       "type": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/v2/0203",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
             "code": "MR"
           }
         ]
@@ -36,5 +32,14 @@
   "managingOrganization": {
     "reference": "Organization/1",
     "display": "ACME Healthcare, Inc"
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

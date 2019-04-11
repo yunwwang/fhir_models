@@ -212,7 +212,7 @@ module FHIR
         elsif FHIR::PRIMITIVES.include?(datatype)
           primitive_meta = FHIR::PRIMITIVES[datatype]
           if primitive_meta['regex'] && primitive_meta['type'] != 'number'
-            match = (v =~ Regexp.new(primitive_meta['regex']))
+            match = (v.to_s =~ Regexp.new(primitive_meta['regex']))
             errors[field] << "#{meta['path']}: #{v} does not match #{datatype} regex" if match.nil?
           else
             errors[field] << "#{meta['path']}: #{v} is not a valid #{datatype}" unless FHIR.primitive?(datatype: datatype, value: v)
@@ -279,17 +279,23 @@ module FHIR
 
     def check_binding_uri(uri, value)
       valid = false
-      if uri == 'http://hl7.org/fhir/ValueSet/content-type' || uri == 'http://www.rfc-editor.org/bcp/bcp13.txt'
+      uri = uri[0..-7] if uri.end_with?('|4.0.0')
+      valueset = FHIR::Definitions.get_codes(uri)
+
+      if uri == 'http://hl7.org/fhir/ValueSet/mimetypes' || uri == 'http://www.rfc-editor.org/bcp/bcp13.txt'
         matches = MIME::Types[value]
         json_or_xml = value.downcase.include?('xml') || value.downcase.include?('json')
-        known_weird = ['text/cql', 'application/cql+text'].include?(value)
+        known_weird = ['text/cql', 'application/cql+text', 'application/hl7-v2'].include?(value)
         valid = json_or_xml || known_weird || (!matches.nil? && !matches.empty?)
       elsif uri == 'http://hl7.org/fhir/ValueSet/languages' || uri == 'http://tools.ietf.org/html/bcp47'
         has_region = !(value =~ /-/).nil?
         valid = !BCP47::Language.identify(value.downcase).nil? && (!has_region || !BCP47::Region.identify(value.upcase).nil?)
-      else
+      elsif valueset.nil?
         FHIR.logger.warn "Unable to check_binding_uri on unknown ValueSet: #{uri}"
+      else
+        valid = valueset.values.flatten.include?(value)
       end
+
       valid
     end
 

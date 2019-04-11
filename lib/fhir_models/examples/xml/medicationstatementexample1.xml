@@ -1,6 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><MedicationStatement xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationStatement xmlns="http://hl7.org/fhir">
   <id value="example001"/>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example001</p><p><b>contained</b>: </p><p><b>identifier</b>: 12345689 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>category</b>: Inpatient <span>(Details : {http://hl7.org/fhir/medication-statement-category code &#39;inpatient&#39; = &#39;Inpatient&#39;, given as &#39;Inpatient&#39;})</span></p><p><b>medication</b>: id: med0309; Tylenol PM <span>(Details : {http://hl7.org/fhir/sid/ndc code &#39;50580-506-02&#39; = &#39;50580-506-02&#39;, given as &#39;Tylenol PM&#39;})</span>; isBrand; Film-coated tablet (qualifier value) <span>(Details : {SNOMED CT code &#39;385057009&#39; = &#39;Film-coated tablet&#39;, given as &#39;Film-coated tablet (qualifier value)&#39;})</span></p><p><b>effective</b>: Jan 23, 2015</p><p><b>dateAsserted</b>: Feb 22, 2015</p><p><b>informationSource</b>: <a>Donald Duck</a></p><p><b>subject</b>: <a>Donald Duck</a></p><p><b>derivedFrom</b>: <a>MedicationRequest/medrx002</a></p><p><b>taken</b>: n</p><p><b>reasonCode</b>: Restless Legs <span>(Details : {SNOMED CT code &#39;32914008&#39; = &#39;Restless legs&#39;, given as &#39;Restless Legs&#39;})</span></p><p><b>note</b>: Patient indicates they miss the occasional dose</p><p><b>dosage</b>: </p></div></text><contained>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <contained>
     <Medication>
       <id value="med0309"/>
     <code>
@@ -10,7 +18,6 @@
         <display value="Tylenol PM"/>
       </coding>
     </code>
-    <isBrand value="true"/>
       <form>
         <coding>
           <system value="http://snomed.info/sct"/>
@@ -26,7 +33,7 @@
             <display value="Acetaminophen 500 MG"/>
           </coding>
         </itemCodeableConcept>
-        <amount>
+        <strength>
           <numerator>
             <value value="500"/>
             <system value="http://unitsofmeasure.org"/>
@@ -34,10 +41,10 @@
           </numerator>
           <denominator>
             <value value="1"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
             <code value="Tab"/>
           </denominator>
-        </amount>
+        </strength>
       </ingredient>
       <ingredient>
         <itemCodeableConcept>
@@ -47,7 +54,7 @@
             <display value="Diphenhydramine Hydrochloride 25 mg"/>
           </coding>
         </itemCodeableConcept>
-        <amount>
+        <strength>
           <numerator>
             <value value="25"/>
             <system value="http://unitsofmeasure.org"/>
@@ -55,18 +62,16 @@
           </numerator>
           <denominator>
             <value value="1"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
             <code value="Tab"/>
           </denominator>
-        </amount>
+        </strength>
       </ingredient>
-      <package>
-        
       <batch>
         <lotNumber value="9494788"/>
         <expirationDate value="2017-05-22"/>
       </batch> 
-      </package>
+
     </Medication>
   </contained>
   <identifier>
@@ -74,10 +79,10 @@
     <system value="http://www.bmc.nl/portal/medstatements"/>
     <value value="12345689"/>
   </identifier>
-  <status value="active"/>  
+  <status value="active"/>
   <category>
     <coding>
-      <system value="http://hl7.org/fhir/medication-statement-category"/>
+      <system value="http://terminology.hl7.org/CodeSystem/medication-statement-category"/>
       <code value="inpatient"/>
       <display value="Inpatient"/>
     </coding>
@@ -85,21 +90,19 @@
   <medicationReference> <!--   Linked to a RESOURCE Medication   -->
     <reference value="#med0309"/>
   </medicationReference> 
+  <subject>
+    <reference value="Patient/pat1"/>
+    <display value="Donald Duck"/> 
+  </subject> 
   <effectiveDateTime value="2015-01-23"/>
   <dateAsserted value="2015-02-22"/>
   <informationSource>
     <reference value="Patient/pat1"/>
     <display value="Donald Duck"/> 
   </informationSource>
-  <subject>
-    <reference value="Patient/pat1"/>
-    <display value="Donald Duck"/> 
-  </subject> 
   <derivedFrom>
     <reference value="MedicationRequest/medrx002"/>
   </derivedFrom>
-
-  <taken value="n"/>
   <reasonCode>
     <coding>
       <system value="http://snomed.info/sct"/>
@@ -107,6 +110,9 @@
       <display value="Restless Legs"/>
     </coding>
   </reasonCode>
+
+
+
   <note>
     <text value="Patient indicates they miss the occasional dose"/>
   </note>
@@ -137,19 +143,29 @@
           <display value="Oral Route"/>
       </coding>
     </route>
+    <doseAndRate>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+          <code value="ordered"/>
+          <display value="Ordered"/>
+        </coding>
+      </type>
       <doseRange>
         <low>
-      <value value="1"/>
+          <value value="1"/>
           <unit value="TAB"/>
-          <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
           <code value="TAB"/>
         </low>
         <high>
           <value value="2"/>
           <unit value="TAB"/>
-          <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
           <code value="TAB"/>
         </high>
       </doseRange>
+    </doseAndRate>
+    
   </dosage>
 </MedicationStatement>

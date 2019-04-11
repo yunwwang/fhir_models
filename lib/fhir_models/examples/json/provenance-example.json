@@ -1,16 +1,12 @@
 {
   "resourceType": "Provenance",
   "id": "example",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">procedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from XDS managed CDA Referral received 26-June</div>"
-  },
   "target": [
     {
       "reference": "Procedure/example/_history/1"
     }
   ],
-  "period": {
+  "occurredPeriod": {
     "start": "2015-06-27",
     "end": "2015-06-28"
   },
@@ -23,44 +19,40 @@
   },
   "reason": [
     {
-      "system": "http://snomed.info/sct",
-      "code": "3457005",
-      "display": "Referral"
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "3457005",
+          "display": "Referral"
+        }
+      ]
     }
   ],
   "agent": [
     {
-      "role": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/v3/ParticipationType",
-              "code": "AUT"
-            }
-          ]
-        }
-      ],
-      "whoReference": {
-        "reference": "Practitioner/xcda-author"
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+            "code": "AUT"
+          }
+        ]
       },
-      "onBehalfOfUri": "#a1",
-      "relatedAgentType": {
-        "text": "used"
+      "who": {
+        "reference": "Practitioner/xcda-author"
       }
     },
     {
       "id": "a1",
-      "role": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/v3/ParticipationType",
-              "code": "DEV"
-            }
-          ]
-        }
-      ],
-      "whoReference": {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+            "code": "DEV"
+          }
+        ]
+      },
+      "who": {
         "reference": "Device/software"
       }
     }
@@ -68,10 +60,19 @@
   "entity": [
     {
       "role": "source",
-      "whatReference": {
+      "what": {
         "reference": "DocumentReference/example",
         "display": "CDA Document in XDS repository"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

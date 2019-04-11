@@ -1,27 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><Questionnaire xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://hl7.org/fhir">
   <id value="3141"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <pre>
-            1.Comorbidity?
-              1.1 Cardial Comorbidity
-                1.1.1 Angina?
-                1.1.2 MI?
-              1.2 Vascular Comorbidity?
-              ...
-            Histopathology
-              Abdominal
-                pT category?
-              ...
-          </pre>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <url value="http://hl7.org/fhir/Questionnaire/3141"/>
   <title value="Cancer Quality Forum Questionnaire 2012"/>
   <status value="draft"/>
-  <date value="2012-01"/>
   <subjectType value="Patient"/>
+  <date value="2012-01"/>
   <item>
     <linkId value="1"/>
     <code>
@@ -37,9 +29,7 @@
       </code>
       <prefix value="1"/>
       <type value="choice"/>
-      <options>
-        <reference value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
-      </options>
+      <answerValueSet value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
       <item>
         <linkId value="1.1.1"/>
         <code>
@@ -49,8 +39,9 @@
         <type value="group"/>
         <enableWhen>
           <question value="1.1"/>
+          <operator value="="/>
           <answerCoding>
-            <system value="http://hl7.org/fhir/v2/0136"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0136"/>
             <code value="Y"/>
           </answerCoding>
         </enableWhen>
@@ -62,9 +53,7 @@
           </code>
           <prefix value="1.1"/>
           <type value="choice"/>
-          <options>
-            <reference value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
-          </options>
+          <answerValueSet value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
           <item>
             <linkId value="1.1.1.1.1"/>
             <code>
@@ -79,9 +68,7 @@
             </code>
             <prefix value="1.1.1"/>
             <type value="choice"/>
-            <options>
-              <reference value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
-            </options>
+            <answerValueSet value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
           </item>
           <item>
             <linkId value="1.1.1.1.2"/>
@@ -92,9 +79,7 @@
             </code>
             <prefix value="1.1.2"/>
             <type value="choice"/>
-            <options>
-              <reference value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
-            </options>
+            <answerValueSet value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
           </item>
         </item>
         <item>
@@ -105,9 +90,7 @@
           </code>
           <prefix value="1.2"/>
           <type value="choice"/>
-          <options>
-            <reference value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
-          </options>
+          <answerValueSet value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
         </item>
       </item>
     </item>

@@ -1,24 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><Goal xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Goal xmlns="http://hl7.org/fhir">
 	<id value="example"/>
-	<text>
-		<status value="additional"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<p> A simple care goal for a patient to lose weight due to obesity.</p>
-		</div>
-	</text>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 	<identifier>
 		<value value="123"/>
 	</identifier>
-	<status value="on-hold"/>
+	<lifecycleStatus value="on-hold"/>
 	<category>
 		<coding>
-			<system value="http://hl7.org/fhir/goal-category"/>
+			<system value="http://terminology.hl7.org/CodeSystem/goal-category"/>
 			<code value="dietary"/>
 		</coding>
 	</category>
 	<priority>
 		<coding>
-			<system value="http://hl7.org/fhir/goal-priority"/>
+			<system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
 			<code value="high-priority"/>
 			<display value="High Priority"/>
 		</coding>

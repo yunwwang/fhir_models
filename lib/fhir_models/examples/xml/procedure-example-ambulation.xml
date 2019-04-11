@@ -1,31 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><Procedure xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure xmlns="http://hl7.org/fhir">
   <id value="ambulation"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Ambulation procedure was not done</div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <identifier>
        <value value="12345"/>
   </identifier>
-  <definition>
-    <display value="Protocol for hypertension during pregnancy"/>
-  </definition>
-
+  <instantiatesUri value="http://example.org/protocol-for-hypertension-during-pregnancy"/>
+  
   <basedOn>
     <reference value="CarePlan/preg"/>
     <display value="Maternity care plan"/>
   </basedOn>
 
-  <status value="suspended"/>
-  <notDone value="true"/>
-  <notDoneReason>
+  <status value="not-done"/>
+ 
+  <statusReason>
     <coding>
       <system value="http://snomed.info/sct"/>
       <code value="398254007"/>
       <display value="  Pre-eclampsia (disorder)"/>
     </coding>
     <text value="Pre-eclampsia"/>
-  </notDoneReason>
+  </statusReason>
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>

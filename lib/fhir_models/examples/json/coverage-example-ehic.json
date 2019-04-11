@@ -1,10 +1,6 @@
 {
   "resourceType": "Coverage",
   "id": "7547E",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the European Health Insurance Card</div>"
-  },
   "identifier": [
     {
       "system": "http://ehic.com/insurer/123456789/member",
@@ -15,7 +11,7 @@
   "type": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/v3/ActCode",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
         "code": "EHCPOL",
         "display": "extended healthcare"
       }
@@ -44,5 +40,14 @@
         "value": "123456789"
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

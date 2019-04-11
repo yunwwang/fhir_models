@@ -1,6 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><List xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<List xmlns="http://hl7.org/fhir">
   <id value="example-double-cousin-relationship"/>
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-double-cousin-relationship</p><p><b>contained</b>: , , , , , </p><p><b>status</b>: current</p><p><b>mode</b>: snapshot</p><p><b>code</b>: TPMT gene mutations found [Identifier] in Blood or Tissue by Sequencing Nominal <span>(Details : {LOINC code &#39;80738-8&#39; = &#39;TPMT gene mutations found [Identifier] in Blood or Tissue by Sequencing Nominal&#39;, given as &#39;TPMT gene mutations found [Identifier] in Blood or Tissue by Sequencing Nominal&#39;})</span></p><p><b>subject</b>: <a>Pam Taylor</a></p><blockquote><p><b>entry</b></p><p><b>item</b>: id: 1; status: completed; name: Mary; natural mother <span>(Details : {http://hl7.org/fhir/v3/RoleCode code &#39;NMTH&#39; = &#39;natural mother&#39;, given as &#39;natural mother&#39;})</span>; deceased</p></blockquote><blockquote><p><b>entry</b></p><p><b>item</b>: id: 2; status: completed; name: Bob; paternal uncle <span>(Details : {http://hl7.org/fhir/v3/RoleCode code &#39;PUNCLE&#39; = &#39;paternal uncle&#39;, given as &#39;paternal uncle&#39;})</span></p></blockquote><blockquote><p><b>entry</b></p><p><b>item</b>: id: 3; status: completed; name: Jon; maternal uncle <span>(Details : {http://hl7.org/fhir/v3/RoleCode code &#39;MUNCLE&#39; = &#39;maternal uncle&#39;, given as &#39;maternal uncle&#39;})</span></p></blockquote><blockquote><p><b>entry</b></p><p><b>item</b>: id: 4; status: completed; name: Alica; maternal grandmother <span>(Details : {http://hl7.org/fhir/v3/RoleCode code &#39;MGRMTH&#39; = &#39;maternal grandmother&#39;, given as &#39;maternal grandmother&#39;})</span>; 70 yr<span> (Details: UCUM code a = &#39;a&#39;)</span></p></blockquote><blockquote><p><b>entry</b></p><p><b>item</b>: id: 5; status: completed; name: Aunt with Parent ID; maternal aunt <span>(Details : {http://hl7.org/fhir/v3/RoleCode code &#39;MAUNT&#39; = &#39;maternal aunt&#39;, given as &#39;maternal aunt&#39;})</span>; gender: female; 55 yr<span> (Details: UCUM code a = &#39;a&#39;)</span></p></blockquote><blockquote><p><b>entry</b></p><p><b>item</b>: id: 6; status: completed; name: Paul; Paternal grandfather <span>(Details : {http://hl7.org/fhir/v3/RoleCode code &#39;PGRFTH&#39; = &#39;paternal grandfather&#39;, given as &#39;Paternal grandfather&#39;})</span>; 74 yr<span> (Details: UCUM code b = &#39;b&#39;)</span></p></blockquote></div></text><contained>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <contained>
     <FamilyMemberHistory>
       <id value="1"/>
       <status value="completed"/>
@@ -11,7 +19,7 @@
       <name value="Mary"/>
       <relationship>
         <coding>
-          <system value="http://hl7.org/fhir/v3/RoleCode"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
           <code value="NMTH"/>
           <display value="natural mother"/>
         </coding>
@@ -47,7 +55,7 @@
       <name value="Bob"/>
       <relationship>
         <coding>
-          <system value="http://hl7.org/fhir/v3/RoleCode"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
           <code value="PUNCLE"/>
           <display value="paternal uncle"/>
         </coding>
@@ -82,7 +90,7 @@
       <name value="Jon"/>
       <relationship>
         <coding>
-          <system value="http://hl7.org/fhir/v3/RoleCode"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
           <code value="MUNCLE"/>
           <display value="maternal uncle"/>
         </coding>
@@ -97,7 +105,7 @@
         <extension url="type">
           <valueCodeableConcept>
             <coding>
-              <system value="http://hl7.org/fhir/v3/RoleCode"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
               <code value="NSIS"/>
               <display value="natural sister"/>
             </coding>
@@ -121,7 +129,7 @@
       <!--  This is a new relationship that here is a maternal grandmother who is paternal grandmonther's sibling   -->
       <relationship>
         <coding>
-          <system value="http://hl7.org/fhir/v3/RoleCode"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
           <code value="MGRMTH"/>
           <display value="maternal grandmother"/>
         </coding>
@@ -142,7 +150,7 @@
         <extension url="type">
           <valueCodeableConcept>
             <coding>
-              <system value="http://hl7.org/fhir/v3/RoleCode"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
               <code value="MTH"/>
               <display value="mother"/>
             </coding>
@@ -164,13 +172,19 @@
       <name value="Aunt with Parent ID"/>
       <relationship>
         <coding>
-          <system value="http://hl7.org/fhir/v3/RoleCode"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
           <code value="MAUNT"/>
           <display value="maternal aunt"/>
         </coding>
         <text value="maternal aunt"/>
       </relationship>
-      <gender value="female"/>
+      <sex>
+		<coding>
+		  <system value="http://hl7.org/fhir/administrative-gender"/>
+		  <code value="female"/>
+		  <display value="Female"/>
+		</coding>
+	  </sex>
       <ageAge>
         <value value="55"/>
         <unit value="yr"/>
@@ -186,6 +200,7 @@
         <extension url="type">
           <valueCodeableConcept>
             <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
               <code value="NBRO"/>
               <display value="natural brother"/>
             </coding>
@@ -209,7 +224,7 @@
       <!--  This is a new relationship that here is a maternal grandmother who is paternal grandmonther's sibling   -->
       <relationship>
         <coding>
-          <system value="http://hl7.org/fhir/v3/RoleCode"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
           <code value="PGRFTH"/>
           <display value="Paternal grandfather"/>
         </coding>

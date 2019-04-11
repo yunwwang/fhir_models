@@ -1,10 +1,6 @@
 {
   "resourceType": "CareTeam",
   "id": "example",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Care Team</div>"
-  },
   "contained": [
     {
       "resourceType": "Practitioner",
@@ -29,8 +25,9 @@
     {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/care-team-category",
-          "code": "encounter"
+          "system": "http://loinc.org",
+          "code": "LA27976-2",
+          "display": "Encounter-focused care team"
         }
       ]
     }
@@ -40,7 +37,7 @@
     "reference": "Patient/example",
     "display": "Peter James Chalmers"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/example"
   },
   "period": {
@@ -48,18 +45,22 @@
   },
   "participant": [
     {
-      "role": {
-        "text": "responsiblePerson"
-      },
+      "role": [
+        {
+          "text": "responsiblePerson"
+        }
+      ],
       "member": {
         "reference": "Patient/example",
         "display": "Peter James Chalmers"
       }
     },
     {
-      "role": {
-        "text": "adviser"
-      },
+      "role": [
+        {
+          "text": "adviser"
+        }
+      ],
       "member": {
         "reference": "#pr1",
         "display": "Dorothy Dietition"
@@ -76,5 +77,14 @@
     {
       "reference": "Organization/f001"
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

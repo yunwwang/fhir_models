@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><CareTeam xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<CareTeam xmlns="http://hl7.org/fhir">
   <id value="example"/>
 
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Care Team</div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 
   <contained>
     <Practitioner>
@@ -21,8 +26,9 @@
   <status value="active"/>
   <category>
      <coding>
-       <system value="http://hl7.org/fhir/care-team-category"/>
-       <code value="encounter"/>
+       <system value="http://loinc.org"/>
+       <code value="LA27976-2"/>
+	   <display value="Encounter-focused care team"/>
      </coding>
   </category>
   <name value="Peter James Charlmers Care Plan for Inpatient Encounter"/>
@@ -30,9 +36,9 @@
     <reference value="Patient/example"/>
     <display value="Peter James Chalmers"/>
   </subject>
-  <context>
+  <encounter>
 	<reference value="Encounter/example"/>
-  </context>
+  </encounter>
   <period>
     <end value="2013-01-01"/>
   </period>

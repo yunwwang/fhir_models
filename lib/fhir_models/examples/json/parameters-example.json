@@ -1,18 +1,48 @@
 {
   "resourceType": "Parameters",
-  "id": "example",
   "parameter": [
     {
-      "name": "start",
-      "valueDate": "2010-01-01"
+      "name": "exact",
+      "valueBoolean": true
     },
     {
-      "name": "end",
+      "name": "property",
+      "part": [
+        {
+          "name": "code",
+          "valueCode": "focus"
+        },
+        {
+          "name": "value",
+          "valueCode": "top"
+        }
+      ]
+    },
+    {
+      "name": "patient",
       "resource": {
-        "resourceType": "Binary",
-        "contentType": "text/plain",
-        "content": "VGhpcyBpcyBhIHRlc3QgZXhhbXBsZQ=="
+        "resourceType": "Patient",
+        "id": "example",
+        "name": [
+          {
+            "use": "official",
+            "family": "Chalmers",
+            "given": [
+              "Peter",
+              "James"
+            ]
+          }
+        ]
       }
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

@@ -1,9 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
 	<id value="date-lastmp"/>
-	<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: date-lastmp</p><p><b>status</b>: final</p><p><b>category</b>: AOE <span>(Details : {http://hl7.org/fhir/observation-category code &#39;survey&#39; = &#39;Survey&#39;, given as &#39;Survey&#39;})</span></p><p><b>code</b>: Date last menstrual period <span>(Details : {LOINC code &#39;8665-2&#39; = &#39;Last menstrual period start date&#39;, given as &#39;Date last menstrual period&#39;})</span></p><p><b>subject</b>: <a>Patient/pat2</a></p><p><b>effective</b>: Jan 24, 2016</p><p><b>value</b>: Dec 30, 2016</p></div></text><status value="final"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <status value="final"/>
 	<category>
 		<coding>
-			<system value="http://hl7.org/fhir/observation-category"/>
+			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
 			<code value="survey"/>
 			<display value="Survey"/>
 		</coding>

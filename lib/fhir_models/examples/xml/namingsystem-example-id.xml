@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><NamingSystem xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
   <id value="example-id"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>
-        <b>Australian IHI Number</b>
-      </p>
-      
-      <p> oid: 1.2.36.1.2001.1003.0</p>
-      
-      <p> uri: http://ns.electronichealth.net.au/id/hi/ihi/1.0</p>
-    
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <name value="Austalian Healthcare Identifier - Individual"/>
   <status value="active"/>
   <kind value="identifier"/>
@@ -28,13 +24,13 @@
   <responsible value="HI Service Operator / NEHTA"/>
   <type> 
     <coding> 
-      <system value="http://hl7.org/fhir/v2/0203"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
       <code value="NI"/>
       <display value="National unique individual identifier"/>
     </coding>
     <text value="IHI"/> 
   </type>  
-  <description value="Australian HI Identifier as established by relevant regulations etc"/>
+  <description value="Australian HI Identifier as established by relevant regulations etc."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

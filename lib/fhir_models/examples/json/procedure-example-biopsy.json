@@ -1,10 +1,6 @@
 {
   "resourceType": "Procedure",
   "id": "biopsy",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Biopsy of suspected melanoma L) arm</div>"
-  },
   "status": "completed",
   "category": {
     "coding": [
@@ -88,5 +84,14 @@
       ],
       "text": "30-guage needle"
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

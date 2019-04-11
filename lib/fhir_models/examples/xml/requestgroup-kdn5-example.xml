@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><RequestGroup xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<RequestGroup xmlns="http://hl7.org/fhir">
   <id value="kdn5-example"/>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Administer gemcitabine and carboplatin.</div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
   <contained>
     <MedicationRequest>
       <id value="1111"/>
+      <status value="unknown"/>
       <intent value="proposal"/>
       <medicationCodeableConcept>
         <coding>
@@ -20,7 +26,7 @@
         <reference value="Patient/example"/>
       </subject>
       <dosageInstruction>
-        <text value="1250 mg/m&#xB2; IV over 30 minutes"/>
+        <text value="1250 mg/m² IV over 30 minutes"/>
         <timing>
           <repeat>
             <duration value="30"/>
@@ -30,16 +36,26 @@
         <route>
           <text value="IV"/>
         </route>
-        <doseQuantity>
+        <doseAndRate>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+              <code value="ordered"/>
+              <display value="Ordered"/>
+            </coding> 
+          </type>
+          <doseQuantity>
           <value value="1250"/>
-          <unit value="mg/m&#xB2;"/>
-        </doseQuantity>
+          <unit value="mg/m²"/>
+          </doseQuantity>
+        </doseAndRate>
       </dosageInstruction>
     </MedicationRequest>
   </contained>
   <contained>
     <MedicationRequest>
       <id value="2222"/>
+      <status value="unknown"/>
       <intent value="proposal"/>
       <medicationCodeableConcept>
         <coding>
@@ -63,34 +79,42 @@
         <route>
           <text value="IV"/>
         </route>
-        <doseQuantity>
-          <!--  AUC as dose unit or as an extension?  -->
-          <extension url="http://example.org/fhir/AUC-dose">
-            <valueInteger value="5"/>
-          </extension>
-          <!--  <value value="5" />
+        <doseAndRate>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+              <code value="ordered"/>
+              <display value="Ordered"/>
+            </coding> 
+          </type>
+          <doseQuantity>
+            <!--  AUC as dose unit or as an extension?  -->
+            <extension url="http://example.org/fhir/AUC-dose">
+              <valueInteger value="5"/>
+            </extension>
+            <!--  <value value="5" />
           <unit value="AUC" />
           <system value="http://snomed.info/sct" />
           <code value="413573002" />  -->
-        </doseQuantity>
+          </doseQuantity>
+        </doseAndRate>
+       
       </dosageInstruction>
     </MedicationRequest>
   </contained>
   <identifier>
     <value value="requestgroup-kdn5"/>
   </identifier>  
-  <definition>
-    <reference value="PlanDefinition/KDN5"/>
-  </definition>
+  <instantiatesCanonical value="PlanDefinition/KDN5"/>
   <status value="draft"/>
   <intent value="plan"/>
   <priority value="routine"/>
   <subject>
     <reference value="Patient/example"/>
   </subject>
-  <context>
+  <encounter>
     <reference value="Encounter/example"/>
-  </context>
+  </encounter>
   <authoredOn value="2017-03-06T17:31:00Z"/>
   <author>
     <reference value="Practitioner/1"/>
@@ -129,7 +153,7 @@
                 <valueInteger value="8"/>
               </extension>
             </extension>
-            <textEquivalent value="Gemcitabine 1250 mg/m&#xB2; IV over 30 minutes on days 1 and 8"/>
+            <textEquivalent value="Gemcitabine 1250 mg/m² IV over 30 minutes on days 1 and 8"/>
             <resource>
               <reference value="#1111"/>
             </resource>

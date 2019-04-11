@@ -1,10 +1,6 @@
 {
   "resourceType": "ClaimResponse",
   "id": "R3500",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ClaimResponse</div>"
-  },
   "identifier": [
     {
       "system": "http://www.BenefitsInc.com/fhir/remittance",
@@ -12,6 +8,23 @@
     }
   ],
   "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+        "code": "oral"
+      }
+    ]
+  },
+  "subType": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-claimsubtype",
+        "code": "emergency"
+      }
+    ]
+  },
+  "use": "claim",
   "patient": {
     "reference": "Patient/1"
   },
@@ -22,35 +35,25 @@
       "value": "555123"
     }
   },
-  "requestProvider": {
-    "reference": "Practitioner/1"
-  },
-  "requestOrganization": {
+  "requestor": {
     "reference": "Organization/1"
   },
   "request": {
     "reference": "http://www.BenefitsInc.com/fhir/Claim/15476332402"
   },
-  "outcome": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/remittance-outcome",
-        "code": "complete"
-      }
-    ]
-  },
+  "outcome": "complete",
   "disposition": "Claim settled as per contract.",
   "payeeType": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/payeetype",
+        "system": "http://terminology.hl7.org/CodeSystem/payeetype",
         "code": "provider"
       }
     ]
   },
   "item": [
     {
-      "sequenceLinkId": 1,
+      "itemSequence": 1,
       "adjudication": [
         {
           "category": {
@@ -62,8 +65,7 @@
           },
           "amount": {
             "value": 135.57,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "currency": "USD"
           }
         },
         {
@@ -75,9 +77,8 @@
             ]
           },
           "amount": {
-            "value": 10.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 10.0,
+            "currency": "USD"
           }
         },
         {
@@ -88,7 +89,7 @@
               }
             ]
           },
-          "value": 80.00
+          "value": 80.0
         },
         {
           "category": {
@@ -98,30 +99,56 @@
               }
             ]
           },
+          "reason": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/adjudication-reason",
+                "code": "ar002",
+                "display": "Plan Limit Reached"
+              }
+            ]
+          },
           "amount": {
-            "value": 100.47,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
+            "value": 90.47,
+            "currency": "USD"
           }
         }
       ]
     }
   ],
-  "totalCost": {
-    "value": 135.57,
-    "system": "urn:iso:std:iso:4217",
-    "code": "USD"
-  },
-  "totalBenefit": {
-    "value": 100.47,
-    "system": "urn:iso:std:iso:4217",
-    "code": "USD"
-  },
+  "total": [
+    {
+      "category": {
+        "coding": [
+          {
+            "code": "submitted"
+          }
+        ]
+      },
+      "amount": {
+        "value": 135.57,
+        "currency": "USD"
+      }
+    },
+    {
+      "category": {
+        "coding": [
+          {
+            "code": "benefit"
+          }
+        ]
+      },
+      "amount": {
+        "value": 90.47,
+        "currency": "USD"
+      }
+    }
+  ],
   "payment": {
     "type": {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/ex-paymenttype",
+          "system": "http://terminology.hl7.org/CodeSystem/ex-paymenttype",
           "code": "complete"
         }
       ]
@@ -129,12 +156,20 @@
     "date": "2014-08-31",
     "amount": {
       "value": 100.47,
-      "system": "urn:iso:std:iso:4217",
-      "code": "USD"
+      "currency": "USD"
     },
     "identifier": {
       "system": "http://www.BenefitsInc.com/fhir/paymentidentifier",
       "value": "201408-2-1569478"
     }
+  },
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
   }
 }

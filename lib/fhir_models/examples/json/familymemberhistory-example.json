@@ -1,22 +1,15 @@
 {
   "resourceType": "FamilyMemberHistory",
   "id": "father",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father died of a heart attack aged 74</div>"
-  },
   "identifier": [
     {
       "value": "12345"
     }
   ],
-  "definition": [
-    {
-      "display": "Family Member History Questionnaire"
-    }
+  "instantiatesUri": [
+    "http://example.org/family-member-history-questionnaire"
   ],
   "status": "completed",
-  "notDone": false,
   "patient": {
     "reference": "Patient/example",
     "display": "Peter Patient"
@@ -25,13 +18,21 @@
   "relationship": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/v3/RoleCode",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
         "code": "FTH",
         "display": "father"
       }
     ]
   },
-  "gender": "male",
+  "sex": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/administrative-gender",
+        "code": "male",
+        "display": "Male"
+      }
+    ]
+  },
   "condition": [
     {
       "code": {
@@ -44,6 +45,7 @@
         ],
         "text": "Heart Attack"
       },
+      "contributedToDeath": true,
       "onsetAge": {
         "value": 74,
         "unit": "yr",
@@ -56,5 +58,14 @@
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
 }

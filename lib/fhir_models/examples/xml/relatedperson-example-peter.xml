@@ -1,27 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><RelatedPerson xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
  <id value="peter"/>
-  <text>
-
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <table>
-        <tbody>
-          <tr>
-            <td>Name</td>
-            <td>Peter Chalmers</td>
-          </tr>
-          <tr>
-            <td>Address</td>
-            <td>534 Erewhon, Pleasantville, Vic, 3999</td>
-          </tr>
-          <tr>
-            <td>Contacts</td>
-            <td>Work: (03) 5555 6473</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </text>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 
   <patient>
     <reference value="Patient/animal"/>
@@ -29,7 +16,7 @@
   
   <relationship>
     <coding>
-      <system value="http://hl7.org/fhir/v2/0131"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
       <code value="C"/>
     </coding>
   </relationship>

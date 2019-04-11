@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><Composition xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns="http://hl7.org/fhir">
 	<id value="example"/>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<p>Consultation note for Henry Levin the 7th</p>
-			<p>Managed by Good Health Clinic</p>
-		</div>
-	</text>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  
 	<identifier>
 		<system value="http://healthintersections.com.au/test"/>
 		<value value="1"/>
@@ -19,13 +21,13 @@
 			<display value="Consult note"/>
 		</coding>
 	</type>
-	<class>
+	<category>
 		<coding>
 			<system value="http://loinc.org"/>
 			<code value="LP173421-1"/>
 			<display value="Report"/>
 		</coding>
-	</class>
+	</category>
 	<subject>
 		<reference value="Patient/xcda"/>
 		<display value="Henry Levin the 7th"/>
@@ -75,7 +77,7 @@
 	<event>
 		<code>
 			<coding>
-				<system value="http://hl7.org/fhir/v3/ActCode"/>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
 				<code value="HEALTHREC"/>
 				<display value="health record"/>
 			</coding>
@@ -145,7 +147,7 @@
 		<mode value="snapshot"/>
 		<orderedBy>
 			<coding>
-				<system value="http://hl7.org/fhir/list-order"/>
+				<system value="http://terminology.hl7.org/CodeSystem/list-order"/>
 				<code value="event-date"/>
 				<display value="Sorted by Event Date"/>
 			</coding>
@@ -178,7 +180,7 @@
 		<mode value="snapshot"/>
 		<emptyReason>
 			<coding>
-				<system value="http://hl7.org/fhir/list-empty-reason"/>
+				<system value="http://terminology.hl7.org/CodeSystem/list-empty-reason"/>
 				<code value="withheld"/>
 				<display value="Information Withheld"/>
 			</coding>

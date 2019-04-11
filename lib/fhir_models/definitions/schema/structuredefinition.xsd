@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 26, 2017 18:33-0400 for FHIR v3.0.0 
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -92,7 +92,7 @@
           <xs:element name="keyword" minOccurs="0" maxOccurs="unbounded" type="Coding">
             
           </xs:element>
-          <xs:element name="fhirVersion" minOccurs="0" maxOccurs="1" type="id">
+          <xs:element name="fhirVersion" minOccurs="0" maxOccurs="1" type="FHIRVersion">
             
           </xs:element>
           <xs:element name="mapping" type="StructureDefinition.Mapping" minOccurs="0" maxOccurs="unbounded">
@@ -104,19 +104,16 @@
           <xs:element name="abstract" minOccurs="1" maxOccurs="1" type="boolean">
             
           </xs:element>
-          <xs:element name="contextType" minOccurs="0" maxOccurs="1" type="ExtensionContext">
-            
-          </xs:element>
-          <xs:element name="context" minOccurs="0" maxOccurs="unbounded" type="string">
+          <xs:element name="context" type="StructureDefinition.Context" minOccurs="0" maxOccurs="unbounded">
             
           </xs:element>
           <xs:element name="contextInvariant" minOccurs="0" maxOccurs="unbounded" type="string">
             
           </xs:element>
-          <xs:element name="type" minOccurs="1" maxOccurs="1" type="code">
+          <xs:element name="type" minOccurs="1" maxOccurs="1" type="uri">
             
           </xs:element>
-          <xs:element name="baseDefinition" minOccurs="0" maxOccurs="1" type="uri">
+          <xs:element name="baseDefinition" minOccurs="0" maxOccurs="1" type="canonical">
             
           </xs:element>
           <xs:element name="derivation" minOccurs="0" maxOccurs="1" type="TypeDerivationRule">
@@ -147,6 +144,21 @@
             
           </xs:element>
           <xs:element name="comment" minOccurs="0" maxOccurs="1" type="string">
+            
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="StructureDefinition.Context">
+    
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="type" minOccurs="1" maxOccurs="1" type="ExtensionContextType">
+            
+          </xs:element>
+          <xs:element name="expression" minOccurs="1" maxOccurs="1" type="string">
             
           </xs:element>
         </xs:sequence>
@@ -219,12 +231,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="ExtensionContext-list">
+  <xs:simpleType name="ExtensionContextType-list">
     <xs:restriction base="code-primitive">
-      <xs:enumeration value="resource">
+      <xs:enumeration value="fhirpath">
         
       </xs:enumeration>
-      <xs:enumeration value="datatype">
+      <xs:enumeration value="element">
         
       </xs:enumeration>
       <xs:enumeration value="extension">
@@ -232,11 +244,11 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="ExtensionContext">
+  <xs:complexType name="ExtensionContextType">
     
     <xs:complexContent>
       <xs:extension base="Element">
-        <xs:attribute name="value" type="ExtensionContext-list" use="optional"/>
+        <xs:attribute name="value" type="ExtensionContextType-list" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
