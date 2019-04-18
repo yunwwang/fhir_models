@@ -6,3 +6,6 @@ Gemfile.lock
 .ruby-version
 .ruby-gemset
 tmp/
+
+# User-specific
+.idea
