@@ -16,7 +16,7 @@ module FHIR
           end
         end
       end
-      hash = prune(hash)
+      hash = prune(hash) || {}
       hash['resourceType'] = resourceType if respond_to?(:resourceType)
       hash
     end
