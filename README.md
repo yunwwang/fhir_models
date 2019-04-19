@@ -1,8 +1,8 @@
 # fhir_models [![Build Status](https://api.travis-ci.org/fhir-crucible/fhir_models.svg?branch=master)](https://travis-ci.org/fhir-crucible/fhir_models)
 
-FHIR STU3 Resource models generated from FHIR StructureDefinitions.
+FHIR R4 Resource models generated from FHIR StructureDefinitions.
 
-The StructureDefinitions, XML Schemas, and examples are reused from the [HL7 FHIR build tools](https://github.com/hl7-fhir/fhir-svn).
+The StructureDefinitions, XML Schemas, and examples are reused from the [HL7 FHIR build tools](https://github.com/HL7/fhir).
 
 ### Getting Started
 ```
@@ -11,7 +11,7 @@ $ bundle exec rake fhir:console
 ```
 
 ### Features
-- FHIR STU3 Resource Models
+- FHIR R4 Resource Models
 - XML and JSON support
 - Resource Validation
 - Not Supported
@@ -73,7 +73,7 @@ $ bundle exec rake fhir:console
   ```
 # License
 
-Copyright 2014-2018 The MITRE Corporation
+Copyright 2014-2019 The MITRE Corporation
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
