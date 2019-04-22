@@ -22,20 +22,21 @@ module FHIR
     end
 
     def prune(thing)
+      # Inspired by active-support `blank` but in our case false isn't blank ...
+      # https://github.com/rails/rails/blob/v5.2.3/activesupport/lib/active_support/core_ext/object/blank.rb
+      blank = ->(obj) { obj.respond_to?(:empty?) ? obj.empty? : obj.nil? }
       if thing.is_a?(Array)
         return nil if thing.empty?
         thing.map! { |i| prune(i) }
-        thing.compact!
-        return nil if thing.empty?
+        thing.reject!(&blank)
       elsif thing.is_a?(Hash)
-        return nil if thing.empty?
+        return {} if thing.empty?
         thing.each do |key, value|
           thing[key] = prune(value)
         end
         thing.delete_if do |_key, value|
-          value.nil?
+          blank.call(value)
         end
-        return nil if thing.empty?
       end
       thing
     end
