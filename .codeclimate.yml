@@ -9,6 +9,10 @@ engines:
     enabled: true
   rubocop:
     enabled: true
+plugins:
+  rubocop:
+    enabled: true
+    channel: rubocop-0-67
 ratings:
   paths:
   - "**.inc"
