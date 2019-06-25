@@ -3,7 +3,7 @@ module FHIR
   # Implementation inspired by FHIR HAPI Validation
   class Validator
     attr_reader :validator_modules
-    attr_accessor :show_skipped
+    attr_reader :show_skipped
 
     # Creates a FHIR Validator
     #
@@ -16,7 +16,7 @@ module FHIR
     # Register a validator_module
     # @param [#validate] validator_module
     def register_validator_module(validator_module)
-      @validator_modules.each {|validator| validator.show_skipped = @show_skipped}
+      @validator_modules.each { |validator| validator.show_skipped = @show_skipped if validator.respond_to?(:show_skipped) }
       add_validator_module(validator_module)
     end
 
@@ -28,7 +28,7 @@ module FHIR
 
     def show_skipped=(skip)
       @show_skipped = skip
-      @validator_modules.each {|validator| validator.show_skipped = skip}
+      @validator_modules.each { |validator| validator.show_skipped = skip }
     end
 
     # Helper method for adding validator modules

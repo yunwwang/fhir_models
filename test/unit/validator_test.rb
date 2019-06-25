@@ -49,7 +49,7 @@ class ValidatorTest < Test::Unit::TestCase
     json = File.read(patient_record)
     resource = FHIR.from_contents(json)
 
-    validator.show_skipped = true
+    validator.show_skipped = false
     results = validator.validate(resource)
     assert !results.empty?
   end

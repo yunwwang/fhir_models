@@ -175,7 +175,7 @@ module FHIR
           elms = v.send(meth)
           # More than one element where the FHIRPath needs indexing
           if elms.respond_to? :each_with_index
-            elms.each_with_index do |vv,kk|
+            elms.each_with_index do |vv, kk|
               digging["#{k}.#{meth}[#{kk}]"] = vv unless blank?(vv)
             end
           # Just One
@@ -216,21 +216,17 @@ module FHIR
       # Handle Slices
       if elementdefinition.sliceName
         # Grab Extension slices
-        if elementdefinition.type.one?
-          if elementdefinition.type.first.code == 'Extension'
-            # Only select the elements which match the slice profile.
-            elements.select! do |k,v|
-              if indexed
-                v.url == elementdefinition.type.first.profile.first
-              else
-                v.select! {|vv| vv.url == elementdefinition.type.first.profile.first}
-              end
-            end
+        raise UnhandledSlice("Slice has more than one type. #{elementdefinition.id}") unless elementdefinition.type.one?
+
+        raise UnhandledSlice("Slice type #{elementdefinition.type.code} is not handled. Only Extension slices are handled") unless elementdefinition.type.first.code == 'Extension'
+
+        # Only select the elements which match the slice profile.
+        elements.select! do |_k, v|
+          if indexed
+            v.url == elementdefinition.type.first.profile.first
           else
-            raise UnhandledSlice("Slice type #{elementdefinition.type.code} is not handled. Only Extension slices are handled")
+            v.select! { |vv| vv.url == elementdefinition.type.first.profile.first }
           end
-        else
-          raise UnhandledSlice("Slice has more than one type. #{elementdefinition.id}")
         end
       end
       elements
@@ -247,7 +243,7 @@ module FHIR
     # This Exception is for indicating types of slices that are not handled.
     #
     class UnhandledSlice < StandardError
-      def initialize(msg="Unhandled Slice")
+      def initialize(msg = 'Unhandled Slice')
         super(msg)
       end
     end

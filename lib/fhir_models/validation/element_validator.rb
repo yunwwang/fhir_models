@@ -30,7 +30,7 @@ module FHIR
       result
     end
 
-    def self.verify_data_type(element, element_definition, current_path, skip = false)
+    def self.verify_data_type(_element, element_definition, _current_path, _skip = false)
       element_definition.type.code.each do |datatype|
         if FHIR::RESOURCES.include? datatype
 
