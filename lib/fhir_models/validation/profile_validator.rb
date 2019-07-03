@@ -86,27 +86,8 @@ module FHIR
       elements = retrieve_by_element_definition(element_definition, resource, false)
       result = []
 
-      if skip && @show_skipped
-        result.push(*verify_element(nil, element_definition, p, skip))
-        hierarchy[:results].push(*result)
-        @all_results.push(*result)
-        return
-      end
-
-      # Normalize type choice elements to just the element for cardinality testing
-      if element_definition.path.end_with? '[x]'
-        mtelms = Hash.new([])
-        elements.each do |k, v|
-          renorm = k.rpartition('.').first
-          mtelms["#{renorm}.#{element_definition.path.split('.').last}"].push(v)
-        end
-        elements = mtelms
-      end
-
-      # Validate the Element
-      elements.each do |p, el|
-        result.push(*verify_element(el, element_definition, p, skip))
-      end
+      # Get the Results
+      result.push(*verify_elements(elements, element_definition, skip))
 
       # Save the validation results
       hierarchy[:results].push(*result)
@@ -133,10 +114,25 @@ module FHIR
     #
     # @param resource [FHIR::Model] The resource to be validated
     # @param element_definition [FHIR::ElementDefinition] The ElementDefintion Resource which provides the validation criteria
-    private def verify_element(element, element_definition, current_path, skip = false)
+    private def verify_elements(elements, element_definition, skip = false)
       # This will hold the FHIR::ValidationResults from the various checks
       results = []
-      results.push(ElementValidator.verify_element_cardinality(element, element_definition, current_path, skip))
+
+      # Normalize type choice elements to just the element for cardinality testing
+      if element_definition.path.end_with? '[x]'
+        mtelms = Hash.new([])
+        elements.each do |k, v|
+          renorm = k.rpartition('.').first
+          mtelms["#{renorm}.#{element_definition.path.split('.').last}"].push(v)
+        end
+        mtelms.each do |p, el|
+          results.push(ElementValidator.verify_element_cardinality(el, element_definition, p, skip))
+        end
+      end
+
+      elements.each do |p, el|
+        results.push(ElementValidator.verify_element_cardinality(el, element_definition, p, skip))
+      end
       results
     end
 
