@@ -30,12 +30,39 @@ module FHIR
       result
     end
 
-    def self.verify_data_type(_element, element_definition, _current_path, _skip = false)
-      element_definition.type.code.each do |datatype|
-        if FHIR::RESOURCES.include? datatype
+    # Verify the individual FHIR Data Types
+    #
+    # FHIR Resources, Profiles and the StructureDefinitions are made up of FHIR Data Types.
+    # There are two kinds of structures that fall under the FHIR Data Types: complex-type and primitive-type.
+    # The snapshot of a resource does not contain the element definitions associated with primitive-type or complex-type
+    # structures it is composed of.
+    #
+    # This test validates
+    #
+    # https://www.hl7.org/fhir/datatypes.html
+    def self.verify_data_type(element, element_definition, current_path, skip = false)
+      # TODO: Need to update element path to reflect that they are nested in a parent
+      if skip || element_definition.type.empty? # Root Elements do not have a type
 
-        end
+        result = FHIR::ValidationResult.new
+        result.element_definition = element_definition
+        result.validation_type = :datatype
+        result.is_successful = :skipped
+        result.element_path = current_path || element_definition.path
+        return result
       end
+
+      # Get the type
+      type_code = if element_definition.type.one?
+                    element_definition.type.first.code
+                  else
+                    element_definition.type.find do |datatype|
+                      /[^.]+$/.match(element_definition.path.gsub('[x]', datatype.capitalize)) == /[^.]+$/.match(current_path)
+                    end
+                  end
+      type_def = FHIR::Definitions.type_definition(type_code) || FHIR::Definitions.resource_definition(type_code)
+      type_validator = FHIR::ProfileValidator.new(type_def)
+      type_validator.validate(element)
     end
   end
 end

@@ -132,6 +132,8 @@ module FHIR
 
       elements.each do |p, el|
         results.push(ElementValidator.verify_element_cardinality(el, element_definition, p, skip))
+        nilskip = el.nil?
+        results.push(*ElementValidator.verify_data_type(el, element_definition, p, skip || nilskip))
       end
       results
     end
@@ -187,7 +189,7 @@ module FHIR
       # If we don't want to index the last element (useful for testing cardinality)
       not_indexed = {}
       desired_elements.each do |k, v|
-        elms = v.send(last)
+        elms = v.send(last) if v.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
         not_indexed["#{k}.#{last}"] = elms
       end
       not_indexed
