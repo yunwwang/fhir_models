@@ -132,8 +132,17 @@ module FHIR
 
       elements.each do |p, el|
         results.push(ElementValidator.verify_element_cardinality(el, element_definition, p, skip))
-        nilskip = el.nil?
-        results.push(*ElementValidator.verify_data_type(el, element_definition, p, skip || nilskip))
+        # Don't validate an element that doesn't exist
+        unless blank?(el)
+          # If there are multiple elements (like exte)
+          if el.is_a? Array
+            el.each_with_index do |v, k|
+              results.push(*ElementValidator.verify_data_type(v, element_definition, "#{p}[#{k}]", skip))
+            end
+          else
+            results.push(*ElementValidator.verify_data_type(el, element_definition, p, skip))
+          end
+        end
       end
       results
     end
@@ -219,12 +228,21 @@ module FHIR
         raise UnhandledSlice("Slice type #{elementdefinition.type.code} is not handled. Only Extension slices are handled") unless elementdefinition.type.first.code == 'Extension'
 
         # Only select the elements which match the slice profile.
-        elements.select! do |_k, v|
-          if indexed
+        if indexed
+          # Elements are already indexed
+          elements.select! do |_k, v|
             v.url == elementdefinition.type.first.profile.first
-          else
-            v.select! { |vv| vv.url == elementdefinition.type.first.profile.first }
           end
+        else
+          indexed_elements = {}
+          elements.each do |k, v|
+            v.each_with_index do |vv, kk|
+              if vv.url == elementdefinition.type.first.profile.first
+                indexed_elements["#{k}[#{kk}]"] = vv
+              end
+            end
+          end
+          elements = indexed_elements
         end
       end
       elements

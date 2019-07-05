@@ -43,7 +43,6 @@ module FHIR
     def self.verify_data_type(element, element_definition, current_path, skip = false)
       # TODO: Need to update element path to reflect that they are nested in a parent
       if skip || element_definition.type.empty? # Root Elements do not have a type
-
         result = FHIR::ValidationResult.new
         result.element_definition = element_definition
         result.validation_type = :datatype
@@ -57,12 +56,29 @@ module FHIR
                     element_definition.type.first.code
                   else
                     element_definition.type.find do |datatype|
-                      /[^.]+$/.match(element_definition.path.gsub('[x]', datatype.capitalize)) == /[^.]+$/.match(current_path)
+                      /[^.]+$/.match(element_definition.path.gsub('[x]', datatype.code.capitalize)) == /[^.]+$/.match(current_path)
                     end
                   end
       type_def = FHIR::Definitions.type_definition(type_code) || FHIR::Definitions.resource_definition(type_code)
+      if type_def.nil?
+        result = FHIR::ValidationResult.new
+        result.element_definition = element_definition
+        result.validation_type = :datatype
+        result.is_successful = :skipped
+        result.element_path = current_path || element_definition.path
+        return result
+      end
       type_validator = FHIR::ProfileValidator.new(type_def)
-      type_validator.validate(element)
+      results = type_validator.validate(element)
+
+      results.each { |res| res.element_path = res.element_path.gsub(/^([^.]+)/, current_path) }
+    end
+
+    # Error for Unknown Types
+    class UnknownType < StandardError
+      def initialize(msg = "Unknown TypeCode")
+        super(msg)
+      end
     end
   end
 end
