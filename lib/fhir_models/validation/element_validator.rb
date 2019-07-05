@@ -41,8 +41,10 @@ module FHIR
     #
     # https://www.hl7.org/fhir/datatypes.html
     def self.verify_data_type(element, element_definition, current_path, skip = false)
-      # TODO: Need to update element path to reflect that they are nested in a parent
-      if skip || element_definition.type.empty? # Root Elements do not have a type
+      return unless element_definition.path.include? '.' # Root Elements do not have a type
+
+      # Can't do this validation if there is no type.
+      if skip || element_definition.type.empty?
         result = FHIR::ValidationResult.new
         result.element_definition = element_definition
         result.validation_type = :datatype
@@ -57,9 +59,11 @@ module FHIR
                   else
                     element_definition.type.find do |datatype|
                       /[^.]+$/.match(element_definition.path.gsub('[x]', datatype.code.capitalize)) == /[^.]+$/.match(current_path)
-                    end
+                    end.code
                   end
       type_def = FHIR::Definitions.type_definition(type_code) || FHIR::Definitions.resource_definition(type_code)
+
+      # If we are missing the Structure Definition needed to do the validation.
       if type_def.nil?
         result = FHIR::ValidationResult.new
         result.element_definition = element_definition
