@@ -87,7 +87,9 @@ module FHIR
       result = []
 
       # Get the Results
-      result.push(*verify_elements(elements, element_definition, skip))
+      profile_results = verify_elements(elements, element_definition, skip)
+      profile_results.each { |res| res.profile ||= @profile.url }
+      result.push(*profile_results)
 
       # Save the validation results
       hierarchy[:results].push(*result)
