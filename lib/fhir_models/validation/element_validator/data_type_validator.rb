@@ -44,7 +44,8 @@ module FHIR
                       return UnknownType.new('Need path in order to determine type') unless path
 
                       element_definition.type.find do |datatype|
-                        /[^.]+$/.match(element_definition.path.gsub('[x]', datatype.code.capitalize)) == /[^.]+$/.match(path)
+                        cap_code = "#{datatype.code[0].capitalize}#{datatype.code[1..-1]}"
+                        /[^.]+$/.match(element_definition.path.gsub('[x]', cap_code)) == /[^.]+$/.match(path)
                       end.code
                     end
         type_def = FHIR::Definitions.type_definition(type_code) || FHIR::Definitions.resource_definition(type_code)

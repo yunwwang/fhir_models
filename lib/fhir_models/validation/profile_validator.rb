@@ -91,7 +91,8 @@ module FHIR
       element_definition = hierarchy[:elementDefinition]
 
       # Get the Results
-      results = @element_validators.flat_map { |validator| validator.validate(resource, element_definition, path)}
+      results = @element_validators.flat_map { |validator| validator.validate(resource, element_definition)}
+      results.compact!
       results.each { |res| res.profile ||= @profile.url }
 
       # Save the validation results
@@ -99,6 +100,8 @@ module FHIR
       @all_results.push(*results)
 
       # Check to see if there are any valid elements to determine if we need to check the subelements
+      elements = FHIR::Validation::Retrieval.retrieve_by_element_definition(resource,
+                                                                            element_definition)
       element_exists = !blank?(elements.values.flatten.compact)
 
       # If the element doesn't exist we don't need to check its subelements unless we are instructed to by showskipped
