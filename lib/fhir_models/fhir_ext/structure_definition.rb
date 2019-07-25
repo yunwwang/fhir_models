@@ -297,6 +297,7 @@ module FHIR
 
     def verify_fixed_value(element, value)
       @errors << "#{describe_element(element)} value of '#{value}' did not match fixed value: #{element.fixed}" if !element.fixed.nil? && element.fixed != value
+      element.fixed
     end
 
     # data_type_code == a FHIR DataType code (see http://hl7.org/fhir/2015May/datatypes.html)

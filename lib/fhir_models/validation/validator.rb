@@ -1,6 +1,5 @@
 module FHIR
   # FHIR Resource Validator
-  # Implementation inspired by FHIR HAPI Validation
   class Validator
     attr_reader :validator_modules
     attr_reader :show_skipped

@@ -8,6 +8,7 @@ module FHIR
     attr_accessor :element_definition_id
     attr_accessor :element_path
     attr_accessor :profile
+    attr_accessor :text
 
     # Returns the validation result as an OperationOutcome
     #

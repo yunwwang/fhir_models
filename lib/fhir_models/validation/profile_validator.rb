@@ -2,6 +2,7 @@ module FHIR
   # Validator which allows validation of a resource against a profile
   class ProfileValidator
     @vs_validators = {}
+
     attr_accessor :all_results
     attr_accessor :show_skipped
 
@@ -13,8 +14,13 @@ module FHIR
       @profile = profile
       @all_results = []
       @show_skipped = true
+      @element_validators = []
     end
 
+    # Validate the provided resource
+    #
+    # @param resource [FHIR::Model] The Resource to be validated
+    # @return [Hash] the validation results
     def validate(resource)
       validate_against_hierarchy(resource)
       @all_results
@@ -108,6 +114,10 @@ module FHIR
       hierarchy[:slices].values.each { |v| validate_hierarchy(resource, v, !element_exists) }
     end
 
+    def register_element_validator(element_validator)
+      @element_validators.push(element_validator)
+    end
+
     private def blank?(obj)
       obj.respond_to?(:empty?) ? obj.empty? : obj.nil?
     end
@@ -136,7 +146,7 @@ module FHIR
         results.push(ElementValidator.verify_element_cardinality(el, element_definition, p, skip))
         # Don't validate an element that doesn't exist
         unless blank?(el)
-          # If there are multiple elements (like exte)
+          # If there are multiple elements (like extensions)
           if el.is_a? Array
             el.each_with_index do |v, k|
               results.push(*ElementValidator.verify_data_type(v, element_definition, "#{p}[#{k}]", skip))
