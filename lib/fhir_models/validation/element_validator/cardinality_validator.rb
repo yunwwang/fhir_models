@@ -2,6 +2,7 @@ module FHIR
   module Validation
     # Validator which allows cardinality validation of an element against an ElementDefinition
     module CardinalityValidator
+      include FHIR::Validation::Retrieval
 
       # Verify that the element meets the cardinality requirements
       #
@@ -14,6 +15,9 @@ module FHIR
         # Specification Reference: http://www.hl7.org/fhir/elementdefinition.html#interpretation
         # Zulip Chat: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/cardinality.20of.20root.20elements/near/154024550
         return unless element_definition.path.include? '.'
+
+        elements = retrieve_element_by_element_defintion(resource, element_definition, normalized: true)
+
 
         min = element_definition.min
         max = element_definition.max == '*' ? Float::INFINITY : element_definition.max.to_i
