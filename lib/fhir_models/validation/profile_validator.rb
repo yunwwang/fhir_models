@@ -5,6 +5,7 @@ module FHIR
 
     attr_accessor :all_results
     attr_accessor :show_skipped
+    attr_accessor :element_validators
 
     # Create a ProfileValidator from a FHIR::StructureDefinition
     #
@@ -127,36 +128,19 @@ module FHIR
     # @param resource [FHIR::Model] The resource to be validated
     # @param element_definition [FHIR::ElementDefinition] The ElementDefintion Resource which provides the validation criteria
     private def verify_elements(elements, element_definition, skip = false)
-      # This will hold the FHIR::ValidationResults from the various checks
-      results = []
-
       # Normalize type choice elements to just the element for cardinality testing
       if element_definition.path.end_with? '[x]'
-        mtelms = Hash.new([])
+        choice_type_elements = Hash.new([])
         elements.each do |k, v|
           renorm = k.rpartition('.').first
-          mtelms["#{renorm}.#{element_definition.path.split('.').last}"].push(v)
+          choice_type_elements["#{renorm}.#{element_definition.path.split('.').last}"].push(v)
         end
-        mtelms.each do |p, el|
-          results.push(ElementValidator.verify_element_cardinality(el, element_definition, p, skip))
-        end
+        elements = choice_type_elements
       end
 
-      elements.each do |p, el|
-        results.push(ElementValidator.verify_element_cardinality(el, element_definition, p, skip))
-        # Don't validate an element that doesn't exist
-        unless blank?(el)
-          # If there are multiple elements (like extensions)
-          if el.is_a? Array
-            el.each_with_index do |v, k|
-              results.push(*ElementValidator.verify_data_type(v, element_definition, "#{p}[#{k}]", skip))
-            end
-          else
-            results.push(*ElementValidator.verify_data_type(el, element_definition, p, skip))
-          end
-        end
+      elements.flat_map do |path, el|
+        @element_validators.map { |validator| validator.validate(el, element_definition, path)}
       end
-      results
     end
 
     # Splits a path into an array

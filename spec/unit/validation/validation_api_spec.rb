@@ -2,9 +2,27 @@ describe 'Profile Resource Validation' do
   FIXTURES_DIR = File.join('test', 'fixtures')
 
   let(:validator) {FHIR::Validator.new}
+  let(:profile_validator) { FHIR::ProfileValidator.new(structure_definition)}
+  let(:cardinality_validator) { spy(FHIR::Validation::CardinalityValidator)}
+  let(:element_definition) do
+    element_definition = FHIR::ElementDefinition.new(id: 'Patient', path: 'Patient')
+  end
+  let(:structure_definition) do
+    FHIR::StructureDefinition.new(snapshot:{element: [element_definition]})
+  end
+  let(:resource) do
+    {}
+  end
 
   it 'initially has no validator modules' do
     expect(validator.validator_modules).to be_empty
+  end
+
+  specify '#register_element_validator' do
+    profile_validator.register_element_validator(cardinality_validator)
+    profile_validator.validate(resource)
+    expect(cardinality_validator).to have_received(:validate)
+                                       .with(resource, element_definition, element_definition.path)
   end
 
   context 'with US Core Patient Profile Validator' do
