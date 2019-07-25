@@ -90,17 +90,13 @@ module FHIR
       hierarchy[:results] ||= []
       element_definition = hierarchy[:elementDefinition]
 
-      elements = retrieve_by_element_definition(element_definition, resource, false)
-      result = []
-
       # Get the Results
-      profile_results = verify_elements(elements, element_definition, skip)
-      profile_results.each { |res| res.profile ||= @profile.url }
-      result.push(*profile_results)
+      results = @element_validators.flat_map { |validator| validator.validate(resource, element_definition, path)}
+      results.each { |res| res.profile ||= @profile.url }
 
       # Save the validation results
-      hierarchy[:results].push(*result)
-      @all_results.push(*result)
+      hierarchy[:results].push(*results)
+      @all_results.push(*results)
 
       # Check to see if there are any valid elements to determine if we need to check the subelements
       element_exists = !blank?(elements.values.flatten.compact)
@@ -121,16 +117,6 @@ module FHIR
 
     private def blank?(obj)
       obj.respond_to?(:empty?) ? obj.empty? : obj.nil?
-    end
-
-    # Verify the element in the provided resource based on the provided ElementDefinition
-    #
-    # @param resource [FHIR::Model] The resource to be validated
-    # @param element_definition [FHIR::ElementDefinition] The ElementDefintion Resource which provides the validation criteria
-    private def verify_elements(elements, element_definition, skip = false)
-      elements.flat_map do |path, el|
-        @element_validators.map { |validator| validator.validate(el, element_definition, path)}
-      end
     end
 
     # Splits a path into an array

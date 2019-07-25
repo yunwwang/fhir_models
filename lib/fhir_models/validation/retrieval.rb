@@ -2,23 +2,6 @@ module FHIR
   module Validation
     # Methods for retrieving elements from resources
     module Retrieval
-
-      def blank?(obj)
-        obj.respond_to?(:empty?) ? obj.empty? : obj.nil?
-      end
-
-      # Retrieves all the elements associated with the path
-      # i.e. Patient.contact.name will return an array with all the names.
-      #
-      # @param path [String] the path
-      # @param resource [FHIR::Model] the resource from which the elements will be retrieved
-      # @return [Array] The desired elements
-      def retrieve_element(path, resource)
-        path.split('.').drop(1).inject(resource) do |memo, meth|
-          [memo].flatten.map { |thing| thing.send(meth) }
-        end
-      end
-
       # Retrieves all the elements associated with the given path with the FHIRPath of the element
       #
       # @param path [String] the path
@@ -111,7 +94,12 @@ module FHIR
         elements
       end
 
-      module_function :retrieve_by_element_definition, :retrieve_element_with_fhirpath, :blank?
+      def self.blank?(obj)
+        obj.respond_to?(:empty?) ? obj.empty? : obj.nil?
+      end
+
+      private_class_method :blank?
+      module_function :retrieve_by_element_definition, :retrieve_element_with_fhirpath
     end
   end
 end

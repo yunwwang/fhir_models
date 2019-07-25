@@ -14,16 +14,26 @@ module FHIR
       # @param element [Object] The Element of the Resource under test
       # @param element_definition [FHIR::ElementDefinition] The Element Definition from which the cardinality is taken
       # @return result [FHIR::ValidationResult] The result of the cardinality check
-      def validate(element, element_definition, current_path = nil)
+      def self.validate(resource, element_definition)
         return unless element_definition.path.include? '.' # Root Elements do not have a type
 
+        elements = FHIR::Validation::Retrieval.retrieve_by_element_definition(resource,
+                                                                              element_definition,
+                                                                              indexed: true)
+
+        elements.flat_map do |path, el|
+          validate_element(el, element_definition, path)
+        end
+      end
+
+      def self.validate_element(element, element_definition, path)
         # Can't do this validation if there is no type.
         if element_definition.type.empty?
           result = FHIR::ValidationResult.new
           result.element_definition = element_definition
           result.validation_type = :datatype
           result.is_successful = :skipped
-          result.element_path = current_path || element_definition.path
+          result.element_path = path || element_definition.path
           return result
         end
 
@@ -31,10 +41,10 @@ module FHIR
         type_code = if element_definition.type.one?
                       element_definition.type.first.code
                     else
-                      return UnknownType.new('Need current_path in order to determine type') unless current_path
+                      return UnknownType.new('Need path in order to determine type') unless path
 
                       element_definition.type.find do |datatype|
-                        /[^.]+$/.match(element_definition.path.gsub('[x]', datatype.code.capitalize)) == /[^.]+$/.match(current_path)
+                        /[^.]+$/.match(element_definition.path.gsub('[x]', datatype.code.capitalize)) == /[^.]+$/.match(path)
                       end.code
                     end
         type_def = FHIR::Definitions.type_definition(type_code) || FHIR::Definitions.resource_definition(type_code)
@@ -46,16 +56,15 @@ module FHIR
           result.validation_type = :datatype
           result.is_successful = :warn
           result.text = "Unkown type: #{type_code}"
-          result.element_path = current_path || element_definition.path
+          result.element_path = path || element_definition.path
           return result
         end
         type_validator = FHIR::ProfileValidator.new(type_def)
+        type_validator.register_element_validator(FHIR::Validation::CardinalityValidator)
         results = type_validator.validate(element)
 
-        results.each { |res| res.element_path = res.element_path.gsub(/^([^.]+)/, current_path) }
+        results.each { |res| res.element_path = res.element_path.gsub(/^([^.]+)/, path) }
       end
-
-      module_function :validate
 
       # Error for Unknown Types
       class UnknownType < StandardError

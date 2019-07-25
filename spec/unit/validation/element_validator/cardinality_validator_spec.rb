@@ -1,83 +1,119 @@
-describe FHIR::Validation::DataTypeValidator do
+describe FHIR::Validation::CardinalityValidator do
 
-  let(:validator) { FHIR::Validation::DataTypeValidator }
-
-  let(:element) { double({'name' => 'Bob'}) }
-  let(:element_definition) { instance_double(FHIR::ElementDefinition) }
-
+  let(:validator) { FHIR::Validation::CardinalityValidator }
+  let(:resource) do
+    FHIR::Patient.new(id: 2)
+  end
   describe '#validate' do
-    it 'returns a single validation results related to cardinality' do
-
-      allow(element_definition).to receive(:min)
-                                       .and_return(0)
-      allow(element_definition).to receive(:max)
-                                       .and_return(1)
-      allow(element_definition).to receive(:path)
-                                       .and_return('Foo.bar')
-
-      results = validator.validate(element, element_definition)
-      expect(results.validation_type).to be(:cardinality)
-      expect(results.is_successful).to be(true)
-    end
-
-    it 'detects when too many elements are present' do
-      allow(element_definition).to receive(:min)
-                                       .and_return(0)
-      allow(element_definition).to receive(:max)
-                                       .and_return(1)
-      allow(element_definition).to receive(:path)
-                                       .and_return('Foo.bar')
-
-      results = validator.validate([element, element], element_definition)
-      expect(results.validation_type).to be(:cardinality)
-      expect(results.is_successful).to be(false)
-    end
-
-    it 'detects when too few elements are present' do
-      allow(element_definition).to receive(:min)
-                                       .and_return(1)
-      allow(element_definition).to receive(:max)
-                                       .and_return('*')
-      allow(element_definition).to receive(:path)
-                                       .and_return('Foo.bar')
-
-      results = validator.validate(nil, element_definition)
-      expect(results.validation_type).to be(:cardinality)
-      expect(results.is_successful).to be(false)
-
-      results = validator.validate([], element_definition)
-      expect(results.validation_type).to be(:cardinality)
-      expect(results.is_successful).to be(false)
-    end
-
-    it 'can check for an exact number of elements to be present' do
-      allow(element_definition).to receive(:min)
-                                       .and_return(2)
-      allow(element_definition).to receive(:max)
-                                       .and_return(2)
-      allow(element_definition).to receive(:path)
-                                       .and_return('Foo.bar')
-
-      results = validator.validate([element, element], element_definition)
-      expect(results.validation_type).to be(:cardinality)
-      expect(results.is_successful).to be(true)
-
-      results = validator.validate(element, element_definition)
-      expect(results.validation_type).to be(:cardinality)
-      expect(results.is_successful).to be(false)
+    let(:element_definition) do  FHIR::ElementDefinition.new(min: 0,
+                                                             max: 1,
+                                                             id: 'Patient',
+                                                             path: 'Patient')
     end
 
     it 'skips cardinality on the root element' do
-      allow(element_definition).to receive(:min)
-                                       .and_return(0)
-      allow(element_definition).to receive(:max)
-                                       .and_return('*')
-      allow(element_definition).to receive(:path)
-                                       .and_return('Foo')
+      results = validator.validate(resource, element_definition)
+      expect(results).to be_nil
+    end
 
-      results = validator.validate(element, element_definition)
-      expect(results.validation_type).to be(:cardinality)
-      expect(results.is_successful).to be(:skipped)
+    context 'when the cardinality is 0..1' do
+      let(:element_definition) do  FHIR::ElementDefinition.new(min: 0,
+                                                               max: 1,
+                                                               id: 'Patient.id',
+                                                               path: 'Patient.id')
+      end
+      it 'passes when the element has a single value' do
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: true))
+      end
+      it 'fails when more than one element is present' do
+        resource.id = [1,2]
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: false))
+      end
+      it 'passes when no elements are present' do
+        resource.id = nil
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: true))
+      end
+    end
+
+    context 'when the cardinality is 0..*' do
+      let(:element_definition) do  FHIR::ElementDefinition.new(min: 0,
+                                                               max: '*',
+                                                               id: 'Patient.id',
+                                                               path: 'Patient.id')
+      end
+      it 'passes when the element has a single value' do
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: true))
+      end
+      it 'passes when more than one element is present' do
+        resource.id = [1,2]
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: true))
+      end
+      it 'passes when no elements are present' do
+        resource.id = nil
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: true))
+      end
+    end
+
+    context 'when the cardinality is 1..1' do
+      let(:element_definition) do  FHIR::ElementDefinition.new(min: 1,
+                                                               max: 1,
+                                                               id: 'Patient.id',
+                                                               path: 'Patient.id')
+      end
+      it 'passes when the element has a single value' do
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: true))
+      end
+      it 'fails when more than one element is present' do
+        resource.id = [1,2]
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: false))
+      end
+      it 'fails when no elements are present' do
+        resource.id = nil
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: false))
+      end
+    end
+
+    context 'when the cardinality is 1..*' do
+      let(:element_definition) do  FHIR::ElementDefinition.new(min: 1,
+                                                               max: '*',
+                                                               id: 'Patient.id',
+                                                               path: 'Patient.id')
+      end
+      it 'passes when the element has a single value' do
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: true))
+      end
+      it 'passes when more than one element is present' do
+        resource.id = [1,2]
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: true))
+      end
+      it 'fails when no elements are present' do
+        resource.id = nil
+        results = validator.validate(resource, element_definition)
+        expect(results).to all(have_attributes(validation_type: :cardinality))
+        expect(results).to all(have_attributes(is_successful: false))
+      end
     end
   end
 end
