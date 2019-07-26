@@ -11,6 +11,11 @@ describe FHIR::Validation::DataTypeValidator do
   end
 
   describe '#validate' do
+    let(:element_definition) do
+      FHIR::ElementDefinition.new(id: 'Patient',
+                                  path: 'Patient',
+                                  type: {code: 'Patient'})
+    end
     it 'skips the root element' do
       results = validator.validate(resource, element_definition)
       expect(results).to be_nil
@@ -23,6 +28,7 @@ describe FHIR::Validation::DataTypeValidator do
       end
       it 'returns an array of results for the single type' do
         results = validator.validate(resource, element_definition)
+        expect(results).to_not be_empty
         expect(results).to all(have_attributes(validation_type: :cardinality))
         expect(results).to all(have_attributes(is_successful: true))
       end
@@ -48,6 +54,7 @@ describe FHIR::Validation::DataTypeValidator do
       end
       it 'returns an array of results for elements with a choice of type' do
         results = validator.validate(resource, element_definition)
+        expect(results).to_not be_empty
         expect(results).to all(have_attributes(validation_type: :cardinality))
         expect(results).to include(have_attributes(element_path: a_string_including(element_definition.type[0].code)))
         expect(results).to include(have_attributes(element_path: a_string_including(element_definition.type[1].code)))
