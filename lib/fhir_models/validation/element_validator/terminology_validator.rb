@@ -45,11 +45,10 @@ module FHIR
           binding_issues = []
           fail_strength = required_strength ? false : :warn
 
-          result = FHIR::ValidationResult.new
-          result.element_definition = element_definition
-          result.validation_type = :terminology
-          result.element_path = path
-          result.element = element
+          result = FHIR::ValidationResult.new(element_definition: element_definition,
+                                              validation_type: :terminology,
+                                              element_path: path,
+                                              element: element)
 
           valueset_uri = element_definition&.binding&.valueSet
 

@@ -10,6 +10,13 @@ module FHIR
     attr_accessor :profile
     attr_accessor :text
 
+    def initialize(element: nil, element_definition: nil, element_path: nil, is_successful: nil,
+                   validation_type: nil, profile: nil, text: nil)
+      local_variables.each do |k|
+        instance_variable_set("@#{k}", binding.local_variable_get(k))
+      end
+    end
+
     # Returns the validation result as an OperationOutcome
     #
     # @return [FHIR::OperationOutcome] The OperationOutcome
