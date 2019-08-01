@@ -127,13 +127,7 @@ module FHIR
       element_definition.path.split('.')
     end
 
-    # Method for registering ValueSet and CodeSystem Validators
-    #
-    # @param valueset_uri [String] The ValueSet URI the validator is related to
-    # @param validator [#validate] The validator
-    def register_vs_validator(valueset_uri, validator)
-      @vs_validators[valueset_uri] = validator
-    end
+
 
     # This Exception is for indicating types of slices that are not handled.
     #
