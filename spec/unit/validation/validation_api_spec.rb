@@ -53,7 +53,7 @@ describe 'Profile Resource Validation' do
 
     it 'skips checking the cardinality of the root element' do
       results = validator.validate(patient_resource)
-      cardinality_results = results.select { |x| x.is_successful == :skipped }
+      cardinality_results = results.select { |x| x.result == :skipped }
       expect(cardinality_results).to_not be_empty
     end
   end

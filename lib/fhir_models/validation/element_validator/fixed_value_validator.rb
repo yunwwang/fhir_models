@@ -18,7 +18,7 @@ module FHIR
         result.validation_type = :fixed_value
         result.element = element
 
-        result.is_successful = (element == fixed)
+        result.result = (element == fixed)
         result
       end
 

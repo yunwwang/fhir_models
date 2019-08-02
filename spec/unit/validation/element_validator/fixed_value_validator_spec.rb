@@ -15,7 +15,7 @@ describe FHIR::Validation::FixedValueValidator do
 
       results = validator.validate(element, element_definition)
       expect(results.validation_type).to be(:fixed_value)
-      expect(results.is_successful).to be(true)
+      expect(results.result).to be(true)
     end
 
     it 'detects when the fixed value is incorrect' do
@@ -25,7 +25,7 @@ describe FHIR::Validation::FixedValueValidator do
 
       results = validator.validate(element, element_definition)
       expect(results.validation_type).to be(:fixed_value)
-      expect(results.is_successful).to be(false)
+      expect(results.result).to be(false)
     end
   end
 end

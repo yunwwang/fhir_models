@@ -1,7 +1,7 @@
 module FHIR
   module Validation
     class TerminologyValidator
-      def initialize(validators)
+      def initialize(validators = {})
         @vs_validators = validators
       end
 
@@ -28,6 +28,7 @@ module FHIR
       end
 
       def validate_element(element, element_definition, path)
+        results = []
         # Get the type
         type_code = if element_definition.type.one?
                       element_definition.type.first.code
@@ -40,61 +41,59 @@ module FHIR
                       end.code
                     end
 
-        if ['CodeableConcept', 'Coding', 'Quantity'].include? type_code
+        if %w[CodeableConcept Coding Quantity].include? type_code
           required_strength = element_definition&.binding&.strength == 'required'
-          binding_issues = []
-          fail_strength = required_strength ? false : :warn
 
-          result = FHIR::ValidationResult.new(element_definition: element_definition,
-                                              validation_type: :terminology,
-                                              element_path: path,
-                                              element: element)
+          # result = FHIR::ValidationResult.new(element_definition: element_definition,
+          #                                     validation_type: :terminology,
+          #                                     element_path: path,
+          #                                     element: element)
+
+          result = lambda do |result, message|
+            FHIR::ValidationResult.new(element_definition: element_definition,
+                                       validation_type: :terminology,
+                                       element_path: path,
+                                       element: element,
+                                       text: message,
+                                       result: result)
+          end
 
           valueset_uri = element_definition&.binding&.valueSet
 
-          check_code = ->coding do
+          check_code = lambda do |coding, fail_strength|
             # Can't validate if both code and system are not given
             if coding.code.nil? || coding.system.nil?
-              binding_issues << "#{path}: #{coding.to_json} missing code" if coding.code.nil?
-              binding_issues << "#{path}: #{coding.to_json} missing system" if coding.system.nil?
-              return
+              results.push(result.call(:warn, "#{path}: missing code")) if coding.code.nil?
+              results.push(result.call(:warn, "#{path}: missing system")) if coding.system.nil?
+              return results
+            end
+
+            check = lambda do |uri, fail_level|
+              check_fn = @vs_validators[uri]
+              return result.call(:warn, "Missing Validator for #{uri}") unless check_fn
+
+              return result.call(fail_level, "#{path} has no codings from #{uri}.") unless check_fn.call(coding)
+
+              return result.call(:pass, "#{path} has codings from #{uri}.")
             end
 
             # ValueSet Validation
-            check_fn = @vs_validators[valueset_uri]
-            has_valid_code = false
-            if check_fn
-              has_valid_code = check_fn.call(coding)
-              binding_issues << "#{path} has no codings from #{valueset_uri}. Codings evaluated: #{coding.to_json}" unless has_valid_code
-            else
-              binding_issues << "Missing ValueSet Validator for #{valueset_uri}"
-              result.is_successful = :warn
-            end
-
-            # CodeSystem Validation
-            unless has_valid_code
-              check_fn = @vs_validators[coding.system]
-              if check_fn && !check_fn.call(coding)
-                binding_issues << "#{path} has no codings from it's specified system: #{coding.system}.  "\
-                                      "Codings evaluated: #{coding.to_json}"
-              end
-            end
+            results.push(check.call(valueset_uri, fail_strength))
+            # Code System Validation
+            results.push(check.call(coding.system, :fail))
           end
 
           if type_code == 'CodeableConcept'
             element.coding.each do |coding|
-              check_code.(coding)
+              check_code.call(coding, required_strength ? :fail : :warn)
             end
           else
             # avoid checking Codings twice if they are already checked as part of a CodeableConcept
             # The CodeableConcept should contain the binding for the children Codings
-            check_code.(element) unless element_definition.path.include? 'CodeableConcept.coding'
+            check_code.call(element, required_strength ? :fail : :warn) unless element_definition.path.include? 'CodeableConcept.coding'
           end
-          result.text = binding_issues
-
-          result.is_successful ||= binding_issues.empty? || fail_strength
-          result
         end
+        results
       end
     end
   end

@@ -3,14 +3,14 @@ module FHIR
   class ValidationResult
     attr_accessor :element
     attr_accessor :element_definition
-    attr_accessor :is_successful
+    attr_accessor :result
     attr_accessor :validation_type
     attr_accessor :element_definition_id
     attr_accessor :element_path
     attr_accessor :profile
     attr_accessor :text
 
-    def initialize(element: nil, element_definition: nil, element_path: nil, is_successful: nil,
+    def initialize(element: nil, element_definition: nil, element_path: nil, result: nil,
                    validation_type: nil, profile: nil, text: nil)
       local_variables.each do |k|
         instance_variable_set("@#{k}", binding.local_variable_get(k))

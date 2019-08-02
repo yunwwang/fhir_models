@@ -31,7 +31,7 @@ module FHIR
         result.validation_type = :cardinality
         result.element_path = path
         result.element = element_collection
-        result.is_successful = !((element_collection.length < min) || (element_collection.length > max))
+        result.result = !((element_collection.length < min) || (element_collection.length > max))
         result
       end
 

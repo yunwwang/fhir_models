@@ -32,7 +32,7 @@ module FHIR
           result = FHIR::ValidationResult.new
           result.element_definition = element_definition
           result.validation_type = :datatype
-          result.is_successful = :skipped
+          result.result = :skipped
           result.element_path = path || element_definition.path
           return result
         end
@@ -55,7 +55,7 @@ module FHIR
           result = FHIR::ValidationResult.new
           result.element_definition = element_definition
           result.validation_type = :datatype
-          result.is_successful = :warn
+          result.result = :warn
           result.text = "Unkown type: #{type_code}"
           result.element_path = path || element_definition.path
           return result

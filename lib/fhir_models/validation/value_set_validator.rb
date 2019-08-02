@@ -58,11 +58,11 @@ class TerminologyValidator
         result.element_path = "#{current_path}[#{index}]"
         result.validation_type = :terminology
         if coding.code.nil? || coding.system.nil?
-          result.is_successful = :skipped
+          result.result = :skipped
           result.text = "#{current_path}[#{index}] has no #{'code' if coding.code.nil?}" \
                         "#{' or' if coding.code.nil? && coding.system.nil?} #{' system' if coding.system.nil?} ."
         else
-          result.is_successful = validate_coding(coding.code, coding.system)
+          result.result = validate_coding(coding.code, coding.system)
         end
         results.push result
       end
@@ -72,11 +72,11 @@ class TerminologyValidator
       result.element_path = current_path
       result.validation_type = :terminology
       if element.code.nil? || element.system.nil?
-        result.is_successful = :skipped
+        result.result = :skipped
         result.text = "#{current_path} has no #{'code' if coding.code.nil?}" \
                         "#{' or' if coding.code.nil? && coding.system.nil?} #{' system' if coding.system.nil?} ."
       else
-        result.is_successful = validate_coding(element.code, element.system)
+        result.result = validate_coding(element.code, element.system)
       end
       results.push result
     elsif type_code == 'code'
@@ -84,7 +84,7 @@ class TerminologyValidator
       result.element_definition = element_definition
       result.element_path = current_path
       result.validation_type = :terminology
-      result.is_successful = :skipped
+      result.result = :skipped
     end
   end
 end

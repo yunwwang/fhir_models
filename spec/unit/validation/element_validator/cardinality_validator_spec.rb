@@ -26,21 +26,21 @@ describe FHIR::Validation::CardinalityValidator do
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: true))
+        expect(results).to all(have_attributes(result: true))
       end
       it 'fails when more than one element is present' do
         resource.id = [1,2]
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: false))
+        expect(results).to all(have_attributes(result: false))
       end
       it 'passes when no elements are present' do
         resource.id = nil
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: true))
+        expect(results).to all(have_attributes(result: true))
       end
     end
 
@@ -54,21 +54,21 @@ describe FHIR::Validation::CardinalityValidator do
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: true))
+        expect(results).to all(have_attributes(result: true))
       end
       it 'passes when more than one element is present' do
         resource.id = [1,2]
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: true))
+        expect(results).to all(have_attributes(result: true))
       end
       it 'passes when no elements are present' do
         resource.id = nil
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: true))
+        expect(results).to all(have_attributes(result: true))
       end
     end
 
@@ -82,21 +82,21 @@ describe FHIR::Validation::CardinalityValidator do
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: true))
+        expect(results).to all(have_attributes(result: true))
       end
       it 'fails when more than one element is present' do
         resource.id = [1,2]
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: false))
+        expect(results).to all(have_attributes(result: false))
       end
       it 'fails when no elements are present' do
         resource.id = nil
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: false))
+        expect(results).to all(have_attributes(result: false))
       end
     end
 
@@ -110,21 +110,21 @@ describe FHIR::Validation::CardinalityValidator do
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: true))
+        expect(results).to all(have_attributes(result: true))
       end
       it 'passes when more than one element is present' do
         resource.id = [1,2]
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: true))
+        expect(results).to all(have_attributes(result: true))
       end
       it 'fails when no elements are present' do
         resource.id = nil
         results = validator.validate(resource, element_definition)
         expect(results.size).to eq(1)
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(is_successful: false))
+        expect(results).to all(have_attributes(result: false))
       end
     end
   end
