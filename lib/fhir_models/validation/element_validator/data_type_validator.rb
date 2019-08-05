@@ -14,6 +14,8 @@ module FHIR
       def self.validate(resource, element_definition)
         return unless element_definition.path.include? '.' # Root Elements do not have a type
 
+        return if element_definition.type.empty?
+
         elements = FHIR::Validation::Retrieval.retrieve_by_element_definition(resource,
                                                                               element_definition,
                                                                               indexed: true)
@@ -24,16 +26,6 @@ module FHIR
       end
 
       def self.validate_element(element, element_definition, path)
-        # Can't do this validation if there is no type.
-        if element_definition.type.empty?
-          result = FHIR::ValidationResult.new
-          result.element_definition = element_definition
-          result.validation_type = :datatype
-          result.result = :skipped
-          result.element_path = path || element_definition.path
-          return result
-        end
-
         # Get the type
         type_code = if element_definition.type.one?
                       element_definition.type.first.code

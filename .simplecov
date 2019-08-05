@@ -1,6 +1,7 @@
 require 'simplecov'
 SimpleCov.start do
   add_filter 'test/'
+  add_filter '/spec/'
   add_group 'Library', 'lib'
   add_group 'Validation', 'lib/fhir_models/validation'
   add_group 'FHIR Models', 'lib/fhir_models/fhir/resources'

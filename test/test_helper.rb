@@ -1,6 +1,4 @@
 require 'simplecov'
-SimpleCov.start
-
 require 'objspace'
 require 'nokogiri/diff'
 require 'test/unit'
