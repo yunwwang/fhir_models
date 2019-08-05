@@ -1,4 +1,5 @@
 require 'simplecov'
+SimpleCov.command_name 'Minitest Tests'
 require 'objspace'
 require 'nokogiri/diff'
 require 'test/unit'

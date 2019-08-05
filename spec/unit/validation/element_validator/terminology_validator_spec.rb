@@ -6,14 +6,6 @@ describe FHIR::Validation::TerminologyValidator do
     end
   end
 
-  # let(:validator) do
-  #   FHIR::Validation::TerminologyValidator.new('foo' => lambda { |coding| true},
-  #                                              'bar' => lambda { |coding| false})
-  # end
-
-  # data_types = {'CodeableConcept' => FHIR::CodeableConcept.new(coding: {code: 'waldo', system: 'foo'}),
-  #               'Quantity' => FHIR::Quantity.new(code: 'waldo', system: 'foo'),
-  #               'Coding' => FHIR::Coding.new(code: 'waldo', system: 'foo')}
   data_types = ['CodeableConcept', 'Quantity', 'Coding']
   bindings = ['required', 'extensible', 'preferred', 'example']
 
