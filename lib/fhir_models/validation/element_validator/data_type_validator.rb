@@ -2,9 +2,6 @@ module FHIR
   module Validation
     # Validator which allows Data Type validation of an element against an ElementDefinition
     module DataTypeValidator
-
-      # Verify the individual FHIR Data Types
-      #
       # FHIR Resources, Profiles and the StructureDefinitions are made up of FHIR Data Types.
       # There are two kinds of structures that fall under the FHIR Data Types: complex-type and primitive-type.
       # The snapshot of a resource does not contain the element definitions associated with primitive-type or complex-type
@@ -69,7 +66,7 @@ module FHIR
 
       # Error for Unknown Types
       class UnknownType < StandardError
-        def initialize(msg = "Unknown TypeCode")
+        def initialize(msg = 'Unknown TypeCode')
           super(msg)
         end
       end

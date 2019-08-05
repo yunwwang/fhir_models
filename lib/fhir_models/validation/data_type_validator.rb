@@ -1,3 +1,0 @@
-class DataTypeValidator
-
-end

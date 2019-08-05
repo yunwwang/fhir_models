@@ -14,7 +14,7 @@ module FHIR
         # Zulip Chat: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/cardinality.20of.20root.20elements/near/154024550
         return unless element_definition.path.include? '.'
 
-        elements = FHIR::Validation::Retrieval.retrieve_by_element_definition(resource,
+        elements = Retrieval.retrieve_by_element_definition(resource,
                                                                               element_definition,
                                                                               normalized: true)
         elements.flat_map do |path, el|
@@ -34,8 +34,6 @@ module FHIR
         result.result = !((element_collection.length < min) || (element_collection.length > max))
         result
       end
-
-      private_class_method :validate_element
     end
   end
 end

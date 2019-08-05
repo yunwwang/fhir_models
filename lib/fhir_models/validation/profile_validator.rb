@@ -85,13 +85,13 @@ module FHIR
       @snapshot_hierarchy
     end
 
-    private def validate_hierarchy(resource, hierarchy, skip = false)
+    private def validate_hierarchy(resource, hierarchy)
       # Validate the element
       hierarchy[:results] ||= []
       element_definition = hierarchy[:elementDefinition]
 
       # Get the Results
-      results = @element_validators.flat_map { |validator| validator.validate(resource, element_definition)}
+      results = @element_validators.flat_map { |validator| validator.validate(resource, element_definition) }
       results.compact!
       results.each { |res| res.profile ||= @profile.url }
 
@@ -126,8 +126,6 @@ module FHIR
     private def element_path_array(element_definition)
       element_definition.path.split('.')
     end
-
-
 
     # This Exception is for indicating types of slices that are not handled.
     #

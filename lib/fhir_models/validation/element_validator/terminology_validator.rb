@@ -1,5 +1,6 @@
 module FHIR
   module Validation
+    # Validate Terminology in coded elements
     class TerminologyValidator
       def initialize(validators = {})
         @vs_validators = validators
@@ -49,13 +50,13 @@ module FHIR
           #                                     element_path: path,
           #                                     element: element)
 
-          result = lambda do |result, message|
+          result = lambda do |result_status, message|
             FHIR::ValidationResult.new(element_definition: element_definition,
                                        validation_type: :terminology,
                                        element_path: path,
                                        element: element,
                                        text: message,
-                                       result: result)
+                                       result: result_status)
           end
 
           valueset_uri = element_definition&.binding&.valueSet

@@ -83,9 +83,7 @@ module FHIR
             indexed_elements = {}
             elements.each do |k, v|
               v.each_with_index do |vv, kk|
-                if vv.url == element_definition.type.first.profile.first
-                  indexed_elements["#{k}[#{kk}]"] = vv
-                end
+                indexed_elements["#{k}[#{kk}]"] = vv if vv.url == element_definition.type.first.profile.first
               end
             end
             elements = indexed_elements
