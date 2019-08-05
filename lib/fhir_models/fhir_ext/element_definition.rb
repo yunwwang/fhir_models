@@ -47,7 +47,7 @@ module FHIR
     end
 
     def choice_type?
-      path.end_with? '[x]'
+      path&.end_with? '[x]'
     end
   end
 end

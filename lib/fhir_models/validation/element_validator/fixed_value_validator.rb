@@ -9,11 +9,11 @@ module FHIR
       # @return result [FHIR::ValidationResult] The result of the cardinality check
       def self.validate(resource, element_definition)
         fixed = element_definition.fixed
-        return unless fixed.respond_to?(:empty?) ? fixed.empty? : fixed.nil?
+        return if fixed.respond_to?(:empty?) ? fixed.empty? : fixed.nil?
 
         elements = Retrieval.retrieve_by_element_definition(resource,
-                                                  element_definition,
-                                                  indexed: true)
+                                                            element_definition,
+                                                            indexed: true)
 
         elements.flat_map do |path, el|
           validate_element(el, element_definition, path)

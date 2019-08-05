@@ -108,10 +108,10 @@ module FHIR
       return unless @show_skipped || element_exists
 
       # Validate the subpath elements
-      hierarchy[:path].values.each { |v| validate_hierarchy(resource, v, !element_exists) }
+      hierarchy[:path].values.each { |v| validate_hierarchy(resource, v) }
 
       # Validate the slices elements
-      hierarchy[:slices].values.each { |v| validate_hierarchy(resource, v, !element_exists) }
+      hierarchy[:slices].values.each { |v| validate_hierarchy(resource, v) }
     end
 
     def register_element_validator(element_validator)

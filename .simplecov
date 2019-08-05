@@ -1,8 +1,10 @@
 require 'simplecov'
-SimpleCov.command_name 'Unit Tests'
 SimpleCov.start do
-  add_filter "test/"
-  add_group "Library", "lib"
+  add_filter 'test/'
+  add_group 'Library', 'lib'
+  add_group 'Validation', 'lib/fhir_models/validation'
+  add_group 'FHIR Models', 'lib/fhir_models/fhir/resources'
+  add_group 'Generator Files', 'lib/fhir_models/bootstrap'
 end
 
 class SimpleCov::Formatter::QualityFormatter

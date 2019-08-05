@@ -22,14 +22,16 @@ describe 'Profile Resource Validation' do
     profile_validator.register_element_validator(cardinality_validator)
     profile_validator.validate(resource)
     expect(cardinality_validator).to have_received(:validate)
-                                       .with(resource, element_definition, element_definition.path)
+                                       .with(resource, element_definition)
   end
 
   context 'with US Core Patient Profile Validator' do
     let(:us_core_profile_validator) do
       us_core_patient = File.join(FIXTURES_DIR, 'us_core', 'StructureDefinition-us-core-patient.json')
       json = File.read(us_core_patient)
-      FHIR::ProfileValidator.new(FHIR.from_contents(json))
+      p_validator = FHIR::ProfileValidator.new(FHIR.from_contents(json))
+      p_validator.register_element_validator(FHIR::Validation::CardinalityValidator)
+      p_validator
     end
 
     let(:patient_resource) do
@@ -53,8 +55,8 @@ describe 'Profile Resource Validation' do
 
     it 'skips checking the cardinality of the root element' do
       results = validator.validate(patient_resource)
-      cardinality_results = results.select { |x| x.result == :skipped }
-      expect(cardinality_results).to_not be_empty
+      root_cardinality_results = results.select { |x| x.element_path == 'Patient' }
+      expect(root_cardinality_results).to be_empty
     end
   end
 end

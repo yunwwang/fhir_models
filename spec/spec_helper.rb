@@ -3,8 +3,6 @@ Bundler.setup
 require 'simplecov'
 SimpleCov.start do
   add_filter '/spec/'
-  add_group 'FHIR Models', 'lib/fhir_models/fhir/resources'
-  add_group 'Generator Files', 'lib/fhir_models/bootstrap'
 end
 require 'fhir_models'
 

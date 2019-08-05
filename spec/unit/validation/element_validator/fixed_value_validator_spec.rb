@@ -2,9 +2,12 @@ describe FHIR::Validation::FixedValueValidator do
 
   let(:validator) { FHIR::Validation::FixedValueValidator }
 
-  let(:element) { double('867-5309') }
+  let(:element) { '867-5309' }
   #let(:element_definition) { instance_double(FHIR::ElementDefinition) }
-  let(:element_definition) { FHIR::ElementDefinition.new }
+  let(:element_definition) do  FHIR::ElementDefinition.new(id: 'Element',
+                                                           path: 'Element',
+                                                           type:[{code: 'String'}])
+  end
 
   describe '#validate' do
     it 'returns a single result related to the fixed value' do
@@ -14,18 +17,17 @@ describe FHIR::Validation::FixedValueValidator do
       element_definition.fixedString = element
 
       results = validator.validate(element, element_definition)
-      expect(results.validation_type).to be(:fixed_value)
-      expect(results.result).to be(true)
+      expect(results.first.validation_type).to be(:fixed_value)
+      expect(results.first.result).to be(:pass)
     end
 
     it 'detects when the fixed value is incorrect' do
 
-      # allow(element_definition).to receive(:fixed)
-      #                                  .and_return('555-5555')
+      element_definition.fixedString = 'INVALID_FIXED'
 
       results = validator.validate(element, element_definition)
-      expect(results.validation_type).to be(:fixed_value)
-      expect(results.result).to be(false)
+      expect(results.first.validation_type).to be(:fixed_value)
+      expect(results.first.result).to be(:fail)
     end
   end
 end

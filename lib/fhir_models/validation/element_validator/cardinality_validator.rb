@@ -15,8 +15,8 @@ module FHIR
         return unless element_definition.path.include? '.'
 
         elements = Retrieval.retrieve_by_element_definition(resource,
-                                                                              element_definition,
-                                                                              normalized: true)
+                                                            element_definition,
+                                                            normalized: true)
         elements.flat_map do |path, el|
           el = [el].flatten.compact
           validate_element(el, element_definition, path)
