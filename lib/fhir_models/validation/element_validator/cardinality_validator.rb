@@ -26,13 +26,12 @@ module FHIR
       def self.validate_element(element_collection, element_definition, path)
         min = element_definition.min
         max = element_definition.max == '*' ? Float::INFINITY : element_definition.max.to_i
-        result = FHIR::ValidationResult.new
-        result.element_definition = element_definition
-        result.validation_type = :cardinality
-        result.element_path = path
-        result.element = element_collection
-        result.result = ((element_collection.length < min) || (element_collection.length > max)) ? :fail : :pass
-        result
+        cardinality_check = ((element_collection.length < min) || (element_collection.length > max))
+        FHIR::ValidationResult.new(element_definition: element_definition,
+                                   validation_type: :cardinality,
+                                   element_path: path,
+                                   element: element_collection,
+                                   result: cardinality_check ? :fail : :pass)
       end
     end
   end

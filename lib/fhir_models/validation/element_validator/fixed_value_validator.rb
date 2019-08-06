@@ -21,14 +21,11 @@ module FHIR
       end
 
       def self.validate_element(element, element_definition, path)
-        result = FHIR::ValidationResult.new
-        result.element_definition = element_definition
-        result.validation_type = :fixed_value
-        result.element = element
-        result.element_path = path
-
-        result.result = element == element_definition.fixed ? :pass : :fail
-        result
+        FHIR::ValidationResult.new(element_definition: element_definition,
+                                   validation_type: :fixed_value,
+                                   element: element,
+                                   element_path: path,
+                                   result: element == element_definition.fixed ? :pass : :fail)
       end
     end
   end

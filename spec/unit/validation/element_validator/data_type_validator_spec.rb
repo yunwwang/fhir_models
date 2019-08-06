@@ -30,13 +30,13 @@ describe FHIR::Validation::DataTypeValidator do
         results = validator.validate(resource, element_definition)
         expect(results).to_not be_empty
         expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(result: true))
+        expect(results).to all(have_attributes(result: :pass))
       end
       it 'Returns a warning if the type is unknown' do
         element_definition.type.first.code = 'Foo'
         results = validator.validate(resource, element_definition)
         expect(results).to all(have_attributes(result: :warn))
-        expect(results.first).to have_attributes(text: "Unkown type: Foo")
+        expect(results.first).to have_attributes(text: "Unknown type: Foo")
       end
     end
     context 'with an element that has a choice of types' do
@@ -64,7 +64,7 @@ describe FHIR::Validation::DataTypeValidator do
         expect(results).to all(have_attributes(validation_type: :cardinality))
         expect(results).to include(have_attributes(element_path: a_string_including(element_definition.type[0].code)))
         expect(results).to include(have_attributes(element_path: a_string_including(element_definition.type[1].code)))
-        expect(results).to all(have_attributes(result: true))
+        expect(results).to all(have_attributes(result: :pass))
       end
     end
   end

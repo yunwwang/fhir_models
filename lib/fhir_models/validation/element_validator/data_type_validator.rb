@@ -41,13 +41,11 @@ module FHIR
 
         # If we are missing the Structure Definition needed to do the validation.
         if type_def.nil?
-          result = FHIR::ValidationResult.new
-          result.element_definition = element_definition
-          result.validation_type = :datatype
-          result.result = :warn
-          result.text = "Unkown type: #{type_code}"
-          result.element_path = path || element_definition.path
-          return result
+          return FHIR::ValidationResult.new(element_definition: element_definition,
+                                            validation_type: :datatype,
+                                            result: :warn,
+                                            text: "Unknown type: #{type_code}",
+                                            element_path: path || element_definition.path)
         end
         type_validator = FHIR::ProfileValidator.new(type_def)
         type_validator.register_element_validator(FHIR::Validation::CardinalityValidator)
