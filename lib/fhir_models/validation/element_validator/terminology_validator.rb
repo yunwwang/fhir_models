@@ -45,11 +45,6 @@ module FHIR
         if %w[CodeableConcept Coding Quantity].include? type_code
           required_strength = element_definition&.binding&.strength == 'required'
 
-          # result = FHIR::ValidationResult.new(element_definition: element_definition,
-          #                                     validation_type: :terminology,
-          #                                     element_path: path,
-          #                                     element: element)
-
           result = lambda do |result_status, message|
             FHIR::ValidationResult.new(element_definition: element_definition,
                                        validation_type: :terminology,
