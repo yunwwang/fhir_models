@@ -80,11 +80,13 @@ module FHIR
               v.url == element_definition.type.first.profile.first
             end
           else
+            sliced_elements = {}
             elements.each do |k, v|
-              v.select! do |ext|
+              sliced_elements[k] = v.select do |ext|
                 ext.url == element_definition.type.first.profile.first
               end
             end
+            elements = sliced_elements
           end
         end
         elements

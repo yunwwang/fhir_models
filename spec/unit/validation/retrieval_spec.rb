@@ -2,10 +2,11 @@ describe FHIR::Validation::Retrieval do
   let(:retrieval) { FHIR::Validation::Retrieval }
   let(:resource) do
     FHIR::Patient.new(id: 2,
-                   name: {given: 'Bob'},
-                   communication: [{language: 'English'}, {language: 'Spanish'}],
-                   deceasedBoolean: false,
-                   deceasedDateTime: 'YYYY-MM-DD')
+                      extension: [{url: 'bar'}, {url: 'http://foo.org'}],
+                      name: {given: 'Bob'},
+                      communication: [{language: 'English'}, {language: 'Spanish'}],
+                      deceasedBoolean: false,
+                      deceasedDateTime: 'YYYY-MM-DD')
   end
 
   describe '#retrieve_by_element_definition' do
@@ -57,6 +58,34 @@ describe FHIR::Validation::Retrieval do
       it 'returns an array of all the elements present if there is a choice of type normalized to the element' do
         expected_communications = { element_definition.id => [ resource.deceasedBoolean, resource.deceasedDateTime ]}
         expect(retrieval.retrieve_by_element_definition(resource, element_definition, normalized: true)).to eq(expected_communications)
+      end
+    end
+
+    context 'with sliced extensions' do
+      it 'returns all extensions' do
+        element_definition = FHIR::ElementDefinition.new(id: 'Patient.extension', path: 'Patient.extension')
+        expect(retrieval.retrieve_by_element_definition(resource, element_definition)).to eq({element_definition.id => resource.extension})
+      end
+      it 'returns the extensions indexed' do
+        expected_result = {'Patient.extension[0]' => resource.extension[0],
+                           'Patient.extension[1]' => resource.extension[1]}
+        element_definition = FHIR::ElementDefinition.new(id: 'Patient.extension', path: 'Patient.extension')
+        expect(retrieval.retrieve_by_element_definition(resource, element_definition, indexed: true)).to eq(expected_result)
+      end
+      it 'returns the sliced extension' do
+        element_definition = FHIR::ElementDefinition.new(id: 'Patient.extension:foo',
+                                                         path: 'Patient.extension',
+                                                         sliceName: 'foo',
+                                                         type: [{code: 'Extension', profile: ['http://foo.org']}])
+        expect(retrieval.retrieve_by_element_definition(resource, element_definition)).to eq({element_definition.path => [resource.extension[1]]})
+      end
+
+      it 'returns the sliced extension indexed' do
+        element_definition = FHIR::ElementDefinition.new(id: 'Patient.extension:foo',
+                                                         path: 'Patient.extension',
+                                                         sliceName: 'foo',
+                                                         type: [{code: 'Extension', profile: ['http://foo.org']}])
+        expect(retrieval.retrieve_by_element_definition(resource, element_definition, indexed: true)).to eq({"#{element_definition.path}[1]" => resource.extension[1]})
       end
     end
   end

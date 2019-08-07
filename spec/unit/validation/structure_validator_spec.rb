@@ -28,7 +28,7 @@ describe FHIR::Validation::StructureValidator do
   end
 
   let(:resource) do
-    FHIR::Patient.new(extension: [{url: 'bar'}, {url: 'foo'}])
+    FHIR::Patient.new(extension: [{url: 'bar'}, {url: 'http://foo.org'}])
   end
 
   let(:validator) do

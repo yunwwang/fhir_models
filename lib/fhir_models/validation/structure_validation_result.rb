@@ -1,8 +1,7 @@
-#require_relative 'traverse'
 module FHIR
   module Validation
+    # Represents the results of validating a structure.
     class StructureValidationResult
-
       attr_accessor :validation_hash
 
       def initialize(validation_hash)
