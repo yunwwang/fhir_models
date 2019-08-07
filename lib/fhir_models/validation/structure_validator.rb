@@ -25,7 +25,7 @@ module FHIR
       # @return [Hash] the validation results
       def validate(resource)
         validate_against_hierarchy(resource)
-        FHIR::Validation::StructureValidationResult.new(@snapshot_hierarchy)
+        FHIR::Validation::StructureValidationResult.new(@snapshot_hierarchy).all_results
       end
 
       # Removes the currently registered element validators
@@ -33,11 +33,10 @@ module FHIR
         @element_validators = Set.new
       end
 
-      # Add Element Validators to the StructureValidator
-      #
-      # @param element_validators [Enumerable]
-      def register_element_validators(element_validators)
-        @element_validators.merge(Set.new(element_validators))
+      # Add additional element validators
+      # @param element_validator [Enumerable<#validate>]
+      def register_element_validators(element_validator)
+        @element_validators.add(*element_validator)
       end
 
       # Add the default Element Validators to the StructureValidator
@@ -118,10 +117,6 @@ module FHIR
 
         # Validate the slices elements
         hierarchy[:slices].values.each { |v| validate_hierarchy(resource, v) }
-      end
-
-      def register_element_validator(element_validator)
-        @element_validators.add(*element_validator)
       end
 
       private def blank?(obj)

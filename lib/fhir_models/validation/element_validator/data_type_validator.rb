@@ -48,10 +48,14 @@ module FHIR
                                             element_path: path || element_definition.path)
         end
         type_validator = FHIR::Validation::StructureValidator.new(type_def)
-        type_validator.register_element_validator(FHIR::Validation::CardinalityValidator)
+        type_validator.register_element_validators(FHIR::Validation::CardinalityValidator)
         results = type_validator.validate(element)
 
-        results.each { |res| res.element_path = res.element_path.gsub(/^([^.]+)/, path) }
+        # Update the path to reflect the object it is nested within
+        results.map do |res|
+          res.element_path = res.element_path.gsub(/^([^.]+)/, path)
+          res
+        end
       end
 
       # Error for Unknown Types

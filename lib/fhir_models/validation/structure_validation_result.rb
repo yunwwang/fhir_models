@@ -3,6 +3,8 @@ module FHIR
   module Validation
     class StructureValidationResult
 
+      attr_accessor :validation_hash
+
       def initialize(validation_hash)
         @validation_hash = validation_hash
       end
