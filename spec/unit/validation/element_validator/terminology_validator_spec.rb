@@ -112,6 +112,45 @@ describe FHIR::Validation::TerminologyValidator do
       expect(validator.vs_validators).to be_empty
     end
 
+    it 'warns if the code is missing' do
+      results = validator.validate(FHIR::CodeableConcept.new(coding: {system: 'adsf'}),
+                         FHIR::ElementDefinition.new(id: 'Element',
+                                                     path: 'Element',
+                                                     binding: {strength: 'required', valueSet: 'asdf'},
+                                                     type: [{code: 'CodeableConcept'}]))
+      expect(results.size).to eq(1)
+      expect(results).to all(have_attributes(validation_type: :terminology))
+      expect(results).to all(have_attributes(:text => a_string_including('missing code')))
+      expect(results).to all(have_attributes(result: :warn))
+
+    end
+
+    it 'warns if the system is missing' do
+      results = validator.validate(FHIR::CodeableConcept.new(coding: {code: 'waldo'}),
+                         FHIR::ElementDefinition.new(id: 'Element',
+                                                     path: 'Element',
+                                                     binding: {strength: 'required', valueSet: 'asdf'},
+                                                     type: [{code: 'CodeableConcept'}]))
+
+      expect(results.size).to eq(1)
+      expect(results).to all(have_attributes(validation_type: :terminology))
+      expect(results).to all(have_attributes(:text => a_string_including('missing system')))
+      expect(results).to all(have_attributes(result: :warn))
+    end
+
+    it 'warns if the code and system are missing' do
+      results = validator.validate(FHIR::CodeableConcept.new(coding: {text: 'nope'}),
+                                   FHIR::ElementDefinition.new(id: 'Element',
+                                                               path: 'Element',
+                                                               binding: {strength: 'required', valueSet: 'asdf'},
+                                                               type: [{code: 'CodeableConcept'}]))
+
+      expect(results.size).to eq(2)
+      expect(results).to all(have_attributes(validation_type: :terminology))
+      expect(results).to all(have_attributes(:text => a_string_including('missing')))
+      expect(results).to all(have_attributes(result: :warn))
+    end
+
   end
 
   describe '#validate' do

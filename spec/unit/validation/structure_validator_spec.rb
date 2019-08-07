@@ -44,40 +44,4 @@ describe FHIR::Validation::StructureValidator do
       expect(cardinality_results.length.positive?).to be_truthy
     end
   end
-
-  # context 'with US Core Patient Profile Validator' do
-  #   let(:us_core_profile_validator) do
-  #     us_core_patient = File.join(FIXTURES_DIR, 'us_core', 'StructureDefinition-us-core-patient.json')
-  #     json = File.read(us_core_patient)
-  #     p_validator = FHIR::Validation::StructureValidator.new(FHIR.from_contents(json))
-  #     #p_validator.register_element_validator(FHIR::Validation::CardinalityValidator)
-  #     p_validator
-  #   end
-  #
-  #   let(:patient_resource) do
-  #     patient_record = File.join(FIXTURES_DIR, ['invalid_resources', 'invalid-Patient-example.json'])
-  #     json = File.read(patient_record)
-  #     FHIR.from_contents(json)
-  #   end
-  #
-  #   #before { validator.register_validator_module(us_core_profile_validator) }
-  #
-  #   it '#validate' do
-  #     results = us_core_profile_validator.validate(patient_resource)
-  #     results.first.all_results
-  #     expect(results).to_not be_empty
-  #   end
-  #
-  #   it 'checks element cardinality' do
-  #     results = validator.validate(patient_resource)
-  #     cardinality_results = results.select { |x| x.validation_type == :cardinality }
-  #     expect(cardinality_results).to_not be_empty
-  #   end
-  #
-  #   it 'skips checking the cardinality of the root element' do
-  #     results = validator.validate(patient_resource)
-  #     root_cardinality_results = results.select { |x| x.element_path == 'Patient' }
-  #     expect(root_cardinality_results).to be_empty
-  #   end
-  # end
 end
