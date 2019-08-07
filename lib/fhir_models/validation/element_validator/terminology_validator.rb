@@ -2,6 +2,7 @@ module FHIR
   module Validation
     # Validate Terminology in coded elements
     class TerminologyValidator
+      attr_reader :vs_validators
       def initialize(validators = {})
         @vs_validators = validators
       end
@@ -12,6 +13,11 @@ module FHIR
       # @param validator [#validate] The validator
       def register_vs_validator(valueset_uri, validator)
         @vs_validators[valueset_uri] = validator
+      end
+
+      # Clear the registered ValueSet and CodeSystem Validators
+      def clear_vs_validators
+        @vs_validators = {}
       end
 
       # Verify that the element meets terminology requirements

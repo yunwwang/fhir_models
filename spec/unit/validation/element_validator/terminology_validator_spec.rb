@@ -95,6 +95,23 @@ describe FHIR::Validation::TerminologyValidator do
     end
   end
 
+  context 'with no code or valueset validators' do
+    include_context 'code is in the ValueSet'
+    let(:validator) {FHIR::Validation::TerminologyValidator.new}
+    it 'contains no validators initially' do
+      expect(validator.vs_validators).to be_empty
+    end
+
+    it 'allows additional validators to be added and removed' do
+      validator.register_vs_validator(value_set_validator.keys.first, value_set_validator[value_set_validator.keys.first])
+      expect(validator.vs_validators).to eq(value_set_validator)
+
+      validator.clear_vs_validators
+      expect(validator.vs_validators).to be_empty
+    end
+
+  end
+
   describe '#validate' do
     data_binding_pairs.each do |data_binding_pair|
       context "with a #{data_binding_pair[0]}, #{data_binding_pair[1]} binding, " do
