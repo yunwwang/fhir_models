@@ -47,12 +47,14 @@ describe FHIR::Validation::TerminologyValidator do
     end
   end
 
-  shared_context 'ElementDefinition' do |binding_strength, type|
+  shared_context 'ElementDefinition' do |binding_strength, type, second_type = nil|
     let(:element_definition) do
-      FHIR::ElementDefinition.new(id: 'Element',
-                                  path: 'Element',
+      types = [{code: type}]
+      types.push({code: second_type}) if second_type
+      FHIR::ElementDefinition.new(id: "Element#{'[x]' if second_type}",
+                                  path: "Element#{'[x]' if second_type}",
                                   binding: {strength: binding_strength, valueSet: value_set},
-                                  type: [{code: type}])
+                                  type: types)
     end
   end
 
@@ -113,21 +115,23 @@ describe FHIR::Validation::TerminologyValidator do
   end
 
   describe '#validate' do
-    data_binding_pairs.each do |data_binding_pair|
-      context "with a #{data_binding_pair[0]}, #{data_binding_pair[1]} binding, " do
-        include_context 'ElementDefinition', data_binding_pair[1], data_binding_pair[0]
-        include_context 'Resource type', data_binding_pair[0]
-        validation_combinations.each do |combo|
-          context "#{'un' unless combo[0]}known ValueSet #{'not ' unless combo[2]}containing the code, and "\
+    [nil, 'FakeType'].each do |secondary_type|
+      data_binding_pairs.each do |data_binding_pair|
+        context "with a #{data_binding_pair[0]}, #{data_binding_pair[1]} binding, " do
+          include_context 'ElementDefinition', data_binding_pair[1], data_binding_pair[0], secondary_type
+          include_context 'Resource type', data_binding_pair[0]
+          validation_combinations.each do |combo|
+            context "#{'un' unless combo[0]}known ValueSet #{'not ' unless combo[2]}containing the code, and "\
                 "#{'un' unless combo[1]}known CodeSystem #{'not ' unless combo[3]}containing the code"do
-            include_context 'ValueSet is known', combo[0]
-            include_context 'CodeSystem is known', combo[1]
-            include_context 'code is in the ValueSet', combo[2]
-            include_context 'code is in the CodeSystem', combo[3]
-            before(:example) do
-              @results = validator.validate(resource, element_definition)
+              include_context 'ValueSet is known', combo[0]
+              include_context 'CodeSystem is known', combo[1]
+              include_context 'code is in the ValueSet', combo[2]
+              include_context 'code is in the CodeSystem', combo[3]
+              before(:example) do
+                @results = validator.validate(resource, element_definition)
+              end
+              include_examples 'expected results', combo, data_binding_pair[1]
             end
-            include_examples 'expected results', combo, data_binding_pair[1]
           end
         end
       end
