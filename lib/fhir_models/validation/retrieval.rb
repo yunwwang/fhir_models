@@ -16,7 +16,7 @@ module FHIR
         desired_elements = spath.inject(fhirpath_elements) do |memo, meth|
           digging = {}
           memo.each do |k, v|
-            elms = v.send(meth)
+            elms = v.send(meth) if v.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
             # More than one element where the FHIRPath needs indexing
             if elms.respond_to? :each_with_index
               elms.each_with_index do |vv, kk|

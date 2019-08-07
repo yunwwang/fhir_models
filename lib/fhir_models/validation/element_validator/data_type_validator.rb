@@ -47,7 +47,7 @@ module FHIR
                                             text: "Unknown type: #{type_code}",
                                             element_path: path || element_definition.path)
         end
-        type_validator = FHIR::ProfileValidator.new(type_def)
+        type_validator = FHIR::Validation::StructureValidator.new(type_def)
         type_validator.register_element_validator(FHIR::Validation::CardinalityValidator)
         results = type_validator.validate(element)
 
