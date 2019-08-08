@@ -38,7 +38,7 @@ class ProfileValidationTest < Test::Unit::TestCase
       errors << "Validated against #{resource.meta.profile.first}" unless errors.empty?
     else
       # validate the base resource
-      errors = resource.validate
+      errors = resource.validate.select {|res| res.result == :fail}
       errors << "Validated against base resource definition" unless errors.empty?
     end
     unless errors.empty?

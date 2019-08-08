@@ -34,7 +34,7 @@ module FHIR
 
                       element_definition.type.find do |datatype|
                         cap_code = "#{datatype.code[0].capitalize}#{datatype.code[1..-1]}"
-                        /[^.]+$/.match(element_definition.path.gsub('[x]', cap_code)) == /[^.]+$/.match(path)
+                        /[^.]+$/.match(element_definition.path.gsub('[x]', cap_code)).to_s == /[^.]+$/.match(path).to_s
                       end.code
                     end
         type_def = FHIR::Definitions.type_definition(type_code) || FHIR::Definitions.resource_definition(type_code)
@@ -44,7 +44,17 @@ module FHIR
           return FHIR::ValidationResult.new(element_definition: element_definition,
                                             validation_type: :datatype,
                                             result: :warn,
-                                            text: "Unknown type: #{type_code}",
+                                            text: (if type_code.nil?
+                                                     'Type code not provided or extends the primitive code'
+                                                   else
+                                                     "Unknown type: #{type_code}"
+                                                   end),
+                                            element_path: path || element_definition.path)
+        elsif type_def.kind == 'primitive-type'
+          return FHIR::ValidationResult.new(element_definition: element_definition,
+                                            validation_type: :datatype,
+                                            result: :warn,
+                                            text: 'Cannot validate primitive-type as a Structure',
                                             element_path: path || element_definition.path)
         end
         type_validator = FHIR::Validation::StructureValidator.new(type_def)

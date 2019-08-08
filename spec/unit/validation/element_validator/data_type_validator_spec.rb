@@ -29,8 +29,8 @@ describe FHIR::Validation::DataTypeValidator do
       it 'returns an array of results for the single type' do
         results = validator.validate(resource, element_definition)
         expect(results).to_not be_empty
-        expect(results).to all(have_attributes(validation_type: :cardinality))
-        expect(results).to all(have_attributes(result: :pass))
+        expect(results.select {|res| res.result == :fail}).to be_empty
+        expect(results.select {|res| res.validation_type == :cardinality}).to_not be_empty
       end
       it 'Returns a warning if the type is unknown' do
         element_definition.type.first.code = 'Foo'
@@ -61,10 +61,10 @@ describe FHIR::Validation::DataTypeValidator do
       it 'returns an array of results for elements with a choice of type' do
         results = validator.validate(resource, element_definition)
         expect(results).to_not be_empty
-        expect(results).to all(have_attributes(validation_type: :cardinality))
         expect(results).to include(have_attributes(element_path: a_string_including(element_definition.type[0].code)))
         expect(results).to include(have_attributes(element_path: a_string_including(element_definition.type[1].code)))
-        expect(results).to all(have_attributes(result: :pass))
+        expect(results.select {|res| res.result == :fail}).to be_empty
+        expect(results.select {|res| res.validation_type == :cardinality}).to_not be_empty
       end
     end
   end

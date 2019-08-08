@@ -16,7 +16,8 @@ module FHIR
         desired_elements = spath.inject(fhirpath_elements) do |memo, meth|
           digging = {}
           memo.each do |k, v|
-            elms = v.send(meth) if v.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
+            fix_name = %w[class method resourceType].include?(meth) ? "local_#{meth}" : meth
+            elms = v.send(fix_name) if v.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
             # More than one element where the FHIRPath needs indexing
             if elms.respond_to? :each_with_index
               elms.each_with_index do |vv, kk|
@@ -35,7 +36,8 @@ module FHIR
         # If we don't want to index the last element (useful for testing cardinality)
         not_indexed = {}
         desired_elements.each do |k, v|
-          elms = v.send(last) if v.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
+          fix_name = %w[class method resourceType].include?(last) ? "local_#{last}" : last
+          elms = v.send(fix_name) if v.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
           not_indexed["#{k}.#{last}"] = elms
         end
         not_indexed
@@ -54,11 +56,12 @@ module FHIR
             elements.merge!(type_element) unless blank?(type_element)
           end
           if normalized
-            choice_type_elements = Hash.new([])
+            choice_type_elements = {}
             elements.each do |k, v|
               renorm = k.rpartition('.').first
               normalized_path = "#{renorm}.#{element_definition.path.split('.').last}"
-              choice_type_elements[normalized_path] = choice_type_elements[normalized_path].push(v)
+              choice_type_elements[normalized_path] ||= []
+              choice_type_elements[normalized_path].push(v).compact!
             end
             elements = choice_type_elements
           end
