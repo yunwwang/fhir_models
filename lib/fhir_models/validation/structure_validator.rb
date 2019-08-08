@@ -26,7 +26,7 @@ module FHIR
       def validate(resource)
         return [FHIR::ValidationResult.new(validation_type: :structure, result: :fail)] unless resource.is_a? FHIR::Model
 
-        validate_against_hierarchy(resource)
+        validate_against_snapshot(resource)
 
         FHIR::Validation::StructureValidationResult.new(@snapshot_hierarchy).all_results
       end
@@ -84,7 +84,7 @@ module FHIR
         hierarchy
       end
 
-      private def validate_against_hierarchy(resource)
+      private def validate_against_snapshot(resource)
         @snapshot_hierarchy ||= build_hierarchy(@profile.snapshot.element)
         # Slicing is prohibited on first element so we only check the paths
         # http://www.hl7.org/fhir/elementdefinition.html#interpretation
@@ -129,14 +129,6 @@ module FHIR
       # Splits a path into an array
       private def element_path_array(element_definition)
         element_definition.path.split('.')
-      end
-
-      # This Exception is for indicating types of slices that are not handled.
-      #
-      class UnhandledSlice < StandardError
-        def initialize(msg = 'Unhandled Slice')
-          super(msg)
-        end
       end
     end
   end
