@@ -24,7 +24,10 @@ module FHIR
       # @param resource [FHIR::Model] The Resource to be validated
       # @return [Hash] the validation results
       def validate(resource)
+        return [FHIR::ValidationResult.new(validation_type: :structure, result: :fail)] unless resource.is_a? FHIR::Model
+
         validate_against_hierarchy(resource)
+
         FHIR::Validation::StructureValidationResult.new(@snapshot_hierarchy).all_results
       end
 

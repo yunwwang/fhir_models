@@ -71,10 +71,9 @@ module FHIR
 
         # Handle Slices
         if element_definition.sliceName
+          # TODO: Need to be able to get other types of slices
           # Grab Extension slices
-          raise UnhandledSlice("Slice has more than one type. #{element_definition.id}") unless element_definition.type.one?
-
-          raise UnhandledSlice("Slice type #{element_definition.type.code} is not handled. Only Extension slices are handled") unless element_definition.type.first.code == 'Extension'
+          return {} unless element_definition.type.first.code == 'Extension'
 
           # Only select the elements which match the slice profile.
           if indexed
