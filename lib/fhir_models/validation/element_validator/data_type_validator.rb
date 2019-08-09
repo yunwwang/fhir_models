@@ -23,33 +23,35 @@ module FHIR
         end
       end
 
+      # Validates a single element against the ElementDefinition
+      #
+      # @param elements [Array] the element to be validated
+      # @param element_definition [FHIR::ElementDefinition] the ElementDefinition which defines the element
+      # @param path [String] where the element is located in the parent resource
+      # @return result [Array<FHIR::ValidationResult>] the result of the data type validation
       def self.validate_element(element, element_definition, path)
         # Get the type
         begin
           type_code = element_definition.type_code(path)
-        rescue FHIR::UnknownType
-          type_code = nil
+          type_def = FHIR::Definitions.definition(type_code)
+        rescue FHIR::UnknownType => ex
+          return FHIR::ValidationResult.new(element_definition: element_definition,
+                                            validation_type: :datatype,
+                                            result: :warn,
+                                            text: ex.message,
+                                            element_path: path || element_definition.path)
         end
-        type_def = FHIR::Definitions.definition(type_code)
 
         # If we are missing the Structure Definition needed to do the validation.
         if type_def.nil?
-          result_text = if type_code.nil?
-                          'Type code not provided or extends the primitive code'
-                        else
-                          "Unknown type: #{type_code}"
-                        end
           return FHIR::ValidationResult.new(element_definition: element_definition,
                                             validation_type: :datatype,
                                             result: :warn,
-                                            text: result_text,
+                                            text: "Unknown type: #{type_code}",
                                             element_path: path || element_definition.path)
         elsif type_def.kind == 'primitive-type'
-          return FHIR::ValidationResult.new(element_definition: element_definition,
-                                            validation_type: :datatype,
-                                            result: :warn,
-                                            text: 'Cannot validate primitive-type as a Structure',
-                                            element_path: path || element_definition.path)
+          # We do not support primitive extensions or check their structure
+          return
         end
         type_validator = FHIR::Validation::StructureValidator.new(type_def)
         type_validator.register_element_validators(FHIR::Validation::CardinalityValidator)

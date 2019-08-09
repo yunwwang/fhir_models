@@ -26,6 +26,7 @@ module FHIR
       # @param elements [Array] the collection of elements
       # @param element_definition [FHIR::ElementDefinition] the ElementDefinition which defines the elements
       # @param path [String] where the elements are located in the parent resource
+      # @return result [FHIR::ValidationResult] the result of the cardinality check on the elements
       def self.validate_element(elements, element_definition, path)
         FHIR::ValidationResult.new(element_definition: element_definition,
                                    validation_type: :cardinality,
@@ -39,6 +40,7 @@ module FHIR
       # @param elements [Array] the collection of elements
       # @param min [#to_i] the minimum cardinality
       # @param max [#to_i] the maximum cardinality
+      # @return result [Boolean] if the elements meet the cardinality requirements
       def self.valid_cardinality?(elements, min, max)
         min = min.to_i
         max = max == '*' ? Float::INFINITY : max.to_i
