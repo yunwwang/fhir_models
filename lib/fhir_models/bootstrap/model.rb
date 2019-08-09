@@ -71,7 +71,7 @@ module FHIR
     end
 
     def to_reference
-      FHIR::Reference.new(reference: "#{self.class.name.split('::').last}/#{id}")
+      FHIR::Reference.new(reference: "#{type_name}/#{id}")
     end
 
     def equals?(other, exclude = [])
