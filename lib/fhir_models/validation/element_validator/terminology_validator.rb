@@ -35,16 +35,7 @@ module FHIR
       def validate_element(element, element_definition, path)
         results = []
         # Get the type
-        type_code = if element_definition.type.one?
-                      element_definition.type.first.code
-                    else
-                      return UnknownType.new('Need path in order to determine type') unless path
-
-                      element_definition.type.find do |datatype|
-                        cap_code = "#{datatype.code[0].capitalize}#{datatype.code[1..-1]}"
-                        /[^.]+$/.match(element_definition.path.gsub('[x]', cap_code)) == /[^.]+$/.match(path)
-                      end.code
-                    end
+        type_code = element_definition.type_code(path)
 
         if %w[CodeableConcept Coding Quantity].include? type_code
           required_strength = element_definition&.binding&.strength == 'required'

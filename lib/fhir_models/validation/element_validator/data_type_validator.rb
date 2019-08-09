@@ -25,16 +25,7 @@ module FHIR
 
       def self.validate_element(element, element_definition, path)
         # Get the type
-        type_code = if element_definition.type.one?
-                      element_definition.type.first.code
-                    else
-                      return UnknownType.new('Need path in order to determine type') unless path
-
-                      element_definition.type.find do |datatype|
-                        cap_code = "#{datatype.code[0].capitalize}#{datatype.code[1..-1]}"
-                        /[^.]+$/.match(element_definition.path.gsub('[x]', cap_code)).to_s == /[^.]+$/.match(path).to_s
-                      end.code
-                    end
+        type_code = element_definition.type_code(path)
         type_def = FHIR::Definitions.definition(type_code)
 
         # If we are missing the Structure Definition needed to do the validation.
@@ -63,13 +54,6 @@ module FHIR
         results.map do |res|
           res.element_path = res.element_path.gsub(/^([^.]+)/, path)
           res
-        end
-      end
-
-      # Error for Unknown Types
-      class UnknownType < StandardError
-        def initialize(msg = 'Unknown TypeCode')
-          super(msg)
         end
       end
     end
