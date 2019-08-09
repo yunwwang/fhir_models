@@ -43,6 +43,12 @@ module FHIR
         not_indexed
       end
 
+      # Retrieve the elements in the resource which are defined by the provided ElementDefinition
+      #
+      # @param resource [FHIR::Model] The resource from which the elements will be retrieved
+      # @param element_definition [FHIR::ElementDefinition] The ElementDefinition which defines the desired resources
+      # @param indexed [Boolean] If the elements should be returned individually or as a collection
+      # @param normalized [Boolean] If the elements with a choice of type should be normalized
       def retrieve_by_element_definition(resource, element_definition, indexed: false, normalized: false)
         # Check if we were provided a path that includes extensions (like in the ElementDefinition id versus the path)
         path = element_definition.path

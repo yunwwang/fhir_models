@@ -14,9 +14,7 @@ module FHIR
         # Zulip Chat: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/cardinality.20of.20root.20elements/near/154024550
         return unless element_definition.path.include? '.'
 
-        elements = Retrieval.retrieve_by_element_definition(resource,
-                                                            element_definition,
-                                                            normalized: true)
+        elements = resource.retrieve_elements_by_definition(element_definition, normalized: true)
         elements.flat_map do |path, el|
           el = [el].flatten.compact
           validate_element(el, element_definition, path)

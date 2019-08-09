@@ -108,8 +108,7 @@ module FHIR
         hierarchy[:results].push(*results)
 
         # Check to see if there are any valid elements to determine if we need to check the subelements
-        elements = FHIR::Validation::Retrieval.retrieve_by_element_definition(resource,
-                                                                              element_definition)
+        elements = resource.retrieve_elements_by_definition(element_definition)
         element_exists = !blank?(elements.values.flatten.compact)
 
         # If the element doesn't exist we don't need to check its subelements unless we are instructed to by showskipped

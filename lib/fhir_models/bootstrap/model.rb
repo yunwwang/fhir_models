@@ -17,6 +17,18 @@ module FHIR
       end
     end
 
+    # Retrieve the elements in the resource which are defined by the provided ElementDefinition
+    #
+    # @param element_definition [FHIR::ElementDefinition] The ElementDefinition which defines the desired resources
+    # @param indexed [Boolean] If the elements should be returned individually or as a collection
+    # @param normalized [Boolean] If the elements with a choice of type should be normalized
+    def retrieve_elements_by_definition(element_definition, indexed: false, normalized: false)
+      FHIR::Validation::Retrieval.retrieve_by_element_definition(self,
+                                                                 element_definition,
+                                                                 indexed: indexed,
+                                                                 normalized: normalized)
+    end
+
     # This is necessary for uniq to properly identify two FHIR models as being identical
     def hash
       to_hash.hash

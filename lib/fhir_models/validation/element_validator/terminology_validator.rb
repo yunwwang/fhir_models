@@ -26,9 +26,7 @@ module FHIR
       # @param element_definition [FHIR::ElementDefinition] The Element Definition for the elements
       # @return result [FHIR::ValidationResult] The result of the terminology check
       def validate(resource, element_definition)
-        elements = FHIR::Validation::Retrieval.retrieve_by_element_definition(resource,
-                                                                              element_definition,
-                                                                              indexed: true)
+        elements = resource.retrieve_elements_by_definition(element_definition, indexed: true)
         elements.flat_map do |path, el|
           validate_element(el, element_definition, path)
         end

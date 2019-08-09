@@ -16,9 +16,7 @@ module FHIR
 
         return if element_definition.type.empty?
 
-        elements = FHIR::Validation::Retrieval.retrieve_by_element_definition(resource,
-                                                                              element_definition,
-                                                                              indexed: true)
+        elements = resource.retrieve_elements_by_definition(element_definition, indexed: true)
 
         elements.flat_map do |path, el|
           validate_element(el, element_definition, path)

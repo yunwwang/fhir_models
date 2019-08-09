@@ -1,7 +1,8 @@
 describe FHIR::Validation::MaxLengthValidator do
   let(:validator) {FHIR::Validation::MaxLengthValidator}
-  let(:resource) { 'foo' }
-  let(:element_definition) {FHIR::ElementDefinition.new(id: 'Element', path: 'Element')}
+  let(:restricted_string) {'foo'}
+  let(:resource) { FHIR::Patient.new(gender: restricted_string) }
+  let(:element_definition) {FHIR::ElementDefinition.new(id: 'Patient.gender', path: 'Patient.gender')}
 
   context 'when the string is shorter than the maxLength' do
     before do
