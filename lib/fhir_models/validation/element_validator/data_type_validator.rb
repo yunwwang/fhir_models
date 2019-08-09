@@ -37,7 +37,7 @@ module FHIR
                         /[^.]+$/.match(element_definition.path.gsub('[x]', cap_code)).to_s == /[^.]+$/.match(path).to_s
                       end.code
                     end
-        type_def = FHIR::Definitions.type_definition(type_code) || FHIR::Definitions.resource_definition(type_code)
+        type_def = FHIR::Definitions.definition(type_code)
 
         # If we are missing the Structure Definition needed to do the validation.
         if type_def.nil?

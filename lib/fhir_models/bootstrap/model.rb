@@ -108,7 +108,7 @@ module FHIR
 
     def validate
       type_name = self.class.name.split('::').last
-      type_def = FHIR::Definitions.type_definition(type_name) || FHIR::Definitions.resource_definition(type_name)
+      type_def = FHIR::Definitions.definition(type_name)
       FHIR::Validation::StructureValidator.new(type_def).validate(self)
     end
 

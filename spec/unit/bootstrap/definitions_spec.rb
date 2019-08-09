@@ -31,4 +31,19 @@ describe FHIR::Definitions do
       end
     end
   end
+
+  describe '#definition' do
+    it 'returns resource definitions' do
+      type_def = FHIR::Definitions.definition('Patient')
+      expect(type_def).to be_a(FHIR::StructureDefinition)
+    end
+    it 'returns primitive-type definitions' do
+      type_def = FHIR::Definitions.definition('code')
+      expect(type_def).to be_a(FHIR::StructureDefinition)
+    end
+    it 'returns complex-type definitions' do
+      type_def = FHIR::Definitions.definition('Address')
+      expect(type_def).to be_a(FHIR::StructureDefinition)
+    end
+  end
 end
