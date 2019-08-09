@@ -4,7 +4,7 @@ module FHIR
     module FixedValueValidator
       # Validate the element matches the fixed value if a fixed value is provided
       #
-      # @param element [Object] The Element of the Resource under test
+      # @param resource [FHIR::Model] The resource under test
       # @param element_definition [FHIR::ElementDefinition] The Element Definition from which the cardinality is taken
       # @return result [FHIR::ValidationResult] The result of the cardinality check
       def self.validate(resource, element_definition)
@@ -18,6 +18,12 @@ module FHIR
         end
       end
 
+      # Validates a single element against the ElementDefinition
+      #
+      # @param element [] the element to be validated
+      # @param element_definition [FHIR::ElementDefinition] the ElementDefinition which defines the element
+      # @param path [String] where the element is located in the parent resource
+      # @return result [FHIR::ValidationResult] the result of the validation
       def self.validate_element(element, element_definition, path)
         FHIR::ValidationResult.new(element_definition: element_definition,
                                    validation_type: :fixed_value,

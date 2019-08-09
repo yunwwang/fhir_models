@@ -4,7 +4,7 @@ module FHIR
     module MaxLengthValidator
       # Verify that the element meets the max length requirement
       #
-      # @param element [Object] The Element of the Resource under test
+      # @param resource [FHIR::Model] The resource under test
       # @param element_definition [FHIR::ElementDefinition] The Element Definition from which the max length is derived
       # @return result [FHIR::ValidationResult] The result of the max length check
       def self.validate(resource, element_definition)
@@ -19,9 +19,10 @@ module FHIR
 
       # Validates a single element against the ElementDefinition
       #
-      # @param elements [Array] the element
+      # @param element [#length] the string
       # @param element_definition [FHIR::ElementDefinition] the ElementDefinition which defines the element
       # @param path [String] where the element is located in the parent resource
+      # @return result [FHIR::ValidationResult] the result of the validation
       def self.validate_element(element, element_definition, path)
         FHIR::ValidationResult.new(element_definition: element_definition,
                                    validation_type: :max_length,

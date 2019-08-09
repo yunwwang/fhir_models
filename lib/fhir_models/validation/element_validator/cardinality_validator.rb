@@ -4,7 +4,7 @@ module FHIR
     module CardinalityValidator
       # Verify that the element meets the cardinality requirements
       #
-      # @param element [Object] The Element of the Resource under test
+      # @param resource [FHIR::Model] The resource under test
       # @param element_definition [FHIR::ElementDefinition] The Element Definition from which the cardinality is taken
       # @return result [FHIR::ValidationResult] The result of the cardinality check
       def self.validate(resource, element_definition)

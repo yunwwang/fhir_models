@@ -22,9 +22,9 @@ module FHIR
 
       # Verify that the element meets terminology requirements
       #
-      # @param element [Object] The Element of the Resource under test
+      # @param resource [FHIR::Model] The resource under test
       # @param element_definition [FHIR::ElementDefinition] The Element Definition for the elements
-      # @return result [FHIR::ValidationResult] The result of the terminology check
+      # @return result [Array<FHIR::ValidationResult>] The result of the terminology check
       def validate(resource, element_definition)
         elements = resource.retrieve_elements_by_definition(element_definition, indexed: true)
         elements.flat_map do |path, el|
@@ -32,6 +32,13 @@ module FHIR
         end
       end
 
+
+      # Validates a single element against the ElementDefinition
+      #
+      # @param element [] the element to be validated
+      # @param element_definition [FHIR::ElementDefinition] the ElementDefinition which defines the element
+      # @param path [String] where the element is located in the parent resource
+      # @return result [Array<FHIR::ValidationResult>] the result of the data type validation
       def validate_element(element, element_definition, path)
         results = []
         # Get the type

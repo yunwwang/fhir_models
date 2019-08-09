@@ -8,7 +8,7 @@ module FHIR
       # structures it is composed of.
       #
       # https://www.hl7.org/fhir/datatypes.html
-      # @param element [Object] The Element of the Resource under test
+      # @param resource [FHIR::Model] The resource under test
       # @param element_definition [FHIR::ElementDefinition] The Element Definition from which the cardinality is taken
       # @return result [FHIR::ValidationResult] The result of the cardinality check
       def self.validate(resource, element_definition)
@@ -25,7 +25,7 @@ module FHIR
 
       # Validates a single element against the ElementDefinition
       #
-      # @param elements [Array] the element to be validated
+      # @param element [FHIR::Model] the element to be validated
       # @param element_definition [FHIR::ElementDefinition] the ElementDefinition which defines the element
       # @param path [String] where the element is located in the parent resource
       # @return result [Array<FHIR::ValidationResult>] the result of the data type validation
@@ -58,9 +58,8 @@ module FHIR
         results = type_validator.validate(element)
 
         # Update the path to reflect the object it is nested within
-        results.map do |res|
+        results.each do |res|
           res.element_path = res.element_path.gsub(/^([^.]+)/, path)
-          res
         end
       end
     end
