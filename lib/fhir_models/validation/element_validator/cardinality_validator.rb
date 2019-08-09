@@ -6,7 +6,7 @@ module FHIR
       #
       # @param resource [FHIR::Model] The resource under test
       # @param element_definition [FHIR::ElementDefinition] The Element Definition from which the cardinality is taken
-      # @return result [FHIR::ValidationResult] The result of the cardinality check
+      # @return result [Array<FHIR::ValidationResult>] The result of the cardinality check
       def self.validate(resource, element_definition)
         # Cardinality has no meaning on the first element.
         # It is listed as optional(irrelevant)
