@@ -25,19 +25,24 @@ module FHIR
 
       def self.validate_element(element, element_definition, path)
         # Get the type
-        type_code = element_definition.type_code(path)
+        begin
+          type_code = element_definition.type_code(path)
+        rescue FHIR::UnknownType
+          type_code = nil
+        end
         type_def = FHIR::Definitions.definition(type_code)
 
         # If we are missing the Structure Definition needed to do the validation.
         if type_def.nil?
+          result_text = if type_code.nil?
+                          'Type code not provided or extends the primitive code'
+                        else
+                          "Unknown type: #{type_code}"
+                        end
           return FHIR::ValidationResult.new(element_definition: element_definition,
                                             validation_type: :datatype,
                                             result: :warn,
-                                            text: (if type_code.nil?
-                                                     'Type code not provided or extends the primitive code'
-                                                   else
-                                                     "Unknown type: #{type_code}"
-                                                   end),
+                                            text: result_text,
                                             element_path: path || element_definition.path)
         elsif type_def.kind == 'primitive-type'
           return FHIR::ValidationResult.new(element_definition: element_definition,
