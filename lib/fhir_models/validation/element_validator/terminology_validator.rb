@@ -67,7 +67,7 @@ module FHIR
             end
 
             check = lambda do |uri, fail_level|
-              check_fn = @vs_validators[uri]
+              check_fn = vs_validators[uri]
               return result.call(:warn, "Missing Validator for #{uri}") unless check_fn
 
               return result.call(fail_level, "#{path} has no codings from #{uri}.") unless check_fn.call(coding)
