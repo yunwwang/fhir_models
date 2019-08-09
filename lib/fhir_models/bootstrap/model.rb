@@ -113,15 +113,35 @@ module FHIR
       end
     end
 
+    # Checks if the resource conforms to the base resource StructureDefinition
+    # @return [Boolean] if the resource is valid
     def valid?
       validate.select { |res| res.result == :fail }.empty?
     end
     deprecate :is_valid?, :valid?
 
+    # Validates the resource against the base resource StructureDefinition
+    #
+    # @return [Array<FHIR::Validation::ValidationResult>] The validation results
     def validate
-      type_name = self.class.name.split('::').last
-      type_def = FHIR::Definitions.definition(type_name)
+      type_def = type_definition
       FHIR::Validation::StructureValidator.new(type_def).validate(self)
+    end
+
+    # Get the demodulized name of the class
+    #
+    # e.g. FHIR::Patient would return: 'Patient'
+    # @return [String] The name of the FHIR Resource
+    def type_name
+      self.class.name.split('::').last
+    end
+
+    # Get the StructureDefinition of this type
+    #
+    # e.g. FHIR::Patient would return the FHIR::StructureDefinition of the Patient resource
+    # @return [FHIR::StructureDefinition] The StructureDefinition that defines the base resource
+    def type_definition
+      FHIR::Definitions.definition(type_name)
     end
 
     def primitive?(datatype, value)
