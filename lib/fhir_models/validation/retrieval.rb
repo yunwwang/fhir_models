@@ -16,8 +16,8 @@ module FHIR
         desired_elements = path_parts.reduce(fhir_path_elements) do |parent, sub_path|
           children = {}
           parent.each do |parent_path, parent_value|
-            fix_name = %w[class method resourceType].include?(sub_path) ? "local_#{sub_path}" : sub_path
-            elms = parent_value.send(fix_name) if parent_value.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
+            fixed_name = %w[class method resourceType].include?(sub_path) ? "local_#{sub_path}" : sub_path
+            elms = parent_value.send(fixed_name) if parent_value.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
             # More than one element where the FHIRPath needs indexing
             if elms.respond_to? :each_with_index
               elms.each_with_index do |indexed_element_value, indexed_element_path|
@@ -36,8 +36,8 @@ module FHIR
         # If we don't want to index the last element (useful for testing cardinality)
         not_indexed = {}
         desired_elements.each do |k, v|
-          fix_name = %w[class method resourceType].include?(last) ? "local_#{last}" : last
-          elms = v.send(fix_name) if v.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
+          fixed_name = %w[class method resourceType].include?(last) ? "local_#{last}" : last
+          elms = v.send(fixed_name) if v.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
           not_indexed["#{k}.#{last}"] = elms
         end
         not_indexed
