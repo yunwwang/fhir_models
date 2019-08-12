@@ -17,15 +17,15 @@ module FHIR
           children = {}
           parent.each do |parent_path, parent_value|
             fixed_name = %w[class method resourceType].include?(sub_path) ? "local_#{sub_path}" : sub_path
-            elms = parent_value.send(fixed_name) if parent_value.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
+            elements = parent_value.send(fixed_name) if parent_value.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
             # More than one element where the FHIRPath needs indexing
-            if elms.respond_to? :each_with_index
-              elms.each_with_index do |indexed_element_value, indexed_element_path|
+            if elements.respond_to? :each_with_index
+              elements.each_with_index do |indexed_element_value, indexed_element_path|
                 children["#{parent_path}.#{sub_path}[#{indexed_element_path}]"] = indexed_element_value unless blank?(indexed_element_value)
               end
               # Just One
             else
-              children["#{parent_path}.#{sub_path}"] = elms unless blank?(elms)
+              children["#{parent_path}.#{sub_path}"] = elements unless blank?(elements)
             end
           end
           children
@@ -35,10 +35,10 @@ module FHIR
 
         # If we don't want to index the last element (useful for testing cardinality)
         not_indexed = {}
-        desired_elements.each do |k, v|
+        desired_elements.each do |current_path, element|
           fixed_name = %w[class method resourceType].include?(last) ? "local_#{last}" : last
-          elms = v.send(fixed_name) if v.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
-          not_indexed["#{k}.#{last}"] = elms
+          elements = element.send(fixed_name) if element.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
+          not_indexed["#{current_path}.#{last}"] = elements
         end
         not_indexed
       end
@@ -63,11 +63,11 @@ module FHIR
           end
           if normalized
             choice_type_elements = {}
-            elements.each do |k, v|
-              renorm = k.rpartition('.').first
+            elements.each do |element_path, element|
+              renorm = element_path.rpartition('.').first
               normalized_path = "#{renorm}.#{element_definition.path.split('.').last}"
               choice_type_elements[normalized_path] ||= []
-              choice_type_elements[normalized_path].push(v).compact!
+              choice_type_elements[normalized_path].push(element).compact!
             end
             elements = choice_type_elements
           end
@@ -84,14 +84,14 @@ module FHIR
           # Only select the elements which match the slice profile.
           if indexed
             # Elements are already indexed
-            elements.select! do |_k, v|
-              v.url == element_definition.type.first.profile.first
+            elements.select! do |_k, element|
+              element.url == element_definition.type.first.profile.first
             end
           else
             sliced_elements = {}
-            elements.each do |k, v|
-              sliced_elements[k] = v.select do |ext|
-                ext.url == element_definition.type.first.profile.first
+            elements.each do |element_path, element|
+              sliced_elements[element_path] = element.select do |extension|
+                extension.url == element_definition.type.first.profile.first
               end
             end
             elements = sliced_elements
