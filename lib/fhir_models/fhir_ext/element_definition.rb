@@ -16,14 +16,25 @@ module FHIR
         raise UnknownType, 'Need path in order to determine type' unless element_path
 
         matching_code = type.find do |datatype|
-          cap_code = "#{datatype.code[0].capitalize}#{datatype.code[1..-1]}"
-          /[^.]+$/.match(path.gsub('[x]', cap_code)).to_s == /[^.]+$/.match(element_path).to_s
+          /[^.]+$/.match(path.gsub('[x]', capitalize(datatype))).to_s == /[^.]+$/.match(element_path).to_s
         end&.code
 
         raise UnknownType, "No matching types from #{type.flat_map(&:code)} for element at #{element_path}" if matching_code.nil?
 
         matching_code
       end
+    end
+
+    # Returns the potential paths of the element for each possible type
+    # @return type_paths [Array<String>] the possible paths
+    def type_paths
+      type.map do |data_type|
+        path.gsub('[x]', capitalize(data_type))
+      end
+    end
+
+    private def capitalize(string)
+      "#{string.code[0].capitalize}#{string.code[1..-1]}"
     end
   end
   # Error for Unknown Types

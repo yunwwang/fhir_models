@@ -7,7 +7,7 @@ module FHIR
       # @param path [String] the path
       # @param resource [FHIR::Model] the resource from which the elements will be retrieved
       # @return [Hash] The desired elements
-      def retrieve_element_with_fhirpath(path, resource, indexed = true)
+      def self.retrieve_element_with_fhirpath(path, resource, indexed = true)
         path_parts = path.split('.')
         base_path = path_parts.shift
         fhir_path_elements = { base_path => resource }
@@ -49,7 +49,7 @@ module FHIR
       # @param element_definition [FHIR::ElementDefinition] The ElementDefinition which defines the desired resources
       # @param indexed [Boolean] If the elements should be returned individually or as a collection
       # @param normalized [Boolean] If the elements with a choice of type should be normalized
-      def retrieve_by_element_definition(resource, element_definition, indexed: false, normalized: false)
+      def self.retrieve_by_element_definition(resource, element_definition, indexed: false, normalized: false)
         # Check if we were provided a path that includes extensions (like in the ElementDefinition id versus the path)
         path = element_definition.path
 
@@ -105,7 +105,6 @@ module FHIR
       end
 
       private_class_method :blank?
-      module_function :retrieve_by_element_definition, :retrieve_element_with_fhirpath
     end
   end
 end

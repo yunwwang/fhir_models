@@ -52,4 +52,19 @@ describe FHIR::ElementDefinition do
       end
     end
   end
+
+  describe '#type_paths' do
+    context 'with a single type' do
+      include_context 'single type'
+      it 'returns a single path option' do
+        expect(element_definition.type_paths).to eq(['Patient.deceased'])
+      end
+    end
+    context 'with a choice of types' do
+      include_context 'choice of type'
+      it 'returns a path for each type' do
+        expect(element_definition.type_paths).to eq(['Patient.deceasedBoolean', 'Patient.deceasedDateTime'])
+      end
+    end
+  end
 end

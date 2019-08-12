@@ -89,4 +89,15 @@ describe FHIR::Validation::Retrieval do
       end
     end
   end
+
+  describe '#retrieve_element_with_fhirpath' do
+    let(:element_definition) {FHIR::ElementDefinition.new(id: id, path: path)}
+    context 'when retrieving the root element' do
+      let(:id) {'Patient'}
+      let(:path) {'Patient'}
+      it 'returns the root element (the resource)' do
+        expect(retrieval.retrieve_by_element_definition(resource, element_definition)).to eq({element_definition.id => resource})
+      end
+    end
+  end
 end
