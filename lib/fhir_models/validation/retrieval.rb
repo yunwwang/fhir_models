@@ -64,13 +64,34 @@ module FHIR
       def self.index_elements(element_map)
         indexed_elements = {}
         element_map.each do |path, elements|
-          if elements.respond_to? :each_with_index
-            elements.each_with_index do |indexed_element_value, indexed_element_path|
-              indexed_elements["#{path}[#{indexed_element_path}]"] = indexed_element_value unless blank?(indexed_element_value)
-            end
-          else
-            indexed_elements[path.to_s] = elements unless blank?(elements)
-          end
+          indexed_elements.merge!(index_elements_for_path(elements, path))
+        end
+        indexed_elements
+      end
+
+      # Index enumerable element collections
+      #
+      # @param elements [Array]
+      # @param path [String] the path to the element collection
+      # @return [Hash]
+      def self.index_element_collection(elements, path)
+        indexed_elements = {}
+        elements.each_with_index do |indexed_element_value, indexed_element_path|
+          indexed_elements["#{path}[#{indexed_element_path}]"] = indexed_element_value unless blank?(indexed_element_value)
+        end
+        indexed_elements
+      end
+
+      # Index elements on a specific path
+      # @param elements
+      # @param path [String] the path to the element collection
+      # @return [Hash]
+      def self.index_elements_for_path(elements, path)
+        indexed_elements = {}
+        if elements.respond_to? :each_with_index
+          indexed_elements = index_element_collection(elements, path)
+        else
+          indexed_elements[path.to_s] = elements unless blank?(elements)
         end
         indexed_elements
       end
@@ -83,8 +104,8 @@ module FHIR
       def self.normalize_elements(element_map, element_definition)
         choice_type_elements = {}
         element_map.each do |element_path, element|
-          renorm = element_path.rpartition('.').first
-          normalized_path = "#{renorm}.#{element_definition.path.split('.').last}"
+          base_path = element_path.rpartition('.').first
+          normalized_path = "#{base_path}.#{element_definition.path.split('.').last}"
           choice_type_elements[normalized_path] ||= []
           choice_type_elements[normalized_path].push(element).compact!
         end
@@ -118,7 +139,6 @@ module FHIR
 
         # Only select the elements which match the slice profile.
         if indexed
-          # Elements are already indexed
           element_map.select! do |_k, element|
             element.url == element_definition.type.first.profile.first
           end
@@ -140,7 +160,6 @@ module FHIR
       # @param indexed [Boolean] If the elements should be returned individually or as a collection
       # @param normalized [Boolean] If the elements with a choice of type should be normalized
       def self.retrieve_by_element_definition(resource, element_definition, indexed: false, normalized: false)
-        # Check if we were provided a path that includes extensions (like in the ElementDefinition id versus the path)
         path = element_definition.path
 
         elements = if element_definition.choice_type?
@@ -149,7 +168,7 @@ module FHIR
                      retrieve_by_fhirpath(path, resource, indexed)
                    end
 
-        elements = handle_slices(elements, element_definition, indexed: indexed, normalized: normalized) if element_definition.sliceName
+        elements = handle_slices(elements, element_definition, indexed: indexed) if element_definition.sliceName
         elements
       end
 
