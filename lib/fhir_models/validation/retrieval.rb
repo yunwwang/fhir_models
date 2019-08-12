@@ -7,40 +7,61 @@ module FHIR
       # @param path [String] the path
       # @param resource [FHIR::Model] the resource from which the elements will be retrieved
       # @return [Hash] The desired elements
-      def self.retrieve_element_with_fhirpath(path, resource, indexed = true)
-        path_parts = path.split('.')
-        base_path = path_parts.shift
-        fhir_path_elements = { base_path => resource }
-        last = path_parts.pop unless indexed
+      def self.retrieve_by_fhirpath(path, resource, indexed = true)
+        path_parts = path_parts(path)
+        last = path_parts.pop if path_parts.length != 1 && !indexed
 
-        desired_elements = path_parts.reduce(fhir_path_elements) do |parent, sub_path|
-          children = {}
-          parent.each do |parent_path, parent_value|
-            fixed_name = %w[class method resourceType].include?(sub_path) ? "local_#{sub_path}" : sub_path
-            elements = parent_value.send(fixed_name) if parent_value.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
-            # More than one element where the FHIRPath needs indexing
-            if elements.respond_to? :each_with_index
-              elements.each_with_index do |indexed_element_value, indexed_element_path|
-                children["#{parent_path}.#{sub_path}[#{indexed_element_path}]"] = indexed_element_value unless blank?(indexed_element_value)
-              end
-              # Just One
-            else
-              children["#{parent_path}.#{sub_path}"] = elements unless blank?(elements)
-            end
-          end
-          children
-        end
+        desired_elements = indexed_elements_by_fhirpath(path_parts.join('.'), resource)
 
         return desired_elements unless last
 
         # If we don't want to index the last element (useful for testing cardinality)
         not_indexed = {}
         desired_elements.each do |current_path, element|
-          fixed_name = %w[class method resourceType].include?(last) ? "local_#{last}" : last
-          elements = element.send(fixed_name) if element.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
-          not_indexed["#{current_path}.#{last}"] = elements
+          not_indexed["#{current_path}.#{last}"] = retrieve_from_structure(last, element)
         end
         not_indexed
+      end
+
+      # Returns an array of the path parts
+      # @param path [String] the path
+      # @return [Array<String>]
+      def self.path_parts(path)
+        path.split('.')
+      end
+
+      # Retrieve the specified element from the structure
+      #
+      # @param element [String] the element to be retrieved
+      # @param structure [FHIR::Model] the structure from which the element will be retrieved
+      def self.retrieve_from_structure(element, structure)
+        fixed_name = %w[class method resourceType].include?(element) ? "local_#{element}" : element
+        structure.send(fixed_name) if structure.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
+      end
+
+      # Returns the indexed elements given by the path
+      #
+      # @param fhirpath ['String'] the element path
+      # @resource [FHIR::Model] the resource from which the elements will be retrieved
+      # @return [Hash]
+      def self.indexed_elements_by_fhirpath(fhirpath, resource)
+        path_parts = path_parts(fhirpath)
+        base_path = path_parts.shift
+        fhir_path_elements = { base_path => resource }
+        path_parts.reduce(fhir_path_elements) do |path_resource_map, sub_path|
+          children = {}
+          path_resource_map.each do |path, element|
+            elements = retrieve_from_structure(sub_path, element)
+            if elements.respond_to? :each_with_index
+              elements.each_with_index do |indexed_element_value, indexed_element_path|
+                children["#{path}.#{sub_path}[#{indexed_element_path}]"] = indexed_element_value unless blank?(indexed_element_value)
+              end
+            else
+              children["#{path}.#{sub_path}"] = elements unless blank?(elements)
+            end
+          end
+          children
+        end
       end
 
       # Retrieve the elements in the resource which are defined by the provided ElementDefinition
@@ -58,7 +79,7 @@ module FHIR
           elements = {}
           element_definition.type.each do |type|
             choice_type = type.code[0].upcase + type.code[1..-1]
-            type_element = retrieve_element_with_fhirpath(path.gsub('[x]', choice_type), resource, indexed)
+            type_element = retrieve_by_fhirpath(path.gsub('[x]', choice_type), resource, indexed)
             elements.merge!(type_element) unless blank?(type_element)
           end
           if normalized
@@ -72,7 +93,7 @@ module FHIR
             elements = choice_type_elements
           end
         else
-          elements = retrieve_element_with_fhirpath(path, resource, indexed)
+          elements = retrieve_by_fhirpath(path, resource, indexed)
         end
 
         # Handle Slices
@@ -104,7 +125,7 @@ module FHIR
         obj.respond_to?(:empty?) ? obj.empty? : obj.nil?
       end
 
-      private_class_method :blank?
+      private_class_method :blank?, :path_parts, :retrieve_from_structure, :indexed_elements_by_fhirpath
     end
   end
 end
