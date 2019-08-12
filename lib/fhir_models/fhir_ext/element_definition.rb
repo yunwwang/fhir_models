@@ -13,13 +13,9 @@ module FHIR
       if type.one?
         type.first.code
       else
-        raise UnknownType, 'Need path in order to determine type' unless element_path
+        matching_code = matching_choice_type(element_path)
 
-        matching_code = type.find do |datatype|
-          /[^.]+$/.match(path.gsub('[x]', capitalize(datatype))).to_s == /[^.]+$/.match(element_path).to_s
-        end&.code
-
-        raise UnknownType, "No matching types from #{type.flat_map(&:code)} for element at #{element_path}" if matching_code.nil?
+        raise(UnknownType, "No matching types from #{type.flat_map(&:code)} for element at #{element_path}") if matching_code.nil?
 
         matching_code
       end
@@ -31,6 +27,13 @@ module FHIR
       type.map do |data_type|
         path.gsub('[x]', capitalize(data_type))
       end
+    end
+
+    # Returns the type code for the matching type when a choice of types is present
+    private def matching_choice_type(element_path)
+      type.find do |datatype|
+        /[^.]+$/.match(path.gsub('[x]', capitalize(datatype))).to_s == /[^.]+$/.match(element_path).to_s
+      end&.code
     end
 
     private def capitalize(string)
