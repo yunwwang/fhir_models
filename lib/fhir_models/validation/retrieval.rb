@@ -8,27 +8,27 @@ module FHIR
       # @param resource [FHIR::Model] the resource from which the elements will be retrieved
       # @return [Hash] The desired elements
       def retrieve_element_with_fhirpath(path, resource, indexed = true)
-        spath = path.split('.')
-        base = spath.shift
-        fhirpath_elements = { base => resource }
-        last = spath.pop unless indexed
+        path_parts = path.split('.')
+        base_path = path_parts.shift
+        fhir_path_elements = { base_path => resource }
+        last = path_parts.pop unless indexed
 
-        desired_elements = spath.inject(fhirpath_elements) do |memo, meth|
-          digging = {}
-          memo.each do |k, v|
-            fix_name = %w[class method resourceType].include?(meth) ? "local_#{meth}" : meth
-            elms = v.send(fix_name) if v.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
+        desired_elements = path_parts.reduce(fhir_path_elements) do |parent, sub_path|
+          children = {}
+          parent.each do |parent_path, parent_value|
+            fix_name = %w[class method resourceType].include?(sub_path) ? "local_#{sub_path}" : sub_path
+            elms = parent_value.send(fix_name) if parent_value.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
             # More than one element where the FHIRPath needs indexing
             if elms.respond_to? :each_with_index
-              elms.each_with_index do |vv, kk|
-                digging["#{k}.#{meth}[#{kk}]"] = vv unless blank?(vv)
+              elms.each_with_index do |indexed_element_value, indexed_element_path|
+                children["#{parent_path}.#{sub_path}[#{indexed_element_path}]"] = indexed_element_value unless blank?(indexed_element_value)
               end
               # Just One
             else
-              digging["#{k}.#{meth}"] = elms unless blank?(elms)
+              children["#{parent_path}.#{sub_path}"] = elms unless blank?(elms)
             end
           end
-          digging
+          children
         end
 
         return desired_elements unless last
