@@ -100,6 +100,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.6)
+    rubocop-rspec (1.35.0)
+      rubocop (>= 0.60.0)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     shellany (0.0.1)
@@ -130,6 +132,7 @@ DEPENDENCIES
   rake
   rspec
   rubocop (= 0.67)
+  rubocop-rspec
   simplecov
   test-unit
 
