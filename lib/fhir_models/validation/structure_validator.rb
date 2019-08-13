@@ -116,11 +116,8 @@ module FHIR
 
         return unless elements_exist_in_resource(resource, element_definition)
 
-        # Validate the subpath elements
-        hierarchy[:path].values.each { |v| validate_hierarchy(resource, v) }
-
-        # Validate the slices elements
-        hierarchy[:slices].values.each { |v| validate_hierarchy(resource, v) }
+        hierarchy[:path].values.each { |sub_hierarchy| validate_hierarchy(resource, sub_hierarchy) }
+        hierarchy[:slices].values.each { |sub_hierarchy| validate_hierarchy(resource, sub_hierarchy) }
       end
 
       private def blank?(obj)
