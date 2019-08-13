@@ -17,3 +17,5 @@ Style/FrozenStringLiteralComment:
 inherit_mode:
   merge:
     - Exclude
+Naming/RescuedExceptionsVariableName:
+  PreferredName: 'e'

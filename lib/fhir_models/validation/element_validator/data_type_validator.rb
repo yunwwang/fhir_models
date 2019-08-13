@@ -34,11 +34,11 @@ module FHIR
         begin
           type_code = element_definition.type_code(path)
           type_def = FHIR::Definitions.definition(type_code)
-        rescue FHIR::UnknownType => ex
+        rescue FHIR::UnknownType => e
           return FHIR::ValidationResult.new(element_definition: element_definition,
                                             validation_type: :datatype,
                                             result: :warn,
-                                            text: ex.message,
+                                            text: e.message,
                                             element_path: path || element_definition.path)
         end
 

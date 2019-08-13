@@ -54,9 +54,9 @@ module FHIR
       #
       # @param [Array] List of Element Definitions
       # @return [Hash] The ElementDefinition hierarchy
-      private def build_hierarchy(elem_def_list)
+      private def build_hierarchy(element_definitions)
         hierarchy = {}
-        elem_def_list.each do |element|
+        element_definitions.each do |element|
           # Separate path and slices into an array of keys
           slices = element.id.split(':')
           path = slices.shift.split('.')
