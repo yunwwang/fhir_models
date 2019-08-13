@@ -1,35 +1,51 @@
 describe FHIR::Validation::FixedValueValidator do
+  let(:validator) { described_class }
 
-  let(:validator) { FHIR::Validation::FixedValueValidator }
-
-  let(:fixed_value) {'867-5309'}
+  let(:fixed_value) { '867-5309' }
 
   let(:element) { FHIR::Patient.new(gender: fixed_value) }
-  #let(:element_definition) { instance_double(FHIR::ElementDefinition) }
-  let(:element_definition) do  FHIR::ElementDefinition.new(id: 'Patient.gender',
-                                                           path: 'Patient.gender',
-                                                           type:[{code: 'String'}])
+
+  let(:id_and_path) { 'Patient.gender' }
+
+  let(:element_definition) do
+    FHIR::ElementDefinition.new(id: 'Patient.gender',
+                                path: 'Patient.gender',
+                                type: [{ code: 'String' }])
+  end
+
+  shared_examples 'fixed value results' do
+    expect(results).to all(have_attributes(validation_type: :fixed_value))
   end
 
   describe '#validate' do
-    it 'returns a single result related to the fixed value' do
+    context 'when the fixed string matches' do
+      let(:element_definition) do
+        FHIR::ElementDefinition.new(id: id_and_path,
+                                    path: id_and_path,
+                                    type: [{ code: 'String' }],
+                                    fixedString: fixed_value)
+      end
 
-      # allow(element_definition).to receive(:fixed)
-      #                                  .and_return(element)
-      element_definition.fixedString = fixed_value
+      let(:results) { validator.validate(element, element_definition) }
 
-      results = validator.validate(element, element_definition)
-      expect(results.first.validation_type).to be(:fixed_value)
-      expect(results.first.result).to be(:pass)
+      it 'the validation passes' do
+        expect(results).to all(have_attributes(result: :pass))
+      end
     end
 
-    it 'detects when the fixed value is incorrect' do
+    context 'when the fixed string does not match' do
+      let(:element_definition) do
+        FHIR::ElementDefinition.new(id: id_and_path,
+                                    path: id_and_path,
+                                    type: [{ code: 'String' }],
+                                    fixedString: 'INVALID_FIXED')
+      end
 
-      element_definition.fixedString = 'INVALID_FIXED'
+      let(:results) { validator.validate(element, element_definition) }
 
-      results = validator.validate(element, element_definition)
-      expect(results.first.validation_type).to be(:fixed_value)
-      expect(results.first.result).to be(:fail)
+      it 'the validation fails' do
+        expect(results).to all(have_attributes(result: :fail))
+      end
     end
   end
 end
