@@ -1,7 +1,7 @@
 describe FHIR::Definitions do
   context '.load_extensions'
 
-  context '.get_display' do
+  context 'get_display' do
     let(:code) { '306005' }
     let(:uri) { 'http://snomed.info/sct' }
 

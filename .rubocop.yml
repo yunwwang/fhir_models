@@ -21,3 +21,6 @@ Naming/RescuedExceptionsVariableName:
   PreferredName: 'e'
 RSpec/FilePath:
   Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'

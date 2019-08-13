@@ -1,14 +1,13 @@
 describe FHIR::ElementDefinition do
-
-  shared_context 'choice of type' do
+  shared_context 'with a choice of type' do
     let(:element_definition) do
-      FHIR::ElementDefinition.new(path: 'Patient.deceased[x]', type: [{code: 'boolean'}, {code: 'dateTime'}])
+      described_class.new(path: 'Patient.deceased[x]', type: [{ code: 'boolean' }, { code: 'dateTime' }])
     end
   end
 
-  shared_context 'single type' do
+  shared_context 'with a single type' do
     let(:element_definition) do
-      FHIR::ElementDefinition.new(path: 'Patient.deceased', type: [{code: 'boolean'}])
+      described_class.new(path: 'Patient.deceased', type: [{ code: 'boolean' }])
     end
   end
   describe '#choice_type' do
@@ -30,15 +29,22 @@ describe FHIR::ElementDefinition do
   describe '#type_code' do
     context 'with a single type' do
       include_context 'single type'
-      it 'provides the expected type of the element' do
-        expect(element_definition.type_code).to eq('boolean')
+      it 'provides the expected type of the element when provided a path' do
         expect(element_definition.type_code('fake.path')).to eq('boolean')
       end
+
+      it 'provides the expected type of the element without a path provided' do
+        expect(element_definition.type_code).to eq('boolean')
+      end
     end
+
     context 'with a choice of types' do
       include_context 'choice of type'
-      it 'provides the correct type from the choices' do
+      it 'provides the correct type from the choices when the first type is provided' do
         expect(element_definition.type_code('Patient.deceasedBoolean')).to eq('boolean')
+      end
+
+      it 'provides the correct type from the choices when the second type is provided' do
         expect(element_definition.type_code('Patient.deceasedDateTime')).to eq('dateTime')
       end
 
@@ -60,6 +66,7 @@ describe FHIR::ElementDefinition do
         expect(element_definition.type_paths).to eq(['Patient.deceased'])
       end
     end
+
     context 'with a choice of types' do
       include_context 'choice of type'
       it 'returns a path for each type' do
