@@ -118,7 +118,7 @@ module FHIR
       # @param indexed [Boolean] If the elements should be returned individually or as a collection
       # @param normalized [Boolean] If the elements with a choice of type should be normalized
       # @return [Hash]
-      def self.retrieve_type_choice_elements(resource, element_definition, indexed: false, normalized: false)
+      def self.retrieve_choice_type_elements(resource, element_definition, indexed: false, normalized: false)
         elements = {}
         element_definition.type_paths.each do |type_path|
           type_element = retrieve_by_fhirpath(type_path, resource, indexed)
@@ -163,7 +163,7 @@ module FHIR
         path = element_definition.path
 
         elements = if element_definition.choice_type?
-                     retrieve_type_choice_elements(resource, element_definition, indexed: indexed, normalized: normalized)
+                     retrieve_choice_type_elements(resource, element_definition, indexed: indexed, normalized: normalized)
                    else
                      retrieve_by_fhirpath(path, resource, indexed)
                    end
@@ -177,7 +177,7 @@ module FHIR
       end
 
       private_class_method :blank?, :path_parts, :retrieve_from_structure, :indexed_elements_by_fhirpath,
-                           :index_elements, :normalize_elements, :retrieve_type_choice_elements, :handle_slices
+                           :index_elements, :normalize_elements, :retrieve_choice_type_elements, :handle_slices
     end
   end
 end

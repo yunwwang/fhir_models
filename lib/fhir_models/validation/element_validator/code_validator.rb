@@ -61,18 +61,24 @@ module FHIR
         required_binding? ? :fail : :warn
       end
 
+      # Check that both a code and system are present in the coded element
+      # @param coding [#code & #system]
+      # @return [Array<FHIR::ValidationResult>]
+      private def check_for_code_and_system(coding)
+        check_results = []
+        check_results.push(new_result(:warn, "#{path}: missing code")) if coding.code.nil?
+        check_results.push(new_result(:warn, "#{path}: missing system")) if coding.system.nil?
+        check_results
+      end
+
       # Check the code for an individually element
       #
       # @param coding [#code & #system] the coded element containing a code and system
       # @param valueset_uri [String] the valueset uri
       private def check_code(coding, valueset_uri)
-        check_results = []
         # Can't validate if both code and system are not given
-        if coding.code.nil? || coding.system.nil?
-          check_results.push(new_result(:warn, "#{path}: missing code")) if coding.code.nil?
-          check_results.push(new_result(:warn, "#{path}: missing system")) if coding.system.nil?
-          return check_results
-        end
+        check_results = check_for_code_and_system(coding)
+        return check_results unless check_results.empty?
 
         # ValueSet Validation
         check_results.push(validate_code(coding, valueset_uri, fail_level))
