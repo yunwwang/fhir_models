@@ -5,7 +5,6 @@ module FHIR
       @vs_validators = {}
 
       attr_accessor :all_results
-      attr_accessor :show_skipped
       attr_reader :element_validators
 
       # Create a StructureValidator from a FHIR::StructureDefinition
@@ -14,7 +13,6 @@ module FHIR
       #
       def initialize(profile, use_default_element_validators: true)
         @profile = profile
-        @show_skipped = true
         @element_validators = Set.new
         add_default_element_validators if use_default_element_validators
       end
@@ -99,25 +97,23 @@ module FHIR
         @snapshot_hierarchy
       end
 
+      private def elements_exist_in_resource(resource, element_definition)
+        elements = resource.retrieve_elements_by_definition(element_definition)
+        !blank?(elements.values.flatten.compact)
+      end
+
       private def validate_hierarchy(resource, hierarchy)
-        # Validate the element
         hierarchy[:results] ||= []
         element_definition = hierarchy[:elementDefinition]
 
-        # Get the Results
+        # Get the results from each element validator
         results = @element_validators.flat_map { |validator| validator.validate(resource, element_definition) }
-        results.compact!
-        results.each { |res| res.profile ||= @profile.url }
+        results.compact!.each { |res| res.profile ||= @profile.url }
 
         # Save the validation results
-        hierarchy[:results].push(*results)
+        hierarchy[:results].concat(results)
 
-        # Check to see if there are any valid elements to determine if we need to check the subelements
-        elements = resource.retrieve_elements_by_definition(element_definition)
-        element_exists = !blank?(elements.values.flatten.compact)
-
-        # If the element doesn't exist we don't need to check its subelements unless we are instructed to by showskipped
-        return unless @show_skipped || element_exists
+        return unless elements_exist_in_resource(resource, element_definition)
 
         # Validate the subpath elements
         hierarchy[:path].values.each { |v| validate_hierarchy(resource, v) }
