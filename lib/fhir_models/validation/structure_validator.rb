@@ -50,6 +50,30 @@ module FHIR
                                       Validation::MaxLengthValidator])
       end
 
+      private def parse_element_id(element_id)
+        element_id_parts = {}
+        element_id_parts[:slices] = element_id.split(':')
+        element_id_parts[:path] = element_id_parts[:slices].shift.split('.')
+        element_id_parts[:slices] = element_id_parts[:slices].pop&.split('/')
+        element_id_parts[:last_path] = element_id_parts[:slices].nil? ? element_id_parts[:path].pop : element_id_parts[:slices].pop
+        element_id_parts
+      end
+
+      private def add_element_path_to_hierarchy(hierarchy, path)
+        path.reduce(hierarchy) do |hierarchy_memo, path_path|
+          hierarchy_memo[path_path] ||= { elementDefinition: nil, path: {}, slices: {} }
+          hierarchy_memo[path_path][:path]
+        end
+      end
+
+      private def add_element_slices_to_hierarchy(hierarchy, path, slices)
+        path_down = path.zip(Array.new(path.length - 1, :path)).push(:slices).flatten.compact
+        slices.inject(hierarchy.dig(*path_down)) do |memo, k|
+          memo[k] ||= { elementDefinition: nil, path: {}, slices: {} }
+          memo[k][:slices]
+        end
+      end
+
       # Build a hierarchy from a list of ElementDefinitions
       #
       # @param [Array] List of Element Definitions
@@ -57,29 +81,10 @@ module FHIR
       private def build_hierarchy(element_definitions)
         hierarchy = {}
         element_definitions.each do |element|
-          # Separate path and slices into an array of keys
-          slices = element.id.split(':')
-          path = slices.shift.split('.')
-          slices = slices.pop&.split('/')
-          last_path = slices.nil? ? path.pop : slices.pop
-
-          # Build the hierarchy
-          thing = path.inject(hierarchy) do |memo, k|
-            memo[k] ||= { elementDefinition: nil, path: {}, slices: {} }
-            memo[k][:path]
-          end
-
-          # If there are slices
-          unless slices.nil?
-            path_down = path.zip(Array.new(path.length - 1, :path)).push(:slices).flatten.compact
-            thing = slices.inject(hierarchy.dig(*path_down)) do |memo, k|
-              memo[k] ||= { elementDefinition: nil, path: {}, slices: {} }
-              memo[k][:slices]
-            end
-          end
-
-          # If there are no slices
-          thing[last_path] = { elementDefinition: element, path: {}, slices: {} }
+          element_id_parts = parse_element_id(element.id)
+          current_node = add_element_path_to_hierarchy(hierarchy, element_id_parts[:path])
+          current_node = add_element_slices_to_hierarchy(hierarchy, element_id_parts[:path], element_id_parts[:slices]) unless element_id_parts[:slices].nil?
+          current_node[element_id_parts[:last_path]] = { elementDefinition: element, path: {}, slices: {} }
         end
         hierarchy
       end
