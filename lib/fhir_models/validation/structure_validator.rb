@@ -102,16 +102,17 @@ module FHIR
         !blank?(elements.values.flatten.compact)
       end
 
+      private def validate_against_element_validators(resource, element_definition)
+        @element_validators.flat_map { |validator| validator.validate(resource, element_definition) }
+                           .compact!
+                           .each { |res| res.profile ||= @profile.url }
+      end
+
       private def validate_hierarchy(resource, hierarchy)
         hierarchy[:results] ||= []
         element_definition = hierarchy[:elementDefinition]
 
-        # Get the results from each element validator
-        results = @element_validators.flat_map { |validator| validator.validate(resource, element_definition) }
-        results.compact!.each { |res| res.profile ||= @profile.url }
-
-        # Save the validation results
-        hierarchy[:results].concat(results)
+        hierarchy[:results].concat(validate_against_element_validators(resource, element_definition))
 
         return unless elements_exist_in_resource(resource, element_definition)
 
