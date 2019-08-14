@@ -12,14 +12,14 @@ describe FHIR::ElementDefinition do
   end
   describe '#choice_type' do
     context 'with a choice of types' do
-      include_context 'choice of type'
+      include_context 'with a choice of type'
       it 'indicates there is a choice of type' do
         expect(element_definition.choice_type?).to be true
       end
     end
 
     context 'with a single type' do
-      include_context 'single type'
+      include_context 'with a single type'
       it 'indicates there is not a choice of types' do
         expect(element_definition.choice_type?).to be false
       end
@@ -28,7 +28,7 @@ describe FHIR::ElementDefinition do
 
   describe '#type_code' do
     context 'with a single type' do
-      include_context 'single type'
+      include_context 'with a single type'
       it 'provides the expected type of the element when provided a path' do
         expect(element_definition.type_code('fake.path')).to eq('boolean')
       end
@@ -39,7 +39,7 @@ describe FHIR::ElementDefinition do
     end
 
     context 'with a choice of types' do
-      include_context 'choice of type'
+      include_context 'with a choice of type'
       it 'provides the correct type from the choices when the first type is provided' do
         expect(element_definition.type_code('Patient.deceasedBoolean')).to eq('boolean')
       end
@@ -61,14 +61,14 @@ describe FHIR::ElementDefinition do
 
   describe '#type_paths' do
     context 'with a single type' do
-      include_context 'single type'
+      include_context 'with a single type'
       it 'returns a single path option' do
         expect(element_definition.type_paths).to eq(['Patient.deceased'])
       end
     end
 
     context 'with a choice of types' do
-      include_context 'choice of type'
+      include_context 'with a choice of type'
       it 'returns a path for each type' do
         expect(element_definition.type_paths).to eq(['Patient.deceasedBoolean', 'Patient.deceasedDateTime'])
       end

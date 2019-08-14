@@ -36,7 +36,7 @@ describe FHIR::Validation::DataTypeValidator do
                                   type: { code: 'Patient' })
     end
 
-    include_context 'results'
+    include_context 'with results'
 
     it 'skips the root element' do
       results = validator.validate(resource, element_definition)
@@ -61,7 +61,7 @@ describe FHIR::Validation::DataTypeValidator do
                                     type: { code: 'Foo' })
       end
 
-      include_context 'results'
+      include_context 'with results'
 
       include_examples 'data type result'
 
@@ -97,7 +97,7 @@ describe FHIR::Validation::DataTypeValidator do
         [type1, type2]
       end
 
-      include_context 'results'
+      include_context 'with results'
 
       include_examples 'data type result'
       include_examples 'cardinality results'
