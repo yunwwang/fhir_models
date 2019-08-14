@@ -57,16 +57,6 @@ describe FHIR::Validation::Retrieval do
     end
 
     context 'with sliced extensions' do
-      it 'returns all extensions' do
-        element_definition = FHIR::ElementDefinition.new(id: 'Patient.extension', path: 'Patient.extension')
-        expect(retrieval.retrieve_by_element_definition(resource, element_definition)).to eq(element_definition.id => resource.extension)
-      end
-      it 'returns the extensions indexed' do
-        expected_result = { 'Patient.extension[0]' => resource.extension[0],
-                            'Patient.extension[1]' => resource.extension[1] }
-        element_definition = FHIR::ElementDefinition.new(id: 'Patient.extension', path: 'Patient.extension')
-        expect(retrieval.retrieve_by_element_definition(resource, element_definition, indexed: true)).to eq(expected_result)
-      end
       it 'returns the sliced extension' do
         element_definition = FHIR::ElementDefinition.new(id: 'Patient.extension:foo',
                                                          path: 'Patient.extension',
