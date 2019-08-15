@@ -58,9 +58,9 @@ module FHIR
       end
 
       private def add_element_path_to_hierarchy(hierarchy, path)
-        path.reduce(hierarchy) do |hierarchy_memo, path_path|
-          hierarchy_memo[path_path] ||= hierarchy_node
-          hierarchy_memo[path_path][:path]
+        path.reduce(hierarchy) do |hierarchy_memo, path_part|
+          hierarchy_memo[path_part] ||= hierarchy_node
+          hierarchy_memo[path_part][:path]
         end
       end
 
