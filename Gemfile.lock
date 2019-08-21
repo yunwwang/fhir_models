@@ -130,7 +130,7 @@ DEPENDENCIES
   rake
   rspec
   rubocop (= 0.67)
-  simplecov
+  simplecov (~> 0.17.0)
   test-unit
 
 RUBY VERSION
