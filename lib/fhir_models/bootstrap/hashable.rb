@@ -69,14 +69,10 @@ module FHIR
           # handle array of objects
           if value.is_a?(Array)
             value = value.map do |child|
-              obj = child
-              unless [FHIR::RESOURCES, FHIR::TYPES].flatten.include? child.class.name.gsub('FHIR::', '')
-                obj = make_child(child, klass)
-              end
-              obj
+              child.is_a?(FHIR::Model) ? obj : make_child(child, klass)
             end
           else # handle single object
-            value = make_child(value, klass)
+            value = make_child(value, klass) unless value.is_a?(FHIR::Model)
             # if there is only one of these, but cardinality allows more, we need to wrap it in an array.
             value = [value] if value && (meta['max'] > 1)
           end
