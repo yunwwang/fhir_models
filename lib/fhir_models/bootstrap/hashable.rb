@@ -68,11 +68,9 @@ module FHIR
         if !klass.nil? && !value.nil?
           # handle array of objects
           if value.is_a?(Array)
-            value = value.map do |child|
-              child.is_a?(FHIR::Model) ? child : make_child(child, klass)
-            end
+            value = value.map { |child| make_child(child, klass) }
           else # handle single object
-            value = make_child(value, klass) unless value.is_a?(FHIR::Model)
+            value = make_child(value, klass)
             # if there is only one of these, but cardinality allows more, we need to wrap it in an array.
             value = [value] if value && (meta['max'] > 1)
           end
@@ -95,6 +93,8 @@ module FHIR
     end
 
     def make_child(child, klass)
+      return child if child.is_a?(FHIR::Model)
+
       if child['resourceType'] && !klass::METADATA['resourceType']
         klass = begin
           FHIR.const_get(child['resourceType'])
