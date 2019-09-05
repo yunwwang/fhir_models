@@ -69,7 +69,7 @@ module FHIR
           # handle array of objects
           if value.is_a?(Array)
             value = value.map do |child|
-              child.is_a?(FHIR::Model) ? obj : make_child(child, klass)
+              child.is_a?(FHIR::Model) ? child : make_child(child, klass)
             end
           else # handle single object
             value = make_child(value, klass) unless value.is_a?(FHIR::Model)
