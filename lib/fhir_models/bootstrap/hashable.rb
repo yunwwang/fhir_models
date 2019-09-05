@@ -108,7 +108,6 @@ module FHIR
       begin
         obj = klass.new(child)
       rescue => exception
-        # TODO: this appears to be a dead code branch
         # TODO: should this re-raise the exception if encountered instead of silently swallowing it?
         FHIR.logger.error("Unable to inflate embedded class #{klass}\n#{exception.backtrace}")
       end
