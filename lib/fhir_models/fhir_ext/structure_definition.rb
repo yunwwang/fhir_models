@@ -59,8 +59,8 @@ module FHIR
       if json.is_a? String
         begin
           json = JSON.parse(json)
-        rescue => e
-          @errors << "Failed to parse JSON: #{e.message} %n #{h} %n #{e.backtrace.join("\n")}"
+        rescue => ex
+          @errors << "Failed to parse JSON: #{ex.message} %n #{h} %n #{ex.backtrace.join("\n")}"
           return false
         end
       end
@@ -198,38 +198,49 @@ module FHIR
                   matching_pattern = true if vcoding.system == pcoding.system && vcoding.code == pcoding.code
                 end
               end
-            elsif data_type_found == 'CodeableConcept' && codeable_concept_binding
-              binding_issues =
-                if element.binding.strength == 'extensible'
-                  @warnings
-                elsif element.binding.strength == 'required'
-                  @errors
-                else # e.g., example-strength or unspecified
-                  [] # Drop issues errors on the floor, in throwaway array
-                end
+            elsif %w[CodeableConcept Coding Quantity].include? data_type_found
+              required_strength = element&.binding&.strength == 'required'
+              binding_issues = required_strength ? @errors : @warnings
 
-              valueset_uri = element.binding && element.binding.valueSet
-              if valueset_uri.include?('|')
+              valueset_uri = element&.binding&.valueSet
+              if valueset_uri&.include?('|')
                 x = valueset_uri.index('|')
                 valueset_uri = valueset_uri[0..x - 1]
               end
-              vcc = FHIR::CodeableConcept.new(value)
-              if valueset_uri && self.class.vs_validators[valueset_uri]
+              check_code = lambda do |coding|
+                # Can't validate if both code and system are not given
+                if coding['code'].nil? || coding['system'].nil?
+                  @warnings << "#{describe_element(element)} code: #{coding.to_json} missing code" if coding['code'].nil?
+                  @warnings << "#{describe_element(element)} code: #{coding.to_json} missing system" if coding['system'].nil?
+                  return
+                end
+
+                # ValueSet Validation
                 check_fn = self.class.vs_validators[valueset_uri]
-                has_valid_code = vcc.coding && vcc.coding.any? { |c| check_fn.call(c) }
+                has_valid_code = false
+                if check_fn
+                  has_valid_code = check_fn.call(coding)
+                  binding_issues << "#{describe_element(element)} has no codings from #{valueset_uri}. Codings evaluated: #{coding.to_json}" unless has_valid_code
+                end
+
+                # CodeSystem Validation
                 unless has_valid_code
-                  binding_issues << "#{describe_element(element)} has no codings from #{valueset_uri}. Codings evaluated: #{vcc.to_json}"
+                  check_fn = self.class.vs_validators[coding['system']]
+                  if check_fn && !check_fn.call(coding)
+                    binding_issues << "#{describe_element(element)} has no codings from it's specified system: #{coding['system']}.  "\
+                                    "Codings evaluated: #{coding.to_json}"
+                  end
                 end
               end
 
-              unless has_valid_code
-                vcc.coding.each do |c|
-                  check_fn = self.class.vs_validators[c.system]
-                  if check_fn && !check_fn.call(c)
-                    binding_issues << "#{describe_element(element)} has no codings from it's specified system: #{c.system}.  "\
-                                      "Codings evaluated: #{vcc.to_json}"
-                  end
+              if data_type_found == 'CodeableConcept'
+                value['coding']&.each do |coding|
+                  check_code.call(coding)
                 end
+              else
+                # avoid checking Codings twice if they are already checked as part of a CodeableConcept
+                # The CodeableConcept should contain the binding for the children Codings
+                check_code.call(value) unless element.path == 'CodeableConcept.coding'
               end
 
             elsif data_type_found == 'String' && !element.maxLength.nil? && (value.size > element.maxLength)
