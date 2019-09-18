@@ -36,6 +36,7 @@ module FHIR
       # @param structure [FHIR::Model] the structure from which the element will be retrieved
       def self.retrieve_from_structure(element, structure)
         fixed_name = %w[class method resourceType].include?(element) ? "local_#{element}" : element
+        fixed_name = fixed_name.gsub('[x]','')
         structure.send(fixed_name) if structure.is_a? FHIR::Model # FHIR Primitives are not modeled and will throw NoMethod Error
       end
 
