@@ -199,7 +199,7 @@ module FHIR
                 binding_uri = binding_uri[0..-7] if binding_uri&.end_with?('|4.0.0')
                 codes = @defn.get_codes(binding_uri)
                 field.valid_codes = codes unless codes.nil?
-                if field.valid_codes.empty? && field.binding['uri'] && !binding_uri.end_with?('bcp47') && !binding_uri.end_with?('bcp13.txt')
+                if field.valid_codes.empty? && binding_uri && ['bcp47','bcp13.txt','mimetypes'].none? {|x| binding_uri.end_with?(x) }
                   FHIR.logger.warn "  MISSING EXPANSION -- #{field.path} #{field.min}..#{field.max}: #{binding_uri} (#{field.binding['strength']})"
                   @missing_expansions = true
                   @missing_required_expansion = (field.binding['strength'] == 'required') unless @missing_required_expansion
