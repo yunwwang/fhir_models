@@ -46,7 +46,7 @@ module FHIR
         'schedule' => {'type'=>'Timing', 'path'=>'OralDiet.schedule', 'min'=>0, 'max'=>Float::INFINITY},
         'nutrient' => {'type'=>'NutritionOrder::OralDiet::Nutrient', 'path'=>'OralDiet.nutrient', 'min'=>0, 'max'=>Float::INFINITY},
         'texture' => {'type'=>'NutritionOrder::OralDiet::Texture', 'path'=>'OralDiet.texture', 'min'=>0, 'max'=>Float::INFINITY},
-        'fluidConsistencyType' => {'valid_codes'=>{'http://snomed.info/sct'=>['439031000124108', '439021000124105', '439041000124103', '439081000124109']}, 'type'=>'CodeableConcept', 'path'=>'OralDiet.fluidConsistencyType', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/consistency-type'}},
+        'fluidConsistencyType' => {'type'=>'CodeableConcept', 'path'=>'OralDiet.fluidConsistencyType', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/consistency-type'}},
         'instruction' => {'type'=>'string', 'path'=>'OralDiet.instruction', 'min'=>0, 'max'=>1}
       }
 
@@ -79,7 +79,7 @@ module FHIR
           'id' => {'type'=>'string', 'path'=>'Texture.id', 'min'=>0, 'max'=>1},
           'extension' => {'type'=>'Extension', 'path'=>'Texture.extension', 'min'=>0, 'max'=>Float::INFINITY},
           'modifierExtension' => {'type'=>'Extension', 'path'=>'Texture.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-          'modifier' => {'valid_codes'=>{'http://snomed.info/sct'=>['228053002', '439091000124107', '228049004', '441881000124103', '441761000124103', '441751000124100', '228059003', '441791000124106', '228055009', '228056005', '441771000124105', '228057001', '228058006', '228060008']}, 'type'=>'CodeableConcept', 'path'=>'Texture.modifier', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/texture-code'}},
+          'modifier' => {'type'=>'CodeableConcept', 'path'=>'Texture.modifier', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/texture-code'}},
           'foodType' => {'valid_codes'=>{'http://snomed.info/sct'=>['255620007', '28647000', '22836000', '72511004', '226760005', '226887002', '102263004', '74242007', '227415002', '264331002', '227518002', '44027008', '226529007', '227210005']}, 'type'=>'CodeableConcept', 'path'=>'Texture.foodType', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/modified-foodtype'}}
         }
 
@@ -110,7 +110,7 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'Supplement.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Supplement.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Supplement.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'type' => {'valid_codes'=>{'http://snomed.info/sct'=>['442901000124106', '443031000124106', '443051000124104', '442911000124109', '443021000124108', '442971000124100', '442981000124102', '442991000124104', '443011000124100', '442961000124107', '442951000124105', '442941000124108', '442921000124101', '442931000124103', '444331000124106', '443361000124100', '443391000124108', '443401000124105', '443491000124103', '443501000124106', '443421000124100', '443471000124104', '444431000124104', '443451000124109', '444321000124108', '441561000124106', '443461000124106', '441531000124102', '443561000124107', '443481000124101', '441571000124104', '441591000124103', '441601000124106', '443351000124102', '443771000124106', '441671000124100', '443111000124101', '443431000124102', '443411000124108', '444361000124102', '444401000124107', '444381000124107', '444371000124109', '443441000124107', '442651000124102']}, 'type'=>'CodeableConcept', 'path'=>'Supplement.type', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/supplement-type'}},
+        'type' => {'type'=>'CodeableConcept', 'path'=>'Supplement.type', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/supplement-type'}},
         'productName' => {'type'=>'string', 'path'=>'Supplement.productName', 'min'=>0, 'max'=>1},
         'schedule' => {'type'=>'Timing', 'path'=>'Supplement.schedule', 'min'=>0, 'max'=>Float::INFINITY},
         'quantity' => {'type'=>'Quantity', 'path'=>'Supplement.quantity', 'min'=>0, 'max'=>1},
@@ -136,7 +136,7 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'EnteralFormula.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'EnteralFormula.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'EnteralFormula.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'baseFormulaType' => {'valid_codes'=>{'http://snomed.info/sct'=>['443031000124106', '443051000124104', '442911000124109', '443021000124108', '442971000124100', '442981000124102', '442991000124104', '443011000124100', '442961000124107', '442951000124105', '442941000124108', '442921000124101', '442931000124103', '443361000124100', '443401000124105', '443491000124103', '443501000124106', '443421000124100', '443471000124104', '444431000124104', '443451000124109', '441561000124106', '443461000124106', '441531000124102', '443561000124107', '443481000124101', '441571000124104', '441591000124103', '441601000124106', '443351000124102', '443771000124106', '441671000124100', '443111000124101', '443431000124102', '443411000124108', '442651000124102']}, 'type'=>'CodeableConcept', 'path'=>'EnteralFormula.baseFormulaType', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/entformula-type'}},
+        'baseFormulaType' => {'type'=>'CodeableConcept', 'path'=>'EnteralFormula.baseFormulaType', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/entformula-type'}},
         'baseFormulaProductName' => {'type'=>'string', 'path'=>'EnteralFormula.baseFormulaProductName', 'min'=>0, 'max'=>1},
         'additiveType' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/entformula-additive'=>['lipid', 'protein', 'carbohydrate', 'fiber', 'water']}, 'type'=>'CodeableConcept', 'path'=>'EnteralFormula.additiveType', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/entformula-additive'}},
         'additiveProductName' => {'type'=>'string', 'path'=>'EnteralFormula.additiveProductName', 'min'=>0, 'max'=>1},
