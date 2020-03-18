@@ -205,6 +205,14 @@ module FHIR
           keys.each { |x| @@cache[uri][x] = [] }
           valueset['expansion']['contains'].each { |x| @@cache[uri][x['system']] << x['code'] }
         end
+        if !valueset['compose'].nil? && !valueset['compose']['include'].nil?
+          # for each system, if codes are included add those
+          valueset['compose']['include'].each do |code_group|
+            system_url = code_group['system']
+            @@cache[uri][system_url] ||= []
+            code_group['concept'].each { |y| @@cache[uri][system_url] << y['code'] } if code_group['concept']
+          end
+        end
         @@cache[uri].each { |_system, codes| codes.uniq! }
       end
       @@cache[uri]
