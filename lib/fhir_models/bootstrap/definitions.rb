@@ -200,24 +200,28 @@ module FHIR
       valueset = expansions.find { |x| x['url'] == uri } || valuesets.find { |x| x['url'] == uri && x['resourceType'] == 'ValueSet' }
       unless valueset.nil?
         @@cache[uri] = {}
-        if !valueset['expansion'].nil? && !valueset['expansion']['contains'].nil?
+        # if the expansion is completed already, use it...
+        # except for http://hl7.org/fhir/ValueSet/c80-doc-typecodes, because that expansion is missing codes
+        if !valueset['expansion'].nil? && !valueset['expansion']['contains'].nil? && uri != 'http://hl7.org/fhir/ValueSet/c80-doc-typecodes'
           keys = valueset['expansion']['contains'].map { |x| x['system'] }.uniq
           keys.each { |x| @@cache[uri][x] = [] }
           valueset['expansion']['contains'].each { |x| @@cache[uri][x['system']] << x['code'] }
-        end
-        if !valueset['compose'].nil? && !valueset['compose']['include'].nil?
-          # for each system, if codes are included add those, otherwise lookup the codesystem in the list
-          included_systems = []
+        elsif !valueset['compose'].nil? && !valueset['compose']['include'].nil?
+          # the expansion is not available, so we have to include values
+          # and possibly partially expand the Valueset by including extra CodeSystems
+          # So, for each system, if codes are included add them...
           valueset['compose']['include'].each do |code_group|
             system_url = code_group['system']
             @@cache[uri][system_url] ||= []
-            code_group['concept'].each { |y| @@cache[uri][system_url] << y['code'] } if code_group['concept']
-            included_systems << system_url
-          end
-          included_systems.each { |x| @@cache[uri][x] ||= [] }
-          systems = valuesets.select { |x| x['resourceType'] == 'CodeSystem' && included_systems.include?(x['url']) }
-          systems.each do |included_system|
-            included_system['concept'].each { |y| @@cache[uri][included_system['url']] << y['code'] } if included_system['concept']
+            if !code_group['concept'].nil?
+              code_group['concept'].each { |y| @@cache[uri][system_url] << y['code'] } if code_group['concept']
+            elsif code_group.size == 1
+              # i.e. the only key is 'system', so you import the entire thing
+              systems = valuesets.select { |x| x['resourceType'] == 'CodeSystem' && x['url'] == system_url }
+              systems.each do |included_system|
+                included_system['concept'].each { |y| @@cache[uri][system_url] << y['code'] } if included_system['concept']
+              end
+            end
           end
         end
         @@cache[uri].each { |_system, codes| codes.uniq! }

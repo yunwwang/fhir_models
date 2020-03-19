@@ -18,7 +18,7 @@ module FHIR
       'extension' => {'type'=>'Extension', 'path'=>'ClinicalImpression.extension', 'min'=>0, 'max'=>Float::INFINITY},
       'modifierExtension' => {'type'=>'Extension', 'path'=>'ClinicalImpression.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
       'identifier' => {'type'=>'Identifier', 'path'=>'ClinicalImpression.identifier', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/event-status'=>['in-progress', 'completed', 'entered-in-error', 'preparation', 'not-done', 'on-hold', 'stopped', 'unknown']}, 'type'=>'code', 'path'=>'ClinicalImpression.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/clinicalimpression-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/event-status'=>['in-progress', 'completed', 'entered-in-error']}, 'type'=>'code', 'path'=>'ClinicalImpression.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/clinicalimpression-status|4.0.0'}},
       'statusReason' => {'type'=>'CodeableConcept', 'path'=>'ClinicalImpression.statusReason', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example'}},
       'code' => {'type'=>'CodeableConcept', 'path'=>'ClinicalImpression.code', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example'}},
       'description' => {'type'=>'string', 'path'=>'ClinicalImpression.description', 'min'=>0, 'max'=>1},
