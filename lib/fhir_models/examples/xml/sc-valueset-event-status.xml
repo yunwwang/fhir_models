@@ -3,11 +3,11 @@
   <id value="sc-event-status"/>
   
   <url value="http://hl7.org/fhir/ConceptMap/sc-event-status"/>
-  <version value="4.0.0"/>
+  <version value="4.0.1"/>
   <name value="EventStatusCanonicalMap"/>
   <title value="Canonical Mapping for &quot;EventStatus&quot;"/>
   <status value="draft"/>
-  <date value="2018-12-27T22:37:54+11:00"/>
+  <date value="2019-11-01T09:29:23+11:00"/>
   <publisher value="HL7 (FHIR Project)"/>
   <contact>
     <telecom>
@@ -47,14 +47,14 @@
       </target>
     </element>
     <element>
-      <code value="suspended"/>
+      <code value="on-hold"/>
       <target>
         <code value="suspended"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
-      <code value="aborted"/>
+      <code value="stopped"/>
       <target>
         <code value="failed"/>
         <equivalence value="equivalent"/>
@@ -64,6 +64,13 @@
       <code value="completed"/>
       <target>
         <code value="complete"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="not-done"/>
+      <target>
+        <code value="abandoned"/>
         <equivalence value="equivalent"/>
       </target>
     </element>

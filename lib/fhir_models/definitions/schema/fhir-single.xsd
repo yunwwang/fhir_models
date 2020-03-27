@@ -27,9 +27,9 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
+  Generated on Fri, Nov 1, 2019 09:29+1100 for FHIR v4.0.1 
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.0.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.0.1">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="fhir-xhtml.xsd"/>
@@ -500,6 +500,7 @@
            <xs:element name="valueTriggerDefinition" type="TriggerDefinition"/>
            <xs:element name="valueUsageContext" type="UsageContext"/>
            <xs:element name="valueDosage" type="Dosage"/>
+           <xs:element name="valueMeta" type="Meta"/>
          </xs:choice>
         </xs:sequence>
         <xs:attribute name="url" type="uri-primitive" use="required"/>
@@ -2129,6 +2130,7 @@
            <xs:element name="defaultValueTriggerDefinition" type="TriggerDefinition"/>
            <xs:element name="defaultValueUsageContext" type="UsageContext"/>
            <xs:element name="defaultValueDosage" type="Dosage"/>
+           <xs:element name="defaultValueMeta" type="Meta"/>
          </xs:choice>
           <xs:element name="meaningWhenMissing" type="markdown" minOccurs="0" maxOccurs="1">
             
@@ -2187,6 +2189,7 @@
            <xs:element name="fixedTriggerDefinition" type="TriggerDefinition"/>
            <xs:element name="fixedUsageContext" type="UsageContext"/>
            <xs:element name="fixedDosage" type="Dosage"/>
+           <xs:element name="fixedMeta" type="Meta"/>
          </xs:choice>
         <xs:choice minOccurs="0" maxOccurs="1">
            
@@ -2239,6 +2242,7 @@
            <xs:element name="patternTriggerDefinition" type="TriggerDefinition"/>
            <xs:element name="patternUsageContext" type="UsageContext"/>
            <xs:element name="patternDosage" type="Dosage"/>
+           <xs:element name="patternMeta" type="Meta"/>
          </xs:choice>
           <xs:element name="example" type="ElementDefinition.Example" minOccurs="0" maxOccurs="unbounded">
             
@@ -2450,6 +2454,7 @@
            <xs:element name="valueTriggerDefinition" type="TriggerDefinition"/>
            <xs:element name="valueUsageContext" type="UsageContext"/>
            <xs:element name="valueDosage" type="Dosage"/>
+           <xs:element name="valueMeta" type="Meta"/>
          </xs:choice>
         </xs:sequence>
       </xs:extension>
@@ -2856,6 +2861,9 @@
         
       </xs:enumeration>
       <xs:enumeration value="4.0.0">
+        
+      </xs:enumeration>
+      <xs:enumeration value="4.0.1">
         
       </xs:enumeration>
     </xs:restriction>
@@ -21564,6 +21572,7 @@
             <xs:element name="valueTriggerDefinition" type="TriggerDefinition"/>
             <xs:element name="valueUsageContext" type="UsageContext"/>
             <xs:element name="valueDosage" type="Dosage"/>
+            <xs:element name="valueMeta" type="Meta"/>
           </xs:choice>
           <xs:element name="resource" minOccurs="0" maxOccurs="1" type="ResourceContainer">
             
@@ -25616,6 +25625,7 @@
             <xs:element name="defaultValueTriggerDefinition" type="TriggerDefinition"/>
             <xs:element name="defaultValueUsageContext" type="UsageContext"/>
             <xs:element name="defaultValueDosage" type="Dosage"/>
+            <xs:element name="defaultValueMeta" type="Meta"/>
           </xs:choice>
           <xs:element name="element" minOccurs="0" maxOccurs="1" type="string">
             
@@ -27414,6 +27424,7 @@
             <xs:element name="valueTriggerDefinition" type="TriggerDefinition"/>
             <xs:element name="valueUsageContext" type="UsageContext"/>
             <xs:element name="valueDosage" type="Dosage"/>
+            <xs:element name="valueMeta" type="Meta"/>
           </xs:choice>
         </xs:sequence>
       </xs:extension>
@@ -27478,6 +27489,7 @@
             <xs:element name="valueTriggerDefinition" type="TriggerDefinition"/>
             <xs:element name="valueUsageContext" type="UsageContext"/>
             <xs:element name="valueDosage" type="Dosage"/>
+            <xs:element name="valueMeta" type="Meta"/>
           </xs:choice>
         </xs:sequence>
       </xs:extension>

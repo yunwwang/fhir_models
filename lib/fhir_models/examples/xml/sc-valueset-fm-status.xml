@@ -3,11 +3,11 @@
   <id value="sc-fm-status"/>
   
   <url value="http://hl7.org/fhir/ConceptMap/sc-fm-status"/>
-  <version value="4.0.0"/>
+  <version value="4.0.1"/>
   <name value="FinancialResourceStatusCodesCanonicalMap"/>
   <title value="Canonical Mapping for &quot;Financial Resource Status Codes&quot;"/>
   <status value="draft"/>
-  <date value="2018-12-27T22:37:54+11:00"/>
+  <date value="2019-11-01T09:29:23+11:00"/>
   <publisher value="Financial Management"/>
   <contact>
     <telecom>

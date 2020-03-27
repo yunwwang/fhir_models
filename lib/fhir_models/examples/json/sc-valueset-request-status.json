@@ -2,11 +2,11 @@
   "resourceType": "ConceptMap",
   "id": "sc-request-status",
   "url": "http://hl7.org/fhir/ConceptMap/sc-request-status",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "RequestStatusCanonicalMap",
   "title": "Canonical Mapping for \"RequestStatus\"",
   "status": "draft",
-  "date": "2018-12-27T22:37:54+11:00",
+  "date": "2019-11-01T09:29:23+11:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [
     {
@@ -58,10 +58,19 @@
           ]
         },
         {
-          "code": "suspended",
+          "code": "on-hold",
           "target": [
             {
               "code": "suspended",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "revoked",
+          "target": [
+            {
+              "code": "failed",
               "equivalence": "equivalent"
             }
           ]
@@ -71,15 +80,6 @@
           "target": [
             {
               "code": "complete",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "cancelled",
-          "target": [
-            {
-              "code": "abandoned",
               "equivalence": "equivalent"
             }
           ]

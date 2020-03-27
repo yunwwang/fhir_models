@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "cpt-all",
   "url": "http://hl7.org/fhir/ValueSet/cpt-all",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "All CPT codes",
   "status": "active",
   "date": "2015-03-12",

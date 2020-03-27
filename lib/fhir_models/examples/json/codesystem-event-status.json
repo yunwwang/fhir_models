@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "event-status",
   "meta": {
-    "lastUpdated": "2018-12-27T22:37:54.724+11:00"
+    "lastUpdated": "2019-11-01T09:29:23.356+11:00"
   },
   "extension": [
     {
@@ -22,15 +22,15 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.1.110"
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.110"
     }
   ],
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "EventStatus",
   "title": "EventStatus",
   "status": "draft",
   "experimental": false,
-  "date": "2018-12-27T22:37:54+11:00",
+  "date": "2019-11-01T09:29:23+11:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [
     {
@@ -84,7 +84,7 @@
     {
       "code": "entered-in-error",
       "display": "Entered in Error",
-      "definition": "This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be \"cancelled\" rather than \"entered-in-error\".)."
+      "definition": "This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be \"stopped\" rather than \"entered-in-error\".)."
     },
     {
       "code": "unknown",

@@ -15,9 +15,9 @@ module FHIR
       'extension' => {'type'=>'Extension', 'path'=>'BiologicallyDerivedProduct.extension', 'min'=>0, 'max'=>Float::INFINITY},
       'modifierExtension' => {'type'=>'Extension', 'path'=>'BiologicallyDerivedProduct.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
       'identifier' => {'type'=>'Identifier', 'path'=>'BiologicallyDerivedProduct.identifier', 'min'=>0, 'max'=>Float::INFINITY},
-      'productCategory' => {'valid_codes'=>{'http://hl7.org/fhir/product-category'=>['organ', 'tissue', 'fluid', 'cells', 'biologicalAgent']}, 'type'=>'code', 'path'=>'BiologicallyDerivedProduct.productCategory', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/product-category|4.0.0'}},
+      'productCategory' => {'valid_codes'=>{'http://hl7.org/fhir/product-category'=>['organ', 'tissue', 'fluid', 'cells', 'biologicalAgent']}, 'type'=>'code', 'path'=>'BiologicallyDerivedProduct.productCategory', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/product-category'}},
       'productCode' => {'type'=>'CodeableConcept', 'path'=>'BiologicallyDerivedProduct.productCode', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example'}},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/product-status'=>['available', 'unavailable']}, 'type'=>'code', 'path'=>'BiologicallyDerivedProduct.status', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/product-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/product-status'=>['available', 'unavailable']}, 'type'=>'code', 'path'=>'BiologicallyDerivedProduct.status', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/product-status'}},
       'request' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/ServiceRequest'], 'type'=>'Reference', 'path'=>'BiologicallyDerivedProduct.request', 'min'=>0, 'max'=>Float::INFINITY},
       'quantity' => {'type'=>'integer', 'path'=>'BiologicallyDerivedProduct.quantity', 'min'=>0, 'max'=>1},
       'parent' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct'], 'type'=>'Reference', 'path'=>'BiologicallyDerivedProduct.parent', 'min'=>0, 'max'=>Float::INFINITY},
@@ -119,7 +119,7 @@ module FHIR
         'modifierExtension' => {'type'=>'Extension', 'path'=>'Storage.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
         'description' => {'type'=>'string', 'path'=>'Storage.description', 'min'=>0, 'max'=>1},
         'temperature' => {'type'=>'decimal', 'path'=>'Storage.temperature', 'min'=>0, 'max'=>1},
-        'scale' => {'valid_codes'=>{'http://hl7.org/fhir/product-storage-scale'=>['farenheit', 'celsius', 'kelvin']}, 'type'=>'code', 'path'=>'Storage.scale', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/product-storage-scale|4.0.0'}},
+        'scale' => {'valid_codes'=>{'http://hl7.org/fhir/product-storage-scale'=>['farenheit', 'celsius', 'kelvin']}, 'type'=>'code', 'path'=>'Storage.scale', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/product-storage-scale'}},
         'duration' => {'type'=>'Period', 'path'=>'Storage.duration', 'min'=>0, 'max'=>1}
       }
 

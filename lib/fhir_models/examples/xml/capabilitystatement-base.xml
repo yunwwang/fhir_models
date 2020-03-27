@@ -3,11 +3,11 @@
   <id value="base"/>
   
   <url value="http://hl7.org/fhir/CapabilityStatement/base"/>
-  <version value="4.0.0"/>
+  <version value="4.0.1"/>
   <name value="Base FHIR Capability Statement (Full)"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2018-12-27T22:37:54+11:00"/>
+  <date value="2019-11-01T09:29:23+11:00"/>
   <publisher value="FHIR Project Team"/>
   <contact>
     <telecom>
@@ -20,7 +20,7 @@
   <software>
     <name value="Insert your software name here..."/>
   </software>
-  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.1"/>
   <format value="xml"/>
   <format value="json"/>
   <rest>
@@ -1640,7 +1640,7 @@
         <name value="status"/>
         <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-status"/>
         <type value="token"/>
-        <documentation value="draft | active | suspended | completed | entered-in-error | cancelled | unknown"/>
+        <documentation value="draft | active | on-hold | revoked | completed | entered-in-error | unknown"/>
       </searchParam>
     </resource>
     <resource>
@@ -2471,7 +2471,7 @@
         <name value="status"/>
         <definition value="http://hl7.org/fhir/SearchParameter/ClinicalImpression-status"/>
         <type value="token"/>
-        <documentation value="draft | completed | entered-in-error"/>
+        <documentation value="in-progress | completed | entered-in-error"/>
       </searchParam>
     </resource>
     <resource>
@@ -2773,7 +2773,7 @@
         <name value="status"/>
         <definition value="http://hl7.org/fhir/SearchParameter/Communication-status"/>
         <type value="token"/>
-        <documentation value="preparation | in-progress | not-done | suspended | aborted | completed | entered-in-error"/>
+        <documentation value="preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"/>
       </searchParam>
     </resource>
     <resource>
@@ -2878,7 +2878,7 @@
         <name value="priority"/>
         <definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-priority"/>
         <type value="token"/>
-        <documentation value="Message urgency"/>
+        <documentation value="routine | urgent | asap | stat"/>
       </searchParam>
       <searchParam>
         <name value="group-identifier"/>
@@ -2920,7 +2920,7 @@
         <name value="status"/>
         <definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-status"/>
         <type value="token"/>
-        <documentation value="draft | active | suspended | cancelled | completed | entered-in-error | unknown"/>
+        <documentation value="draft | active | on-hold | revoked | completed | entered-in-error | unknown"/>
       </searchParam>
     </resource>
     <resource>
@@ -9385,7 +9385,7 @@
         <name value="status"/>
         <definition value="http://hl7.org/fhir/SearchParameter/Media-status"/>
         <type value="token"/>
-        <documentation value="preparation | in-progress | not-done | suspended | aborted | completed | entered-in-error | unknown"/>
+        <documentation value="preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"/>
       </searchParam>
     </resource>
     <resource>
@@ -13823,7 +13823,7 @@
         <name value="status"/>
         <definition value="http://hl7.org/fhir/SearchParameter/Procedure-status"/>
         <type value="token"/>
-        <documentation value="preparation | in-progress | not-done | suspended | aborted | completed | entered-in-error | unknown"/>
+        <documentation value="preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"/>
       </searchParam>
     </resource>
     <resource>
@@ -15747,7 +15747,7 @@
         <name value="intent"/>
         <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-intent"/>
         <type value="token"/>
-        <documentation value="proposal | plan | order +"/>
+        <documentation value="proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"/>
       </searchParam>
       <searchParam>
         <name value="performer-type"/>
@@ -15795,7 +15795,7 @@
         <name value="status"/>
         <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-status"/>
         <type value="token"/>
-        <documentation value="draft | active | suspended | completed | entered-in-error | cancelled"/>
+        <documentation value="draft | active | on-hold | revoked | completed | entered-in-error | unknown"/>
       </searchParam>
     </resource>
     <resource>
@@ -16831,7 +16831,7 @@
         <name value="code"/>
         <definition value="http://hl7.org/fhir/SearchParameter/SubstanceSpecification-code"/>
         <type value="token"/>
-        <documentation value="Codes associated with the substance"/>
+        <documentation value="The specific code"/>
       </searchParam>
     </resource>
     <resource>
@@ -17961,7 +17961,7 @@
     <searchParam>
       <name value="_profile"/>
       <definition value="http://hl7.org/fhir/SearchParameter/Resource-profile"/>
-      <type value="reference"/>
+      <type value="uri"/>
       <documentation value="Profiles this resource claims to conform to"/>
     </searchParam>
     <searchParam>

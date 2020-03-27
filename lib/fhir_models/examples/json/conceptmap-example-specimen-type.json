@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "id": "102",
   "url": "http://hl7.org/fhir/ConceptMap/102",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "Specimen mapping from v2 table 0487 to SNOMED CT",
   "status": "draft",
   "experimental": false,
@@ -27,7 +27,7 @@
     }
   ],
   "sourceCanonical": "http://terminology.hl7.org/ValueSet/v2-0487",
-  "targetCanonical": "http://snomed.info/id?fhir_vs",
+  "targetCanonical": "http://snomed.info/sct?fhir_vs",
   "group": [
     {
       "source": "http://terminology.hl7.org/CodeSystem/v2-0487",

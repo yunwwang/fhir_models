@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "medication-statement-category",
   "meta": {
-    "lastUpdated": "2018-12-27T22:37:54.724+11:00",
+    "lastUpdated": "2019-11-01T09:29:23.356+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
@@ -17,12 +17,12 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.1.1120"
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.1120"
     }
   ],
-  "version": "4.0.0",
-  "name": "Medication Status Codes",
-  "title": "Medication  status  codes",
+  "version": "4.0.1",
+  "name": "Medication usage category codes",
+  "title": "Medication usage category codes",
   "status": "draft",
   "experimental": false,
   "publisher": "FHIR Project team",

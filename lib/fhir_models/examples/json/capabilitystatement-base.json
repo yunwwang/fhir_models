@@ -2,11 +2,11 @@
   "resourceType": "CapabilityStatement",
   "id": "base",
   "url": "http://hl7.org/fhir/CapabilityStatement/base",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "Base FHIR Capability Statement (Full)",
   "status": "draft",
   "experimental": true,
-  "date": "2018-12-27T22:37:54+11:00",
+  "date": "2019-11-01T09:29:23+11:00",
   "publisher": "FHIR Project Team",
   "contact": [
     {
@@ -23,7 +23,7 @@
   "software": {
     "name": "Insert your software name here..."
   },
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "format": [
     "xml",
     "json"
@@ -1766,7 +1766,7 @@
               "name": "status",
               "definition": "http://hl7.org/fhir/SearchParameter/CarePlan-status",
               "type": "token",
-              "documentation": "draft | active | suspended | completed | entered-in-error | cancelled | unknown"
+              "documentation": "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
             }
           ]
         },
@@ -2655,7 +2655,7 @@
               "name": "status",
               "definition": "http://hl7.org/fhir/SearchParameter/ClinicalImpression-status",
               "type": "token",
-              "documentation": "draft | completed | entered-in-error"
+              "documentation": "in-progress | completed | entered-in-error"
             }
           ]
         },
@@ -2975,7 +2975,7 @@
               "name": "status",
               "definition": "http://hl7.org/fhir/SearchParameter/Communication-status",
               "type": "token",
-              "documentation": "preparation | in-progress | not-done | suspended | aborted | completed | entered-in-error"
+              "documentation": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
             }
           ]
         },
@@ -3090,7 +3090,7 @@
               "name": "priority",
               "definition": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-priority",
               "type": "token",
-              "documentation": "Message urgency"
+              "documentation": "routine | urgent | asap | stat"
             },
             {
               "name": "group-identifier",
@@ -3132,7 +3132,7 @@
               "name": "status",
               "definition": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-status",
               "type": "token",
-              "documentation": "draft | active | suspended | cancelled | completed | entered-in-error | unknown"
+              "documentation": "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
             }
           ]
         },
@@ -10049,7 +10049,7 @@
               "name": "status",
               "definition": "http://hl7.org/fhir/SearchParameter/Media-status",
               "type": "token",
-              "documentation": "preparation | in-progress | not-done | suspended | aborted | completed | entered-in-error | unknown"
+              "documentation": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
             }
           ]
         },
@@ -14779,7 +14779,7 @@
               "name": "status",
               "definition": "http://hl7.org/fhir/SearchParameter/Procedure-status",
               "type": "token",
-              "documentation": "preparation | in-progress | not-done | suspended | aborted | completed | entered-in-error | unknown"
+              "documentation": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
             }
           ]
         },
@@ -16829,7 +16829,7 @@
               "name": "intent",
               "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-intent",
               "type": "token",
-              "documentation": "proposal | plan | order +"
+              "documentation": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
             },
             {
               "name": "performer-type",
@@ -16877,7 +16877,7 @@
               "name": "status",
               "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-status",
               "type": "token",
-              "documentation": "draft | active | suspended | completed | entered-in-error | cancelled"
+              "documentation": "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
             }
           ]
         },
@@ -17997,7 +17997,7 @@
               "name": "code",
               "definition": "http://hl7.org/fhir/SearchParameter/SubstanceSpecification-code",
               "type": "token",
-              "documentation": "Codes associated with the substance"
+              "documentation": "The specific code"
             }
           ]
         },
@@ -19208,7 +19208,7 @@
         {
           "name": "_profile",
           "definition": "http://hl7.org/fhir/SearchParameter/Resource-profile",
-          "type": "reference",
+          "type": "uri",
           "documentation": "Profiles this resource claims to conform to"
         },
         {

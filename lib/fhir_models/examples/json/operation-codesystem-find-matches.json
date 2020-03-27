@@ -12,11 +12,11 @@
     }
   ],
   "url": "http://hl7.org/fhir/OperationDefinition/CodeSystem-find-matches",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "Finding codes based on supplied properties",
   "status": "draft",
   "kind": "operation",
-  "date": "2018-12-27T22:37:54+11:00",
+  "date": "2019-11-01T09:29:23+11:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [
     {
@@ -73,12 +73,38 @@
           "type": "code"
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+              "valueUri": "code"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+              "valueUri": "Coding"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+              "valueUri": "string"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+              "valueUri": "integer"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+              "valueUri": "boolean"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+              "valueUri": "dateTime"
+            }
+          ],
           "name": "value",
           "use": "in",
           "min": 0,
           "max": "1",
           "documentation": "The value of the property provided",
-          "type": "code"
+          "type": "Element"
         },
         {
           "name": "subproperty",
@@ -96,12 +122,38 @@
               "type": "code"
             },
             {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "code"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "Coding"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "string"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "integer"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "boolean"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "dateTime"
+                }
+              ],
               "name": "value",
               "use": "in",
               "min": 1,
               "max": "1",
               "documentation": "The value of the sub-property provided",
-              "type": "code"
+              "type": "Element"
             }
           ]
         }
@@ -154,12 +206,38 @@
               "type": "code"
             },
             {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "code"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "Coding"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "string"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "integer"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "boolean"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                  "valueUri": "dateTime"
+                }
+              ],
               "name": "value",
               "use": "out",
               "min": 1,
               "max": "1",
               "documentation": "The value of the property provided",
-              "type": "code"
+              "type": "Element"
             },
             {
               "name": "property",
@@ -177,12 +255,38 @@
                   "type": "code"
                 },
                 {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                      "valueUri": "code"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                      "valueUri": "Coding"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                      "valueUri": "string"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                      "valueUri": "integer"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                      "valueUri": "boolean"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                      "valueUri": "dateTime"
+                    }
+                  ],
                   "name": "value",
                   "use": "out",
                   "min": 1,
                   "max": "1",
                   "documentation": "The value of the sub-property provided",
-                  "type": "code"
+                  "type": "Element"
                 }
               ]
             }

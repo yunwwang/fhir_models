@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "id": "example2",
   "url": "http://hl7.org/fhir/ConceptMap/example2",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "FHIR-exanple-2",
   "title": "FHIR Example 2",
   "status": "draft",

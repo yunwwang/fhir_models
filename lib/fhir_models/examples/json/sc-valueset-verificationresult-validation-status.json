@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "id": "sc-verificationresult-validation-status",
   "url": "http://hl7.org/fhir/ConceptMap/sc-verificationresult-validation-status",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "validation-statusCanonicalMap",
   "title": "Canonical Mapping for \"Validation-status\"",
   "status": "draft",

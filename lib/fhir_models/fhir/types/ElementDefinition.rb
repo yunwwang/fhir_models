@@ -5,9 +5,9 @@ module FHIR
     include FHIR::Xml
 
     MULTIPLE_TYPES = {
-      'defaultValue' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage'],
-      'fixed' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage'],
-      'pattern' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage'],
+      'defaultValue' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage', 'Meta'],
+      'fixed' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage', 'Meta'],
+      'pattern' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage', 'Meta'],
       'minValue' => ['date', 'dateTime', 'instant', 'time', 'decimal', 'integer', 'positiveInt', 'unsignedInt', 'Quantity'],
       'maxValue' => ['date', 'dateTime', 'instant', 'time', 'decimal', 'integer', 'positiveInt', 'unsignedInt', 'Quantity']
     }
@@ -17,7 +17,7 @@ module FHIR
       'extension' => {'type'=>'Extension', 'path'=>'ElementDefinition.extension', 'min'=>0, 'max'=>Float::INFINITY},
       'modifierExtension' => {'type'=>'Extension', 'path'=>'ElementDefinition.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
       'path' => {'type'=>'string', 'path'=>'ElementDefinition.path', 'min'=>1, 'max'=>1},
-      'representation' => {'valid_codes'=>{'http://hl7.org/fhir/property-representation'=>['xmlAttr', 'xmlText', 'typeAttr', 'cdaText', 'xhtml']}, 'type'=>'code', 'path'=>'ElementDefinition.representation', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/property-representation|4.0.0'}},
+      'representation' => {'valid_codes'=>{'http://hl7.org/fhir/property-representation'=>['xmlAttr', 'xmlText', 'typeAttr', 'cdaText', 'xhtml']}, 'type'=>'code', 'path'=>'ElementDefinition.representation', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/property-representation'}},
       'sliceName' => {'type'=>'string', 'path'=>'ElementDefinition.sliceName', 'min'=>0, 'max'=>1},
       'sliceIsConstraining' => {'type'=>'boolean', 'path'=>'ElementDefinition.sliceIsConstraining', 'min'=>0, 'max'=>1},
       'label' => {'type'=>'string', 'path'=>'ElementDefinition.label', 'min'=>0, 'max'=>1},
@@ -82,6 +82,7 @@ module FHIR
       'defaultValueTriggerDefinition' => {'type'=>'TriggerDefinition', 'path'=>'ElementDefinition.defaultValue[x]', 'min'=>0, 'max'=>1},
       'defaultValueUsageContext' => {'type'=>'UsageContext', 'path'=>'ElementDefinition.defaultValue[x]', 'min'=>0, 'max'=>1},
       'defaultValueDosage' => {'type'=>'Dosage', 'path'=>'ElementDefinition.defaultValue[x]', 'min'=>0, 'max'=>1},
+      'defaultValueMeta' => {'type'=>'Meta', 'path'=>'ElementDefinition.defaultValue[x]', 'min'=>0, 'max'=>1},
       'meaningWhenMissing' => {'type'=>'markdown', 'path'=>'ElementDefinition.meaningWhenMissing', 'min'=>0, 'max'=>1},
       'orderMeaning' => {'type'=>'string', 'path'=>'ElementDefinition.orderMeaning', 'min'=>0, 'max'=>1},
       'fixedBase64Binary' => {'type'=>'base64Binary', 'path'=>'ElementDefinition.fixed[x]', 'min'=>0, 'max'=>1},
@@ -133,6 +134,7 @@ module FHIR
       'fixedTriggerDefinition' => {'type'=>'TriggerDefinition', 'path'=>'ElementDefinition.fixed[x]', 'min'=>0, 'max'=>1},
       'fixedUsageContext' => {'type'=>'UsageContext', 'path'=>'ElementDefinition.fixed[x]', 'min'=>0, 'max'=>1},
       'fixedDosage' => {'type'=>'Dosage', 'path'=>'ElementDefinition.fixed[x]', 'min'=>0, 'max'=>1},
+      'fixedMeta' => {'type'=>'Meta', 'path'=>'ElementDefinition.fixed[x]', 'min'=>0, 'max'=>1},
       'patternBase64Binary' => {'type'=>'base64Binary', 'path'=>'ElementDefinition.pattern[x]', 'min'=>0, 'max'=>1},
       'patternBoolean' => {'type'=>'boolean', 'path'=>'ElementDefinition.pattern[x]', 'min'=>0, 'max'=>1},
       'patternCanonical' => {'type'=>'canonical', 'path'=>'ElementDefinition.pattern[x]', 'min'=>0, 'max'=>1},
@@ -182,6 +184,7 @@ module FHIR
       'patternTriggerDefinition' => {'type'=>'TriggerDefinition', 'path'=>'ElementDefinition.pattern[x]', 'min'=>0, 'max'=>1},
       'patternUsageContext' => {'type'=>'UsageContext', 'path'=>'ElementDefinition.pattern[x]', 'min'=>0, 'max'=>1},
       'patternDosage' => {'type'=>'Dosage', 'path'=>'ElementDefinition.pattern[x]', 'min'=>0, 'max'=>1},
+      'patternMeta' => {'type'=>'Meta', 'path'=>'ElementDefinition.pattern[x]', 'min'=>0, 'max'=>1},
       'example' => {'type'=>'ElementDefinition::Example', 'path'=>'ElementDefinition.example', 'min'=>0, 'max'=>Float::INFINITY},
       'minValueDate' => {'type'=>'date', 'path'=>'ElementDefinition.minValue[x]', 'min'=>0, 'max'=>1},
       'minValueDateTime' => {'type'=>'dateTime', 'path'=>'ElementDefinition.minValue[x]', 'min'=>0, 'max'=>1},
@@ -223,7 +226,7 @@ module FHIR
         'discriminator' => {'type'=>'ElementDefinition::Slicing::Discriminator', 'path'=>'Slicing.discriminator', 'min'=>0, 'max'=>Float::INFINITY},
         'description' => {'type'=>'string', 'path'=>'Slicing.description', 'min'=>0, 'max'=>1},
         'ordered' => {'type'=>'boolean', 'path'=>'Slicing.ordered', 'min'=>0, 'max'=>1},
-        'rules' => {'valid_codes'=>{'http://hl7.org/fhir/resource-slicing-rules'=>['closed', 'open', 'openAtEnd']}, 'type'=>'code', 'path'=>'Slicing.rules', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/resource-slicing-rules|4.0.0'}}
+        'rules' => {'valid_codes'=>{'http://hl7.org/fhir/resource-slicing-rules'=>['closed', 'open', 'openAtEnd']}, 'type'=>'code', 'path'=>'Slicing.rules', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/resource-slicing-rules'}}
       }
 
       class Discriminator < FHIR::Model
@@ -234,7 +237,7 @@ module FHIR
         METADATA = {
           'id' => {'type'=>'string', 'path'=>'Discriminator.id', 'min'=>0, 'max'=>1},
           'extension' => {'type'=>'Extension', 'path'=>'Discriminator.extension', 'min'=>0, 'max'=>Float::INFINITY},
-          'type' => {'valid_codes'=>{'http://hl7.org/fhir/discriminator-type'=>['value', 'exists', 'pattern', 'type', 'profile']}, 'type'=>'code', 'path'=>'Discriminator.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/discriminator-type|4.0.0'}},
+          'type' => {'valid_codes'=>{'http://hl7.org/fhir/discriminator-type'=>['value', 'exists', 'pattern', 'type', 'profile']}, 'type'=>'code', 'path'=>'Discriminator.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/discriminator-type'}},
           'path' => {'type'=>'string', 'path'=>'Discriminator.path', 'min'=>1, 'max'=>1}
         }
 
@@ -283,8 +286,8 @@ module FHIR
         'code' => {'type'=>'uri', 'path'=>'Type.code', 'min'=>1, 'max'=>1},
         'profile' => {'type'=>'canonical', 'path'=>'Type.profile', 'min'=>0, 'max'=>Float::INFINITY},
         'targetProfile' => {'type'=>'canonical', 'path'=>'Type.targetProfile', 'min'=>0, 'max'=>Float::INFINITY},
-        'aggregation' => {'valid_codes'=>{'http://hl7.org/fhir/resource-aggregation-mode'=>['contained', 'referenced', 'bundled']}, 'type'=>'code', 'path'=>'Type.aggregation', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/resource-aggregation-mode|4.0.0'}},
-        'versioning' => {'valid_codes'=>{'http://hl7.org/fhir/reference-version-rules'=>['either', 'independent', 'specific']}, 'type'=>'code', 'path'=>'Type.versioning', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/reference-version-rules|4.0.0'}}
+        'aggregation' => {'valid_codes'=>{'http://hl7.org/fhir/resource-aggregation-mode'=>['contained', 'referenced', 'bundled']}, 'type'=>'code', 'path'=>'Type.aggregation', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/resource-aggregation-mode'}},
+        'versioning' => {'valid_codes'=>{'http://hl7.org/fhir/reference-version-rules'=>['either', 'independent', 'specific']}, 'type'=>'code', 'path'=>'Type.versioning', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/reference-version-rules'}}
       }
 
       attr_accessor :id            # 0-1 string
@@ -302,7 +305,7 @@ module FHIR
       include FHIR::Xml
 
       MULTIPLE_TYPES = {
-        'value' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage']
+        'value' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage', 'Meta']
       }
       METADATA = {
         'id' => {'type'=>'string', 'path'=>'Example.id', 'min'=>0, 'max'=>1},
@@ -356,7 +359,8 @@ module FHIR
         'valueRelatedArtifact' => {'type'=>'RelatedArtifact', 'path'=>'Example.value[x]', 'min'=>1, 'max'=>1},
         'valueTriggerDefinition' => {'type'=>'TriggerDefinition', 'path'=>'Example.value[x]', 'min'=>1, 'max'=>1},
         'valueUsageContext' => {'type'=>'UsageContext', 'path'=>'Example.value[x]', 'min'=>1, 'max'=>1},
-        'valueDosage' => {'type'=>'Dosage', 'path'=>'Example.value[x]', 'min'=>1, 'max'=>1}
+        'valueDosage' => {'type'=>'Dosage', 'path'=>'Example.value[x]', 'min'=>1, 'max'=>1},
+        'valueMeta' => {'type'=>'Meta', 'path'=>'Example.value[x]', 'min'=>1, 'max'=>1}
       }
 
       attr_accessor :id                       # 0-1 string
@@ -411,6 +415,7 @@ module FHIR
       attr_accessor :valueTriggerDefinition   # 1-1 TriggerDefinition
       attr_accessor :valueUsageContext        # 1-1 UsageContext
       attr_accessor :valueDosage              # 1-1 Dosage
+      attr_accessor :valueMeta                # 1-1 Meta
     end
 
     class Constraint < FHIR::Model
@@ -423,7 +428,7 @@ module FHIR
         'extension' => {'type'=>'Extension', 'path'=>'Constraint.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'key' => {'type'=>'id', 'path'=>'Constraint.key', 'min'=>1, 'max'=>1},
         'requirements' => {'type'=>'string', 'path'=>'Constraint.requirements', 'min'=>0, 'max'=>1},
-        'severity' => {'valid_codes'=>{'http://hl7.org/fhir/constraint-severity'=>['error', 'warning']}, 'type'=>'code', 'path'=>'Constraint.severity', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/constraint-severity|4.0.0'}},
+        'severity' => {'valid_codes'=>{'http://hl7.org/fhir/constraint-severity'=>['error', 'warning']}, 'type'=>'code', 'path'=>'Constraint.severity', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/constraint-severity'}},
         'human' => {'type'=>'string', 'path'=>'Constraint.human', 'min'=>1, 'max'=>1},
         'expression' => {'type'=>'string', 'path'=>'Constraint.expression', 'min'=>0, 'max'=>1},
         'xpath' => {'type'=>'string', 'path'=>'Constraint.xpath', 'min'=>0, 'max'=>1},
@@ -449,7 +454,7 @@ module FHIR
       METADATA = {
         'id' => {'type'=>'string', 'path'=>'Binding.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Binding.extension', 'min'=>0, 'max'=>Float::INFINITY},
-        'strength' => {'valid_codes'=>{'http://hl7.org/fhir/binding-strength'=>['required', 'extensible', 'preferred', 'example']}, 'type'=>'code', 'path'=>'Binding.strength', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/binding-strength|4.0.0'}},
+        'strength' => {'valid_codes'=>{'http://hl7.org/fhir/binding-strength'=>['required', 'extensible', 'preferred', 'example']}, 'type'=>'code', 'path'=>'Binding.strength', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/binding-strength'}},
         'description' => {'type'=>'string', 'path'=>'Binding.description', 'min'=>0, 'max'=>1},
         'valueSet' => {'type'=>'canonical', 'path'=>'Binding.valueSet', 'min'=>0, 'max'=>1}
       }
@@ -470,7 +475,7 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'Mapping.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'Mapping.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'identity' => {'type'=>'id', 'path'=>'Mapping.identity', 'min'=>1, 'max'=>1},
-        'language' => {'type'=>'code', 'path'=>'Mapping.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/mimetypes|4.0.0'}},
+        'language' => {'type'=>'code', 'path'=>'Mapping.language', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/mimetypes'}},
         'map' => {'type'=>'string', 'path'=>'Mapping.map', 'min'=>1, 'max'=>1},
         'comment' => {'type'=>'string', 'path'=>'Mapping.comment', 'min'=>0, 'max'=>1}
       }
@@ -552,6 +557,7 @@ module FHIR
     attr_accessor :defaultValueTriggerDefinition   # 0-1 TriggerDefinition
     attr_accessor :defaultValueUsageContext        # 0-1 UsageContext
     attr_accessor :defaultValueDosage              # 0-1 Dosage
+    attr_accessor :defaultValueMeta                # 0-1 Meta
     attr_accessor :meaningWhenMissing              # 0-1 markdown
     attr_accessor :orderMeaning                    # 0-1 string
     attr_accessor :fixedBase64Binary               # 0-1 base64Binary
@@ -603,6 +609,7 @@ module FHIR
     attr_accessor :fixedTriggerDefinition          # 0-1 TriggerDefinition
     attr_accessor :fixedUsageContext               # 0-1 UsageContext
     attr_accessor :fixedDosage                     # 0-1 Dosage
+    attr_accessor :fixedMeta                       # 0-1 Meta
     attr_accessor :patternBase64Binary             # 0-1 base64Binary
     attr_accessor :patternBoolean                  # 0-1 boolean
     attr_accessor :patternCanonical                # 0-1 canonical
@@ -652,6 +659,7 @@ module FHIR
     attr_accessor :patternTriggerDefinition        # 0-1 TriggerDefinition
     attr_accessor :patternUsageContext             # 0-1 UsageContext
     attr_accessor :patternDosage                   # 0-1 Dosage
+    attr_accessor :patternMeta                     # 0-1 Meta
     attr_accessor :example                         # 0-* [ ElementDefinition::Example ]
     attr_accessor :minValueDate                    # 0-1 date
     attr_accessor :minValueDateTime                # 0-1 dateTime

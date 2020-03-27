@@ -1,6 +1,6 @@
 
 [FHIR]
-FhirVersion=4.0.0-a53ec6ee1b
-version=4.0.0
-buildId=a53ec6ee1b
-date=20181227223754
+FhirVersion=4.0.1-9346c8cc45
+version=4.0.1
+buildId=9346c8cc45
+date=20191101092923

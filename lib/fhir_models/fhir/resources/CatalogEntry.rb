@@ -20,7 +20,7 @@ module FHIR
       'referencedItem' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Medication', 'http://hl7.org/fhir/StructureDefinition/Device', 'http://hl7.org/fhir/StructureDefinition/Organization', 'http://hl7.org/fhir/StructureDefinition/Practitioner', 'http://hl7.org/fhir/StructureDefinition/PractitionerRole', 'http://hl7.org/fhir/StructureDefinition/HealthcareService', 'http://hl7.org/fhir/StructureDefinition/ActivityDefinition', 'http://hl7.org/fhir/StructureDefinition/PlanDefinition', 'http://hl7.org/fhir/StructureDefinition/SpecimenDefinition', 'http://hl7.org/fhir/StructureDefinition/ObservationDefinition', 'http://hl7.org/fhir/StructureDefinition/Binary'], 'type'=>'Reference', 'path'=>'CatalogEntry.referencedItem', 'min'=>1, 'max'=>1},
       'additionalIdentifier' => {'type'=>'Identifier', 'path'=>'CatalogEntry.additionalIdentifier', 'min'=>0, 'max'=>Float::INFINITY},
       'classification' => {'type'=>'CodeableConcept', 'path'=>'CatalogEntry.classification', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'CatalogEntry.status', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'CatalogEntry.status', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status'}},
       'validityPeriod' => {'type'=>'Period', 'path'=>'CatalogEntry.validityPeriod', 'min'=>0, 'max'=>1},
       'validTo' => {'type'=>'dateTime', 'path'=>'CatalogEntry.validTo', 'min'=>0, 'max'=>1},
       'lastUpdated' => {'type'=>'dateTime', 'path'=>'CatalogEntry.lastUpdated', 'min'=>0, 'max'=>1},
@@ -38,7 +38,7 @@ module FHIR
         'id' => {'type'=>'string', 'path'=>'RelatedEntry.id', 'min'=>0, 'max'=>1},
         'extension' => {'type'=>'Extension', 'path'=>'RelatedEntry.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'RelatedEntry.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-        'relationtype' => {'valid_codes'=>{'http://hl7.org/fhir/relation-type'=>['triggers', 'is-replaced-by']}, 'type'=>'code', 'path'=>'RelatedEntry.relationtype', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/relation-type|4.0.0'}},
+        'relationtype' => {'valid_codes'=>{'http://hl7.org/fhir/relation-type'=>['triggers', 'is-replaced-by']}, 'type'=>'code', 'path'=>'RelatedEntry.relationtype', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/relation-type'}},
         'item' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/CatalogEntry'], 'type'=>'Reference', 'path'=>'RelatedEntry.item', 'min'=>1, 'max'=>1}
       }
 
