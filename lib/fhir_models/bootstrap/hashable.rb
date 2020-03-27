@@ -121,7 +121,7 @@ module FHIR
       if meta['type'] == 'boolean'
         rval = value.strip == 'true'
       elsif FHIR::PRIMITIVES.include?(meta['type'])
-        if ['decimal', 'integer', 'positiveInt', 'unsignedInt'].include?(meta['type'])
+        if %w[decimal integer positiveInt unsignedInt].include?(meta['type'])
           rval = BigDecimal(value.to_s)
           rval = rval.frac.zero? ? rval.to_i : rval.to_f
         end # primitive is number

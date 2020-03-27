@@ -40,7 +40,7 @@ module FHIR
           type = p['snapshot']['element'].select { |e| e['path'].end_with?('.value') }.first['type'].first
 
           # try to find the JSON data type
-          field.type = type['code'].gsub('http://hl7.org/fhirpath/System.','').downcase
+          field.type = type['code'].gsub('http://hl7.org/fhirpath/System.', '').downcase
 
           # try to find a regex
           if type['extension']
@@ -178,7 +178,7 @@ module FHIR
               data_type = type['code']
               data_type = 'string' unless data_type
               if element['path'].end_with?('.id')
-                data_type = (element['base']['path'] == 'Resource.id') ? 'id' : 'string'
+                data_type = element['base']['path'] == 'Resource.id' ? 'id' : 'string'
               end
               if data_type == 'http://hl7.org/fhirpath/System.String' && extension
                 data_type = extension.first['valueUrl']
