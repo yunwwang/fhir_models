@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "FHIR-version",
   "meta": {
-    "lastUpdated": "2018-12-27T22:37:54.724+11:00"
+    "lastUpdated": "2019-11-01T09:29:23.356+11:00"
   },
   "extension": [
     {
@@ -26,15 +26,15 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.1.1310"
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.1310"
     }
   ],
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "FHIRVersion",
   "title": "FHIRVersion",
   "status": "active",
   "experimental": false,
-  "date": "2018-12-27T22:37:54+11:00",
+  "date": "2019-11-01T09:29:23+11:00",
   "description": "All published FHIR Versions.",
   "caseSensitive": true,
   "valueSet": "http://hl7.org/fhir/ValueSet/FHIR-version",
@@ -144,6 +144,11 @@
       "code": "4.0.0",
       "display": "4.0.0",
       "definition": "FHIR Release 4 (Normative + STU)."
+    },
+    {
+      "code": "4.0.1",
+      "display": "4.0.1",
+      "definition": "FHIR Release 4 Technical Correction."
     }
   ]
 }

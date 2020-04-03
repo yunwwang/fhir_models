@@ -3,11 +3,11 @@
   <id value="sc-immunization-status"/>
   
   <url value="http://hl7.org/fhir/ConceptMap/sc-immunization-status"/>
-  <version value="4.0.0"/>
+  <version value="4.0.1"/>
   <name value="ImmunizationStatusCodesCanonicalMap"/>
   <title value="Canonical Mapping for &quot;Immunization Status Codes&quot;"/>
   <status value="draft"/>
-  <date value="2018-12-27T22:37:54+11:00"/>
+  <date value="2019-11-01T09:29:23+11:00"/>
   <publisher value="FHIR Project team"/>
   <contact>
     <telecom>
@@ -29,30 +29,16 @@
       </target>
     </element>
     <element>
-      <code value="in-progress"/>
-      <target>
-        <code value="active"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value="on-hold"/>
-      <target>
-        <code value="suspended"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value="stopped"/>
-      <target>
-        <code value="failed"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
       <code value="completed"/>
       <target>
         <code value="complete"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="not-done"/>
+      <target>
+        <code value="abandoned"/>
         <equivalence value="equivalent"/>
       </target>
     </element>

@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "yesnodontknow",
   "url": "http://hl7.org/fhir/ValueSet/yesnodontknow",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "Yes/No/Don't Know",
   "status": "draft",
   "description": "For Capturing simple yes-no-don't know answers",

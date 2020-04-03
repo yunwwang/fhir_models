@@ -110,7 +110,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/ValueSet/example-hierarchical",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "Example Hierarchical ValueSet",
   "status": "draft",
   "experimental": true,
@@ -157,7 +157,7 @@
             "extension": [
               {
                 "url": "code",
-                "valueString": "processing"
+                "valueCode": "processing"
               },
               {
                 "url": "member",
@@ -174,7 +174,7 @@
             "extension": [
               {
                 "url": "code",
-                "valueString": "invalid"
+                "valueCode": "invalid"
               },
               {
                 "url": "member",
@@ -185,8 +185,8 @@
                 "valueCode": "required"
               },
               {
-                "url": "value",
-                "valueCode": "required"
+                "url": "member",
+                "valueCode": "value"
               }
             ]
           },
@@ -195,7 +195,7 @@
             "extension": [
               {
                 "url": "code",
-                "valueString": "transient"
+                "valueCode": "transient"
               },
               {
                 "url": "member",
@@ -206,7 +206,7 @@
                 "valueCode": "exception"
               },
               {
-                "url": "value",
+                "url": "member",
                 "valueCode": "throttled"
               }
             ]
@@ -216,7 +216,7 @@
             "extension": [
               {
                 "url": "code",
-                "valueString": "security"
+                "valueCode": "security"
               },
               {
                 "url": "member",
