@@ -40,8 +40,7 @@ module FHIR
           type = p['snapshot']['element'].select { |e| e['path'].end_with?('.value') }.first['type'].first
 
           # try to find the JSON data type
-          ext = type['_code']['extension'].find { |e| e['url'] == 'http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type' }
-          field.type = ext ? ext['valueString'] : 'string'
+          field.type = type['code'].gsub('http://hl7.org/fhirpath/System.', '').downcase
 
           # try to find a regex
           if type['extension']
@@ -174,8 +173,17 @@ module FHIR
             end
 
             # generate a field for each valid datatype... this is for things like Resource.attribute[x]
-            element['type'].map { |t| t['code'] }.uniq.each do |data_type|
+            element['type'].each do |type|
+              extension = type['extension']
+              data_type = type['code']
               data_type = 'string' unless data_type
+              if element['path'].end_with?('.id')
+                data_type = element['base']['path'] == 'Resource.id' ? 'id' : 'string'
+              end
+              if data_type == 'http://hl7.org/fhirpath/System.String' && extension
+                data_type = extension.first['valueUrl']
+              end
+              # data_type = 'id' if element['path'].end_with?('.id') && data_type == 'http://hl7.org/fhirpath/System.String'
               capitalized = cap_first(data_type)
               fieldname = field_base_name.gsub('[x]', capitalized)
               field = FHIR::Field.new(fieldname)
@@ -196,10 +204,11 @@ module FHIR
                 field.binding.delete('extension')
                 # set the actual code list
                 binding_uri = field.binding['uri']
-                binding_uri = binding_uri[0..-7] if binding_uri&.end_with?('|4.0.0')
+                # Strip off the |4.0.0 or |4.0.1 or |2014-03-26 or similar from the ends of URLs
+                binding_uri&.gsub!(/\|[A-Za-z0-9\.\-]*/, '')
                 codes = @defn.get_codes(binding_uri)
                 field.valid_codes = codes unless codes.nil?
-                if field.valid_codes.empty? && binding_uri && !binding_uri.end_with?('bcp47', 'bcp13.txt', 'mimetypes')
+                if field.valid_codes.empty? && binding_uri && !binding_uri.end_with?('bcp47', 'bcp13.txt', 'mimetypes', 'LL379-9')
                   FHIR.logger.warn "  MISSING EXPANSION -- #{field.path} #{field.min}..#{field.max}: #{binding_uri} (#{field.binding['strength']})"
                   @missing_expansions = true
                   @missing_required_expansion = (field.binding['strength'] == 'required') unless @missing_required_expansion

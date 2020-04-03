@@ -152,6 +152,15 @@ module FHIR
         f = File.open(filename, 'w:UTF-8')
         f.write(doc.to_xml)
         f.close
+
+        # Remove the weird parantheses on xml example filenames
+        # we do this so they match the names of the json examples
+        if filename.include?('(') && filename.include?(')')
+          rename = filename.gsub(/\([A-Za-z0-9\-\.]*\)/, '')
+          File.rename(filename, rename)
+          filename = rename
+        end
+
         finish = File.size(filename)
         puts "  Removed #{(start - finish) / 1024} KB" if start != finish
       end
