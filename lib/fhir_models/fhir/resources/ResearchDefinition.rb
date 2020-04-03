@@ -24,7 +24,7 @@ module FHIR
       'title' => {'type'=>'string', 'path'=>'ResearchDefinition.title', 'min'=>0, 'max'=>1},
       'shortTitle' => {'type'=>'string', 'path'=>'ResearchDefinition.shortTitle', 'min'=>0, 'max'=>1},
       'subtitle' => {'type'=>'string', 'path'=>'ResearchDefinition.subtitle', 'min'=>0, 'max'=>1},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'ResearchDefinition.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'ResearchDefinition.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status'}},
       'experimental' => {'type'=>'boolean', 'path'=>'ResearchDefinition.experimental', 'min'=>0, 'max'=>1},
       'subjectCodeableConcept' => {'valid_codes'=>{'http://hl7.org/fhir/resource-types'=>['Patient', 'Practitioner', 'Organization', 'Location', 'Device']}, 'type'=>'CodeableConcept', 'path'=>'ResearchDefinition.subject[x]', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/subject-type'}},
       'subjectReference' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Group'], 'type'=>'Reference', 'path'=>'ResearchDefinition.subject[x]', 'min'=>0, 'max'=>1},

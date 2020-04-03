@@ -5,13 +5,13 @@ module FHIR
     include FHIR::Xml
 
     MULTIPLE_TYPES = {
-      'value' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage']
+      'value' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage', 'Meta']
     }
     SEARCH_PARAMS = []
     METADATA = {
       'id' => {'type'=>'string', 'path'=>'Extension.id', 'min'=>0, 'max'=>1},
       'extension' => {'type'=>'Extension', 'path'=>'Extension.extension', 'min'=>0, 'max'=>Float::INFINITY},
-      'url' => {'type'=>'string', 'path'=>'Extension.url', 'min'=>1, 'max'=>1},
+      'url' => {'type'=>'uri', 'path'=>'Extension.url', 'min'=>1, 'max'=>1},
       'valueBase64Binary' => {'type'=>'base64Binary', 'path'=>'Extension.value[x]', 'min'=>0, 'max'=>1},
       'valueBoolean' => {'type'=>'boolean', 'path'=>'Extension.value[x]', 'min'=>0, 'max'=>1},
       'valueCanonical' => {'type'=>'canonical', 'path'=>'Extension.value[x]', 'min'=>0, 'max'=>1},
@@ -60,12 +60,13 @@ module FHIR
       'valueRelatedArtifact' => {'type'=>'RelatedArtifact', 'path'=>'Extension.value[x]', 'min'=>0, 'max'=>1},
       'valueTriggerDefinition' => {'type'=>'TriggerDefinition', 'path'=>'Extension.value[x]', 'min'=>0, 'max'=>1},
       'valueUsageContext' => {'type'=>'UsageContext', 'path'=>'Extension.value[x]', 'min'=>0, 'max'=>1},
-      'valueDosage' => {'type'=>'Dosage', 'path'=>'Extension.value[x]', 'min'=>0, 'max'=>1}
+      'valueDosage' => {'type'=>'Dosage', 'path'=>'Extension.value[x]', 'min'=>0, 'max'=>1},
+      'valueMeta' => {'type'=>'Meta', 'path'=>'Extension.value[x]', 'min'=>0, 'max'=>1}
     }
 
     attr_accessor :id                       # 0-1 string
     attr_accessor :extension                # 0-* [ Extension ]
-    attr_accessor :url                      # 1-1 string
+    attr_accessor :url                      # 1-1 uri
     attr_accessor :valueBase64Binary        # 0-1 base64Binary
     attr_accessor :valueBoolean             # 0-1 boolean
     attr_accessor :valueCanonical           # 0-1 canonical
@@ -115,5 +116,6 @@ module FHIR
     attr_accessor :valueTriggerDefinition   # 0-1 TriggerDefinition
     attr_accessor :valueUsageContext        # 0-1 UsageContext
     attr_accessor :valueDosage              # 0-1 Dosage
+    attr_accessor :valueMeta                # 0-1 Meta
   end
 end

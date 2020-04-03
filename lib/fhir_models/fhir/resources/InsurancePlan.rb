@@ -15,7 +15,7 @@ module FHIR
       'extension' => {'type'=>'Extension', 'path'=>'InsurancePlan.extension', 'min'=>0, 'max'=>Float::INFINITY},
       'modifierExtension' => {'type'=>'Extension', 'path'=>'InsurancePlan.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
       'identifier' => {'type'=>'Identifier', 'path'=>'InsurancePlan.identifier', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'InsurancePlan.status', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'InsurancePlan.status', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status'}},
       'type' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/insurance-plan-type'=>['medical', 'dental', 'mental', 'subst-ab', 'vision', 'Drug', 'short-term', 'long-term', 'hospice', 'home']}, 'type'=>'CodeableConcept', 'path'=>'InsurancePlan.type', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/insuranceplan-type'}},
       'name' => {'type'=>'string', 'path'=>'InsurancePlan.name', 'min'=>0, 'max'=>1},
       'alias' => {'type'=>'string', 'path'=>'InsurancePlan.alias', 'min'=>0, 'max'=>Float::INFINITY},
@@ -195,7 +195,7 @@ module FHIR
               'extension' => {'type'=>'Extension', 'path'=>'Cost.extension', 'min'=>0, 'max'=>Float::INFINITY},
               'modifierExtension' => {'type'=>'Extension', 'path'=>'Cost.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
               'type' => {'type'=>'CodeableConcept', 'path'=>'Cost.type', 'min'=>1, 'max'=>1},
-              'applicability' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/applicability'=>['in-network', 'out-of-network', 'other']}, 'type'=>'CodeableConcept', 'path'=>'Cost.applicability', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/insuranceplan-applicability|4.0.0'}},
+              'applicability' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/applicability'=>['in-network', 'out-of-network', 'other']}, 'type'=>'CodeableConcept', 'path'=>'Cost.applicability', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/insuranceplan-applicability'}},
               'qualifiers' => {'type'=>'CodeableConcept', 'path'=>'Cost.qualifiers', 'min'=>0, 'max'=>Float::INFINITY},
               'value' => {'type'=>'Quantity', 'path'=>'Cost.value', 'min'=>0, 'max'=>1}
             }

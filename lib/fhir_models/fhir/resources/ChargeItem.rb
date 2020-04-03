@@ -21,7 +21,7 @@ module FHIR
       'identifier' => {'type'=>'Identifier', 'path'=>'ChargeItem.identifier', 'min'=>0, 'max'=>Float::INFINITY},
       'definitionUri' => {'type'=>'uri', 'path'=>'ChargeItem.definitionUri', 'min'=>0, 'max'=>Float::INFINITY},
       'definitionCanonical' => {'type'=>'canonical', 'path'=>'ChargeItem.definitionCanonical', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/chargeitem-status'=>['planned', 'billable', 'not-billable', 'aborted', 'billed', 'entered-in-error', 'unknown']}, 'type'=>'code', 'path'=>'ChargeItem.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/chargeitem-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/chargeitem-status'=>['planned', 'billable', 'not-billable', 'aborted', 'billed', 'entered-in-error', 'unknown']}, 'type'=>'code', 'path'=>'ChargeItem.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/chargeitem-status'}},
       'partOf' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/ChargeItem'], 'type'=>'Reference', 'path'=>'ChargeItem.partOf', 'min'=>0, 'max'=>Float::INFINITY},
       'code' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes'=>['1100', '1210', '1320']}, 'type'=>'CodeableConcept', 'path'=>'ChargeItem.code', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/chargeitem-billingcodes'}},
       'subject' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Patient', 'http://hl7.org/fhir/StructureDefinition/Group'], 'type'=>'Reference', 'path'=>'ChargeItem.subject', 'min'=>1, 'max'=>1},
