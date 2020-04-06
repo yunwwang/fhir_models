@@ -280,11 +280,10 @@ module FHIR
           begin
             result = FHIRPath.evaluate(constraint.expression, node)
             if !result && constraint.severity == 'error'
-              @errors << "#{describe_element(element)}: FHIRPath expression evaluates to false for #{name} (containing: #{node.to_s}) invariant rule #{constraint.key}: #{constraint.human}"
-              @errors << node.to_s
+              @errors << "#{describe_element(element)}: FHIRPath expression evaluates to false for #{name} (containing: #{node}) invariant rule #{constraint.key}: #{constraint.human}"
             end
           rescue
-            @warnings << "#{describe_element(element)}: unable to evaluate FHIRPath expression against JSON for #{name} (containing: #{node.to_s}) invariant rule #{constraint.key}: #{constraint.human}"
+            @warnings << "#{describe_element(element)}: unable to evaluate FHIRPath expression against JSON for #{name} (containing: #{node}) invariant rule #{constraint.key}: #{constraint.human}"
           end
         end
       end
