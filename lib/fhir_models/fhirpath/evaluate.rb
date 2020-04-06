@@ -1,12 +1,12 @@
-module FluentPath
+module FHIRPath
   @@context = {}
   @@parent = nil
 
-  # This is the entry point to using the FluentPath class
+  # This is the entry point to using the FHIRPath class
   def self.evaluate(expression, hash, parent = nil)
     @@context = hash
     @@parent = parent
-    tree = FluentPath.parse(expression)
+    tree = FHIRPath.parse(expression)
     FHIR.logger.debug "TREE: #{tree}"
     compute(tree, hash)
   end
@@ -68,7 +68,7 @@ module FluentPath
 
   # evaluate a parsed expression given some context data
   def self.compute(tree, data)
-    tree = tree.tree if tree.is_a?(FluentPath::Expression)
+    tree = tree.tree if tree.is_a?(FHIRPath::Expression)
     # --------------- OPERATOR PRECEDENCE ------------------
     # 01 . (path/function invocation)
     # 02 [] (indexer)
@@ -107,7 +107,7 @@ module FluentPath
           if previous_node.is_a?(Hash) || previous_node.is_a?(Array)
             tree[index] = get(node, previous_node)
             clean_index(tree, previous_index)
-          elsif !previous_node.is_a?(FluentPath::Expression)
+          elsif !previous_node.is_a?(FHIRPath::Expression)
             tree[index] = get(node, data)
           end
           if array_index && tree[index].is_a?(Array)
@@ -115,13 +115,13 @@ module FluentPath
           end
           FHIR.logger.debug "V===> #{tree}"
         elsif node.is_a?(Symbol) && functions.include?(node)
-          previous_node = compute(previous_node, data) if previous_node.is_a?(FluentPath::Expression)
+          previous_node = compute(previous_node, data) if previous_node.is_a?(FHIRPath::Expression)
           case node
           when :where
             # the previous node should be data (as Array or Hash)
-            # the next node should be a block or subexpression (as FluentPath::Expression)
+            # the next node should be a block or subexpression (as FHIRPath::Expression)
             block = tree[index + 1]
-            if block.is_a?(FluentPath::Expression)
+            if block.is_a?(FHIRPath::Expression)
               tree[index + 1] = nil
             else
               raise 'Where function requires a block.'
@@ -145,9 +145,9 @@ module FluentPath
           when :select
             # select is equivalent to ruby Array.map!
             # the previous node should be data (as Array or Hash)
-            # the next node should be a block or subexpression (as FluentPath::Expression)
+            # the next node should be a block or subexpression (as FHIRPath::Expression)
             block = tree[index + 1]
-            if block.is_a?(FluentPath::Expression)
+            if block.is_a?(FHIRPath::Expression)
               tree[index + 1] = nil
             else
               raise 'Select function requires a block.'
@@ -168,9 +168,9 @@ module FluentPath
             break
           when :extension
             # the previous node should be a data (as Hash)
-            # the next node optionally is a block or subexpression (as FluentPath::Expression)
+            # the next node optionally is a block or subexpression (as FHIRPath::Expression)
             block = tree[index + 1]
-            if block.is_a?(FluentPath::Expression)
+            if block.is_a?(FHIRPath::Expression)
               tree[index + 1] = nil
             else
               raise 'Extension function requires a block.'
@@ -257,7 +257,7 @@ module FluentPath
       size = tree.length
       tree.each_with_index do |node, index|
         if node.is_a?(Symbol) && functions.include?(node)
-          previous_node = compute(previous_node, data) if previous_node.is_a?(FluentPath::Expression)
+          previous_node = compute(previous_node, data) if previous_node.is_a?(FHIRPath::Expression)
           case node
           when :all
             if previous_node.is_a?(Array)
@@ -294,9 +294,9 @@ module FluentPath
             clean_index(tree, previous_index)
           when :startsWith
             # the previous node should be a data (as String)
-            # the next node should be a block or subexpression (as FluentPath::Expression)
+            # the next node should be a block or subexpression (as FHIRPath::Expression)
             block = tree[index + 1]
-            if block.is_a?(FluentPath::Expression)
+            if block.is_a?(FHIRPath::Expression)
               tree[index + 1] = nil
             else
               raise 'StartsWith function requires a block.'
@@ -312,9 +312,9 @@ module FluentPath
             break
           when :substring
             # the previous node should be a data (as String)
-            # the next node should be a block or subexpression (as FluentPath::Expression)
+            # the next node should be a block or subexpression (as FHIRPath::Expression)
             block = tree[index + 1]
-            if block.is_a?(FluentPath::Expression)
+            if block.is_a?(FHIRPath::Expression)
               tree[index + 1] = nil
             else
               raise 'Substring function requires a block.'
@@ -340,9 +340,9 @@ module FluentPath
             break
           when :contains
             # the previous node should be a data (as String)
-            # the next node should be a block or subexpression (as FluentPath::Expression)
+            # the next node should be a block or subexpression (as FHIRPath::Expression)
             block = tree[index + 1]
-            if block.is_a?(FluentPath::Expression)
+            if block.is_a?(FHIRPath::Expression)
               tree[index + 1] = nil
             else
               raise 'Contains function requires a block.'
@@ -358,9 +358,9 @@ module FluentPath
             break
           when :in
             # the previous node should be a data (as String, Number, or Boolean)
-            # the next node should an Array (possibly as a block or subexpression/FluentPath::Expression)
+            # the next node should an Array (possibly as a block or subexpression/FHIRPath::Expression)
             block = tree[index + 1]
-            if block.is_a?(FluentPath::Expression)
+            if block.is_a?(FHIRPath::Expression)
               FHIR.logger.debug 'Evaling In Block....'
               tree[index + 1] = compute(block, data)
             end
@@ -409,8 +409,8 @@ module FluentPath
       size = tree.length
       tree.each_with_index do |node, index|
         if node.is_a?(Symbol) && functions.include?(node)
-          previous_node = compute(previous_node, data) if previous_node.is_a?(FluentPath::Expression)
-          tree[index + 1] = compute(tree[index + 1], data) if tree[index + 1].is_a?(FluentPath::Expression)
+          previous_node = compute(previous_node, data) if previous_node.is_a?(FHIRPath::Expression)
+          tree[index + 1] = compute(tree[index + 1], data) if tree[index + 1].is_a?(FHIRPath::Expression)
           left = previous_node
           right = tree[index + 1]
           case node
@@ -440,8 +440,8 @@ module FluentPath
       size = tree.length
       tree.each_with_index do |node, index|
         if node.is_a?(Symbol) && functions.include?(node)
-          previous_node = compute(previous_node, data) if previous_node.is_a?(FluentPath::Expression)
-          tree[index + 1] = compute(tree[index + 1], data) if tree[index + 1].is_a?(FluentPath::Expression)
+          previous_node = compute(previous_node, data) if previous_node.is_a?(FHIRPath::Expression)
+          tree[index + 1] = compute(tree[index + 1], data) if tree[index + 1].is_a?(FHIRPath::Expression)
           left = previous_node
           right = tree[index + 1]
           case node
@@ -471,8 +471,8 @@ module FluentPath
       size = tree.length
       tree.each_with_index do |node, index|
         if node.is_a?(Symbol) && functions.include?(node)
-          previous_node = compute(previous_node, data) if previous_node.is_a?(FluentPath::Expression)
-          tree[index + 1] = compute(tree[index + 1], data) if tree[index + 1].is_a?(FluentPath::Expression)
+          previous_node = compute(previous_node, data) if previous_node.is_a?(FHIRPath::Expression)
+          tree[index + 1] = compute(tree[index + 1], data) if tree[index + 1].is_a?(FHIRPath::Expression)
           left = previous_node
           right = tree[index + 1]
           case node
@@ -512,8 +512,8 @@ module FluentPath
       size = tree.length
       tree.each_with_index do |node, index|
         if node.is_a?(Symbol) && functions.include?(node)
-          previous_node = compute(previous_node, data) if previous_node.is_a?(FluentPath::Expression)
-          tree[index + 1] = compute(tree[index + 1], data) if tree[index + 1].is_a?(FluentPath::Expression)
+          previous_node = compute(previous_node, data) if previous_node.is_a?(FHIRPath::Expression)
+          tree[index + 1] = compute(tree[index + 1], data) if tree[index + 1].is_a?(FHIRPath::Expression)
           left = convert_to_boolean(previous_node)
           right = convert_to_boolean(tree[index + 1])
           case node
@@ -546,8 +546,8 @@ module FluentPath
       size = tree.length
       tree.each_with_index do |node, index|
         if node.is_a?(Symbol) && functions.include?(node)
-          previous_node = compute(previous_node, data) if previous_node.is_a?(FluentPath::Expression)
-          tree[index + 1] = compute(tree[index + 1], data) if tree[index + 1].is_a?(FluentPath::Expression)
+          previous_node = compute(previous_node, data) if previous_node.is_a?(FHIRPath::Expression)
+          tree[index + 1] = compute(tree[index + 1], data) if tree[index + 1].is_a?(FHIRPath::Expression)
           case node
           when :implies
             tree[index] = false
@@ -576,7 +576,7 @@ module FluentPath
     FHIR.logger.debug "OUT: #{tree}"
 
     tree.map! do |out|
-      while out.is_a?(FluentPath::Expression)
+      while out.is_a?(FHIRPath::Expression)
         out = compute(out, data)
       end
       out
