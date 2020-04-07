@@ -20,7 +20,7 @@ Layout/EmptyLineAfterGuardClause:
     - 'lib/fhir_models/fhir_ext/element_definition.rb'
     - 'lib/fhir_models/fhir_ext/structure_definition.rb'
     - 'lib/fhir_models/fhir_ext/structure_definition_compare.rb'
-    - 'lib/fhir_models/fluentpath/parse.rb'
+    - 'lib/fhir_models/fhirpath/parse.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -108,7 +108,7 @@ Style/AccessModifierDeclarations:
 Style/ClassVars:
   Exclude:
     - 'lib/fhir_models/bootstrap/definitions.rb'
-    - 'lib/fhir_models/fluentpath/parse.rb'
+    - 'lib/fhir_models/fhirpath/parse.rb'
 
 # Offense count: 6
 Style/CommentedKeyword:
@@ -133,8 +133,8 @@ Style/Documentation:
     - 'lib/fhir_models/fhir.rb'
     - 'lib/fhir_models/fhir_ext/structure_definition.rb'
     - 'lib/fhir_models/fhir_ext/structure_definition_finding.rb'
-    - 'lib/fhir_models/fluentpath/expression.rb'
-    - 'lib/fhir_models/fluentpath/parse.rb'
+    - 'lib/fhir_models/fhirpath/expression.rb'
+    - 'lib/fhir_models/fhirpath/parse.rb'
 
 # Offense count: 28
 # Cop supports --auto-correct.
@@ -195,8 +195,8 @@ Style/RescueStandardError:
     - 'lib/fhir_models/fhir.rb'
     - 'lib/fhir_models/fhir_ext/structure_definition.rb'
     - 'lib/fhir_models/fhir_ext/structure_definition_finding.rb'
-    - 'lib/fhir_models/fluentpath/expression.rb'
-    - 'lib/fhir_models/fluentpath/parse.rb'
+    - 'lib/fhir_models/fhirpath/expression.rb'
+    - 'lib/fhir_models/fhirpath/parse.rb'
 
 # Offense count: 4
 # Cop supports --auto-correct.
@@ -215,4 +215,4 @@ Style/SafeNavigation:
 Style/YodaCondition:
   Exclude:
     - 'lib/fhir_models/bootstrap/preprocess.rb'
-    - 'lib/fhir_models/fluentpath/parse.rb'
+    - 'lib/fhir_models/fhirpath/parse.rb'

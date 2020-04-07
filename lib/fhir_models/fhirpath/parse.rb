@@ -1,4 +1,4 @@
-module FluentPath
+module FHIRPath
   @@reserved = ['all', 'not', 'empty', 'exists', 'where', 'select', 'extension', 'startsWith', 'contains', 'in', 'distinct', '=', '!=', '<=', '>=', '<', '>', 'and', 'or', 'xor', '+', '-', '/', '*', 'toInteger', 'implies', 'children', 'first', 'last', 'tail', 'count', 'length', 'substring']
 
   def self.parse(expression)
@@ -67,7 +67,7 @@ module FluentPath
     until tokens.empty?
       token = tokens.delete_at(0)
       if '(' == token # sub expression
-        tree << FluentPath::Expression.new(build_tree(tokens))
+        tree << FHIRPath::Expression.new(build_tree(tokens))
       elsif ')' == token
         return tree
       elsif '.' != token
@@ -78,7 +78,7 @@ module FluentPath
     tree.each_with_index do |t, index|
       if t == :extension # 'extension' can be a path or a function call (if followed by a block)
         next_token = tree[index + 1]
-        tree[index] = 'extension' if next_token.nil? || !next_token.is_a?(FluentPath::Expression)
+        tree[index] = 'extension' if next_token.nil? || !next_token.is_a?(FHIRPath::Expression)
       end
     end
     tree
