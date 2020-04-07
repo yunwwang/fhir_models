@@ -1,6 +1,6 @@
 require_relative '../../test_helper'
 
-class FluentEqualityTest < Test::Unit::TestCase
+class FHIRPathEqualityTest < Test::Unit::TestCase
   def test_equals_strings
     data = {
       'a' => 'foo',
