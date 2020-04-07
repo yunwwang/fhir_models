@@ -24,7 +24,7 @@ Dir.glob(File.join(root, 'lib', 'fhir_models', 'fhir', '**', '*.rb')).each do |f
   require file
 end
 
-# Require the fhirpath code
+# Require the FHIRPath code
 Dir.glob(File.join(root, 'lib', 'fhir_models', 'fhirpath', '*.rb')).each do |file|
   require file
 end
