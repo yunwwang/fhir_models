@@ -1,8 +1,7 @@
 module FHIR
   module Boot
     class Generator
-
-      KNOWN_MISSING_EXPANSIONS = %w[bcp47 bcp13.txt mimetypes LL379-9]
+      KNOWN_MISSING_EXPANSIONS = %w[bcp47 bcp13.txt mimetypes LL379-9].freeze
 
       attr_accessor :lib
       attr_accessor :defn
@@ -181,8 +180,7 @@ module FHIR
               data_type = type['code'] || 'string'
               if element['path'].end_with?('.id')
                 data_type = element['base']['path'] == 'Resource.id' ? 'id' : 'string'
-              end
-              if data_type == 'http://hl7.org/fhirpath/System.String' && extension
+              elsif data_type == 'http://hl7.org/fhirpath/System.String' && extension
                 data_type = extension.first['valueUrl']
               end
               capitalized = cap_first(data_type)
