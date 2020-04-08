@@ -5,7 +5,7 @@ AllCops:
     - 'test/**/*'
     - 'spec/**/*'
     - 'lib/fhir_models/fhir/**/*'
-    - 'lib/fhir_models/fluentpath/evaluate.rb'
+    - 'lib/fhir_models/fhirpath/evaluate.rb'
     - 'lib/**/*.rake'
     - 'tmp/**/*'
     - '*.gemspec'

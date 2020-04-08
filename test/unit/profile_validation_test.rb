@@ -8,6 +8,7 @@ class ProfileValidationTest < Test::Unit::TestCase
   us_core_ig = File.join(FIXTURES_DIR, 'us_core', '*.json')
   PROFILES = {}
   Dir.glob(us_core_ig).each do |definition|
+    next if definition.end_with? '/package.json'
     json = File.read(definition)
     resource = FHIR.from_contents(json)
     PROFILES[resource.url] = resource if resource
@@ -29,13 +30,24 @@ class ProfileValidationTest < Test::Unit::TestCase
     json = File.read(example_file)
     resource = FHIR::Json.from_json(json)
     errors = []
+    warnings = []
     if resource.meta
       # validate against the declared profile
-      profile = PROFILES[resource.meta.profile.first]
-      profile = FHIR::Definitions.profile(resource.meta.profile.first) unless profile
-      assert profile, "Failed to find profile: #{resource.meta.profile.first}"
-      errors = profile.validate_resource(resource)
-      errors << "Validated against #{resource.meta.profile.first}" unless errors.empty?
+      resource.meta.profile.each do |profile_uri|
+        profile = PROFILES[profile_uri]
+        profile = FHIR::Definitions.profile(profile_uri) unless profile
+        assert profile, "Failed to find profile: #{profile_uri}"
+        profile_errors = profile.validate_resource(resource)
+        profile_warnings = profile.warnings
+        unless profile_errors.empty?
+          errors.concat profile_errors
+          errors << "Validated against #{profile_uri}"
+        end
+        unless profile_warnings.empty?
+          warnings.concat profile_warnings
+          warnings << "Validated against #{profile_uri}"
+        end
+      end
     else
       # validate the base resource
       errors = resource.validate
@@ -43,6 +55,10 @@ class ProfileValidationTest < Test::Unit::TestCase
     end
     unless errors.empty?
       File.open("#{ERROR_DIR}/#{example_name}.err", 'w:UTF-8') { |file| file.write(errors.join("\n")) }
+      File.open("#{ERROR_DIR}/#{example_name}.json", 'w:UTF-8') { |file| file.write(json) }
+    end
+    unless warnings.empty?
+      File.open("#{ERROR_DIR}/#{example_name}.warn", 'w:UTF-8') { |file| file.write(warnings.join("\n")) }
       File.open("#{ERROR_DIR}/#{example_name}.json", 'w:UTF-8') { |file| file.write(json) }
     end
     assert errors.empty?, 'Record failed to validate.'

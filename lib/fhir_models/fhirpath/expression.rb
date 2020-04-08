@@ -1,4 +1,4 @@
-module FluentPath
+module FHIRPath
   class Expression
     attr_accessor :tree
 
@@ -23,7 +23,7 @@ module FluentPath
           x
         end
       end
-      FluentPath::Expression.new(clone_tree)
+      FHIRPath::Expression.new(clone_tree)
     end
   end
 end

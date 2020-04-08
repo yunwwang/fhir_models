@@ -267,9 +267,9 @@ module FHIR
         end
       end
 
-      # Check FluentPath invariants 'constraint.xpath' constraints...
+      # Check FHIRPath invariants 'constraint.xpath' constraints...
       # This code is not very robust, and is likely to be throwing *many* exceptions.
-      # This is partially because the FluentPath evaluator is not complete, and partially
+      # This is partially because the FHIRPath evaluator is not complete, and partially
       # because the context of an expression (element.constraint.expression) is not always
       # consistent with the current context (element.path). For example, sometimes expressions appear to be
       # written to be evaluated within the element, other times at the resource level, or perhaps
@@ -278,14 +278,12 @@ module FHIR
         next unless constraint.expression && !nodes.empty?
         nodes.each do |node|
           begin
-            result = FluentPath.evaluate(constraint.expression, node)
+            result = FHIRPath.evaluate(constraint.expression, node)
             if !result && constraint.severity == 'error'
-              @errors << "#{describe_element(element)}: FluentPath expression evaluates to false for #{name} invariant rule #{constraint.key}: #{constraint.human}"
-              @errors << node.to_s
+              @errors << "#{describe_element(element)}: FHIRPath expression evaluates to false for #{name} (containing: #{node}) invariant rule #{constraint.key}: #{constraint.human}"
             end
           rescue
-            @warnings << "#{describe_element(element)}: unable to evaluate FluentPath expression against JSON for #{name} invariant rule #{constraint.key}: #{constraint.human}"
-            @warnings << node.to_s
+            @warnings << "#{describe_element(element)}: unable to evaluate FHIRPath expression against JSON for #{name} (containing: #{node}) invariant rule #{constraint.key}: #{constraint.human}"
           end
         end
       end
