@@ -183,7 +183,6 @@ module FHIR
               if data_type == 'http://hl7.org/fhirpath/System.String' && extension
                 data_type = extension.first['valueUrl']
               end
-              # data_type = 'id' if element['path'].end_with?('.id') && data_type == 'http://hl7.org/fhirpath/System.String'
               capitalized = cap_first(data_type)
               fieldname = field_base_name.gsub('[x]', capitalized)
               field = FHIR::Field.new(fieldname)
