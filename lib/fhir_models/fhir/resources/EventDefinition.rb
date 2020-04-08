@@ -23,7 +23,7 @@ module FHIR
       'name' => {'type'=>'string', 'path'=>'EventDefinition.name', 'min'=>0, 'max'=>1},
       'title' => {'type'=>'string', 'path'=>'EventDefinition.title', 'min'=>0, 'max'=>1},
       'subtitle' => {'type'=>'string', 'path'=>'EventDefinition.subtitle', 'min'=>0, 'max'=>1},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'EventDefinition.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/publication-status'=>['draft', 'active', 'retired', 'unknown']}, 'type'=>'code', 'path'=>'EventDefinition.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/publication-status'}},
       'experimental' => {'type'=>'boolean', 'path'=>'EventDefinition.experimental', 'min'=>0, 'max'=>1},
       'subjectCodeableConcept' => {'valid_codes'=>{'http://hl7.org/fhir/resource-types'=>['Patient', 'Practitioner', 'Organization', 'Location', 'Device']}, 'type'=>'CodeableConcept', 'path'=>'EventDefinition.subject[x]', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/subject-type'}},
       'subjectReference' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Group'], 'type'=>'Reference', 'path'=>'EventDefinition.subject[x]', 'min'=>0, 'max'=>1},

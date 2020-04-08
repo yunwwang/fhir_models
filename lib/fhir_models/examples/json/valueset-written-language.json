@@ -2,13 +2,13 @@
   "resourceType": "ValueSet",
   "id": "written-language",
   "meta": {
-    "lastUpdated": "2018-12-27T11:37:54.724+00:00",
+    "lastUpdated": "2019-10-31T22:29:23.356+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
   "url": "http://hl7.org/fhir/ValueSet/written-language",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "Common Languages (Written)",
   "status": "draft",
   "experimental": true,

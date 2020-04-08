@@ -19,7 +19,7 @@ module FHIR
       include FHIR::Xml
 
       MULTIPLE_TYPES = {
-        'value' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage']
+        'value' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage', 'Meta']
       }
       METADATA = {
         'id' => {'type'=>'string', 'path'=>'Parameter.id', 'min'=>0, 'max'=>1},
@@ -75,6 +75,7 @@ module FHIR
         'valueTriggerDefinition' => {'type'=>'TriggerDefinition', 'path'=>'Parameter.value[x]', 'min'=>0, 'max'=>1},
         'valueUsageContext' => {'type'=>'UsageContext', 'path'=>'Parameter.value[x]', 'min'=>0, 'max'=>1},
         'valueDosage' => {'type'=>'Dosage', 'path'=>'Parameter.value[x]', 'min'=>0, 'max'=>1},
+        'valueMeta' => {'type'=>'Meta', 'path'=>'Parameter.value[x]', 'min'=>0, 'max'=>1},
         'resource' => {'type'=>'Resource', 'path'=>'Parameter.resource', 'min'=>0, 'max'=>1},
         'part' => {'type'=>'Parameters::Parameter', 'path'=>'Parameter.part', 'min'=>0, 'max'=>Float::INFINITY}
       }
@@ -132,6 +133,7 @@ module FHIR
       attr_accessor :valueTriggerDefinition   # 0-1 TriggerDefinition
       attr_accessor :valueUsageContext        # 0-1 UsageContext
       attr_accessor :valueDosage              # 0-1 Dosage
+      attr_accessor :valueMeta                # 0-1 Meta
       attr_accessor :resource                 # 0-1 Resource
       attr_accessor :part                     # 0-* [ Parameters::Parameter ]
     end

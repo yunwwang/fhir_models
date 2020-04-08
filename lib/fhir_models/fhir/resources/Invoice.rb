@@ -15,7 +15,7 @@ module FHIR
       'extension' => {'type'=>'Extension', 'path'=>'Invoice.extension', 'min'=>0, 'max'=>Float::INFINITY},
       'modifierExtension' => {'type'=>'Extension', 'path'=>'Invoice.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
       'identifier' => {'type'=>'Identifier', 'path'=>'Invoice.identifier', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/invoice-status'=>['draft', 'issued', 'balanced', 'cancelled', 'entered-in-error']}, 'type'=>'code', 'path'=>'Invoice.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/invoice-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/invoice-status'=>['draft', 'issued', 'balanced', 'cancelled', 'entered-in-error']}, 'type'=>'code', 'path'=>'Invoice.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/invoice-status'}},
       'cancelledReason' => {'type'=>'string', 'path'=>'Invoice.cancelledReason', 'min'=>0, 'max'=>1},
       'type' => {'type'=>'CodeableConcept', 'path'=>'Invoice.type', 'min'=>0, 'max'=>1},
       'subject' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Patient', 'http://hl7.org/fhir/StructureDefinition/Group'], 'type'=>'Reference', 'path'=>'Invoice.subject', 'min'=>0, 'max'=>1},
@@ -79,7 +79,7 @@ module FHIR
           'id' => {'type'=>'string', 'path'=>'PriceComponent.id', 'min'=>0, 'max'=>1},
           'extension' => {'type'=>'Extension', 'path'=>'PriceComponent.extension', 'min'=>0, 'max'=>Float::INFINITY},
           'modifierExtension' => {'type'=>'Extension', 'path'=>'PriceComponent.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
-          'type' => {'valid_codes'=>{'http://hl7.org/fhir/invoice-priceComponentType'=>['base', 'surcharge', 'deduction', 'discount', 'tax', 'informational']}, 'type'=>'code', 'path'=>'PriceComponent.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/invoice-priceComponentType|4.0.0'}},
+          'type' => {'valid_codes'=>{'http://hl7.org/fhir/invoice-priceComponentType'=>['base', 'surcharge', 'deduction', 'discount', 'tax', 'informational']}, 'type'=>'code', 'path'=>'PriceComponent.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/invoice-priceComponentType'}},
           'code' => {'type'=>'CodeableConcept', 'path'=>'PriceComponent.code', 'min'=>0, 'max'=>1},
           'factor' => {'type'=>'decimal', 'path'=>'PriceComponent.factor', 'min'=>0, 'max'=>1},
           'amount' => {'type'=>'Money', 'path'=>'PriceComponent.amount', 'min'=>0, 'max'=>1}

@@ -10,7 +10,7 @@
   </meta>
   
   <url value="http://hl7.org/fhir/ValueSet/inactive"/>
-  <version value="4.0.0"/>
+  <version value="4.0.1"/>
   <name value="Example-inactive"/>
   <title value="Example with inactive codes"/>
   <status value="draft"/>

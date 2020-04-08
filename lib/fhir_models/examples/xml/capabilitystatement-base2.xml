@@ -3,11 +3,11 @@
   <id value="base2"/>
   
   <url value="http://hl7.org/fhir/CapabilityStatement/base2"/>
-  <version value="4.0.0"/>
+  <version value="4.0.1"/>
   <name value="Base FHIR Capability Statement (Empty)"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2018-12-27T22:37:54+11:00"/>
+  <date value="2019-11-01T09:29:23+11:00"/>
   <publisher value="FHIR Project Team"/>
   <contact>
     <telecom>
@@ -20,7 +20,7 @@
   <software>
     <name value="Insert your software name here..."/>
   </software>
-  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.1"/>
   <format value="xml"/>
   <format value="json"/>
   <rest>

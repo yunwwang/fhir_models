@@ -2,11 +2,11 @@
   "resourceType": "ConceptMap",
   "id": "sc-immunization-status",
   "url": "http://hl7.org/fhir/ConceptMap/sc-immunization-status",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "ImmunizationStatusCodesCanonicalMap",
   "title": "Canonical Mapping for \"Immunization Status Codes\"",
   "status": "draft",
-  "date": "2018-12-27T22:37:54+11:00",
+  "date": "2019-11-01T09:29:23+11:00",
   "publisher": "FHIR Project team",
   "contact": [
     {
@@ -36,37 +36,19 @@
           ]
         },
         {
-          "code": "in-progress",
-          "target": [
-            {
-              "code": "active",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "on-hold",
-          "target": [
-            {
-              "code": "suspended",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "stopped",
-          "target": [
-            {
-              "code": "failed",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "completed",
           "target": [
             {
               "code": "complete",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "not-done",
+          "target": [
+            {
+              "code": "abandoned",
               "equivalence": "equivalent"
             }
           ]

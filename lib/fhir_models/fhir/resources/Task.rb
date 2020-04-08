@@ -20,11 +20,11 @@ module FHIR
       'basedOn' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'Task.basedOn', 'min'=>0, 'max'=>Float::INFINITY},
       'groupIdentifier' => {'type'=>'Identifier', 'path'=>'Task.groupIdentifier', 'min'=>0, 'max'=>1},
       'partOf' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Task'], 'type'=>'Reference', 'path'=>'Task.partOf', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/task-status'=>['draft', 'requested', 'received', 'accepted', 'rejected', 'ready', 'cancelled', 'in-progress', 'on-hold', 'failed', 'completed', 'entered-in-error']}, 'type'=>'code', 'path'=>'Task.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/task-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/task-status'=>['draft', 'requested', 'received', 'accepted', 'rejected', 'ready', 'cancelled', 'in-progress', 'on-hold', 'failed', 'completed', 'entered-in-error']}, 'type'=>'code', 'path'=>'Task.status', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/task-status'}},
       'statusReason' => {'type'=>'CodeableConcept', 'path'=>'Task.statusReason', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example'}},
       'businessStatus' => {'type'=>'CodeableConcept', 'path'=>'Task.businessStatus', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example'}},
-      'intent' => {'valid_codes'=>{'http://hl7.org/fhir/task-intent'=>['unknown'], 'http://hl7.org/fhir/request-intent'=>['proposal', 'plan', 'order', 'original-order', 'reflex-order', 'filler-order', 'instance-order', 'option']}, 'type'=>'code', 'path'=>'Task.intent', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/task-intent|4.0.0'}},
-      'priority' => {'valid_codes'=>{'http://hl7.org/fhir/request-priority'=>['routine', 'urgent', 'asap', 'stat']}, 'type'=>'code', 'path'=>'Task.priority', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/request-priority|4.0.0'}},
+      'intent' => {'valid_codes'=>{'http://hl7.org/fhir/task-intent'=>['unknown'], 'http://hl7.org/fhir/request-intent'=>['proposal', 'plan', 'order', 'original-order', 'reflex-order', 'filler-order', 'instance-order', 'option']}, 'type'=>'code', 'path'=>'Task.intent', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/task-intent'}},
+      'priority' => {'valid_codes'=>{'http://hl7.org/fhir/request-priority'=>['routine', 'urgent', 'asap', 'stat']}, 'type'=>'code', 'path'=>'Task.priority', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/request-priority'}},
       'code' => {'valid_codes'=>{'http://hl7.org/fhir/CodeSystem/task-code'=>['approve', 'fulfill', 'abort', 'replace', 'change', 'suspend', 'resume']}, 'type'=>'CodeableConcept', 'path'=>'Task.code', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'example', 'uri'=>'http://hl7.org/fhir/ValueSet/task-code'}},
       'description' => {'type'=>'string', 'path'=>'Task.description', 'min'=>0, 'max'=>1},
       'focus' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/Resource'], 'type'=>'Reference', 'path'=>'Task.focus', 'min'=>0, 'max'=>1},
@@ -75,7 +75,7 @@ module FHIR
       include FHIR::Xml
 
       MULTIPLE_TYPES = {
-        'value' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage']
+        'value' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage', 'Meta']
       }
       METADATA = {
         'id' => {'type'=>'string', 'path'=>'Input.id', 'min'=>0, 'max'=>1},
@@ -130,7 +130,8 @@ module FHIR
         'valueRelatedArtifact' => {'type'=>'RelatedArtifact', 'path'=>'Input.value[x]', 'min'=>1, 'max'=>1},
         'valueTriggerDefinition' => {'type'=>'TriggerDefinition', 'path'=>'Input.value[x]', 'min'=>1, 'max'=>1},
         'valueUsageContext' => {'type'=>'UsageContext', 'path'=>'Input.value[x]', 'min'=>1, 'max'=>1},
-        'valueDosage' => {'type'=>'Dosage', 'path'=>'Input.value[x]', 'min'=>1, 'max'=>1}
+        'valueDosage' => {'type'=>'Dosage', 'path'=>'Input.value[x]', 'min'=>1, 'max'=>1},
+        'valueMeta' => {'type'=>'Meta', 'path'=>'Input.value[x]', 'min'=>1, 'max'=>1}
       }
 
       attr_accessor :id                       # 0-1 string
@@ -186,6 +187,7 @@ module FHIR
       attr_accessor :valueTriggerDefinition   # 1-1 TriggerDefinition
       attr_accessor :valueUsageContext        # 1-1 UsageContext
       attr_accessor :valueDosage              # 1-1 Dosage
+      attr_accessor :valueMeta                # 1-1 Meta
     end
 
     class Output < FHIR::Model
@@ -194,7 +196,7 @@ module FHIR
       include FHIR::Xml
 
       MULTIPLE_TYPES = {
-        'value' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage']
+        'value' => ['base64Binary', 'boolean', 'canonical', 'code', 'date', 'dateTime', 'decimal', 'id', 'instant', 'integer', 'markdown', 'oid', 'positiveInt', 'string', 'time', 'unsignedInt', 'uri', 'url', 'uuid', 'Address', 'Age', 'Annotation', 'Attachment', 'CodeableConcept', 'Coding', 'ContactPoint', 'Count', 'Distance', 'Duration', 'HumanName', 'Identifier', 'Money', 'Period', 'Quantity', 'Range', 'Ratio', 'Reference', 'SampledData', 'Signature', 'Timing', 'ContactDetail', 'Contributor', 'DataRequirement', 'Expression', 'ParameterDefinition', 'RelatedArtifact', 'TriggerDefinition', 'UsageContext', 'Dosage', 'Meta']
       }
       METADATA = {
         'id' => {'type'=>'string', 'path'=>'Output.id', 'min'=>0, 'max'=>1},
@@ -249,7 +251,8 @@ module FHIR
         'valueRelatedArtifact' => {'type'=>'RelatedArtifact', 'path'=>'Output.value[x]', 'min'=>1, 'max'=>1},
         'valueTriggerDefinition' => {'type'=>'TriggerDefinition', 'path'=>'Output.value[x]', 'min'=>1, 'max'=>1},
         'valueUsageContext' => {'type'=>'UsageContext', 'path'=>'Output.value[x]', 'min'=>1, 'max'=>1},
-        'valueDosage' => {'type'=>'Dosage', 'path'=>'Output.value[x]', 'min'=>1, 'max'=>1}
+        'valueDosage' => {'type'=>'Dosage', 'path'=>'Output.value[x]', 'min'=>1, 'max'=>1},
+        'valueMeta' => {'type'=>'Meta', 'path'=>'Output.value[x]', 'min'=>1, 'max'=>1}
       }
 
       attr_accessor :id                       # 0-1 string
@@ -305,6 +308,7 @@ module FHIR
       attr_accessor :valueTriggerDefinition   # 1-1 TriggerDefinition
       attr_accessor :valueUsageContext        # 1-1 UsageContext
       attr_accessor :valueDosage              # 1-1 Dosage
+      attr_accessor :valueMeta                # 1-1 Meta
     end
 
     attr_accessor :id                    # 0-1 id

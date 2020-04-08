@@ -17,7 +17,7 @@ module FHIR
       'identifier' => {'type'=>'Identifier', 'path'=>'Device.identifier', 'min'=>0, 'max'=>Float::INFINITY},
       'definition' => {'type_profiles'=>['http://hl7.org/fhir/StructureDefinition/DeviceDefinition'], 'type'=>'Reference', 'path'=>'Device.definition', 'min'=>0, 'max'=>1},
       'udiCarrier' => {'type'=>'Device::UdiCarrier', 'path'=>'Device.udiCarrier', 'min'=>0, 'max'=>Float::INFINITY},
-      'status' => {'valid_codes'=>{'http://hl7.org/fhir/device-status'=>['active', 'inactive', 'entered-in-error', 'unknown']}, 'type'=>'code', 'path'=>'Device.status', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/device-status|4.0.0'}},
+      'status' => {'valid_codes'=>{'http://hl7.org/fhir/device-status'=>['active', 'inactive', 'entered-in-error', 'unknown']}, 'type'=>'code', 'path'=>'Device.status', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/device-status'}},
       'statusReason' => {'valid_codes'=>{'http://terminology.hl7.org/CodeSystem/device-status-reason'=>['online', 'paused', 'standby', 'offline', 'not-ready', 'transduc-discon', 'hw-discon', 'off']}, 'type'=>'CodeableConcept', 'path'=>'Device.statusReason', 'min'=>0, 'max'=>Float::INFINITY, 'binding'=>{'strength'=>'extensible', 'uri'=>'http://hl7.org/fhir/ValueSet/device-status-reason'}},
       'distinctIdentifier' => {'type'=>'string', 'path'=>'Device.distinctIdentifier', 'min'=>0, 'max'=>1},
       'manufacturer' => {'type'=>'string', 'path'=>'Device.manufacturer', 'min'=>0, 'max'=>1},
@@ -56,7 +56,7 @@ module FHIR
         'jurisdiction' => {'type'=>'uri', 'path'=>'UdiCarrier.jurisdiction', 'min'=>0, 'max'=>1},
         'carrierAIDC' => {'type'=>'base64Binary', 'path'=>'UdiCarrier.carrierAIDC', 'min'=>0, 'max'=>1},
         'carrierHRF' => {'type'=>'string', 'path'=>'UdiCarrier.carrierHRF', 'min'=>0, 'max'=>1},
-        'entryType' => {'valid_codes'=>{'http://hl7.org/fhir/udi-entry-type'=>['barcode', 'rfid', 'manual', 'card', 'self-reported', 'unknown']}, 'type'=>'code', 'path'=>'UdiCarrier.entryType', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/udi-entry-type|4.0.0'}}
+        'entryType' => {'valid_codes'=>{'http://hl7.org/fhir/udi-entry-type'=>['barcode', 'rfid', 'manual', 'card', 'self-reported', 'unknown']}, 'type'=>'code', 'path'=>'UdiCarrier.entryType', 'min'=>0, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/udi-entry-type'}}
       }
 
       attr_accessor :id                # 0-1 string
@@ -80,7 +80,7 @@ module FHIR
         'extension' => {'type'=>'Extension', 'path'=>'DeviceName.extension', 'min'=>0, 'max'=>Float::INFINITY},
         'modifierExtension' => {'type'=>'Extension', 'path'=>'DeviceName.modifierExtension', 'min'=>0, 'max'=>Float::INFINITY},
         'name' => {'type'=>'string', 'path'=>'DeviceName.name', 'min'=>1, 'max'=>1},
-        'type' => {'valid_codes'=>{'http://hl7.org/fhir/device-nametype'=>['udi-label-name', 'user-friendly-name', 'patient-reported-name', 'manufacturer-name', 'model-name', 'other']}, 'type'=>'code', 'path'=>'DeviceName.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/device-nametype|4.0.0'}}
+        'type' => {'valid_codes'=>{'http://hl7.org/fhir/device-nametype'=>['udi-label-name', 'user-friendly-name', 'patient-reported-name', 'manufacturer-name', 'model-name', 'other']}, 'type'=>'code', 'path'=>'DeviceName.type', 'min'=>1, 'max'=>1, 'binding'=>{'strength'=>'required', 'uri'=>'http://hl7.org/fhir/ValueSet/device-nametype'}}
       }
 
       attr_accessor :id                # 0-1 string

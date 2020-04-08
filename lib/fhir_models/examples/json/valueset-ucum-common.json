@@ -8,7 +8,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/ValueSet/ucum-common",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "Common UCUM units",
   "status": "draft",
   "publisher": "FHIR Project",

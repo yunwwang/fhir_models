@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "example-filter",
   "url": "http://hl7.org/fhir/ValueSet/example-filter",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "ACMECholCodesPlasma",
   "title": "ACME Codes for Cholesterol: Plasma only",
   "status": "draft",
