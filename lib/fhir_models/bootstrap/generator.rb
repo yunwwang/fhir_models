@@ -1,6 +1,9 @@
 module FHIR
   module Boot
     class Generator
+
+      KNOWN_MISSING_EXPANSIONS = %w[bcp47 bcp13.txt mimetypes LL379-9]
+
       attr_accessor :lib
       attr_accessor :defn
       # templates keeps track of all the templates in context within a given StructureDefinition
@@ -206,7 +209,7 @@ module FHIR
                 binding_uri&.gsub!(/\|[A-Za-z0-9\.\-]*/, '')
                 codes = @defn.get_codes(binding_uri)
                 field.valid_codes = codes unless codes.nil?
-                if field.valid_codes.empty? && binding_uri && !binding_uri.end_with?('bcp47', 'bcp13.txt', 'mimetypes', 'LL379-9')
+                if field.valid_codes.empty? && binding_uri && !binding_uri.end_with?(*KNOWN_MISSING_EXPANSIONS)
                   FHIR.logger.warn "  MISSING EXPANSION -- #{field.path} #{field.min}..#{field.max}: #{binding_uri} (#{field.binding['strength']})"
                   @missing_expansions = true
                   @missing_required_expansion = (field.binding['strength'] == 'required') unless @missing_required_expansion
