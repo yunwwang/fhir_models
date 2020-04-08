@@ -175,8 +175,7 @@ module FHIR
             # generate a field for each valid datatype... this is for things like Resource.attribute[x]
             element['type'].each do |type|
               extension = type['extension']
-              data_type = type['code']
-              data_type = 'string' unless data_type
+              data_type = type['code'] || 'string'
               if element['path'].end_with?('.id')
                 data_type = element['base']['path'] == 'Resource.id' ? 'id' : 'string'
               end
