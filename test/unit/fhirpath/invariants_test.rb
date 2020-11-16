@@ -288,4 +288,48 @@ class InvariantsTest < Test::Unit::TestCase
     result = FHIRPath.evaluate(expression, data)
     assert result == false, 'Failed sdf-9 test.'
   end
+
+  def test_us_core_8_v311_true
+    expression = "(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
+    data = {
+      'use' => 'official',
+      'family'=>'Becker968',
+      'given'=>['Sadie426'],
+      'prefix'=>['Mrs.']
+    }
+    result = FHIRPath.evaluate(expression, data)
+    assert result == true, 'Failed us-core-8 (v3.1.1) test.'
+  end
+
+  def test_us_core_8_v311_true2
+    expression = "(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
+    data = {
+      'use' => 'official',
+      'extension' => [
+        {
+          'url' => 'http://hl7.org/fhir/StructureDefinition/data-absent-reason',
+          'valueCode' => 'unknown'
+        }
+      ]
+    }
+    result = FHIRPath.evaluate(expression, data)
+    assert result == true, 'Failed us-core-8 (v3.1.1) test.'
+  end
+
+  def test_us_core_8_v311_false
+    expression = "(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
+    data = {
+      'use' => 'official',
+      'family'=>'Becker968',
+      'extension' => [
+        {
+          'url' => 'http://hl7.org/fhir/StructureDefinition/data-absent-reason',
+          'valueCode' => 'unknown'
+        }
+      ]
+    }
+    result = FHIRPath.evaluate(expression, data)
+    assert result == false, 'Failed us-core-8 (v3.1.1) test.'
+  end
+
 end
