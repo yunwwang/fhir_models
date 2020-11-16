@@ -287,7 +287,7 @@ module FHIRPath
             tree[index] = (previous_node == :null || previous_node.empty? rescue previous_node.nil?)
             clean_index(tree, previous_index)
           when :exists
-            tree[index] = !previous_node.nil? && previous_node != :null
+            tree[index] = !previous_node.nil? && previous_node != :null && previous_node != []
             clean_index(tree, previous_index)
           when :distinct
             tree[index] = (previous_node.uniq rescue previous_node)
