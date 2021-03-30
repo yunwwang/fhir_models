@@ -59,8 +59,8 @@ module FHIR
       if json.is_a? String
         begin
           json = JSON.parse(json)
-        rescue => ex
-          @errors << "Failed to parse JSON: #{ex.message} %n #{h} %n #{ex.backtrace.join("\n")}"
+        rescue => e
+          @errors << "Failed to parse JSON: #{e.message} %n #{h} %n #{e.backtrace.join("\n")}"
           return false
         end
       end
