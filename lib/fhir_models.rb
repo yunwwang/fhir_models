@@ -7,29 +7,29 @@ require File.join(root, 'lib', 'fhir_models', 'deprecate')
 require File.join(root, 'lib', 'fhir_models', 'bootstrap', 'hashable.rb')
 require File.join(root, 'lib', 'fhir_models', 'bootstrap', 'json.rb')
 
-Dir.glob(File.join(root, 'lib', 'fhir_models', 'bootstrap', '*.rb')).each do |file|
+Dir.glob(File.join(root, 'lib', 'fhir_models', 'bootstrap', '*.rb')).sort.each do |file|
   require file
 end
-Dir.glob(File.join(root, 'lib', 'fhir_models', 'bootstrap', '**', '*.rb')).each do |file|
+Dir.glob(File.join(root, 'lib', 'fhir_models', 'bootstrap', '**', '*.rb')).sort.each do |file|
   require file
 end
 
 require File.join(root, 'lib', 'fhir_models', 'fhir.rb')
 
 # Require the generated code
-Dir.glob(File.join(root, 'lib', 'fhir_models', 'fhir', '*.rb')).each do |file|
+Dir.glob(File.join(root, 'lib', 'fhir_models', 'fhir', '*.rb')).sort.each do |file|
   require file
 end
-Dir.glob(File.join(root, 'lib', 'fhir_models', 'fhir', '**', '*.rb')).each do |file|
+Dir.glob(File.join(root, 'lib', 'fhir_models', 'fhir', '**', '*.rb')).sort.each do |file|
   require file
 end
 
 # Require the FHIRPath code
-Dir.glob(File.join(root, 'lib', 'fhir_models', 'fhirpath', '*.rb')).each do |file|
+Dir.glob(File.join(root, 'lib', 'fhir_models', 'fhirpath', '*.rb')).sort.each do |file|
   require file
 end
 
 # Require the fhir_ext code
-Dir.glob(File.join(root, 'lib', 'fhir_models', 'fhir_ext', '*.rb')).each do |file|
+Dir.glob(File.join(root, 'lib', 'fhir_models', 'fhir_ext', '*.rb')).sort.each do |file|
   require file
 end
