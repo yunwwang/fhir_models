@@ -55,7 +55,7 @@ $ bundle exec rake fhir:console
   )
   ```
   
-  Iterating over a resource...
+  Iterating over all elements in a resource, including nested elements...
   ```ruby
   patient.each_element do |value, metadata, path|
     puts "Info for #{path}:"
