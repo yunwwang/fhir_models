@@ -100,4 +100,8 @@ class EachElementTest < Test::Unit::TestCase
 
     assert values_received.one? { |value| value.is_a?(FHIR::Coding) }, '#each_element did not see one Coding'
   end
+
+  def test_return_value
+    assert_equal @patient, @patient.each_element { |_, _, path| path }
+  end
 end
