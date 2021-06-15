@@ -318,6 +318,7 @@ module FHIR
           value.each_element child_path, &block unless FHIR::PRIMITIVES.include? metadata['type']
         end
       end
+      self
     end
 
     private :validate_reference_type, :check_binding_uri, :validate_field
