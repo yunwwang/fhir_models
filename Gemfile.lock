@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fhir_models (4.2.0)
+    fhir_models (4.2.1)
       bcp47 (>= 0.3)
       date_time_precision (>= 0.8)
       mime-types (>= 3.0)
@@ -50,7 +50,7 @@ GEM
     method_source (1.0.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2021.0225)
+    mime-types-data (3.2021.0901)
     mini_portile2 (2.5.3)
     nenv (0.3.0)
     nokogiri (1.11.7)
@@ -134,4 +134,4 @@ RUBY VERSION
    ruby 2.5.6p201
 
 BUNDLED WITH
-   2.1.4
+   2.2.21
