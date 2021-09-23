@@ -1,5 +1,5 @@
 module FHIR
   module Models
-    VERSION = '4.2.0'.freeze
+    VERSION = '4.2.1'.freeze
   end
 end
